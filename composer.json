@@ -8,21 +8,22 @@
         "php": ">=7.2",
         "andreamarelli/imet-core": "dev-master",
         "andreamarelli/modular-forms": "dev-master",
-        "barryvdh/laravel-ide-helper": "^2.10",
-        "fideloper/proxy": "^4.4",
+        "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.40",
-        "laravel/tinker": "^2.5",
-        "mariuzzo/laravel-js-localization": "^1.8"
+        "laravel/framework": "^8.0",
+        "laravel/ui": "^3.0",
+        "mariuzzo/laravel-js-localization": "^1.4"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.2",
+        "barryvdh/laravel-ide-helper": "2.*",
+        "facade/ignition": "^2.3.6",
+        "fakerphp/faker": "^1.10",
+        "laravel/tinker": "^2.0",
+        "mockery/mockery": "^1.3.1",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3",
+        "rap2hpoutre/laravel-log-viewer": "^1.7.0"
     },
     "repositories": {
         "andreamarelli/modular-forms": {

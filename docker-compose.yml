@@ -30,6 +30,8 @@ services:
     depends_on:
       - php
     container_name: ${APP_NAME}_composer
+    profiles:
+      - development
     volumes:
       - ./:/var/www/html
     entrypoint: [ 'composer' ]
@@ -39,6 +41,8 @@ services:
     depends_on:
       - php
     container_name: ${APP_NAME}_artisan
+    profiles:
+      - development
     volumes:
       - ./:/var/www/html
     entrypoint: [ 'php', 'artisan' ]
@@ -48,6 +52,8 @@ services:
     depends_on:
       - php
     container_name: ${APP_NAME}_phpunit
+    profiles:
+      - development
     volumes:
       - ./:/var/www/html
     entrypoint: [ 'vendor/bin/phpunit' ]
@@ -56,6 +62,8 @@ services:
     build:
       context: .
       dockerfile: docker/npm/Dockerfile
+    profiles:
+      - development
     container_name: ${APP_NAME}_npm
     volumes:
       - ./:/var/www/html
