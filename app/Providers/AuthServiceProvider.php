@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+//        \AndreaMarelli\ImetCore\Models\Imet\Imet::class =>  \AndreaMarelli\ImetCore\Policies\ImetPolicy::class
     ];
 
     /**

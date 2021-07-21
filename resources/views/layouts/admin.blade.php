@@ -4,7 +4,7 @@
 @section('body')
 
     <header>
-        @include('imet-core::offline.header')
+        @include('offline.header')
     </header>
 
     <main class="one-col">
@@ -27,7 +27,7 @@
     </main>
 
     <footer>
-        @include('imet-core::offline.footer')
+        @include('offline.footer')
     </footer>
 
 @endsection

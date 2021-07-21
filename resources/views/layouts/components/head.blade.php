@@ -2,18 +2,25 @@
 
 {{-- lang --}}
 <script src="{{ asset(mix('lang.js', 'assets')) }}"></script>
-{{-- vendors --}}
-<link rel="stylesheet" href="{{ asset(mix('vendor.css', 'assets')) }}">
-<script src="{{ asset(mix('vendor.js', 'assets')) }}"></script>
 {{-- packages --}}
-<script src="{{ asset(mix('modular-forms.js', 'assets')) }}"></script>
-<script src="{{ asset(mix('imet-core.js', 'assets')) }}"></script>
-{{-- custom --}}
-<link rel="stylesheet" href="{{ asset(mix('app.css', 'assets')) }}">
-<script src="{{ asset(mix('app.js', 'assets')) }}"></script>
+<script src="{{ asset(mix('modular_forms_vendor.js', 'assets')) }}"></script>
+<link rel="stylesheet" href="{{ asset(mix('modular_forms_vendor.css', 'assets')) }}">
+<script src="{{ asset(mix('modular_forms_index.js', 'assets')) }}"></script>
+<link rel="stylesheet" href="{{ asset(mix('modular_forms_index.css', 'assets')) }}">
+<script src="{{ asset(mix('imet_core_vendor.js', 'assets')) }}"></script>
+<link rel="stylesheet" href="{{ asset(mix('imet_core_vendor.css', 'assets')) }}">
+<script src="{{ asset(mix('imet_core_index.js', 'assets')) }}"></script>
+<link rel="stylesheet" href="{{ asset(mix('imet_core_index.css', 'assets')) }}">
+{{-- vendors --}}
+<script src="{{ asset(mix('vendor.js', 'assets')) }}"></script>
+<link rel="stylesheet" href="{{ asset(mix('vendor.css', 'assets')) }}">
+{{-- local assets --}}
+<script src="{{ asset(mix('index.js', 'assets')) }}"></script>
+<link rel="stylesheet" href="{{ asset(mix('index.css', 'assets')) }}">
+
 
 @if(Route::getCurrentRequest()
     && \Str::contains(Route::getCurrentRequest()->url(), 'admin/imet/')
     && \Str::contains(Route::getCurrentRequest()->url(), 'report'))
-    <script src="{{ asset(mix('vendor_mapping_leaflet.js', 'assets')) }}"></script>
+    <script src="{{ asset(mix('modular_forms_vendor_leaflet.js', 'assets')) }}"></script>
 @endif

@@ -2,21 +2,20 @@
 
 use AndreaMarelli\ImetCore\Controllers\ProtectedAreaController;
 use AndreaMarelli\ImetCore\Controllers\SpeciesController;
-use AndreaMarelli\ImetCore\Controllers\StaffController;
 use AndreaMarelli\ModularForms\Controllers\UploadFileController;
+use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () { return Redirect::to('admin/confirm_user'); });
-Route::get('welcome', function () { return Redirect::to('admin/confirm_user'); });
-Route::get('admin', function () { return Redirect::to('admin/confirm_user'); });
+
+// Authentication Routes
+Route::get('admin/confirm_user', [StaffController::class, 'confirm_offline_user']);
+Route::patch('admin/staff/{item}', [StaffController::class, 'update_offline']);
+
 
 Route::get('file/{hash}',      [UploadFileController::class, 'download']);
-
-Route::get('admin/confirm_user', function () { return view('imet-core::offline.confirm_user'); });
-Route::get('admin/offline_user', function () { return view('imet-core::offline.edit_user'); });
-Route::patch('admin/staff/{item}', [StaffController::class, 'update_offline']);
 
 Route::group(['prefix' => 'ajax'], function () {
     Route::post('upload', [UploadFileController::class, 'upload']);
@@ -26,3 +25,4 @@ Route::group(['prefix' => 'ajax'], function () {
         Route::post('species', [SpeciesController::class, 'search']);
     });
 });
+
