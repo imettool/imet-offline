@@ -72,7 +72,7 @@ services:
     image: postgres:9.6
     container_name: ${APP_NAME}_db
     ports:
-      - "${DB_PORT}:5432"
+      - "${DB_PORT}:${DB_PORT}"
     environment:
       - POSTGRES_DB=${DB_DATABASE}
       - POSTGRES_USER=${DB_USERNAME}
@@ -80,4 +80,5 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
       - ./docker/db/data:/var/lib/postgresql/data
+    command: -p ${DB_PORT}
 
