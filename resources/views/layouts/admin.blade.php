@@ -1,4 +1,4 @@
-@extends('layouts._base', ['class_to_body' => 'flex-col'])
+@extends('modular-forms::layouts._base', ['class_to_body' => 'flex-col'])
 
 
 @section('body')

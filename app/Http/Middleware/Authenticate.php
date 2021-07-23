@@ -18,7 +18,6 @@ class Authenticate extends Middleware
     {
         // Force Authentication of user 0
         if(!\Illuminate\Support\Facades\Auth::check()){
-            dump('force auth');
             \Illuminate\Support\Facades\Auth::loginUsingId(0, true);
         }
 
@@ -35,7 +34,7 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return route('login_x');
+            return route('login');
         }
     }
 }

@@ -7,8 +7,8 @@ $class_to_body = $class_to_body ?? '';
 <html lang="{{ App::getLocale() }}">
 
 <head>
+    @include('modular-forms::layouts.components.metatags')
     @include('modular-forms::layouts.components.head')
-    @include('layouts.components.head')
 </head>
 
 <body class="{{ $class_to_body }}">
