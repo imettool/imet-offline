@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-let WebpackShellPluginNext = require('webpack-shell-plugin-next');
 
 // paths
 let inputAssetsPath = 'resources/assets/';
@@ -13,23 +12,6 @@ mix.setPublicPath(outputAssetsPath);
 mix.options({
     processCssUrls: false
 });
-
-// # ------------------------------------------ #
-// # ---------  Laravel localization  --------- #
-// # ------------------------------------------ #
-mix.webpackConfig({
-    plugins: [
-        new WebpackShellPluginNext({
-            onBuildStart: {
-                scripts: ['php artisan lang:js --quiet public/assets/lang.js']
-            }
-        })
-    ]
-});
-
-mix.version([
-    outputAssetsPath + 'lang.js',
-]);
 
 
 // # ------------------------------------- #

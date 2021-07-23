@@ -15,6 +15,8 @@ $class_to_body = $class_to_body ?? '';
     @yield('body')
 </body>
 
+@translations
+
 @stack('scripts')
 
 </html>

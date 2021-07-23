@@ -1,7 +1,5 @@
 <title>IMET v{{ imet_offline_version() }}</title>
 
-{{-- lang --}}
-<script src="{{ asset(mix('lang.js', 'assets')) }}"></script>
 {{-- packages --}}
 <script src="{{ asset(mix('modular_forms_vendor.js', 'assets')) }}"></script>
 <link rel="stylesheet" href="{{ asset(mix('modular_forms_vendor.css', 'assets')) }}">
