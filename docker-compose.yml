@@ -23,7 +23,7 @@ services:
     volumes:
       - ./:/var/www/html
     ports:
-      - "9090:9000"
+      - "9091:9000"
 
   composer:
     image: ${APP_NAME}_php_image
