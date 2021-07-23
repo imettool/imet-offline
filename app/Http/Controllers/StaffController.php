@@ -17,7 +17,7 @@ class StaffController extends BaseStaffController
     public function confirm_offline_user()
     {
         return view('offline.confirm_user', [
-            'item' => User::find(0),
+            'item' => Person::find(0),
             'fields' => UserGeneralInfo::getDefinitions()['fields']
         ]);
     }

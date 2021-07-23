@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "16eb55c0d450be334d4aae77980708c5b607abba"
+                "reference": "8b4bb72155d9ff42e85bb05db1eaebfe1c7942a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/16eb55c0d450be334d4aae77980708c5b607abba",
-                "reference": "16eb55c0d450be334d4aae77980708c5b607abba",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/8b4bb72155d9ff42e85bb05db1eaebfe1c7942a0",
+                "reference": "8b4bb72155d9ff42e85bb05db1eaebfe1c7942a0",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/master",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2021-07-23T07:06:10+00:00"
+            "time": "2021-07-23T10:30:13+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "a12f4a4e553f345be9e3c936913d0fabf332d4ae"
+                "reference": "c7753793ed3a8324c73e4d20f3a402283dba5492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/a12f4a4e553f345be9e3c936913d0fabf332d4ae",
-                "reference": "a12f4a4e553f345be9e3c936913d0fabf332d4ae",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/c7753793ed3a8324c73e4d20f3a402283dba5492",
+                "reference": "c7753793ed3a8324c73e4d20f3a402283dba5492",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/master",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2021-07-23T07:05:51+00:00"
+            "time": "2021-07-23T12:38:43+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -2209,16 +2209,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "9738e495f288eec0b187e310b7cdbbb285777dbe"
+                "reference": "71312564759a7db5b789296369c1a264efc43aad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/9738e495f288eec0b187e310b7cdbbb285777dbe",
-                "reference": "9738e495f288eec0b187e310b7cdbbb285777dbe",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/71312564759a7db5b789296369c1a264efc43aad",
+                "reference": "71312564759a7db5b789296369c1a264efc43aad",
                 "shasum": ""
             },
             "require": {
@@ -2289,7 +2289,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.3.1"
+                "source": "https://github.com/Seldaek/monolog/tree/2.3.2"
             },
             "funding": [
                 {
@@ -2301,7 +2301,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-14T11:56:39+00:00"
+            "time": "2021-07-23T07:42:52+00:00"
         },
         {
             "name": "myclabs/php-enum",
@@ -6379,16 +6379,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "5701b38ec6c66dd143658e6aa18e1808d2d5dc4b"
+                "reference": "ac679902e9f66b85a8f9d8c1c88180f609a8745d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/5701b38ec6c66dd143658e6aa18e1808d2d5dc4b",
-                "reference": "5701b38ec6c66dd143658e6aa18e1808d2d5dc4b",
+                "url": "https://api.github.com/repos/composer/composer/zipball/ac679902e9f66b85a8f9d8c1c88180f609a8745d",
+                "reference": "ac679902e9f66b85a8f9d8c1c88180f609a8745d",
                 "shasum": ""
             },
             "require": {
@@ -6457,7 +6457,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.1.4"
+                "source": "https://github.com/composer/composer/tree/2.1.5"
             },
             "funding": [
                 {
@@ -6473,7 +6473,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-22T11:55:24+00:00"
+            "time": "2021-07-23T08:35:47+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -10194,5 +10194,5 @@
         "php": ">=7.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

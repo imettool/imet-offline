@@ -21,4 +21,6 @@
     && \Str::contains(Route::getCurrentRequest()->url(), 'admin/imet/')
     && \Str::contains(Route::getCurrentRequest()->url(), 'report'))
     <script src="{{ asset(mix('modular_forms_vendor_leaflet.js', 'assets')) }}"></script>
+    <link rel="stylesheet" href="{{ asset(mix('modular_forms_vendor_leaflet.css', 'assets')) }}">
+
 @endif
