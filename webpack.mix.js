@@ -20,7 +20,6 @@ mix.options({
 
 mix.copyDirectory(modularFormsPath + 'fonts', outputAssetsPath + 'fonts/');
 mix.copyDirectory(modularFormsPath + 'flags', outputAssetsPath + 'flags/');
-mix.copyDirectory(modularFormsPath + 'images', outputAssetsPath + 'images/');
 mix.copy(modularFormsPath + envPath + '*.js', outputAssetsPath);
 mix.copy(modularFormsPath + envPath + '*.css', outputAssetsPath);
 mix.copy(imetCorePath + envPath + '*.js', outputAssetsPath);
@@ -32,8 +31,8 @@ mix.version([
     outputAssetsPath + 'modular_forms_index.css',
     outputAssetsPath + 'modular_forms_vendor.js',
     outputAssetsPath + 'modular_forms_vendor.css',
-    outputAssetsPath + 'modular_forms_vendor_leaflet.js',
-    outputAssetsPath + 'modular_forms_vendor_leaflet.css',
+    outputAssetsPath + 'modular_forms_vendor_mapbox.js',
+    outputAssetsPath + 'modular_forms_vendor_mapbox.css',
     // imet-core
     outputAssetsPath + 'imet_core_index.js',
     outputAssetsPath + 'imet_core_index.css',

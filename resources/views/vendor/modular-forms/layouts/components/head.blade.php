@@ -1,5 +1,6 @@
 <title>IMET v{{ imet_offline_version() }}</title>
 
+
 {{-- packages --}}
 <script src="{{ asset(mix('modular_forms_vendor.js', 'assets')) }}"></script>
 <link rel="stylesheet" href="{{ asset(mix('modular_forms_vendor.css', 'assets')) }}">
@@ -17,10 +18,12 @@
 <link rel="stylesheet" href="{{ asset(mix('index.css', 'assets')) }}">
 
 
-@if(Route::getCurrentRequest()
-    && \Str::contains(Route::getCurrentRequest()->url(), 'admin/imet/')
-    && \Str::contains(Route::getCurrentRequest()->url(), 'report'))
-    <script src="{{ asset(mix('modular_forms_vendor_leaflet.js', 'assets')) }}"></script>
-    <link rel="stylesheet" href="{{ asset(mix('modular_forms_vendor_leaflet.css', 'assets')) }}">
-
+<!-- mapbox -->
+@if(\Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v1/report')
+        || \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v2/report'))
+    <script src="{{ asset(mix('modular_forms_vendor_mapbox.js', 'assets')) }}"></script>
+    <link rel="stylesheet" href="{{ asset(mix('modular_forms_vendor_mapbox.css', 'assets')) }}">
+    <script>
+        window.mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
+    </script>
 @endif
