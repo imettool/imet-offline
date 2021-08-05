@@ -31,10 +31,12 @@ services:
       - php
     container_name: ${APP_NAME}_composer
     profiles:
-      - development
+      - development # this ensures the container is not created when launching "docker-compose up"
     volumes:
       - ./:/var/www/html
     entrypoint: [ 'composer' ]
+    # NOTE:  It is possible to launch composer command using this container.
+    # Ex. docker-compose run --rm composer update
 
   artisan:
     image: ${APP_NAME}_php_image
@@ -56,7 +58,8 @@ services:
       - development
     volumes:
       - ./:/var/www/html
-    entrypoint: [ 'vendor/bin/phpunit' ]
+    #entrypoint: [ 'vendor/bin/phpunit' ]
+    entrypoint: [ 'php', 'artisan', 'test', '--parallel' ]
 
   npm:
     build:
