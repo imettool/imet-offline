@@ -19,7 +19,8 @@
 
 
 <!-- mapbox -->
-@if(\Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v1/report')
-        || \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v2/report'))
+@if(Route::getCurrentRoute() && (
+    \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v1/report') ||
+    \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v2/report')))
     @include('modular-forms::layouts.components.mapbox')
 @endif
