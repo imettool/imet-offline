@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "2a230241dc5a4e619d97077e636b8b2ad2160f43"
+                "reference": "79da286ceb55fd8e2467214bdef614d670be35c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/2a230241dc5a4e619d97077e636b8b2ad2160f43",
-                "reference": "2a230241dc5a4e619d97077e636b8b2ad2160f43",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/79da286ceb55fd8e2467214bdef614d670be35c6",
+                "reference": "79da286ceb55fd8e2467214bdef614d670be35c6",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/master",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2021-07-28T15:40:44+00:00"
+            "time": "2021-08-27T06:10:03+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "f51e449a4dab6a2bba7cebaab73d58e80cdeabb5"
+                "reference": "c9660793912302abb9acff8d44c0fba1e7fa77b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/f51e449a4dab6a2bba7cebaab73d58e80cdeabb5",
-                "reference": "f51e449a4dab6a2bba7cebaab73d58e80cdeabb5",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/c9660793912302abb9acff8d44c0fba1e7fa77b1",
+                "reference": "c9660793912302abb9acff8d44c0fba1e7fa77b1",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/master",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2021-07-28T15:51:54+00:00"
+            "time": "2021-08-06T07:50:57+00:00"
         },
         {
             "name": "asm89/stack-cors",
