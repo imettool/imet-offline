@@ -29,3 +29,7 @@ COPY ./docker/php/laravel.ini /usr/local/etc/php/conf.d
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Add github token for composer
+ARG COMPOSER_GITHUB_TOKEN
+RUN composer config -g github-oauth.github.com ${COMPOSER_GITHUB_TOKEN}
