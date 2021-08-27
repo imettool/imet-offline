@@ -71,7 +71,7 @@ function get_custom_list(string $type): array
         } elseif ($matches[2] == "Currency") {
             $list = \AndreaMarelli\ImetCore\Models\Currency::imetV1List();
         } else {
-            $list = trans('imet-core::form/'.strtolower($matches[1]).'/lists.' . $matches[2]);
+            $list = trans('imet-core::'.strtolower($matches[1]).'/lists.' . $matches[2]);
         }
     }
 

@@ -10,7 +10,7 @@
 
             <li>
                 <a href="{{ url('admin/imet') }}">{!! \AndreaMarelli\ModularForms\Helpers\Template::icon('home', '') !!}
-                    @lang('imet-core::form/common.imet')
+                    @lang('imet-core::common.imet')
                 </a>
             </li>
 
@@ -24,8 +24,8 @@
                 <li>
                     <a >{!! \AndreaMarelli\ModularForms\Helpers\Template::flag(strtolower(\Illuminate\Support\Facades\App::getLocale()), '') !!}</a>
                     <ul class="language_selector">
-                        <li>@lang('imet-core::form/common.switch_language'):</li>
-                        @foreach(trans('imet-core::form/common.languages') as $lang=>$label)
+                        <li>@lang('imet-core::common.switch_language'):</li>
+                        @foreach(trans('imet-core::common.languages') as $lang=>$label)
                             <li>
                                 <a href="{{ url()->current() }}?lang={{ $lang }}">
                                     {!! \AndreaMarelli\ModularForms\Helpers\Template::flag($lang, '') !!}
