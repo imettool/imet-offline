@@ -1,6 +1,7 @@
 # Modules & Libraries
 /node_modules
 /vendor
+/packages
 
 
 # Development
