@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "93fd97e06db1d2b91b6b49ba5576b208a924d5b5"
+                "reference": "749fb05af6e668cbd7b327cc6a166403e9f9cc21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/93fd97e06db1d2b91b6b49ba5576b208a924d5b5",
-                "reference": "93fd97e06db1d2b91b6b49ba5576b208a924d5b5",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/749fb05af6e668cbd7b327cc6a166403e9f9cc21",
+                "reference": "749fb05af6e668cbd7b327cc6a166403e9f9cc21",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/master",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2021-09-15T15:47:31+00:00"
+            "time": "2021-09-17T07:37:55+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "a2451f7bb86c98710ef539a09e89e3ddfd4f3b3e"
+                "reference": "b574ae14cde09458a5110134c6ac270d9d7970e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/a2451f7bb86c98710ef539a09e89e3ddfd4f3b3e",
-                "reference": "a2451f7bb86c98710ef539a09e89e3ddfd4f3b3e",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/b574ae14cde09458a5110134c6ac270d9d7970e3",
+                "reference": "b574ae14cde09458a5110134c6ac270d9d7970e3",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/master",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2021-09-14T14:02:33+00:00"
+            "time": "2021-09-17T07:47:07+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -8791,23 +8791,23 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.6",
+            "version": "9.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "f6293e1b30a2354e8428e004689671b83871edde"
+                "reference": "d4c798ed8d51506800b441f7a13ecb0f76f12218"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/f6293e1b30a2354e8428e004689671b83871edde",
-                "reference": "f6293e1b30a2354e8428e004689671b83871edde",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d4c798ed8d51506800b441f7a13ecb0f76f12218",
+                "reference": "d4c798ed8d51506800b441f7a13ecb0f76f12218",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
-                "nikic/php-parser": "^4.10.2",
+                "nikic/php-parser": "^4.12.0",
                 "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0.3",
                 "phpunit/php-text-template": "^2.0.2",
@@ -8856,7 +8856,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.6"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.7"
             },
             "funding": [
                 {
@@ -8864,7 +8864,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-28T07:26:59+00:00"
+            "time": "2021-09-17T05:39:03+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
