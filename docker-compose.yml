@@ -51,7 +51,7 @@ services:
       - ./:/var/www/html
     entrypoint: [ 'php', 'artisan' ]
 
-  phpunit:
+  test:
     image: ${APP_NAME}_php_image
     depends_on:
       - php
@@ -61,7 +61,7 @@ services:
     volumes:
       - ./:/var/www/html
     #entrypoint: [ 'vendor/bin/phpunit' ]
-    entrypoint: [ 'php', 'artisan', 'test', '--parallel' ]
+    entrypoint: [ 'php', 'artisan', 'test' ]
 
   npm:
     build:
