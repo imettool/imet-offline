@@ -19,7 +19,7 @@
     <div id="module_person__confirm_offline" class="module-container">
         <div class="module-header">
             <div class="module-title">
-                @lang('entities.staff.confirm_user_info')
+                @lang('imet-core::common.staff.confirm_user_info')
             </div>
         </div>
 
