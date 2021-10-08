@@ -8,21 +8,26 @@
 [v-cloak] {
   display: none; }
 
-.mapboxgl-popup .mapboxgl-popup-content {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  padding: 8px 15px 8px 8px;
-  min-width: 260px; }
-  .mapboxgl-popup .mapboxgl-popup-content .popup-item {
-    font-family: "Raleway", sans-serif;
-    font-size: 1.1em;
-    border-bottom: 1px solid #D4D4D4;
-    padding-bottom: 8px;
-    margin-bottom: 5px; }
-    .mapboxgl-popup .mapboxgl-popup-content .popup-item:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0; }
-    .mapboxgl-popup .mapboxgl-popup-content .popup-item .popup-footer {
-      text-align: right;
-      padding-top: 8px; }
+.mapboxgl-popup {
+  max-width: 400px;
+  z-index: 1; }
+  .mapboxgl-popup .mapboxgl-popup-content {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    padding: 8px 15px 8px 8px;
+    min-width: 260px;
+    overflow-y: auto;
+    max-height: 400px; }
+    .mapboxgl-popup .mapboxgl-popup-content .popup-item {
+      font-family: "Raleway", sans-serif;
+      font-size: 1.1em;
+      border-bottom: 1px solid #D4D4D4;
+      padding-bottom: 8px;
+      margin-bottom: 5px; }
+      .mapboxgl-popup .mapboxgl-popup-content .popup-item:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0; }
+      .mapboxgl-popup .mapboxgl-popup-content .popup-item .popup-footer {
+        text-align: right;
+        padding-top: 8px; }
 

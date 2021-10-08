@@ -101,6 +101,172 @@
       color: #262626;
 }
 
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/scaling_up_analysis/components/drag_and_drop/drop_drag_area.vue?vue&type=style&index=0&id=3d51b738&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.drop-zone[data-v-3d51b738] {
+  background-color: #eee;
+  margin-bottom: 10px;
+  padding: 10px;
+  min-height: 200px;
+  width: 250px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/scaling_up_analysis/components/drag_and_drop/draggable_item.vue?vue&type=style&index=0&id=51b0ed01&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.default-zone-element[data-v-51b0ed01] {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 5px;
+  min-height: 100px;
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/scaling_up_analysis/components/grouping.vue?vue&type=style&index=0&id=178e51d2&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.legend_radars[data-v-178e51d2] {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 200px;
+}
+.start-zone[data-v-178e51d2] {
+  background-color: #eee;
+  margin-bottom: 10px;
+  padding: 10px;
+  min-height: 200px;
+  width: 100%;
+}
+.dropzone-areas[data-v-178e51d2] {
+  min-height: 200px;
+  max-height: 500px;
+  overflow: auto;
+}
+.add-dropzone-area[data-v-178e51d2] {
+  margin-bottom: 10px;
+  padding: 10px;
+  min-height: 200px;
+  width: 300px;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/scaling_up_analysis/components/editor.vue?vue&type=style&index=0&id=1f9912fc&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@media print {
+.text-editor-edit[data-v-1f9912fc] {
+    display: none;
+}
+}
+.text-editor-print[data-v-1f9912fc] {
+  background-color: white !important;
+  padding: 15px;
+}
+@media screen {
+.text-editor-print[data-v-1f9912fc] {
+      display: none;
+}
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/scaling_up_analysis/components/basket/preview_item.vue?vue&type=style&index=0&id=7e14b858&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.img-container[data-v-7e14b858] {
+  position: relative;
+  display: inline-block;
+  margin: 10px 5px 5px;
+  max-width: 450px;
+  max-height: 350px;
+  overflow: auto;
+}
+.img-text[data-v-7e14b858] {
+  top: 28px;
+  margin-top: -25px;
+  position: absolute;
+  display: block;
+  right: 5px;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/scaling_up_analysis/components/basket.vue?vue&type=style&index=0&id=b0a25256&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.stable[data-v-b0a25256] {
+  right: 40px;
+  z-index: 9999999;
+}
+.stable .scrollPreview[data-v-b0a25256] {
+  z-index: 99;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  width: 400px;
+}
+.stable .basket-menu[data-v-b0a25256] {
+  margin-top: 50px;
+  background-color: #04AA6D;
+  height: 100px;
+  width: 30px;
+  box-sizing: content-box;
+  border-radius: 5px 0px 0px 5px;
+  /* Rounded corners on the top right and bottom right side */
+}
+.basket[data-v-b0a25256] {
+  background-color: #eee;
+  margin-bottom: 10px;
+  padding: 10px;
+  min-height: 200px;
+  width: 490px;
+  max-height: 400px;
+  overflow: auto;
+  border-radius: 5px 5px 5px 5px;
+  border: solid #04AA6D;
+}
+.stable .col[data-v-b0a25256] {
+  flex-grow: 1;
+  max-width: 100%;
+}
+.fa-trash[data-v-b0a25256] {
+  color: red;
+}
+.fa-times[data-v-b0a25256]:hover,
+.fa-trash[data-v-b0a25256]:hover {
+  color: red;
+}
+#sidePreview[data-v-b0a25256] {
+  position: fixed;
+  /* Position them relative to the browser window */
+  right: -490px;
+  /* Position them outside of the screen */
+  transition: 0.5s;
+  /* Add transition on hover */
+  padding: 20px 0px 0px 5px;
+  /* 15px padding */
+  text-decoration: none;
+  /* Remove underline */
+  font-size: 18px;
+  /* Increase font size */
+  color: white;
+  /* White text color */
+  border-radius: 5px 5px 5px 5px;
+  /* Rounded corners on the top right and bottom right side */
+}
+#sidePreview[data-v-b0a25256]:hover {
+  right: 0;
+  /* On mouse-over, make the elements appear as they should */
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/scaling_up_analysis/components/label-cloud.vue?vue&type=style&index=0&id=37d478c6&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.results-cloud[data-v-37d478c6] {
+  max-height: 300px;
+  overflow: auto;
+  background: #fff;
+}
+
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/index.scss ***!
   \****************************************************************************************************************/
