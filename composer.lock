@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "0247c6947304aeb9b7e2a9f7e622f3afd8a17cb9"
+                "reference": "103bd0750816ba39dba8aa97f8c90f04a6dc6b25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/0247c6947304aeb9b7e2a9f7e622f3afd8a17cb9",
-                "reference": "0247c6947304aeb9b7e2a9f7e622f3afd8a17cb9",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/103bd0750816ba39dba8aa97f8c90f04a6dc6b25",
+                "reference": "103bd0750816ba39dba8aa97f8c90f04a6dc6b25",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/scaling_up",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2021-10-07T14:00:14+00:00"
+            "time": "2021-10-08T13:32:50+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "c4eda20d64e56bd329ee1260b57024b0a87de789"
+                "reference": "c7e794535d663bb840260bb8a20c0cf89d43c002"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/c4eda20d64e56bd329ee1260b57024b0a87de789",
-                "reference": "c4eda20d64e56bd329ee1260b57024b0a87de789",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/c7e794535d663bb840260bb8a20c0cf89d43c002",
+                "reference": "c7e794535d663bb840260bb8a20c0cf89d43c002",
                 "shasum": ""
             },
             "require": {
@@ -116,7 +116,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/master",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2021-10-07T14:01:17+00:00"
+            "time": "2021-10-08T08:06:30+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -7850,16 +7850,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.14.0",
+            "version": "2.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "c6126e291bd44ad3fe482537a145fc70e3320598"
+                "reference": "6d89c4c99537f487ad29f646d57ebf107ef714ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/c6126e291bd44ad3fe482537a145fc70e3320598",
-                "reference": "c6126e291bd44ad3fe482537a145fc70e3320598",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/6d89c4c99537f487ad29f646d57ebf107ef714ed",
+                "reference": "6d89c4c99537f487ad29f646d57ebf107ef714ed",
                 "shasum": ""
             },
             "require": {
@@ -7922,7 +7922,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-10-01T12:58:45+00:00"
+            "time": "2021-10-08T12:34:52+00:00"
         },
         {
             "name": "facade/ignition-contracts",
