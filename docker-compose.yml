@@ -64,16 +64,14 @@ services:
     entrypoint: [ 'php', 'artisan', 'test' ]
 
   npm:
-    build:
-      context: .
-      dockerfile: docker/npm/Dockerfile
-      args:
-        - PHP_IMAGE_NAME=${APP_NAME}_php_image
+    image: node:14-alpine3.13
     profiles:
       - development
     container_name: ${APP_NAME}_npm
     volumes:
-      - ./:/var/www/html
+      - ./:/var/www/
+    working_dir: /var/www/
+    entrypoint: [ 'npm' ]
 
   db:
     image: postgres:9.6
