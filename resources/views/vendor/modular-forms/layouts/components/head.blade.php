@@ -20,7 +20,7 @@
 
 <!-- mapbox -->
 @if(Route::getCurrentRoute() && (
-    \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v1/report') ||
-    \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), 'imet/v2/report')))
+    \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), '/report') ||
+    \Illuminate\Support\Str::contains(Route::getCurrentRoute()->uri(), '/scaling_up')))
     @include('modular-forms::layouts.components.mapbox')
 @endif
