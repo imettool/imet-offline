@@ -1,7 +1,8 @@
-FROM ofac_php_image
+ARG PHP_IMAGE_NAME
+FROM ${PHP_IMAGE_NAME}
 
 # Install Node.Js
-RUN apk add --no-cache nodejs=14.16.1-r1 npm=14.16.1-r1
+RUN apk add --no-cache nodejs npm
 
 WORKDIR /var/www/html
 

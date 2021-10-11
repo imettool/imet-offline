@@ -67,6 +67,8 @@ services:
     build:
       context: .
       dockerfile: docker/npm/Dockerfile
+      args:
+        - PHP_IMAGE_NAME=${APP_NAME}_php_image
     profiles:
       - development
     container_name: ${APP_NAME}_npm
