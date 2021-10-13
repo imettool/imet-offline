@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'imet_db'),
+    'default' => env('DB_CONNECTION', 'ofac'),
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ return [
 
     'connections' => [
 
-        'imet_db' => [
+        'ofac' => [
             'driver' => 'pgsql',
 //            'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),

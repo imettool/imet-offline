@@ -45,7 +45,7 @@ return [
         'database' => [
             'driver' => 'database',
             'table' => 'cache',
-            'connection' => 'imet_db'
+            'connection' => 'ofac'
         ],
 
         'file' => [
