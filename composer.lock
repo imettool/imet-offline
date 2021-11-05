@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d265196dc13be7695e44918abf99569a",
+    "content-hash": "322ce0c3454572c94301960d720becc0",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-scaling_up",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "b2fbfa03963aa099edda6f3308df2b04a34447c0"
+                "reference": "fe7e89b3bb59584eb9d4226444ca9040dae4bc0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/b2fbfa03963aa099edda6f3308df2b04a34447c0",
-                "reference": "b2fbfa03963aa099edda6f3308df2b04a34447c0",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/fe7e89b3bb59584eb9d4226444ca9040dae4bc0c",
+                "reference": "fe7e89b3bb59584eb9d4226444ca9040dae4bc0c",
                 "shasum": ""
             },
             "require": {
@@ -28,6 +28,7 @@
             "require-dev": {
                 "orchestra/testbench": "^6.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -52,10 +53,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/scaling_up",
+                "source": "https://github.com/andreamarelli/imet-core/tree/master",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2021-11-05T16:16:05+00:00"
+            "time": "2021-11-05T16:21:20+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
