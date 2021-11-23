@@ -36,9 +36,10 @@ Route::group(['middleware' => 'web'], function () {
 
         Route::get('/',      [Controller::class, 'scaling_up']);
         Route::get('download/{scaling_id}', [ScalingUpAnalysisController::class, 'download_zip_file'])->name('download_scaling_up_files');
-        Route::get('{items}',    [ScalingUpAnalysisController::class, 'report_scaling_up'])->name('scaling_up');
-        Route::get('preview/{id}',[ScalingUpAnalysisController::class, 'preview_template'])->name('scaling_up_preview');
         Route::post('analysis',     [ScalingUpAnalysisController::class, 'get_ajax_responses']);
+        Route::any('/{items}',    [ScalingUpAnalysisController::class, 'report_scaling_up'])->name('report_scaling_up');
+        Route::get('preview/{id}',[ScalingUpAnalysisController::class, 'preview_template'])->name('scaling_up_preview');
+
 
         Route::group(['prefix' => 'basket'], function () {
             Route::post('add',   [ScalingUpBasketController::class, 'save']);
