@@ -32,7 +32,7 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     // Scaling Up Analysis
-    Route::group(['prefix' => 'admin/imet/scaling_up'], function () {
+    Route::group(['prefix' => 'admin/imet/scaling_up', 'middleware' => 'setLocale'], function () {
 
         Route::get('/',      [Controller::class, 'scaling_up']);
         Route::get('download/{scaling_id}', [ScalingUpAnalysisController::class, 'download_zip_file'])->name('download_scaling_up_files');
