@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'imet_db'),
+    'default' => env('DB_CONNECTION', 'ofac'),
 
     /*
     |--------------------------------------------------------------------------
