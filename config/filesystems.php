@@ -42,9 +42,9 @@ return [
             'visibility' => 'public',
         ],
 
-        'private' => [
+        'temp' => [
             'driver' => 'local',
-            'root' => storage_path('framework/cache'),
+            'root' => storage_path('app/temp'),
             'visibility' => 'private',
         ],
 
@@ -54,10 +54,6 @@ return [
             'visibility' => 'private',
         ],
 
-        'public_folder' => [
-            'driver' => 'local',
-            'root' => public_path()
-        ]
     ],
 
     /*
