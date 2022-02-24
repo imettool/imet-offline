@@ -54,9 +54,9 @@ return [
             'visibility' => 'private',
         ],
 
-        'basket' => [
+        'public_folder' => [
             'driver' => 'local',
-            'root' => public_path('basket')
+            'root' => public_path()
         ]
 
 
