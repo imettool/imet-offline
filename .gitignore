@@ -17,4 +17,5 @@ _ide_helper.php
 .env
 /public/hot
 /public/storage
+/public/basket
 /storage/
