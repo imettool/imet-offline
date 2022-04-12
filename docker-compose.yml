@@ -3,10 +3,13 @@ version: "3"
 services:
 
   nginx:
-    image: nginx:stable-alpine
-    container_name: ${APP_NAME}_nginx
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    container_name: imet_offline_nginx
+    restart: unless-stopped
     ports:
-      - "${WEB_PORT}:80"
+      - "${HTTP_PORT}:80"
     volumes:
       - .:/var/www/html
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
@@ -20,31 +23,45 @@ services:
       dockerfile: ./docker/php/Dockerfile
       args:
         - COMPOSER_GITHUB_TOKEN=${COMPOSER_GITHUB_TOKEN}
-    image: ${APP_NAME}_php_image
-    container_name: ${APP_NAME}_php
+        - UID=${UID-}
+    image: imet_offline_php_image
+    container_name: imet_offline_php
+    restart: unless-stopped
     volumes:
       - ./:/var/www/html
-    ports:
-      - "9091:9000"
+      - ../imet-core/:/var/www/packages/imet-core
+      - ../modular-forms/:/var/www/packages/modular-forms
+
+  node:
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+      args:
+        - UID=${UID-}
+    container_name: imet_offline_node
+    volumes:
+      - ./:/var/www/html
 
   composer:
-    image: ${APP_NAME}_php_image
+    image: imet_offline_php_image
     depends_on:
       - php
-    container_name: ${APP_NAME}_composer
+    container_name: imet_offline_composer
     profiles:
       - development # this ensures the container is not created when launching "docker-compose up"
     volumes:
       - ./:/var/www/html
+      - ../imet-core/:/var/www/packages/imet-core
+      - ../modular-forms/:/var/www/packages/modular-forms
     entrypoint: [ 'composer' ]
     # NOTE:  It is possible to launch composer command using this container.
     # Ex. docker-compose run --rm composer update
 
   artisan:
-    image: ${APP_NAME}_php_image
+    image: imet_offline_php_image
     depends_on:
       - php
-    container_name: ${APP_NAME}_artisan
+    container_name: imet_offline_artisan
     profiles:
       - development
     volumes:
@@ -52,10 +69,10 @@ services:
     entrypoint: [ 'php', 'artisan' ]
 
   test:
-    image: ${APP_NAME}_php_image
+    image: imet_offline_php_image
     depends_on:
       - php
-    container_name: ${APP_NAME}_phpunit
+    container_name: imet_offline_phpunit
     profiles:
       - development
     volumes:
@@ -64,10 +81,14 @@ services:
     entrypoint: [ 'php', 'artisan', 'test' ]
 
   npm:
-    image: node:14-alpine3.13
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+      args:
+        - UID=${UID-}
     profiles:
       - development
-    container_name: ${APP_NAME}_npm
+    container_name: imet_offline_npm
     volumes:
       - ./:/var/www/
     working_dir: /var/www/
@@ -75,7 +96,7 @@ services:
 
   db:
     image: postgres:9.6
-    container_name: ${APP_NAME}_db
+    container_name: imet_offline_db
     ports:
       - "${DB_PORT}:${DB_PORT}"
     environment:
