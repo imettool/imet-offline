@@ -4,31 +4,30 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "322ce0c3454572c94301960d720becc0",
+    "content-hash": "0904a4724444a4c409a05ba8ab1a2e8b",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-master",
+            "version": "dev-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "42feecad2524afef44bfc87e65b9225f55ee3338"
+                "reference": "4d204cc30191a70514495c64a30fa6c8975eb2c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/42feecad2524afef44bfc87e65b9225f55ee3338",
-                "reference": "42feecad2524afef44bfc87e65b9225f55ee3338",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/4d204cc30191a70514495c64a30fa6c8975eb2c7",
+                "reference": "4d204cc30191a70514495c64a30fa6c8975eb2c7",
                 "shasum": ""
             },
             "require": {
-                "andreamarelli/modular-forms": "dev-master",
+                "andreamarelli/modular-forms": "dev-beta",
                 "ext-json": "*",
                 "php": ">=7.2"
             },
             "require-dev": {
                 "orchestra/testbench": "^6.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -53,23 +52,23 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/master",
+                "source": "https://github.com/andreamarelli/imet-core/tree/beta",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2022-04-08T11:18:31+00:00"
+            "time": "2022-04-12T06:41:51+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "dev-master",
+            "version": "dev-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "2e32860f2851ab01ad0abf8cf449f157e0150628"
+                "reference": "380b0098049eb1f65a7455468df85c87343e07eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/2e32860f2851ab01ad0abf8cf449f157e0150628",
-                "reference": "2e32860f2851ab01ad0abf8cf449f157e0150628",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/380b0098049eb1f65a7455468df85c87343e07eb",
+                "reference": "380b0098049eb1f65a7455468df85c87343e07eb",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +88,6 @@
             "require-dev": {
                 "orchestra/testbench": "^6.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -114,10 +112,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/master",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/beta",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2022-03-10T13:37:13+00:00"
+            "time": "2022-04-12T04:49:08+00:00"
         },
         {
             "name": "asm89/stack-cors",
