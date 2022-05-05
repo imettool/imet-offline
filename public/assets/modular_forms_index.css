@@ -1316,6 +1316,11 @@ ul {
   border-radius: 4px;
   padding: 15px; }
 
+.alert-popup .alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb; }
+
 .alert-popup-hide {
   height: 0;
   padding: 0; }
@@ -2415,6 +2420,13 @@ label {
 
 div.field-disabled {
   display: inline-block; }
+
+.field-error {
+  border-color: #F87171; }
+
+.error-message {
+  color: #F87171;
+  font-weight: bold; }
 
 input.captcha-input {
   max-width: 200px; }
