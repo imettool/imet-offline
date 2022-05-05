@@ -86,7 +86,7 @@ services:
       - ./:/var/www/html
       - ../imet-core/:/var/www/packages/imet-core
       - ../modular-forms/:/var/www/packages/modular-forms
-      -
+
   npm:
     image: imet_offline_node_image
     depends_on:
@@ -119,4 +119,3 @@ services:
     # this time the connection may be unavailable.
     #
     # Populate DB with: docker-compose run --rm artisan imet:init_db
-
