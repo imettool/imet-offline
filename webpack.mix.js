@@ -22,6 +22,7 @@ mix.copyDirectory(modularFormsPath + 'fonts', outputAssetsPath + 'fonts/');
 mix.copyDirectory(modularFormsPath + 'flags', outputAssetsPath + 'flags/');
 mix.copy(modularFormsPath + envPath + '*.js', outputAssetsPath);
 mix.copy(modularFormsPath + envPath + '*.css', outputAssetsPath);
+mix.copyDirectory(imetCorePath + 'images', outputAssetsPath + 'images/');
 mix.copy(imetCorePath + envPath + '*.js', outputAssetsPath);
 mix.copy(imetCorePath + envPath + '*.css', outputAssetsPath);
 
