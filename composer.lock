@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1f56545fe64a694b8ca0b5c52de5876",
+    "content-hash": "0904a4724444a4c409a05ba8ab1a2e8b",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-marine_pa",
+            "version": "dev-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "3936a1591dc6a48f3292e16866b654777f63b2d3"
+                "reference": "3bb9ac141902b381e4f8c91dc60f99fb3fe50451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/3936a1591dc6a48f3292e16866b654777f63b2d3",
-                "reference": "3936a1591dc6a48f3292e16866b654777f63b2d3",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/3bb9ac141902b381e4f8c91dc60f99fb3fe50451",
+                "reference": "3bb9ac141902b381e4f8c91dc60f99fb3fe50451",
                 "shasum": ""
             },
             "require": {
@@ -52,10 +52,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/marine_pa",
+                "source": "https://github.com/andreamarelli/imet-core/tree/beta",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2022-05-11T07:00:13+00:00"
+            "time": "2022-05-11T08:37:14+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
