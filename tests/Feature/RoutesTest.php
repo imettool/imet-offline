@@ -8,7 +8,7 @@ use Tests\TestCase;
 
 class RoutesTest extends TestCase
 {
-    const NUM_IMETS = 1;
+    const NUM_IMETS = 9999;
 
     private static function imetsV1()
     {
@@ -35,17 +35,31 @@ class RoutesTest extends TestCase
         $this->get('/')->assertStatus(302); // Redirect
 
         // Offline user
-        $this->get('admin/confirm_user')->assertStatus(200);
-        $this->patch('admin/staff/0', [
+        $this->get('confirm_user')->assertStatus(200);
+        $this->patch('confirm_user', [
             'first_name' => 'TestUser Firstname',
             'last_name' => 'TestUser Lastname',
+            'organisation'  => 'testorg',
+            'function'      => 'tesfunct',
+            'country'       => 'CMR'
         ])->assertStatus(302);                  // Redirect
 
         // List
         $this->get('admin/imet')->assertStatus(200);
         $this->get('admin/imet/v1')->assertStatus(200);
         $this->get('admin/imet/v2')->assertStatus(200);
+    }
 
+    public function testCreationRoutes()
+    {
+        $this->get('admin/imet/v2/context/create')->assertStatus(200);
+        $this->get('admin/imet/v2/context/create_non_wdpa')->assertStatus(200);
+    }
+
+    public function testImportExportRoutes()
+    {
+        $this->get('admin/imet/import')->assertStatus(200);
+        $this->get('admin/imet/export_view')->assertStatus(200);
     }
 
     public function testV1ContextEditRoutes()
@@ -58,6 +72,44 @@ class RoutesTest extends TestCase
             foreach (array_keys($modules) as $module){
                 $this->get('admin/imet/v1/context/' . $imet . '/edit/' . $module)->assertStatus(200);
             }
+        }
+    }
+
+    public function testV1EvaluationEditRoutes()
+    {
+        $imets = static::imetsV1();
+        $modules = v1\Imet_Eval::modules();
+
+        foreach ($imets as $imet){
+            $this->get('admin/imet/v1/evaluation/' . $imet . '/edit')->assertStatus(200);
+            foreach (array_keys($modules) as $module){
+                $this->get('admin/imet/v1/evaluation/' . $imet . '/edit/' . $module)->assertStatus(200);
+            }
+        }
+    }
+
+    public function testV1AnalysisReportEditRoutes()
+    {
+        $imets = static::imetsV1();
+        foreach ($imets as $imet){
+            $this->get('admin/imet/v1/report/' . $imet . '/edit')->assertStatus(200);
+        }
+    }
+
+    public function testV1AnalysisReportShowRoutes()
+    {
+        $imets = static::imetsV1();
+        foreach ($imets as $imet){
+            $this->get('admin/imet/v1/report/' . $imet . '/show')->assertStatus(200);
+        }
+    }
+
+    public function testV1ExportEditRoutes()
+    {
+        $imets = static::imetsV1();
+
+        foreach ($imets as $imet){
+            $this->get('admin/imet/' . $imet . '/export')->assertStatus(200);
         }
     }
 
@@ -85,20 +137,6 @@ class RoutesTest extends TestCase
                 $this->get('admin/imet/v2/context/' . $imet . '/show/' . $module)->assertStatus(200);
             }
         }
-
-    }
-
-    public function testV1EvaluationEditRoutes()
-    {
-        $imets = static::imetsV1();
-        $modules = v1\Imet_Eval::modules();
-
-        foreach ($imets as $imet){
-            $this->get('admin/imet/v1/evaluation/' . $imet . '/edit')->assertStatus(200);
-            foreach (array_keys($modules) as $module){
-                $this->get('admin/imet/v1/evaluation/' . $imet . '/edit/' . $module)->assertStatus(200);
-            }
-        }
     }
 
     public function testV2EvaluationEditRoutes()
@@ -124,6 +162,39 @@ class RoutesTest extends TestCase
             foreach (array_keys($modules) as $module){
                 $this->get('admin/imet/v2/evaluation/' . $imet . '/show/' . $module)->assertStatus(200);
             }
+        }
+    }
+
+    public function testV2AnalysisReportEditRoutes()
+    {
+        $imets = static::imetsV2();
+        foreach ($imets as $imet){
+            $this->get('admin/imet/v2/report/' . $imet . '/edit')->assertStatus(200);
+        }
+    }
+
+    public function testV2AnalysisReportShowRoutes()
+    {
+        $imets = static::imetsV2();
+        foreach ($imets as $imet){
+            $this->get('admin/imet/v2/report/' . $imet . '/show')->assertStatus(200);
+        }
+    }
+
+    public function testV2CrossAnalysisRoutes()
+    {
+        $imets = static::imetsV2();
+        foreach ($imets as $imet){
+            $this->get('admin/imet/v2/cross-analysis/' . $imet)->assertStatus(200);
+        }
+    }
+
+    public function testV2ExportEditRoutes()
+    {
+        $imets = static::imetsV2();
+
+        foreach ($imets as $imet){
+            $this->get('admin/imet/' . $imet . '/export')->assertStatus(200);
         }
     }
 
