@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05568d729bfaf7e71ca2632c2c74267f",
+    "content-hash": "0904a4724444a4c409a05ba8ab1a2e8b",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-localization-scaling-up",
+            "version": "dev-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "264ce76051f2cd3c4bbe1d8022dd53df877f81f9"
+                "reference": "3b2c62315aa4835e83a522290f3b2cf2710af752"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/264ce76051f2cd3c4bbe1d8022dd53df877f81f9",
-                "reference": "264ce76051f2cd3c4bbe1d8022dd53df877f81f9",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/3b2c62315aa4835e83a522290f3b2cf2710af752",
+                "reference": "3b2c62315aa4835e83a522290f3b2cf2710af752",
                 "shasum": ""
             },
             "require": {
@@ -52,10 +52,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/localization-scaling-up",
+                "source": "https://github.com/andreamarelli/imet-core/tree/beta",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2022-06-10T06:09:05+00:00"
+            "time": "2022-06-14T17:02:10+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
