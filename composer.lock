@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0904a4724444a4c409a05ba8ab1a2e8b",
+    "content-hash": "fab6bad0b3b7c6c97d0cccdafacdb8d5",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-beta",
+            "version": "dev-scaling_up_fix",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "3b2c62315aa4835e83a522290f3b2cf2710af752"
+                "reference": "209277eb378f0deeb89580f7427fe7609981f48e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/3b2c62315aa4835e83a522290f3b2cf2710af752",
-                "reference": "3b2c62315aa4835e83a522290f3b2cf2710af752",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/209277eb378f0deeb89580f7427fe7609981f48e",
+                "reference": "209277eb378f0deeb89580f7427fe7609981f48e",
                 "shasum": ""
             },
             "require": {
@@ -52,10 +52,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/beta",
+                "source": "https://github.com/andreamarelli/imet-core/tree/scaling_up_fix",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2022-06-14T17:02:10+00:00"
+            "time": "2022-06-15T14:33:25+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
