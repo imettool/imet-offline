@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "08fd37d1cdd1ed1b9203c19ce6c5237e0b74a4a8"
+                "reference": "39738a5d34369b0c91511c59d820205d0d398444"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/08fd37d1cdd1ed1b9203c19ce6c5237e0b74a4a8",
-                "reference": "08fd37d1cdd1ed1b9203c19ce6c5237e0b74a4a8",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/39738a5d34369b0c91511c59d820205d0d398444",
+                "reference": "39738a5d34369b0c91511c59d820205d0d398444",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/beta",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2022-07-11T07:58:36+00:00"
+            "time": "2022-07-12T09:52:18+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "0bd7b285be37cd79d1cbe4d2b4cb940c26a72063"
+                "reference": "baf20bc319fc7181f82b422e16a3064991d9cf8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/0bd7b285be37cd79d1cbe4d2b4cb940c26a72063",
-                "reference": "0bd7b285be37cd79d1cbe4d2b4cb940c26a72063",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/baf20bc319fc7181f82b422e16a3064991d9cf8f",
+                "reference": "baf20bc319fc7181f82b422e16a3064991d9cf8f",
                 "shasum": ""
             },
             "require": {
@@ -113,10 +113,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/beta",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/master",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2022-07-11T07:33:49+00:00"
+            "time": "2022-07-11T10:50:16+00:00"
         },
         {
             "name": "asm89/stack-cors",
