@@ -93,6 +93,9 @@
 .vue-dropzone .files .file-row .progress {
         flex-grow: 1;
 }
+.vue-dropzone a.dz-remove {
+    display: none;
+}
 
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/assets/js/inputs/selector-wdpa_multiple.vue?vue&type=style&index=0&id=0400f0a6&lang=scss&scoped=true& ***!
@@ -438,6 +441,13 @@ fieldset[disabled] .vue-swatches {
 .imet_modules .module-header .module-type {
   /* for marine/terrestrial icons */
   padding: 6px 15px; }
+
+.nothing_to_evaluate {
+  font-weight: 600;
+  line-height: 1.2em;
+  color: #A3A3A3;
+  font-size: 1.3em;
+  text-align: center; }
 
 .imet_name {
   display: flex;
