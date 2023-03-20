@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c20883398060f491fcb050b79bd2934",
+    "content-hash": "322ce0c3454572c94301960d720becc0",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-beta",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
@@ -28,6 +28,7 @@
             "require-dev": {
                 "orchestra/testbench": "^6.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
