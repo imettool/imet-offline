@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60150d6d7231d197fceccad19b0a37f2",
+    "content-hash": "f2c149f98b7ffa9f4bd70bcd8e93dcef",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-ofac",
+            "version": "dev-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "6b687037a68179cfb5bab0a7e17a818dfbebcb9a"
+                "reference": "3345de533acdebf32b41ef7db4c2c017ff88bc23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/6b687037a68179cfb5bab0a7e17a818dfbebcb9a",
-                "reference": "6b687037a68179cfb5bab0a7e17a818dfbebcb9a",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/3345de533acdebf32b41ef7db4c2c017ff88bc23",
+                "reference": "3345de533acdebf32b41ef7db4c2c017ff88bc23",
                 "shasum": ""
             },
             "require": {
-                "andreamarelli/modular-forms": "dev-ofac",
+                "andreamarelli/modular-forms": "dev-master",
                 "ext-json": "*",
                 "php": ">=8.1"
             },
@@ -55,14 +55,14 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/ofac",
+                "source": "https://github.com/andreamarelli/imet-core/tree/beta",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2023-10-25T07:43:49+00:00"
+            "time": "2023-10-27T09:45:16+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "dev-ofac",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
@@ -90,6 +90,7 @@
             "require-dev": {
                 "orchestra/testbench": "^8.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -114,7 +115,7 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/ofac",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/beta",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
             "time": "2023-10-23T10:20:06+00:00"
