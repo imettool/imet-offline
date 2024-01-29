@@ -78,7 +78,7 @@ if ($item->imet_role == null) {
             <div class="module-bar save-bar">
                 <div class="message"></div>
                 <div class="buttons">
-                    <button type="submit" class="btn-nav small btn-primary">Save</button>
+                    <button type="submit" class="btn-nav small dark">Save</button>
                 </div>
             </div>
         </div>

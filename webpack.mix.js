@@ -15,7 +15,8 @@ mix.options({
 // # ----------  Compile assets  --------- #
 // # ------------------------------------- #
 
-mix.sass(inputAssetsPath + 'sass/index.scss', outputAssetsPath + 'index.css');
+mix.sass(inputAssetsPath + 'sass/index.scss', outputAssetsPath + 'index.css')
+    .tailwind();
 mix.js(inputAssetsPath + 'js/index.js', outputAssetsPath + 'index.js').vue({ version: 2 }).sourceMaps();
 
 mix.version([
