@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "322ce0c3454572c94301960d720becc0",
+    "content-hash": "881d9764b0dead62f36068591d0f2364",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-master",
+            "version": "dev-temp_master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "973fc832bd2539dca95a4f0f1b3d14e1cb24cf29"
+                "reference": "930c503e1dc86c7d8a1d754ad299eaf5b535e186"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/973fc832bd2539dca95a4f0f1b3d14e1cb24cf29",
-                "reference": "973fc832bd2539dca95a4f0f1b3d14e1cb24cf29",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/930c503e1dc86c7d8a1d754ad299eaf5b535e186",
+                "reference": "930c503e1dc86c7d8a1d754ad299eaf5b535e186",
                 "shasum": ""
             },
             "require": {
@@ -28,7 +28,6 @@
             "require-dev": {
                 "orchestra/testbench": "^6.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -56,10 +55,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/master",
+                "source": "https://github.com/andreamarelli/imet-core/tree/temp_master",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2023-04-12T14:50:25+00:00"
+            "time": "2024-01-29T17:06:19+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -9869,5 +9868,5 @@
         "php": ">=7.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
