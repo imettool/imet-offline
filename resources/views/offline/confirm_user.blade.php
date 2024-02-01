@@ -25,7 +25,7 @@ if ($item->imet_role == null) {
             <div class="module-body">
 
                 {{-- fisrt name --}}
-                @component('modular-forms::module.field_container', [
+                @component('modular-forms::module.components.field_container', [
                         'name' => 'first_name',
                         'label' => ucfirst(trans('auth.user.first_name')),
                         'label_width' => 3
@@ -35,7 +35,7 @@ if ($item->imet_role == null) {
                 @endcomponent
 
                 {{-- last name --}}
-                @component('modular-forms::module.field_container', [
+                @component('modular-forms::module.components.field_container', [
                         'name' => 'last_name',
                         'label' => ucfirst(trans('auth.user.last_name')),
                         'label_width' => 3
@@ -45,7 +45,7 @@ if ($item->imet_role == null) {
                 @endcomponent
 
                 {{-- organisation --}}
-                @component('modular-forms::module.field_container', [
+                @component('modular-forms::module.components.field_container', [
                         'name' => 'organisation',
                         'label' => ucfirst(trans('auth.user.organisation')),
                         'label_width' => 3
@@ -55,7 +55,7 @@ if ($item->imet_role == null) {
                 @endcomponent
 
                 {{-- function --}}
-                @component('modular-forms::module.field_container', [
+                @component('modular-forms::module.components.field_container', [
                         'name' => 'function',
                         'label' => ucfirst(trans('auth.user.function')),
                         'label_width' => 3
@@ -65,7 +65,7 @@ if ($item->imet_role == null) {
                 @endcomponent
 
                 {{-- country --}}
-                @component('modular-forms::module.field_container', [
+                @component('modular-forms::module.components.field_container', [
                         'name' => 'function',
                         'label' => ucfirst(trans('auth.user.country')),
                         'label_width' => 3
@@ -78,7 +78,7 @@ if ($item->imet_role == null) {
             <div class="module-bar save-bar">
                 <div class="message"></div>
                 <div class="buttons">
-                    <button type="submit" class="btn-nav small dark">Save</button>
+                    <button type="submit" class="btn-nav small">Save</button>
                 </div>
             </div>
         </div>
