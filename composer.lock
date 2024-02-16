@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../packages/imet-core",
-                "reference": "333af2858732b06373da2a7cdb412279a493bc1d"
+                "reference": "6546981553f458f47517ab02438fdb1d53fe4fd9"
             },
             "require": {
                 "andreamarelli/modular-forms": "dev-test_publish_vendor",
@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "e602fc48bb38039aaa75fe8cc1f03c4ea93e8934"
+                "reference": "7c83c687badd18c73391a3f6c55cd1ff9d1e6e22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/e602fc48bb38039aaa75fe8cc1f03c4ea93e8934",
-                "reference": "e602fc48bb38039aaa75fe8cc1f03c4ea93e8934",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/7c83c687badd18c73391a3f6c55cd1ff9d1e6e22",
+                "reference": "7c83c687badd18c73391a3f6c55cd1ff9d1e6e22",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/test_publish_vendor",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2024-01-12T17:18:55+00:00"
+            "time": "2024-02-01T15:39:32+00:00"
         },
         {
             "name": "brick/math",
