@@ -1,4 +1,6 @@
-version: "3"
+version: "3.4"
+
+name: 'imet_offline'
 
 services:
 
@@ -6,7 +8,6 @@ services:
     build:
       context: .
       dockerfile: ./docker/nginx/Dockerfile
-    container_name: imet_offline_nginx
     restart: unless-stopped
     ports:
       - "${HTTP_PORT}:80"
@@ -24,8 +25,7 @@ services:
       args:
         - COMPOSER_GITHUB_TOKEN=${COMPOSER_GITHUB_TOKEN}
         - UID=${UID-}
-    image: imet_offline_php_image
-    container_name: imet_offline_php
+    image: ${COMPOSE_PROJECT_NAME}_php
     restart: unless-stopped
     volumes:
       - ./:/var/www/html
@@ -33,10 +33,9 @@ services:
       - ../modular-forms/:/var/www/packages/modular-forms
 
   composer:
-    image: imet_offline_php_image
+    image: ${COMPOSE_PROJECT_NAME}_php
     depends_on:
       - php
-    container_name: imet_offline_composer
     profiles:
       - development # this ensures the container is not created when launching "docker-compose up"
     volumes:
@@ -48,10 +47,9 @@ services:
     # Ex. docker-compose run --rm composer update
 
   artisan:
-    image: imet_offline_php_image
+    image: ${COMPOSE_PROJECT_NAME}_php
     depends_on:
       - php
-    container_name: imet_offline_artisan
     profiles:
       - development
     volumes:
@@ -61,10 +59,9 @@ services:
     entrypoint: [ 'php', 'artisan' ]
 
   test:
-    image: imet_offline_php_image
+    image: ${COMPOSE_PROJECT_NAME}_php
     depends_on:
       - php
-    container_name: imet_offline_phpunit
     profiles:
       - development
     volumes:
@@ -80,18 +77,16 @@ services:
       dockerfile: docker/node/Dockerfile
       args:
         - UID=${UID-}
-    image: imet_offline_node_image
-    container_name: imet_offline_node
+    image: ${COMPOSE_PROJECT_NAME}_node
     volumes:
       - ./:/var/www/html
       - ../imet-core/:/var/www/packages/imet-core
       - ../modular-forms/:/var/www/packages/modular-forms
 
   npm:
-    image: imet_offline_node_image
+    image: ${COMPOSE_PROJECT_NAME}_node
     depends_on:
       - node
-    container_name: imet_offline_npm
     profiles:
       - development
     volumes:
@@ -103,7 +98,6 @@ services:
 
   db:
     image: postgres:9.6
-    container_name: imet_offline_db
     ports:
       - "${DB_PORT}:${DB_PORT}"
     restart: unless-stopped

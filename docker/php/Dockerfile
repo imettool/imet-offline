@@ -24,6 +24,8 @@ RUN install-php-extensions \
 
 WORKDIR /var/www/html
 
+# Set INI file
+RUN cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
 COPY ./docker/php/laravel.ini /usr/local/etc/php/conf.d
 
 # Install Composer
