@@ -19,12 +19,9 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::get('confirm_user', [UserController::class, 'confirm_offline_user']);
     Route::patch('confirm_user', [UserController::class, 'update_offline_user'])->name('update_offline_user');
 
-    // IMET requirements - do not remove nor change
-    Route::get('file/{hash}',      [UploadFileController::class, 'download']);
-    Route::prefix('ajax')->group(function () {
-        Route::post('upload', [UploadFileController::class, 'upload']);
-        Route::get('download', [UploadFileController::class, 'download']);
-    });
+    // ###### File upload/download ######
+    Route::post('file/upload', [UploadFileController::class, 'upload'])->name('upload.file');
+    Route::get('file/{hash}', [UploadFileController::class, 'download'])->name('file');
 
 });
 
