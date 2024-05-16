@@ -35,18 +35,6 @@ return [
 
     'connections' => [
 
-//        'ofac' => [
-//            'driver' => 'pgsql',
-//            'host' => env('DB_HOST', '127.0.0.1'),
-//            'port' => env('DB_PORT', '5433'),
-//            'schema' => 'public',
-//            'database' => env('DB_DATABASE', 'imetdb'),
-//            'username' => env('DB_USERNAME', 'default'),
-//            'password' => env('DB_PASSWORD', 'secret'),
-//            'charset' => 'utf8',
-//            'prefix' => ''
-//        ],
-
         'offline_public' => [
             'driver' => 'sqlite',
             'database' => database_path('public.sqlite'),
