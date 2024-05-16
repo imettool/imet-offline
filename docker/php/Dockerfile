@@ -8,7 +8,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions && sync
 
 # Install required packages
-RUN apk add --no-cache git
+RUN apk add --no-cache git sqlite
 
 # Install PHP Extensions (Laravel requirements)
 RUN install-php-extensions bcmath
