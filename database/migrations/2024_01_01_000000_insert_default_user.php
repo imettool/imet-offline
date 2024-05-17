@@ -1,8 +1,8 @@
 <?php
 
+use AndreaMarelli\ImetCore\Models\User\Role;
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+
 
 return new class extends Migration
 {
@@ -15,7 +15,8 @@ return new class extends Migration
             ->insert([
                 'id' => 0,
                 'first_name' => 'Offline',
-                'last_name' => 'User'
+                'last_name' => 'User',
+                'imet_role' => Role::ROLE_ADMINISTRATOR,
             ]);
 
     }
