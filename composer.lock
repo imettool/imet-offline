@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "84bb961fe8ae05f44780ff983f8fa9aace895048"
+                "reference": "f7fe1c9bb117684aff076b68dd0614c1842512dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/84bb961fe8ae05f44780ff983f8fa9aace895048",
-                "reference": "84bb961fe8ae05f44780ff983f8fa9aace895048",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/f7fe1c9bb117684aff076b68dd0614c1842512dd",
+                "reference": "f7fe1c9bb117684aff076b68dd0614c1842512dd",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/sqlite",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2024-05-17T17:28:27+00:00"
+            "time": "2024-05-27T19:20:21+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
