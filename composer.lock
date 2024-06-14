@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "79d35344503692b117e0d3a06a3e6fc6fb44e683"
+                "reference": "789ae850304c7c2604a660b59d6c2adbde31e853"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/79d35344503692b117e0d3a06a3e6fc6fb44e683",
-                "reference": "79d35344503692b117e0d3a06a3e6fc6fb44e683",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/789ae850304c7c2604a660b59d6c2adbde31e853",
+                "reference": "789ae850304c7c2604a660b59d6c2adbde31e853",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/beta",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2024-06-14T16:15:35+00:00"
+            "time": "2024-06-14T17:07:47+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
