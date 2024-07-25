@@ -95,21 +95,3 @@ services:
       - ../modular-forms/:/var/www/packages/modular-forms
     working_dir: /var/www/html/
     entrypoint: [ 'npm' ]
-
-  db:
-    image: postgres:9.6
-    ports:
-      - "${DB_PORT}:${DB_PORT}"
-    restart: unless-stopped
-    environment:
-      - POSTGRES_DB=${DB_DATABASE}
-      - POSTGRES_USER=${DB_USERNAME}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_HOST_AUTH_METHOD=trust
-      - LC_COLLATE=C.UTF-8
-      - LC_CTYPE=C.UTF-8
-    command: -p ${DB_PORT}
-    # NOTE: The first time the container is launched (docker-compose up), it might take some time to create the db; during
-    # this time the connection may be unavailable.
-    #
-    # Populate DB with: docker-compose run --rm artisan imet:init_db

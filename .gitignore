@@ -3,6 +3,7 @@
 /vendor
 /packages
 
+
 # Development
 .idea/
 npm-debug.log
@@ -14,5 +15,8 @@ _ide_helper.php
 
 # Envirnoment
 .env
+/public/hot
+/public/storage
 /public/basket
+/publi/vendor
 /storage/
