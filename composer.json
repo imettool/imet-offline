@@ -14,7 +14,7 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.13.0",
         "laravel/ui": "^4.5.2",
-        "opcodesio/log-viewer": "^3.1"
+        "opcodesio/log-viewer": "^3.10"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
@@ -33,8 +33,8 @@
             "url": "https://github.com/andreamarelli/modular-forms"
         },
         "andreamarelli/imet-core": {
-            "type": "vcs",
-            "url": "https://github.com/andreamarelli/imet-core"
+            "type": "path",
+            "url": "../packages/imet-core"
         }
     },
     "autoload": {

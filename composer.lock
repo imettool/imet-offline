@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24dbe528bbb6029b506766feb0e2e603",
+    "content-hash": "f8b98b6d43e4568b80055ca27b6f45dd",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
             "version": "dev-alpha",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "a037643f2eb2e381c43839766947dc4811d1fd8f"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/a037643f2eb2e381c43839766947dc4811d1fd8f",
-                "reference": "a037643f2eb2e381c43839766947dc4811d1fd8f",
-                "shasum": ""
+                "type": "path",
+                "url": "../packages/imet-core",
+                "reference": "a037643f2eb2e381c43839766947dc4811d1fd8f"
             },
             "require": {
                 "andreamarelli/modular-forms": "dev-vue3",
@@ -54,11 +48,9 @@
                 }
             ],
             "description": "Imet core package",
-            "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/alpha",
-                "issues": "https://github.com/andreamarelli/imet-core/issues"
-            },
-            "time": "2024-07-25T13:13:17+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "andreamarelli/modular-forms",
