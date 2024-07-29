@@ -26,7 +26,7 @@ export default defineConfig({
             '@vendor': path.resolve(__dirname, 'vendor/'),
             '~': path.resolve(__dirname, 'node_modules/'),
             '@modular-forms': path.resolve(__dirname, 'vendor/andreamarelli/modular-forms/src/resources/assets'),
-            '@imet-core': path.resolve(__dirname, 'vendor/andreamarelli/imet-core/src/assets'),
+            '@imet-core': path.resolve(__dirname, 'vendor/andreamarelli/imet-core/src/resources/assets'),
         },
     },
     plugins: [

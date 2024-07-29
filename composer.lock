@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "4237e98f7b297552df3dabd1356bafaee2b95533"
+                "reference": "7ea33a60246684baa34aadfa970d716e1b59f9b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/4237e98f7b297552df3dabd1356bafaee2b95533",
-                "reference": "4237e98f7b297552df3dabd1356bafaee2b95533",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/7ea33a60246684baa34aadfa970d716e1b59f9b2",
+                "reference": "7ea33a60246684baa34aadfa970d716e1b59f9b2",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/alpha",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2024-07-26T15:38:22+00:00"
+            "time": "2024-07-29T07:13:51+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "97232476ca5694d73e054bac07f9e3311f6eba74"
+                "reference": "d5f7468a0fe1d890a964e7e3980eb0a7d0b63220"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/97232476ca5694d73e054bac07f9e3311f6eba74",
-                "reference": "97232476ca5694d73e054bac07f9e3311f6eba74",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/d5f7468a0fe1d890a964e7e3980eb0a7d0b63220",
+                "reference": "d5f7468a0fe1d890a964e7e3980eb0a7d0b63220",
                 "shasum": ""
             },
             "require": {
@@ -116,7 +116,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/vue3",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2024-07-26T15:35:51+00:00"
+            "time": "2024-07-27T05:29:55+00:00"
         },
         {
             "name": "brick/math",
