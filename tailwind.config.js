@@ -1,5 +1,3 @@
-// import plugin from 'tailwindcss/plugin';
-
 export default {
 	content: [
         "vendor/andreamarelli/modular-forms/src/resources/**/*.blade.php",
