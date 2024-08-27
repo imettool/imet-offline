@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "92d65a873995191eb7747e00ffe27ae0d6c62782"
+                "reference": "c626130d91300e1e256404a677cb34bd759ea287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/92d65a873995191eb7747e00ffe27ae0d6c62782",
-                "reference": "92d65a873995191eb7747e00ffe27ae0d6c62782",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/c626130d91300e1e256404a677cb34bd759ea287",
+                "reference": "c626130d91300e1e256404a677cb34bd759ea287",
                 "shasum": ""
             },
             "require": {
@@ -116,7 +116,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/vue3",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2024-08-27T05:03:23+00:00"
+            "time": "2024-08-27T07:03:09+00:00"
         },
         {
             "name": "brick/math",

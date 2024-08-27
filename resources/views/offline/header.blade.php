@@ -50,7 +50,9 @@ $welcome = $uri === 'welcome'
                     </ul>
                 </li>
             @endif
-
+{{--            <li>--}}
+{{--                <a href="{{ route('settings') }}" >{!! Template::icon('gear') !!}</a>--}}
+{{--            </li>--}}
         </ul>
 
     </div>
