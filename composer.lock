@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "49222178efcb3b6a0316d83e6c7724bfb19bcd41"
+                "reference": "ae52f4fc64c4d4cd680de3f9cde7efa79289c53a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/49222178efcb3b6a0316d83e6c7724bfb19bcd41",
-                "reference": "49222178efcb3b6a0316d83e6c7724bfb19bcd41",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/ae52f4fc64c4d4cd680de3f9cde7efa79289c53a",
+                "reference": "ae52f4fc64c4d4cd680de3f9cde7efa79289c53a",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/alpha",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2024-08-22T05:36:33+00:00"
+            "time": "2024-08-27T05:02:59+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "6aaa40dd080eec7cb3a148ee5d1fbb1f7bf07c4a"
+                "reference": "92d65a873995191eb7747e00ffe27ae0d6c62782"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/6aaa40dd080eec7cb3a148ee5d1fbb1f7bf07c4a",
-                "reference": "6aaa40dd080eec7cb3a148ee5d1fbb1f7bf07c4a",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/92d65a873995191eb7747e00ffe27ae0d6c62782",
+                "reference": "92d65a873995191eb7747e00ffe27ae0d6c62782",
                 "shasum": ""
             },
             "require": {
@@ -116,7 +116,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/vue3",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2024-08-20T08:17:06+00:00"
+            "time": "2024-08-27T05:03:23+00:00"
         },
         {
             "name": "brick/math",
@@ -2886,16 +2886,16 @@
         },
         {
             "name": "opcodesio/log-viewer",
-            "version": "v3.10.2",
+            "version": "v3.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opcodesio/log-viewer.git",
-                "reference": "8d44a049fce71753905ac4cd35e01c00544b17cb"
+                "reference": "608cde8a5fbac1e9959c060b780ef3ed26598aae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/8d44a049fce71753905ac4cd35e01c00544b17cb",
-                "reference": "8d44a049fce71753905ac4cd35e01c00544b17cb",
+                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/608cde8a5fbac1e9959c060b780ef3ed26598aae",
+                "reference": "608cde8a5fbac1e9959c060b780ef3ed26598aae",
                 "shasum": ""
             },
             "require": {
@@ -2958,7 +2958,7 @@
             ],
             "support": {
                 "issues": "https://github.com/opcodesio/log-viewer/issues",
-                "source": "https://github.com/opcodesio/log-viewer/tree/v3.10.2"
+                "source": "https://github.com/opcodesio/log-viewer/tree/v3.11.1"
             },
             "funding": [
                 {
@@ -2970,7 +2970,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-03T17:20:45+00:00"
+            "time": "2024-08-23T07:25:44+00:00"
         },
         {
             "name": "opcodesio/mail-parser",
@@ -8075,16 +8075,16 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "5.0.1",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "6ed896bf50bbbfe4d504a33ed5886278c78e4a26"
+                "reference": "118cfaaa8bc5aef3287bf315b6060b1174754af6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/6ed896bf50bbbfe4d504a33ed5886278c78e4a26",
-                "reference": "6ed896bf50bbbfe4d504a33ed5886278c78e4a26",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/118cfaaa8bc5aef3287bf315b6060b1174754af6",
+                "reference": "118cfaaa8bc5aef3287bf315b6060b1174754af6",
                 "shasum": ""
             },
             "require": {
@@ -8124,7 +8124,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-file-iterator/issues",
                 "security": "https://github.com/sebastianbergmann/php-file-iterator/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-file-iterator/tree/5.0.1"
+                "source": "https://github.com/sebastianbergmann/php-file-iterator/tree/5.1.0"
             },
             "funding": [
                 {
@@ -8132,7 +8132,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-03T05:06:37+00:00"
+            "time": "2024-08-27T05:02:59+00:00"
         },
         {
             "name": "phpunit/php-invoker",

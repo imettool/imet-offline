@@ -60,8 +60,8 @@
             "php artisan ide-helper:meta"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "@php artisan vendor:publish --tag=imet-core --ansi --force"
+            "@php artisan vendor:publish --tag=imet-core --ansi --force",
+            "@php artisan log-viewer:publish"
         ],
         "post-root-package-install": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
