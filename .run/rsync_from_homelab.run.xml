@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="rsync_from_homelab" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="rsync -aiv --delete --exclude='.git/' --exclude='.idea/' --exclude='storage/framework/' --exclude='packages/' --exclude='storage/app/temp/' homelab:/data/code/imet_offline/ ./" />
+    <option name="SCRIPT_TEXT" value="rsync -aiv --delete --exclude='.git/' --exclude='.idea/' --exclude='storage/framework/' --exclude='packages/' --exclude='storage/app/temp/' imet-offline.homelab7a.work:/workspace/imet-offline/ ./" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />
