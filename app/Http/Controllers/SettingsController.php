@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use AndreaMarelli\ModularForms\Models\Traits\Payload;
+use App\Models\Country;
+use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -21,7 +23,9 @@ class SettingsController extends BaseController
             'vueData' => [
                 'records' => Settings::get(),
                 'save_url' => route('settings_update'),
-            ]
+            ],
+            'countries' => Country::getAll(),
+            'updated_pas_countries' => ProtectedAreaUpdate::getUpdated()
         ]);
     }
 
@@ -37,6 +41,14 @@ class SettingsController extends BaseController
         return [
             'records' => $records,
             'status' => 'success',
+        ];
+    }
+
+    public function update_pas(Request $request, $iso3): array
+    {
+
+        return [
+            'status' => 'success'
         ];
     }
 
