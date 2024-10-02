@@ -20,7 +20,7 @@ return [
             'fields' => [
                 'protected_planet_api_key' => 'Protected Planet API',
             ],
-            'protected_planet_api_key_description' => '<b>Required</b> to retrieve protected areas from Protected Planet API.',
+            'protected_planet_api_key_description' => '<b>Required</b> to retrieve protected areas from Protected Planet API. Request a key <a href="https://api.protectedplanet.net/" target="_blank">here</a>',
         ],
 
         'protected_areas' => [
