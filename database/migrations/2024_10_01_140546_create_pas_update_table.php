@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('imet_pas_update', function (Blueprint $table) {
-            $table->id();
-            $table->string('country');
+            $table->string('country')->primary();
             $table->string('last_update_date');
         });
     }

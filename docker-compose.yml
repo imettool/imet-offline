@@ -75,7 +75,6 @@ services:
       dockerfile: docker/node/Dockerfile
       args:
         - UID=${UID-}
-    image: ${COMPOSE_PROJECT_NAME}_node
     volumes:
       - ./:/var/www/html/
       - ../imet-core/:/var/www/packages/imet-core

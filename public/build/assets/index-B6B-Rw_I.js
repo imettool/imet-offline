@@ -10,7 +10,7 @@ import { _ as _export_sfc, v as vueDropzone } from "./dropzone-ZV8SMygf.js";
 import { c as commonjsGlobal, g as getDefaultExportFromCjs, a as getAugmentedNamespace, m as mapboxgl } from "./mapbox-B5Yj7lio.js";
 import { i as init, e as echarts } from "./echarts-Cjqa5bG4.js";
 var require_index_001 = __commonJS({
-  "assets/index-B-aVWC8x.js"(exports, module) {
+  "assets/index-B6B-Rw_I.js"(exports, module) {
     var _a;
     class I18n {
       /**
@@ -659,12 +659,12 @@ var require_index_001 = __commonJS({
     const _hoisted_7$4 = { class: "header" };
     const _hoisted_8$4 = { class: "dialog-title" };
     const _hoisted_9$4 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
-    const _hoisted_10$3 = [
+    const _hoisted_10$4 = [
       _hoisted_9$4
     ];
-    const _hoisted_11$2 = { class: "body" };
-    const _hoisted_12$1 = { class: "dialog_search" };
-    const _hoisted_13$1 = ["onKeydown"];
+    const _hoisted_11$3 = { class: "body" };
+    const _hoisted_12$2 = { class: "dialog_search" };
+    const _hoisted_13$2 = ["onKeydown"];
     const _hoisted_14$1 = ["disabled"];
     const _hoisted_15$1 = {
       key: 0,
@@ -739,10 +739,10 @@ var require_index_001 = __commonJS({
                 type: "button",
                 class: "close",
                 onClick: $setup.closeSelectorDialog
-              }, [..._hoisted_10$3])
+              }, [..._hoisted_10$4])
             ]),
-            createBaseVNode("div", _hoisted_11$2, [
-              withDirectives(createBaseVNode("div", _hoisted_12$1, [
+            createBaseVNode("div", _hoisted_11$3, [
+              withDirectives(createBaseVNode("div", _hoisted_12$2, [
                 createBaseVNode("i", null, toDisplayString($setup.Locale.getLabel("modular-forms::common.search_item")) + ": ", 1),
                 withDirectives(createBaseVNode("input", {
                   type: "text",
@@ -750,7 +750,7 @@ var require_index_001 = __commonJS({
                   autofocus: "",
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.searchKey = $event),
                   onKeydown: withKeys(withModifiers($setup.applySearch, ["prevent"]), ["enter"])
-                }, null, 40, _hoisted_13$1), [
+                }, null, 40, _hoisted_13$2), [
                   [vModelText, $setup.searchKey]
                 ]),
                 renderSlot(_ctx.$slots, "searchFilters", {}, void 0, true),
@@ -2478,11 +2478,11 @@ var require_index_001 = __commonJS({
       name: "_method",
       value: "DELETE"
     }, null, -1);
-    const _hoisted_10$2 = {
+    const _hoisted_10$3 = {
       type: "submit",
       class: "btn-nav small red"
     };
-    const _hoisted_11$1 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1);
+    const _hoisted_11$2 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1);
     function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       const _component_dialog_box = resolveComponent("dialog-box");
@@ -2518,8 +2518,8 @@ var require_index_001 = __commonJS({
                   value: $setup.csrfToken
                 }, null, 8, _hoisted_8$3),
                 _hoisted_9$3,
-                createBaseVNode("button", _hoisted_10$2, [
-                  _hoisted_11$1,
+                createBaseVNode("button", _hoisted_10$3, [
+                  _hoisted_11$2,
                   createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
                 ])
               ], 8, _hoisted_7$3)
@@ -16554,11 +16554,11 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     ];
     const _hoisted_8$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-upload white" }, null, -1));
     const _hoisted_9$2 = { class: "with_header_and_footer" };
-    const _hoisted_10$1 = { class: "header" };
-    const _hoisted_11 = { class: "dialog-title" };
-    const _hoisted_12 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
-    const _hoisted_13 = [
-      _hoisted_12
+    const _hoisted_10$2 = { class: "header" };
+    const _hoisted_11$1 = { class: "dialog-title" };
+    const _hoisted_12$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
+    const _hoisted_13$1 = [
+      _hoisted_12$1
     ];
     const _hoisted_14 = { class: "body" };
     const _hoisted_15 = { key: 0 };
@@ -16615,13 +16615,13 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
             [vShow, false]
           ]),
           createBaseVNode("div", _hoisted_9$2, [
-            createBaseVNode("div", _hoisted_10$1, [
-              createBaseVNode("div", _hoisted_11, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1),
+            createBaseVNode("div", _hoisted_10$2, [
+              createBaseVNode("div", _hoisted_11$1, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1),
               createBaseVNode("button", {
                 type: "button",
                 class: "close",
                 onClick: $setup.closeUploadDialog
-              }, [..._hoisted_13])
+              }, [..._hoisted_13$1])
             ]),
             createBaseVNode("div", _hoisted_14, [
               !$setup.isFileSelected ? (openBlock(), createElementBlock("span", _hoisted_15, [
@@ -84469,7 +84469,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     const _hoisted_7$1 = { key: 2 };
     const _hoisted_8$1 = { key: 0 };
     const _hoisted_9$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-plus-square" }, null, -1));
-    const _hoisted_10 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-minus-square" }, null, -1));
+    const _hoisted_10$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-minus-square" }, null, -1));
     function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", _hoisted_1$5, [
         $setup.to_be_shown["internal"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_2$4, [
@@ -84528,7 +84528,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           class: "btn-nav small",
           onClick: $setup.toggleShown
         }, [
-          _hoisted_10,
+          _hoisted_10$1,
           createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.hide")), 1)
         ])) : createCommentVNode("", true)
       ]);
@@ -88284,22 +88284,49 @@ This will fail in production.`);
         iso3: String,
         name: String,
         downloaded: Boolean,
-        updated: String
+        updated: String,
+        updateUrl: String
       },
       setup(__props, { expose: __expose }) {
         __expose();
         const Locale2 = window.ModularForms.Helpers.Locale;
         const props = __props;
         const loading = ref(false);
+        const loaded = ref(false);
+        const downloaded = ref(props.downloaded);
+        const updated = ref(props.updated);
+        const api_key_error = ref(false);
+        const api_error = ref(false);
         function update2(iso3) {
-          console.log("update", iso3);
           loading.value = true;
+          fetch(props.updateUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-Token": window.Laravel.csrfToken
+            },
+            body: JSON.stringify({
+              "iso3": iso3
+            })
+          }).then((response) => response.json()).then(function(data) {
+            if (data.status === "success") {
+              downloaded.value = true;
+              updated.value = data.updated;
+              loaded.value = true;
+            } else {
+              if (data.message.includes("API key")) {
+                api_key_error.value = true;
+              } else {
+                api_error.value = true;
+              }
+            }
+            loading.value = false;
+          }).catch(function(error) {
+            api_error.value = true;
+            loading.value = false;
+          });
         }
-        function download2(iso3) {
-          console.log("download", iso3);
-          loading.value = true;
-        }
-        const __returned__ = { Locale: Locale2, props, loading, update: update2, download: download2, ref };
+        const __returned__ = { Locale: Locale2, props, loading, loaded, downloaded, updated, api_key_error, api_error, update: update2, ref };
         Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
         return __returned__;
       }
@@ -88312,13 +88339,23 @@ This will fail in production.`);
       class: "fa-solid fa-sync fa-spin"
     };
     const _hoisted_5 = {
+      key: 1,
+      class: "text-red-600 text-sm"
+    };
+    const _hoisted_6 = /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1);
+    const _hoisted_7 = {
+      key: 2,
+      class: "text-red-600 text-sm"
+    };
+    const _hoisted_8 = /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1);
+    const _hoisted_9 = {
       key: 0,
       class: "italic text-xs pr-2"
     };
-    const _hoisted_6 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-rotate" }, null, -1);
-    const _hoisted_7 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-check-circle text-green-600 pl-2" }, null, -1);
-    const _hoisted_8 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-down-long" }, null, -1);
-    const _hoisted_9 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-xmark-circle text-red-600 pl-2" }, null, -1);
+    const _hoisted_10 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-rotate" }, null, -1);
+    const _hoisted_11 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-check-circle text-green-600 pl-2" }, null, -1);
+    const _hoisted_12 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-down-long" }, null, -1);
+    const _hoisted_13 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-xmark-circle text-red-600 pl-2" }, null, -1);
     function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", _hoisted_1, [
         createBaseVNode("div", null, [
@@ -88329,25 +88366,32 @@ This will fail in production.`);
           createBaseVNode("span", _hoisted_2, toDisplayString($props.name), 1)
         ]),
         createBaseVNode("div", _hoisted_3, [
-          $setup.loading ? (openBlock(), createElementBlock("i", _hoisted_4)) : $props.downloaded ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-            $props.updated ? (openBlock(), createElementBlock("span", _hoisted_5, toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.last_update")) + ": " + toDisplayString($props.updated), 1)) : createCommentVNode("", true),
-            createBaseVNode("button", {
+          $setup.loading ? (openBlock(), createElementBlock("i", _hoisted_4)) : $setup.api_key_error ? (openBlock(), createElementBlock("span", _hoisted_5, [
+            _hoisted_6,
+            createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.errors.missing_api_token")), 1)
+          ])) : $setup.api_error ? (openBlock(), createElementBlock("span", _hoisted_7, [
+            _hoisted_8,
+            createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.errors.generic")), 1)
+          ])) : $setup.downloaded ? (openBlock(), createElementBlock(Fragment, { key: 3 }, [
+            $setup.updated ? (openBlock(), createElementBlock("span", _hoisted_9, toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.last_update")) + ": " + toDisplayString($setup.updated), 1)) : createCommentVNode("", true),
+            !$setup.loaded ? (openBlock(), createElementBlock("button", {
+              key: 1,
               class: "btn-nav gray small whitespace-nowrap",
               onClick: _cache[0] || (_cache[0] = ($event) => $setup.update($props.iso3))
             }, [
-              _hoisted_6,
+              _hoisted_10,
               createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.update")), 1)
-            ]),
-            _hoisted_7
-          ], 64)) : (openBlock(), createElementBlock(Fragment, { key: 2 }, [
+            ])) : createCommentVNode("", true),
+            _hoisted_11
+          ], 64)) : (openBlock(), createElementBlock(Fragment, { key: 4 }, [
             createBaseVNode("button", {
               class: "btn-nav gray small whitespace-nowrap",
-              onClick: _cache[1] || (_cache[1] = ($event) => $setup.download($props.iso3))
+              onClick: _cache[1] || (_cache[1] = ($event) => $setup.update($props.iso3))
             }, [
-              _hoisted_8,
+              _hoisted_12,
               createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.download")), 1)
             ]),
-            _hoisted_9
+            _hoisted_13
           ], 64))
         ])
       ]);
