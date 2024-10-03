@@ -1,7 +1,7 @@
 <?php
 
-use AndreaMarelli\ImetCore\Models\ProtectedArea;
-use App\Models\ProtectedAreaUpdate;
+use AndreaMarelli\ImetCore\Models\Animal;
+use App\Helpers\SpeciesUpdater;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
@@ -14,7 +14,7 @@ return new class extends Migration
     public function up(): void
     {
         // get contents of a file into a string
-        $filename = database_path(ProtectedAreaUpdate::CSV_MIGRATION_PATH);
+        $filename = database_path(SpeciesUpdater::CSV_MIGRATION_PATH);
 
         // Open and read the CSV file
         $data = [];
@@ -25,7 +25,7 @@ return new class extends Migration
         }
 
         // Upsert data into the database
-        ProtectedArea::upsert($data, ['global_id'], ProtectedAreaUpdate::MIGRATION_ATTRIBUTES);
+        Animal::upsert($data, ['order', 'family', 'genus', 'species'], SpeciesUpdater::MIGRATION_ATTRIBUTES);
     }
 
     /**

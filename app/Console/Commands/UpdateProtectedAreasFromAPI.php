@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
-use AndreaMarelli\ImetCore\Helpers\ProtectedPlanet;
 use AndreaMarelli\ImetCore\Models\ProtectedArea;
 use AndreaMarelli\ModularForms\Exceptions\MissingAPITokenException;
+use App\Helpers\ProtectedAreaUpdater;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
 use Illuminate\Console\Command;
@@ -59,7 +59,7 @@ class UpdateProtectedAreasFromAPI extends Command
         foreach ($pas_countries as $iso) {
             try {
                 $this->info('Updating ' . $iso . ' (' . ++$country_idx . '/' . $num_countries . ')');
-                ProtectedPlanet::updateByCountry($iso);     // Update Protected Areas for a country
+                ProtectedAreaUpdater::updateByCountry($iso);     // Update Protected Areas for a country
                 ProtectedAreaUpdate::setUpdated($iso);      // Update last update date
 
             } catch (MissingAPITokenException $e) {
@@ -76,10 +76,10 @@ class UpdateProtectedAreasFromAPI extends Command
 
         // Write CSV
         $this->info('Writing CSV file...');
-        $handler = fopen(database_path(ProtectedAreaUpdate::CSV_MIGRATION_PATH), 'w');
-        fputcsv($handler, ProtectedAreaUpdate::MIGRATION_ATTRIBUTES);   // header
+        $handler = fopen(database_path(ProtectedAreaUpdater::CSV_MIGRATION_PATH), 'w');
+        fputcsv($handler, ProtectedAreaUpdater::MIGRATION_ATTRIBUTES);   // header
         foreach ($pas as $pa) {
-            fputcsv($handler, $pa->only(ProtectedAreaUpdate::MIGRATION_ATTRIBUTES));
+            fputcsv($handler, $pa->only(ProtectedAreaUpdater::MIGRATION_ATTRIBUTES));
         }
         fclose($handler);
     }

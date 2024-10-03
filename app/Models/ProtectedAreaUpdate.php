@@ -15,9 +15,6 @@ class ProtectedAreaUpdate extends Model
 
     protected $fillable = ['country', 'last_update_date'];
 
-    public const MIGRATION_ATTRIBUTES = ['global_id','country','wdpa_id','name','iucn_category','creation_date','perimeter','area','shape_index'];
-    public const CSV_MIGRATION_PATH = 'protected_areas.csv';
-
     /**
      * Get last update date for each country
      */

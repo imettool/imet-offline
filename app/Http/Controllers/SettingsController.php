@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use AndreaMarelli\ImetCore\Helpers\ProtectedPlanet;
 use AndreaMarelli\ModularForms\Exceptions\MissingAPITokenException;
 use AndreaMarelli\ModularForms\Models\Traits\Payload;
+use App\Helpers\ProtectedAreaUpdater;
 use App\Models\Country;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
@@ -57,8 +57,7 @@ class SettingsController extends BaseController
         Config::set('PROTECTED_PLANET_API_KEY', Settings::getSetting('protected_planet_api_key'));
 
         try{
-
-            ProtectedPlanet::updateByCountry($country);
+            ProtectedAreaUpdater::updateByCountry($country);
             ProtectedAreaUpdate::setUpdated($country);
 
         } catch (MissingAPITokenException $e){

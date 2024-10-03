@@ -2,10 +2,8 @@
 
 namespace App\Console\Commands;
 
-use AndreaMarelli\ImetCore\Models\ProtectedArea;
-use App\Models\ProtectedAreaUpdate;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
+
 
 class Template extends Command
 {
