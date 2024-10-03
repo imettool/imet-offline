@@ -13,6 +13,8 @@ use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
+    const NUM_FORMS = 5;
+
     /**
      * @throws Exception
      */
@@ -20,6 +22,12 @@ class DatabaseSeeder extends Seeder
     {
         $type = $field['type'];
 
+        // CUSTOM
+        if(Str::contains($type, '_EcosystemServicesImportance')){
+            return collect([0, 1])->random();
+        }
+
+        // Standard
         if ($type === 'text') {
             return fake()->words(3);
         } elseif ($type === 'textarea' || $type === 'text-area') {
@@ -62,6 +70,7 @@ class DatabaseSeeder extends Seeder
             $list_type = SelectionList::getListType($type);
             $cached_list = SelectionList::CacheListInSession($list_type);
             return collect($cached_list)
+                ->keys()
                 ->random(Str::contains($type, 'multiple') ? rand(2, 4) : null);
         } elseif (Str::contains($type, 'rating')){
             $values = [];
@@ -166,14 +175,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Dev/fake seeder
-        $num_forms = 10;
-
         $pas = ProtectedArea::all()->random(10);
 
         Auth::loginUsingId(0);
 
-        for($i=1; $i<=$num_forms; $i++){
+        for($i=1; $i<=self::NUM_FORMS; $i++){
 
             $pa = $pas->random();
 
