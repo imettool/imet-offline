@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use AndreaMarelli\ImetCore\Jobs\PopulateSpecies;
 use AndreaMarelli\ImetCore\Models\ProtectedArea;
 use AndreaMarelli\ModularForms\Helpers\Input\SelectionList;
 use AndreaMarelli\ImetCore\Models\Animal;
@@ -167,9 +166,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Populate species
-        PopulateSpecies::dispatch();
-
         // Dev/fake seeder
         $num_forms = 10;
 
