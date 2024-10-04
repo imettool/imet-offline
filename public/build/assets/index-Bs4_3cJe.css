@@ -751,6 +751,9 @@ video {
 .resize {
   resize: both;
 }
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .flex-row {
   flex-direction: row;
 }
@@ -778,6 +781,9 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.justify-items-end {
+  justify-items: end;
+}
 .gap-1 {
   gap: 0.25rem;
 }
@@ -802,6 +808,9 @@ video {
 }
 .gap-y-4 {
   row-gap: 1rem;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -888,11 +897,17 @@ video {
 .pb-6 {
   padding-bottom: 1.5rem;
 }
+.pl-2 {
+  padding-left: 0.5rem;
+}
 .pl-4 {
   padding-left: 1rem;
 }
 .pl-5 {
   padding-left: 1.25rem;
+}
+.pr-2 {
+  padding-right: 0.5rem;
 }
 .text-left {
   text-align: left;
@@ -934,6 +949,14 @@ video {
 }
 .italic {
   font-style: italic;
+}
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 .text-red-800 {
   --tw-text-opacity: 1;
@@ -21334,6 +21357,24 @@ readers do not read off random characters that represent icons */
 .v-select.vs--single .vs__dropdown-toggle .vs__selected-options .vs__selected {
   padding: 0;
   margin: 0;
+}
+@media (min-width: 1024px) {
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1536px) {
+
+  .\32xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .selector-dialog .dialog-anchor {

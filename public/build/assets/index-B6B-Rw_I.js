@@ -10,7 +10,7 @@ import { _ as _export_sfc, v as vueDropzone } from "./dropzone-ZV8SMygf.js";
 import { c as commonjsGlobal, g as getDefaultExportFromCjs, a as getAugmentedNamespace, m as mapboxgl } from "./mapbox-B5Yj7lio.js";
 import { i as init, e as echarts } from "./echarts-Cjqa5bG4.js";
 var require_index_001 = __commonJS({
-  "assets/index-DAl439yL.js"(exports, module) {
+  "assets/index-B6B-Rw_I.js"(exports, module) {
     var _a;
     class I18n {
       /**
@@ -360,7 +360,7 @@ var require_index_001 = __commonJS({
         return JSON.parse(gBase64.decode(encoded_obj));
       }
     };
-    const _sfc_main$t = {
+    const _sfc_main$u = {
       __name: "selector-dialog",
       props: /* @__PURE__ */ mergeModels({
         parentId: {
@@ -647,24 +647,24 @@ var require_index_001 = __commonJS({
       }
     };
     const _withScopeId$2 = (n) => (pushScopeId("data-v-c95f5480"), n = n(), popScopeId(), n);
-    const _hoisted_1$n = ["innerHTML"];
-    const _hoisted_2$h = {
+    const _hoisted_1$o = ["innerHTML"];
+    const _hoisted_2$i = {
       key: 1,
       class: "field-preview"
     };
-    const _hoisted_3$d = { class: "multiple dontOpenDialog" };
-    const _hoisted_4$7 = ["innerHTML"];
-    const _hoisted_5$5 = ["onClick"];
-    const _hoisted_6$3 = { class: "with_header_and_footer" };
-    const _hoisted_7$3 = { class: "header" };
-    const _hoisted_8$3 = { class: "dialog-title" };
-    const _hoisted_9$3 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
-    const _hoisted_10$3 = [
-      _hoisted_9$3
+    const _hoisted_3$e = { class: "multiple dontOpenDialog" };
+    const _hoisted_4$8 = ["innerHTML"];
+    const _hoisted_5$6 = ["onClick"];
+    const _hoisted_6$4 = { class: "with_header_and_footer" };
+    const _hoisted_7$4 = { class: "header" };
+    const _hoisted_8$4 = { class: "dialog-title" };
+    const _hoisted_9$4 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
+    const _hoisted_10$4 = [
+      _hoisted_9$4
     ];
-    const _hoisted_11$2 = { class: "body" };
-    const _hoisted_12$1 = { class: "dialog_search" };
-    const _hoisted_13$1 = ["onKeydown"];
+    const _hoisted_11$3 = { class: "body" };
+    const _hoisted_12$2 = { class: "dialog_search" };
+    const _hoisted_13$2 = ["onKeydown"];
     const _hoisted_14$1 = ["disabled"];
     const _hoisted_15$1 = {
       key: 0,
@@ -706,7 +706,7 @@ var require_index_001 = __commonJS({
     const _hoisted_31 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createBaseVNode("div", { class: "spacer" }, null, -1));
     const _hoisted_32 = ["innerHTML"];
     const _hoisted_33 = ["disabled"];
-    function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$u(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_dialog_box = resolveComponent("dialog-box");
       return openBlock(), createBlock(_component_dialog_box, {
         ref: "dialogComponent",
@@ -717,32 +717,32 @@ var require_index_001 = __commonJS({
             key: 0,
             class: "field-preview",
             innerHTML: $setup.anchorLabel()
-          }, null, 8, _hoisted_1$n)) : (openBlock(), createElementBlock("div", _hoisted_2$h, [
+          }, null, 8, _hoisted_1$o)) : (openBlock(), createElementBlock("div", _hoisted_2$i, [
             !$setup.Common.isEmpty($setup.confirmedItem) ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($setup.confirmedItem, (item) => {
-              return openBlock(), createElementBlock("span", _hoisted_3$d, [
+              return openBlock(), createElementBlock("span", _hoisted_3$e, [
                 createBaseVNode("span", {
                   innerHTML: $setup.anchorMultipleLabel(item)
-                }, null, 8, _hoisted_4$7),
+                }, null, 8, _hoisted_4$8),
                 createBaseVNode("i", {
                   class: "remove_item fa-solid fa-xmark",
                   onClick: ($event) => $setup.removeItem(item)
-                }, null, 8, _hoisted_5$5)
+                }, null, 8, _hoisted_5$6)
               ]);
             }), 256)) : createCommentVNode("", true)
           ]))
         ]),
         "dialog-content": withCtx(() => [
-          createBaseVNode("div", _hoisted_6$3, [
-            createBaseVNode("div", _hoisted_7$3, [
-              createBaseVNode("div", _hoisted_8$3, toDisplayString($setup.Locale.getLabel("modular-forms::common.select_item")), 1),
+          createBaseVNode("div", _hoisted_6$4, [
+            createBaseVNode("div", _hoisted_7$4, [
+              createBaseVNode("div", _hoisted_8$4, toDisplayString($setup.Locale.getLabel("modular-forms::common.select_item")), 1),
               createBaseVNode("button", {
                 type: "button",
                 class: "close",
                 onClick: $setup.closeSelectorDialog
-              }, [..._hoisted_10$3])
+              }, [..._hoisted_10$4])
             ]),
-            createBaseVNode("div", _hoisted_11$2, [
-              withDirectives(createBaseVNode("div", _hoisted_12$1, [
+            createBaseVNode("div", _hoisted_11$3, [
+              withDirectives(createBaseVNode("div", _hoisted_12$2, [
                 createBaseVNode("i", null, toDisplayString($setup.Locale.getLabel("modular-forms::common.search_item")) + ": ", 1),
                 withDirectives(createBaseVNode("input", {
                   type: "text",
@@ -750,7 +750,7 @@ var require_index_001 = __commonJS({
                   autofocus: "",
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.searchKey = $event),
                   onKeydown: withKeys(withModifiers($setup.applySearch, ["prevent"]), ["enter"])
-                }, null, 40, _hoisted_13$1), [
+                }, null, 40, _hoisted_13$2), [
                   [vModelText, $setup.searchKey]
                 ]),
                 renderSlot(_ctx.$slots, "searchFilters", {}, void 0, true),
@@ -859,7 +859,7 @@ var require_index_001 = __commonJS({
         _: 3
       }, 512);
     }
-    const selectorDialog = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$t], ["__scopeId", "data-v-c95f5480"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/components/selector-dialog.vue"]]);
+    const selectorDialog = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$u], ["__scopeId", "data-v-c95f5480"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/components/selector-dialog.vue"]]);
     const min$1 = Math.min;
     const max$1 = Math.max;
     const round$2 = Math.round;
@@ -2174,7 +2174,7 @@ var require_index_001 = __commonJS({
         platform: platformWithCache
       });
     };
-    const _sfc_main$s = {
+    const _sfc_main$t = {
       props: {
         anchorElemId: {
           type: String,
@@ -2298,25 +2298,25 @@ var require_index_001 = __commonJS({
         };
       }
     };
-    const _hoisted_1$m = {
+    const _hoisted_1$n = {
       ref: "tooltipElem",
       role: "tooltip"
     };
-    const _hoisted_2$g = { class: "tooltip-content" };
-    const _hoisted_3$c = {
+    const _hoisted_2$h = { class: "tooltip-content" };
+    const _hoisted_3$d = {
       ref: "arrowElem",
       class: "tooltip-arrow"
     };
-    function _sfc_render$s(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$m, [
-        createBaseVNode("div", _hoisted_2$g, [
+    function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$n, [
+        createBaseVNode("div", _hoisted_2$h, [
           renderSlot(_ctx.$slots, "default", {}, void 0, true)
         ]),
-        createBaseVNode("div", _hoisted_3$c, null, 512)
+        createBaseVNode("div", _hoisted_3$d, null, 512)
       ], 512);
     }
-    const tooltip = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$s], ["__scopeId", "data-v-09ff0b06"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/tooltip.vue"]]);
-    const _sfc_main$r = {
+    const tooltip = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$t], ["__scopeId", "data-v-09ff0b06"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/tooltip.vue"]]);
+    const _sfc_main$s = {
       __name: "dialog_box",
       setup(__props, { expose: __expose }) {
         const anchorElem = ref(null);
@@ -2360,32 +2360,32 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$l = { role: "dialog" };
-    const _hoisted_2$f = {
+    const _hoisted_1$m = { role: "dialog" };
+    const _hoisted_2$g = {
       ref: "anchorElem",
       class: "dialog-anchor"
     };
-    const _hoisted_3$b = {
+    const _hoisted_3$c = {
       ref: "dialogOverlayElem",
       class: "dialog-overlay"
     };
-    const _hoisted_4$6 = {
+    const _hoisted_4$7 = {
       ref: "dialogContentElem",
       class: "dialog-content"
     };
-    function _sfc_render$r(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$l, [
-        createBaseVNode("div", _hoisted_2$f, [
+    function _sfc_render$s(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$m, [
+        createBaseVNode("div", _hoisted_2$g, [
           renderSlot(_ctx.$slots, "dialog-anchor", {}, void 0, true)
         ], 512),
-        createBaseVNode("div", _hoisted_3$b, [
-          createBaseVNode("div", _hoisted_4$6, [
+        createBaseVNode("div", _hoisted_3$c, [
+          createBaseVNode("div", _hoisted_4$7, [
             renderSlot(_ctx.$slots, "dialog-content", {}, void 0, true)
           ], 512)
         ], 512)
       ]);
     }
-    const dialogBox = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$r], ["__scopeId", "data-v-903b9ef3"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/dialog_box.vue"]]);
+    const dialogBox = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$s], ["__scopeId", "data-v-903b9ef3"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/dialog_box.vue"]]);
     class Base {
       constructor(options, input_data) {
         const app = createApp(
@@ -2397,7 +2397,7 @@ var require_index_001 = __commonJS({
         return app;
       }
     }
-    const _sfc_main$q = {
+    const _sfc_main$r = {
       props: {
         name: {
           type: String,
@@ -2423,7 +2423,7 @@ var require_index_001 = __commonJS({
         }
       }
     };
-    function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$r(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("span", null, [
         createBaseVNode("span", {
@@ -2437,8 +2437,8 @@ var require_index_001 = __commonJS({
         })
       ]);
     }
-    const flag = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$q], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/flag.vue"]]);
-    const _sfc_main$p = {
+    const flag = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$r], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/flag.vue"]]);
+    const _sfc_main$q = {
       __name: "destroyFormButton",
       props: {
         action: {
@@ -2460,35 +2460,35 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$k = /* @__PURE__ */ createBaseVNode("button", {
+    const _hoisted_1$l = /* @__PURE__ */ createBaseVNode("button", {
       type: "button",
       class: "btn-nav small red"
     }, [
       /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-trash" })
     ], -1);
-    const _hoisted_2$e = { class: "with_header_and_footer" };
-    const _hoisted_3$a = { class: "header" };
-    const _hoisted_4$5 = /* @__PURE__ */ createBaseVNode("div", { class: "body" }, null, -1);
-    const _hoisted_5$4 = { class: "footer" };
-    const _hoisted_6$2 = /* @__PURE__ */ createBaseVNode("div", { class: "spacer" }, null, -1);
-    const _hoisted_7$2 = ["action"];
-    const _hoisted_8$2 = ["value"];
-    const _hoisted_9$2 = /* @__PURE__ */ createBaseVNode("input", {
+    const _hoisted_2$f = { class: "with_header_and_footer" };
+    const _hoisted_3$b = { class: "header" };
+    const _hoisted_4$6 = /* @__PURE__ */ createBaseVNode("div", { class: "body" }, null, -1);
+    const _hoisted_5$5 = { class: "footer" };
+    const _hoisted_6$3 = /* @__PURE__ */ createBaseVNode("div", { class: "spacer" }, null, -1);
+    const _hoisted_7$3 = ["action"];
+    const _hoisted_8$3 = ["value"];
+    const _hoisted_9$3 = /* @__PURE__ */ createBaseVNode("input", {
       type: "hidden",
       name: "_method",
       value: "DELETE"
     }, null, -1);
-    const _hoisted_10$2 = {
+    const _hoisted_10$3 = {
       type: "submit",
       class: "btn-nav small red"
     };
-    const _hoisted_11$1 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1);
-    function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_11$2 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1);
+    function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       const _component_dialog_box = resolveComponent("dialog-box");
       return openBlock(), createBlock(_component_dialog_box, { ref: "destroyDialog" }, {
         "dialog-anchor": withCtx(() => [
-          _hoisted_1$k,
+          _hoisted_1$l,
           createVNode(_component_tooltip, null, {
             default: withCtx(() => [
               createTextVNode(toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
@@ -2497,11 +2497,11 @@ var require_index_001 = __commonJS({
           })
         ]),
         "dialog-content": withCtx(() => [
-          createBaseVNode("div", _hoisted_2$e, [
-            createBaseVNode("div", _hoisted_3$a, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_deletion")), 1),
-            _hoisted_4$5,
-            createBaseVNode("div", _hoisted_5$4, [
-              _hoisted_6$2,
+          createBaseVNode("div", _hoisted_2$f, [
+            createBaseVNode("div", _hoisted_3$b, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_deletion")), 1),
+            _hoisted_4$6,
+            createBaseVNode("div", _hoisted_5$5, [
+              _hoisted_6$3,
               createBaseVNode("button", {
                 type: "button",
                 onClick: $setup.closeDestroyDialog,
@@ -2516,20 +2516,20 @@ var require_index_001 = __commonJS({
                   type: "hidden",
                   name: "_token",
                   value: $setup.csrfToken
-                }, null, 8, _hoisted_8$2),
-                _hoisted_9$2,
-                createBaseVNode("button", _hoisted_10$2, [
-                  _hoisted_11$1,
+                }, null, 8, _hoisted_8$3),
+                _hoisted_9$3,
+                createBaseVNode("button", _hoisted_10$3, [
+                  _hoisted_11$2,
                   createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
                 ])
-              ], 8, _hoisted_7$2)
+              ], 8, _hoisted_7$3)
             ])
           ])
         ]),
         _: 1
       }, 512);
     }
-    const destroyButton = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$p], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/components/destroyFormButton.vue"]]);
+    const destroyButton = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$q], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/components/destroyFormButton.vue"]]);
     class FormList {
       constructor(input_data = {}) {
         const options = {
@@ -2617,7 +2617,7 @@ var require_index_001 = __commonJS({
         });
       } };
     }
-    const _sfc_main$o = {
+    const _sfc_main$p = {
       __name: "simple-text",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2642,8 +2642,8 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$j = ["id", "name"];
-    function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$k = ["id", "name"];
+    function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("span", null, [
         withDirectives(createBaseVNode("input", {
@@ -2653,7 +2653,7 @@ var require_index_001 = __commonJS({
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
           class: "field-edit",
           autocomplete: "off"
-        }, null, 8, _hoisted_1$j), [
+        }, null, 8, _hoisted_1$k), [
           [vModelText, $setup.inputValue]
         ]),
         $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
@@ -2667,8 +2667,8 @@ var require_index_001 = __commonJS({
         }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
       ]);
     }
-    const simpleText = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$o], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-text.vue"]]);
-    const _sfc_main$n = {
+    const simpleText = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$p], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-text.vue"]]);
+    const _sfc_main$o = {
       __name: "simple-textarea",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2696,9 +2696,9 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$i = ["id", "textContent"];
-    const _hoisted_2$d = ["id", "textContent"];
-    function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$j = ["id", "textContent"];
+    const _hoisted_2$e = ["id", "textContent"];
+    function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("span", null, [
         $props.disabled ? (openBlock(), createElementBlock("span", {
           key: 0,
@@ -2706,19 +2706,55 @@ var require_index_001 = __commonJS({
           class: "field-preview disabled",
           onInput: $setup.onInput,
           textContent: toDisplayString($setup.inputValue)
-        }, null, 40, _hoisted_1$i)) : (openBlock(), createElementBlock("span", {
+        }, null, 40, _hoisted_1$j)) : (openBlock(), createElementBlock("span", {
           key: 1,
           id: $props.id,
           class: "field-preview",
           contenteditable: "",
           onInput: $setup.onInput,
           textContent: toDisplayString($setup.inputValue)
-        }, null, 40, _hoisted_2$d))
+        }, null, 40, _hoisted_2$e))
       ]);
     }
-    const simpleTextarea = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$n], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-textarea.vue"]]);
-    const _sfc_main$m = {
+    const simpleTextarea = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$o], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-textarea.vue"]]);
+    const _sfc_main$n = {
       __name: "simple-url",
+      props: /* @__PURE__ */ mergeModels({
+        id: {
+          type: String,
+          default: null
+        },
+        dataRules: {
+          type: String,
+          default: ""
+        }
+      }, {
+        "modelValue": {},
+        "modelModifiers": {}
+      }),
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const inputValue = useModel(__props, "modelValue");
+        const __returned__ = { props, inputValue };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_simple_text = resolveComponent("simple-text");
+      return openBlock(), createBlock(_component_simple_text, {
+        modelValue: $setup.inputValue,
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
+        id: $props.id,
+        name: $props.id,
+        "data-rules": $props.dataRules !== "" ? $props.dataRules + "|url" : "url"
+      }, null, 8, ["modelValue", "id", "name", "data-rules"]);
+    }
+    const simpleUrl = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$n], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-url.vue"]]);
+    const _sfc_main$m = {
+      __name: "simple-email",
       props: /* @__PURE__ */ mergeModels({
         id: {
           type: String,
@@ -2749,47 +2785,11 @@ var require_index_001 = __commonJS({
         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
         id: $props.id,
         name: $props.id,
-        "data-rules": $props.dataRules !== "" ? $props.dataRules + "|url" : "url"
-      }, null, 8, ["modelValue", "id", "name", "data-rules"]);
-    }
-    const simpleUrl = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$m], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-url.vue"]]);
-    const _sfc_main$l = {
-      __name: "simple-email",
-      props: /* @__PURE__ */ mergeModels({
-        id: {
-          type: String,
-          default: null
-        },
-        dataRules: {
-          type: String,
-          default: ""
-        }
-      }, {
-        "modelValue": {},
-        "modelModifiers": {}
-      }),
-      emits: ["update:modelValue"],
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const props = __props;
-        const inputValue = useModel(__props, "modelValue");
-        const __returned__ = { props, inputValue };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_simple_text = resolveComponent("simple-text");
-      return openBlock(), createBlock(_component_simple_text, {
-        modelValue: $setup.inputValue,
-        "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
-        id: $props.id,
-        name: $props.id,
         "data-rules": $props.dataRules !== "" ? $props.dataRules + "|email" : "email"
       }, null, 8, ["modelValue", "id", "name", "data-rules"]);
     }
-    const simpleEmail = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-email.vue"]]);
-    const _sfc_main$k = {
+    const simpleEmail = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$m], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-email.vue"]]);
+    const _sfc_main$l = {
       __name: "simple-password",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2814,8 +2814,8 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$h = ["id", "name"];
-    function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$i = ["id", "name"];
+    function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("span", null, [
         withDirectives(createBaseVNode("input", {
@@ -2825,7 +2825,7 @@ var require_index_001 = __commonJS({
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
           class: "field-edit",
           autocomplete: "off"
-        }, null, 8, _hoisted_1$h), [
+        }, null, 8, _hoisted_1$i), [
           [vModelText, $setup.inputValue]
         ]),
         $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
@@ -2839,8 +2839,8 @@ var require_index_001 = __commonJS({
         }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
       ]);
     }
-    const simplePassword = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-password.vue"]]);
-    const _sfc_main$j = {
+    const simplePassword = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-password.vue"]]);
+    const _sfc_main$k = {
       __name: "rating",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2927,16 +2927,16 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$g = {
+    const _hoisted_1$h = {
       ref: "ratingOptions",
       class: "rating-container"
     };
-    const _hoisted_2$c = ["onClick", "rate"];
-    const _hoisted_3$9 = ["id"];
-    function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_2$d = ["onClick", "rate"];
+    const _hoisted_3$a = ["id"];
+    function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("span", _hoisted_1$g, [
+        createBaseVNode("span", _hoisted_1$h, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list, (item, index) => {
             return openBlock(), createElementBlock("span", null, [
               createBaseVNode("span", {
@@ -2945,7 +2945,7 @@ var require_index_001 = __commonJS({
                 onMouseover: $setup.setHover,
                 onMouseout: $setup.setHover,
                 rate: item["value"]
-              }, toDisplayString(item["label"]), 43, _hoisted_2$c),
+              }, toDisplayString(item["label"]), 43, _hoisted_2$d),
               createVNode(_component_tooltip, null, {
                 default: withCtx(() => [
                   createTextVNode(toDisplayString($setup.tooltipLabel(index)), 1)
@@ -2959,12 +2959,12 @@ var require_index_001 = __commonJS({
           type: "hidden",
           id: $props.id,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_3$9), [
+        }, null, 8, _hoisted_3$a), [
           [vModelText, $setup.inputValue]
         ])
       ]);
     }
-    const rating = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/rating.vue"]]);
+    const rating = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/rating.vue"]]);
     function useList(component_data) {
       const sortBy2 = ref(component_data.sortBy || null);
       const sortDir = ref(component_data.sortDir || "asc");
@@ -3792,7 +3792,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e, t);
         "v-select": Ce
       }
     };
-    const _sfc_main$i = /* @__PURE__ */ Object.assign(__default__, {
+    const _sfc_main$j = /* @__PURE__ */ Object.assign(__default__, {
       __name: "dropdown",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -3911,8 +3911,8 @@ https://vue-select.org/api/props.html#getoptionkey`, e, t);
         return __returned__;
       }
     });
-    const _hoisted_1$f = ["id"];
-    function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$g = ["id"];
+    function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("span", null, [
         createVNode($setup["vSelect"], {
           taggable: $props.taggable,
@@ -3930,12 +3930,12 @@ https://vue-select.org/api/props.html#getoptionkey`, e, t);
           type: "hidden",
           id: $props.id,
           "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_1$f), [
+        }, null, 8, _hoisted_1$g), [
           [vModelText, $setup.inputValue]
         ])
       ]);
     }
-    const dropdown = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/dropdown.vue"]]);
+    const dropdown = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/dropdown.vue"]]);
     var airDatepicker = { exports: {} };
     (function(module2, exports2) {
       !function(e, t) {
@@ -5151,7 +5151,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e, t);
       firstDay: 1
     };
     default_1 = pt.default = _default;
-    const _sfc_main$h = {
+    const _sfc_main$i = {
       __name: "simple-date",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -5231,8 +5231,8 @@ https://vue-select.org/api/props.html#getoptionkey`, e, t);
         return __returned__;
       }
     };
-    const _hoisted_1$e = ["id", "name"];
-    function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$f = ["id", "name"];
+    function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
       return withDirectives((openBlock(), createElementBlock("input", {
         type: "text",
         id: $props.id,
@@ -5240,11 +5240,11 @@ https://vue-select.org/api/props.html#getoptionkey`, e, t);
         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
         class: "field-edit field-date",
         readonly: ""
-      }, null, 8, _hoisted_1$e)), [
+      }, null, 8, _hoisted_1$f)), [
         [vModelText, $setup.inputValue]
       ]);
     }
-    const simpleDate = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__scopeId", "data-v-4aced308"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-date.vue"]]);
+    const simpleDate = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__scopeId", "data-v-4aced308"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-date.vue"]]);
     const AutoNumericEnum = {};
     AutoNumericEnum.allowedTagList = [
       "b",
@@ -15893,7 +15893,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     });
     Object.freeze(AutoNumeric.predefinedOptions);
     Object.defineProperty(AutoNumeric, "predefinedOptions", { configurable: false, writable: false });
-    const _sfc_main$g = {
+    const _sfc_main$h = {
       __name: "simple-numeric",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -15969,8 +15969,8 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$d = ["id", "name"];
-    function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$e = ["id", "name"];
+    function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
       return withDirectives((openBlock(), createElementBlock("input", {
         type: "text",
         id: $props.id,
@@ -15980,12 +15980,12 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         autocomplete: "off",
         ref: "inputElem",
         "on:autoNumeric:rawValueModified": _cache[1] || (_cache[1] = (...args) => _ctx.update && _ctx.update(...args))
-      }, null, 42, _hoisted_1$d)), [
+      }, null, 42, _hoisted_1$e)), [
         [vModelText, $setup.formattedValue]
       ]);
     }
-    const simpleNumeric = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__scopeId", "data-v-ef7b592d"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-numeric.vue"]]);
-    const _sfc_main$f = {
+    const simpleNumeric = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__scopeId", "data-v-ef7b592d"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-numeric.vue"]]);
+    const _sfc_main$g = {
       __name: "toggle",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -16045,28 +16045,28 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$c = { class: "toggle" };
-    const _hoisted_2$b = ["onClick"];
-    const _hoisted_3$8 = ["id"];
-    function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$c, [
+    const _hoisted_1$d = { class: "toggle" };
+    const _hoisted_2$c = ["onClick"];
+    const _hoisted_3$9 = ["id"];
+    function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$d, [
         (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list, (option) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass($setup.isSelected(option.value) ? "active" : ""),
             onClick: ($event) => $setup.setOption(option.value)
-          }, toDisplayString(option.label), 11, _hoisted_2$b);
+          }, toDisplayString(option.label), 11, _hoisted_2$c);
         }), 256)),
         withDirectives(createBaseVNode("input", {
           type: "hidden",
           id: $props.id,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_3$8), [
+        }, null, 8, _hoisted_3$9), [
           [vModelText, $setup.inputValue]
         ])
       ]);
     }
-    const toggle = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/toggle.vue"]]);
-    const _sfc_main$e = {
+    const toggle = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/toggle.vue"]]);
+    const _sfc_main$f = {
       __name: "checkbox",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -16155,26 +16155,26 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$b = {
+    const _hoisted_1$c = {
       key: 0,
       class: "checkbox"
     };
-    const _hoisted_2$a = ["name", "id", "checked"];
-    const _hoisted_3$7 = ["for"];
-    const _hoisted_4$4 = ["name", "id", "checked", "onChange"];
-    const _hoisted_5$3 = ["for"];
-    function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
-      return $props.boolean || $props.booleanNumeric ? (openBlock(), createElementBlock("span", _hoisted_1$b, [
+    const _hoisted_2$b = ["name", "id", "checked"];
+    const _hoisted_3$8 = ["for"];
+    const _hoisted_4$5 = ["name", "id", "checked", "onChange"];
+    const _hoisted_5$4 = ["for"];
+    function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+      return $props.boolean || $props.booleanNumeric ? (openBlock(), createElementBlock("span", _hoisted_1$c, [
         createBaseVNode("input", {
           type: "checkbox",
           name: $props.id,
           id: "bool-check_" + $props.id,
           checked: $setup.isChecked,
           onChange: _cache[0] || (_cache[0] = ($event) => $setup.checkChange())
-        }, null, 40, _hoisted_2$a),
+        }, null, 40, _hoisted_2$b),
         createBaseVNode("label", {
           for: "bool-check_" + $props.id
-        }, null, 8, _hoisted_3$7)
+        }, null, 8, _hoisted_3$8)
       ])) : (openBlock(), createElementBlock("span", {
         key: 1,
         class: normalizeClass(["checkbox list", $props.inline ? "inline" : ""])
@@ -16187,16 +16187,16 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
               id: "check_" + option.value + "_" + $props.id,
               checked: $setup.isOptionChecked(option.value),
               onChange: ($event) => $setup.checkChange(option.value)
-            }, null, 40, _hoisted_4$4),
+            }, null, 40, _hoisted_4$5),
             createBaseVNode("label", {
               for: "check_" + option.value + "_" + $props.id
-            }, toDisplayString(option.label), 9, _hoisted_5$3)
+            }, toDisplayString(option.label), 9, _hoisted_5$4)
           ]);
         }), 256))
       ], 2));
     }
-    const checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/checkbox.vue"]]);
-    const _sfc_main$d = {
+    const checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/checkbox.vue"]]);
+    const _sfc_main$e = {
       __name: "redlist_category",
       props: {
         category: {
@@ -16218,7 +16218,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("div", null, [
         createBaseVNode("span", {
@@ -16232,9 +16232,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         })
       ]);
     }
-    const redlist_category = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/redlist_category.vue"]]);
+    const redlist_category = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/redlist_category.vue"]]);
     const redListImgUrl = "/build/assets/iucn_red_list-Bn3APVvg.png";
-    const _sfc_main$c = {
+    const _sfc_main$d = {
       __name: "selector-species_animal",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -16328,10 +16328,10 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$a = ["innerHTML"];
-    const _hoisted_2$9 = ["href"];
-    const _hoisted_3$6 = ["src"];
-    function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$b = ["innerHTML"];
+    const _hoisted_2$a = ["href"];
+    const _hoisted_3$7 = ["src"];
+    function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createBlock($setup["selectorDialog"], {
         modelValue: $setup.inputValue,
         "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => $setup.inputValue = $event),
@@ -16377,7 +16377,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
             createBaseVNode("span", {
               class: "result_left",
               innerHTML: $setup.getSpeciesDescription(item)
-            }, null, 8, _hoisted_1$a)
+            }, null, 8, _hoisted_1$b)
           ]),
           createBaseVNode("td", null, [
             createVNode($setup["redlist_category"], {
@@ -16393,15 +16393,15 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
                 style: { "display": "inline-block" },
                 src: $setup.redListImgUrl,
                 alt: "IUCN RedList"
-              }, null, 8, _hoisted_3$6)
-            ], 8, _hoisted_2$9)
+              }, null, 8, _hoisted_3$7)
+            ], 8, _hoisted_2$a)
           ])
         ]),
         _: 1
       }, 8, ["modelValue", "parent-id", "search-url", "with-insert"]);
     }
-    const selectorSpeciesAnimal = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c], ["__scopeId", "data-v-dc359e20"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/selector-species_animal.vue"]]);
-    const _sfc_main$b = {
+    const selectorSpeciesAnimal = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__scopeId", "data-v-dc359e20"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/selector-species_animal.vue"]]);
+    const _sfc_main$c = {
       __name: "upload",
       props: /* @__PURE__ */ mergeModels({
         uploadUrl: {
@@ -16541,24 +16541,24 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
     };
     const _withScopeId$1 = (n) => (pushScopeId("data-v-32093f7c"), n = n(), popScopeId(), n);
-    const _hoisted_1$9 = { class: "upload-anchor dontOpenDialog" };
-    const _hoisted_2$8 = { class: "field-preview upload-filename" };
-    const _hoisted_3$5 = ["href"];
-    const _hoisted_4$3 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-cloud-download-alt white" }, null, -1));
-    const _hoisted_5$2 = [
-      _hoisted_4$3
+    const _hoisted_1$a = { class: "upload-anchor dontOpenDialog" };
+    const _hoisted_2$9 = { class: "field-preview upload-filename" };
+    const _hoisted_3$6 = ["href"];
+    const _hoisted_4$4 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-cloud-download-alt white" }, null, -1));
+    const _hoisted_5$3 = [
+      _hoisted_4$4
     ];
-    const _hoisted_6$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times-circle white" }, null, -1));
-    const _hoisted_7$1 = [
-      _hoisted_6$1
+    const _hoisted_6$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times-circle white" }, null, -1));
+    const _hoisted_7$2 = [
+      _hoisted_6$2
     ];
-    const _hoisted_8$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-upload white" }, null, -1));
-    const _hoisted_9$1 = { class: "with_header_and_footer" };
-    const _hoisted_10$1 = { class: "header" };
-    const _hoisted_11 = { class: "dialog-title" };
-    const _hoisted_12 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
-    const _hoisted_13 = [
-      _hoisted_12
+    const _hoisted_8$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-upload white" }, null, -1));
+    const _hoisted_9$2 = { class: "with_header_and_footer" };
+    const _hoisted_10$2 = { class: "header" };
+    const _hoisted_11$1 = { class: "dialog-title" };
+    const _hoisted_12$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
+    const _hoisted_13$1 = [
+      _hoisted_12$1
     ];
     const _hoisted_14 = { class: "body" };
     const _hoisted_15 = { key: 0 };
@@ -16573,24 +16573,24 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     const _hoisted_21 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-upload white" }, null, -1));
     const _hoisted_22 = { class: "footer" };
     const _hoisted_23 = { class: "error text-sm" };
-    function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_dialog_box = resolveComponent("dialog-box");
       return openBlock(), createBlock(_component_dialog_box, { ref: "dialogComponent" }, {
         "dialog-anchor": withCtx(() => [
-          createBaseVNode("div", _hoisted_1$9, [
-            createBaseVNode("span", _hoisted_2$8, toDisplayString($setup.inputValue instanceof Object ? $setup.inputValue.original_filename : $setup.inputValue), 1),
+          createBaseVNode("div", _hoisted_1$a, [
+            createBaseVNode("span", _hoisted_2$9, toDisplayString($setup.inputValue instanceof Object ? $setup.inputValue.original_filename : $setup.inputValue), 1),
             withDirectives(createBaseVNode("a", {
               class: "btn-nav dark small",
               target: "_blank",
               href: $setup.inputValue.download_link
-            }, [..._hoisted_5$2], 8, _hoisted_3$5), [
+            }, [..._hoisted_5$3], 8, _hoisted_3$6), [
               [vShow, $setup.inputValue.original_filename !== null]
             ]),
             withDirectives(createBaseVNode("button", {
               type: "button",
               class: "btn-nav small red",
               onClick: $setup.deleteSelection
-            }, [..._hoisted_7$1], 512), [
+            }, [..._hoisted_7$2], 512), [
               [vShow, $setup.inputValue.original_filename !== null]
             ]),
             withDirectives(createBaseVNode("button", {
@@ -16598,7 +16598,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
               class: "btn-nav small",
               onClick: $setup.openUploadDialog
             }, [
-              _hoisted_8$1,
+              _hoisted_8$2,
               createTextVNode("  " + toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1)
             ], 512), [
               [vShow, $setup.inputValue.original_filename === null]
@@ -16614,14 +16614,14 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
           }, null, 544), [
             [vShow, false]
           ]),
-          createBaseVNode("div", _hoisted_9$1, [
-            createBaseVNode("div", _hoisted_10$1, [
-              createBaseVNode("div", _hoisted_11, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1),
+          createBaseVNode("div", _hoisted_9$2, [
+            createBaseVNode("div", _hoisted_10$2, [
+              createBaseVNode("div", _hoisted_11$1, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1),
               createBaseVNode("button", {
                 type: "button",
                 class: "close",
                 onClick: $setup.closeUploadDialog
-              }, [..._hoisted_13])
+              }, [..._hoisted_13$1])
             ]),
             createBaseVNode("div", _hoisted_14, [
               !$setup.isFileSelected ? (openBlock(), createElementBlock("span", _hoisted_15, [
@@ -16665,7 +16665,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         _: 1
       }, 512);
     }
-    const uploadFile = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__scopeId", "data-v-32093f7c"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/upload.vue"]]);
+    const uploadFile = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c], ["__scopeId", "data-v-32093f7c"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/upload.vue"]]);
     var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
     var freeSelf = typeof self == "object" && self && self.Object === Object && self;
     var root$1 = freeGlobal || freeSelf || Function("return this")();
@@ -83411,7 +83411,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     })(ckeditor);
     var ckeditorExports = ckeditor.exports;
     const CKEditor = /* @__PURE__ */ getDefaultExportFromCjs(ckeditorExports);
-    const _sfc_main$a = {
+    const _sfc_main$b = {
       components: {
         ckeditor: CKEditor.component
       },
@@ -83442,7 +83442,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         };
       }
     };
-    function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_ckeditor = resolveComponent("ckeditor");
       return openBlock(), createBlock(_component_ckeditor, {
         editor: $data.editor,
@@ -83450,7 +83450,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         config: $data.editorConfig
       }, null, 8, ["editor", "model-value", "config"]);
     }
-    const textEditor = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/text-editor.vue"]]);
+    const textEditor = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/text-editor.vue"]]);
     function useDataStatus(component_data) {
       const NOT_APPLICABLE_KEY = "not_applicable";
       const NOT_AVAILABLE_KEY = "not_available";
@@ -83973,7 +83973,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }
       }
     };
-    const _sfc_main$9 = {
+    const _sfc_main$a = {
       __name: "progress_bar",
       props: {
         value: {
@@ -84008,23 +84008,23 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$8 = { class: "progress-bar" };
-    const _hoisted_2$7 = {
+    const _hoisted_1$9 = { class: "progress-bar" };
+    const _hoisted_2$8 = {
       key: 1,
       class: "label"
     };
-    function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$8, [
+    function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$9, [
         $props.value !== null ? (openBlock(), createElementBlock("div", {
           key: 0,
           class: normalizeClass(["bar", { "float-right": $props.negative }]),
           style: normalizeStyle($setup.style)
         }, null, 6)) : createCommentVNode("", true),
-        $props.value !== null ? (openBlock(), createElementBlock("div", _hoisted_2$7, toDisplayString($props.value) + "% " + toDisplayString($props.additional_label), 1)) : createCommentVNode("", true)
+        $props.value !== null ? (openBlock(), createElementBlock("div", _hoisted_2$8, toDisplayString($props.value) + "% " + toDisplayString($props.additional_label), 1)) : createCommentVNode("", true)
       ]);
     }
-    const progress_bar = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__scopeId", "data-v-420937fa"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/progress_bar.vue"]]);
-    const _sfc_main$8 = {
+    const progress_bar = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__scopeId", "data-v-420937fa"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/progress_bar.vue"]]);
+    const _sfc_main$9 = {
       __name: "imet_score_bar",
       props: {
         value: {
@@ -84063,28 +84063,28 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$7 = { class: "score-bar text-2xs" };
-    const _hoisted_2$6 = {
+    const _hoisted_1$8 = { class: "score-bar text-2xs" };
+    const _hoisted_2$7 = {
       key: 0,
       class: "score-bar__limit-left"
     };
-    const _hoisted_3$4 = {
+    const _hoisted_3$5 = {
       key: 1,
       class: "score-bar__limit-right"
     };
-    function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$7, [
-        $props.showLimits && $props.min !== null ? (openBlock(), createElementBlock("div", _hoisted_2$6, toDisplayString($props.min) + "%", 1)) : createCommentVNode("", true),
+    function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$8, [
+        $props.showLimits && $props.min !== null ? (openBlock(), createElementBlock("div", _hoisted_2$7, toDisplayString($props.min) + "%", 1)) : createCommentVNode("", true),
         createVNode($setup["progress_bar"], {
           value: $setup.score_value,
           color: $props.color,
           negative: $setup.negative
         }, null, 8, ["value", "color", "negative"]),
-        $props.showLimits && $props.max !== null ? (openBlock(), createElementBlock("div", _hoisted_3$4, toDisplayString($props.max) + "%", 1)) : createCommentVNode("", true)
+        $props.showLimits && $props.max !== null ? (openBlock(), createElementBlock("div", _hoisted_3$5, toDisplayString($props.max) + "%", 1)) : createCommentVNode("", true)
       ]);
     }
-    const imetScoreBar = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8], ["__scopeId", "data-v-6f11f8bd"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_bar.vue"]]);
-    const _sfc_main$7 = {
+    const imetScoreBar = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__scopeId", "data-v-6f11f8bd"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_bar.vue"]]);
+    const _sfc_main$8 = {
       __name: "imet_radar",
       props: {
         width: {
@@ -84172,14 +84172,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "radar",
         style: normalizeStyle("width:" + $props.width + "px; height: " + $props.height + "px;")
       }, null, 4);
     }
-    const imet_radar = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_radar.vue"]]);
-    const _sfc_main$6 = {
+    const imet_radar = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_radar.vue"]]);
+    const _sfc_main$7 = {
       __name: "multiple-files-upload",
       props: {
         uploadUrl: {
@@ -84296,10 +84296,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$6 = { class: "dropzone-custom-content" };
-    const _hoisted_2$5 = { class: "dropzone-custom-title" };
-    const _hoisted_3$3 = ["href"];
-    function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$7 = { class: "dropzone-custom-content" };
+    const _hoisted_2$6 = { class: "dropzone-custom-title" };
+    const _hoisted_3$4 = ["href"];
+    function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock(Fragment, null, [
         createVNode($setup["vueDropzone"], {
           ref: "dropzoneComponent",
@@ -84312,8 +84312,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           onVdropzoneFileAdded: $setup.fileAdded
         }, {
           default: withCtx(() => [
-            createBaseVNode("div", _hoisted_1$6, [
-              createBaseVNode("h3", _hoisted_2$5, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.multiple_files_description")), 1)
+            createBaseVNode("div", _hoisted_1$7, [
+              createBaseVNode("h3", _hoisted_2$6, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.multiple_files_description")), 1)
             ])
           ]),
           _: 1
@@ -84321,18 +84321,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         withDirectives(createBaseVNode("a", {
           class: "btn-nav",
           href: $props.backUrl
-        }, toDisplayString($setup.Locale.getLabel("modular-forms::common.go_back")), 9, _hoisted_3$3), [
+        }, toDisplayString($setup.Locale.getLabel("modular-forms::common.go_back")), 9, _hoisted_3$4), [
           [vShow, $setup.files_added > 0 && $setup.files_added === $setup.files_uploaded]
         ])
       ], 64);
     }
-    const multipleFilesUpload = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/multiple-files-upload.vue"]]);
+    const multipleFilesUpload = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/multiple-files-upload.vue"]]);
     const marineIcon = "/build/assets/fish-PuECKpUO.png";
     const terrestrialIcon = "/build/assets/tree-1D_APfEu.png";
     const TERRESTRIAL_AND_MARINE = "terrestrial_and_marine";
     const TERRESTRIAL = "terrestrial";
     const MARINE = "marine";
-    const _sfc_main$5 = {
+    const _sfc_main$6 = {
       __name: "scope_icon",
       props: {
         scope: {
@@ -84353,9 +84353,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$5 = ["src"];
-    const _hoisted_2$4 = ["src"];
-    function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$6 = ["src"];
+    const _hoisted_2$5 = ["src"];
+    function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock(Fragment, null, [
         $props.scope === $setup.TERRESTRIAL_AND_MARINE || $props.scope === $setup.TERRESTRIAL ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
@@ -84363,7 +84363,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             style: { "height": "28px" },
             src: $setup.terrestrialIcon,
             class: "inline mr-2"
-          }, null, 8, _hoisted_1$5),
+          }, null, 8, _hoisted_1$6),
           createVNode(_component_tooltip, null, {
             default: withCtx(() => [
               createTextVNode(toDisplayString($setup.Locale.getLabel("imet-core::common.terrestrial")), 1)
@@ -84376,7 +84376,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             style: { "height": "28px" },
             src: $setup.marineIcon,
             class: "inline mr-2"
-          }, null, 8, _hoisted_2$4),
+          }, null, 8, _hoisted_2$5),
           createVNode(_component_tooltip, null, {
             default: withCtx(() => [
               createTextVNode(toDisplayString($setup.Locale.getLabel("imet-core::common.marine")), 1)
@@ -84386,13 +84386,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ], 64)) : createCommentVNode("", true)
       ], 64);
     }
-    const scopeIcon = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/scope_icon.vue"]]);
+    const scopeIcon = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/scope_icon.vue"]]);
     class BaseImet extends Base {
       constructor(options, input_data) {
         return super(options, input_data).component("imet_score_bar", imetScoreBar).component("imet_radar", imet_radar).component("multiple-files-upload", multipleFilesUpload).component("scope-icon", scopeIcon);
       }
     }
-    const _sfc_main$4 = {
+    const _sfc_main$5 = {
       __name: "imet_encoders_responsibles",
       props: {
         max_visible: {
@@ -84460,55 +84460,55 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
     };
     const _withScopeId = (n) => (pushScopeId("data-v-2aa7151e"), n = n(), popScopeId(), n);
-    const _hoisted_1$4 = { class: "imet_responsible" };
-    const _hoisted_2$3 = { key: 0 };
-    const _hoisted_3$2 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("br", null, null, -1));
-    const _hoisted_4$2 = { key: 0 };
-    const _hoisted_5$1 = { key: 1 };
-    const _hoisted_6 = { key: 0 };
-    const _hoisted_7 = { key: 2 };
-    const _hoisted_8 = { key: 0 };
-    const _hoisted_9 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-plus-square" }, null, -1));
-    const _hoisted_10 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-minus-square" }, null, -1));
-    function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$4, [
-        $setup.to_be_shown["internal"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_2$3, [
+    const _hoisted_1$5 = { class: "imet_responsible" };
+    const _hoisted_2$4 = { key: 0 };
+    const _hoisted_3$3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("br", null, null, -1));
+    const _hoisted_4$3 = { key: 0 };
+    const _hoisted_5$2 = { key: 1 };
+    const _hoisted_6$1 = { key: 0 };
+    const _hoisted_7$1 = { key: 2 };
+    const _hoisted_8$1 = { key: 0 };
+    const _hoisted_9$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-plus-square" }, null, -1));
+    const _hoisted_10$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-minus-square" }, null, -1));
+    function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$5, [
+        $setup.to_be_shown["internal"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_2$4, [
           createBaseVNode("b", null, toDisplayString($setup.Locale.getLabel("imet-core::common.responsible_internal")), 1),
           createTextVNode(":"),
-          _hoisted_3$2,
+          _hoisted_3$3,
           createBaseVNode("ul", null, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.to_be_shown["internal"], (resp) => {
               return openBlock(), createElementBlock("li", null, [
                 createTextVNode(toDisplayString(resp["Name"]) + " ", 1),
-                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_4$2, [
+                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_4$3, [
                   createBaseVNode("i", null, "(" + toDisplayString(resp["Institution"]) + ")", 1)
                 ])) : createCommentVNode("", true)
               ]);
             }), 256))
           ])
         ])) : createCommentVNode("", true),
-        $setup.to_be_shown["external"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
+        $setup.to_be_shown["external"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_5$2, [
           createBaseVNode("b", null, toDisplayString($setup.Locale.getLabel("imet-core::common.responsible_external")), 1),
           createTextVNode(": "),
           createBaseVNode("ul", null, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.to_be_shown["external"], (resp) => {
               return openBlock(), createElementBlock("li", null, [
                 createTextVNode(toDisplayString(resp["Name"]) + " ", 1),
-                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_6, [
+                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_6$1, [
                   createBaseVNode("i", null, "(" + toDisplayString(resp["Institution"]) + ")", 1)
                 ])) : createCommentVNode("", true)
               ]);
             }), 256))
           ])
         ])) : createCommentVNode("", true),
-        $setup.to_be_shown["encoders"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_7, [
+        $setup.to_be_shown["encoders"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_7$1, [
           createBaseVNode("b", null, toDisplayString($setup.Locale.getLabel("imet-core::common.encoders")), 1),
           createTextVNode(": "),
           createBaseVNode("ul", null, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.to_be_shown["encoders"], (resp) => {
               return openBlock(), createElementBlock("li", null, [
                 createTextVNode(toDisplayString(resp["name"]) + " ", 1),
-                resp["institution"] ? (openBlock(), createElementBlock("span", _hoisted_8, [
+                resp["institution"] ? (openBlock(), createElementBlock("span", _hoisted_8$1, [
                   createBaseVNode("i", null, "(" + toDisplayString(resp["institution"]) + ")", 1)
                 ])) : createCommentVNode("", true)
               ]);
@@ -84520,7 +84520,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           class: "btn-nav small",
           onClick: $setup.toggleShown
         }, [
-          _hoisted_9,
+          _hoisted_9$1,
           createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.view_all")), 1)
         ])) : createCommentVNode("", true),
         $setup.showHidden ? (openBlock(), createElementBlock("button", {
@@ -84528,18 +84528,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           class: "btn-nav small",
           onClick: $setup.toggleShown
         }, [
-          _hoisted_10,
+          _hoisted_10$1,
           createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.hide")), 1)
         ])) : createCommentVNode("", true)
       ]);
     }
-    const imet_encoders_responsibles = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__scopeId", "data-v-2aa7151e"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_encoders_responsibles.vue"]]);
+    const imet_encoders_responsibles = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5], ["__scopeId", "data-v-2aa7151e"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_encoders_responsibles.vue"]]);
     class FormListImet extends FormList {
       constructor(options, input_data) {
         return super(options, input_data).component("imet_encoders_responsibles", imet_encoders_responsibles).component("imet_radar", imet_radar);
       }
     }
-    const _sfc_main$3 = {
+    const _sfc_main$4 = {
       __name: "selector-wdpa",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -84583,13 +84583,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$3 = { class: "result_left" };
-    const _hoisted_2$2 = {
+    const _hoisted_1$4 = { class: "result_left" };
+    const _hoisted_2$3 = {
       key: 0,
       target: "_blank",
       href: "https://www.protectedplanet.net/'+item.wdpa_id+'"
     };
-    function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createBlock($setup["selectorDialog"], {
         modelValue: $setup.inputValue,
         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
@@ -84608,12 +84608,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ]),
         searchResultItem: withCtx(({ item }) => [
           createBaseVNode("td", null, [
-            createBaseVNode("span", _hoisted_1$3, [
+            createBaseVNode("span", _hoisted_1$4, [
               createBaseVNode("b", null, toDisplayString(item.name), 1)
             ])
           ]),
           createBaseVNode("td", null, [
-            item.wdpa_id !== null ? (openBlock(), createElementBlock("a", _hoisted_2$2, toDisplayString(item.wdpa_id), 1)) : createCommentVNode("", true)
+            item.wdpa_id !== null ? (openBlock(), createElementBlock("a", _hoisted_2$3, toDisplayString(item.wdpa_id), 1)) : createCommentVNode("", true)
           ]),
           createBaseVNode("td", null, toDisplayString(item.country_name), 1),
           createBaseVNode("td", null, toDisplayString(item.iucn_category), 1)
@@ -84621,7 +84621,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         _: 1
       }, 8, ["modelValue", "parent-id", "search-url", "label-url", "multiple"]);
     }
-    const selectorWdpa = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/selector-wdpa.vue"]]);
+    const selectorWdpa = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/selector-wdpa.vue"]]);
     class ModuleImet extends Module {
       constructor(input_data = {}, custom_props = {}) {
         return super(input_data, custom_props).component("selector-wdpa", selectorWdpa).component("scope-icon", scopeIcon).component("imet_score_bar", imetScoreBar);
@@ -86137,7 +86137,7 @@ This will fail in production.`);
         return refs;
       }
     }
-    const _sfc_main$2 = {
+    const _sfc_main$3 = {
       __name: "imet_score_row",
       props: {
         value: {
@@ -86192,22 +86192,22 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$2 = {
+    const _hoisted_1$3 = {
       key: 0,
       class: "histogram-row__code text-center font-bold"
     };
-    const _hoisted_2$1 = { class: "histogram-row__value text-right font-bold" };
-    const _hoisted_3$1 = /* @__PURE__ */ createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1);
-    const _hoisted_4$1 = /* @__PURE__ */ createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1);
-    function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_2$2 = { class: "histogram-row__value text-right font-bold" };
+    const _hoisted_3$2 = /* @__PURE__ */ createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1);
+    const _hoisted_4$2 = /* @__PURE__ */ createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1);
+    function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         class: normalizeClass(["histogram-row", { "border-b border-gray-400 pb-2 mb-2": $props.isHeader }])
       }, [
-        !$props.isHeader && $props.code != null ? (openBlock(), createElementBlock("div", _hoisted_1$2, toDisplayString($props.code), 1)) : createCommentVNode("", true),
+        !$props.isHeader && $props.code != null ? (openBlock(), createElementBlock("div", _hoisted_1$3, toDisplayString($props.code), 1)) : createCommentVNode("", true),
         createBaseVNode("div", {
           class: normalizeClass(["histogram-row__title text-left", { "text-xl font-bold text-primary-600": $props.isHeader, "short": $props.shortLabel || $props.isHeader }])
         }, toDisplayString($props.label), 3),
-        createBaseVNode("div", _hoisted_2$1, toDisplayString($setup.format($props.value)), 1),
+        createBaseVNode("div", _hoisted_2$2, toDisplayString($setup.format($props.value)), 1),
         createBaseVNode("div", {
           class: "histogram-row__progress-bar text-2xs pl-4",
           style: normalizeStyle($setup.grid_according_to_histogram_type)
@@ -86217,7 +86217,7 @@ This will fail in production.`);
             value: $setup.format($props.value),
             color: $props.color
           }, null, 8, ["value", "color"])) : $props.histogram_type === "0_to_100" ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-            _hoisted_3$1,
+            _hoisted_3$2,
             createVNode($setup["imet_score_bar"], {
               value: $setup.format($props.value),
               color: $props.color
@@ -86229,7 +86229,7 @@ This will fail in production.`);
               min: -100,
               max: 0
             }, null, 8, ["value", "color"]),
-            _hoisted_4$1
+            _hoisted_4$2
           ], 64)) : $props.histogram_type === "minus100_to_100" ? (openBlock(), createElementBlock(Fragment, { key: 3 }, [
             createVNode($setup["imet_score_bar"], {
               value: $setup.format($props.value) < 0 ? $setup.format($props.value) : null,
@@ -86247,8 +86247,8 @@ This will fail in production.`);
         ], 4)
       ], 2);
     }
-    const imet_score_row = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_row.vue"]]);
-    const _sfc_main$1 = {
+    const imet_score_row = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_row.vue"]]);
+    const _sfc_main$2 = {
       __name: "imet_process_radar",
       props: {
         values: {
@@ -86331,16 +86331,16 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$1 = {
+    const _hoisted_1$2 = {
       ref: "radar",
       class: "imet_process_radar",
       style: { "height": "250px" }
     };
-    function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$1, null, 512);
+    function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$2, null, 512);
     }
-    const imet_process_radar = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_process_radar.vue"]]);
-    const _sfc_main = {
+    const imet_process_radar = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_process_radar.vue"]]);
+    const _sfc_main$1 = {
       __name: "imet_scores",
       props: {
         current_step: {
@@ -86462,24 +86462,24 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1 = { class: "flex w-full flex-row items-center" };
-    const _hoisted_2 = { class: "grow" };
-    const _hoisted_3 = {
+    const _hoisted_1$1 = { class: "flex w-full flex-row items-center" };
+    const _hoisted_2$1 = { class: "grow" };
+    const _hoisted_3$1 = {
       key: 0,
       class: "mb-10"
     };
-    const _hoisted_4 = {
+    const _hoisted_4$1 = {
       key: 0,
       class: "mt-4"
     };
-    const _hoisted_5 = {
+    const _hoisted_5$1 = {
       key: 1,
       class: "mt-4"
     };
-    function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock(Fragment, null, [
-        createBaseVNode("div", _hoisted_1, [
-          createBaseVNode("div", _hoisted_2, [
+        createBaseVNode("div", _hoisted_1$1, [
+          createBaseVNode("div", _hoisted_2$1, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.properties, (step_props, step_key) => {
               return openBlock(), createElementBlock("div", null, [
                 createVNode($setup["imet_score_row"], {
@@ -86499,7 +86499,7 @@ This will fail in production.`);
         ]),
         (openBlock(true), createElementBlock(Fragment, null, renderList($setup.properties, (step_props, step_key) => {
           return openBlock(), createElementBlock(Fragment, null, [
-            $props.current_step === step_key || $props.current_step === "management_effectiveness" ? (openBlock(), createElementBlock("div", _hoisted_3, [
+            $props.current_step === step_key || $props.current_step === "management_effectiveness" ? (openBlock(), createElementBlock("div", _hoisted_3$1, [
               createVNode($setup["imet_score_row"], {
                 label: $props.labels[step_key],
                 value: $setup.api_data["scores"][step_key].avg_indicator,
@@ -86517,7 +86517,7 @@ This will fail in production.`);
                   }, null, 8, ["label", "code", "value", "histogram_type", "color"])
                 ]);
               }), 256)),
-              step_key === "context" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_4, [
+              step_key === "context" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_4$1, [
                 (openBlock(), createElementBlock(Fragment, null, renderList(["C11", "C12", "C13", "C14", "C15"], (ctx_key) => {
                   return createVNode($setup["imet_score_row"], {
                     label: $props.labels[ctx_key],
@@ -86527,7 +86527,7 @@ This will fail in production.`);
                     color: step_props.color
                   }, null, 8, ["label", "code", "value", "color"]);
                 }), 64))
-              ])) : step_key === "process" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_5, [
+              ])) : step_key === "process" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
                 createVNode($setup["imet_process_radar"], {
                   values: [
                     $setup.api_data["scores"]["process"]["PRA"],
@@ -86552,7 +86552,7 @@ This will fail in production.`);
         }), 256))
       ], 64);
     }
-    const imetScores = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_scores.vue"]]);
+    const imetScores = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_scores.vue"]]);
     const useScoreStore = /* @__PURE__ */ defineStore("score", {
       state: () => ({
         api: {}
@@ -88277,9 +88277,150 @@ This will fail in production.`);
         return super(options, input_data).component("simpleText", simpleText).component("simplePassword", simplePassword);
       }
     }
+    const _sfc_main = {
+      __name: "PasCountryUpdate",
+      props: {
+        iso2: String,
+        iso3: String,
+        name: String,
+        downloaded: Boolean,
+        updated: String,
+        updateUrl: String
+      },
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const Locale2 = window.ModularForms.Helpers.Locale;
+        const props = __props;
+        const loading = ref(false);
+        const loaded = ref(false);
+        const downloaded = ref(props.downloaded);
+        const updated = ref(props.updated);
+        const api_key_error = ref(false);
+        const api_error = ref(false);
+        function update2(iso3) {
+          loading.value = true;
+          fetch(props.updateUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-Token": window.Laravel.csrfToken
+            },
+            body: JSON.stringify({
+              "iso3": iso3
+            })
+          }).then((response) => response.json()).then(function(data) {
+            if (data.status === "success") {
+              downloaded.value = true;
+              updated.value = data.updated;
+              loaded.value = true;
+            } else {
+              if (data.message.includes("API key")) {
+                api_key_error.value = true;
+              } else {
+                api_error.value = true;
+              }
+            }
+            loading.value = false;
+          }).catch(function(error) {
+            api_error.value = true;
+            loading.value = false;
+          });
+        }
+        const __returned__ = { Locale: Locale2, props, loading, loaded, downloaded, updated, api_key_error, api_error, update: update2, ref };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1 = { class: "bg-gray-100 py-1 px-2 flex justify-between content-center" };
+    const _hoisted_2 = { class: "text-sm" };
+    const _hoisted_3 = { class: "flex items-center justify-items-end" };
+    const _hoisted_4 = {
+      key: 0,
+      class: "fa-solid fa-sync fa-spin"
+    };
+    const _hoisted_5 = {
+      key: 1,
+      class: "text-red-600 text-sm"
+    };
+    const _hoisted_6 = /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1);
+    const _hoisted_7 = {
+      key: 2,
+      class: "text-red-600 text-sm"
+    };
+    const _hoisted_8 = /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1);
+    const _hoisted_9 = {
+      key: 0,
+      class: "italic text-xs pr-2"
+    };
+    const _hoisted_10 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-rotate" }, null, -1);
+    const _hoisted_11 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-check-circle text-green-600 pl-2" }, null, -1);
+    const _hoisted_12 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-down-long" }, null, -1);
+    const _hoisted_13 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-xmark-circle text-red-600 pl-2" }, null, -1);
+    function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1, [
+        createBaseVNode("div", null, [
+          createBaseVNode("span", {
+            class: normalizeClass(["fi", "fi-" + $props.iso2.toLowerCase()])
+          }, null, 2),
+          createTextVNode(),
+          createBaseVNode("span", _hoisted_2, toDisplayString($props.name), 1)
+        ]),
+        createBaseVNode("div", _hoisted_3, [
+          $setup.loading ? (openBlock(), createElementBlock("i", _hoisted_4)) : $setup.api_key_error ? (openBlock(), createElementBlock("span", _hoisted_5, [
+            _hoisted_6,
+            createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.errors.missing_api_token")), 1)
+          ])) : $setup.api_error ? (openBlock(), createElementBlock("span", _hoisted_7, [
+            _hoisted_8,
+            createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.errors.generic")), 1)
+          ])) : $setup.downloaded ? (openBlock(), createElementBlock(Fragment, { key: 3 }, [
+            $setup.updated ? (openBlock(), createElementBlock("span", _hoisted_9, toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.last_update")) + ": " + toDisplayString($setup.updated), 1)) : createCommentVNode("", true),
+            !$setup.loaded ? (openBlock(), createElementBlock("button", {
+              key: 1,
+              class: "btn-nav gray small whitespace-nowrap",
+              onClick: _cache[0] || (_cache[0] = ($event) => $setup.update($props.iso3))
+            }, [
+              _hoisted_10,
+              createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.update")), 1)
+            ])) : createCommentVNode("", true),
+            _hoisted_11
+          ], 64)) : (openBlock(), createElementBlock(Fragment, { key: 4 }, [
+            createBaseVNode("button", {
+              class: "btn-nav gray small whitespace-nowrap",
+              onClick: _cache[1] || (_cache[1] = ($event) => $setup.update($props.iso3))
+            }, [
+              _hoisted_12,
+              createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.download")), 1)
+            ]),
+            _hoisted_13
+          ], 64))
+        ])
+      ]);
+    }
+    const PasCountryUpdate = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/var/www/html/resources/js/components/PasCountryUpdate.vue"]]);
+    class PaUpdate extends Base {
+      constructor(input_data) {
+        const options = {
+          name: "PaUpdate",
+          setup(props, context) {
+            function update2(iso3) {
+              console.log("update", iso3);
+            }
+            function download2(iso3) {
+              console.log("download", iso3);
+            }
+            return {
+              update: update2,
+              download: download2
+            };
+          }
+        };
+        return super(options, input_data).component("pascountryupdate", PasCountryUpdate);
+      }
+    }
     window.Laravel = window.Laravel || {};
     window.OfflineImet = {};
     window.OfflineImet.SettingsApp = SettingsApp;
+    window.OfflineImet.PaUpdate = PaUpdate;
   }
 });
 export default require_index_001();
