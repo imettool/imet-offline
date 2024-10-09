@@ -4,6 +4,7 @@ namespace App\Helpers;
 
 use AndreaMarelli\ModularForms\Helpers\File\File;
 use Illuminate\Support\Env;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
@@ -69,9 +70,7 @@ class SoftwareUpdater
     {
         // Retrieve current version
         $currentVersion = static::getCurrentVersion();
-        if(Str::contains(Str::lower($currentVersion),'dev')){
-            return false;
-        }
+        if(is_dev_environment()) return false;
 
         // Retrieve latest version
         $latestVersion = static::getLatestReleases($forceApi)[0] ?? null;

@@ -11,6 +11,11 @@ function imet_offline_tool_version(): ?string
     return SoftwareUpdater::getCurrentVersion();
 }
 
+function is_dev_environment(): bool
+{
+    return Str::contains(strtolower(App::environment()), 'dev');
+}
+
 /**
  * Return ClassName from module key
  */
