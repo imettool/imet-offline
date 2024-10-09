@@ -34,6 +34,22 @@ return [
 
     ],
 
+    'update' => [
+
+        'no_new_version' => 'No new version available',
+        'new_version_available' => 'New version available!',
+        'update_to_latest' => 'Update to latest version',
+        'release_notes' => 'Release notes',
+        'release_date' => 'Release date',
+        'current_version' => 'Current version',
+        'latest_version' => 'Latest version',
+        'update_now' => 'Update now',
+        'update_later' => 'Update later',
+        'require_installation' => 'This update requires an complete re-installation of the software. Please download the installer below. <br /> Backup your IMET assessments before proceeding with the installation.',
+        'download_installer' => 'Download installer',
+
+    ],
+
     'errors' => [
         'missing_api_token' => 'Missing API token',
         'generic' => 'Request failed',
