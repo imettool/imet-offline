@@ -21,10 +21,12 @@ class SoftwareUpdater
     const GITHUB_API_URL = 'https://api.github.com/repos/andreamarelli/imet_offline';
 
     /**
-     * Get current version from .env configuration file
+     * Get current release version (from VERSION_FILE)
      */
     public static function getCurrentVersion(): ?string
     {
+        if(is_dev_environment()) return 'DEV';
+
         $filePath = base_path(self::VERSION_FILE);
         return file_exists($filePath)
             ? file_get_contents($filePath)
@@ -68,11 +70,10 @@ class SoftwareUpdater
      */
     public static function isNewVersionAvailable($forceApi = false): bool
     {
-        // Retrieve current version
-        $currentVersion = static::getCurrentVersion();
         if(is_dev_environment()) return false;
 
-        // Retrieve latest version
+        // Retrieve current and latest version
+        $currentVersion = static::getCurrentVersion();
         $latestVersion = static::getLatestReleases($forceApi)[0] ?? null;
 
         // Compare versions
