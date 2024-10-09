@@ -19,6 +19,8 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::patch('settings/update', [SettingsController::class, 'update'])->name('settings_update');
     Route::get('update', [UpdateController::class, 'index'])->name('update');
     Route::post('update', [UpdateController::class, 'update'])->name('update.apply');
+    Route::get('channel/beta', [UpdateController::class, 'switch_to_beta'])->name('channel.switch_to_beta');
+    Route::get('channel/stable', [UpdateController::class, 'switch_to_stable'])->name('channel.switch_to_stable');
 
     // User routes
     Route::get('users/{role_type?}', [UserController::class, 'index'])->name('imet-core::users');

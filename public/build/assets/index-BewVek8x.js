@@ -10,7 +10,7 @@ import { _ as _export_sfc, v as vueDropzone } from "./dropzone-ZV8SMygf.js";
 import { c as commonjsGlobal, g as getDefaultExportFromCjs, a as getAugmentedNamespace, m as mapboxgl } from "./mapbox-B5Yj7lio.js";
 import { i as init, e as echarts } from "./echarts-Cjqa5bG4.js";
 var require_index_001 = __commonJS({
-  "assets/index-B6B-Rw_I.js"(exports, module) {
+  "assets/index-BewVek8x.js"(exports, module) {
     var _a;
     class I18n {
       /**
@@ -2879,14 +2879,17 @@ var require_index_001 = __commonJS({
           }
           return list2;
         }
+        function isNA(value) {
+          return value === "-99" || value === -99;
+        }
         function setActive(value) {
           let applyClass = __applyClass(value, inputValue.value);
           return applyClass ? "active" : "";
         }
         function __applyClass(localValue, globalValue) {
-          if (localValue !== "-99" && parseFloat(localValue) <= parseFloat(globalValue)) {
+          if (!isNA(localValue) && parseFloat(localValue) <= parseFloat(globalValue)) {
             return true;
-          } else if (localValue === "-99" && globalValue === "-99") {
+          } else if (isNA(localValue) && isNA(globalValue)) {
             return true;
           }
           return false;
@@ -2922,7 +2925,7 @@ var require_index_001 = __commonJS({
           }
           return "";
         }
-        const __returned__ = { props, ratingOptions, list, inputValue, buildOptionList, setActive, __applyClass, setHover, updateRating, tooltipLabel, computed, ref };
+        const __returned__ = { props, ratingOptions, list, inputValue, buildOptionList, isNA, setActive, __applyClass, setHover, updateRating, tooltipLabel, computed, ref };
         Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
         return __returned__;
       }
@@ -2940,7 +2943,7 @@ var require_index_001 = __commonJS({
           (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list, (item, index) => {
             return openBlock(), createElementBlock("span", null, [
               createBaseVNode("span", {
-                class: normalizeClass(["rating field-edit", [item["value"] === "-99" ? "ratingNa" : "ratingNum", $setup.setActive(item["value"])]]),
+                class: normalizeClass(["rating field-edit", [$setup.isNA(item["value"]) ? "ratingNa" : "ratingNum", $setup.setActive(item["value"])]]),
                 onClick: ($event) => $setup.updateRating(item["value"]),
                 onMouseover: $setup.setHover,
                 onMouseout: $setup.setHover,

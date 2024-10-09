@@ -613,6 +613,10 @@ video {
   margin-top: 0.125rem;
   margin-bottom: 0.125rem;
 }
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -949,6 +953,10 @@ video {
 }
 .italic {
   font-style: italic;
+}
+.\!text-green-600 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(22 163 74 / var(--tw-text-opacity)) !important;
 }
 .text-green-600 {
   --tw-text-opacity: 1;
@@ -34287,7 +34295,14 @@ ul.menu-header > li ul li.selected:before {
 }
 
 #imet_footer .version {
-  font-weight: bold;
+  margin-right: 0.5rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+#imet_footer .channel {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }

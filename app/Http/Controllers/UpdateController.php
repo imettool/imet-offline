@@ -6,18 +6,19 @@ use App\Helpers\SoftwareUpdater;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
+use Illuminate\View\View;
 
 class UpdateController extends Controller
 {
     public function index(Request $request)
     {
         $forceApi = $request->input('force_api', false);
-        $includeBeta = $request->input('beta', false);
 
-        $release = SoftwareUpdater::getLatestReleases($forceApi, $includeBeta)[0];
+        $release = SoftwareUpdater::getLatestReleases($forceApi)[0];
         $release_notes = nl2br($release['body']);
         $release_date = Carbon::parse($release['published_at'])->format('Y-m-d');
 
@@ -59,6 +60,41 @@ class UpdateController extends Controller
             ]);
         }
 
+    }
+
+    /**
+     * Switch to stable channel
+     */
+    public function switch_to_beta(): RedirectResponse
+    {
+        SoftwareUpdater::setCurrentChannel(SoftwareUpdater::BETA_CHANNEL);
+
+        return redirect()->route('update');
+    }
+
+    /**
+     * Switch to stable channel
+     */
+    public function switch_to_stable(): View|RedirectResponse
+    {
+        $current_version = SoftwareUpdater::getCurrentVersion();
+        $current_channel = SoftwareUpdater::getCurrentChannel();
+
+        if($current_channel === SoftwareUpdater::STABLE_CHANNEL){
+            return redirect()->route('update');
+        }
+
+        // This is an example to demonstrate the possibility to prevent the switch the to stable channel when incompatible
+        // changes have been applied to the database
+        if(version_compare($current_version, '2.13.3b', '<=')){
+            return view('offline.update.cannot_switch_to_stable', [
+                'current_version' => $current_version
+            ]);
+        }
+
+        SoftwareUpdater::setCurrentChannel(SoftwareUpdater::STABLE_CHANNEL);
+
+        return redirect()->route('update');
     }
 
 

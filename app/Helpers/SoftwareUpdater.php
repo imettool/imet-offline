@@ -11,20 +11,61 @@ use Illuminate\Support\Str;
 
 class SoftwareUpdater
 {
+    const BETA_CHANNEL = 'beta';
+    const STABLE_CHANNEL = 'stable';
+
+    const CHANNEL_FILE = '.channel';
+    const VERSION_FILE = '.version';
+
     const GITHUB_API_URL = 'https://api.github.com/repos/andreamarelli/imet_offline';
 
     /**
      * Get current version from .env configuration file
      */
-    public static function getCurrentVersion(): string
+    public static function getCurrentVersion(): ?string
     {
-        return Env::get('IMET_OFFLINE_VERSION');
+        $filePath = base_path(self::VERSION_FILE);
+        return file_exists($filePath)
+            ? file_get_contents($filePath)
+            : null;
+    }
+
+    /**
+     * Get current release channel (from CHANNEL_FILE)
+     */
+    public static function getCurrentChannel(): string
+    {
+        $filePath = base_path(self::CHANNEL_FILE);
+        if(!file_exists($filePath)){
+            file_put_contents($filePath, self::STABLE_CHANNEL);
+        }
+        return file_get_contents($filePath);
+    }
+
+    /**
+     * Set release channel
+     */
+    public static function setCurrentChannel($channel): void
+    {
+        $filePath = base_path(self::CHANNEL_FILE);
+        if(file_exists($filePath)){
+            unlink($filePath);
+        }
+        file_put_contents($filePath, $channel);
+    }
+
+    /**
+     * Check if current channel is beta
+     */
+    public static function isBetaChannel(): bool
+    {
+        return static::getCurrentChannel() === self::BETA_CHANNEL;
     }
 
     /**
      * Check if a new version is available
      */
-    public static function isNewVersionAvailable($forceApi = false, $includeBeta = false): bool
+    public static function isNewVersionAvailable($forceApi = false): bool
     {
         // Retrieve current version
         $currentVersion = static::getCurrentVersion();
@@ -33,7 +74,7 @@ class SoftwareUpdater
         }
 
         // Retrieve latest version
-        $latestVersion = static::getLatestReleases($forceApi, $includeBeta)[0] ?? null;
+        $latestVersion = static::getLatestReleases($forceApi)[0] ?? null;
 
         // Compare versions
         if (version_compare($latestVersion['tag_name'], $currentVersion) === 1) {
@@ -45,16 +86,17 @@ class SoftwareUpdater
     /**
      * Get latest releases
      */
-    public static function getLatestReleases($forceApi = false, $includeBeta = true): array
+    public static function getLatestReleases($forceApi = false): array
     {
         // Get releases from GitHub API
         $releases = static::retrieveReleasesFromGithub($forceApi);
 
         return collect($releases)
 
-            // Keep or discard beta releases (according to $includeBeta)
-            ->filter(function($item) use ($includeBeta){
+            // Keep or discard beta releases (according to current release channel)
+            ->filter(function($item){
                 $item = (array) $item;
+                $includeBeta = static::isBetaChannel();
                 return !static::isBetaRelease($item)
                     || ($includeBeta && static::isBetaRelease($item));
             })
