@@ -46,11 +46,19 @@ use App\Helpers\SoftwareUpdater;
                 <div class="message">
                     @lang('offline.update.current_version'): {{ $current_version }}
                 </div>
-                <div class="buttons">
+                <div id="update_buttons" class="buttons">
                     <!-- Update later -->
                     <a class="btn-nav yellow mr-2" href="{{ url()->previous() }}">@lang('offline.update.update_later')</a>
                     <!-- Update now -->
                     <button type="button" class="btn-nav" onclick="apply_update()">@lang('offline.update.update_now')</button>
+                </div>
+                <!-- Update loading -->
+                <div id="update_loading" class="hidden">
+                    <span>{{ ucfirst(trans('offline.update.downloading')) }}... <i class="fa-solid fa-sync fa-spin text-2xl ml-2"></i></span>
+                </div>
+                <!-- Update errors -->
+                <div id="update_errors" class="hidden">
+                    <strong class="error">Error</strong>
                 </div>
             </div>
 
@@ -111,7 +119,8 @@ use App\Helpers\SoftwareUpdater;
     <script>
 
         function apply_update(){
-            console.log('Applying update...');
+
+            update_loading();
 
             let data = {
                 'download_url': '{{ $download_url }}',
@@ -129,15 +138,27 @@ use App\Helpers\SoftwareUpdater;
                 .then((response) => response.json())
                 .then(function(data){
                     if (data.status === 'success') {
-                        console.log(data);
+                        window.location.href = '{{ route('update.done') }}';
                     } else if(data.status === 'error') {
-                        console.log('error');
+                        update_error();
                     }
                 })
                 .catch(function (error) {
-                    console.log('error');
+                    update_error();
                 });
 
+        }
+
+        function update_loading() {
+            document.getElementById('update_loading').classList.remove('hidden');
+            document.getElementById('update_buttons').classList.add('hidden');
+            document.getElementById('update_errors').classList.add('hidden');
+        }
+
+        function update_error() {
+            document.getElementById('update_loading').classList.add('hidden');
+            document.getElementById('update_buttons').classList.add('hidden');
+            document.getElementById('update_errors').classList.remove('hidden');
         }
 
     </script>

@@ -12,7 +12,9 @@ $home = $uri === 'imet'
     || Str::contains($uri, 'imet/scaling_up') > -1;
 
 $welcome = $uri === 'welcome'
-    || $uri === 'confirm_user';
+    || $uri === 'confirm_user'
+    || Str::contains($uri, 'update/done');
+
 
 ?>
 @if(!\Illuminate\Support\Facades\Auth::guest())

@@ -59,7 +59,11 @@ class UpdateController extends Controller
                 'message' => 'Download failed',
             ]);
         }
+    }
 
+    public function done()
+    {
+        return view('offline.update.done');
     }
 
     /**

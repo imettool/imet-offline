@@ -47,6 +47,11 @@ return [
         'update_later' => 'Update later',
         'require_installation' => 'This update requires an complete re-installation of the software. Please download the installer below. <br /> Backup your IMET assessments before proceeding with the installation.',
         'download_installer' => 'Download installer',
+        'downloading' => 'Downloading',
+        'download_successful' => 'New version downloaded successfully',
+        'download_successful_long' =>
+            'New version downloaded successfully.  <br /> Please close completely the application and launch it again
+            to apply the updates.',
         'cannot_switch_to_stable' => 'Cannot switch to stable channel',
         'cannot_switch_to_stable_long' =>
             'You cannot switch back to stable channel from the current BETA version. <br /> Some modifications may have

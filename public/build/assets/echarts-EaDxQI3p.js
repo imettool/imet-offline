@@ -1822,6 +1822,7 @@ var BoundingRect = function() {
   };
   return BoundingRect2;
 }();
+const BoundingRect$1 = BoundingRect;
 var SILENT = "silent";
 function makeEventPacket(eveType, targetInfo, event) {
   return {
@@ -1875,7 +1876,7 @@ var handlerNames = [
   "mousemove",
   "contextmenu"
 ];
-var tmpRect$1 = new BoundingRect(0, 0, 0, 0);
+var tmpRect$1 = new BoundingRect$1(0, 0, 0, 0);
 var Handler = function(_super) {
   __extends(Handler2, _super);
   function Handler2(storage2, painter, proxy, painterRoot, pointerSize) {
@@ -1989,7 +1990,7 @@ var Handler = function(_super) {
       var candidates = [];
       var pointerSize = this._pointerSize;
       var targetSizeHalf = pointerSize / 2;
-      var pointerRect = new BoundingRect(x - targetSizeHalf, y - targetSizeHalf, pointerSize, pointerSize);
+      var pointerRect = new BoundingRect$1(x - targetSizeHalf, y - targetSizeHalf, pointerSize, pointerSize);
       for (var i = list.length - 1; i >= 0; i--) {
         var el = list[i];
         if (el !== exclude && !el.ignore && !el.ignoreCoarsePointer && (!el.parent || !el.parent.ignoreCoarsePointer)) {
@@ -5444,6 +5445,7 @@ function copyTransform(target, source) {
     target[propName] = source[propName];
   }
 }
+const Transformable$1 = Transformable;
 var textWidthCache = {};
 function getWidth(text, font) {
   font = font || DEFAULT_FONT;
@@ -5463,7 +5465,7 @@ function innerGetBoundingRect(text, font, textAlign, textBaseline) {
   var height = getLineHeight(font);
   var x = adjustTextX(0, width, textAlign);
   var y = adjustTextY(0, height, textBaseline);
-  var rect = new BoundingRect(x, y, width, height);
+  var rect = new BoundingRect$1(x, y, width, height);
   return rect;
 }
 function getBoundingRect(text, font, textAlign, textBaseline) {
@@ -5472,7 +5474,7 @@ function getBoundingRect(text, font, textAlign, textBaseline) {
   if (len2 === 1) {
     return innerGetBoundingRect(textLines[0], font, textAlign, textBaseline);
   } else {
-    var uniondRect = new BoundingRect(0, 0, 0, 0);
+    var uniondRect = new BoundingRect$1(0, 0, 0, 0);
     for (var i = 0; i < textLines.length; i++) {
       var rect = innerGetBoundingRect(textLines[i], font, textAlign, textBaseline);
       i === 0 ? uniondRect.copy(rect) : uniondRect.union(rect);
@@ -5611,7 +5613,7 @@ var DEFAULT_ANIMATABLE_MAP = reduce(TRANSFORMABLE_PROPS, function(obj, key) {
   return obj;
 }, { ignore: false });
 var tmpTextPosCalcRes = {};
-var tmpBoundingRect = new BoundingRect(0, 0, 0, 0);
+var tmpBoundingRect = new BoundingRect$1(0, 0, 0, 0);
 var Element = function() {
   function Element2(props) {
     this.id = guid();
@@ -6153,7 +6155,7 @@ var Element = function() {
         throw new Error("Text element has been added to zrender.");
       }
     }
-    textEl.innerTransformable = new Transformable();
+    textEl.innerTransformable = new Transformable$1();
     this._attachComponent(textEl);
     this._textContent = textEl;
     this.markRedraw();
@@ -6398,7 +6400,7 @@ var Element = function() {
   return Element2;
 }();
 mixin(Element, Eventful);
-mixin(Element, Transformable);
+mixin(Element, Transformable$1);
 function animateTo(animatable, target, cfg, animationProps, reverse2) {
   cfg = cfg || {};
   var animators = [];
@@ -6740,7 +6742,7 @@ var Group$3 = function(_super) {
     }
   };
   Group2.prototype.getBoundingRect = function(includeChildren) {
-    var tmpRect2 = new BoundingRect(0, 0, 0, 0);
+    var tmpRect2 = new BoundingRect$1(0, 0, 0, 0);
     var children = includeChildren || this._children;
     var tmpMat = [];
     var rect = null;
@@ -6752,7 +6754,7 @@ var Group$3 = function(_super) {
       var childRect = child.getBoundingRect();
       var transform2 = child.getLocalTransform(tmpMat);
       if (transform2) {
-        BoundingRect.applyTransform(tmpRect2, childRect, transform2);
+        BoundingRect$1.applyTransform(tmpRect2, childRect, transform2);
         rect = rect || tmpRect2.clone();
         rect.union(tmpRect2);
       } else {
@@ -8667,9 +8669,9 @@ var Displayable = function(_super) {
       var shadowSize = style.shadowBlur || 0;
       var shadowOffsetX = style.shadowOffsetX || 0;
       var shadowOffsetY = style.shadowOffsetY || 0;
-      rect = this._paintRect || (this._paintRect = new BoundingRect(0, 0, 0, 0));
+      rect = this._paintRect || (this._paintRect = new BoundingRect$1(0, 0, 0, 0));
       if (transform2) {
-        BoundingRect.applyTransform(rect, elRect, transform2);
+        BoundingRect$1.applyTransform(rect, elRect, transform2);
       } else {
         rect.copy(elRect);
       }
@@ -8691,7 +8693,7 @@ var Displayable = function(_super) {
   };
   Displayable2.prototype.setPrevPaintRect = function(paintRect) {
     if (paintRect) {
-      this._prevPaintRect = this._prevPaintRect || new BoundingRect(0, 0, 0, 0);
+      this._prevPaintRect = this._prevPaintRect || new BoundingRect$1(0, 0, 0, 0);
       this._prevPaintRect.copy(paintRect);
     } else {
       this._prevPaintRect = null;
@@ -8869,8 +8871,8 @@ var Displayable = function(_super) {
   }();
   return Displayable2;
 }(Element);
-var tmpRect = new BoundingRect(0, 0, 0, 0);
-var viewRect = new BoundingRect(0, 0, 0, 0);
+var tmpRect = new BoundingRect$1(0, 0, 0, 0);
+var viewRect = new BoundingRect$1(0, 0, 0, 0);
 function isDisplayableCulled(el, width, height) {
   tmpRect.copy(el.getBoundingRect());
   if (el.transform) {
@@ -9354,7 +9356,7 @@ var PathProxy = function() {
     if (i === 0) {
       min[0] = min[1] = max[0] = max[1] = 0;
     }
-    return new BoundingRect(min[0], min[1], max[0] - min[0], max[1] - min[1]);
+    return new BoundingRect$1(min[0], min[1], max[0] - min[0], max[1] - min[1]);
   };
   PathProxy2.prototype._calculateLength = function() {
     var data = this.data;
@@ -10553,7 +10555,7 @@ var ZRImage = function(_super) {
   ZRImage2.prototype.getBoundingRect = function() {
     var style = this.style;
     if (!this._rect) {
-      this._rect = new BoundingRect(style.x || 0, style.y || 0, this.getWidth(), this.getHeight());
+      this._rect = new BoundingRect$1(style.x || 0, style.y || 0, this.getWidth(), this.getHeight());
     }
     return this._rect;
   };
@@ -10835,7 +10837,7 @@ var ZRText = function(_super) {
       this._updateSubTexts();
     }
     if (!this._rect) {
-      var tmpRect2 = new BoundingRect(0, 0, 0, 0);
+      var tmpRect2 = new BoundingRect$1(0, 0, 0, 0);
       var children = this._children;
       var tmpMat = [];
       var rect = null;
@@ -10972,7 +10974,7 @@ var ZRText = function(_super) {
       setSeparateFont(subElStyle, style);
       textY += lineHeight;
       if (fixedBoundingRect) {
-        el.setBoundingRect(new BoundingRect(adjustTextX(subElStyle.x, style.width, subElStyle.textAlign), adjustTextY(subElStyle.y, calculatedLineHeight, subElStyle.textBaseline), contentWidth, calculatedLineHeight));
+        el.setBoundingRect(new BoundingRect$1(adjustTextX(subElStyle.x, style.width, subElStyle.textAlign), adjustTextY(subElStyle.y, calculatedLineHeight, subElStyle.textBaseline), contentWidth, calculatedLineHeight));
       }
     }
   };
@@ -11087,7 +11089,7 @@ var ZRText = function(_super) {
     }
     var textWidth = token.contentWidth;
     var textHeight = token.contentHeight;
-    el.setBoundingRect(new BoundingRect(adjustTextX(subElStyle.x, textWidth, subElStyle.textAlign), adjustTextY(subElStyle.y, textHeight, subElStyle.textBaseline), textWidth, textHeight));
+    el.setBoundingRect(new BoundingRect$1(adjustTextX(subElStyle.x, textWidth, subElStyle.textAlign), adjustTextY(subElStyle.y, textHeight, subElStyle.textBaseline), textWidth, textHeight));
   };
   ZRText2.prototype._renderBackground = function(style, topStyle, x, y, width, height) {
     var textBackgroundColor = style.backgroundColor;
@@ -13148,7 +13150,7 @@ var IncrementalDisplayable = function(_super) {
   };
   IncrementalDisplayable2.prototype.getBoundingRect = function() {
     if (!this._rect) {
-      var rect = new BoundingRect(Infinity, Infinity, -Infinity, -Infinity);
+      var rect = new BoundingRect$1(Infinity, Infinity, -Infinity, -Infinity);
       for (var i = 0; i < this._displayables.length; i++) {
         var displayable = this._displayables[i];
         var childRect = displayable.getBoundingRect().clone();
@@ -13414,7 +13416,7 @@ function getTransform$1(target, ancestor) {
 }
 function applyTransform(target, transform2, invert$1) {
   if (transform2 && !isArrayLike(transform2)) {
-    transform2 = Transformable.getLocalTransform(transform2);
+    transform2 = Transformable$1.getLocalTransform(transform2);
   }
   if (invert$1) {
     transform2 = invert([], transform2);
@@ -13618,7 +13620,7 @@ const graphic$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePro
   __proto__: null,
   Arc: Arc$1,
   BezierCurve: BezierCurve$1,
-  BoundingRect,
+  BoundingRect: BoundingRect$1,
   Circle: Circle$1,
   CompoundPath: CompoundPath$1,
   Ellipse: Ellipse$1,
@@ -15084,7 +15086,7 @@ function getLayoutRect(positionInfo, containerRect, margin) {
   if (isNaN(height)) {
     height = containerHeight - verticalMargin - top - (bottom || 0);
   }
-  var rect = new BoundingRect(left + margin[3], top + margin[0], width, height);
+  var rect = new BoundingRect$1(left + margin[3], top + margin[0], width, height);
   rect.margin = margin;
   return rect;
 }
@@ -15100,7 +15102,7 @@ function positionElement(el, positionInfo, containerRect, margin, opt, out2) {
   }
   var rect;
   if (boundingMode === "raw") {
-    rect = el.type === "group" ? new BoundingRect(0, 0, +positionInfo.width || 0, +positionInfo.height || 0) : el.getBoundingRect();
+    rect = el.type === "group" ? new BoundingRect$1(0, 0, +positionInfo.width || 0, +positionInfo.height || 0) : el.getBoundingRect();
   } else {
     rect = el.getBoundingRect();
     if (el.needLocalTransform()) {
@@ -21436,9 +21438,9 @@ function createSymbol$1(symbolType, x, y, w, h, color2, keepAspect) {
   }
   var symbolPath;
   if (symbolType.indexOf("image://") === 0) {
-    symbolPath = makeImage(symbolType.slice(8), new BoundingRect(x, y, w, h), keepAspect ? "center" : "cover");
+    symbolPath = makeImage(symbolType.slice(8), new BoundingRect$1(x, y, w, h), keepAspect ? "center" : "cover");
   } else if (symbolType.indexOf("path://") === 0) {
-    symbolPath = makePath(symbolType.slice(7), {}, new BoundingRect(x, y, w, h), keepAspect ? "center" : "cover");
+    symbolPath = makePath(symbolType.slice(7), {}, new BoundingRect$1(x, y, w, h), keepAspect ? "center" : "cover");
   } else {
     symbolPath = new SymbolClz({
       shape: {
@@ -27462,7 +27464,7 @@ function rotateTextRect(textRect, rotate2) {
   var beforeHeight = textRect.height;
   var afterWidth = beforeWidth * Math.abs(Math.cos(rotateRadians)) + Math.abs(beforeHeight * Math.sin(rotateRadians));
   var afterHeight = beforeWidth * Math.abs(Math.sin(rotateRadians)) + Math.abs(beforeHeight * Math.cos(rotateRadians));
-  var rotatedRect = new BoundingRect(textRect.x, textRect.y, afterWidth, afterHeight);
+  var rotatedRect = new BoundingRect$1(textRect.x, textRect.y, afterWidth, afterHeight);
   return rotatedRect;
 }
 function getOptionCategoryInterval(model) {
@@ -27689,7 +27691,7 @@ var GeoJSONRegion = (
       if (!(isFinite(min3[0]) && isFinite(min3[1]) && isFinite(max3[0]) && isFinite(max3[1]))) {
         min3[0] = min3[1] = max3[0] = max3[1] = 0;
       }
-      rect = new BoundingRect(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
+      rect = new BoundingRect$1(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
       if (!projection) {
         this._rect = rect;
       }
@@ -27727,7 +27729,7 @@ var GeoJSONRegion = (
       } else if (!height) {
         height = width / aspect;
       }
-      var target = new BoundingRect(x, y, width, height);
+      var target = new BoundingRect$1(x, y, width, height);
       var transform2 = rect.calculateTransform(target);
       var geometries = this.geometries;
       for (var i = 0; i < geometries.length; i++) {
@@ -27903,7 +27905,7 @@ const graphic = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   __proto__: null,
   Arc: Arc$1,
   BezierCurve: BezierCurve$1,
-  BoundingRect,
+  BoundingRect: BoundingRect$1,
   Circle: Circle$1,
   CompoundPath: CompoundPath$1,
   Ellipse: Ellipse$1,
@@ -28991,7 +28993,7 @@ function hideOverlap(labelList) {
   labelList.sort(function(a, b) {
     return b.priority - a.priority;
   });
-  var globalRect = new BoundingRect(0, 0, 0, 0);
+  var globalRect = new BoundingRect$1(0, 0, 0, 0);
   function hideEl(el) {
     if (!el.ignore) {
       var emphasisState = el.ensureState("emphasis");
@@ -29072,7 +29074,7 @@ function prepareLayoutCallbackParams(labelItem, hostEl) {
   };
 }
 var LABEL_OPTION_TO_STYLE_KEYS = ["align", "verticalAlign", "width", "height", "fontSize"];
-var dummyTransformable = new Transformable();
+var dummyTransformable = new Transformable$1();
 var labelLayoutInnerStore = makeInner();
 var labelLineAnimationStore = makeInner();
 function extendWithKeys(target, source, keys2) {
@@ -29101,7 +29103,7 @@ var LabelManager = (
       var textConfig = hostEl.textConfig || {};
       var labelTransform = label.getComputedTransform();
       var labelRect = label.getBoundingRect().plain();
-      BoundingRect.applyTransform(labelRect, labelRect, labelTransform);
+      BoundingRect$1.applyTransform(labelRect, labelRect, labelTransform);
       if (labelTransform) {
         dummyTransformable.setLocalTransform(labelTransform);
       } else {
@@ -29114,7 +29116,7 @@ var LabelManager = (
       if (host) {
         hostRect = host.getBoundingRect().plain();
         var transform2 = host.getComputedTransform();
-        BoundingRect.applyTransform(hostRect, hostRect, transform2);
+        BoundingRect$1.applyTransform(hostRect, hostRect, transform2);
       }
       var labelGuide = hostRect && host.getTextGuideLine();
       this._labelList.push({
@@ -31005,13 +31007,13 @@ var Layer = function(_super) {
     var mergedRepaintRects = [];
     var maxRepaintRectCount = this.maxRepaintRectCount;
     var full = false;
-    var pendingRect = new BoundingRect(0, 0, 0, 0);
+    var pendingRect = new BoundingRect$1(0, 0, 0, 0);
     function addRectToMergePool(rect) {
       if (!rect.isFinite() || rect.isZero()) {
         return;
       }
       if (mergedRepaintRects.length === 0) {
-        var boundingRect = new BoundingRect(0, 0, 0, 0);
+        var boundingRect = new BoundingRect$1(0, 0, 0, 0);
         boundingRect.copy(rect);
         mergedRepaintRects.push(boundingRect);
       } else {
@@ -31021,7 +31023,7 @@ var Layer = function(_super) {
         for (var i2 = 0; i2 < mergedRepaintRects.length; ++i2) {
           var mergedRect = mergedRepaintRects[i2];
           if (mergedRect.intersect(rect)) {
-            var pendingRect_1 = new BoundingRect(0, 0, 0, 0);
+            var pendingRect_1 = new BoundingRect$1(0, 0, 0, 0);
             pendingRect_1.copy(mergedRect);
             pendingRect_1.union(rect);
             mergedRepaintRects[i2] = pendingRect_1;
@@ -31045,7 +31047,7 @@ var Layer = function(_super) {
           isMerged = true;
         }
         if (!isMerged) {
-          var boundingRect = new BoundingRect(0, 0, 0, 0);
+          var boundingRect = new BoundingRect$1(0, 0, 0, 0);
           boundingRect.copy(rect);
           mergedRepaintRects.push(boundingRect);
         }
@@ -36379,7 +36381,7 @@ var LargeSymbolPath = (
           minY = Math.min(y, minY);
           maxY = Math.max(y, maxY);
         }
-        rect = this._rect = new BoundingRect(minX - w / 2, minY - h / 2, maxX - minX + w, maxY - minY + h);
+        rect = this._rect = new BoundingRect$1(minX - w / 2, minY - h / 2, maxX - minX + w, maxY - minY + h);
       }
       return rect;
     };
@@ -36919,7 +36921,7 @@ var Cartesian2D = (
       var zoneDiag1 = this.dataToPoint(data1);
       var zoneDiag2 = this.dataToPoint(data2);
       var area = this.getArea();
-      var zone = new BoundingRect(zoneDiag1[0], zoneDiag1[1], zoneDiag2[0] - zoneDiag1[0], zoneDiag2[1] - zoneDiag1[1]);
+      var zone = new BoundingRect$1(zoneDiag1[0], zoneDiag1[1], zoneDiag2[0] - zoneDiag1[0], zoneDiag2[1] - zoneDiag1[1]);
       return area.intersect(zone);
     };
     Cartesian2D2.prototype.dataToPoint = function(data, clamp2, out2) {
@@ -36969,7 +36971,7 @@ var Cartesian2D = (
       var y = Math.min(yExtent[0], yExtent[1]) - tolerance;
       var width = Math.max(xExtent[0], xExtent[1]) - x + tolerance;
       var height = Math.max(yExtent[0], yExtent[1]) - y + tolerance;
-      return new BoundingRect(x, y, width, height);
+      return new BoundingRect$1(x, y, width, height);
     };
     return Cartesian2D2;
   }(Cartesian)
@@ -40241,7 +40243,7 @@ var GeoSVGResource = (
             bRectHeight = calculatedBoundingRect.height;
           }
         }
-        boundingRect = this._boundingRect = new BoundingRect(bRectX, bRectY, bRectWidth, bRectHeight);
+        boundingRect = this._boundingRect = new BoundingRect$1(bRectX, bRectY, bRectWidth, bRectHeight);
       }
       if (viewBoxRect) {
         var viewBoxTransform = makeViewBoxTransform(viewBoxRect, boundingRect);
@@ -40398,7 +40400,7 @@ var GeoJSONResource = (
       });
       return {
         regions: finalRegions,
-        boundingRect: parsed.boundingRect || new BoundingRect(0, 0, 0, 0),
+        boundingRect: parsed.boundingRect || new BoundingRect$1(0, 0, 0, 0),
         regionsMap
       };
     };
@@ -41396,13 +41398,13 @@ var View = (
       var _this = _super.call(this) || this;
       _this.type = "view";
       _this.dimensions = ["x", "y"];
-      _this._roamTransformable = new Transformable();
-      _this._rawTransformable = new Transformable();
+      _this._roamTransformable = new Transformable$1();
+      _this._rawTransformable = new Transformable$1();
       _this.name = name;
       return _this;
     }
     View2.prototype.setBoundingRect = function(x, y, width, height) {
-      this._rect = new BoundingRect(x, y, width, height);
+      this._rect = new BoundingRect$1(x, y, width, height);
       return this._rect;
     };
     View2.prototype.getBoundingRect = function() {
@@ -41410,12 +41412,12 @@ var View = (
     };
     View2.prototype.setViewRect = function(x, y, width, height) {
       this._transformTo(x, y, width, height);
-      this._viewRect = new BoundingRect(x, y, width, height);
+      this._viewRect = new BoundingRect$1(x, y, width, height);
     };
     View2.prototype._transformTo = function(x, y, width, height) {
       var rect = this.getBoundingRect();
       var rawTransform = this._rawTransformable;
-      rawTransform.transform = rect.calculateTransform(new BoundingRect(x, y, width, height));
+      rawTransform.transform = rect.calculateTransform(new BoundingRect$1(x, y, width, height));
       var rawParent = rawTransform.parent;
       rawTransform.parent = null;
       rawTransform.decomposeTransform();
@@ -41488,7 +41490,7 @@ var View = (
     View2.prototype.getTransformInfo = function() {
       var rawTransformable = this._rawTransformable;
       var roamTransformable = this._roamTransformable;
-      var dummyTransformable2 = new Transformable();
+      var dummyTransformable2 = new Transformable$1();
       dummyTransformable2.transform = roamTransformable.transform;
       dummyTransformable2.decomposeTransform();
       return {
@@ -41536,7 +41538,7 @@ var View = (
     };
     View2.dimensions = ["x", "y"];
     return View2;
-  }(Transformable)
+  }(Transformable$1)
 );
 function getCoordSys$4(finder) {
   var seriesModel = finder.seriesModel;
@@ -41609,7 +41611,7 @@ var Geo = (
         rect.y = -rect.y - rect.height;
       }
       var rawTransformable = this._rawTransformable;
-      rawTransformable.transform = rect.calculateTransform(new BoundingRect(x, y, width, height));
+      rawTransformable.transform = rect.calculateTransform(new BoundingRect$1(x, y, width, height));
       var rawParent = rawTransformable.parent;
       rawTransformable.parent = null;
       rawTransformable.decomposeTransform();
@@ -44283,7 +44285,7 @@ var TreemapView = (
         controller.on("pan", bind$1(this._onPan, this));
         controller.on("zoom", bind$1(this._onZoom, this));
       }
-      var rect = new BoundingRect(0, 0, api.getWidth(), api.getHeight());
+      var rect = new BoundingRect$1(0, 0, api.getWidth(), api.getHeight());
       controller.setPointerChecker(function(e2, x, y) {
         return rect.contain(x, y);
       });
@@ -44332,7 +44334,7 @@ var TreemapView = (
         if (!rootLayout) {
           return;
         }
-        var rect = new BoundingRect(rootLayout.x, rootLayout.y, rootLayout.width, rootLayout.height);
+        var rect = new BoundingRect$1(rootLayout.x, rootLayout.y, rootLayout.width, rootLayout.height);
         var zoomLimit = null;
         var _controllerHost = this._controllerHost;
         zoomLimit = _controllerHost.zoomLimit;
@@ -45287,7 +45289,7 @@ const treemapLayout = {
     prunning(
       treeRoot,
       // Transform to base element coordinate system.
-      new BoundingRect(-layoutInfo.x, -layoutInfo.y, ecWidth, ecHeight),
+      new BoundingRect$1(-layoutInfo.x, -layoutInfo.y, ecWidth, ecHeight),
       viewAbovePath,
       viewRoot,
       0
@@ -45568,7 +45570,7 @@ function prunning(node, clipRect, viewAbovePath, viewRoot, depth) {
     invisible: !isAboveViewRoot && !clipRect.intersect(nodeLayout),
     isAboveViewRoot
   }, true);
-  var childClipRect = new BoundingRect(clipRect.x - nodeLayout.x, clipRect.y - nodeLayout.y, clipRect.width, clipRect.height);
+  var childClipRect = new BoundingRect$1(clipRect.x - nodeLayout.x, clipRect.y - nodeLayout.y, clipRect.width, clipRect.height);
   each$b(node.viewChildren || [], function(child) {
     prunning(child, childClipRect, viewAbovePath, viewRoot, depth + 1);
   });
@@ -50523,7 +50525,7 @@ function makeRectIsTargetByCursor(rect, api, targetModel) {
   };
 }
 function normalizeRect(rect) {
-  return BoundingRect.create(rect);
+  return BoundingRect$1.create(rect);
 }
 var elementList$1 = ["axisLine", "axisTickLabel", "axisName"];
 var ParallelAxisView = (
@@ -50571,7 +50573,7 @@ var ParallelAxisView = (
       var extent3 = axisModel.axis.getExtent();
       var extentLen = extent3[1] - extent3[0];
       var extra = Math.min(30, Math.abs(extentLen) * 0.1);
-      var rect = BoundingRect.create({
+      var rect = BoundingRect$1.create({
         x: extent3[0],
         y: -areaWidth / 2,
         width: extentLen,
@@ -53246,7 +53248,7 @@ var LargeLinesPath = (
           minY = Math.min(y, minY);
           maxY = Math.max(y, maxY);
         }
-        rect = this._rect = new BoundingRect(minX, minY, maxX, maxY);
+        rect = this._rect = new BoundingRect$1(minX, minY, maxX, maxY);
       }
       return rect;
     };
@@ -64754,7 +64756,7 @@ var selector = {
       var width = itemLayout.width;
       var height = itemLayout.height;
       var p = points2[0];
-      if (contain(points2, x, y) || contain(points2, x + width, y) || contain(points2, x, y + height) || contain(points2, x + width, y + height) || BoundingRect.create(itemLayout).contain(p[0], p[1]) || linePolygonIntersect(x, y, x + width, y, points2) || linePolygonIntersect(x, y, x, y + height, points2) || linePolygonIntersect(x + width, y, x + width, y + height, points2) || linePolygonIntersect(x, y + height, x + width, y + height, points2)) {
+      if (contain(points2, x, y) || contain(points2, x + width, y) || contain(points2, x, y + height) || contain(points2, x + width, y + height) || BoundingRect$1.create(itemLayout).contain(p[0], p[1]) || linePolygonIntersect(x, y, x + width, y, points2) || linePolygonIntersect(x, y, x, y + height, points2) || linePolygonIntersect(x + width, y, x + width, y + height, points2) || linePolygonIntersect(x, y + height, x + width, y + height, points2)) {
         return true;
       }
     }
@@ -64954,7 +64956,7 @@ var boundingRectBuilders = {
   }
 };
 function getBoundingRectFromMinMax(minMax) {
-  return new BoundingRect(minMax[0][0], minMax[1][0], minMax[0][1] - minMax[0][0], minMax[1][1] - minMax[1][0]);
+  return new BoundingRect$1(minMax[0][0], minMax[1][0], minMax[0][1] - minMax[0][0], minMax[1][1] - minMax[1][0]);
 }
 var BrushView = (
   /** @class */
@@ -66100,7 +66102,7 @@ function getViewRect(model, api) {
 }
 function makeControlIcon(timelineModel, objPath, rect, opts) {
   var style = opts.style;
-  var icon = createIcon(timelineModel.get(["controlStyle", objPath]), opts || {}, new BoundingRect(rect[0], rect[1], rect[2], rect[3]));
+  var icon = createIcon(timelineModel.get(["controlStyle", objPath]), opts || {}, new BoundingRect$1(rect[0], rect[1], rect[2], rect[3]));
   if (style) {
     icon.setStyle(style);
   }
@@ -72342,7 +72344,7 @@ function binaryDividePolygon(polygonShape) {
   var min3 = [];
   var max3 = [];
   fromPoints(points2, min3, max3);
-  var boundingRect = new BoundingRect(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
+  var boundingRect = new BoundingRect$1(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
   var width = boundingRect.width;
   var height = boundingRect.height;
   var x = boundingRect.x;
@@ -72912,7 +72914,7 @@ function combineMorph(fromList, toPath, animationOpts) {
   var oldDone = animationOpts.done;
   var oldDuring = animationOpts.during;
   var individualDelay = animationOpts.individualDelay;
-  var identityTransform = new Transformable();
+  var identityTransform = new Transformable$1();
   for (var i = 0; i < separateCount; i++) {
     var from = fromPathList[i];
     var to = toSubPathList[i];
