@@ -1,4 +1,4 @@
-import { o as openBlock, c as createElementBlock, r as renderSlot, a as createTextVNode, b as createCommentVNode, n as normalizeClass } from "./vue-Bldgvu64.js";
+import { o as openBlock, c as createElementBlock, r as renderSlot, a as createTextVNode, b as createCommentVNode, n as normalizeClass } from "./vue-Dq8g2AwM.js";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -2510,7 +2510,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [
     $props.useCustomSlot ? (openBlock(), createElementBlock("div", _hoisted_2, [
       renderSlot(_ctx.$slots, "default", {}, () => [
-        createTextVNode("Drop files here to upload")
+        _cache[0] || (_cache[0] = createTextVNode("Drop files here to upload"))
       ])
     ])) : createCommentVNode("", true)
   ], 10, _hoisted_1);

@@ -5,12 +5,12 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
-import { m as mergeModels, d as ref, i as inject, u as useModel, e as computed, f as onBeforeMount, w as watch, g as resolveComponent, h as createBlock, j as withCtx, o as openBlock, c as createElementBlock, F as Fragment, k as renderList, l as createBaseVNode, b as createCommentVNode, t as toDisplayString, p as withDirectives, v as vShow, q as withKeys, s as withModifiers, x as vModelText, r as renderSlot, y as pushScopeId, z as popScopeId, A as reactive, B as onMounted, C as createApp, n as normalizeClass, D as createVNode, a as createTextVNode, E as resolveDirective, G as normalizeProps, H as guardReactiveProps, I as resolveDynamicComponent, J as mergeProps, K as toHandlers, T as Transition, L as provide, M as vModelSelect, N as vue_esmBundler, O as unref, P as toRaw, Q as nextTick, R as normalizeStyle, S as effectScope, U as markRaw, V as isRef, W as isReactive, X as toRef, Y as getCurrentInstance, Z as hasInjectionContext, _ as getCurrentScope, $ as onScopeDispose, a0 as toRefs, a1 as onBeforeUnmount, a2 as readonly, a3 as shallowRef, a4 as defineComponent, a5 as useSlots, a6 as Teleport } from "./vue-Bldgvu64.js";
-import { _ as _export_sfc, v as vueDropzone } from "./dropzone-CmDhQMhp.js";
-import { c as commonjsGlobal, g as getDefaultExportFromCjs, a as getAugmentedNamespace, m as mapboxgl } from "./mapbox-B5Yj7lio.js";
-import { i as init, e as echarts } from "./echarts-EaDxQI3p.js";
+import { m as mergeModels, d as ref, i as inject, u as useModel, e as computed, f as onBeforeMount, w as watch, g as resolveComponent, h as createBlock, j as withCtx, o as openBlock, c as createElementBlock, F as Fragment, k as renderList, l as createBaseVNode, b as createCommentVNode, t as toDisplayString, p as withDirectives, v as vShow, q as withKeys, s as withModifiers, x as vModelText, r as renderSlot, y as reactive, z as onMounted, A as createApp, n as normalizeClass, B as createVNode, a as createTextVNode, C as resolveDirective, D as normalizeProps, E as guardReactiveProps, G as resolveDynamicComponent, H as mergeProps, I as toHandlers, T as Transition, J as provide, K as vModelSelect, L as vue_esmBundler, M as unref, N as toRaw, O as nextTick, P as normalizeStyle, Q as effectScope, R as markRaw, S as isRef, U as isReactive, V as toRef, W as hasInjectionContext, X as getCurrentInstance, Y as getCurrentScope, Z as onScopeDispose, _ as toRefs, $ as defineComponent, a0 as render, a1 as onBeforeUnmount, a2 as readonly, a3 as shallowRef, a4 as useSlots, a5 as Teleport, a6 as pushScopeId, a7 as popScopeId } from "./vue-Dq8g2AwM.js";
+import { _ as _export_sfc, v as vueDropzone } from "./dropzone-C8hpOl0G.js";
+import { c as commonjsGlobal, g as getDefaultExportFromCjs, a as getAugmentedNamespace, m as mapboxgl } from "./mapbox-BMcF0oVF.js";
+import { i as init, e as echarts } from "./echarts-Bf8QDmg4.js";
 var require_index_001 = __commonJS({
-  "assets/index-Djiqzazr.js"(exports, module) {
+  "assets/index-BJGG-O--.js"(exports, module) {
     var _a, _b, _c, _d, _e2, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o2, _p, _q, _r2, _s, _t2, _u, _v, _w, _x, _y, _z, _A, _B, _C, _D, _E, _F, _G, _H, _I, _J, _K, _L, _M, _N, _O, _P, _Q, _R, _S, _T, _U, _V, _W, _X, _Y;
     class I18n {
       /**
@@ -360,7 +360,7 @@ var require_index_001 = __commonJS({
         return JSON.parse(gBase64.decode(encoded_obj));
       }
     };
-    const _sfc_main$17 = {
+    const _sfc_main$1d = {
       __name: "selector-dialog",
       props: /* @__PURE__ */ mergeModels({
         parentId: {
@@ -646,67 +646,53 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _withScopeId$6 = (n2) => (pushScopeId("data-v-c95f5480"), n2 = n2(), popScopeId(), n2);
-    const _hoisted_1$Q = ["innerHTML"];
-    const _hoisted_2$F = {
+    const _hoisted_1$W = ["innerHTML"];
+    const _hoisted_2$J = {
       key: 1,
       class: "field-preview"
     };
-    const _hoisted_3$x = { class: "multiple dontOpenDialog" };
-    const _hoisted_4$n = ["innerHTML"];
-    const _hoisted_5$k = ["onClick"];
-    const _hoisted_6$g = { class: "with_header_and_footer" };
-    const _hoisted_7$e = { class: "header" };
-    const _hoisted_8$d = { class: "dialog-title" };
-    const _hoisted_9$c = /* @__PURE__ */ _withScopeId$6(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
-    const _hoisted_10$a = [
-      _hoisted_9$c
-    ];
-    const _hoisted_11$8 = { class: "body" };
-    const _hoisted_12$5 = { class: "dialog_search" };
-    const _hoisted_13$4 = ["onKeydown"];
-    const _hoisted_14$3 = ["disabled"];
-    const _hoisted_15$3 = {
+    const _hoisted_3$A = { class: "multiple dontOpenDialog" };
+    const _hoisted_4$p = ["innerHTML"];
+    const _hoisted_5$n = ["onClick"];
+    const _hoisted_6$h = { class: "with_header_and_footer" };
+    const _hoisted_7$d = { class: "header" };
+    const _hoisted_8$9 = { class: "dialog-title" };
+    const _hoisted_9$8 = { class: "body" };
+    const _hoisted_10$6 = { class: "dialog_search" };
+    const _hoisted_11$6 = ["onKeydown"];
+    const _hoisted_12$5 = ["disabled"];
+    const _hoisted_13$5 = {
       key: 0,
       class: "dialog_search_error"
     };
-    const _hoisted_16$3 = {
+    const _hoisted_14$4 = {
       key: 1,
       class: "dialog_search_count"
     };
-    const _hoisted_17$2 = /* @__PURE__ */ _withScopeId$6(() => /* @__PURE__ */ createBaseVNode("br", null, null, -1));
-    const _hoisted_18$2 = {
+    const _hoisted_15$4 = {
       key: 2,
       class: "dialog_search_loading"
     };
-    const _hoisted_19$2 = /* @__PURE__ */ _withScopeId$6(() => /* @__PURE__ */ createBaseVNode("br", null, null, -1));
-    const _hoisted_20$2 = /* @__PURE__ */ _withScopeId$6(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-spinner fa-spin fa-2x primary-800" }, null, -1));
-    const _hoisted_21$1 = [
-      _hoisted_19$2,
-      _hoisted_20$2
-    ];
-    const _hoisted_22$1 = {
+    const _hoisted_16$4 = {
       key: 3,
       class: "dialog_search_results_filters"
     };
-    const _hoisted_23$1 = {
+    const _hoisted_17$3 = {
       key: 4,
       class: "striped dialog_search_results"
     };
-    const _hoisted_24 = /* @__PURE__ */ _withScopeId$6(() => /* @__PURE__ */ createBaseVNode("th", null, null, -1));
-    const _hoisted_25 = ["name", "id", "onClick"];
-    const _hoisted_26 = ["for"];
-    const _hoisted_27 = { class: "dialog_insert" };
-    const _hoisted_28 = { class: "dialog_insert_msg" };
-    const _hoisted_29 = {
+    const _hoisted_18$2 = ["name", "id", "onClick"];
+    const _hoisted_19$1 = ["for"];
+    const _hoisted_20$1 = { class: "dialog_insert" };
+    const _hoisted_21$1 = { class: "dialog_insert_msg" };
+    const _hoisted_22$1 = {
       key: 0,
       class: "dialog_insert"
     };
-    const _hoisted_30 = { class: "footer" };
-    const _hoisted_31 = /* @__PURE__ */ _withScopeId$6(() => /* @__PURE__ */ createBaseVNode("div", { class: "spacer" }, null, -1));
-    const _hoisted_32 = ["innerHTML"];
-    const _hoisted_33 = ["disabled"];
-    function _sfc_render$17(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_23$1 = { class: "footer" };
+    const _hoisted_24 = ["innerHTML"];
+    const _hoisted_25 = ["disabled"];
+    function _sfc_render$1d(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_dialog_box = resolveComponent("dialog-box");
       return openBlock(), createBlock(_component_dialog_box, {
         ref: "dialogComponent",
@@ -717,32 +703,34 @@ var require_index_001 = __commonJS({
             key: 0,
             class: "field-preview",
             innerHTML: $setup.anchorLabel()
-          }, null, 8, _hoisted_1$Q)) : (openBlock(), createElementBlock("div", _hoisted_2$F, [
+          }, null, 8, _hoisted_1$W)) : (openBlock(), createElementBlock("div", _hoisted_2$J, [
             !$setup.Common.isEmpty($setup.confirmedItem) ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($setup.confirmedItem, (item) => {
-              return openBlock(), createElementBlock("span", _hoisted_3$x, [
+              return openBlock(), createElementBlock("span", _hoisted_3$A, [
                 createBaseVNode("span", {
                   innerHTML: $setup.anchorMultipleLabel(item)
-                }, null, 8, _hoisted_4$n),
+                }, null, 8, _hoisted_4$p),
                 createBaseVNode("i", {
                   class: "remove_item fa-solid fa-xmark",
                   onClick: ($event) => $setup.removeItem(item)
-                }, null, 8, _hoisted_5$k)
+                }, null, 8, _hoisted_5$n)
               ]);
             }), 256)) : createCommentVNode("", true)
           ]))
         ]),
         "dialog-content": withCtx(() => [
-          createBaseVNode("div", _hoisted_6$g, [
-            createBaseVNode("div", _hoisted_7$e, [
-              createBaseVNode("div", _hoisted_8$d, toDisplayString($setup.Locale.getLabel("modular-forms::common.select_item")), 1),
+          createBaseVNode("div", _hoisted_6$h, [
+            createBaseVNode("div", _hoisted_7$d, [
+              createBaseVNode("div", _hoisted_8$9, toDisplayString($setup.Locale.getLabel("modular-forms::common.select_item")), 1),
               createBaseVNode("button", {
                 type: "button",
                 class: "close",
                 onClick: $setup.closeSelectorDialog
-              }, [..._hoisted_10$a])
+              }, _cache[2] || (_cache[2] = [
+                createBaseVNode("i", { class: "fa fa-times black" }, null, -1)
+              ]))
             ]),
-            createBaseVNode("div", _hoisted_11$8, [
-              withDirectives(createBaseVNode("div", _hoisted_12$5, [
+            createBaseVNode("div", _hoisted_9$8, [
+              withDirectives(createBaseVNode("div", _hoisted_10$6, [
                 createBaseVNode("i", null, toDisplayString($setup.Locale.getLabel("modular-forms::common.search_item")) + ": ", 1),
                 withDirectives(createBaseVNode("input", {
                   type: "text",
@@ -750,7 +738,7 @@ var require_index_001 = __commonJS({
                   autofocus: "",
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.searchKey = $event),
                   onKeydown: withKeys(withModifiers($setup.applySearch, ["prevent"]), ["enter"])
-                }, null, 40, _hoisted_13$4), [
+                }, null, 40, _hoisted_11$6), [
                   [vModelText, $setup.searchKey]
                 ]),
                 renderSlot(_ctx.$slots, "searchFilters", {}, void 0, true),
@@ -759,22 +747,25 @@ var require_index_001 = __commonJS({
                   class: "btn-nav gray small",
                   onClick: $setup.applySearch,
                   disabled: !$setup.isSearchable
-                }, toDisplayString($setup.Locale.getLabel("modular-forms::common.search")), 9, _hoisted_14$3),
-                $setup.searchKey.length > 0 && $setup.searchKey.length < $props.keyMinLength ? (openBlock(), createElementBlock("div", _hoisted_15$3, [
+                }, toDisplayString($setup.Locale.getLabel("modular-forms::common.search")), 9, _hoisted_12$5),
+                $setup.searchKey.length > 0 && $setup.searchKey.length < $props.keyMinLength ? (openBlock(), createElementBlock("div", _hoisted_13$5, [
                   createBaseVNode("i", null, toDisplayString($setup.keyLengthErrorMessage), 1)
                 ])) : createCommentVNode("", true),
-                $setup.searchExecuted ? (openBlock(), createElementBlock("div", _hoisted_16$3, [
+                $setup.searchExecuted ? (openBlock(), createElementBlock("div", _hoisted_14$4, [
                   createBaseVNode("b", null, toDisplayString($setup.totalCount) + " " + toDisplayString($setup.recordFoundLabel), 1),
-                  _hoisted_17$2
+                  _cache[3] || (_cache[3] = createBaseVNode("br", null, null, -1))
                 ])) : createCommentVNode("", true),
-                $setup.isSearching ? (openBlock(), createElementBlock("div", _hoisted_18$2, [..._hoisted_21$1])) : createCommentVNode("", true),
-                $setup.searchExecuted ? (openBlock(), createElementBlock("div", _hoisted_22$1, [
+                $setup.isSearching ? (openBlock(), createElementBlock("div", _hoisted_15$4, _cache[4] || (_cache[4] = [
+                  createBaseVNode("br", null, null, -1),
+                  createBaseVNode("i", { class: "fa fa-spinner fa-spin fa-2x primary-800" }, null, -1)
+                ]))) : createCommentVNode("", true),
+                $setup.searchExecuted ? (openBlock(), createElementBlock("div", _hoisted_16$4, [
                   renderSlot(_ctx.$slots, "searchResultFilters", {}, void 0, true)
                 ])) : createCommentVNode("", true),
-                $setup.searchExecuted ? (openBlock(), createElementBlock("table", _hoisted_23$1, [
+                $setup.searchExecuted ? (openBlock(), createElementBlock("table", _hoisted_17$3, [
                   createBaseVNode("thead", null, [
                     createBaseVNode("tr", null, [
-                      _hoisted_24,
+                      _cache[5] || (_cache[5] = createBaseVNode("th", null, null, -1)),
                       renderSlot(_ctx.$slots, "searchResultHeader", {}, void 0, true)
                     ])
                   ]),
@@ -787,10 +778,10 @@ var require_index_001 = __commonJS({
                             name: $props.parentId + "_radio",
                             id: $props.parentId + "_radio" + index,
                             onClick: ($event) => $setup.selectResultItem(item)
-                          }, null, 8, _hoisted_25),
+                          }, null, 8, _hoisted_18$2),
                           createBaseVNode("label", {
                             for: $props.parentId + "_radio" + index
-                          }, null, 8, _hoisted_26)
+                          }, null, 8, _hoisted_19$1)
                         ]),
                         renderSlot(_ctx.$slots, "searchResultItem", { item }, void 0, true)
                       ]);
@@ -800,7 +791,7 @@ var require_index_001 = __commonJS({
               ], 512), [
                 [vShow, $setup.displaySearch]
               ]),
-              withDirectives(createBaseVNode("div", _hoisted_27, [
+              withDirectives(createBaseVNode("div", _hoisted_20$1, [
                 withDirectives(createBaseVNode("input", {
                   type: "text",
                   class: "field-edit dialog_insert_freetext",
@@ -808,19 +799,19 @@ var require_index_001 = __commonJS({
                 }, null, 512), [
                   [vModelText, $setup.insertedItem]
                 ]),
-                createBaseVNode("div", _hoisted_28, [
+                createBaseVNode("div", _hoisted_21$1, [
                   createBaseVNode("i", null, toDisplayString($setup.Locale.getLabel("modular-forms::common.be_specific_as_possible")), 1)
                 ])
               ], 512), [
                 [vShow, $setup.displayInsertText]
               ]),
-              $props.withId ? withDirectives((openBlock(), createElementBlock("div", _hoisted_29, [
+              $props.withId ? withDirectives((openBlock(), createElementBlock("div", _hoisted_22$1, [
                 renderSlot(_ctx.$slots, "insertObject", { item: $setup.insertedItem }, void 0, true)
               ], 512)), [
                 [vShow, $setup.displayInsertObject]
               ]) : createCommentVNode("", true)
             ]),
-            createBaseVNode("div", _hoisted_30, [
+            createBaseVNode("div", _hoisted_23$1, [
               withDirectives(createBaseVNode("button", {
                 type: "button",
                 class: "btn-nav dark small",
@@ -828,11 +819,11 @@ var require_index_001 = __commonJS({
               }, toDisplayString($setup.Locale.getLabel("modular-forms::common.add_if_not_found")), 513), [
                 [vShow, $props.withInsert && $setup.displaySearch]
               ]),
-              _hoisted_31,
+              _cache[6] || (_cache[6] = createBaseVNode("div", { class: "spacer" }, null, -1)),
               createBaseVNode("div", {
                 innerHTML: $setup.errorLabel,
                 class: "error text-sm"
-              }, null, 8, _hoisted_32),
+              }, null, 8, _hoisted_24),
               createBaseVNode("button", {
                 type: "button",
                 class: "btn-nav dark small",
@@ -850,7 +841,7 @@ var require_index_001 = __commonJS({
                 class: "btn-nav dark small",
                 disabled: $setup.selectedItem === null,
                 onClick: $setup.confirmSelection
-              }, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_select")), 9, _hoisted_33), [
+              }, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_select")), 9, _hoisted_25), [
                 [vShow, $setup.displaySearch]
               ])
             ])
@@ -859,11 +850,11 @@ var require_index_001 = __commonJS({
         _: 3
       }, 512);
     }
-    const selectorDialog = /* @__PURE__ */ _export_sfc(_sfc_main$17, [["render", _sfc_render$17], ["__scopeId", "data-v-c95f5480"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/components/selector-dialog.vue"]]);
+    const selectorDialog = /* @__PURE__ */ _export_sfc(_sfc_main$1d, [["render", _sfc_render$1d], ["__scopeId", "data-v-c95f5480"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/components/selector-dialog.vue"]]);
     const min$2 = Math.min;
     const max$2 = Math.max;
-    const round$3 = Math.round;
-    const floor$2 = Math.floor;
+    const round$2 = Math.round;
+    const floor$1 = Math.floor;
     const createCoords = (v2) => ({
       x: v2,
       y: v2
@@ -1370,10 +1361,9 @@ var require_index_001 = __commonJS({
         crossAxis: 0,
         alignmentAxis: null
       } : {
-        mainAxis: 0,
-        crossAxis: 0,
-        alignmentAxis: null,
-        ...rawValue
+        mainAxis: rawValue.mainAxis || 0,
+        crossAxis: rawValue.crossAxis || 0,
+        alignmentAxis: rawValue.alignmentAxis
       };
       if (alignment && typeof alignmentAxis === "number") {
         crossAxis = alignment === "end" ? alignmentAxis * -1 : alignmentAxis;
@@ -1478,12 +1468,19 @@ var require_index_001 = __commonJS({
             ...limitedCoords,
             data: {
               x: limitedCoords.x - x2,
-              y: limitedCoords.y - y2
+              y: limitedCoords.y - y2,
+              enabled: {
+                [mainAxis]: checkMainAxis,
+                [crossAxis]: checkCrossAxis
+              }
             }
           };
         }
       };
     };
+    function hasWindow() {
+      return typeof window !== "undefined";
+    }
     function getNodeName$1(node) {
       if (isNode$1(node)) {
         return (node.nodeName || "").toLowerCase();
@@ -1499,16 +1496,25 @@ var require_index_001 = __commonJS({
       return (_ref = (isNode$1(node) ? node.ownerDocument : node.document) || window.document) == null ? void 0 : _ref.documentElement;
     }
     function isNode$1(value) {
+      if (!hasWindow()) {
+        return false;
+      }
       return value instanceof Node || value instanceof getWindow$2(value).Node;
     }
     function isElement$3(value) {
+      if (!hasWindow()) {
+        return false;
+      }
       return value instanceof Element || value instanceof getWindow$2(value).Element;
     }
     function isHTMLElement$1(value) {
+      if (!hasWindow()) {
+        return false;
+      }
       return value instanceof HTMLElement || value instanceof getWindow$2(value).HTMLElement;
     }
     function isShadowRoot$1(value) {
-      if (typeof ShadowRoot === "undefined") {
+      if (!hasWindow() || typeof ShadowRoot === "undefined") {
         return false;
       }
       return value instanceof ShadowRoot || value instanceof getWindow$2(value).ShadowRoot;
@@ -1623,7 +1629,7 @@ var require_index_001 = __commonJS({
       const hasOffset = isHTMLElement$1(element);
       const offsetWidth = hasOffset ? element.offsetWidth : width;
       const offsetHeight = hasOffset ? element.offsetHeight : height;
-      const shouldFallback = round$3(width) !== offsetWidth || round$3(height) !== offsetHeight;
+      const shouldFallback = round$2(width) !== offsetWidth || round$2(height) !== offsetHeight;
       if (shouldFallback) {
         width = offsetWidth;
         height = offsetHeight;
@@ -1648,8 +1654,8 @@ var require_index_001 = __commonJS({
         height,
         $: $2
       } = getCssDimensions(domElement);
-      let x2 = ($2 ? round$3(rect.width) : rect.width) / width;
-      let y2 = ($2 ? round$3(rect.height) : rect.height) / height;
+      let x2 = ($2 ? round$2(rect.width) : rect.width) / width;
+      let y2 = ($2 ? round$2(rect.height) : rect.height) / height;
       if (!x2 || !Number.isFinite(x2)) {
         x2 = 1;
       }
@@ -1774,8 +1780,12 @@ var require_index_001 = __commonJS({
     function getClientRects(element) {
       return Array.from(element.getClientRects());
     }
-    function getWindowScrollBarX$1(element) {
-      return getBoundingClientRect$1(getDocumentElement$1(element)).left + getNodeScroll$1(element).scrollLeft;
+    function getWindowScrollBarX$1(element, rect) {
+      const leftScroll = getNodeScroll$1(element).scrollLeft;
+      if (!rect) {
+        return getBoundingClientRect$1(getDocumentElement$1(element)).left + leftScroll;
+      }
+      return rect.left + leftScroll;
     }
     function getDocumentRect$1(element) {
       const html2 = getDocumentElement$1(element);
@@ -1943,8 +1953,16 @@ var require_index_001 = __commonJS({
           offsets.x = getWindowScrollBarX$1(documentElement);
         }
       }
-      const x2 = rect.left + scroll.scrollLeft - offsets.x;
-      const y2 = rect.top + scroll.scrollTop - offsets.y;
+      let htmlX = 0;
+      let htmlY = 0;
+      if (documentElement && !isOffsetParentAnElement && !isFixed) {
+        const htmlRect = documentElement.getBoundingClientRect();
+        htmlY = htmlRect.top + scroll.scrollTop;
+        htmlX = htmlRect.left + scroll.scrollLeft - // RTL <body> scrollbar.
+        getWindowScrollBarX$1(documentElement, htmlRect);
+      }
+      const x2 = rect.left + scroll.scrollLeft - offsets.x - htmlX;
+      const y2 = rect.top + scroll.scrollTop - offsets.y - htmlY;
       return {
         x: x2,
         y: y2,
@@ -1962,7 +1980,11 @@ var require_index_001 = __commonJS({
       if (polyfill) {
         return polyfill(element);
       }
-      return element.offsetParent;
+      let rawOffsetParent = element.offsetParent;
+      if (getDocumentElement$1(element) === rawOffsetParent) {
+        rawOffsetParent = rawOffsetParent.ownerDocument.body;
+      }
+      return rawOffsetParent;
     }
     function getOffsetParent$1(element, polyfill) {
       const win = getWindow$2(element);
@@ -2047,10 +2069,10 @@ var require_index_001 = __commonJS({
         if (!width || !height) {
           return;
         }
-        const insetTop = floor$2(top2);
-        const insetRight = floor$2(root2.clientWidth - (left2 + width));
-        const insetBottom = floor$2(root2.clientHeight - (top2 + height));
-        const insetLeft = floor$2(left2);
+        const insetTop = floor$1(top2);
+        const insetRight = floor$1(root2.clientWidth - (left2 + width));
+        const insetBottom = floor$1(root2.clientHeight - (top2 + height));
+        const insetLeft = floor$1(left2);
         const rootMargin = -insetTop + "px " + -insetRight + "px " + -insetBottom + "px " + -insetLeft + "px";
         const options = {
           rootMargin,
@@ -2174,7 +2196,7 @@ var require_index_001 = __commonJS({
         platform: platformWithCache
       });
     };
-    const _sfc_main$16 = {
+    const _sfc_main$1c = {
       props: {
         anchorElemId: {
           type: String,
@@ -2298,25 +2320,25 @@ var require_index_001 = __commonJS({
         };
       }
     };
-    const _hoisted_1$P = {
+    const _hoisted_1$V = {
       ref: "tooltipElem",
       role: "tooltip"
     };
-    const _hoisted_2$E = { class: "tooltip-content" };
-    const _hoisted_3$w = {
+    const _hoisted_2$I = { class: "tooltip-content" };
+    const _hoisted_3$z = {
       ref: "arrowElem",
       class: "tooltip-arrow"
     };
-    function _sfc_render$16(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$P, [
-        createBaseVNode("div", _hoisted_2$E, [
+    function _sfc_render$1c(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$V, [
+        createBaseVNode("div", _hoisted_2$I, [
           renderSlot(_ctx.$slots, "default", {}, void 0, true)
         ]),
-        createBaseVNode("div", _hoisted_3$w, null, 512)
+        createBaseVNode("div", _hoisted_3$z, null, 512)
       ], 512);
     }
-    const tooltip = /* @__PURE__ */ _export_sfc(_sfc_main$16, [["render", _sfc_render$16], ["__scopeId", "data-v-09ff0b06"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/tooltip.vue"]]);
-    const _sfc_main$15 = {
+    const tooltip = /* @__PURE__ */ _export_sfc(_sfc_main$1c, [["render", _sfc_render$1c], ["__scopeId", "data-v-09ff0b06"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/tooltip.vue"]]);
+    const _sfc_main$1b = {
       __name: "dialog_box",
       setup(__props, { expose: __expose }) {
         const anchorElem = ref(null);
@@ -2360,32 +2382,32 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$O = { role: "dialog" };
-    const _hoisted_2$D = {
+    const _hoisted_1$U = { role: "dialog" };
+    const _hoisted_2$H = {
       ref: "anchorElem",
       class: "dialog-anchor"
     };
-    const _hoisted_3$v = {
+    const _hoisted_3$y = {
       ref: "dialogOverlayElem",
       class: "dialog-overlay"
     };
-    const _hoisted_4$m = {
+    const _hoisted_4$o = {
       ref: "dialogContentElem",
       class: "dialog-content"
     };
-    function _sfc_render$15(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$O, [
-        createBaseVNode("div", _hoisted_2$D, [
+    function _sfc_render$1b(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$U, [
+        createBaseVNode("div", _hoisted_2$H, [
           renderSlot(_ctx.$slots, "dialog-anchor", {}, void 0, true)
         ], 512),
-        createBaseVNode("div", _hoisted_3$v, [
-          createBaseVNode("div", _hoisted_4$m, [
+        createBaseVNode("div", _hoisted_3$y, [
+          createBaseVNode("div", _hoisted_4$o, [
             renderSlot(_ctx.$slots, "dialog-content", {}, void 0, true)
           ], 512)
         ], 512)
       ]);
     }
-    const dialogBox = /* @__PURE__ */ _export_sfc(_sfc_main$15, [["render", _sfc_render$15], ["__scopeId", "data-v-903b9ef3"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/dialog_box.vue"]]);
+    const dialogBox = /* @__PURE__ */ _export_sfc(_sfc_main$1b, [["render", _sfc_render$1b], ["__scopeId", "data-v-903b9ef3"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/dialog_box.vue"]]);
     class Base {
       constructor(options, input_data) {
         const app = createApp(
@@ -2397,7 +2419,7 @@ var require_index_001 = __commonJS({
         return app;
       }
     }
-    const _sfc_main$14 = {
+    const _sfc_main$1a = {
       props: {
         name: {
           type: String,
@@ -2423,7 +2445,7 @@ var require_index_001 = __commonJS({
         }
       }
     };
-    function _sfc_render$14(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$1a(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("span", null, [
         createBaseVNode("span", {
@@ -2437,8 +2459,8 @@ var require_index_001 = __commonJS({
         })
       ]);
     }
-    const flag = /* @__PURE__ */ _export_sfc(_sfc_main$14, [["render", _sfc_render$14], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/flag.vue"]]);
-    const _sfc_main$13 = {
+    const flag = /* @__PURE__ */ _export_sfc(_sfc_main$1a, [["render", _sfc_render$1a], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/flag.vue"]]);
+    const _sfc_main$19 = {
       __name: "destroyFormButton",
       props: {
         action: {
@@ -2460,35 +2482,26 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$N = /* @__PURE__ */ createBaseVNode("button", {
-      type: "button",
-      class: "btn-nav small red"
-    }, [
-      /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-trash" })
-    ], -1);
-    const _hoisted_2$C = { class: "with_header_and_footer" };
-    const _hoisted_3$u = { class: "header" };
-    const _hoisted_4$l = /* @__PURE__ */ createBaseVNode("div", { class: "body" }, null, -1);
-    const _hoisted_5$j = { class: "footer" };
-    const _hoisted_6$f = /* @__PURE__ */ createBaseVNode("div", { class: "spacer" }, null, -1);
-    const _hoisted_7$d = ["action"];
-    const _hoisted_8$c = ["value"];
-    const _hoisted_9$b = /* @__PURE__ */ createBaseVNode("input", {
-      type: "hidden",
-      name: "_method",
-      value: "DELETE"
-    }, null, -1);
-    const _hoisted_10$9 = {
+    const _hoisted_1$T = { class: "with_header_and_footer" };
+    const _hoisted_2$G = { class: "header" };
+    const _hoisted_3$x = { class: "footer" };
+    const _hoisted_4$n = ["action"];
+    const _hoisted_5$m = ["value"];
+    const _hoisted_6$g = {
       type: "submit",
       class: "btn-nav small red"
     };
-    const _hoisted_11$7 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1);
-    function _sfc_render$13(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$19(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       const _component_dialog_box = resolveComponent("dialog-box");
       return openBlock(), createBlock(_component_dialog_box, { ref: "destroyDialog" }, {
         "dialog-anchor": withCtx(() => [
-          _hoisted_1$N,
+          _cache[0] || (_cache[0] = createBaseVNode("button", {
+            type: "button",
+            class: "btn-nav small red"
+          }, [
+            createBaseVNode("span", { class: "fas fa-fw fa-trash" })
+          ], -1)),
           createVNode(_component_tooltip, null, {
             default: withCtx(() => [
               createTextVNode(toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
@@ -2497,11 +2510,11 @@ var require_index_001 = __commonJS({
           })
         ]),
         "dialog-content": withCtx(() => [
-          createBaseVNode("div", _hoisted_2$C, [
-            createBaseVNode("div", _hoisted_3$u, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_deletion")), 1),
-            _hoisted_4$l,
-            createBaseVNode("div", _hoisted_5$j, [
-              _hoisted_6$f,
+          createBaseVNode("div", _hoisted_1$T, [
+            createBaseVNode("div", _hoisted_2$G, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_deletion")), 1),
+            _cache[4] || (_cache[4] = createBaseVNode("div", { class: "body" }, null, -1)),
+            createBaseVNode("div", _hoisted_3$x, [
+              _cache[3] || (_cache[3] = createBaseVNode("div", { class: "spacer" }, null, -1)),
               createBaseVNode("button", {
                 type: "button",
                 onClick: $setup.closeDestroyDialog,
@@ -2516,20 +2529,24 @@ var require_index_001 = __commonJS({
                   type: "hidden",
                   name: "_token",
                   value: $setup.csrfToken
-                }, null, 8, _hoisted_8$c),
-                _hoisted_9$b,
-                createBaseVNode("button", _hoisted_10$9, [
-                  _hoisted_11$7,
+                }, null, 8, _hoisted_5$m),
+                _cache[2] || (_cache[2] = createBaseVNode("input", {
+                  type: "hidden",
+                  name: "_method",
+                  value: "DELETE"
+                }, null, -1)),
+                createBaseVNode("button", _hoisted_6$g, [
+                  _cache[1] || (_cache[1] = createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1)),
                   createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
                 ])
-              ], 8, _hoisted_7$d)
+              ], 8, _hoisted_4$n)
             ])
           ])
         ]),
         _: 1
       }, 512);
     }
-    const destroyButton = /* @__PURE__ */ _export_sfc(_sfc_main$13, [["render", _sfc_render$13], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/components/destroyFormButton.vue"]]);
+    const destroyButton = /* @__PURE__ */ _export_sfc(_sfc_main$19, [["render", _sfc_render$19], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/components/destroyFormButton.vue"]]);
     class FormList {
       constructor(input_data = {}) {
         const options = {
@@ -2617,7 +2634,7 @@ var require_index_001 = __commonJS({
         });
       } };
     }
-    const _sfc_main$12 = {
+    const _sfc_main$18 = {
       __name: "simple-text",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2642,8 +2659,8 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$M = ["id", "name"];
-    function _sfc_render$12(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$S = ["id", "name"];
+    function _sfc_render$18(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("span", null, [
         withDirectives(createBaseVNode("input", {
@@ -2653,7 +2670,7 @@ var require_index_001 = __commonJS({
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
           class: "field-edit",
           autocomplete: "off"
-        }, null, 8, _hoisted_1$M), [
+        }, null, 8, _hoisted_1$S), [
           [vModelText, $setup.inputValue]
         ]),
         $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
@@ -2667,8 +2684,8 @@ var require_index_001 = __commonJS({
         }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
       ]);
     }
-    const simpleText = /* @__PURE__ */ _export_sfc(_sfc_main$12, [["render", _sfc_render$12], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-text.vue"]]);
-    const _sfc_main$11 = {
+    const simpleText = /* @__PURE__ */ _export_sfc(_sfc_main$18, [["render", _sfc_render$18], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-text.vue"]]);
+    const _sfc_main$17 = {
       __name: "simple-textarea",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2696,9 +2713,9 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$L = ["id", "textContent"];
-    const _hoisted_2$B = ["id", "textContent"];
-    function _sfc_render$11(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$R = ["id", "textContent"];
+    const _hoisted_2$F = ["id", "textContent"];
+    function _sfc_render$17(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("span", null, [
         $props.disabled ? (openBlock(), createElementBlock("span", {
           key: 0,
@@ -2706,18 +2723,18 @@ var require_index_001 = __commonJS({
           class: "field-preview disabled",
           onInput: $setup.onInput,
           textContent: toDisplayString($setup.inputValue)
-        }, null, 40, _hoisted_1$L)) : (openBlock(), createElementBlock("span", {
+        }, null, 40, _hoisted_1$R)) : (openBlock(), createElementBlock("span", {
           key: 1,
           id: $props.id,
           class: "field-preview",
           contenteditable: "",
           onInput: $setup.onInput,
           textContent: toDisplayString($setup.inputValue)
-        }, null, 40, _hoisted_2$B))
+        }, null, 40, _hoisted_2$F))
       ]);
     }
-    const simpleTextarea = /* @__PURE__ */ _export_sfc(_sfc_main$11, [["render", _sfc_render$11], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-textarea.vue"]]);
-    const _sfc_main$10 = {
+    const simpleTextarea = /* @__PURE__ */ _export_sfc(_sfc_main$17, [["render", _sfc_render$17], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-textarea.vue"]]);
+    const _sfc_main$16 = {
       __name: "simple-url",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2742,7 +2759,7 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    function _sfc_render$10(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$16(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_simple_text = resolveComponent("simple-text");
       return openBlock(), createBlock(_component_simple_text, {
         modelValue: $setup.inputValue,
@@ -2752,8 +2769,8 @@ var require_index_001 = __commonJS({
         "data-rules": $props.dataRules !== "" ? $props.dataRules + "|url" : "url"
       }, null, 8, ["modelValue", "id", "name", "data-rules"]);
     }
-    const simpleUrl = /* @__PURE__ */ _export_sfc(_sfc_main$10, [["render", _sfc_render$10], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-url.vue"]]);
-    const _sfc_main$$ = {
+    const simpleUrl = /* @__PURE__ */ _export_sfc(_sfc_main$16, [["render", _sfc_render$16], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-url.vue"]]);
+    const _sfc_main$15 = {
       __name: "simple-email",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2778,7 +2795,7 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    function _sfc_render$$(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$15(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_simple_text = resolveComponent("simple-text");
       return openBlock(), createBlock(_component_simple_text, {
         modelValue: $setup.inputValue,
@@ -2788,8 +2805,8 @@ var require_index_001 = __commonJS({
         "data-rules": $props.dataRules !== "" ? $props.dataRules + "|email" : "email"
       }, null, 8, ["modelValue", "id", "name", "data-rules"]);
     }
-    const simpleEmail = /* @__PURE__ */ _export_sfc(_sfc_main$$, [["render", _sfc_render$$], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-email.vue"]]);
-    const _sfc_main$_ = {
+    const simpleEmail = /* @__PURE__ */ _export_sfc(_sfc_main$15, [["render", _sfc_render$15], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-email.vue"]]);
+    const _sfc_main$14 = {
       __name: "simple-password",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2814,8 +2831,8 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$K = ["id", "name"];
-    function _sfc_render$_(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$Q = ["id", "name"];
+    function _sfc_render$14(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("span", null, [
         withDirectives(createBaseVNode("input", {
@@ -2825,7 +2842,7 @@ var require_index_001 = __commonJS({
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
           class: "field-edit",
           autocomplete: "off"
-        }, null, 8, _hoisted_1$K), [
+        }, null, 8, _hoisted_1$Q), [
           [vModelText, $setup.inputValue]
         ]),
         $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
@@ -2839,8 +2856,8 @@ var require_index_001 = __commonJS({
         }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
       ]);
     }
-    const simplePassword = /* @__PURE__ */ _export_sfc(_sfc_main$_, [["render", _sfc_render$_], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-password.vue"]]);
-    const _sfc_main$Z = {
+    const simplePassword = /* @__PURE__ */ _export_sfc(_sfc_main$14, [["render", _sfc_render$14], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-password.vue"]]);
+    const _sfc_main$13 = {
       __name: "rating",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -2930,16 +2947,16 @@ var require_index_001 = __commonJS({
         return __returned__;
       }
     };
-    const _hoisted_1$J = {
+    const _hoisted_1$P = {
       ref: "ratingOptions",
       class: "rating-container"
     };
-    const _hoisted_2$A = ["onClick", "rate"];
-    const _hoisted_3$t = ["id"];
-    function _sfc_render$Z(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_2$E = ["onClick", "rate"];
+    const _hoisted_3$w = ["id"];
+    function _sfc_render$13(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("span", _hoisted_1$J, [
+        createBaseVNode("span", _hoisted_1$P, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list, (item, index) => {
             return openBlock(), createElementBlock("span", null, [
               createBaseVNode("span", {
@@ -2948,7 +2965,7 @@ var require_index_001 = __commonJS({
                 onMouseover: $setup.setHover,
                 onMouseout: $setup.setHover,
                 rate: item["value"]
-              }, toDisplayString(item["label"]), 43, _hoisted_2$A),
+              }, toDisplayString(item["label"]), 43, _hoisted_2$E),
               createVNode(_component_tooltip, null, {
                 default: withCtx(() => [
                   createTextVNode(toDisplayString($setup.tooltipLabel(index)), 1)
@@ -2962,12 +2979,12 @@ var require_index_001 = __commonJS({
           type: "hidden",
           id: $props.id,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_3$t), [
+        }, null, 8, _hoisted_3$w), [
           [vModelText, $setup.inputValue]
         ])
       ]);
     }
-    const rating = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["render", _sfc_render$Z], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/rating.vue"]]);
+    const rating = /* @__PURE__ */ _export_sfc(_sfc_main$13, [["render", _sfc_render$13], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/rating.vue"]]);
     function useList$1(component_data) {
       const sortBy2 = ref(component_data.sortBy || null);
       const sortDir = ref(component_data.sortDir || "asc");
@@ -3795,7 +3812,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
         "v-select": Ce$2
       }
     };
-    const _sfc_main$Y = /* @__PURE__ */ Object.assign(__default__, {
+    const _sfc_main$12 = /* @__PURE__ */ Object.assign(__default__, {
       __name: "dropdown",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -3914,8 +3931,8 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
         return __returned__;
       }
     });
-    const _hoisted_1$I = ["id"];
-    function _sfc_render$Y(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$O = ["id"];
+    function _sfc_render$12(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("span", null, [
         createVNode($setup["vSelect"], {
           taggable: $props.taggable,
@@ -3933,12 +3950,12 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
           type: "hidden",
           id: $props.id,
           "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_1$I), [
+        }, null, 8, _hoisted_1$O), [
           [vModelText, $setup.inputValue]
         ])
       ]);
     }
-    const dropdown = /* @__PURE__ */ _export_sfc(_sfc_main$Y, [["render", _sfc_render$Y], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/dropdown.vue"]]);
+    const dropdown = /* @__PURE__ */ _export_sfc(_sfc_main$12, [["render", _sfc_render$12], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/dropdown.vue"]]);
     var airDatepicker = { exports: {} };
     (function(module2, exports2) {
       !function(e2, t2) {
@@ -5154,7 +5171,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
       firstDay: 1
     };
     default_1 = pt$2.default = _default;
-    const _sfc_main$X = {
+    const _sfc_main$11 = {
       __name: "simple-date",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -5234,8 +5251,8 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
         return __returned__;
       }
     };
-    const _hoisted_1$H = ["id", "name"];
-    function _sfc_render$X(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$N = ["id", "name"];
+    function _sfc_render$11(_ctx, _cache, $props, $setup, $data, $options) {
       return withDirectives((openBlock(), createElementBlock("input", {
         type: "text",
         id: $props.id,
@@ -5243,11 +5260,11 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
         class: "field-edit field-date",
         readonly: ""
-      }, null, 8, _hoisted_1$H)), [
+      }, null, 8, _hoisted_1$N)), [
         [vModelText, $setup.inputValue]
       ]);
     }
-    const simpleDate = /* @__PURE__ */ _export_sfc(_sfc_main$X, [["render", _sfc_render$X], ["__scopeId", "data-v-4aced308"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-date.vue"]]);
+    const simpleDate = /* @__PURE__ */ _export_sfc(_sfc_main$11, [["render", _sfc_render$11], ["__scopeId", "data-v-4aced308"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-date.vue"]]);
     const AutoNumericEnum = {};
     AutoNumericEnum.allowedTagList = [
       "b",
@@ -7204,8 +7221,8 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
     /**
      *               AutoNumeric.js
      *
-     * @version      4.10.5
-     * @date         2024-02-06 UTC 20:14
+     * @version      4.10.7
+     * @date         2024-10-14 UTC 01:11
      *
      * @authors      2016-2024 Alexandre Bonneau <alexandre.bonneau@linuxfr.eu>
      *               2009-2016 Bob Knothe <bob.knothe@gmail.com>
@@ -7256,7 +7273,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
        * @returns {string}
        */
       static version() {
-        return "4.10.5";
+        return "4.10.6";
       }
       /**
        * Initialize the AutoNumeric object onto the given DOM element, and attach the settings and related event listeners to it.
@@ -9738,7 +9755,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
           return [];
         }
         const elementsInside = [...formElement.querySelectorAll("[contenteditable=true]")];
-        const elementsOutside = [...document.querySelectorAll(`*:not(input)[form=${formElement.id}][contenteditable=true]`)];
+        const elementsOutside = [...document.querySelectorAll(`*:not(input)[form=${formElement.getAttribute("id")}][contenteditable=true]`)];
         return AutoNumericHelper.arrayUnique(elementsInside, elementsOutside);
       }
       /**
@@ -15896,7 +15913,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     });
     Object.freeze(AutoNumeric.predefinedOptions);
     Object.defineProperty(AutoNumeric, "predefinedOptions", { configurable: false, writable: false });
-    const _sfc_main$W = {
+    const _sfc_main$10 = {
       __name: "simple-numeric",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -15972,8 +15989,8 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$G = ["id", "name"];
-    function _sfc_render$W(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$M = ["id", "name"];
+    function _sfc_render$10(_ctx, _cache, $props, $setup, $data, $options) {
       return withDirectives((openBlock(), createElementBlock("input", {
         type: "text",
         id: $props.id,
@@ -15983,12 +16000,12 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         autocomplete: "off",
         ref: "inputElem",
         "on:autoNumeric:rawValueModified": _cache[1] || (_cache[1] = (...args) => _ctx.update && _ctx.update(...args))
-      }, null, 42, _hoisted_1$G)), [
+      }, null, 42, _hoisted_1$M)), [
         [vModelText, $setup.formattedValue]
       ]);
     }
-    const simpleNumeric = /* @__PURE__ */ _export_sfc(_sfc_main$W, [["render", _sfc_render$W], ["__scopeId", "data-v-ef7b592d"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-numeric.vue"]]);
-    const _sfc_main$V = {
+    const simpleNumeric = /* @__PURE__ */ _export_sfc(_sfc_main$10, [["render", _sfc_render$10], ["__scopeId", "data-v-ef7b592d"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-numeric.vue"]]);
+    const _sfc_main$$ = {
       __name: "toggle",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -16048,28 +16065,28 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$F = { class: "toggle" };
-    const _hoisted_2$z = ["onClick"];
-    const _hoisted_3$s = ["id"];
-    function _sfc_render$V(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$F, [
+    const _hoisted_1$L = { class: "toggle" };
+    const _hoisted_2$D = ["onClick"];
+    const _hoisted_3$v = ["id"];
+    function _sfc_render$$(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$L, [
         (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list, (option) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass($setup.isSelected(option.value) ? "active" : ""),
             onClick: ($event) => $setup.setOption(option.value)
-          }, toDisplayString(option.label), 11, _hoisted_2$z);
+          }, toDisplayString(option.label), 11, _hoisted_2$D);
         }), 256)),
         withDirectives(createBaseVNode("input", {
           type: "hidden",
           id: $props.id,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_3$s), [
+        }, null, 8, _hoisted_3$v), [
           [vModelText, $setup.inputValue]
         ])
       ]);
     }
-    const toggle = /* @__PURE__ */ _export_sfc(_sfc_main$V, [["render", _sfc_render$V], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/toggle.vue"]]);
-    const _sfc_main$U = {
+    const toggle = /* @__PURE__ */ _export_sfc(_sfc_main$$, [["render", _sfc_render$$], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/toggle.vue"]]);
+    const _sfc_main$_ = {
       __name: "checkbox",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -16158,26 +16175,26 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$E = {
+    const _hoisted_1$K = {
       key: 0,
       class: "checkbox"
     };
-    const _hoisted_2$y = ["name", "id", "checked"];
-    const _hoisted_3$r = ["for"];
-    const _hoisted_4$k = ["name", "id", "checked", "onChange"];
-    const _hoisted_5$i = ["for"];
-    function _sfc_render$U(_ctx, _cache, $props, $setup, $data, $options) {
-      return $props.boolean || $props.booleanNumeric ? (openBlock(), createElementBlock("span", _hoisted_1$E, [
+    const _hoisted_2$C = ["name", "id", "checked"];
+    const _hoisted_3$u = ["for"];
+    const _hoisted_4$m = ["name", "id", "checked", "onChange"];
+    const _hoisted_5$l = ["for"];
+    function _sfc_render$_(_ctx, _cache, $props, $setup, $data, $options) {
+      return $props.boolean || $props.booleanNumeric ? (openBlock(), createElementBlock("span", _hoisted_1$K, [
         createBaseVNode("input", {
           type: "checkbox",
           name: $props.id,
           id: "bool-check_" + $props.id,
           checked: $setup.isChecked,
           onChange: _cache[0] || (_cache[0] = ($event) => $setup.checkChange())
-        }, null, 40, _hoisted_2$y),
+        }, null, 40, _hoisted_2$C),
         createBaseVNode("label", {
           for: "bool-check_" + $props.id
-        }, null, 8, _hoisted_3$r)
+        }, null, 8, _hoisted_3$u)
       ])) : (openBlock(), createElementBlock("span", {
         key: 1,
         class: normalizeClass(["checkbox list", $props.inline ? "inline" : ""])
@@ -16190,16 +16207,16 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
               id: "check_" + option.value + "_" + $props.id,
               checked: $setup.isOptionChecked(option.value),
               onChange: ($event) => $setup.checkChange(option.value)
-            }, null, 40, _hoisted_4$k),
+            }, null, 40, _hoisted_4$m),
             createBaseVNode("label", {
               for: "check_" + option.value + "_" + $props.id
-            }, toDisplayString(option.label), 9, _hoisted_5$i)
+            }, toDisplayString(option.label), 9, _hoisted_5$l)
           ]);
         }), 256))
       ], 2));
     }
-    const checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$U, [["render", _sfc_render$U], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/checkbox.vue"]]);
-    const _sfc_main$T = {
+    const checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$_, [["render", _sfc_render$_], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/checkbox.vue"]]);
+    const _sfc_main$Z = {
       __name: "redlist_category",
       props: {
         category: {
@@ -16221,7 +16238,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    function _sfc_render$T(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$Z(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("div", null, [
         createBaseVNode("span", {
@@ -16235,9 +16252,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         })
       ]);
     }
-    const redlist_category = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["render", _sfc_render$T], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/redlist_category.vue"]]);
+    const redlist_category = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["render", _sfc_render$Z], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/redlist_category.vue"]]);
     const redListImgUrl = "/build/assets/iucn_red_list-Bn3APVvg.png";
-    const _sfc_main$S = {
+    const _sfc_main$Y = {
       __name: "selector-species_animal",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -16331,10 +16348,10 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _hoisted_1$D = ["innerHTML"];
-    const _hoisted_2$x = ["href"];
-    const _hoisted_3$q = ["src"];
-    function _sfc_render$S(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$J = ["innerHTML"];
+    const _hoisted_2$B = ["href"];
+    const _hoisted_3$t = ["src"];
+    function _sfc_render$Y(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createBlock($setup["selectorDialog"], {
         modelValue: $setup.inputValue,
         "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => $setup.inputValue = $event),
@@ -16380,7 +16397,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
             createBaseVNode("span", {
               class: "result_left",
               innerHTML: $setup.getSpeciesDescription(item)
-            }, null, 8, _hoisted_1$D)
+            }, null, 8, _hoisted_1$J)
           ]),
           createBaseVNode("td", null, [
             createVNode($setup["redlist_category"], {
@@ -16396,15 +16413,15 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
                 style: { "display": "inline-block" },
                 src: $setup.redListImgUrl,
                 alt: "IUCN RedList"
-              }, null, 8, _hoisted_3$q)
-            ], 8, _hoisted_2$x)
+              }, null, 8, _hoisted_3$t)
+            ], 8, _hoisted_2$B)
           ])
         ]),
         _: 1
       }, 8, ["modelValue", "parent-id", "search-url", "with-insert"]);
     }
-    const selectorSpeciesAnimal = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["render", _sfc_render$S], ["__scopeId", "data-v-dc359e20"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/selector-species_animal.vue"]]);
-    const _sfc_main$R = {
+    const selectorSpeciesAnimal = /* @__PURE__ */ _export_sfc(_sfc_main$Y, [["render", _sfc_render$Y], ["__scopeId", "data-v-dc359e20"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/selector-species_animal.vue"]]);
+    const _sfc_main$X = {
       __name: "upload",
       props: /* @__PURE__ */ mergeModels({
         uploadUrl: {
@@ -16543,57 +16560,44 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return __returned__;
       }
     };
-    const _withScopeId$5 = (n2) => (pushScopeId("data-v-32093f7c"), n2 = n2(), popScopeId(), n2);
-    const _hoisted_1$C = { class: "upload-anchor dontOpenDialog" };
-    const _hoisted_2$w = { class: "field-preview upload-filename" };
-    const _hoisted_3$p = ["href"];
-    const _hoisted_4$j = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-cloud-download-alt white" }, null, -1));
-    const _hoisted_5$h = [
-      _hoisted_4$j
-    ];
-    const _hoisted_6$e = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times-circle white" }, null, -1));
-    const _hoisted_7$c = [
-      _hoisted_6$e
-    ];
-    const _hoisted_8$b = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-upload white" }, null, -1));
-    const _hoisted_9$a = { class: "with_header_and_footer" };
-    const _hoisted_10$8 = { class: "header" };
-    const _hoisted_11$6 = { class: "dialog-title" };
-    const _hoisted_12$4 = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-times black" }, null, -1));
-    const _hoisted_13$3 = [
-      _hoisted_12$4
-    ];
-    const _hoisted_14$2 = { class: "body" };
-    const _hoisted_15$2 = { key: 0 };
-    const _hoisted_16$2 = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-folder-open white" }, null, -1));
-    const _hoisted_17$1 = { key: 1 };
-    const _hoisted_18$1 = { class: "text-info" };
-    const _hoisted_19$1 = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-file" }, null, -1));
-    const _hoisted_20$1 = {
+    const _hoisted_1$I = { class: "upload-anchor dontOpenDialog" };
+    const _hoisted_2$A = { class: "field-preview upload-filename" };
+    const _hoisted_3$s = ["href"];
+    const _hoisted_4$l = { class: "with_header_and_footer" };
+    const _hoisted_5$k = { class: "header" };
+    const _hoisted_6$f = { class: "dialog-title" };
+    const _hoisted_7$c = { class: "body" };
+    const _hoisted_8$8 = { key: 0 };
+    const _hoisted_9$7 = { key: 1 };
+    const _hoisted_10$5 = { class: "text-info" };
+    const _hoisted_11$5 = {
       key: 0,
       class: "fa fa-spinner fa-spin fa-2x green-800"
     };
-    const _hoisted_21 = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-upload white" }, null, -1));
-    const _hoisted_22 = { class: "footer" };
-    const _hoisted_23 = { class: "error text-sm" };
-    function _sfc_render$R(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_12$4 = { class: "footer" };
+    const _hoisted_13$4 = { class: "error text-sm" };
+    function _sfc_render$X(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_dialog_box = resolveComponent("dialog-box");
       return openBlock(), createBlock(_component_dialog_box, { ref: "dialogComponent" }, {
         "dialog-anchor": withCtx(() => [
-          createBaseVNode("div", _hoisted_1$C, [
-            createBaseVNode("span", _hoisted_2$w, toDisplayString($setup.inputValue instanceof Object ? $setup.inputValue.original_filename : $setup.inputValue), 1),
+          createBaseVNode("div", _hoisted_1$I, [
+            createBaseVNode("span", _hoisted_2$A, toDisplayString($setup.inputValue instanceof Object ? $setup.inputValue.original_filename : $setup.inputValue), 1),
             withDirectives(createBaseVNode("a", {
               class: "btn-nav dark small",
               target: "_blank",
               href: $setup.inputValue.download_link
-            }, [..._hoisted_5$h], 8, _hoisted_3$p), [
+            }, _cache[0] || (_cache[0] = [
+              createBaseVNode("i", { class: "fa fa-cloud-download-alt white" }, null, -1)
+            ]), 8, _hoisted_3$s), [
               [vShow, $setup.inputValue.original_filename !== null]
             ]),
             withDirectives(createBaseVNode("button", {
               type: "button",
               class: "btn-nav small red",
               onClick: $setup.deleteSelection
-            }, [..._hoisted_7$c], 512), [
+            }, _cache[1] || (_cache[1] = [
+              createBaseVNode("i", { class: "fa fa-times-circle white" }, null, -1)
+            ]), 512), [
               [vShow, $setup.inputValue.original_filename !== null]
             ]),
             withDirectives(createBaseVNode("button", {
@@ -16601,7 +16605,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
               class: "btn-nav small",
               onClick: $setup.openUploadDialog
             }, [
-              _hoisted_8$b,
+              _cache[2] || (_cache[2] = createBaseVNode("i", { class: "fa fa-upload white" }, null, -1)),
               createTextVNode("  " + toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1)
             ], 512), [
               [vShow, $setup.inputValue.original_filename === null]
@@ -16617,49 +16621,51 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
           }, null, 544), [
             [vShow, false]
           ]),
-          createBaseVNode("div", _hoisted_9$a, [
-            createBaseVNode("div", _hoisted_10$8, [
-              createBaseVNode("div", _hoisted_11$6, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1),
+          createBaseVNode("div", _hoisted_4$l, [
+            createBaseVNode("div", _hoisted_5$k, [
+              createBaseVNode("div", _hoisted_6$f, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload_file")), 1),
               createBaseVNode("button", {
                 type: "button",
                 class: "close",
                 onClick: $setup.closeUploadDialog
-              }, [..._hoisted_13$3])
+              }, _cache[3] || (_cache[3] = [
+                createBaseVNode("i", { class: "fa fa-times black" }, null, -1)
+              ]))
             ]),
-            createBaseVNode("div", _hoisted_14$2, [
-              !$setup.isFileSelected ? (openBlock(), createElementBlock("span", _hoisted_15$2, [
+            createBaseVNode("div", _hoisted_7$c, [
+              !$setup.isFileSelected ? (openBlock(), createElementBlock("span", _hoisted_8$8, [
                 createBaseVNode("label", null, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.no_file_selected")), 1),
-                createTextVNode("    "),
+                _cache[5] || (_cache[5] = createTextVNode("    ")),
                 createBaseVNode("button", {
                   type: "button",
                   onClick: $setup.openFileSelection,
                   class: "btn-nav small"
                 }, [
-                  _hoisted_16$2,
+                  _cache[4] || (_cache[4] = createBaseVNode("i", { class: "fa fa-folder-open white" }, null, -1)),
                   createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.select_file")), 1)
                 ])
               ])) : createCommentVNode("", true),
-              $setup.isFileSelected ? (openBlock(), createElementBlock("span", _hoisted_17$1, [
+              $setup.isFileSelected ? (openBlock(), createElementBlock("span", _hoisted_9$7, [
                 createBaseVNode("label", null, [
-                  createBaseVNode("span", _hoisted_18$1, [
-                    _hoisted_19$1,
+                  createBaseVNode("span", _hoisted_10$5, [
+                    _cache[6] || (_cache[6] = createBaseVNode("i", { class: "fa fa-file" }, null, -1)),
                     createTextVNode(" " + toDisplayString($setup.selectedFileName), 1)
                   ])
                 ]),
-                createTextVNode("    "),
-                $setup.isUploading ? (openBlock(), createElementBlock("i", _hoisted_20$1)) : createCommentVNode("", true),
+                _cache[8] || (_cache[8] = createTextVNode("    ")),
+                $setup.isUploading ? (openBlock(), createElementBlock("i", _hoisted_11$5)) : createCommentVNode("", true),
                 createBaseVNode("button", {
                   type: "button",
                   onClick: $setup.uploadFile,
                   class: normalizeClass(["btn-nav small", { hidden: $setup.isUploading }])
                 }, [
-                  _hoisted_21,
+                  _cache[7] || (_cache[7] = createBaseVNode("i", { class: "fa fa-upload white" }, null, -1)),
                   createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.upload")), 1)
                 ], 2)
               ])) : createCommentVNode("", true)
             ]),
-            withDirectives(createBaseVNode("div", _hoisted_22, [
-              createBaseVNode("div", _hoisted_23, toDisplayString($setup.errorMessage), 1)
+            withDirectives(createBaseVNode("div", _hoisted_12$4, [
+              createBaseVNode("div", _hoisted_13$4, toDisplayString($setup.errorMessage), 1)
             ], 512), [
               [vShow, $setup.errorMessage != null]
             ])
@@ -16668,7 +16674,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         _: 1
       }, 512);
     }
-    const uploadFile = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["render", _sfc_render$R], ["__scopeId", "data-v-32093f7c"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/upload.vue"]]);
+    const uploadFile = /* @__PURE__ */ _export_sfc(_sfc_main$X, [["render", _sfc_render$X], ["__scopeId", "data-v-32093f7c"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/upload.vue"]]);
     var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
     var freeSelf = typeof self == "object" && self && self.Object === Object && self;
     var root$1 = freeGlobal || freeSelf || Function("return this")();
@@ -16775,7 +16781,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var add = createMathOperation(function(augend, addend) {
       return augend + addend;
     }, 0);
-    const add$1 = add;
     var reWhitespace = /\s/;
     function trimmedEndIndex(string2) {
       var index = string2.length;
@@ -17596,7 +17601,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var Buffer$2 = moduleExports$2 ? root$1.Buffer : void 0;
     var nativeIsBuffer = Buffer$2 ? Buffer$2.isBuffer : void 0;
     var isBuffer = nativeIsBuffer || stubFalse;
-    const isBuffer$1 = isBuffer;
     var argsTag$2 = "[object Arguments]", arrayTag$2 = "[object Array]", boolTag$4 = "[object Boolean]", dateTag$4 = "[object Date]", errorTag$3 = "[object Error]", funcTag$1 = "[object Function]", mapTag$9 = "[object Map]", numberTag$4 = "[object Number]", objectTag$4 = "[object Object]", regexpTag$4 = "[object RegExp]", setTag$9 = "[object Set]", stringTag$4 = "[object String]", weakMapTag$3 = "[object WeakMap]";
     var arrayBufferTag$4 = "[object ArrayBuffer]", dataViewTag$4 = "[object DataView]", float32Tag$2 = "[object Float32Array]", float64Tag$2 = "[object Float64Array]", int8Tag$2 = "[object Int8Array]", int16Tag$2 = "[object Int16Array]", int32Tag$2 = "[object Int32Array]", uint8Tag$2 = "[object Uint8Array]", uint8ClampedTag$2 = "[object Uint8ClampedArray]", uint16Tag$2 = "[object Uint16Array]", uint32Tag$2 = "[object Uint32Array]";
     var typedArrayTags = {};
@@ -17626,11 +17630,10 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     }();
     var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
     var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
-    const isTypedArray$1 = isTypedArray;
     var objectProto$k = Object.prototype;
     var hasOwnProperty$i = objectProto$k.hasOwnProperty;
     function arrayLikeKeys(value, inherited) {
-      var isArr = isArray(value), isArg = !isArr && isArguments(value), isBuff = !isArr && !isArg && isBuffer$1(value), isType = !isArr && !isArg && !isBuff && isTypedArray$1(value), skipIndexes = isArr || isArg || isBuff || isType, result2 = skipIndexes ? baseTimes(value.length, String) : [], length = result2.length;
+      var isArr = isArray(value), isArg = !isArr && isArguments(value), isBuff = !isArr && !isArg && isBuffer(value), isType = !isArr && !isArg && !isBuff && isTypedArray(value), skipIndexes = isArr || isArg || isBuff || isType, result2 = skipIndexes ? baseTimes(value.length, String) : [], length = result2.length;
       for (var key in value) {
         if ((inherited || hasOwnProperty$i.call(value, key)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
         (key == "length" || // Node.js 0.10 has enumerable non-index properties on buffers.
@@ -17678,7 +17681,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         }
       }
     });
-    const assign$3 = assign$2;
     function nativeKeysIn(object2) {
       var result2 = [];
       if (object2 != null) {
@@ -17711,11 +17713,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var assignInWith = createAssigner(function(object2, source, srcIndex, customizer) {
       copyObject(source, keysIn(source), object2, customizer);
     });
-    const extendWith = assignInWith;
     var assignWith = createAssigner(function(object2, source, srcIndex, customizer) {
       copyObject(source, keys(source), object2, customizer);
     });
-    const assignWith$1 = assignWith;
     var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/;
     function isKey(value, object2) {
       if (isArray(value)) {
@@ -17993,8 +17993,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     function flatRest(func2) {
       return setToString(overRest(func2, void 0, flatten), func2 + "");
     }
-    var at$2 = flatRest(baseAt);
-    const at$3 = at$2;
+    var at$1 = flatRest(baseAt);
     var getPrototype = overArg(Object.getPrototypeOf, Object);
     var objectTag$3 = "[object Object]";
     var funcProto = Function.prototype, objectProto$e = Object.prototype;
@@ -18027,7 +18026,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return isError(e2) ? e2 : new Error(e2);
       }
     });
-    const attempt$1 = attempt;
     var FUNC_ERROR_TEXT$8 = "Expected a function";
     function before(n2, func2) {
       var result2;
@@ -18055,15 +18053,13 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return createWrap(func2, bitmask, thisArg, partials, holders);
     });
     bind.placeholder = {};
-    const bind$1 = bind;
     var bindAll = flatRest(function(object2, methodNames) {
       arrayEach(methodNames, function(key) {
         key = toKey(key);
-        baseAssignValue(object2, key, bind$1(object2[key], object2));
+        baseAssignValue(object2, key, bind(object2[key], object2));
       });
       return object2;
     });
-    const bindAll$1 = bindAll;
     var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG$1 = 2, WRAP_PARTIAL_FLAG$2 = 32;
     var bindKey = baseRest(function(object2, key, partials) {
       var bitmask = WRAP_BIND_FLAG | WRAP_BIND_KEY_FLAG$1;
@@ -18074,7 +18070,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return createWrap(key, bitmask, object2, partials, holders);
     });
     bindKey.placeholder = {};
-    const bindKey$1 = bindKey;
     function baseSlice(array2, start2, end2) {
       var index = -1, length = array2.length;
       if (start2 < 0) {
@@ -18390,7 +18385,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       word = word.toLowerCase();
       return result2 + (index ? capitalize(word) : word);
     });
-    const camelCase$1 = camelCase;
     function castArray() {
       if (!arguments.length) {
         return [];
@@ -18413,7 +18407,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       };
     }
     var ceil = createRound("ceil");
-    const ceil$1 = ceil;
     function chain(value) {
       var result2 = lodash$1(value);
       result2.__chain__ = true;
@@ -18675,14 +18668,12 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     }
     var nodeIsMap = nodeUtil && nodeUtil.isMap;
     var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
-    const isMap$1 = isMap;
     var setTag$6 = "[object Set]";
     function baseIsSet(value) {
       return isObjectLike(value) && getTag(value) == setTag$6;
     }
     var nodeIsSet = nodeUtil && nodeUtil.isSet;
     var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
-    const isSet$1 = isSet;
     var CLONE_DEEP_FLAG$7 = 1, CLONE_FLAT_FLAG$1 = 2, CLONE_SYMBOLS_FLAG$5 = 4;
     var argsTag$1 = "[object Arguments]", arrayTag$1 = "[object Array]", boolTag$2 = "[object Boolean]", dateTag$2 = "[object Date]", errorTag$1 = "[object Error]", funcTag = "[object Function]", genTag = "[object GeneratorFunction]", mapTag$5 = "[object Map]", numberTag$2 = "[object Number]", objectTag$1 = "[object Object]", regexpTag$2 = "[object RegExp]", setTag$5 = "[object Set]", stringTag$2 = "[object String]", symbolTag$1 = "[object Symbol]", weakMapTag$1 = "[object WeakMap]";
     var arrayBufferTag$2 = "[object ArrayBuffer]", dataViewTag$1 = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
@@ -18708,7 +18699,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         }
       } else {
         var tag = getTag(value), isFunc = tag == funcTag || tag == genTag;
-        if (isBuffer$1(value)) {
+        if (isBuffer(value)) {
           return cloneBuffer(value, isDeep);
         }
         if (tag == objectTag$1 || tag == argsTag$1 || isFunc && !object2) {
@@ -18729,11 +18720,11 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return stacked;
       }
       stack.set(value, result2);
-      if (isSet$1(value)) {
+      if (isSet(value)) {
         value.forEach(function(subValue) {
           result2.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
         });
-      } else if (isMap$1(value)) {
+      } else if (isMap(value)) {
         value.forEach(function(subValue, key2) {
           result2.set(key2, baseClone(subValue, bitmask, customizer, key2, value, stack));
         });
@@ -18983,8 +18974,8 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       objTag = objTag == argsTag ? objectTag : objTag;
       othTag = othTag == argsTag ? objectTag : othTag;
       var objIsObj = objTag == objectTag, othIsObj = othTag == objectTag, isSameTag = objTag == othTag;
-      if (isSameTag && isBuffer$1(object2)) {
-        if (!isBuffer$1(other)) {
+      if (isSameTag && isBuffer(object2)) {
+        if (!isBuffer(other)) {
           return false;
         }
         objIsArr = true;
@@ -18992,7 +18983,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       if (isSameTag && !objIsObj) {
         stack || (stack = new Stack());
-        return objIsArr || isTypedArray$1(object2) ? equalArrays(object2, other, bitmask, customizer, equalFunc, stack) : equalByTag(object2, other, objTag, bitmask, customizer, equalFunc, stack);
+        return objIsArr || isTypedArray(object2) ? equalArrays(object2, other, bitmask, customizer, equalFunc, stack) : equalByTag(object2, other, objTag, bitmask, customizer, equalFunc, stack);
       }
       if (!(bitmask & COMPARE_PARTIAL_FLAG$2)) {
         var objIsWrapped = objIsObj && hasOwnProperty$9.call(object2, "__wrapped__"), othIsWrapped = othIsObj && hasOwnProperty$9.call(other, "__wrapped__");
@@ -19243,7 +19234,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         baseAssignValue(result2, key, 1);
       }
     });
-    const countBy$1 = countBy;
     function create(prototype, properties) {
       var result2 = baseCreate(prototype);
       return properties == null ? result2 : baseAssign(result2, properties);
@@ -19267,7 +19257,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var now$1 = function() {
       return root$1.Date.now();
     };
-    const now$2 = now$1;
     var FUNC_ERROR_TEXT$6 = "Expected a function";
     var nativeMax$b = Math.max, nativeMin$b = Math.min;
     function debounce$1(func2, wait, options) {
@@ -19303,7 +19292,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return lastCallTime === void 0 || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
       }
       function timerExpired() {
-        var time = now$2();
+        var time = now$1();
         if (shouldInvoke(time)) {
           return trailingEdge(time);
         }
@@ -19325,10 +19314,10 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         lastArgs = lastCallTime = lastThis = timerId = void 0;
       }
       function flush() {
-        return timerId === void 0 ? result2 : trailingEdge(now$2());
+        return timerId === void 0 ? result2 : trailingEdge(now$1());
       }
       function debounced() {
-        var time = now$2(), isInvoking = shouldInvoke(time);
+        var time = now$1(), isInvoking = shouldInvoke(time);
         lastArgs = arguments;
         lastThis = this;
         lastCallTime = time;
@@ -19379,7 +19368,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return object2;
     });
-    const defaults$2 = defaults$1;
     function assignMergeValue(object2, key, value) {
       if (value !== void 0 && !eq(object2[key], value) || value === void 0 && !(key in object2)) {
         baseAssignValue(object2, key, value);
@@ -19409,7 +19397,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       var newValue = customizer ? customizer(objValue, srcValue, key + "", object2, source, stack) : void 0;
       var isCommon = newValue === void 0;
       if (isCommon) {
-        var isArr = isArray(srcValue), isBuff = !isArr && isBuffer$1(srcValue), isTyped = !isArr && !isBuff && isTypedArray$1(srcValue);
+        var isArr = isArray(srcValue), isBuff = !isArr && isBuffer(srcValue), isTyped = !isArr && !isBuff && isTypedArray(srcValue);
         newValue = srcValue;
         if (isArr || isBuff || isTyped) {
           if (isArray(objValue)) {
@@ -19475,7 +19463,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       args.push(void 0, customDefaultsMerge);
       return apply(mergeWith, void 0, args);
     });
-    const defaultsDeep$1 = defaultsDeep;
     var FUNC_ERROR_TEXT$5 = "Expected a function";
     function baseDelay(func2, wait, args) {
       if (typeof func2 != "function") {
@@ -19488,11 +19475,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var defer = baseRest(function(func2, args) {
       return baseDelay(func2, 1, args);
     });
-    const defer$1 = defer;
     var delay$1 = baseRest(function(func2, wait, args) {
       return baseDelay(func2, toNumber(wait) || 0, args);
     });
-    const delay$2 = delay$1;
     function arrayIncludesWith(array2, value, comparator) {
       var index = -1, length = array2 == null ? 0 : array2.length;
       while (++index < length) {
@@ -19540,7 +19525,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var difference = baseRest(function(array2, values2) {
       return isArrayLikeObject(array2) ? baseDifference(array2, baseFlatten(values2, 1, isArrayLikeObject, true)) : [];
     });
-    const difference$1 = difference;
     function last(array2) {
       var length = array2 == null ? 0 : array2.length;
       return length ? array2[length - 1] : void 0;
@@ -19552,7 +19536,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return isArrayLikeObject(array2) ? baseDifference(array2, baseFlatten(values2, 1, isArrayLikeObject, true), baseIteratee(iteratee2)) : [];
     });
-    const differenceBy$1 = differenceBy;
     var differenceWith = baseRest(function(array2, values2) {
       var comparator = last(values2);
       if (isArrayLikeObject(comparator)) {
@@ -19560,11 +19543,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return isArrayLikeObject(array2) ? baseDifference(array2, baseFlatten(values2, 1, isArrayLikeObject, true), void 0, comparator) : [];
     });
-    const differenceWith$1 = differenceWith;
     var divide = createMathOperation(function(dividend, divisor) {
       return dividend / divisor;
     }, 1);
-    const divide$1 = divide;
     function drop(array2, n2, guard) {
       var length = array2 == null ? 0 : array2.length;
       if (!length) {
@@ -19654,9 +19635,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       };
     }
     var toPairs = createToPairs(keys);
-    const toPairs$1 = toPairs;
     var toPairsIn = createToPairs(keysIn);
-    const toPairsIn$1 = toPairsIn;
     var htmlEscapes = {
       "&": "&amp;",
       "<": "&lt;",
@@ -19770,7 +19749,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return baseFindIndex(array2, baseIteratee(predicate), index);
     }
     var find = createFind(findIndex);
-    const find$1 = find;
     function baseFindKey(collection2, predicate, eachFunc) {
       var result2;
       eachFunc(collection2, function(value, key, collection3) {
@@ -19798,7 +19776,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return baseFindIndex(array2, baseIteratee(predicate), index, true);
     }
     var findLast = createFind(findLastIndex);
-    const findLast$1 = findLast;
     function findLastKey(object2, predicate) {
       return baseFindKey(object2, baseIteratee(predicate), baseForOwnRight);
     }
@@ -19845,7 +19822,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return createWrap(func2, WRAP_FLIP_FLAG);
     }
     var floor = createRound("floor");
-    const floor$1 = floor;
     var FUNC_ERROR_TEXT$4 = "Expected a function";
     var WRAP_CURRY_FLAG = 8, WRAP_PARTIAL_FLAG$1 = 32, WRAP_ARY_FLAG = 128, WRAP_REARG_FLAG$1 = 256;
     function createFlow(fromRight) {
@@ -19887,9 +19863,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       });
     }
     var flow = createFlow();
-    const flow$1 = flow;
     var flowRight = createFlow(true);
-    const flowRight$1 = flowRight;
     function forIn(object2, iteratee2) {
       return object2 == null ? object2 : baseFor(object2, castFunction(iteratee2), keysIn);
     }
@@ -19930,7 +19904,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         baseAssignValue(result2, key, [value]);
       }
     });
-    const groupBy$1 = groupBy;
     function baseGt(value, other) {
       return value > other;
     }
@@ -19944,11 +19917,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       };
     }
     var gt$2 = createRelationalOperation(baseGt);
-    const gt$3 = gt$2;
     var gte = createRelationalOperation(function(value, other) {
       return value >= other;
     });
-    const gte$1 = gte;
     var objectProto$6 = Object.prototype;
     var hasOwnProperty$5 = objectProto$6.hasOwnProperty;
     function baseHas(object2, key) {
@@ -20050,7 +20021,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       var mapped = arrayMap(arrays, castArrayLikeObject);
       return mapped.length && mapped[0] === arrays[0] ? baseIntersection(mapped) : [];
     });
-    const intersection$1 = intersection;
     var intersectionBy = baseRest(function(arrays) {
       var iteratee2 = last(arrays), mapped = arrayMap(arrays, castArrayLikeObject);
       if (iteratee2 === last(mapped)) {
@@ -20060,7 +20030,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return mapped.length && mapped[0] === arrays[0] ? baseIntersection(mapped, baseIteratee(iteratee2)) : [];
     });
-    const intersectionBy$1 = intersectionBy;
     var intersectionWith = baseRest(function(arrays) {
       var comparator = last(arrays), mapped = arrayMap(arrays, castArrayLikeObject);
       comparator = typeof comparator == "function" ? comparator : void 0;
@@ -20069,7 +20038,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return mapped.length && mapped[0] === arrays[0] ? baseIntersection(mapped, void 0, comparator) : [];
     });
-    const intersectionWith$1 = intersectionWith;
     function baseInverter(object2, setter, iteratee2, accumulator) {
       baseForOwn(object2, function(value, key, object3) {
         setter(accumulator, iteratee2(value), key, object3);
@@ -20089,7 +20057,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       result2[value] = key;
     }, constant(identity));
-    const invert$1 = invert;
     var objectProto$4 = Object.prototype;
     var hasOwnProperty$4 = objectProto$4.hasOwnProperty;
     var nativeObjectToString = objectProto$4.toString;
@@ -20103,7 +20070,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         result2[value] = [key];
       }
     }, baseIteratee);
-    const invertBy$1 = invertBy;
     function parent(object2, path) {
       return path.length < 2 ? object2 : baseGet(object2, baseSlice(path, 0, -1));
     }
@@ -20114,7 +20080,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return func2 == null ? void 0 : apply(func2, object2, args);
     }
     var invoke = baseRest(baseInvoke);
-    const invoke$1 = invoke;
     var invokeMap = baseRest(function(collection2, path, args) {
       var index = -1, isFunc = typeof path == "function", result2 = isArrayLike(collection2) ? Array(collection2.length) : [];
       baseEach(collection2, function(value) {
@@ -20122,14 +20087,12 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       });
       return result2;
     });
-    const invokeMap$1 = invokeMap;
     var arrayBufferTag = "[object ArrayBuffer]";
     function baseIsArrayBuffer(value) {
       return isObjectLike(value) && baseGetTag(value) == arrayBufferTag;
     }
     var nodeIsArrayBuffer = nodeUtil && nodeUtil.isArrayBuffer;
     var isArrayBuffer = nodeIsArrayBuffer ? baseUnary(nodeIsArrayBuffer) : baseIsArrayBuffer;
-    const isArrayBuffer$1 = isArrayBuffer;
     var boolTag = "[object Boolean]";
     function isBoolean(value) {
       return value === true || value === false || isObjectLike(value) && baseGetTag(value) == boolTag;
@@ -20140,7 +20103,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     }
     var nodeIsDate = nodeUtil && nodeUtil.isDate;
     var isDate = nodeIsDate ? baseUnary(nodeIsDate) : baseIsDate;
-    const isDate$1 = isDate;
     function isElement$2(value) {
       return isObjectLike(value) && value.nodeType === 1 && !isPlainObject$2(value);
     }
@@ -20151,7 +20113,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       if (value == null) {
         return true;
       }
-      if (isArrayLike(value) && (isArray(value) || typeof value == "string" || typeof value.splice == "function" || isBuffer$1(value) || isTypedArray$1(value) || isArguments(value))) {
+      if (isArrayLike(value) && (isArray(value) || typeof value == "string" || typeof value.splice == "function" || isBuffer(value) || isTypedArray(value) || isArguments(value))) {
         return !value.length;
       }
       var tag = getTag(value);
@@ -20217,7 +20179,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     }
     var nodeIsRegExp = nodeUtil && nodeUtil.isRegExp;
     var isRegExp = nodeIsRegExp ? baseUnary(nodeIsRegExp) : baseIsRegExp;
-    const isRegExp$1 = isRegExp;
     var MAX_SAFE_INTEGER$3 = 9007199254740991;
     function isSafeInteger(value) {
       return isInteger(value) && value >= -MAX_SAFE_INTEGER$3 && value <= MAX_SAFE_INTEGER$3;
@@ -20245,11 +20206,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var kebabCase = createCompounder(function(result2, word, index) {
       return result2 + (index ? "-" : "") + word.toLowerCase();
     });
-    const kebabCase$1 = kebabCase;
     var keyBy = createAggregator(function(result2, value, key) {
       baseAssignValue(result2, key, value);
     });
-    const keyBy$1 = keyBy;
     function strictLastIndexOf(array2, value, fromIndex) {
       var index = fromIndex + 1;
       while (index--) {
@@ -20275,18 +20234,14 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var lowerCase = createCompounder(function(result2, word, index) {
       return result2 + (index ? " " : "") + word.toLowerCase();
     });
-    const lowerCase$1 = lowerCase;
     var lowerFirst = createCaseFirst("toLowerCase");
-    const lowerFirst$1 = lowerFirst;
     function baseLt(value, other) {
       return value < other;
     }
     var lt$2 = createRelationalOperation(baseLt);
-    const lt$3 = lt$2;
     var lte = createRelationalOperation(function(value, other) {
       return value <= other;
     });
-    const lte$1 = lte;
     function mapKeys(object2, iteratee2) {
       var result2 = {};
       iteratee2 = baseIteratee(iteratee2);
@@ -20356,13 +20311,11 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return baseInvoke(object2, path, args);
       };
     });
-    const method$1 = method;
     var methodOf = baseRest(function(object2, args) {
       return function(path) {
         return baseInvoke(object2, path, args);
       };
     });
-    const methodOf$1 = methodOf;
     function min$1(array2) {
       return array2 && array2.length ? baseExtremum(array2, identity, baseLt) : void 0;
     }
@@ -20393,7 +20346,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var multiply = createMathOperation(function(multiplier, multiplicand) {
       return multiplier * multiplicand;
     }, 1);
-    const multiply$1 = multiply;
     var FUNC_ERROR_TEXT$3 = "Expected a function";
     function negate(predicate) {
       if (typeof predicate != "function") {
@@ -20490,7 +20442,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return result2;
     });
-    const omit$1 = omit;
     function baseSet(object2, path, value, customizer) {
       if (!isObject$3(object2)) {
         return object2;
@@ -20627,7 +20578,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       });
     }
     var over = createOver(arrayMap);
-    const over$1 = over;
     var castRest = baseRest;
     var nativeMin$6 = Math.min;
     var overArgs = castRest(function(func2, transforms) {
@@ -20641,11 +20591,8 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return apply(func2, this, args);
       });
     });
-    const overArgs$1 = overArgs;
     var overEvery = createOver(arrayEvery);
-    const overEvery$1 = overEvery;
     var overSome = createOver(arraySome);
-    const overSome$1 = overSome;
     var MAX_SAFE_INTEGER$2 = 9007199254740991;
     var nativeFloor$3 = Math.floor;
     function baseRepeat(string2, n2) {
@@ -20728,20 +20675,17 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return createWrap(func2, WRAP_PARTIAL_FLAG, void 0, partials, holders);
     });
     partial.placeholder = {};
-    const partial$1 = partial;
     var WRAP_PARTIAL_RIGHT_FLAG = 64;
     var partialRight = baseRest(function(func2, partials) {
       var holders = replaceHolders(partials, getHolder(partialRight));
       return createWrap(func2, WRAP_PARTIAL_RIGHT_FLAG, void 0, partials, holders);
     });
     partialRight.placeholder = {};
-    const partialRight$1 = partialRight;
     var partition = createAggregator(function(result2, value, key) {
       result2[key ? 0 : 1].push(value);
     }, function() {
       return [[], []];
     });
-    const partition$1 = partition;
     function basePick(object2, paths) {
       return basePickBy(object2, paths, function(value, path) {
         return hasIn(object2, path);
@@ -20750,7 +20694,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var pick = flatRest(function(object2, paths) {
       return object2 == null ? {} : basePick(object2, paths);
     });
-    const pick$1 = pick;
     function wrapperPlant(value) {
       var result2, parent2 = this;
       while (parent2 instanceof baseLodash) {
@@ -20807,7 +20750,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return array2 && array2.length && values2 && values2.length ? basePullAll(array2, values2) : array2;
     }
     var pull = baseRest(pullAll);
-    const pull$1 = pull;
     function pullAllBy(array2, values2, iteratee2) {
       return array2 && array2.length && values2 && values2.length ? basePullAll(array2, values2, baseIteratee(iteratee2)) : array2;
     }
@@ -20838,7 +20780,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }).sort(compareAscending));
       return result2;
     });
-    const pullAt$1 = pullAt;
     var nativeFloor$1 = Math.floor, nativeRandom$1 = Math.random;
     function baseRandom(lower, upper) {
       return lower + nativeFloor$1(nativeRandom$1() * (upper - lower + 1));
@@ -20907,14 +20848,11 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       };
     }
     var range = createRange();
-    const range$1 = range;
     var rangeRight = createRange(true);
-    const rangeRight$1 = rangeRight;
     var WRAP_REARG_FLAG = 256;
     var rearg = flatRest(function(func2, indexes) {
       return createWrap(func2, WRAP_REARG_FLAG, void 0, void 0, void 0, indexes);
     });
-    const rearg$1 = rearg;
     function baseReduce(collection2, iteratee2, accumulator, initAccum, eachFunc) {
       eachFunc(collection2, function(value, index, collection3) {
         accumulator = initAccum ? (initAccum = false, value) : iteratee2(accumulator, value, index, collection3);
@@ -21003,7 +20941,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return array2 == null ? array2 : nativeReverse.call(array2);
     }
     var round$1 = createRound("round");
-    const round$2 = round$1;
     function arraySample(array2) {
       var length = array2.length;
       return length ? array2[baseRandom(0, length - 1)] : void 0;
@@ -21090,7 +21027,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var snakeCase = createCompounder(function(result2, word, index) {
       return result2 + (index ? "_" : "") + word.toLowerCase();
     });
-    const snakeCase$1 = snakeCase;
     function baseSome(collection2, predicate) {
       var result2;
       baseEach(collection2, function(value, index, collection3) {
@@ -21118,7 +21054,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return baseOrderBy(collection2, baseFlatten(iteratees, 1), []);
     });
-    const sortBy$1 = sortBy;
     var MAX_ARRAY_LENGTH$4 = 4294967295, MAX_ARRAY_INDEX = MAX_ARRAY_LENGTH$4 - 1;
     var nativeFloor = Math.floor, nativeMin$4 = Math.min;
     function baseSortedIndexBy(array2, value, iteratee2, retHighest) {
@@ -21226,7 +21161,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return [];
       }
       string2 = toString$1(string2);
-      if (string2 && (typeof separator == "string" || separator != null && !isRegExp$1(separator))) {
+      if (string2 && (typeof separator == "string" || separator != null && !isRegExp(separator))) {
         separator = baseToString(separator);
         if (!separator && hasUnicode(string2)) {
           return castSlice(stringToArray(string2), 0, limit);
@@ -21252,7 +21187,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var startCase = createCompounder(function(result2, word, index) {
       return result2 + (index ? " " : "") + upperFirst(word);
     });
-    const startCase$1 = startCase;
     function startsWith(string2, target, position) {
       string2 = toString$1(string2);
       position = position == null ? 0 : baseClamp(toInteger(position), 0, string2.length);
@@ -21271,7 +21205,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var subtract = createMathOperation(function(minuend, subtrahend) {
       return minuend - subtrahend;
     }, 0);
-    const subtract$1 = subtract;
     function sum(array2) {
       return array2 && array2.length ? baseSum(array2, identity) : 0;
     }
@@ -21375,7 +21308,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         "_": { "escape": escape$1 }
       }
     };
-    const templateSettings$1 = templateSettings;
     var INVALID_TEMPL_VAR_ERROR_TEXT = "Invalid `variable` option passed into `_.template`";
     var reEmptyStringLeading = /\b__p \+= '';/g, reEmptyStringMiddle = /\b(__p \+=) '' \+/g, reEmptyStringTrailing = /(__e\(.*?\)|\b__t\)) \+\n'';/g;
     var reForbiddenIdentifierChars = /[()=,{}\[\]\/\s]/;
@@ -21385,13 +21317,13 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var objectProto$1 = Object.prototype;
     var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
     function template(string2, options, guard) {
-      var settings = templateSettings$1.imports._.templateSettings || templateSettings$1;
+      var settings = templateSettings.imports._.templateSettings || templateSettings;
       if (guard && isIterateeCall(string2, options, guard)) {
         options = void 0;
       }
       string2 = toString$1(string2);
-      options = extendWith({}, options, settings, customDefaultsAssignIn);
-      var imports = extendWith({}, options.imports, settings.imports, customDefaultsAssignIn), importsKeys = keys(imports), importsValues = baseValues(imports, importsKeys);
+      options = assignInWith({}, options, settings, customDefaultsAssignIn);
+      var imports = assignInWith({}, options.imports, settings.imports, customDefaultsAssignIn), importsKeys = keys(imports), importsValues = baseValues(imports, importsKeys);
       var isEscaping, isEvaluating, index = 0, interpolate = options.interpolate || reNoMatch, source = "__p += '";
       var reDelimiters = RegExp(
         (options.escape || reNoMatch).source + "|" + interpolate.source + "|" + (interpolate === reInterpolate ? reEsTemplate : reNoMatch).source + "|" + (options.evaluate || reNoMatch).source + "|$",
@@ -21424,7 +21356,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       source = (isEvaluating ? source.replace(reEmptyStringLeading, "") : source).replace(reEmptyStringMiddle, "$1").replace(reEmptyStringTrailing, "$1;");
       source = "function(" + (variable || "obj") + ") {\n" + (variable ? "" : "obj || (obj = {});\n") + "var __t, __p = ''" + (isEscaping ? ", __e = _.escape" : "") + (isEvaluating ? ", __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n" : ";\n") + source + "return __p\n}";
-      var result2 = attempt$1(function() {
+      var result2 = attempt(function() {
         return Function(importsKeys, sourceURL + "return " + source).apply(void 0, importsValues);
       });
       result2.source = source;
@@ -21501,7 +21433,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       return toString$1(value).toUpperCase();
     }
     function transform$3(object2, iteratee2, accumulator) {
-      var isArr = isArray(object2), isArrLike = isArr || isBuffer$1(object2) || isTypedArray$1(object2);
+      var isArr = isArray(object2), isArrLike = isArr || isBuffer(object2) || isTypedArray(object2);
       iteratee2 = baseIteratee(iteratee2);
       if (accumulator == null) {
         var Ctor = object2 && object2.constructor;
@@ -21593,7 +21525,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       if (strSymbols) {
         end2 += result2.length - end2;
       }
-      if (isRegExp$1(separator)) {
+      if (isRegExp(separator)) {
         if (string2.slice(end2).search(separator)) {
           var match, substring = result2;
           if (!separator.global) {
@@ -21677,7 +21609,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var union = baseRest(function(arrays) {
       return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true));
     });
-    const union$1 = union;
     var unionBy = baseRest(function(arrays) {
       var iteratee2 = last(arrays);
       if (isArrayLikeObject(iteratee2)) {
@@ -21685,13 +21616,11 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true), baseIteratee(iteratee2));
     });
-    const unionBy$1 = unionBy;
     var unionWith = baseRest(function(arrays) {
       var comparator = last(arrays);
       comparator = typeof comparator == "function" ? comparator : void 0;
       return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true), void 0, comparator);
     });
-    const unionWith$1 = unionWith;
     function uniq(array2) {
       return array2 && array2.length ? baseUniq(array2) : [];
     }
@@ -21751,16 +21680,14 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var upperCase = createCompounder(function(result2, word, index) {
       return result2 + (index ? " " : "") + word.toUpperCase();
     });
-    const upperCase$1 = upperCase;
     function valuesIn(object2) {
       return object2 == null ? [] : baseValues(object2, keysIn(object2));
     }
     var without = baseRest(function(array2, values2) {
       return isArrayLikeObject(array2) ? baseDifference(array2, values2) : [];
     });
-    const without$1 = without;
     function wrap$1(value, wrapper) {
-      return partial$1(castFunction(wrapper), value);
+      return partial(castFunction(wrapper), value);
     }
     var wrapperAt = flatRest(function(paths) {
       var length = paths.length, start2 = length ? paths[0] : 0, value = this.__wrapped__, interceptor = function(object2) {
@@ -21782,7 +21709,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
         return array2;
       });
     });
-    const at$1 = wrapperAt;
     function wrapperChain() {
       return chain(this);
     }
@@ -21822,7 +21748,6 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     var xor = baseRest(function(arrays) {
       return baseXor(arrayFilter(arrays, isArrayLikeObject));
     });
-    const xor$1 = xor;
     var xorBy = baseRest(function(arrays) {
       var iteratee2 = last(arrays);
       if (isArrayLikeObject(iteratee2)) {
@@ -21830,15 +21755,12 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       }
       return baseXor(arrayFilter(arrays, isArrayLikeObject), baseIteratee(iteratee2));
     });
-    const xorBy$1 = xorBy;
     var xorWith = baseRest(function(arrays) {
       var comparator = last(arrays);
       comparator = typeof comparator == "function" ? comparator : void 0;
       return baseXor(arrayFilter(arrays, isArrayLikeObject), void 0, comparator);
     });
-    const xorWith$1 = xorWith;
     var zip = baseRest(unzip);
-    const zip$1 = zip;
     function baseZipObject(props, values2, assignFunc) {
       var index = -1, length = props.length, valsLength = values2.length, result2 = {};
       while (++index < length) {
@@ -21858,14 +21780,13 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       iteratee2 = typeof iteratee2 == "function" ? (arrays.pop(), iteratee2) : void 0;
       return unzipWith(arrays, iteratee2);
     });
-    const zipWith$1 = zipWith;
     const array = {
       chunk,
       compact,
       concat,
-      difference: difference$1,
-      differenceBy: differenceBy$1,
-      differenceWith: differenceWith$1,
+      difference,
+      differenceBy,
+      differenceWith,
       drop,
       dropRight,
       dropRightWhile,
@@ -21881,18 +21802,18 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       head,
       indexOf: indexOf$1,
       initial,
-      intersection: intersection$1,
-      intersectionBy: intersectionBy$1,
-      intersectionWith: intersectionWith$1,
+      intersection,
+      intersectionBy,
+      intersectionWith,
       join,
       last,
       lastIndexOf,
       nth,
-      pull: pull$1,
+      pull,
       pullAll,
       pullAllBy,
       pullAllWith,
-      pullAt: pullAt$1,
+      pullAt,
       remove: remove$2,
       reverse,
       slice,
@@ -21909,43 +21830,43 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       takeRight,
       takeRightWhile,
       takeWhile,
-      union: union$1,
-      unionBy: unionBy$1,
-      unionWith: unionWith$1,
+      union,
+      unionBy,
+      unionWith,
       uniq,
       uniqBy,
       uniqWith,
       unzip,
       unzipWith,
-      without: without$1,
-      xor: xor$1,
-      xorBy: xorBy$1,
-      xorWith: xorWith$1,
-      zip: zip$1,
+      without,
+      xor,
+      xorBy,
+      xorWith,
+      zip,
       zipObject,
       zipObjectDeep,
-      zipWith: zipWith$1
+      zipWith
     };
     const collection = {
-      countBy: countBy$1,
+      countBy,
       each: forEach,
       eachRight: forEachRight,
       every,
       filter,
-      find: find$1,
-      findLast: findLast$1,
+      find,
+      findLast,
       flatMap,
       flatMapDeep,
       flatMapDepth,
       forEach,
       forEachRight,
-      groupBy: groupBy$1,
+      groupBy,
       includes,
-      invokeMap: invokeMap$1,
-      keyBy: keyBy$1,
+      invokeMap,
+      keyBy,
       map,
       orderBy,
-      partition: partition$1,
+      partition,
       reduce,
       reduceRight,
       reject,
@@ -21954,30 +21875,30 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       shuffle,
       size,
       some,
-      sortBy: sortBy$1
+      sortBy
     };
     const date = {
-      now: now$2
+      now: now$1
     };
     const func = {
       after,
       ary,
       before,
-      bind: bind$1,
-      bindKey: bindKey$1,
+      bind,
+      bindKey,
       curry,
       curryRight,
       debounce: debounce$1,
-      defer: defer$1,
-      delay: delay$2,
+      defer,
+      delay: delay$1,
       flip: flip$3,
       memoize,
       negate,
       once,
-      overArgs: overArgs$1,
-      partial: partial$1,
-      partialRight: partialRight$1,
-      rearg: rearg$1,
+      overArgs,
+      partial,
+      partialRight,
+      rearg,
       rest,
       spread,
       throttle,
@@ -21992,16 +21913,16 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       cloneWith,
       conformsTo,
       eq,
-      gt: gt$3,
-      gte: gte$1,
+      gt: gt$2,
+      gte,
       isArguments,
       isArray,
-      isArrayBuffer: isArrayBuffer$1,
+      isArrayBuffer,
       isArrayLike,
       isArrayLikeObject,
       isBoolean,
-      isBuffer: isBuffer$1,
-      isDate: isDate$1,
+      isBuffer,
+      isDate,
       isElement: isElement$2,
       isEmpty,
       isEqual,
@@ -22011,7 +21932,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       isFunction,
       isInteger,
       isLength,
-      isMap: isMap$1,
+      isMap,
       isMatch,
       isMatchWith,
       isNaN: isNaN$1,
@@ -22022,17 +21943,17 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       isObject: isObject$3,
       isObjectLike,
       isPlainObject: isPlainObject$2,
-      isRegExp: isRegExp$1,
+      isRegExp,
       isSafeInteger,
-      isSet: isSet$1,
+      isSet,
       isString,
       isSymbol,
-      isTypedArray: isTypedArray$1,
+      isTypedArray,
       isUndefined,
       isWeakMap,
       isWeakSet,
-      lt: lt$3,
-      lte: lte$1,
+      lt: lt$2,
+      lte,
       toArray: toArray$3,
       toFinite,
       toInteger,
@@ -22043,19 +21964,19 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       toString: toString$1
     };
     const math = {
-      add: add$1,
-      ceil: ceil$1,
-      divide: divide$1,
-      floor: floor$1,
+      add,
+      ceil,
+      divide,
+      floor,
       max: max$1,
       maxBy,
       mean,
       meanBy,
       min: min$1,
       minBy,
-      multiply: multiply$1,
-      round: round$2,
-      subtract: subtract$1,
+      multiply,
+      round: round$1,
+      subtract,
       sum,
       sumBy
     };
@@ -22065,18 +21986,18 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       random
     };
     const object = {
-      assign: assign$3,
+      assign: assign$2,
       assignIn,
-      assignInWith: extendWith,
-      assignWith: assignWith$1,
-      at: at$3,
+      assignInWith,
+      assignWith,
+      at: at$1,
       create,
-      defaults: defaults$2,
-      defaultsDeep: defaultsDeep$1,
-      entries: toPairs$1,
-      entriesIn: toPairsIn$1,
+      defaults: defaults$1,
+      defaultsDeep,
+      entries: toPairs,
+      entriesIn: toPairsIn,
       extend: assignIn,
-      extendWith,
+      extendWith: assignInWith,
       findKey,
       findLastKey,
       forIn,
@@ -22088,24 +22009,24 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       get,
       has,
       hasIn,
-      invert: invert$1,
-      invertBy: invertBy$1,
-      invoke: invoke$1,
+      invert,
+      invertBy,
+      invoke,
       keys,
       keysIn,
       mapKeys,
       mapValues,
       merge: merge$1,
       mergeWith,
-      omit: omit$1,
+      omit,
       omitBy,
-      pick: pick$1,
+      pick,
       pickBy,
       result,
       set: set$1,
       setWith,
-      toPairs: toPairs$1,
-      toPairsIn: toPairsIn$1,
+      toPairs,
+      toPairsIn,
       transform: transform$3,
       unset,
       update,
@@ -22114,7 +22035,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       valuesIn
     };
     const seq = {
-      at: at$1,
+      at: wrapperAt,
       chain,
       commit: wrapperCommit,
       lodash: lodash$1,
@@ -22130,27 +22051,27 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       wrapperChain
     };
     const string = {
-      camelCase: camelCase$1,
+      camelCase,
       capitalize,
       deburr,
       endsWith,
       escape: escape$1,
       escapeRegExp,
-      kebabCase: kebabCase$1,
-      lowerCase: lowerCase$1,
-      lowerFirst: lowerFirst$1,
+      kebabCase,
+      lowerCase,
+      lowerFirst,
       pad,
       padEnd,
       padStart,
       parseInt: parseInt$1,
       repeat,
       replace,
-      snakeCase: snakeCase$1,
+      snakeCase,
       split,
-      startCase: startCase$1,
+      startCase,
       startsWith,
       template,
-      templateSettings: templateSettings$1,
+      templateSettings,
       toLower,
       toUpper,
       trim,
@@ -22158,35 +22079,35 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       trimStart,
       truncate,
       unescape: unescape$1,
-      upperCase: upperCase$1,
+      upperCase,
       upperFirst,
       words
     };
     const util = {
-      attempt: attempt$1,
-      bindAll: bindAll$1,
+      attempt,
+      bindAll,
       cond,
       conforms,
       constant,
       defaultTo,
-      flow: flow$1,
-      flowRight: flowRight$1,
+      flow,
+      flowRight,
       identity,
       iteratee,
       matches,
       matchesProperty,
-      method: method$1,
-      methodOf: methodOf$1,
+      method,
+      methodOf,
       mixin: mixin$1,
       noop: noop$2,
       nthArg,
-      over: over$1,
-      overEvery: overEvery$1,
-      overSome: overSome$1,
+      over,
+      overEvery,
+      overSome,
       property,
       propertyOf,
-      range: range$1,
-      rangeRight: rangeRight$1,
+      range,
+      rangeRight,
       stubArray,
       stubFalse,
       stubObject,
@@ -22780,23 +22701,23 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
      */
     const lodash = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
-      add: add$1,
+      add,
       after,
       ary,
-      assign: assign$3,
+      assign: assign$2,
       assignIn,
-      assignInWith: extendWith,
-      assignWith: assignWith$1,
-      at: at$3,
-      attempt: attempt$1,
+      assignInWith,
+      assignWith,
+      at: at$1,
+      attempt,
       before,
-      bind: bind$1,
-      bindAll: bindAll$1,
-      bindKey: bindKey$1,
-      camelCase: camelCase$1,
+      bind,
+      bindAll,
+      bindKey,
+      camelCase,
       capitalize,
       castArray,
-      ceil: ceil$1,
+      ceil,
       chain,
       chunk,
       clamp,
@@ -22811,7 +22732,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       conforms,
       conformsTo,
       constant,
-      countBy: countBy$1,
+      countBy,
       create,
       curry,
       curryRight,
@@ -22819,14 +22740,14 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       deburr,
       default: lodash$1,
       defaultTo,
-      defaults: defaults$2,
-      defaultsDeep: defaultsDeep$1,
-      defer: defer$1,
-      delay: delay$2,
-      difference: difference$1,
-      differenceBy: differenceBy$1,
-      differenceWith: differenceWith$1,
-      divide: divide$1,
+      defaults: defaults$1,
+      defaultsDeep,
+      defer,
+      delay: delay$1,
+      difference,
+      differenceBy,
+      differenceWith,
+      divide,
       drop,
       dropRight,
       dropRightWhile,
@@ -22834,20 +22755,20 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       each: forEach,
       eachRight: forEachRight,
       endsWith,
-      entries: toPairs$1,
-      entriesIn: toPairsIn$1,
+      entries: toPairs,
+      entriesIn: toPairsIn,
       eq,
       escape: escape$1,
       escapeRegExp,
       every,
       extend: assignIn,
-      extendWith,
+      extendWith: assignInWith,
       fill,
       filter,
-      find: find$1,
+      find,
       findIndex,
       findKey,
-      findLast: findLast$1,
+      findLast,
       findLastIndex,
       findLastKey,
       first: head,
@@ -22858,9 +22779,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       flattenDeep,
       flattenDepth,
       flip: flip$3,
-      floor: floor$1,
-      flow: flow$1,
-      flowRight: flowRight$1,
+      floor,
+      flow,
+      flowRight,
       forEach,
       forEachRight,
       forIn,
@@ -22871,9 +22792,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       functions,
       functionsIn,
       get,
-      groupBy: groupBy$1,
-      gt: gt$3,
-      gte: gte$1,
+      groupBy,
+      gt: gt$2,
+      gte,
       has,
       hasIn,
       head,
@@ -22882,21 +22803,21 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       includes,
       indexOf: indexOf$1,
       initial,
-      intersection: intersection$1,
-      intersectionBy: intersectionBy$1,
-      intersectionWith: intersectionWith$1,
-      invert: invert$1,
-      invertBy: invertBy$1,
-      invoke: invoke$1,
-      invokeMap: invokeMap$1,
+      intersection,
+      intersectionBy,
+      intersectionWith,
+      invert,
+      invertBy,
+      invoke,
+      invokeMap,
       isArguments,
       isArray,
-      isArrayBuffer: isArrayBuffer$1,
+      isArrayBuffer,
       isArrayLike,
       isArrayLikeObject,
       isBoolean,
-      isBuffer: isBuffer$1,
-      isDate: isDate$1,
+      isBuffer,
+      isDate,
       isElement: isElement$2,
       isEmpty,
       isEqual,
@@ -22906,7 +22827,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       isFunction,
       isInteger,
       isLength,
-      isMap: isMap$1,
+      isMap,
       isMatch,
       isMatchWith,
       isNaN: isNaN$1,
@@ -22917,28 +22838,28 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       isObject: isObject$3,
       isObjectLike,
       isPlainObject: isPlainObject$2,
-      isRegExp: isRegExp$1,
+      isRegExp,
       isSafeInteger,
-      isSet: isSet$1,
+      isSet,
       isString,
       isSymbol,
-      isTypedArray: isTypedArray$1,
+      isTypedArray,
       isUndefined,
       isWeakMap,
       isWeakSet,
       iteratee,
       join,
-      kebabCase: kebabCase$1,
-      keyBy: keyBy$1,
+      kebabCase,
+      keyBy,
       keys,
       keysIn,
       last,
       lastIndexOf,
       lodash: lodash$1,
-      lowerCase: lowerCase$1,
-      lowerFirst: lowerFirst$1,
-      lt: lt$3,
-      lte: lte$1,
+      lowerCase,
+      lowerFirst,
+      lt: lt$2,
+      lte,
       map,
       mapKeys,
       mapValues,
@@ -22951,47 +22872,47 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       memoize,
       merge: merge$1,
       mergeWith,
-      method: method$1,
-      methodOf: methodOf$1,
+      method,
+      methodOf,
       min: min$1,
       minBy,
       mixin: mixin$1,
-      multiply: multiply$1,
+      multiply,
       negate,
       next: wrapperNext,
       noop: noop$2,
-      now: now$2,
+      now: now$1,
       nth,
       nthArg,
-      omit: omit$1,
+      omit,
       omitBy,
       once,
       orderBy,
-      over: over$1,
-      overArgs: overArgs$1,
-      overEvery: overEvery$1,
-      overSome: overSome$1,
+      over,
+      overArgs,
+      overEvery,
+      overSome,
       pad,
       padEnd,
       padStart,
       parseInt: parseInt$1,
-      partial: partial$1,
-      partialRight: partialRight$1,
-      partition: partition$1,
-      pick: pick$1,
+      partial,
+      partialRight,
+      partition,
+      pick,
       pickBy,
       plant: wrapperPlant,
       property,
       propertyOf,
-      pull: pull$1,
+      pull,
       pullAll,
       pullAllBy,
       pullAllWith,
-      pullAt: pullAt$1,
+      pullAt,
       random,
-      range: range$1,
-      rangeRight: rangeRight$1,
-      rearg: rearg$1,
+      range,
+      rangeRight,
+      rearg,
       reduce,
       reduceRight,
       reject,
@@ -23001,7 +22922,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       rest,
       result,
       reverse,
-      round: round$2,
+      round: round$1,
       sample,
       sampleSize,
       set: set$1,
@@ -23009,9 +22930,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       shuffle,
       size,
       slice,
-      snakeCase: snakeCase$1,
+      snakeCase,
       some,
-      sortBy: sortBy$1,
+      sortBy,
       sortedIndex,
       sortedIndexBy,
       sortedIndexOf,
@@ -23022,14 +22943,14 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       sortedUniqBy,
       split,
       spread,
-      startCase: startCase$1,
+      startCase,
       startsWith,
       stubArray,
       stubFalse,
       stubObject,
       stubString,
       stubTrue,
-      subtract: subtract$1,
+      subtract,
       sum,
       sumBy,
       tail,
@@ -23039,7 +22960,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       takeWhile,
       tap,
       template,
-      templateSettings: templateSettings$1,
+      templateSettings,
       throttle,
       thru,
       times,
@@ -23051,8 +22972,8 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       toLength,
       toLower,
       toNumber,
-      toPairs: toPairs$1,
-      toPairsIn: toPairsIn$1,
+      toPairs,
+      toPairsIn,
       toPath: toPath$1,
       toPlainObject,
       toSafeInteger,
@@ -23065,9 +22986,9 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       truncate,
       unary,
       unescape: unescape$1,
-      union: union$1,
-      unionBy: unionBy$1,
-      unionWith: unionWith$1,
+      union,
+      unionBy,
+      unionWith,
       uniq,
       uniqBy,
       uniqWith,
@@ -23077,16 +22998,16 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       unzipWith,
       update,
       updateWith,
-      upperCase: upperCase$1,
+      upperCase,
       upperFirst,
       value: wrapperValue,
       valueOf: wrapperValue,
       values,
       valuesIn,
-      without: without$1,
+      without,
       words,
       wrap: wrap$1,
-      wrapperAt: at$1,
+      wrapperAt,
       wrapperChain,
       wrapperCommit,
       wrapperLodash: lodash$1,
@@ -23095,13 +23016,13 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       wrapperReverse,
       wrapperToIterator,
       wrapperValue,
-      xor: xor$1,
-      xorBy: xorBy$1,
-      xorWith: xorWith$1,
-      zip: zip$1,
+      xor,
+      xorBy,
+      xorWith,
+      zip,
       zipObject,
       zipObjectDeep,
-      zipWith: zipWith$1
+      zipWith
     }, Symbol.toStringTag, { value: "Module" }));
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -23395,10 +23316,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
      */
     const HEX_NUMBERS = new Array(256).fill("").map((_2, index) => ("0" + index.toString(16)).slice(-2));
     function uid() {
-      const r1 = Math.random() * 4294967296 >>> 0;
-      const r2 = Math.random() * 4294967296 >>> 0;
-      const r3 = Math.random() * 4294967296 >>> 0;
-      const r4 = Math.random() * 4294967296 >>> 0;
+      const [r1, r2, r3, r4] = crypto.getRandomValues(new Uint32Array(4));
       return "e" + HEX_NUMBERS[r1 >> 0 & 255] + HEX_NUMBERS[r1 >> 8 & 255] + HEX_NUMBERS[r1 >> 16 & 255] + HEX_NUMBERS[r1 >> 24 & 255] + HEX_NUMBERS[r2 >> 0 & 255] + HEX_NUMBERS[r2 >> 8 & 255] + HEX_NUMBERS[r2 >> 16 & 255] + HEX_NUMBERS[r2 >> 24 & 255] + HEX_NUMBERS[r3 >> 0 & 255] + HEX_NUMBERS[r3 >> 8 & 255] + HEX_NUMBERS[r3 >> 16 & 255] + HEX_NUMBERS[r3 >> 24 & 255] + HEX_NUMBERS[r4 >> 0 & 255] + HEX_NUMBERS[r4 >> 8 & 255] + HEX_NUMBERS[r4 >> 16 & 255] + HEX_NUMBERS[r4 >> 24 & 255];
     }
     /**
@@ -23520,8 +23438,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         documentationMessage
       ];
     }
-    const version = "43.0.0";
-    const releaseDate = new Date(2024, 7, 7);
+    const version = "43.2.0";
+    const releaseDate = new Date(2024, 9, 2);
     /* istanbul ignore next -- @preserve */
     if (globalThis.CKEDITOR_VERSION) {
       throw new CKEditorError("ckeditor-duplicated-modules", null);
@@ -24269,7 +24187,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * Store for the whole configuration.
         */
         __publicField(this, "_config");
-        this._config = {};
+        this._config = /* @__PURE__ */ Object.create(null);
         if (defaultConfigurations) {
           this.define(cloneConfig(defaultConfigurations));
         }
@@ -24329,13 +24247,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         name = parts.pop();
         for (const part of parts) {
           if (!isPlainObject$2(target[part])) {
-            target[part] = {};
+            target[part] = /* @__PURE__ */ Object.create(null);
           }
           target = target[part];
         }
         if (isPlainObject$2(value)) {
           if (!isPlainObject$2(target[name])) {
-            target[name] = {};
+            target[name] = /* @__PURE__ */ Object.create(null);
           }
           target = target[name];
           this._setObjectToTarget(target, value, isDefine);
@@ -24644,6 +24562,27 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         bottom: parseInt(style.borderBottomWidth, 10),
         left: parseInt(style.borderLeftWidth, 10)
       };
+    }
+    /**
+     * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
+     * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+     */
+    function getRangeFromMouseEvent(domEvent) {
+      if (!domEvent.target) {
+        return null;
+      }
+      const domDoc = domEvent.target.ownerDocument;
+      const x2 = domEvent.clientX;
+      const y2 = domEvent.clientY;
+      let domRange = null;
+      if (domDoc.caretRangeFromPoint && domDoc.caretRangeFromPoint(x2, y2)) {
+        domRange = domDoc.caretRangeFromPoint(x2, y2);
+      } else if (domEvent.rangeParent) {
+        domRange = domDoc.createRange();
+        domRange.setStart(domEvent.rangeParent, domEvent.rangeOffset);
+        domRange.collapse(true);
+      }
+      return domRange;
     }
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -25225,12 +25164,17 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
       return true;
     }
-    /**
-     * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
-     * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
-     */
     function isVisible(element) {
-      return !!(element && element.getClientRects && element.getClientRects().length);
+      if (!element) {
+        return false;
+      }
+      if (isText(element)) {
+        return isVisible(element.parentElement);
+      }
+      if (element.getClientRects) {
+        return !!element.getClientRects().length;
+      }
+      return false;
     }
     function getOptimalPosition({ element, target, positions, limiter, fitInViewport, viewportOffsetConfig }) {
       if (isFunction(target)) {
@@ -26457,6 +26401,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         __publicField(this, "_nextEventLoopTimeout", null);
         this.set("isFocused", false);
         this.set("focusedElement", null);
+      }
+      /**
+      * List of registered elements.
+      */
+      get elements() {
+        return Array.from(this._elements.values());
       }
       /**
       * Starts tracking the specified element.
@@ -27958,17 +27908,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param styles Object holding normalized styles.
       */
       getStyleNames(styles) {
-        const expandedStyleNames = Array.from(this._consumables.keys()).filter((name) => {
+        const styleNamesKeysSet = /* @__PURE__ */ new Set();
+        for (const name of this._consumables.keys()) {
           const style = this.getNormalized(name, styles);
-          if (style && typeof style == "object") {
-            return Object.keys(style).length;
+          if (style && (typeof style != "object" || Object.keys(style).length)) {
+            styleNamesKeysSet.add(name);
           }
-          return style;
-        });
-        const styleNamesKeysSet = /* @__PURE__ */ new Set([
-          ...expandedStyleNames,
-          ...Object.keys(styles)
-        ]);
+        }
+        for (const name of Object.keys(styles)) {
+          styleNamesKeysSet.add(name);
+        }
         return Array.from(styleNamesKeysSet);
       }
       /**
@@ -33331,15 +33280,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!domElement) {
           return;
         }
-        const domAttrKeys = Array.from(domElement.attributes).map((attr) => attr.name);
-        const viewAttrKeys = viewElement.getAttributeKeys();
-        for (const key of viewAttrKeys) {
-          this.domConverter.setDomElementAttribute(domElement, key, viewElement.getAttribute(key), viewElement);
-        }
-        for (const key of domAttrKeys) {
+        for (const domAttr of domElement.attributes) {
+          const key = domAttr.name;
           if (!viewElement.hasAttribute(key)) {
             this.domConverter.removeDomElementAttribute(domElement, key);
           }
+        }
+        for (const key of viewElement.getAttributeKeys()) {
+          this.domConverter.setDomElementAttribute(domElement, key, viewElement.getAttribute(key), viewElement);
         }
       }
       /**
@@ -33921,7 +33869,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (viewElement) {
           this._domToViewMapping.delete(domElement);
           this._viewToDomMapping.delete(viewElement);
-          for (const child of Array.from(domElement.children)) {
+          for (const child of domElement.children) {
             this.unbindDomElement(child);
           }
         }
@@ -35212,6 +35160,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * Default value is `false`.
         */
         __publicField(this, "useCapture", false);
+        /**
+        * If set to `true`, indicates that the function specified by listener will never call `preventDefault()`.
+        * Default value is `false`.
+        */
+        __publicField(this, "usePassive", false);
       }
       /**
       * @inheritDoc
@@ -35226,7 +35179,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
               this.onDomEvent(domEvent);
             }
           }, {
-            useCapture: this.useCapture
+            useCapture: this.useCapture,
+            usePassive: this.usePassive
           });
         });
       }
@@ -35716,7 +35670,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           priority: "highest",
           useCapture: true
         });
-        this.listenTo(domDocument, "selectionchange", (evt, domEvent) => {
+        this.listenTo(domDocument, "selectionchange", () => {
           if (this.document.isComposing && !env.isAndroid) {
             return;
           }
@@ -36198,7 +36152,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (name2 === "class") {
             this._writer.addClass(value.split(" "), viewRoot);
           } else {
-            this._writer.setAttribute(name2, value, viewRoot);
+            if (!viewRoot.hasAttribute(name2)) {
+              this._writer.setAttribute(name2, value, viewRoot);
+            }
           }
         }
         this._initialDomRootAttributes.set(domRoot, initialDomRootAttributes);
@@ -36925,7 +36881,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       getNodeStartOffset(node) {
         const index = this.getNodeIndex(node);
-        return index === null ? null : this._nodes.slice(0, index).reduce((sum2, node2) => sum2 + node2.offsetSize, 0);
+        if (index === null) {
+          return null;
+        }
+        let sum2 = 0;
+        for (let i2 = 0; i2 < index; i2++) {
+          sum2 += this._nodes[i2].offsetSize;
+        }
+        return sum2;
       }
       /**
       * Converts index to offset in node list.
@@ -39255,13 +39218,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         });
         const refIndex = ranges.indexOf(ref2);
         const result2 = new this(ref2.start, ref2.end);
-        if (refIndex > 0) {
-          for (let i2 = refIndex - 1; true; i2++) {
-            if (ranges[i2].end.isEqual(result2.start)) {
-              result2.start = Position._createAt(ranges[i2].start);
-            } else {
-              break;
-            }
+        for (let i2 = refIndex - 1; i2 >= 0; i2--) {
+          if (ranges[i2].end.isEqual(result2.start)) {
+            result2.start = Position._createAt(ranges[i2].start);
+          } else {
+            break;
           }
         }
         for (let i2 = refIndex + 1; i2 < ranges.length; i2++) {
@@ -45225,7 +45186,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         /**
         * A dictionary containing attribute properties.
         */
-        __publicField(this, "_attributeProperties", {});
+        __publicField(this, "_attributeProperties", /* @__PURE__ */ Object.create(null));
         /**
         * Stores additional callbacks registered for schema items, which are evaluated when {@link ~Schema#checkChild} is called.
         *
@@ -45788,7 +45749,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param attributeName A name of the attribute.
       */
       getAttributeProperties(attributeName) {
-        return this._attributeProperties[attributeName] || {};
+        return this._attributeProperties[attributeName] || /* @__PURE__ */ Object.create(null);
       }
       /**
       * Returns the lowest {@link module:engine/model/schema~Schema#isLimit limit element} containing the entire
@@ -46953,7 +46914,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * the provided data.
       */
       _toDom(data) {
-        if (!data.match(/<(?:html|body|head|meta)(?:\s[^>]*)?>/i)) {
+        if (!/<(?:html|body|head|meta)(?:\s[^>]*)?>/i.test(data.trim().slice(0, 1e4))) {
           data = `<body>${data}</body>`;
         }
         const document2 = this.domParser.parseFromString(data, "text/html");
@@ -49374,6 +49335,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         operationsA.splice(i2, 1, ...newOpsA);
         operationsB.splice(indexB, 1, ...newOpsB);
       }
+      handlePartialMarkerOperations(operationsA);
+      handlePartialMarkerOperations(operationsB);
       updateBaseVersions(operationsA, data.nextBaseVersionB);
       updateBaseVersions(operationsB, data.nextBaseVersionA);
       return {
@@ -49497,17 +49460,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (!markerRange) {
             return;
           }
-          if (opB instanceof MoveOperation) {
-            const movedRange = Range._createFromPositionAndShift(opB.sourcePosition, opB.howMany);
-            const affectedLeft = movedRange.containsPosition(markerRange.start) || movedRange.start.isEqual(markerRange.start);
-            const affectedRight = movedRange.containsPosition(markerRange.end) || movedRange.end.isEqual(markerRange.end);
-            if ((affectedLeft || affectedRight) && !movedRange.containsRange(markerRange)) {
-              this._setRelation(opA, opB, {
-                side: affectedLeft ? "left" : "right",
-                path: affectedLeft ? markerRange.start.path.slice() : markerRange.end.path.slice()
-              });
-            }
-          } else if (opB instanceof MergeOperation) {
+          if (opB instanceof MergeOperation) {
             const wasInLeftElement = markerRange.start.isEqual(opB.targetPosition);
             const wasStartBeforeMergedElement = markerRange.start.isEqual(opB.deletionPosition);
             const wasEndBeforeMergedElement = markerRange.end.isEqual(opB.deletionPosition);
@@ -49597,6 +49550,36 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     function updateBaseVersions(operations2, baseVersion) {
       for (const operation of operations2) {
         operation.baseVersion = baseVersion++;
+      }
+    }
+    function handlePartialMarkerOperations(operations2) {
+      const markerOps = /* @__PURE__ */ new Map();
+      for (let i2 = 0; i2 < operations2.length; i2++) {
+        const op = operations2[i2];
+        if (!(op instanceof MarkerOperation)) {
+          continue;
+        }
+        if (op.baseVersion !== -1) {
+          markerOps.set(op.name, {
+            op,
+            ranges: op.newRange ? [
+              op.newRange
+            ] : []
+          });
+        } else {
+          if (op.newRange) {
+            markerOps.get(op.name).ranges.push(op.newRange);
+          }
+          operations2.splice(i2, 1);
+          i2--;
+        }
+      }
+      for (const { op, ranges } of markerOps.values()) {
+        if (ranges.length) {
+          op.newRange = Range._createFromRanges(ranges);
+        } else {
+          op.newRange = null;
+        }
       }
     }
     setTransformation(AttributeOperation, AttributeOperation, (a2, b2, context) => {
@@ -49797,32 +49780,25 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         a2
       ];
     });
-    setTransformation(MarkerOperation, MoveOperation, (a2, b2, context) => {
+    setTransformation(MarkerOperation, MoveOperation, (a2, b2) => {
+      const result2 = [
+        a2
+      ];
       if (a2.oldRange) {
         a2.oldRange = Range._createFromRanges(a2.oldRange._getTransformedByMoveOperation(b2));
       }
       if (a2.newRange) {
-        if (context.abRelation) {
-          const aNewRange = Range._createFromRanges(a2.newRange._getTransformedByMoveOperation(b2));
-          if (context.abRelation.side == "left" && b2.targetPosition.isEqual(a2.newRange.start)) {
-            a2.newRange.end = aNewRange.end;
-            a2.newRange.start.path = context.abRelation.path;
-            return [
-              a2
-            ];
-          } else if (context.abRelation.side == "right" && b2.targetPosition.isEqual(a2.newRange.end)) {
-            a2.newRange.start = aNewRange.start;
-            a2.newRange.end.path = context.abRelation.path;
-            return [
-              a2
-            ];
-          }
+        const ranges = a2.newRange._getTransformedByMoveOperation(b2);
+        a2.newRange = ranges[0];
+        for (let i2 = 1; i2 < ranges.length; i2++) {
+          const op = a2.clone();
+          op.oldRange = null;
+          op.newRange = ranges[i2];
+          op.baseVersion = -1;
+          result2.push(op);
         }
-        a2.newRange = Range._createFromRanges(a2.newRange._getTransformedByMoveOperation(b2));
       }
-      return [
-        a2
-      ];
+      return result2;
     });
     setTransformation(MarkerOperation, SplitOperation, (a2, b2, context) => {
       if (a2.oldRange) {
@@ -49835,6 +49811,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             a2.newRange.start = Position._createAt(b2.insertionPosition);
           } else if (a2.newRange.start.isEqual(b2.splitPosition) && !context.abRelation.wasInLeftElement) {
             a2.newRange.start = Position._createAt(b2.moveTargetPosition);
+          } else {
+            a2.newRange.start = aNewRange.start;
           }
           if (a2.newRange.end.isEqual(b2.splitPosition) && context.abRelation.wasInRightElement) {
             a2.newRange.end = Position._createAt(b2.moveTargetPosition);
@@ -49911,7 +49889,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     });
     setTransformation(MergeOperation, MoveOperation, (a2, b2, context) => {
       const removedRange = Range._createFromPositionAndShift(b2.sourcePosition, b2.howMany);
-      if (b2.type == "remove" && !context.bWasUndone && !context.forceWeakRemove) {
+      if (b2.type == "remove" && !context.bWasUndone) {
         if (a2.deletionPosition.hasSameParentAs(b2.sourcePosition) && removedRange.containsPosition(a2.sourcePosition)) {
           return [
             new NoOperation(0)
@@ -49955,9 +49933,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }
       }
       if (a2.targetPosition.isEqual(b2.splitPosition)) {
-        const mergeInside = b2.howMany != 0;
         const mergeSplittingElement = b2.graveyardPosition && a2.deletionPosition.isEqual(b2.graveyardPosition);
-        if (mergeInside || mergeSplittingElement || context.abRelation == "mergeTargetNotMoved") {
+        if (mergeSplittingElement || context.abRelation == "mergeTargetNotMoved") {
           a2.sourcePosition = a2.sourcePosition._getTransformedBySplitOperation(b2);
           return [
             a2
@@ -50133,12 +50110,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             const results = [];
             let gyMoveSource = b2.graveyardPosition.clone();
             let splitNodesMoveSource = b2.targetPosition._getTransformedByMergeOperation(b2);
+            const aTarget = a2.targetPosition.getTransformedByOperation(b2);
             if (a2.howMany > 1) {
-              results.push(new MoveOperation(a2.sourcePosition, a2.howMany - 1, a2.targetPosition, 0));
-              gyMoveSource = gyMoveSource._getTransformedByMove(a2.sourcePosition, a2.targetPosition, a2.howMany - 1);
-              splitNodesMoveSource = splitNodesMoveSource._getTransformedByMove(a2.sourcePosition, a2.targetPosition, a2.howMany - 1);
+              results.push(new MoveOperation(a2.sourcePosition, a2.howMany - 1, aTarget, 0));
+              gyMoveSource = gyMoveSource._getTransformedByMove(a2.sourcePosition, aTarget, a2.howMany - 1);
+              splitNodesMoveSource = splitNodesMoveSource._getTransformedByMove(a2.sourcePosition, aTarget, a2.howMany - 1);
             }
-            const gyMoveTarget = b2.deletionPosition._getCombined(a2.sourcePosition, a2.targetPosition);
+            const gyMoveTarget = b2.deletionPosition._getCombined(a2.sourcePosition, aTarget);
             const gyMove = new MoveOperation(gyMoveSource, 1, gyMoveTarget, 0);
             const splitNodesMoveTargetPath = gyMove.getMovedRangeStart().path.slice();
             splitNodesMoveTargetPath.push(0);
@@ -51635,7 +51613,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           offset2 = change.offset;
           oldChildrenHandled += change.howMany;
         } else {
-          diff2.push(..."a".repeat(change.howMany).split(""));
+          if (change.howMany > 1500) {
+            for (let i2 = 0; i2 < change.howMany; i2++) {
+              diff2.push("a");
+            }
+          } else {
+            diff2.push(..."a".repeat(change.howMany).split(""));
+          }
           offset2 = change.offset + change.howMany;
           oldChildrenHandled += change.howMany;
         }
@@ -56021,7 +56005,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (Editor2) {
           this._creator = (elementOrData, config2) => Editor2.create(elementOrData, config2);
         }
-        this._destructor = (editor) => editor.destroy();
+        this._destructor = (editor2) => editor2.destroy();
       }
       /**
       * The current editor instance.
@@ -56129,10 +56113,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           this._config = this._cloneEditorConfiguration(config2) || {};
           this._config.context = context;
           return this._creator(elementOrData, this._config);
-        }).then((editor) => {
-          this._editor = editor;
-          editor.model.document.on("change:data", this._throttledSave);
-          this._lastDocumentVersion = editor.model.document.version;
+        }).then((editor2) => {
+          this._editor = editor2;
+          editor2.model.document.on("change:data", this._throttledSave);
+          this._lastDocumentVersion = editor2.model.document.version;
           this._data = this._getData();
           if (!this._initUsingData) {
             this._editables = this._getEditables();
@@ -56164,10 +56148,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return Promise.resolve().then(() => {
           this._stopErrorHandling();
           this._throttledSave.cancel();
-          const editor = this._editor;
+          const editor2 = this._editor;
           this._editor = null;
-          editor.model.document.off("change:data", this._throttledSave);
-          return this._destructor(editor);
+          editor2.model.document.off("change:data", this._throttledSave);
+          return this._destructor(editor2);
         });
       }
       /**
@@ -56196,9 +56180,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Gets all data that is required to reinitialize editor instance.
       */
       _getData() {
-        const editor = this._editor;
-        const roots = editor.model.document.roots.filter((root2) => root2.isAttached() && root2.rootName != "$graveyard");
-        const { plugins } = editor;
+        const editor2 = this._editor;
+        const roots = editor2.model.document.roots.filter((root2) => root2.isAttached() && root2.rootName != "$graveyard");
+        const { plugins } = editor2;
         const commentsRepository = plugins.has("CommentsRepository") && plugins.get("CommentsRepository");
         const trackChanges = plugins.has("TrackChanges") && plugins.get("TrackChanges");
         const data = {
@@ -56214,7 +56198,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             isLoaded: root2._isLoaded
           };
         });
-        for (const marker of editor.model.markers) {
+        for (const marker of editor2.model.markers) {
           if (!marker._affectsData) {
             continue;
           }
@@ -56275,11 +56259,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
     }
     class EditorWatchdogInitPlugin {
-      constructor(editor) {
+      constructor(editor2) {
         __publicField(this, "editor");
         __publicField(this, "_data");
-        this.editor = editor;
-        this._data = editor.config.get("_watchdogInitialData");
+        this.editor = editor2;
+        this._data = editor2.config.get("_watchdogInitialData");
       }
       /**
       * @inheritDoc
@@ -56318,11 +56302,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Restores the editor by setting the document data, roots attributes and markers.
       */
       _restoreEditorData(writer) {
-        const editor = this.editor;
+        const editor2 = this.editor;
         Object.entries(this._data.roots).forEach(([rootName, { content, attributes }]) => {
           const parsedNodes = JSON.parse(content);
           const parsedAttributes = JSON.parse(attributes);
-          const rootElement = editor.model.document.getRoot(rootName);
+          const rootElement = editor2.model.document.getRoot(rootName);
           for (const [key, value] of parsedAttributes) {
             writer.setAttribute(key, value, rootElement);
           }
@@ -56332,7 +56316,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
         });
         Object.entries(this._data.markers).forEach(([markerName, markerOptions]) => {
-          const { document: document2 } = editor.model;
+          const { document: document2 } = editor2.model;
           const { rangeJSON: { start: start2, end: end2 }, ...options } = markerOptions;
           const root2 = document2.getRoot(start2.root);
           const startPosition = writer.createPositionFromPath(root2, start2.path, start2.stickiness);
@@ -56774,7 +56758,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
+      constructor(editor2) {
         super();
         /**
         * The editor instance.
@@ -56792,7 +56776,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * Holds identifiers for {@link #forceDisabled} mechanism.
         */
         __publicField(this, "_disableStack", /* @__PURE__ */ new Set());
-        this.editor = editor;
+        this.editor = editor2;
         this.set("isEnabled", true);
       }
       /**
@@ -56881,7 +56865,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       *
       * @param editor The editor on which this command will be used.
       */
-      constructor(editor) {
+      constructor(editor2) {
         super();
         /**
         * The editor on which this command will be used.
@@ -56908,7 +56892,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * Holds identifiers for {@link #forceDisabled} mechanism.
         */
         __publicField(this, "_disableStack");
-        this.editor = editor;
+        this.editor = editor2;
         this.set("value", void 0);
         this.set("isEnabled", false);
         this._affectsData = true;
@@ -56918,17 +56902,17 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this.listenTo(this.editor.model.document, "change", () => {
           this.refresh();
         });
-        this.listenTo(editor, "change:isReadOnly", () => {
+        this.listenTo(editor2, "change:isReadOnly", () => {
           this.refresh();
         });
         this.on("set:isEnabled", (evt) => {
           if (!this.affectsData) {
             return;
           }
-          const selection = editor.model.document.selection;
+          const selection = editor2.model.document.selection;
           const selectionInGraveyard = selection.getFirstPosition().root.rootName == "$graveyard";
-          const canEditAtSelection = !selectionInGraveyard && editor.model.canEditAt(selection);
-          if (editor.isReadOnly || this._isEnabledBasedOnSelection && !canEditAtSelection) {
+          const canEditAtSelection = !selectionInGraveyard && editor2.model.canEditAt(selection);
+          if (editor2.isReadOnly || this._isEnabledBasedOnSelection && !canEditAtSelection) {
             evt.return = false;
             evt.stop();
           }
@@ -57468,7 +57452,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @returns A promise that resolves once the context instance is fully destroyed.
       */
       destroy() {
-        return Promise.all(Array.from(this.editors, (editor) => editor.destroy())).then(() => this.plugins.destroy());
+        return Promise.all(Array.from(this.editors, (editor2) => editor2.destroy())).then(() => this.plugins.destroy());
       }
       /**
       * Adds a reference to the editor which is used with this context.
@@ -57481,13 +57465,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @internal
       * @param isContextOwner Stores the given editor as a context owner.
       */
-      _addEditor(editor, isContextOwner) {
+      _addEditor(editor2, isContextOwner) {
         if (this._contextOwner) {
           throw new CKEditorError("context-addeditor-private-context");
         }
-        this.editors.add(editor);
+        this.editors.add(editor2);
         if (isContextOwner) {
-          this._contextOwner = editor;
+          this._contextOwner = editor2;
         }
       }
       /**
@@ -57499,11 +57483,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @internal
       * @return A promise that resolves once the editor is removed from the context or when the context was destroyed.
       */
-      _removeEditor(editor) {
-        if (this.editors.has(editor)) {
-          this.editors.remove(editor);
+      _removeEditor(editor2) {
+        if (this.editors.has(editor2)) {
+          this.editors.remove(editor2);
         }
-        if (this._contextOwner === editor) {
+        if (this._contextOwner === editor2) {
           return this.destroy();
         }
         return Promise.resolve();
@@ -57724,13 +57708,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * Creates an instance of the keystroke handler.
       */
-      constructor(editor) {
+      constructor(editor2) {
         super();
         /**
         * The editor instance.
         */
         __publicField(this, "editor");
-        this.editor = editor;
+        this.editor = editor2;
       }
       /**
       * Registers a handler for the specified keystroke.
@@ -57766,7 +57750,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
+      constructor(editor2) {
         /**
         * Stores information about keystrokes brought by editor features for the users to interact with the editor, mainly
         * keystroke combinations and their accessible labels.
@@ -57789,9 +57773,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * The editor instance.
         */
         __publicField(this, "_editor");
-        this._editor = editor;
-        const isMenuBarVisible = editor.config.get("menuBar.isVisible");
-        const t2 = editor.locale.t;
+        this._editor = editor2;
+        const isMenuBarVisible = editor2.config.get("menuBar.isVisible");
+        const t2 = editor2.locale.t;
         this.addKeystrokeInfoCategory({
           id: DEFAULT_CATEGORY_ID,
           label: t2("Content editing keystrokes"),
@@ -58200,6 +58184,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * A set of lock IDs for the {@link #isReadOnly} getter.
         */
         __publicField(this, "_readOnlyLocks");
+        if ("sanitizeHtml" in config2) {
+          throw new CKEditorError("editor-config-sanitizehtml-not-supported");
+        }
         const constructor = this.constructor;
         const { translations: defaultTranslations, ...defaultConfig } = constructor.defaultConfig || {};
         const { translations = defaultTranslations, ...rest2 } = config2;
@@ -58588,15 +58575,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     * Exposed as static editor field for easier access in editor builds.
     */
     __publicField(Editor, "ContextWatchdog", ContextWatchdog);
-    function attachToForm(editor) {
-      if (!isFunction(editor.updateSourceElement)) {
-        throw new CKEditorError("attachtoform-missing-elementapi-interface", editor);
+    function attachToForm(editor2) {
+      if (!isFunction(editor2.updateSourceElement)) {
+        throw new CKEditorError("attachtoform-missing-elementapi-interface", editor2);
       }
-      const sourceElement = editor.sourceElement;
+      const sourceElement = editor2.sourceElement;
       if (isTextArea(sourceElement) && sourceElement.form) {
         let originalSubmit;
         const form = sourceElement.form;
-        const onSubmit = () => editor.updateSourceElement();
+        const onSubmit = () => editor2.updateSourceElement();
         if (isFunction(form.submit)) {
           originalSubmit = form.submit;
           form.submit = () => {
@@ -58605,7 +58592,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           };
         }
         form.addEventListener("submit", onSubmit);
-        editor.on("destroy", () => {
+        editor2.on("destroy", () => {
           form.removeEventListener("submit", onSubmit);
           if (originalSubmit) {
             form.submit = originalSubmit;
@@ -61133,7 +61120,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
      * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
      */
-    function clickOutsideHandler({ emitter, activator, callback, contextElements }) {
+    function clickOutsideHandler({ emitter, activator, callback, contextElements, listenerOptions }) {
       emitter.listenTo(document, "mousedown", (evt, domEvt) => {
         if (!activator()) {
           return;
@@ -61146,7 +61133,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
         }
         callback();
-      });
+      }, listenerOptions);
     }
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -62630,8 +62617,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         /**
         * The currently visible dialog view instance.
         */
@@ -62640,7 +62627,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * A configurable callback called when the dialog is hidden.
         */
         __publicField(this, "_onHide");
-        const t2 = editor.t;
+        const t2 = editor2.t;
         this._initShowHideListeners();
         this._initFocusToggler();
         this._initMultiRootIntegration();
@@ -62648,7 +62635,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           id: null,
           isOpen: false
         });
-        editor.accessibility.addKeystrokeInfos({
+        editor2.accessibility.addKeystrokeInfos({
           categoryId: "navigation",
           keystrokes: [
             {
@@ -62703,13 +62690,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Initiates keystroke handler for toggling the focus between the editor and the dialog view.
       */
       _initFocusToggler() {
-        const editor = this.editor;
-        editor.keystrokes.set("Ctrl+F6", (data, cancel2) => {
+        const editor2 = this.editor;
+        editor2.keystrokes.set("Ctrl+F6", (data, cancel2) => {
           if (!this.isOpen || this.view.isModal) {
             return;
           }
           if (this.view.focusTracker.isFocused) {
-            editor.editing.view.focus();
+            editor2.editing.view.focus();
           } else {
             this.view.focus();
           }
@@ -62824,22 +62811,21 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Handles creating the {@link module:ui/dialog/dialogview~DialogView} instance and making it visible.
       */
       _show({ id, icon, title, hasCloseButton = true, content, actionButtons, className, isModal, position, onHide }) {
-        const editor = this.editor;
-        this.view = new DialogView(editor.locale, {
+        const editor2 = this.editor;
+        this.view = new DialogView(editor2.locale, {
           getCurrentDomRoot: () => {
-            return editor.editing.view.getDomRoot(editor.model.document.selection.anchor.root.rootName);
+            return editor2.editing.view.getDomRoot(editor2.model.document.selection.anchor.root.rootName);
           },
           getViewportOffset: () => {
-            return editor.ui.viewportOffset;
+            return editor2.ui.viewportOffset;
           }
         });
         const view = this.view;
         view.on("close", () => {
           this.hide();
         });
-        editor.ui.view.body.add(view);
-        editor.ui.focusTracker.add(view.element);
-        editor.keystrokes.listenTo(view.element);
+        editor2.ui.view.body.add(view);
+        editor2.keystrokes.listenTo(view.element);
         if (!position) {
           position = isModal ? DialogViewPosition.SCREEN_CENTER : DialogViewPosition.EDITOR_CENTER;
         }
@@ -62880,16 +62866,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!this.view) {
           return;
         }
-        const editor = this.editor;
+        const editor2 = this.editor;
         const view = this.view;
         if (view.contentView) {
           view.contentView.reset();
         }
-        editor.ui.view.body.remove(view);
-        editor.ui.focusTracker.remove(view.element);
-        editor.keystrokes.stopListening(view.element);
+        editor2.ui.view.body.remove(view);
+        editor2.ui.focusTracker.remove(view.element);
+        editor2.keystrokes.stopListening(view.element);
         view.destroy();
-        editor.editing.view.focus();
+        editor2.editing.view.focus();
         this.id = null;
         this.isOpen = false;
         _Dialog._visibleDialogPlugin = null;
@@ -63207,9 +63193,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const t2 = editor.locale.t;
-        editor.ui.componentFactory.add("accessibilityHelp", () => {
+        const editor2 = this.editor;
+        const t2 = editor2.locale.t;
+        editor2.ui.componentFactory.add("accessibilityHelp", () => {
           const button = this._createButton(ButtonView);
           button.set({
             tooltip: true,
@@ -63218,12 +63204,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           });
           return button;
         });
-        editor.ui.componentFactory.add("menuBar:accessibilityHelp", () => {
+        editor2.ui.componentFactory.add("menuBar:accessibilityHelp", () => {
           const button = this._createButton(MenuBarMenuListItemButtonView);
           button.label = t2("Accessibility");
           return button;
         });
-        editor.keystrokes.set("Alt+0", (evt, cancel2) => {
+        editor2.keystrokes.set("Alt+0", (evt, cancel2) => {
           this._toggleDialog();
           cancel2();
         });
@@ -63233,9 +63219,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Creates a button to show accessibility help dialog, for use either in toolbar or in menu bar.
       */
       _createButton(ButtonClass) {
-        const editor = this.editor;
-        const dialog = editor.plugins.get("Dialog");
-        const locale = editor.locale;
+        const editor2 = this.editor;
+        const dialog = editor2.plugins.get("Dialog");
+        const locale = editor2.locale;
         const view = new ButtonClass(locale);
         view.set({
           keystroke: "Alt+0",
@@ -63251,17 +63237,17 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * to discover the availability of the Accessibility help dialog.
       */
       _setupRootLabels() {
-        const editor = this.editor;
-        const editingView = editor.editing.view;
-        const t2 = editor.t;
-        editor.ui.on("ready", () => {
+        const editor2 = this.editor;
+        const editingView = editor2.editing.view;
+        const t2 = editor2.t;
+        editor2.ui.on("ready", () => {
           editingView.change((writer) => {
             for (const root2 of editingView.document.roots) {
               addAriaLabelTextToRoot(writer, root2);
             }
           });
-          editor.on("addRoot", (evt, modelRoot) => {
-            const viewRoot = editor.editing.view.document.getRoot(modelRoot.rootName);
+          editor2.on("addRoot", (evt, modelRoot) => {
+            const viewRoot = editor2.editing.view.document.getRoot(modelRoot.rootName);
             editingView.change((writer) => addAriaLabelTextToRoot(writer, viewRoot));
           }, {
             priority: "low"
@@ -63269,9 +63255,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         });
         function addAriaLabelTextToRoot(writer, viewRoot) {
           const currentAriaLabel = viewRoot.getAttribute("aria-label");
-          const newAriaLabel = `${currentAriaLabel}. ${t2("Press %0 for help.", [
-            getEnvKeystrokeText("Alt+0")
-          ])}`;
+          const newAriaLabel = [
+            currentAriaLabel,
+            t2("Press %0 for help.", [
+              getEnvKeystrokeText("Alt+0")
+            ])
+          ].filter((segment) => segment).join(". ");
           writer.setAttribute("aria-label", newAriaLabel, viewRoot);
         }
       }
@@ -63279,11 +63268,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Shows the accessibility help dialog. Also, creates {@link #contentView} on demand.
       */
       _toggleDialog() {
-        const editor = this.editor;
-        const dialog = editor.plugins.get("Dialog");
-        const t2 = editor.locale.t;
+        const editor2 = this.editor;
+        const dialog = editor2.plugins.get("Dialog");
+        const t2 = editor2.locale.t;
         if (!this.contentView) {
-          this.contentView = new AccessibilityHelpContentView(editor.locale, editor.accessibility.keystrokeInfos);
+          this.contentView = new AccessibilityHelpContentView(editor2.locale, editor2.accessibility.keystrokeInfos);
         }
         if (dialog.id === "accessibilityHelp") {
           dialog.hide();
@@ -63901,9 +63890,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * A child toolbar of the dropdown located in the
         * {@link module:ui/dropdown/dropdownview~DropdownView#panelView panel}.
         *
-        * **Note**: Only supported when dropdown has list view added using {@link module:ui/dropdown/utils~addToolbarToDropdown}.
+        * **Note**: Only supported when dropdown has a toolbar added using {@link module:ui/dropdown/utils~addToolbarToDropdown}.
         */
         __publicField(this, "toolbarView");
+        /**
+        * A child menu component of the dropdown located
+        * in its {@link module:ui/dropdown/dropdownview~DropdownView#panelView panel}.
+        *
+        * **Note**: Only supported when dropdown has a menu added using {@link module:ui/dropdown/utils~addMenuToDropdown}.
+        */
+        __publicField(this, "menuView");
         const bind2 = this.bindTemplate;
         this.buttonView = buttonView;
         this.panelView = panelView;
@@ -64255,736 +64251,6 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return arrowView;
       }
     }
-    class ToolbarSeparatorView extends View {
-      /**
-      * @inheritDoc
-      */
-      constructor(locale) {
-        super(locale);
-        this.setTemplate({
-          tag: "span",
-          attributes: {
-            class: [
-              "ck",
-              "ck-toolbar__separator"
-            ]
-          }
-        });
-      }
-    }
-    class ToolbarLineBreakView extends View {
-      /**
-      * @inheritDoc
-      */
-      constructor(locale) {
-        super(locale);
-        this.setTemplate({
-          tag: "span",
-          attributes: {
-            class: [
-              "ck",
-              "ck-toolbar__line-break"
-            ]
-          }
-        });
-      }
-    }
-    /**
-     * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
-     * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
-     */
-    function preventDefault(view) {
-      return view.bindTemplate.to((evt) => {
-        if (evt.target === view.element) {
-          evt.preventDefault();
-        }
-      });
-    }
-    /**
-     * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
-     * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
-     */
-    function normalizeToolbarConfig(config2) {
-      if (Array.isArray(config2)) {
-        return {
-          items: config2,
-          removeItems: []
-        };
-      }
-      const predefinedConfigOptions = {
-        items: [],
-        removeItems: []
-      };
-      if (!config2) {
-        return predefinedConfigOptions;
-      }
-      return {
-        ...predefinedConfigOptions,
-        ...config2
-      };
-    }
-    const NESTED_TOOLBAR_ICONS = /* @__PURE__ */ (() => ({
-      alignLeft: icons.alignLeft,
-      bold: icons.bold,
-      importExport: icons.importExport,
-      paragraph: icons.paragraph,
-      plus: icons.plus,
-      text: icons.text,
-      threeVerticalDots: icons.threeVerticalDots,
-      pilcrow: icons.pilcrow,
-      dragIndicator: icons.dragIndicator
-    }))();
-    class ToolbarView extends View {
-      /**
-      * Creates an instance of the {@link module:ui/toolbar/toolbarview~ToolbarView} class.
-      *
-      * Also see {@link #render}.
-      *
-      * @param locale The localization services instance.
-      * @param options Configuration options of the toolbar.
-      */
-      constructor(locale, options) {
-        super(locale);
-        /**
-        * A reference to the options object passed to the constructor.
-        */
-        __publicField(this, "options");
-        /**
-        * A collection of toolbar items (buttons, dropdowns, etc.).
-        */
-        __publicField(this, "items");
-        /**
-        * Tracks information about the DOM focus in the toolbar.
-        */
-        __publicField(this, "focusTracker");
-        /**
-        * An instance of the {@link module:utils/keystrokehandler~KeystrokeHandler}
-        * to handle keyboard navigation in the toolbar.
-        */
-        __publicField(this, "keystrokes");
-        /**
-        * A (child) view containing {@link #items toolbar items}.
-        */
-        __publicField(this, "itemsView");
-        /**
-        * A top–level collection aggregating building blocks of the toolbar.
-        *
-        *	┌───────────────── ToolbarView ─────────────────┐
-        *	| ┌──────────────── #children ────────────────┐ |
-        *	| |   ┌──────────── #itemsView ───────────┐   | |
-        *	| |   | [ item1 ] [ item2 ] ... [ itemN ] |   | |
-        *	| |   └──────────────────────────────────-┘   | |
-        *	| └───────────────────────────────────────────┘ |
-        *	└───────────────────────────────────────────────┘
-        *
-        * By default, it contains the {@link #itemsView} but it can be extended with additional
-        * UI elements when necessary.
-        */
-        __publicField(this, "children");
-        /**
-        * A collection of {@link #items} that take part in the focus cycling
-        * (i.e. navigation using the keyboard). Usually, it contains a subset of {@link #items} with
-        * some optional UI elements that also belong to the toolbar and should be focusable
-        * by the user.
-        */
-        __publicField(this, "focusables");
-        /**
-        * Helps cycling over {@link #focusables focusable items} in the toolbar.
-        */
-        __publicField(this, "_focusCycler");
-        /**
-        * An instance of the active toolbar behavior that shapes its look and functionality.
-        *
-        * See {@link module:ui/toolbar/toolbarview~ToolbarBehavior} to learn more.
-        */
-        __publicField(this, "_behavior");
-        const bind2 = this.bindTemplate;
-        const t2 = this.t;
-        this.options = options || {};
-        this.set("ariaLabel", t2("Editor toolbar"));
-        this.set("maxWidth", "auto");
-        this.items = this.createCollection();
-        this.focusTracker = new FocusTracker();
-        this.keystrokes = new KeystrokeHandler();
-        this.set("class", void 0);
-        this.set("isCompact", false);
-        this.itemsView = new ItemsView(locale);
-        this.children = this.createCollection();
-        this.children.add(this.itemsView);
-        this.focusables = this.createCollection();
-        const isRtl = locale.uiLanguageDirection === "rtl";
-        this._focusCycler = new FocusCycler({
-          focusables: this.focusables,
-          focusTracker: this.focusTracker,
-          keystrokeHandler: this.keystrokes,
-          actions: {
-            // Navigate toolbar items backwards using the arrow[left,up] keys.
-            focusPrevious: [
-              isRtl ? "arrowright" : "arrowleft",
-              "arrowup"
-            ],
-            // Navigate toolbar items forwards using the arrow[right,down] keys.
-            focusNext: [
-              isRtl ? "arrowleft" : "arrowright",
-              "arrowdown"
-            ]
-          }
-        });
-        const classes = [
-          "ck",
-          "ck-toolbar",
-          bind2.to("class"),
-          bind2.if("isCompact", "ck-toolbar_compact")
-        ];
-        if (this.options.shouldGroupWhenFull && this.options.isFloating) {
-          classes.push("ck-toolbar_floating");
-        }
-        this.setTemplate({
-          tag: "div",
-          attributes: {
-            class: classes,
-            role: "toolbar",
-            "aria-label": bind2.to("ariaLabel"),
-            style: {
-              maxWidth: bind2.to("maxWidth")
-            },
-            tabindex: -1
-          },
-          children: this.children,
-          on: {
-            // https://github.com/ckeditor/ckeditor5-ui/issues/206
-            mousedown: preventDefault(this)
-          }
-        });
-        this._behavior = this.options.shouldGroupWhenFull ? new DynamicGrouping(this) : new StaticLayout(this);
-      }
-      /**
-      * @inheritDoc
-      */
-      render() {
-        super.render();
-        this.focusTracker.add(this.element);
-        for (const item of this.items) {
-          this.focusTracker.add(item.element);
-        }
-        this.items.on("add", (evt, item) => {
-          this.focusTracker.add(item.element);
-        });
-        this.items.on("remove", (evt, item) => {
-          this.focusTracker.remove(item.element);
-        });
-        this.keystrokes.listenTo(this.element);
-        this._behavior.render(this);
-      }
-      /**
-      * @inheritDoc
-      */
-      destroy() {
-        this._behavior.destroy();
-        this.focusTracker.destroy();
-        this.keystrokes.destroy();
-        return super.destroy();
-      }
-      /**
-      * Focuses the first focusable in {@link #focusables}.
-      */
-      focus() {
-        this._focusCycler.focusFirst();
-      }
-      /**
-      * Focuses the last focusable in {@link #focusables}.
-      */
-      focusLast() {
-        this._focusCycler.focusLast();
-      }
-      /**
-      * A utility that expands the plain toolbar configuration into
-      * {@link module:ui/toolbar/toolbarview~ToolbarView#items} using a given component factory.
-      *
-      * @param itemsOrConfig The toolbar items or the entire toolbar configuration object.
-      * @param factory A factory producing toolbar items.
-      * @param removeItems An array of items names to be removed from the configuration. When present, applies
-      * to this toolbar and all nested ones as well.
-      */
-      fillFromConfig(itemsOrConfig, factory, removeItems) {
-        this.items.addMany(this._buildItemsFromConfig(itemsOrConfig, factory, removeItems));
-      }
-      /**
-      * A utility that expands the plain toolbar configuration into a list of view items using a given component factory.
-      *
-      * @param itemsOrConfig The toolbar items or the entire toolbar configuration object.
-      * @param factory A factory producing toolbar items.
-      * @param removeItems An array of items names to be removed from the configuration. When present, applies
-      * to this toolbar and all nested ones as well.
-      */
-      _buildItemsFromConfig(itemsOrConfig, factory, removeItems) {
-        const config2 = normalizeToolbarConfig(itemsOrConfig);
-        const normalizedRemoveItems = removeItems || config2.removeItems;
-        const itemsToAdd = this._cleanItemsConfiguration(config2.items, factory, normalizedRemoveItems).map((item) => {
-          if (isObject$3(item)) {
-            return this._createNestedToolbarDropdown(item, factory, normalizedRemoveItems);
-          } else if (item === "|") {
-            return new ToolbarSeparatorView();
-          } else if (item === "-") {
-            return new ToolbarLineBreakView();
-          }
-          return factory.create(item);
-        }).filter((item) => !!item);
-        return itemsToAdd;
-      }
-      /**
-      * Cleans up the {@link module:ui/toolbar/toolbarview~ToolbarView#items} of the toolbar by removing unwanted items and
-      * duplicated (obsolete) separators or line breaks.
-      *
-      * @param items The toolbar items configuration.
-      * @param factory A factory producing toolbar items.
-      * @param removeItems An array of items names to be removed from the configuration.
-      * @returns Items after the clean-up.
-      */
-      _cleanItemsConfiguration(items, factory, removeItems) {
-        const filteredItems = items.filter((item, idx, items2) => {
-          if (item === "|") {
-            return true;
-          }
-          if (removeItems.indexOf(item) !== -1) {
-            return false;
-          }
-          if (item === "-") {
-            if (this.options.shouldGroupWhenFull) {
-              logWarning("toolbarview-line-break-ignored-when-grouping-items", items2);
-              return false;
-            }
-            return true;
-          }
-          if (!isObject$3(item) && !factory.has(item)) {
-            logWarning("toolbarview-item-unavailable", {
-              item
-            });
-            return false;
-          }
-          return true;
-        });
-        return this._cleanSeparatorsAndLineBreaks(filteredItems);
-      }
-      /**
-      * Remove leading, trailing, and duplicated separators (`-` and `|`).
-      *
-      * @returns Toolbar items after the separator and line break clean-up.
-      */
-      _cleanSeparatorsAndLineBreaks(items) {
-        const nonSeparatorPredicate = (item) => item !== "-" && item !== "|";
-        const count2 = items.length;
-        const firstCommandItemIndex = items.findIndex(nonSeparatorPredicate);
-        if (firstCommandItemIndex === -1) {
-          return [];
-        }
-        const lastCommandItemIndex = count2 - items.slice().reverse().findIndex(nonSeparatorPredicate);
-        return items.slice(firstCommandItemIndex, lastCommandItemIndex).filter((name, idx, items2) => {
-          if (nonSeparatorPredicate(name)) {
-            return true;
-          }
-          const isDuplicated = idx > 0 && items2[idx - 1] === name;
-          return !isDuplicated;
-        });
-      }
-      /**
-      * Creates a user-defined dropdown containing a toolbar with items.
-      *
-      * @param definition A definition of the nested toolbar dropdown.
-      * @param definition.label A label of the dropdown.
-      * @param definition.icon An icon of the drop-down. One of 'bold', 'plus', 'text', 'importExport', 'alignLeft',
-      * 'paragraph' or an SVG string. When `false` is passed, no icon will be used.
-      * @param definition.withText When set `true`, the label of the dropdown will be visible. See
-      * {@link module:ui/button/buttonview~ButtonView#withText} to learn more.
-      * @param definition.tooltip A tooltip of the dropdown button. See
-      * {@link module:ui/button/buttonview~ButtonView#tooltip} to learn more. Defaults to `true`.
-      * @param componentFactory Component factory used to create items
-      * of the nested toolbar.
-      */
-      _createNestedToolbarDropdown(definition, componentFactory, removeItems) {
-        let { label, icon, items, tooltip: tooltip2 = true, withText = false } = definition;
-        items = this._cleanItemsConfiguration(items, componentFactory, removeItems);
-        if (!items.length) {
-          return null;
-        }
-        const locale = this.locale;
-        const dropdownView = createDropdown(locale);
-        if (!label) {
-          logWarning("toolbarview-nested-toolbar-dropdown-missing-label", definition);
-        }
-        dropdownView.class = "ck-toolbar__nested-toolbar-dropdown";
-        dropdownView.buttonView.set({
-          label,
-          tooltip: tooltip2,
-          withText: !!withText
-        });
-        if (icon !== false) {
-          dropdownView.buttonView.icon = NESTED_TOOLBAR_ICONS[icon] || icon || icons.threeVerticalDots;
-        } else {
-          dropdownView.buttonView.withText = true;
-        }
-        addToolbarToDropdown(dropdownView, () => dropdownView.toolbarView._buildItemsFromConfig(items, componentFactory, removeItems));
-        return dropdownView;
-      }
-    }
-    class ItemsView extends View {
-      /**
-      * @inheritDoc
-      */
-      constructor(locale) {
-        super(locale);
-        /**
-        * A collection of items (buttons, dropdowns, etc.).
-        */
-        __publicField(this, "children");
-        this.children = this.createCollection();
-        this.setTemplate({
-          tag: "div",
-          attributes: {
-            class: [
-              "ck",
-              "ck-toolbar__items"
-            ]
-          },
-          children: this.children
-        });
-      }
-    }
-    class StaticLayout {
-      /**
-      * Creates an instance of the {@link module:ui/toolbar/toolbarview~StaticLayout} toolbar
-      * behavior.
-      *
-      * @param view An instance of the toolbar that this behavior is added to.
-      */
-      constructor(view) {
-        const bind2 = view.bindTemplate;
-        view.set("isVertical", false);
-        view.itemsView.children.bindTo(view.items).using((item) => item);
-        view.focusables.bindTo(view.items).using((item) => isFocusable(item) ? item : null);
-        view.extendTemplate({
-          attributes: {
-            class: [
-              // When vertical, the toolbar has an additional CSS class.
-              bind2.if("isVertical", "ck-toolbar_vertical")
-            ]
-          }
-        });
-      }
-      /**
-      * @inheritDoc
-      */
-      render() {
-      }
-      /**
-      * @inheritDoc
-      */
-      destroy() {
-      }
-    }
-    class DynamicGrouping {
-      /**
-      * Creates an instance of the {@link module:ui/toolbar/toolbarview~DynamicGrouping} toolbar
-      * behavior.
-      *
-      * @param view An instance of the toolbar that this behavior is added to.
-      */
-      constructor(view) {
-        /**
-        * A toolbar view this behavior belongs to.
-        */
-        __publicField(this, "view");
-        /**
-        * A collection of toolbar children.
-        */
-        __publicField(this, "viewChildren");
-        /**
-        * A collection of focusable toolbar elements.
-        */
-        __publicField(this, "viewFocusables");
-        /**
-        * A view containing toolbar items.
-        */
-        __publicField(this, "viewItemsView");
-        /**
-        * Toolbar focus tracker.
-        */
-        __publicField(this, "viewFocusTracker");
-        /**
-        * Toolbar locale.
-        */
-        __publicField(this, "viewLocale");
-        /**
-        * A subset of toolbar {@link module:ui/toolbar/toolbarview~ToolbarView#items}.
-        * Aggregates items that fit into a single row of the toolbar and were not {@link #groupedItems grouped}
-        * into a {@link #groupedItemsDropdown dropdown}. Items of this collection are displayed in the
-        * {@link module:ui/toolbar/toolbarview~ToolbarView#itemsView}.
-        *
-        * When none of the {@link module:ui/toolbar/toolbarview~ToolbarView#items} were grouped, it
-        * matches the {@link module:ui/toolbar/toolbarview~ToolbarView#items} collection in size and order.
-        */
-        __publicField(this, "ungroupedItems");
-        /**
-        * A subset of toolbar {@link module:ui/toolbar/toolbarview~ToolbarView#items}.
-        * A collection of the toolbar items that do not fit into a single row of the toolbar.
-        * Grouped items are displayed in a dedicated {@link #groupedItemsDropdown dropdown}.
-        *
-        * When none of the {@link module:ui/toolbar/toolbarview~ToolbarView#items} were grouped,
-        * this collection is empty.
-        */
-        __publicField(this, "groupedItems");
-        /**
-        * The dropdown that aggregates {@link #groupedItems grouped items} that do not fit into a single
-        * row of the toolbar. It is displayed on demand as the last of
-        * {@link module:ui/toolbar/toolbarview~ToolbarView#children toolbar children} and offers another
-        * (nested) toolbar which displays items that would normally overflow.
-        */
-        __publicField(this, "groupedItemsDropdown");
-        /**
-        * An instance of the resize observer that helps dynamically determine the geometry of the toolbar
-        * and manage items that do not fit into a single row.
-        *
-        * **Note:** Created in {@link #_enableGroupingOnResize}.
-        *
-        * @readonly
-        */
-        __publicField(this, "resizeObserver", null);
-        /**
-        * A cached value of the horizontal padding style used by {@link #_updateGrouping}
-        * to manage the {@link module:ui/toolbar/toolbarview~ToolbarView#items} that do not fit into
-        * a single toolbar line. This value can be reused between updates because it is unlikely that
-        * the padding will change and re–using `Window.getComputedStyle()` is expensive.
-        *
-        * @readonly
-        */
-        __publicField(this, "cachedPadding", null);
-        /**
-        * A flag indicating that an items grouping update has been queued (e.g. due to the toolbar being visible)
-        * and should be executed immediately the next time the toolbar shows up.
-        *
-        * @readonly
-        */
-        __publicField(this, "shouldUpdateGroupingOnNextResize", false);
-        /**
-        * Toolbar element.
-        *
-        * @readonly
-        */
-        __publicField(this, "viewElement");
-        this.view = view;
-        this.viewChildren = view.children;
-        this.viewFocusables = view.focusables;
-        this.viewItemsView = view.itemsView;
-        this.viewFocusTracker = view.focusTracker;
-        this.viewLocale = view.locale;
-        this.ungroupedItems = view.createCollection();
-        this.groupedItems = view.createCollection();
-        this.groupedItemsDropdown = this._createGroupedItemsDropdown();
-        view.itemsView.children.bindTo(this.ungroupedItems).using((item) => item);
-        this.ungroupedItems.on("change", this._updateFocusCyclableItems.bind(this));
-        view.children.on("change", this._updateFocusCyclableItems.bind(this));
-        view.items.on("change", (evt, changeData) => {
-          const index = changeData.index;
-          const added = Array.from(changeData.added);
-          for (const removedItem of changeData.removed) {
-            if (index >= this.ungroupedItems.length) {
-              this.groupedItems.remove(removedItem);
-            } else {
-              this.ungroupedItems.remove(removedItem);
-            }
-          }
-          for (let currentIndex = index; currentIndex < index + added.length; currentIndex++) {
-            const addedItem = added[currentIndex - index];
-            if (currentIndex > this.ungroupedItems.length) {
-              this.groupedItems.add(addedItem, currentIndex - this.ungroupedItems.length);
-            } else {
-              this.ungroupedItems.add(addedItem, currentIndex);
-            }
-          }
-          this._updateGrouping();
-        });
-        view.extendTemplate({
-          attributes: {
-            class: [
-              // To group items dynamically, the toolbar needs a dedicated CSS class.
-              "ck-toolbar_grouping"
-            ]
-          }
-        });
-      }
-      /**
-      * Enables dynamic items grouping based on the dimensions of the toolbar.
-      *
-      * @param view An instance of the toolbar that this behavior is added to.
-      */
-      render(view) {
-        this.viewElement = view.element;
-        this._enableGroupingOnResize();
-        this._enableGroupingOnMaxWidthChange(view);
-      }
-      /**
-      * Cleans up the internals used by this behavior.
-      */
-      destroy() {
-        this.groupedItemsDropdown.destroy();
-        this.resizeObserver.destroy();
-      }
-      /**
-      * When called, it will check if any of the {@link #ungroupedItems} do not fit into a single row of the toolbar,
-      * and it will move them to the {@link #groupedItems} when it happens.
-      *
-      * At the same time, it will also check if there is enough space in the toolbar for the first of the
-      * {@link #groupedItems} to be returned back to {@link #ungroupedItems} and still fit into a single row
-      * without the toolbar wrapping.
-      */
-      _updateGrouping() {
-        if (!this.viewElement.ownerDocument.body.contains(this.viewElement)) {
-          return;
-        }
-        if (!isVisible(this.viewElement)) {
-          this.shouldUpdateGroupingOnNextResize = true;
-          return;
-        }
-        const initialGroupedItemsCount = this.groupedItems.length;
-        let wereItemsGrouped;
-        while (this._areItemsOverflowing) {
-          this._groupLastItem();
-          wereItemsGrouped = true;
-        }
-        if (!wereItemsGrouped && this.groupedItems.length) {
-          while (this.groupedItems.length && !this._areItemsOverflowing) {
-            this._ungroupFirstItem();
-          }
-          if (this._areItemsOverflowing) {
-            this._groupLastItem();
-          }
-        }
-        if (this.groupedItems.length !== initialGroupedItemsCount) {
-          this.view.fire("groupedItemsUpdate");
-        }
-      }
-      /**
-      * Returns `true` when {@link module:ui/toolbar/toolbarview~ToolbarView#element} children visually overflow,
-      * for instance if the toolbar is narrower than its members. Returns `false` otherwise.
-      */
-      get _areItemsOverflowing() {
-        if (!this.ungroupedItems.length) {
-          return false;
-        }
-        const element = this.viewElement;
-        const uiLanguageDirection = this.viewLocale.uiLanguageDirection;
-        const lastChildRect = new Rect(element.lastChild);
-        const toolbarRect = new Rect(element);
-        if (!this.cachedPadding) {
-          const computedStyle = global$1.window.getComputedStyle(element);
-          const paddingProperty = uiLanguageDirection === "ltr" ? "paddingRight" : "paddingLeft";
-          this.cachedPadding = Number.parseInt(computedStyle[paddingProperty]);
-        }
-        if (uiLanguageDirection === "ltr") {
-          return lastChildRect.right > toolbarRect.right - this.cachedPadding;
-        } else {
-          return lastChildRect.left < toolbarRect.left + this.cachedPadding;
-        }
-      }
-      /**
-      * Enables the functionality that prevents {@link #ungroupedItems} from overflowing (wrapping to the next row)
-      * upon resize when there is little space available. Instead, the toolbar items are moved to the
-      * {@link #groupedItems} collection and displayed in a dropdown at the end of the row (which has its own nested toolbar).
-      *
-      * When called, the toolbar will automatically analyze the location of its {@link #ungroupedItems} and "group"
-      * them in the dropdown if necessary. It will also observe the browser window for size changes in
-      * the future and respond to them by grouping more items or reverting already grouped back, depending
-      * on the visual space available.
-      */
-      _enableGroupingOnResize() {
-        let previousWidth;
-        this.resizeObserver = new ResizeObserver$1(this.viewElement, (entry) => {
-          if (!previousWidth || previousWidth !== entry.contentRect.width || this.shouldUpdateGroupingOnNextResize) {
-            this.shouldUpdateGroupingOnNextResize = false;
-            this._updateGrouping();
-            previousWidth = entry.contentRect.width;
-          }
-        });
-        this._updateGrouping();
-      }
-      /**
-      * Enables the grouping functionality, just like {@link #_enableGroupingOnResize} but the difference is that
-      * it listens to the changes of {@link module:ui/toolbar/toolbarview~ToolbarView#maxWidth} instead.
-      */
-      _enableGroupingOnMaxWidthChange(view) {
-        view.on("change:maxWidth", () => {
-          this._updateGrouping();
-        });
-      }
-      /**
-      * When called, it will remove the last item from {@link #ungroupedItems} and move it back
-      * to the {@link #groupedItems} collection.
-      *
-      * The opposite of {@link #_ungroupFirstItem}.
-      */
-      _groupLastItem() {
-        if (!this.groupedItems.length) {
-          this.viewChildren.add(new ToolbarSeparatorView());
-          this.viewChildren.add(this.groupedItemsDropdown);
-          this.viewFocusTracker.add(this.groupedItemsDropdown.element);
-        }
-        this.groupedItems.add(this.ungroupedItems.remove(this.ungroupedItems.last), 0);
-      }
-      /**
-      * Moves the very first item belonging to {@link #groupedItems} back
-      * to the {@link #ungroupedItems} collection.
-      *
-      * The opposite of {@link #_groupLastItem}.
-      */
-      _ungroupFirstItem() {
-        this.ungroupedItems.add(this.groupedItems.remove(this.groupedItems.first));
-        if (!this.groupedItems.length) {
-          this.viewChildren.remove(this.groupedItemsDropdown);
-          this.viewChildren.remove(this.viewChildren.last);
-          this.viewFocusTracker.remove(this.groupedItemsDropdown.element);
-        }
-      }
-      /**
-      * Creates the {@link #groupedItemsDropdown} that hosts the members of the {@link #groupedItems}
-      * collection when there is not enough space in the toolbar to display all items in a single row.
-      */
-      _createGroupedItemsDropdown() {
-        const locale = this.viewLocale;
-        const t2 = locale.t;
-        const dropdown2 = createDropdown(locale);
-        dropdown2.class = "ck-toolbar__grouped-dropdown";
-        dropdown2.panelPosition = locale.uiLanguageDirection === "ltr" ? "sw" : "se";
-        addToolbarToDropdown(dropdown2, this.groupedItems);
-        dropdown2.buttonView.set({
-          label: t2("Show more items"),
-          tooltip: true,
-          tooltipPosition: locale.uiLanguageDirection === "rtl" ? "se" : "sw",
-          icon: icons.threeVerticalDots
-        });
-        return dropdown2;
-      }
-      /**
-      * Updates the {@link module:ui/toolbar/toolbarview~ToolbarView#focusables focus–cyclable items}
-      * collection so it represents the up–to–date state of the UI from the perspective of the user.
-      *
-      * For instance, the {@link #groupedItemsDropdown} can show up and hide but when it is visible,
-      * it must be subject to focus cycling in the toolbar.
-      *
-      * See the {@link module:ui/toolbar/toolbarview~ToolbarView#focusables collection} documentation
-      * to learn more about the purpose of this method.
-      */
-      _updateFocusCyclableItems() {
-        this.viewFocusables.clear();
-        this.ungroupedItems.map((item) => {
-          if (isFocusable(item)) {
-            this.viewFocusables.add(item);
-          }
-        });
-        if (this.groupedItems.length) {
-          this.viewFocusables.add(this.groupedItemsDropdown);
-        }
-      }
-    }
     class ListItemView extends View {
       /**
       * @inheritDoc
@@ -65294,456 +64560,6 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this._listItemGroupToChangeListeners.delete(groupView);
       }
     }
-    class SplitButtonView extends View {
-      /**
-      * @inheritDoc
-      */
-      constructor(locale, actionButton2) {
-        super(locale);
-        /**
-        * Collection of the child views inside of the split button {@link #element}.
-        */
-        __publicField(this, "children");
-        /**
-        * A main button of split button.
-        */
-        __publicField(this, "actionView");
-        /**
-        * A secondary button of split button that opens dropdown.
-        */
-        __publicField(this, "arrowView");
-        /**
-        * Instance of the {@link module:utils/keystrokehandler~KeystrokeHandler}. It manages
-        * keystrokes of the split button:
-        *
-        * * <kbd>▶</kbd> moves focus to arrow view when action view is focused,
-        * * <kbd>◀</kbd> moves focus to action view when arrow view is focused.
-        */
-        __publicField(this, "keystrokes");
-        /**
-        * Tracks information about DOM focus in the dropdown.
-        */
-        __publicField(this, "focusTracker");
-        const bind2 = this.bindTemplate;
-        this.set("class", void 0);
-        this.set("labelStyle", void 0);
-        this.set("icon", void 0);
-        this.set("isEnabled", true);
-        this.set("isOn", false);
-        this.set("isToggleable", false);
-        this.set("isVisible", true);
-        this.set("keystroke", void 0);
-        this.set("withKeystroke", false);
-        this.set("label", void 0);
-        this.set("tabindex", -1);
-        this.set("tooltip", false);
-        this.set("tooltipPosition", "s");
-        this.set("type", "button");
-        this.set("withText", false);
-        this.children = this.createCollection();
-        this.actionView = this._createActionView(actionButton2);
-        this.arrowView = this._createArrowView();
-        this.keystrokes = new KeystrokeHandler();
-        this.focusTracker = new FocusTracker();
-        this.setTemplate({
-          tag: "div",
-          attributes: {
-            class: [
-              "ck",
-              "ck-splitbutton",
-              bind2.to("class"),
-              bind2.if("isVisible", "ck-hidden", (value) => !value),
-              this.arrowView.bindTemplate.if("isOn", "ck-splitbutton_open")
-            ]
-          },
-          children: this.children
-        });
-      }
-      /**
-      * @inheritDoc
-      */
-      render() {
-        super.render();
-        this.children.add(this.actionView);
-        this.children.add(this.arrowView);
-        this.focusTracker.add(this.actionView.element);
-        this.focusTracker.add(this.arrowView.element);
-        this.keystrokes.listenTo(this.element);
-        this.keystrokes.set("arrowright", (evt, cancel2) => {
-          if (this.focusTracker.focusedElement === this.actionView.element) {
-            this.arrowView.focus();
-            cancel2();
-          }
-        });
-        this.keystrokes.set("arrowleft", (evt, cancel2) => {
-          if (this.focusTracker.focusedElement === this.arrowView.element) {
-            this.actionView.focus();
-            cancel2();
-          }
-        });
-      }
-      /**
-      * @inheritDoc
-      */
-      destroy() {
-        super.destroy();
-        this.focusTracker.destroy();
-        this.keystrokes.destroy();
-      }
-      /**
-      * Focuses the {@link module:ui/button/buttonview~ButtonView#element} of the action part of split button.
-      */
-      focus() {
-        this.actionView.focus();
-      }
-      /**
-      * Creates a {@link module:ui/button/buttonview~ButtonView} instance as {@link #actionView} and binds it with main split button
-      * attributes.
-      */
-      _createActionView(actionButton2) {
-        const actionView = actionButton2 || new ButtonView();
-        if (!actionButton2) {
-          actionView.bind("icon", "isEnabled", "isOn", "isToggleable", "keystroke", "label", "tabindex", "tooltip", "tooltipPosition", "type", "withText").to(this);
-        }
-        actionView.extendTemplate({
-          attributes: {
-            class: "ck-splitbutton__action"
-          }
-        });
-        actionView.delegate("execute").to(this);
-        return actionView;
-      }
-      /**
-      * Creates a {@link module:ui/button/buttonview~ButtonView} instance as {@link #arrowView} and binds it with main split button
-      * attributes.
-      */
-      _createArrowView() {
-        const arrowView = new ButtonView();
-        const bind2 = arrowView.bindTemplate;
-        arrowView.icon = dropdownArrowIcon;
-        arrowView.extendTemplate({
-          attributes: {
-            class: [
-              "ck-splitbutton__arrow"
-            ],
-            "data-cke-tooltip-disabled": bind2.to("isOn"),
-            "aria-haspopup": true,
-            "aria-expanded": bind2.to("isOn", (value) => String(value))
-          }
-        });
-        arrowView.bind("isEnabled").to(this);
-        arrowView.bind("label").to(this);
-        arrowView.bind("tooltip").to(this);
-        arrowView.delegate("execute").to(this, "open");
-        return arrowView;
-      }
-    }
-    function createDropdown(locale, ButtonClassOrInstance = DropdownButtonView) {
-      const buttonView = typeof ButtonClassOrInstance == "function" ? new ButtonClassOrInstance(locale) : ButtonClassOrInstance;
-      const panelView = new DropdownPanelView(locale);
-      const dropdownView = new DropdownView(locale, buttonView, panelView);
-      buttonView.bind("isEnabled").to(dropdownView);
-      if (buttonView instanceof SplitButtonView) {
-        buttonView.arrowView.bind("isOn").to(dropdownView, "isOpen");
-      } else {
-        buttonView.bind("isOn").to(dropdownView, "isOpen");
-      }
-      addDefaultBehavior(dropdownView);
-      return dropdownView;
-    }
-    function addToolbarToDropdown(dropdownView, buttonsOrCallback, options = {}) {
-      dropdownView.extendTemplate({
-        attributes: {
-          class: [
-            "ck-toolbar-dropdown"
-          ]
-        }
-      });
-      if (dropdownView.isOpen) {
-        addToolbarToOpenDropdown(dropdownView, buttonsOrCallback, options);
-      } else {
-        dropdownView.once("change:isOpen", () => addToolbarToOpenDropdown(dropdownView, buttonsOrCallback, options), {
-          priority: "highest"
-        });
-      }
-      if (options.enableActiveItemFocusOnDropdownOpen) {
-        focusChildOnDropdownOpen(dropdownView, () => dropdownView.toolbarView.items.find((item) => item.isOn));
-      }
-    }
-    function addToolbarToOpenDropdown(dropdownView, buttonsOrCallback, options) {
-      const locale = dropdownView.locale;
-      const t2 = locale.t;
-      const toolbarView = dropdownView.toolbarView = new ToolbarView(locale);
-      const buttons = typeof buttonsOrCallback == "function" ? buttonsOrCallback() : buttonsOrCallback;
-      toolbarView.ariaLabel = options.ariaLabel || t2("Dropdown toolbar");
-      if (options.maxWidth) {
-        toolbarView.maxWidth = options.maxWidth;
-      }
-      if (options.class) {
-        toolbarView.class = options.class;
-      }
-      if (options.isCompact) {
-        toolbarView.isCompact = options.isCompact;
-      }
-      if (options.isVertical) {
-        toolbarView.isVertical = true;
-      }
-      if (buttons instanceof ViewCollection) {
-        toolbarView.items.bindTo(buttons).using((item) => item);
-      } else {
-        toolbarView.items.addMany(buttons);
-      }
-      dropdownView.panelView.children.add(toolbarView);
-      toolbarView.items.delegate("execute").to(dropdownView);
-    }
-    function addListToDropdown(dropdownView, itemsOrCallback, options = {}) {
-      if (dropdownView.isOpen) {
-        addListToOpenDropdown(dropdownView, itemsOrCallback, options);
-      } else {
-        dropdownView.once("change:isOpen", () => addListToOpenDropdown(dropdownView, itemsOrCallback, options), {
-          priority: "highest"
-        });
-      }
-      focusChildOnDropdownOpen(dropdownView, () => dropdownView.listView.items.find((item) => {
-        if (item instanceof ListItemView) {
-          return item.children.first.isOn;
-        }
-        return false;
-      }));
-    }
-    function addListToOpenDropdown(dropdownView, itemsOrCallback, options) {
-      const locale = dropdownView.locale;
-      const listView = dropdownView.listView = new ListView(locale);
-      const items = typeof itemsOrCallback == "function" ? itemsOrCallback() : itemsOrCallback;
-      listView.ariaLabel = options.ariaLabel;
-      listView.role = options.role;
-      bindViewCollectionItemsToDefinitions(dropdownView, listView.items, items, locale);
-      dropdownView.panelView.children.add(listView);
-      listView.items.delegate("execute").to(dropdownView);
-    }
-    function focusChildOnDropdownOpen(dropdownView, childSelectorCallback) {
-      dropdownView.on("change:isOpen", () => {
-        if (!dropdownView.isOpen) {
-          return;
-        }
-        const childToFocus = childSelectorCallback();
-        if (!childToFocus) {
-          return;
-        }
-        if (typeof childToFocus.focus === "function") {
-          childToFocus.focus();
-        } else {
-          logWarning("ui-dropdown-focus-child-on-open-child-missing-focus", {
-            view: childToFocus
-          });
-        }
-      }, {
-        priority: priorities.low - 10
-      });
-    }
-    function addDefaultBehavior(dropdownView) {
-      closeDropdownOnClickOutside(dropdownView);
-      closeDropdownOnExecute(dropdownView);
-      closeDropdownOnBlur(dropdownView);
-      focusDropdownContentsOnArrows(dropdownView);
-      focusDropdownButtonOnClose(dropdownView);
-      focusDropdownPanelOnOpen(dropdownView);
-    }
-    function closeDropdownOnClickOutside(dropdownView) {
-      dropdownView.on("render", () => {
-        clickOutsideHandler({
-          emitter: dropdownView,
-          activator: () => dropdownView.isOpen,
-          callback: () => {
-            dropdownView.isOpen = false;
-          },
-          contextElements: () => [
-            dropdownView.element,
-            ...dropdownView.focusTracker._elements
-          ]
-        });
-      });
-    }
-    function closeDropdownOnExecute(dropdownView) {
-      dropdownView.on("execute", (evt) => {
-        if (evt.source instanceof SwitchButtonView) {
-          return;
-        }
-        dropdownView.isOpen = false;
-      });
-    }
-    function closeDropdownOnBlur(dropdownView) {
-      dropdownView.focusTracker.on("change:isFocused", (evt, name, isFocused) => {
-        if (dropdownView.isOpen && !isFocused) {
-          dropdownView.isOpen = false;
-        }
-      });
-    }
-    function focusDropdownContentsOnArrows(dropdownView) {
-      dropdownView.keystrokes.set("arrowdown", (data, cancel2) => {
-        if (dropdownView.isOpen) {
-          dropdownView.panelView.focus();
-          cancel2();
-        }
-      });
-      dropdownView.keystrokes.set("arrowup", (data, cancel2) => {
-        if (dropdownView.isOpen) {
-          dropdownView.panelView.focusLast();
-          cancel2();
-        }
-      });
-    }
-    function focusDropdownButtonOnClose(dropdownView) {
-      dropdownView.on("change:isOpen", (evt, name, isOpen) => {
-        if (isOpen) {
-          return;
-        }
-        const element = dropdownView.panelView.element;
-        if (element && element.contains(global$1.document.activeElement)) {
-          dropdownView.buttonView.focus();
-        }
-      });
-    }
-    function focusDropdownPanelOnOpen(dropdownView) {
-      dropdownView.on("change:isOpen", (evt, name, isOpen) => {
-        if (!isOpen) {
-          return;
-        }
-        dropdownView.panelView.focus();
-      }, {
-        priority: "low"
-      });
-    }
-    function bindViewCollectionItemsToDefinitions(dropdownView, listItems, definitions, locale) {
-      listItems.on("change", () => {
-        const listItemButtons = [
-          ...listItems
-        ].reduce((acc, item) => {
-          if (item instanceof ListItemView && item.children.first instanceof ListItemButtonView) {
-            acc.push(item.children.first);
-          }
-          return acc;
-        }, []);
-        const hasAnyCheckboxOnList = listItemButtons.some((button) => button.isToggleable);
-        listItemButtons.forEach((item) => {
-          item.hasCheckSpace = hasAnyCheckboxOnList;
-        });
-      });
-      listItems.bindTo(definitions).using((def) => {
-        if (def.type === "separator") {
-          return new ListSeparatorView(locale);
-        } else if (def.type === "group") {
-          const groupView = new ListItemGroupView(locale);
-          groupView.set({
-            label: def.label
-          });
-          bindViewCollectionItemsToDefinitions(dropdownView, groupView.items, def.items, locale);
-          groupView.items.delegate("execute").to(dropdownView);
-          return groupView;
-        } else if (def.type === "button" || def.type === "switchbutton") {
-          const isToggleable = def.model.role === "menuitemcheckbox" || def.model.role === "menuitemradio";
-          const listItemView = new ListItemView(locale);
-          let buttonView;
-          if (def.type === "button") {
-            buttonView = new ListItemButtonView(locale);
-            buttonView.set({
-              isToggleable
-            });
-          } else {
-            buttonView = new SwitchButtonView(locale);
-          }
-          buttonView.bind(...Object.keys(def.model)).to(def.model);
-          buttonView.delegate("execute").to(listItemView);
-          listItemView.children.add(buttonView);
-          return listItemView;
-        }
-        return null;
-      });
-    }
-    const createLabeledInputText = (labeledFieldView, viewUid, statusUid) => {
-      const inputView = new InputTextView(labeledFieldView.locale);
-      inputView.set({
-        id: viewUid,
-        ariaDescribedById: statusUid
-      });
-      inputView.bind("isReadOnly").to(labeledFieldView, "isEnabled", (value) => !value);
-      inputView.bind("hasError").to(labeledFieldView, "errorText", (value) => !!value);
-      inputView.on("input", () => {
-        labeledFieldView.errorText = null;
-      });
-      labeledFieldView.bind("isEmpty", "isFocused", "placeholder").to(inputView);
-      return inputView;
-    };
-    class ComponentFactory {
-      /**
-      * Creates an instance of the factory.
-      *
-      * @param editor The editor instance.
-      */
-      constructor(editor) {
-        /**
-        * The editor instance that the factory belongs to.
-        */
-        __publicField(this, "editor");
-        /**
-        * Registered component factories.
-        */
-        __publicField(this, "_components", /* @__PURE__ */ new Map());
-        this.editor = editor;
-      }
-      /**
-      * Returns an iterator of registered component names. Names are returned in lower case.
-      */
-      *names() {
-        for (const value of this._components.values()) {
-          yield value.originalName;
-        }
-      }
-      /**
-      * Registers a component factory function that will be used by the
-      * {@link #create create} method and called with the
-      * {@link module:core/editor/editor~Editor#locale editor locale} as an argument,
-      * allowing localization of the {@link module:ui/view~View view}.
-      *
-      * @param name The name of the component.
-      * @param callback The callback that returns the component.
-      */
-      add(name, callback) {
-        this._components.set(getNormalized(name), {
-          callback,
-          originalName: name
-        });
-      }
-      /**
-      * Creates an instance of a component registered in the factory under a specific name.
-      *
-      * When called, the {@link module:core/editor/editor~Editor#locale editor locale} is passed to
-      * the previously {@link #add added} factory function, allowing localization of the
-      * {@link module:ui/view~View view}.
-      *
-      * @param name The name of the component.
-      * @returns The instantiated component view.
-      */
-      create(name) {
-        if (!this.has(name)) {
-          throw new CKEditorError("componentfactory-item-missing", this, {
-            name
-          });
-        }
-        return this._components.get(getNormalized(name)).callback(this.editor.locale);
-      }
-      /**
-      * Checks if a component of a given name is registered in the factory.
-      *
-      * @param name The name of the component.
-      */
-      has(name) {
-        return this._components.has(getNormalized(name));
-      }
-    }
-    function getNormalized(name) {
-      return String(name).toLowerCase();
-    }
     const toPx$5 = /* @__PURE__ */ toUnit("px");
     const POSITION_OFF_SCREEN = {
       top: -99999,
@@ -65967,7 +64783,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!this.attachTo(options)) {
           return false;
         }
-        const targetElement = getDomElement(options.target);
+        let targetElement = getDomElement(options.target);
         const limiterElement = options.limiter ? getDomElement(options.limiter) : global$1.document.body;
         this.listenTo(global$1.document, "scroll", (evt, domEvt) => {
           const scrollTarget = domEvt.target;
@@ -65982,13 +64798,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this.listenTo(global$1.window, "resize", () => {
           this.attachTo(options);
         });
-        if (targetElement && !this._resizeObserver) {
-          const checkVisibility = () => {
-            if (!isVisible(targetElement)) {
-              this.unpin();
-            }
-          };
-          this._resizeObserver = new ResizeObserver$1(targetElement, checkVisibility);
+        if (!this._resizeObserver) {
+          if (targetElement && isText(targetElement)) {
+            targetElement = targetElement.parentElement;
+          }
+          if (targetElement) {
+            const checkVisibility = () => {
+              if (!isVisible(targetElement)) {
+                this.unpin();
+              }
+            };
+            this._resizeObserver = new ResizeObserver$1(targetElement, checkVisibility);
+          }
         }
         return true;
       }
@@ -66779,12 +65600,1191 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
       return null;
     }
+    class ToolbarSeparatorView extends View {
+      /**
+      * @inheritDoc
+      */
+      constructor(locale) {
+        super(locale);
+        this.setTemplate({
+          tag: "span",
+          attributes: {
+            class: [
+              "ck",
+              "ck-toolbar__separator"
+            ]
+          }
+        });
+      }
+    }
+    class ToolbarLineBreakView extends View {
+      /**
+      * @inheritDoc
+      */
+      constructor(locale) {
+        super(locale);
+        this.setTemplate({
+          tag: "span",
+          attributes: {
+            class: [
+              "ck",
+              "ck-toolbar__line-break"
+            ]
+          }
+        });
+      }
+    }
+    /**
+     * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
+     * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+     */
+    function preventDefault(view) {
+      return view.bindTemplate.to((evt) => {
+        if (evt.target === view.element) {
+          evt.preventDefault();
+        }
+      });
+    }
+    /**
+     * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
+     * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+     */
+    function normalizeToolbarConfig(config2) {
+      if (Array.isArray(config2)) {
+        return {
+          items: config2,
+          removeItems: []
+        };
+      }
+      const predefinedConfigOptions = {
+        items: [],
+        removeItems: []
+      };
+      if (!config2) {
+        return predefinedConfigOptions;
+      }
+      return {
+        ...predefinedConfigOptions,
+        ...config2
+      };
+    }
+    const NESTED_TOOLBAR_ICONS = /* @__PURE__ */ (() => ({
+      alignLeft: icons.alignLeft,
+      bold: icons.bold,
+      importExport: icons.importExport,
+      paragraph: icons.paragraph,
+      plus: icons.plus,
+      text: icons.text,
+      threeVerticalDots: icons.threeVerticalDots,
+      pilcrow: icons.pilcrow,
+      dragIndicator: icons.dragIndicator
+    }))();
+    class ToolbarView extends View {
+      /**
+      * Creates an instance of the {@link module:ui/toolbar/toolbarview~ToolbarView} class.
+      *
+      * Also see {@link #render}.
+      *
+      * @param locale The localization services instance.
+      * @param options Configuration options of the toolbar.
+      */
+      constructor(locale, options) {
+        super(locale);
+        /**
+        * A reference to the options object passed to the constructor.
+        */
+        __publicField(this, "options");
+        /**
+        * A collection of toolbar items (buttons, dropdowns, etc.).
+        */
+        __publicField(this, "items");
+        /**
+        * Tracks information about the DOM focus in the toolbar.
+        */
+        __publicField(this, "focusTracker");
+        /**
+        * An instance of the {@link module:utils/keystrokehandler~KeystrokeHandler}
+        * to handle keyboard navigation in the toolbar.
+        */
+        __publicField(this, "keystrokes");
+        /**
+        * A (child) view containing {@link #items toolbar items}.
+        */
+        __publicField(this, "itemsView");
+        /**
+        * A top–level collection aggregating building blocks of the toolbar.
+        *
+        *	┌───────────────── ToolbarView ─────────────────┐
+        *	| ┌──────────────── #children ────────────────┐ |
+        *	| |   ┌──────────── #itemsView ───────────┐   | |
+        *	| |   | [ item1 ] [ item2 ] ... [ itemN ] |   | |
+        *	| |   └──────────────────────────────────-┘   | |
+        *	| └───────────────────────────────────────────┘ |
+        *	└───────────────────────────────────────────────┘
+        *
+        * By default, it contains the {@link #itemsView} but it can be extended with additional
+        * UI elements when necessary.
+        */
+        __publicField(this, "children");
+        /**
+        * A collection of {@link #items} that take part in the focus cycling
+        * (i.e. navigation using the keyboard). Usually, it contains a subset of {@link #items} with
+        * some optional UI elements that also belong to the toolbar and should be focusable
+        * by the user.
+        */
+        __publicField(this, "focusables");
+        /**
+        * Helps cycling over {@link #focusables focusable items} in the toolbar.
+        */
+        __publicField(this, "_focusCycler");
+        /**
+        * An instance of the active toolbar behavior that shapes its look and functionality.
+        *
+        * See {@link module:ui/toolbar/toolbarview~ToolbarBehavior} to learn more.
+        */
+        __publicField(this, "_behavior");
+        const bind2 = this.bindTemplate;
+        const t2 = this.t;
+        this.options = options || {};
+        this.set("ariaLabel", t2("Editor toolbar"));
+        this.set("maxWidth", "auto");
+        this.items = this.createCollection();
+        this.focusTracker = new FocusTracker();
+        this.keystrokes = new KeystrokeHandler();
+        this.set("class", void 0);
+        this.set("isCompact", false);
+        this.itemsView = new ItemsView(locale);
+        this.children = this.createCollection();
+        this.children.add(this.itemsView);
+        this.focusables = this.createCollection();
+        const isRtl = locale.uiLanguageDirection === "rtl";
+        this._focusCycler = new FocusCycler({
+          focusables: this.focusables,
+          focusTracker: this.focusTracker,
+          keystrokeHandler: this.keystrokes,
+          actions: {
+            // Navigate toolbar items backwards using the arrow[left,up] keys.
+            focusPrevious: [
+              isRtl ? "arrowright" : "arrowleft",
+              "arrowup"
+            ],
+            // Navigate toolbar items forwards using the arrow[right,down] keys.
+            focusNext: [
+              isRtl ? "arrowleft" : "arrowright",
+              "arrowdown"
+            ]
+          }
+        });
+        const classes = [
+          "ck",
+          "ck-toolbar",
+          bind2.to("class"),
+          bind2.if("isCompact", "ck-toolbar_compact")
+        ];
+        if (this.options.shouldGroupWhenFull && this.options.isFloating) {
+          classes.push("ck-toolbar_floating");
+        }
+        this.setTemplate({
+          tag: "div",
+          attributes: {
+            class: classes,
+            role: "toolbar",
+            "aria-label": bind2.to("ariaLabel"),
+            style: {
+              maxWidth: bind2.to("maxWidth")
+            },
+            tabindex: -1
+          },
+          children: this.children,
+          on: {
+            // https://github.com/ckeditor/ckeditor5-ui/issues/206
+            mousedown: preventDefault(this)
+          }
+        });
+        this._behavior = this.options.shouldGroupWhenFull ? new DynamicGrouping(this) : new StaticLayout(this);
+      }
+      /**
+      * @inheritDoc
+      */
+      render() {
+        super.render();
+        this.focusTracker.add(this.element);
+        for (const item of this.items) {
+          this.focusTracker.add(item.element);
+        }
+        this.items.on("add", (evt, item) => {
+          this.focusTracker.add(item.element);
+        });
+        this.items.on("remove", (evt, item) => {
+          this.focusTracker.remove(item.element);
+        });
+        this.keystrokes.listenTo(this.element);
+        this._behavior.render(this);
+      }
+      /**
+      * @inheritDoc
+      */
+      destroy() {
+        this._behavior.destroy();
+        this.focusTracker.destroy();
+        this.keystrokes.destroy();
+        return super.destroy();
+      }
+      /**
+      * Focuses the first focusable in {@link #focusables}.
+      */
+      focus() {
+        this._focusCycler.focusFirst();
+      }
+      /**
+      * Focuses the last focusable in {@link #focusables}.
+      */
+      focusLast() {
+        this._focusCycler.focusLast();
+      }
+      /**
+      * A utility that expands the plain toolbar configuration into
+      * {@link module:ui/toolbar/toolbarview~ToolbarView#items} using a given component factory.
+      *
+      * @param itemsOrConfig The toolbar items or the entire toolbar configuration object.
+      * @param factory A factory producing toolbar items.
+      * @param removeItems An array of items names to be removed from the configuration. When present, applies
+      * to this toolbar and all nested ones as well.
+      */
+      fillFromConfig(itemsOrConfig, factory, removeItems) {
+        this.items.addMany(this._buildItemsFromConfig(itemsOrConfig, factory, removeItems));
+      }
+      /**
+      * A utility that expands the plain toolbar configuration into a list of view items using a given component factory.
+      *
+      * @param itemsOrConfig The toolbar items or the entire toolbar configuration object.
+      * @param factory A factory producing toolbar items.
+      * @param removeItems An array of items names to be removed from the configuration. When present, applies
+      * to this toolbar and all nested ones as well.
+      */
+      _buildItemsFromConfig(itemsOrConfig, factory, removeItems) {
+        const config2 = normalizeToolbarConfig(itemsOrConfig);
+        const normalizedRemoveItems = removeItems || config2.removeItems;
+        const itemsToAdd = this._cleanItemsConfiguration(config2.items, factory, normalizedRemoveItems).map((item) => {
+          if (isObject$3(item)) {
+            return this._createNestedToolbarDropdown(item, factory, normalizedRemoveItems);
+          } else if (item === "|") {
+            return new ToolbarSeparatorView();
+          } else if (item === "-") {
+            return new ToolbarLineBreakView();
+          }
+          return factory.create(item);
+        }).filter((item) => !!item);
+        return itemsToAdd;
+      }
+      /**
+      * Cleans up the {@link module:ui/toolbar/toolbarview~ToolbarView#items} of the toolbar by removing unwanted items and
+      * duplicated (obsolete) separators or line breaks.
+      *
+      * @param items The toolbar items configuration.
+      * @param factory A factory producing toolbar items.
+      * @param removeItems An array of items names to be removed from the configuration.
+      * @returns Items after the clean-up.
+      */
+      _cleanItemsConfiguration(items, factory, removeItems) {
+        const filteredItems = items.filter((item, idx, items2) => {
+          if (item === "|") {
+            return true;
+          }
+          if (removeItems.indexOf(item) !== -1) {
+            return false;
+          }
+          if (item === "-") {
+            if (this.options.shouldGroupWhenFull) {
+              logWarning("toolbarview-line-break-ignored-when-grouping-items", items2);
+              return false;
+            }
+            return true;
+          }
+          if (!isObject$3(item) && !factory.has(item)) {
+            logWarning("toolbarview-item-unavailable", {
+              item
+            });
+            return false;
+          }
+          return true;
+        });
+        return this._cleanSeparatorsAndLineBreaks(filteredItems);
+      }
+      /**
+      * Remove leading, trailing, and duplicated separators (`-` and `|`).
+      *
+      * @returns Toolbar items after the separator and line break clean-up.
+      */
+      _cleanSeparatorsAndLineBreaks(items) {
+        const nonSeparatorPredicate = (item) => item !== "-" && item !== "|";
+        const count2 = items.length;
+        const firstCommandItemIndex = items.findIndex(nonSeparatorPredicate);
+        if (firstCommandItemIndex === -1) {
+          return [];
+        }
+        const lastCommandItemIndex = count2 - items.slice().reverse().findIndex(nonSeparatorPredicate);
+        return items.slice(firstCommandItemIndex, lastCommandItemIndex).filter((name, idx, items2) => {
+          if (nonSeparatorPredicate(name)) {
+            return true;
+          }
+          const isDuplicated = idx > 0 && items2[idx - 1] === name;
+          return !isDuplicated;
+        });
+      }
+      /**
+      * Creates a user-defined dropdown containing a toolbar with items.
+      *
+      * @param definition A definition of the nested toolbar dropdown.
+      * @param definition.label A label of the dropdown.
+      * @param definition.icon An icon of the drop-down. One of 'bold', 'plus', 'text', 'importExport', 'alignLeft',
+      * 'paragraph' or an SVG string. When `false` is passed, no icon will be used.
+      * @param definition.withText When set `true`, the label of the dropdown will be visible. See
+      * {@link module:ui/button/buttonview~ButtonView#withText} to learn more.
+      * @param definition.tooltip A tooltip of the dropdown button. See
+      * {@link module:ui/button/buttonview~ButtonView#tooltip} to learn more. Defaults to `true`.
+      * @param componentFactory Component factory used to create items
+      * of the nested toolbar.
+      */
+      _createNestedToolbarDropdown(definition, componentFactory, removeItems) {
+        let { label, icon, items, tooltip: tooltip2 = true, withText = false } = definition;
+        items = this._cleanItemsConfiguration(items, componentFactory, removeItems);
+        if (!items.length) {
+          return null;
+        }
+        const locale = this.locale;
+        const dropdownView = createDropdown(locale);
+        if (!label) {
+          logWarning("toolbarview-nested-toolbar-dropdown-missing-label", definition);
+        }
+        dropdownView.class = "ck-toolbar__nested-toolbar-dropdown";
+        dropdownView.buttonView.set({
+          label,
+          tooltip: tooltip2,
+          withText: !!withText
+        });
+        if (icon !== false) {
+          dropdownView.buttonView.icon = NESTED_TOOLBAR_ICONS[icon] || icon || icons.threeVerticalDots;
+        } else {
+          dropdownView.buttonView.withText = true;
+        }
+        addToolbarToDropdown(dropdownView, () => dropdownView.toolbarView._buildItemsFromConfig(items, componentFactory, removeItems));
+        return dropdownView;
+      }
+    }
+    class ItemsView extends View {
+      /**
+      * @inheritDoc
+      */
+      constructor(locale) {
+        super(locale);
+        /**
+        * A collection of items (buttons, dropdowns, etc.).
+        */
+        __publicField(this, "children");
+        this.children = this.createCollection();
+        this.setTemplate({
+          tag: "div",
+          attributes: {
+            class: [
+              "ck",
+              "ck-toolbar__items"
+            ]
+          },
+          children: this.children
+        });
+      }
+    }
+    class StaticLayout {
+      /**
+      * Creates an instance of the {@link module:ui/toolbar/toolbarview~StaticLayout} toolbar
+      * behavior.
+      *
+      * @param view An instance of the toolbar that this behavior is added to.
+      */
+      constructor(view) {
+        const bind2 = view.bindTemplate;
+        view.set("isVertical", false);
+        view.itemsView.children.bindTo(view.items).using((item) => item);
+        view.focusables.bindTo(view.items).using((item) => isFocusable(item) ? item : null);
+        view.extendTemplate({
+          attributes: {
+            class: [
+              // When vertical, the toolbar has an additional CSS class.
+              bind2.if("isVertical", "ck-toolbar_vertical")
+            ]
+          }
+        });
+      }
+      /**
+      * @inheritDoc
+      */
+      render() {
+      }
+      /**
+      * @inheritDoc
+      */
+      destroy() {
+      }
+    }
+    class DynamicGrouping {
+      /**
+      * Creates an instance of the {@link module:ui/toolbar/toolbarview~DynamicGrouping} toolbar
+      * behavior.
+      *
+      * @param view An instance of the toolbar that this behavior is added to.
+      */
+      constructor(view) {
+        /**
+        * A toolbar view this behavior belongs to.
+        */
+        __publicField(this, "view");
+        /**
+        * A collection of toolbar children.
+        */
+        __publicField(this, "viewChildren");
+        /**
+        * A collection of focusable toolbar elements.
+        */
+        __publicField(this, "viewFocusables");
+        /**
+        * A view containing toolbar items.
+        */
+        __publicField(this, "viewItemsView");
+        /**
+        * Toolbar focus tracker.
+        */
+        __publicField(this, "viewFocusTracker");
+        /**
+        * Toolbar locale.
+        */
+        __publicField(this, "viewLocale");
+        /**
+        * A subset of toolbar {@link module:ui/toolbar/toolbarview~ToolbarView#items}.
+        * Aggregates items that fit into a single row of the toolbar and were not {@link #groupedItems grouped}
+        * into a {@link #groupedItemsDropdown dropdown}. Items of this collection are displayed in the
+        * {@link module:ui/toolbar/toolbarview~ToolbarView#itemsView}.
+        *
+        * When none of the {@link module:ui/toolbar/toolbarview~ToolbarView#items} were grouped, it
+        * matches the {@link module:ui/toolbar/toolbarview~ToolbarView#items} collection in size and order.
+        */
+        __publicField(this, "ungroupedItems");
+        /**
+        * A subset of toolbar {@link module:ui/toolbar/toolbarview~ToolbarView#items}.
+        * A collection of the toolbar items that do not fit into a single row of the toolbar.
+        * Grouped items are displayed in a dedicated {@link #groupedItemsDropdown dropdown}.
+        *
+        * When none of the {@link module:ui/toolbar/toolbarview~ToolbarView#items} were grouped,
+        * this collection is empty.
+        */
+        __publicField(this, "groupedItems");
+        /**
+        * The dropdown that aggregates {@link #groupedItems grouped items} that do not fit into a single
+        * row of the toolbar. It is displayed on demand as the last of
+        * {@link module:ui/toolbar/toolbarview~ToolbarView#children toolbar children} and offers another
+        * (nested) toolbar which displays items that would normally overflow.
+        */
+        __publicField(this, "groupedItemsDropdown");
+        /**
+        * An instance of the resize observer that helps dynamically determine the geometry of the toolbar
+        * and manage items that do not fit into a single row.
+        *
+        * **Note:** Created in {@link #_enableGroupingOnResize}.
+        *
+        * @readonly
+        */
+        __publicField(this, "resizeObserver", null);
+        /**
+        * A cached value of the horizontal padding style used by {@link #_updateGrouping}
+        * to manage the {@link module:ui/toolbar/toolbarview~ToolbarView#items} that do not fit into
+        * a single toolbar line. This value can be reused between updates because it is unlikely that
+        * the padding will change and re–using `Window.getComputedStyle()` is expensive.
+        *
+        * @readonly
+        */
+        __publicField(this, "cachedPadding", null);
+        /**
+        * A flag indicating that an items grouping update has been queued (e.g. due to the toolbar being visible)
+        * and should be executed immediately the next time the toolbar shows up.
+        *
+        * @readonly
+        */
+        __publicField(this, "shouldUpdateGroupingOnNextResize", false);
+        /**
+        * Toolbar element.
+        *
+        * @readonly
+        */
+        __publicField(this, "viewElement");
+        this.view = view;
+        this.viewChildren = view.children;
+        this.viewFocusables = view.focusables;
+        this.viewItemsView = view.itemsView;
+        this.viewFocusTracker = view.focusTracker;
+        this.viewLocale = view.locale;
+        this.ungroupedItems = view.createCollection();
+        this.groupedItems = view.createCollection();
+        this.groupedItemsDropdown = this._createGroupedItemsDropdown();
+        view.itemsView.children.bindTo(this.ungroupedItems).using((item) => item);
+        this.ungroupedItems.on("change", this._updateFocusCyclableItems.bind(this));
+        view.children.on("change", this._updateFocusCyclableItems.bind(this));
+        view.items.on("change", (evt, changeData) => {
+          const index = changeData.index;
+          const added = Array.from(changeData.added);
+          for (const removedItem of changeData.removed) {
+            if (index >= this.ungroupedItems.length) {
+              this.groupedItems.remove(removedItem);
+            } else {
+              this.ungroupedItems.remove(removedItem);
+            }
+          }
+          for (let currentIndex = index; currentIndex < index + added.length; currentIndex++) {
+            const addedItem = added[currentIndex - index];
+            if (currentIndex > this.ungroupedItems.length) {
+              this.groupedItems.add(addedItem, currentIndex - this.ungroupedItems.length);
+            } else {
+              this.ungroupedItems.add(addedItem, currentIndex);
+            }
+          }
+          this._updateGrouping();
+        });
+        view.extendTemplate({
+          attributes: {
+            class: [
+              // To group items dynamically, the toolbar needs a dedicated CSS class.
+              "ck-toolbar_grouping"
+            ]
+          }
+        });
+      }
+      /**
+      * Enables dynamic items grouping based on the dimensions of the toolbar.
+      *
+      * @param view An instance of the toolbar that this behavior is added to.
+      */
+      render(view) {
+        this.viewElement = view.element;
+        this._enableGroupingOnResize();
+        this._enableGroupingOnMaxWidthChange(view);
+      }
+      /**
+      * Cleans up the internals used by this behavior.
+      */
+      destroy() {
+        this.groupedItemsDropdown.destroy();
+        this.resizeObserver.destroy();
+      }
+      /**
+      * When called, it will check if any of the {@link #ungroupedItems} do not fit into a single row of the toolbar,
+      * and it will move them to the {@link #groupedItems} when it happens.
+      *
+      * At the same time, it will also check if there is enough space in the toolbar for the first of the
+      * {@link #groupedItems} to be returned back to {@link #ungroupedItems} and still fit into a single row
+      * without the toolbar wrapping.
+      */
+      _updateGrouping() {
+        if (!this.viewElement.ownerDocument.body.contains(this.viewElement)) {
+          return;
+        }
+        if (!isVisible(this.viewElement)) {
+          this.shouldUpdateGroupingOnNextResize = true;
+          return;
+        }
+        const initialGroupedItemsCount = this.groupedItems.length;
+        let wereItemsGrouped;
+        while (this._areItemsOverflowing) {
+          this._groupLastItem();
+          wereItemsGrouped = true;
+        }
+        if (!wereItemsGrouped && this.groupedItems.length) {
+          while (this.groupedItems.length && !this._areItemsOverflowing) {
+            this._ungroupFirstItem();
+          }
+          if (this._areItemsOverflowing) {
+            this._groupLastItem();
+          }
+        }
+        if (this.groupedItems.length !== initialGroupedItemsCount) {
+          this.view.fire("groupedItemsUpdate");
+        }
+      }
+      /**
+      * Returns `true` when {@link module:ui/toolbar/toolbarview~ToolbarView#element} children visually overflow,
+      * for instance if the toolbar is narrower than its members. Returns `false` otherwise.
+      */
+      get _areItemsOverflowing() {
+        if (!this.ungroupedItems.length) {
+          return false;
+        }
+        const element = this.viewElement;
+        const uiLanguageDirection = this.viewLocale.uiLanguageDirection;
+        const lastChildRect = new Rect(element.lastChild);
+        const toolbarRect = new Rect(element);
+        if (!this.cachedPadding) {
+          const computedStyle = global$1.window.getComputedStyle(element);
+          const paddingProperty = uiLanguageDirection === "ltr" ? "paddingRight" : "paddingLeft";
+          this.cachedPadding = Number.parseInt(computedStyle[paddingProperty]);
+        }
+        if (uiLanguageDirection === "ltr") {
+          return lastChildRect.right > toolbarRect.right - this.cachedPadding;
+        } else {
+          return lastChildRect.left < toolbarRect.left + this.cachedPadding;
+        }
+      }
+      /**
+      * Enables the functionality that prevents {@link #ungroupedItems} from overflowing (wrapping to the next row)
+      * upon resize when there is little space available. Instead, the toolbar items are moved to the
+      * {@link #groupedItems} collection and displayed in a dropdown at the end of the row (which has its own nested toolbar).
+      *
+      * When called, the toolbar will automatically analyze the location of its {@link #ungroupedItems} and "group"
+      * them in the dropdown if necessary. It will also observe the browser window for size changes in
+      * the future and respond to them by grouping more items or reverting already grouped back, depending
+      * on the visual space available.
+      */
+      _enableGroupingOnResize() {
+        let previousWidth;
+        this.resizeObserver = new ResizeObserver$1(this.viewElement, (entry) => {
+          if (!previousWidth || previousWidth !== entry.contentRect.width || this.shouldUpdateGroupingOnNextResize) {
+            this.shouldUpdateGroupingOnNextResize = false;
+            this._updateGrouping();
+            previousWidth = entry.contentRect.width;
+          }
+        });
+        this._updateGrouping();
+      }
+      /**
+      * Enables the grouping functionality, just like {@link #_enableGroupingOnResize} but the difference is that
+      * it listens to the changes of {@link module:ui/toolbar/toolbarview~ToolbarView#maxWidth} instead.
+      */
+      _enableGroupingOnMaxWidthChange(view) {
+        view.on("change:maxWidth", () => {
+          this._updateGrouping();
+        });
+      }
+      /**
+      * When called, it will remove the last item from {@link #ungroupedItems} and move it back
+      * to the {@link #groupedItems} collection.
+      *
+      * The opposite of {@link #_ungroupFirstItem}.
+      */
+      _groupLastItem() {
+        if (!this.groupedItems.length) {
+          this.viewChildren.add(new ToolbarSeparatorView());
+          this.viewChildren.add(this.groupedItemsDropdown);
+          this.viewFocusTracker.add(this.groupedItemsDropdown.element);
+        }
+        this.groupedItems.add(this.ungroupedItems.remove(this.ungroupedItems.last), 0);
+      }
+      /**
+      * Moves the very first item belonging to {@link #groupedItems} back
+      * to the {@link #ungroupedItems} collection.
+      *
+      * The opposite of {@link #_groupLastItem}.
+      */
+      _ungroupFirstItem() {
+        this.ungroupedItems.add(this.groupedItems.remove(this.groupedItems.first));
+        if (!this.groupedItems.length) {
+          this.viewChildren.remove(this.groupedItemsDropdown);
+          this.viewChildren.remove(this.viewChildren.last);
+          this.viewFocusTracker.remove(this.groupedItemsDropdown.element);
+        }
+      }
+      /**
+      * Creates the {@link #groupedItemsDropdown} that hosts the members of the {@link #groupedItems}
+      * collection when there is not enough space in the toolbar to display all items in a single row.
+      */
+      _createGroupedItemsDropdown() {
+        const locale = this.viewLocale;
+        const t2 = locale.t;
+        const dropdown2 = createDropdown(locale);
+        dropdown2.class = "ck-toolbar__grouped-dropdown";
+        dropdown2.panelPosition = locale.uiLanguageDirection === "ltr" ? "sw" : "se";
+        addToolbarToDropdown(dropdown2, this.groupedItems);
+        dropdown2.buttonView.set({
+          label: t2("Show more items"),
+          tooltip: true,
+          tooltipPosition: locale.uiLanguageDirection === "rtl" ? "se" : "sw",
+          icon: icons.threeVerticalDots
+        });
+        return dropdown2;
+      }
+      /**
+      * Updates the {@link module:ui/toolbar/toolbarview~ToolbarView#focusables focus–cyclable items}
+      * collection so it represents the up–to–date state of the UI from the perspective of the user.
+      *
+      * For instance, the {@link #groupedItemsDropdown} can show up and hide but when it is visible,
+      * it must be subject to focus cycling in the toolbar.
+      *
+      * See the {@link module:ui/toolbar/toolbarview~ToolbarView#focusables collection} documentation
+      * to learn more about the purpose of this method.
+      */
+      _updateFocusCyclableItems() {
+        this.viewFocusables.clear();
+        this.ungroupedItems.map((item) => {
+          if (isFocusable(item)) {
+            this.viewFocusables.add(item);
+          }
+        });
+        if (this.groupedItems.length) {
+          this.viewFocusables.add(this.groupedItemsDropdown);
+        }
+      }
+    }
+    class SplitButtonView extends View {
+      /**
+      * @inheritDoc
+      */
+      constructor(locale, actionButton2) {
+        super(locale);
+        /**
+        * Collection of the child views inside of the split button {@link #element}.
+        */
+        __publicField(this, "children");
+        /**
+        * A main button of split button.
+        */
+        __publicField(this, "actionView");
+        /**
+        * A secondary button of split button that opens dropdown.
+        */
+        __publicField(this, "arrowView");
+        /**
+        * Instance of the {@link module:utils/keystrokehandler~KeystrokeHandler}. It manages
+        * keystrokes of the split button:
+        *
+        * * <kbd>▶</kbd> moves focus to arrow view when action view is focused,
+        * * <kbd>◀</kbd> moves focus to action view when arrow view is focused.
+        */
+        __publicField(this, "keystrokes");
+        /**
+        * Tracks information about DOM focus in the dropdown.
+        */
+        __publicField(this, "focusTracker");
+        const bind2 = this.bindTemplate;
+        this.set("class", void 0);
+        this.set("labelStyle", void 0);
+        this.set("icon", void 0);
+        this.set("isEnabled", true);
+        this.set("isOn", false);
+        this.set("isToggleable", false);
+        this.set("isVisible", true);
+        this.set("keystroke", void 0);
+        this.set("withKeystroke", false);
+        this.set("label", void 0);
+        this.set("tabindex", -1);
+        this.set("tooltip", false);
+        this.set("tooltipPosition", "s");
+        this.set("type", "button");
+        this.set("withText", false);
+        this.children = this.createCollection();
+        this.actionView = this._createActionView(actionButton2);
+        this.arrowView = this._createArrowView();
+        this.keystrokes = new KeystrokeHandler();
+        this.focusTracker = new FocusTracker();
+        this.setTemplate({
+          tag: "div",
+          attributes: {
+            class: [
+              "ck",
+              "ck-splitbutton",
+              bind2.to("class"),
+              bind2.if("isVisible", "ck-hidden", (value) => !value),
+              this.arrowView.bindTemplate.if("isOn", "ck-splitbutton_open")
+            ]
+          },
+          children: this.children
+        });
+      }
+      /**
+      * @inheritDoc
+      */
+      render() {
+        super.render();
+        this.children.add(this.actionView);
+        this.children.add(this.arrowView);
+        this.focusTracker.add(this.actionView.element);
+        this.focusTracker.add(this.arrowView.element);
+        this.keystrokes.listenTo(this.element);
+        this.keystrokes.set("arrowright", (evt, cancel2) => {
+          if (this.focusTracker.focusedElement === this.actionView.element) {
+            this.arrowView.focus();
+            cancel2();
+          }
+        });
+        this.keystrokes.set("arrowleft", (evt, cancel2) => {
+          if (this.focusTracker.focusedElement === this.arrowView.element) {
+            this.actionView.focus();
+            cancel2();
+          }
+        });
+      }
+      /**
+      * @inheritDoc
+      */
+      destroy() {
+        super.destroy();
+        this.focusTracker.destroy();
+        this.keystrokes.destroy();
+      }
+      /**
+      * Focuses the {@link module:ui/button/buttonview~ButtonView#element} of the action part of split button.
+      */
+      focus() {
+        this.actionView.focus();
+      }
+      /**
+      * Creates a {@link module:ui/button/buttonview~ButtonView} instance as {@link #actionView} and binds it with main split button
+      * attributes.
+      */
+      _createActionView(actionButton2) {
+        const actionView = actionButton2 || new ButtonView();
+        if (!actionButton2) {
+          actionView.bind("icon", "isEnabled", "isOn", "isToggleable", "keystroke", "label", "tabindex", "tooltip", "tooltipPosition", "type", "withText").to(this);
+        }
+        actionView.extendTemplate({
+          attributes: {
+            class: "ck-splitbutton__action"
+          }
+        });
+        actionView.delegate("execute").to(this);
+        return actionView;
+      }
+      /**
+      * Creates a {@link module:ui/button/buttonview~ButtonView} instance as {@link #arrowView} and binds it with main split button
+      * attributes.
+      */
+      _createArrowView() {
+        const arrowView = new ButtonView();
+        const bind2 = arrowView.bindTemplate;
+        arrowView.icon = dropdownArrowIcon;
+        arrowView.extendTemplate({
+          attributes: {
+            class: [
+              "ck-splitbutton__arrow"
+            ],
+            "data-cke-tooltip-disabled": bind2.to("isOn"),
+            "aria-haspopup": true,
+            "aria-expanded": bind2.to("isOn", (value) => String(value))
+          }
+        });
+        arrowView.bind("isEnabled").to(this);
+        arrowView.bind("label").to(this);
+        arrowView.bind("tooltip").to(this);
+        arrowView.delegate("execute").to(this, "open");
+        return arrowView;
+      }
+    }
+    function createDropdown(locale, ButtonClassOrInstance = DropdownButtonView) {
+      const buttonView = typeof ButtonClassOrInstance == "function" ? new ButtonClassOrInstance(locale) : ButtonClassOrInstance;
+      const panelView = new DropdownPanelView(locale);
+      const dropdownView = new DropdownView(locale, buttonView, panelView);
+      buttonView.bind("isEnabled").to(dropdownView);
+      if (buttonView instanceof SplitButtonView) {
+        buttonView.arrowView.bind("isOn").to(dropdownView, "isOpen");
+      } else {
+        buttonView.bind("isOn").to(dropdownView, "isOpen");
+      }
+      addDefaultBehaviors(dropdownView);
+      return dropdownView;
+    }
+    function addToolbarToDropdown(dropdownView, buttonsOrCallback, options = {}) {
+      dropdownView.extendTemplate({
+        attributes: {
+          class: [
+            "ck-toolbar-dropdown"
+          ]
+        }
+      });
+      if (dropdownView.isOpen) {
+        addToolbarToOpenDropdown(dropdownView, buttonsOrCallback, options);
+      } else {
+        dropdownView.once("change:isOpen", () => addToolbarToOpenDropdown(dropdownView, buttonsOrCallback, options), {
+          priority: "highest"
+        });
+      }
+      if (options.enableActiveItemFocusOnDropdownOpen) {
+        focusChildOnDropdownOpen(dropdownView, () => dropdownView.toolbarView.items.find((item) => item.isOn));
+      }
+    }
+    function addToolbarToOpenDropdown(dropdownView, buttonsOrCallback, options) {
+      const locale = dropdownView.locale;
+      const t2 = locale.t;
+      const toolbarView = dropdownView.toolbarView = new ToolbarView(locale);
+      const buttons = typeof buttonsOrCallback == "function" ? buttonsOrCallback() : buttonsOrCallback;
+      toolbarView.ariaLabel = options.ariaLabel || t2("Dropdown toolbar");
+      if (options.maxWidth) {
+        toolbarView.maxWidth = options.maxWidth;
+      }
+      if (options.class) {
+        toolbarView.class = options.class;
+      }
+      if (options.isCompact) {
+        toolbarView.isCompact = options.isCompact;
+      }
+      if (options.isVertical) {
+        toolbarView.isVertical = true;
+      }
+      if (buttons instanceof ViewCollection) {
+        toolbarView.items.bindTo(buttons).using((item) => item);
+      } else {
+        toolbarView.items.addMany(buttons);
+      }
+      dropdownView.panelView.children.add(toolbarView);
+      toolbarView.items.delegate("execute").to(dropdownView);
+    }
+    function addListToDropdown(dropdownView, itemsOrCallback, options = {}) {
+      if (dropdownView.isOpen) {
+        addListToOpenDropdown(dropdownView, itemsOrCallback, options);
+      } else {
+        dropdownView.once("change:isOpen", () => addListToOpenDropdown(dropdownView, itemsOrCallback, options), {
+          priority: "highest"
+        });
+      }
+      focusChildOnDropdownOpen(dropdownView, () => dropdownView.listView.items.find((item) => {
+        if (item instanceof ListItemView) {
+          return item.children.first.isOn;
+        }
+        return false;
+      }));
+    }
+    function addListToOpenDropdown(dropdownView, itemsOrCallback, options) {
+      const locale = dropdownView.locale;
+      const listView = dropdownView.listView = new ListView(locale);
+      const items = typeof itemsOrCallback == "function" ? itemsOrCallback() : itemsOrCallback;
+      listView.ariaLabel = options.ariaLabel;
+      listView.role = options.role;
+      bindViewCollectionItemsToDefinitions(dropdownView, listView.items, items, locale);
+      dropdownView.panelView.children.add(listView);
+      listView.items.delegate("execute").to(dropdownView);
+    }
+    function focusChildOnDropdownOpen(dropdownView, childSelectorCallback) {
+      dropdownView.on("change:isOpen", () => {
+        if (!dropdownView.isOpen) {
+          return;
+        }
+        const childToFocus = childSelectorCallback();
+        if (!childToFocus) {
+          return;
+        }
+        if (typeof childToFocus.focus === "function") {
+          childToFocus.focus();
+        } else {
+          logWarning("ui-dropdown-focus-child-on-open-child-missing-focus", {
+            view: childToFocus
+          });
+        }
+      }, {
+        priority: priorities.low - 10
+      });
+    }
+    function addDefaultBehaviors(dropdownView) {
+      closeDropdownOnClickOutside(dropdownView);
+      closeDropdownOnExecute(dropdownView);
+      closeDropdownOnBlur(dropdownView);
+      focusDropdownContentsOnArrows(dropdownView);
+      focusDropdownButtonOnClose(dropdownView);
+      focusDropdownPanelOnOpen(dropdownView);
+    }
+    function closeDropdownOnClickOutside(dropdownView) {
+      clickOutsideHandler({
+        emitter: dropdownView,
+        activator: () => dropdownView.isRendered && dropdownView.isOpen,
+        callback: () => {
+          dropdownView.isOpen = false;
+        },
+        contextElements: () => [
+          dropdownView.element,
+          ...dropdownView.focusTracker.elements
+        ]
+      });
+    }
+    function closeDropdownOnExecute(dropdownView) {
+      dropdownView.on("execute", (evt) => {
+        if (evt.source instanceof SwitchButtonView) {
+          return;
+        }
+        dropdownView.isOpen = false;
+      });
+    }
+    function closeDropdownOnBlur(dropdownView) {
+      dropdownView.focusTracker.on("change:isFocused", (evt, name, isFocused) => {
+        if (isFocused || !dropdownView.isOpen) {
+          return;
+        }
+        dropdownView.isOpen = false;
+      });
+    }
+    function focusDropdownContentsOnArrows(dropdownView) {
+      dropdownView.keystrokes.set("arrowdown", (data, cancel2) => {
+        if (dropdownView.isOpen) {
+          dropdownView.panelView.focus();
+          cancel2();
+        }
+      });
+      dropdownView.keystrokes.set("arrowup", (data, cancel2) => {
+        if (dropdownView.isOpen) {
+          dropdownView.panelView.focusLast();
+          cancel2();
+        }
+      });
+    }
+    function focusDropdownButtonOnClose(dropdownView) {
+      dropdownView.on("change:isOpen", (evt, name, isOpen) => {
+        if (isOpen) {
+          return;
+        }
+        const elements2 = dropdownView.focusTracker.elements;
+        if (elements2.some((element) => element.contains(global$1.document.activeElement))) {
+          dropdownView.buttonView.focus();
+        }
+      });
+    }
+    function focusDropdownPanelOnOpen(dropdownView) {
+      dropdownView.on("change:isOpen", (evt, name, isOpen) => {
+        if (!isOpen) {
+          return;
+        }
+        dropdownView.panelView.focus();
+      }, {
+        priority: "low"
+      });
+    }
+    function bindViewCollectionItemsToDefinitions(dropdownView, listItems, definitions, locale) {
+      listItems.on("change", () => {
+        const listItemButtons = [
+          ...listItems
+        ].reduce((acc, item) => {
+          if (item instanceof ListItemView && item.children.first instanceof ListItemButtonView) {
+            acc.push(item.children.first);
+          }
+          return acc;
+        }, []);
+        const hasAnyCheckboxOnList = listItemButtons.some((button) => button.isToggleable);
+        listItemButtons.forEach((item) => {
+          item.hasCheckSpace = hasAnyCheckboxOnList;
+        });
+      });
+      listItems.bindTo(definitions).using((def) => {
+        if (def.type === "separator") {
+          return new ListSeparatorView(locale);
+        } else if (def.type === "group") {
+          const groupView = new ListItemGroupView(locale);
+          groupView.set({
+            label: def.label
+          });
+          bindViewCollectionItemsToDefinitions(dropdownView, groupView.items, def.items, locale);
+          groupView.items.delegate("execute").to(dropdownView);
+          return groupView;
+        } else if (def.type === "button" || def.type === "switchbutton") {
+          const isToggleable = def.model.role === "menuitemcheckbox" || def.model.role === "menuitemradio";
+          const listItemView = new ListItemView(locale);
+          let buttonView;
+          if (def.type === "button") {
+            buttonView = new ListItemButtonView(locale);
+            buttonView.set({
+              isToggleable
+            });
+          } else {
+            buttonView = new SwitchButtonView(locale);
+          }
+          buttonView.bind(...Object.keys(def.model)).to(def.model);
+          buttonView.delegate("execute").to(listItemView);
+          listItemView.children.add(buttonView);
+          return listItemView;
+        }
+        return null;
+      });
+    }
+    const createLabeledInputText = (labeledFieldView, viewUid, statusUid) => {
+      const inputView = new InputTextView(labeledFieldView.locale);
+      inputView.set({
+        id: viewUid,
+        ariaDescribedById: statusUid
+      });
+      inputView.bind("isReadOnly").to(labeledFieldView, "isEnabled", (value) => !value);
+      inputView.bind("hasError").to(labeledFieldView, "errorText", (value) => !!value);
+      inputView.on("input", () => {
+        labeledFieldView.errorText = null;
+      });
+      labeledFieldView.bind("isEmpty", "isFocused", "placeholder").to(inputView);
+      return inputView;
+    };
+    class ComponentFactory {
+      /**
+      * Creates an instance of the factory.
+      *
+      * @param editor The editor instance.
+      */
+      constructor(editor2) {
+        /**
+        * The editor instance that the factory belongs to.
+        */
+        __publicField(this, "editor");
+        /**
+        * Registered component factories.
+        */
+        __publicField(this, "_components", /* @__PURE__ */ new Map());
+        this.editor = editor2;
+      }
+      /**
+      * Returns an iterator of registered component names. Names are returned in lower case.
+      */
+      *names() {
+        for (const value of this._components.values()) {
+          yield value.originalName;
+        }
+      }
+      /**
+      * Registers a component factory function that will be used by the
+      * {@link #create create} method and called with the
+      * {@link module:core/editor/editor~Editor#locale editor locale} as an argument,
+      * allowing localization of the {@link module:ui/view~View view}.
+      *
+      * @param name The name of the component.
+      * @param callback The callback that returns the component.
+      */
+      add(name, callback) {
+        this._components.set(getNormalized(name), {
+          callback,
+          originalName: name
+        });
+      }
+      /**
+      * Creates an instance of a component registered in the factory under a specific name.
+      *
+      * When called, the {@link module:core/editor/editor~Editor#locale editor locale} is passed to
+      * the previously {@link #add added} factory function, allowing localization of the
+      * {@link module:ui/view~View view}.
+      *
+      * @param name The name of the component.
+      * @returns The instantiated component view.
+      */
+      create(name) {
+        if (!this.has(name)) {
+          throw new CKEditorError("componentfactory-item-missing", this, {
+            name
+          });
+        }
+        return this._components.get(getNormalized(name)).callback(this.editor.locale);
+      }
+      /**
+      * Checks if a component of a given name is registered in the factory.
+      *
+      * @param name The name of the component.
+      */
+      has(name) {
+        return this._components.has(getNormalized(name));
+      }
+    }
+    function getNormalized(name) {
+      return String(name).toLowerCase();
+    }
     const BALLOON_CLASS = "ck-tooltip";
     const _TooltipManager = class _TooltipManager extends (/* @__PURE__ */ DomEmitterMixin()) {
       /**
       * Creates an instance of the tooltip manager.
       */
-      constructor(editor) {
+      constructor(editor2) {
         super();
         /**
         * The view rendering text of the tooltip.
@@ -66817,12 +66817,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         */
         __publicField(this, "_unpinTooltipDebounced");
         __publicField(this, "_watchdogExcluded");
-        _TooltipManager._editors.add(editor);
+        _TooltipManager._editors.add(editor2);
         if (_TooltipManager._instance) {
           return _TooltipManager._instance;
         }
         _TooltipManager._instance = this;
-        this.tooltipTextView = new View(editor.locale);
+        this.tooltipTextView = new View(editor2.locale);
         this.tooltipTextView.set("text", "");
         this.tooltipTextView.setTemplate({
           tag: "span",
@@ -66838,7 +66838,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             }
           ]
         });
-        this.balloonPanelView = new BalloonPanelView(editor.locale);
+        this.balloonPanelView = new BalloonPanelView(editor2.locale);
         this.balloonPanelView.class = BALLOON_CLASS;
         this.balloonPanelView.content.add(this.tooltipTextView);
         this._mutationObserver = createMutationObserver(() => {
@@ -66873,10 +66873,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       *
       * @param editor The editor the manager was created for.
       */
-      destroy(editor) {
-        const editorBodyViewCollection = editor.ui.view && editor.ui.view.body;
-        _TooltipManager._editors.delete(editor);
-        this.stopListening(editor.ui);
+      destroy(editor2) {
+        const editorBodyViewCollection = editor2.ui.view && editor2.ui.view.body;
+        _TooltipManager._editors.delete(editor2);
+        this.stopListening(editor2.ui);
         if (editorBodyViewCollection && editorBodyViewCollection.has(this.balloonPanelView)) {
           editorBodyViewCollection.remove(this.balloonPanelView);
         }
@@ -67027,8 +67027,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           positions: _TooltipManager.getPositioningFunctions(position)
         });
         this._mutationObserver.attach(targetDomElement);
-        for (const editor of _TooltipManager._editors) {
-          this.listenTo(editor.ui, "update", this._updateTooltipPosition.bind(this), {
+        for (const editor2 of _TooltipManager._editors) {
+          this.listenTo(editor2.ui, "update", this._updateTooltipPosition.bind(this), {
             priority: "low"
           });
         }
@@ -67042,8 +67042,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this._unpinTooltipDebounced.cancel();
         this._pinTooltipDebounced.cancel();
         this.balloonPanelView.unpin();
-        for (const editor of _TooltipManager._editors) {
-          this.stopListening(editor.ui, "update");
+        for (const editor2 of _TooltipManager._editors) {
+          this.stopListening(editor2.ui, "update");
         }
         this._currentElementWithTooltip = null;
         this._currentTooltipPosition = null;
@@ -67134,7 +67134,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       *
       * @param editor
       */
-      constructor(editor) {
+      constructor(editor2) {
         super();
         /**
         * Editor instance the helper was created for.
@@ -67154,13 +67154,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * right element whether the user is typing or using the UI.
         */
         __publicField(this, "_lastFocusedEditableElement");
-        this.editor = editor;
+        this.editor = editor2;
         this._balloonView = null;
         this._lastFocusedEditableElement = null;
         this._showBalloonThrottled = throttle(this._showBalloon.bind(this), 50, {
           leading: true
         });
-        editor.on("ready", this._handleEditorReady.bind(this));
+        editor2.on("ready", this._handleEditorReady.bind(this));
       }
       /**
       * Destroys the "powered by" helper along with its view.
@@ -67178,16 +67178,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Enables "powered by" label once the editor (ui) is ready.
       */
       _handleEditorReady() {
-        const editor = this.editor;
-        const forceVisible = !!editor.config.get("ui.poweredBy.forceVisible");
+        const editor2 = this.editor;
+        const forceVisible = !!editor2.config.get("ui.poweredBy.forceVisible");
         /* istanbul ignore next -- @preserve */
-        if (!forceVisible && verifyLicense(editor.config.get("licenseKey")) === "VALID") {
+        if (!forceVisible && verifyLicense(editor2.config.get("licenseKey")) === "VALID") {
           return;
         }
-        if (!editor.ui.view) {
+        if (!editor2.ui.view) {
           return;
         }
-        editor.ui.focusTracker.on("change:isFocused", (evt, data, isFocused) => {
+        editor2.ui.focusTracker.on("change:isFocused", (evt, data, isFocused) => {
           this._updateLastFocusedEditableElement();
           if (isFocused) {
             this._showBalloon();
@@ -67195,13 +67195,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             this._hideBalloon();
           }
         });
-        editor.ui.focusTracker.on("change:focusedElement", (evt, data, focusedElement) => {
+        editor2.ui.focusTracker.on("change:focusedElement", (evt, data, focusedElement) => {
           this._updateLastFocusedEditableElement();
           if (focusedElement) {
             this._showBalloon();
           }
         });
-        editor.ui.on("update", () => {
+        editor2.ui.on("update", () => {
           this._showBalloonThrottled();
         });
       }
@@ -67210,16 +67210,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * with the "powered by" view inside ready for positioning.
       */
       _createBalloonView() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const balloon = this._balloonView = new BalloonPanelView();
-        const poweredByConfig = getNormalizedConfig(editor);
-        const view = new PoweredByView(editor.locale, poweredByConfig.label);
+        const poweredByConfig = getNormalizedConfig(editor2);
+        const view = new PoweredByView(editor2.locale, poweredByConfig.label);
         balloon.content.add(view);
         balloon.set({
           class: "ck-powered-by-balloon"
         });
-        editor.ui.view.body.add(balloon);
-        editor.ui.focusTracker.add(balloon.element);
+        editor2.ui.view.body.add(balloon);
         this._balloonView = balloon;
       }
       /**
@@ -67249,15 +67248,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Updates the {@link #_lastFocusedEditableElement} based on the state of the global focus tracker.
       */
       _updateLastFocusedEditableElement() {
-        const editor = this.editor;
-        const isFocused = editor.ui.focusTracker.isFocused;
-        const focusedElement = editor.ui.focusTracker.focusedElement;
+        const editor2 = this.editor;
+        const isFocused = editor2.ui.focusTracker.isFocused;
+        const focusedElement = editor2.ui.focusTracker.focusedElement;
         if (!isFocused || !focusedElement) {
           this._lastFocusedEditableElement = null;
           return;
         }
-        const editableEditorElements = Array.from(editor.ui.getEditableElementsNames()).map((name) => {
-          return editor.ui.getEditableElement(name);
+        const editableEditorElements = Array.from(editor2.ui.getEditableElementsNames()).map((name) => {
+          return editor2.ui.getEditableElement(name);
         });
         if (editableEditorElements.includes(focusedElement)) {
           this._lastFocusedEditableElement = focusedElement;
@@ -67302,7 +67301,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             {
               tag: "a",
               attributes: {
-                href: "https://ckeditor.com/?utm_source=ckeditor&utm_medium=referral&utm_campaign=701Dn000000hVgmIAE_powered_by_ckeditor_logo",
+                href: "https://ckeditor.com/powered-by-ckeditor/?utm_source=ckeditor&utm_medium=referral&utm_campaign=701Dn000000hVgmIAE_powered_by_ckeditor_logo",
                 target: "_blank",
                 tabindex: "-1"
               },
@@ -67331,8 +67330,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         });
       }
     }
-    function getBalloonAttachOptions(editor, focusedEditableElement) {
-      const poweredByConfig = getNormalizedConfig(editor);
+    function getBalloonAttachOptions(editor2, focusedEditableElement) {
+      const poweredByConfig = getNormalizedConfig(editor2);
       const positioningFunction = poweredByConfig.side === "right" ? getLowerRightCornerPosition(focusedEditableElement, poweredByConfig) : getLowerLeftCornerPosition(focusedEditableElement, poweredByConfig);
       return {
         target: focusedEditableElement,
@@ -67378,15 +67377,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         };
       };
     }
-    function getNormalizedConfig(editor) {
-      const userConfig = editor.config.get("ui.poweredBy");
+    function getNormalizedConfig(editor2) {
+      const userConfig = editor2.config.get("ui.poweredBy");
       const position = userConfig && userConfig.position || "border";
       return {
         position,
         label: DEFAULT_LABEL,
         verticalOffset: position === "inside" ? 5 : 0,
         horizontalOffset: 5,
-        side: editor.locale.contentLanguageDirection === "ltr" ? "right" : "left",
+        side: editor2.locale.contentLanguageDirection === "ltr" ? "right" : "left",
         ...userConfig
       };
     }
@@ -67398,7 +67397,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
+      constructor(editor2) {
         /**
         * The editor instance.
         */
@@ -67407,8 +67406,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * The view that aggregates all `aria-live` regions.
         */
         __publicField(this, "view");
-        this.editor = editor;
-        editor.once("ready", () => {
+        this.editor = editor2;
+        editor2.once("ready", () => {
           for (const politeness of Object.values(AriaLiveAnnouncerPoliteness)) {
             this.announce("", politeness);
           }
@@ -67428,20 +67427,20 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
        * ```
       */
       announce(announcement, attributes = AriaLiveAnnouncerPoliteness.POLITE) {
-        const editor = this.editor;
-        if (!editor.ui.view) {
+        const editor2 = this.editor;
+        if (!editor2.ui.view) {
           return;
         }
         if (!this.view) {
-          this.view = new AriaLiveAnnouncerView(editor.locale);
-          editor.ui.view.body.add(this.view);
+          this.view = new AriaLiveAnnouncerView(editor2.locale);
+          editor2.ui.view.body.add(this.view);
         }
         const { politeness, isUnsafeHTML } = typeof attributes === "string" ? {
           politeness: attributes
         } : attributes;
         let politenessRegionView = this.view.regionViews.find((view) => view.politeness === politeness);
         if (!politenessRegionView) {
-          politenessRegionView = new AriaLiveAnnouncerRegionView(editor, politeness);
+          politenessRegionView = new AriaLiveAnnouncerRegionView(editor2, politeness);
           this.view.regionViews.add(politenessRegionView);
         }
         politenessRegionView.announce({
@@ -67471,8 +67470,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
     }
     class AriaLiveAnnouncerRegionView extends View {
-      constructor(editor, politeness) {
-        super(editor.locale);
+      constructor(editor2, politeness) {
+        super(editor2.locale);
         /**
         * Current politeness level of the region.
         */
@@ -67503,14 +67502,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             }
           ]
         });
-        editor.on("destroy", () => {
+        editor2.on("destroy", () => {
           if (this._pruneAnnouncementsInterval !== null) {
             clearInterval(this._pruneAnnouncementsInterval);
             this._pruneAnnouncementsInterval = null;
           }
         });
         this.politeness = politeness;
-        this._domConverter = editor.data.htmlProcessor.domConverter;
+        this._domConverter = editor2.data.htmlProcessor.domConverter;
         this._pruneAnnouncementsInterval = setInterval(() => {
           if (this.element && this._listElement.firstChild) {
             this._listElement.firstChild.remove();
@@ -67659,16 +67658,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         let isKeyPressed = false;
         menuBarView.on("change:isOpen", (_2, evt, isOpen) => {
           if (!isOpen) {
-            menuBarView.isFocusBorderEnabled = false;
+            if (!isKeyPressed) {
+              menuBarView.isFocusBorderEnabled = false;
+            }
             isKeyPressed = false;
           }
-        });
-        menuBarView.listenTo(menuBarView.element, "click", () => {
-          if (menuBarView.isOpen && menuBarView.element.matches(":focus-within")) {
-            menuBarView.isFocusBorderEnabled = true;
-          }
-        }, {
-          useCapture: true
         });
         menuBarView.listenTo(menuBarView.element, "keydown", () => {
           isKeyPressed = true;
@@ -67728,9 +67722,6 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       openOnButtonClick(menuView) {
         menuView.buttonView.on("execute", () => {
           menuView.isOpen = true;
-          if (menuView.parentMenuView) {
-            menuView.panelView.focus();
-          }
         });
       },
       /**
@@ -67739,6 +67730,19 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       toggleOnButtonClick(menuView) {
         menuView.buttonView.on("execute", () => {
           menuView.isOpen = !menuView.isOpen;
+        });
+      },
+      /**
+      * Opens the menu and focuses the panel content upon pressing the Enter key.
+      */
+      openAndFocusOnEnterKeyPress(menuView) {
+        menuView.keystrokes.set("enter", (data, cancel2) => {
+          if (menuView.focusTracker.focusedElement !== menuView.buttonView.element) {
+            return;
+          }
+          menuView.isOpen = true;
+          menuView.panelView.focus();
+          cancel2();
         });
       },
       /**
@@ -68429,7 +68433,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       *
       * @param editor The editor instance.
       */
-      constructor(editor) {
+      constructor(editor2) {
         super();
         /**
         * The editor that the UI belongs to.
@@ -68481,15 +68485,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * The last focused element to which focus should return on `Esc` press.
         */
         __publicField(this, "_lastFocusedForeignElement", null);
-        const editingView = editor.editing.view;
-        this.editor = editor;
-        this.componentFactory = new ComponentFactory(editor);
+        const editingView = editor2.editing.view;
+        this.editor = editor2;
+        this.componentFactory = new ComponentFactory(editor2);
         this.focusTracker = new FocusTracker();
-        this.tooltipManager = new TooltipManager(editor);
-        this.poweredBy = new PoweredBy(editor);
-        this.ariaLiveAnnouncer = new AriaLiveAnnouncer(editor);
+        this.tooltipManager = new TooltipManager(editor2);
+        this.poweredBy = new PoweredBy(editor2);
+        this.ariaLiveAnnouncer = new AriaLiveAnnouncer(editor2);
         this.set("viewportOffset", this._readViewportOffsetFromConfig());
         this.once("ready", () => {
+          this._bindBodyCollectionWithFocusTracker();
           this.isReady = true;
         });
         this.listenTo(editingView.document, "layoutChanged", this.update.bind(this));
@@ -68713,12 +68718,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Only top property is currently supported.
       */
       _readViewportOffsetFromConfig() {
-        const editor = this.editor;
-        const viewportOffsetConfig = editor.config.get("ui.viewportOffset");
+        const editor2 = this.editor;
+        const viewportOffsetConfig = editor2.config.get("ui.viewportOffset");
         if (viewportOffsetConfig) {
           return viewportOffsetConfig;
         }
-        const legacyOffsetConfig = editor.config.get("toolbar.viewportTopOffset");
+        const legacyOffsetConfig = editor2.config.get("toolbar.viewportTopOffset");
         if (legacyOffsetConfig) {
           console.warn("editor-ui-deprecated-viewport-offset-config: The `toolbar.vieportTopOffset` configuration option is deprecated. It will be removed from future CKEditor versions. Use `ui.viewportOffset.top` instead.");
           return {
@@ -68735,10 +68740,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * to allow users navigate across the UI.
       */
       _initFocusTracking() {
-        const editor = this.editor;
-        editor.editing.view;
+        const editor2 = this.editor;
         let candidateDefinitions;
-        editor.keystrokes.set("Alt+F10", (data, cancel2) => {
+        editor2.keystrokes.set("Alt+F10", (data, cancel2) => {
           this._saveLastFocusedForeignElement();
           const currentFocusedToolbarDefinition = this._getCurrentFocusedToolbarDefinition();
           if (!currentFocusedToolbarDefinition || !candidateDefinitions) {
@@ -68756,7 +68760,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
           cancel2();
         });
-        editor.keystrokes.set("Esc", (data, cancel2) => {
+        editor2.keystrokes.set("Esc", (data, cancel2) => {
           const focusedToolbarDef = this._getCurrentFocusedToolbarDefinition();
           if (!focusedToolbarDef) {
             return;
@@ -68765,7 +68769,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             this._lastFocusedForeignElement.focus();
             this._lastFocusedForeignElement = null;
           } else {
-            editor.editing.view.focus();
+            editor2.editing.view.focus();
           }
           if (focusedToolbarDef.options.afterBlur) {
             focusedToolbarDef.options.afterBlur();
@@ -68853,6 +68857,21 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         data.viewportOffset.bottom += configuredViewportOffset.bottom;
         data.viewportOffset.left += configuredViewportOffset.left;
         data.viewportOffset.right += configuredViewportOffset.right;
+      }
+      /**
+      * Ensures that the focus tracker is aware of all views' DOM elements in the body collection.
+      */
+      _bindBodyCollectionWithFocusTracker() {
+        const body = this.view.body;
+        for (const view of body) {
+          this.focusTracker.add(view.element);
+        }
+        body.on("add", (evt, view) => {
+          this.focusTracker.add(view.element);
+        });
+        body.on("remove", (evt, view) => {
+          this.focusTracker.remove(view.element);
+        });
       }
     }
     function getToolbarDefinitionWeight(toolbarDef) {
@@ -69103,25 +69122,22 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * {@link module:ui/editableui/editableuiview~EditableUIView}
       * will create it. Otherwise, the existing element will be used.
       * @param options Additional configuration of the view.
-      * @param options.label A function that gets called with the instance of this view as an argument
-      * and should return a string that represents the label of the editable for assistive technologies. If not provided,
-      * a default label generator is used.
+      * @param options.label The label of the editable for assistive technologies. If not provided, a default label is used or,
+      * the existing `aria-label` attribute value from the specified `editableElement` is preserved.
       */
       constructor(locale, editingView, editableElement, options = {}) {
         super(locale, editingView, editableElement);
         /**
-        * A function that gets called with the instance of this view as an argument and should return a string that
-        * represents the label of the editable for assistive technologies.
+        * The cached options object passed to the constructor.
         */
-        __publicField(this, "_generateLabel");
-        const t2 = locale.t;
+        __publicField(this, "_options");
+        this._options = options;
         this.extendTemplate({
           attributes: {
             role: "textbox",
             class: "ck-editor__editable_inline"
           }
         });
-        this._generateLabel = options.label || (() => t2("Editor editing area: %0", this.name));
       }
       /**
       * @inheritDoc
@@ -69131,8 +69147,30 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         const editingView = this._editingView;
         editingView.change((writer) => {
           const viewRoot = editingView.document.getRoot(this.name);
-          writer.setAttribute("aria-label", this._generateLabel(this), viewRoot);
+          writer.setAttribute("aria-label", this.getEditableAriaLabel(), viewRoot);
         });
+      }
+      /**
+      * Returns a normalized label for the editable view based on the environment.
+      */
+      getEditableAriaLabel() {
+        const t2 = this.locale.t;
+        const label = this._options.label;
+        const editableElement = this._editableElement;
+        const editableName = this.name;
+        if (typeof label == "string") {
+          return label;
+        } else if (typeof label === "object") {
+          return label[editableName];
+        } else if (typeof label === "function") {
+          return label(this);
+        } else if (editableElement) {
+          const existingLabel = editableElement.getAttribute("aria-label");
+          if (existingLabel) {
+            return existingLabel;
+          }
+        }
+        return t2("Rich Text Editor. Editing area: %0", editableName);
       }
     }
     class Model extends (/* @__PURE__ */ ObservableMixin()) {
@@ -69157,8 +69195,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         /**
         * The {@link module:utils/dom/position~Options#limiter position limiter}
         * for the {@link #view balloon}, used when no `limiter` has been passed into {@link #add}
@@ -69200,6 +69238,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
           return null;
         };
+        this.decorate("getPositionOptions");
         this.set("visibleView", null);
         this.set("_numberOfStacks", 0);
         this.set("_singleViewMode", false);
@@ -69337,8 +69376,26 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (position) {
           this._visibleStack.get(this.visibleView).position = position;
         }
-        this.view.pin(this._getBalloonPosition());
+        this.view.pin(this.getPositionOptions());
         this._fakePanelsView.updatePosition();
+      }
+      /**
+      * Returns position options of the last view in the stack.
+      * This keeps the balloon in the same position when the view is changed.
+      */
+      getPositionOptions() {
+        let position = Array.from(this._visibleStack.values()).pop().position;
+        if (position) {
+          if (!position.limiter) {
+            position = Object.assign({}, position, {
+              limiter: this.positionLimiter
+            });
+          }
+          position = Object.assign({}, position, {
+            viewportOffsetConfig: this.editor.ui.viewportOffset
+          });
+        }
+        return position;
       }
       /**
       * Shows the last view from the stack of a given ID.
@@ -69360,7 +69417,6 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       _createPanelView() {
         this._view = new BalloonPanelView(this.editor.locale);
         this.editor.ui.view.body.add(this._view);
-        this.editor.ui.focusTracker.add(this._view.element);
         this._rotatorView = this._createRotatorView();
         this._fakePanelsView = this._createFakePanelsView();
       }
@@ -69464,29 +69520,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this.view.withArrow = withArrow;
         this._rotatorView.showView(view);
         this.visibleView = view;
-        this.view.pin(this._getBalloonPosition());
+        this.view.pin(this.getPositionOptions());
         this._fakePanelsView.updatePosition();
         if (singleViewMode) {
           this._singleViewMode = true;
         }
-      }
-      /**
-      * Returns position options of the last view in the stack.
-      * This keeps the balloon in the same position when the view is changed.
-      */
-      _getBalloonPosition() {
-        let position = Array.from(this._visibleStack.values()).pop().position;
-        if (position) {
-          if (!position.limiter) {
-            position = Object.assign({}, position, {
-              limiter: this.positionLimiter
-            });
-          }
-          position = Object.assign({}, position, {
-            viewportOffsetConfig: this.editor.ui.viewportOffset
-          });
-        }
-        return position;
       }
     }
     class RotatorView extends View {
@@ -70062,6 +70100,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           MenuBarMenuBehaviors.openOnButtonClick(this);
           MenuBarMenuBehaviors.openOnArrowRightKey(this);
           MenuBarMenuBehaviors.closeOnArrowLeftKey(this);
+          MenuBarMenuBehaviors.openAndFocusOnEnterKeyPress(this);
           MenuBarMenuBehaviors.closeOnParentClose(this);
         }
       }
@@ -70572,13 +70611,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param undoStepSize The maximum number of atomic changes
       * which can be contained in one batch in the command buffer.
       */
-      constructor(editor, undoStepSize) {
-        super(editor);
+      constructor(editor2, undoStepSize) {
+        super(editor2);
         /**
         * Typing's change buffer used to group subsequent changes into batches.
         */
         __publicField(this, "_buffer");
-        this._buffer = new ChangeBuffer(editor.model, undoStepSize);
+        this._buffer = new ChangeBuffer(editor2.model, undoStepSize);
         this._isEnabledBasedOnSelection = false;
       }
       /**
@@ -70727,16 +70766,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const model = editor.model;
-        const view = editor.editing.view;
-        const mapper = editor.editing.mapper;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const view = editor2.editing.view;
+        const mapper = editor2.editing.mapper;
         const modelSelection = model.document.selection;
-        this._compositionQueue = new CompositionQueue(editor);
+        this._compositionQueue = new CompositionQueue(editor2);
         view.addObserver(InsertTextObserver);
-        const insertTextCommand = new InsertTextCommand(editor, editor.config.get("typing.undoStep") || 20);
-        editor.commands.add("insertText", insertTextCommand);
-        editor.commands.add("input", insertTextCommand);
+        const insertTextCommand = new InsertTextCommand(editor2, editor2.config.get("typing.undoStep") || 20);
+        editor2.commands.add("insertText", insertTextCommand);
+        editor2.commands.add("input", insertTextCommand);
         this.listenTo(view.document, "insertText", (evt, data) => {
           if (!view.document.isComposing) {
             data.preventDefault();
@@ -70780,7 +70819,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (env.isAndroid && view.document.isComposing) {
             this._compositionQueue.push(commandData);
           } else {
-            editor.execute("insertText", commandData);
+            editor2.execute("insertText", commandData);
             view.scrollToTheSelection();
           }
         });
@@ -70858,7 +70897,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
+      constructor(editor2) {
         /**
         * The editor instance.
         */
@@ -70875,7 +70914,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * A set of model elements. The composition happened in those elements. It's used for mutations check.
         */
         __publicField(this, "_compositionElements", /* @__PURE__ */ new Set());
-        this.editor = editor;
+        this.editor = editor2;
       }
       /**
       * Destroys the helper object.
@@ -70932,20 +70971,20 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param reason Used only for debugging.
       */
       flush(reason) {
-        const editor = this.editor;
-        const model = editor.model;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const view = editor2.editing.view;
         this.flushDebounced.cancel();
         if (!this._queue.length) {
           return;
         }
-        const insertTextCommand = editor.commands.get("insertText");
+        const insertTextCommand = editor2.commands.get("insertText");
         const buffer = insertTextCommand.buffer;
         model.enqueueChange(buffer.batch, () => {
           buffer.lock();
           while (this._queue.length) {
             const commandData = this.shift();
-            editor.execute("insertText", commandData);
+            editor2.execute("insertText", commandData);
           }
           buffer.unlock();
         });
@@ -70999,8 +71038,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param direction The directionality of the delete describing in what direction it
       * should consume the content when the selection is collapsed.
       */
-      constructor(editor, direction) {
-        super(editor);
+      constructor(editor2, direction) {
+        super(editor2);
         /**
         * The directionality of the delete describing in what direction it should
         * consume the content when the selection is collapsed.
@@ -71011,7 +71050,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         */
         __publicField(this, "_buffer");
         this.direction = direction;
-        this._buffer = new ChangeBuffer(editor.model, editor.config.get("typing.undoStep"));
+        this._buffer = new ChangeBuffer(editor2.model, editor2.config.get("typing.undoStep"));
         this._isEnabledBasedOnSelection = false;
       }
       /**
@@ -71403,16 +71442,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
-        const modelDocument = editor.model.document;
+        const modelDocument = editor2.model.document;
         view.addObserver(DeleteObserver);
         this._undoOnBackspace = false;
-        const deleteForwardCommand = new DeleteCommand(editor, "forward");
-        editor.commands.add("deleteForward", deleteForwardCommand);
-        editor.commands.add("forwardDelete", deleteForwardCommand);
-        editor.commands.add("delete", new DeleteCommand(editor, "backward"));
+        const deleteForwardCommand = new DeleteCommand(editor2, "forward");
+        editor2.commands.add("deleteForward", deleteForwardCommand);
+        editor2.commands.add("forwardDelete", deleteForwardCommand);
+        editor2.commands.add("delete", new DeleteCommand(editor2, "backward"));
         this.listenTo(viewDocument, "delete", (evt, data) => {
           if (!viewDocument.isComposing) {
             data.preventDefault();
@@ -71424,13 +71463,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           };
           if (unit == "selection") {
             const modelRanges = Array.from(selectionToRemove.getRanges()).map((viewRange) => {
-              return editor.editing.mapper.toModelRange(viewRange);
+              return editor2.editing.mapper.toModelRange(viewRange);
             });
-            commandData.selection = editor.model.createSelection(modelRanges);
+            commandData.selection = editor2.model.createSelection(modelRanges);
           } else {
             commandData.unit = unit;
           }
-          editor.execute(commandName, commandData);
+          editor2.execute(commandName, commandData);
           view.scrollToTheSelection();
         }, {
           priority: "low"
@@ -71439,7 +71478,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           this.listenTo(viewDocument, "delete", (evt, data) => {
             if (this._undoOnBackspace && data.direction == "backward" && data.sequence == 1 && data.unit == "codePoint") {
               this._undoOnBackspace = false;
-              editor.execute("undo");
+              editor2.execute("undo");
               data.preventDefault();
               evt.stop();
             }
@@ -71607,8 +71646,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         /**
         * A set of attributes to handle.
         */
@@ -71637,10 +71676,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const model = editor.model;
-        const view = editor.editing.view;
-        const locale = editor.locale;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const view = editor2.editing.view;
+        const locale = editor2.locale;
         const modelSelection = model.document.selection;
         this.listenTo(view.document, "arrowKey", (evt, data) => {
           if (!modelSelection.isCollapsed) {
@@ -71780,11 +71819,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * See https://github.com/ckeditor/ckeditor5/issues/1016.
       */
       _enableClickingAfterNode() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const selection = model.document.selection;
-        const document2 = editor.editing.view.document;
-        editor.editing.view.addObserver(MouseObserver);
+        const document2 = editor2.editing.view.document;
+        editor2.editing.view.addObserver(MouseObserver);
         let clicked = false;
         this.listenTo(document2, "mousedown", () => {
           clicked = true;
@@ -71822,8 +71861,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * See https://github.com/ckeditor/ckeditor5/issues/6053.
       */
       _enableInsertContentSelectionAttributesFixer() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const selection = model.document.selection;
         const attributes = this.attributes;
         this.listenTo(model, "insertContent", () => {
@@ -71848,10 +71887,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * See https://github.com/ckeditor/ckeditor5/issues/7521.
       */
       _handleDeleteContentAfterNode() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const selection = model.document.selection;
-        const view = editor.editing.view;
+        const view = editor2.editing.view;
         let isBackspace = false;
         let shouldPreserveAttributes = false;
         this.listenTo(view.document, "delete", (evt, data) => {
@@ -71876,7 +71915,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (shouldPreserveAttributes) {
             return;
           }
-          editor.model.enqueueChange(() => {
+          editor2.model.enqueueChange(() => {
             const position = selection.getFirstPosition();
             if (hasAnyAttribute(selection, this.attributes) && isBetweenDifferentAttributes(position, this.attributes)) {
               if (position.isAtStart || isBetweenDifferentAttributes(position, this.attributes, true)) {
@@ -71989,15 +72028,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
       return lastNode ? model.createPositionAt(lastNode, lookBack ? "before" : "after") : position;
     }
-    function inlineHighlight(editor, attributeName, tagName, className) {
-      const view = editor.editing.view;
+    function inlineHighlight(editor2, attributeName, tagName, className) {
+      const view = editor2.editing.view;
       const highlightedElements = /* @__PURE__ */ new Set();
       view.document.registerPostFixer((writer) => {
-        const selection = editor.model.document.selection;
+        const selection = editor2.model.document.selection;
         let changed = false;
         if (selection.hasAttribute(attributeName)) {
-          const modelRange = findAttributeRange(selection.getFirstPosition(), attributeName, selection.getAttribute(attributeName), editor.model);
-          const viewRange = editor.editing.mapper.toViewRange(modelRange);
+          const modelRange = findAttributeRange(selection.getFirstPosition(), attributeName, selection.getAttribute(attributeName), editor2.model);
+          const viewRange = editor2.editing.mapper.toViewRange(modelRange);
           for (const item of viewRange.getItems()) {
             if (item.is("element", tagName) && !item.hasClass(className)) {
               writer.addClass(className, item);
@@ -72008,7 +72047,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }
         return changed;
       });
-      editor.conversion.for("editingDowncast").add((dispatcher) => {
+      editor2.conversion.for("editingDowncast").add((dispatcher) => {
         dispatcher.on("insert", removeHighlight2, {
           priority: "highest"
         });
@@ -72039,8 +72078,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @param attributeKey Attribute that will be set by the command.
       */
-      constructor(editor, attributeKey) {
-        super(editor);
+      constructor(editor2, attributeKey) {
+        super(editor2);
         /**
         * The attribute that will be set by the command.
         */
@@ -72135,16 +72174,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const t2 = this.editor.t;
-        editor.model.schema.extend("$text", {
+        editor2.model.schema.extend("$text", {
           allowAttributes: BOLD$1
         });
-        editor.model.schema.setAttributeProperties(BOLD$1, {
+        editor2.model.schema.setAttributeProperties(BOLD$1, {
           isFormatting: true,
           copyOnEnter: true
         });
-        editor.conversion.attributeToElement({
+        editor2.conversion.attributeToElement({
           model: BOLD$1,
           view: "strong",
           upcastAlso: [
@@ -72166,9 +72205,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             }
           ]
         });
-        editor.commands.add(BOLD$1, new AttributeCommand(editor, BOLD$1));
-        editor.keystrokes.set("CTRL+B", BOLD$1);
-        editor.accessibility.addKeystrokeInfos({
+        editor2.commands.add(BOLD$1, new AttributeCommand(editor2, BOLD$1));
+        editor2.keystrokes.set("CTRL+B", BOLD$1);
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Bold text"),
@@ -72178,10 +72217,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         });
       }
     }
-    function getButtonCreator({ editor, commandName, plugin, icon, label, keystroke }) {
+    function getButtonCreator({ editor: editor2, commandName, plugin, icon, label, keystroke }) {
       return (ButtonClass) => {
-        const command = editor.commands.get(commandName);
-        const view = new ButtonClass(editor.locale);
+        const command = editor2.commands.get(commandName);
+        const view = new ButtonClass(editor2.locale);
         view.set({
           label,
           icon,
@@ -72200,8 +72239,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           });
         }
         plugin.listenTo(view, "execute", () => {
-          editor.execute(commandName);
-          editor.editing.view.focus();
+          editor2.execute(commandName);
+          editor2.editing.view.focus();
         });
         return view;
       };
@@ -72218,18 +72257,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const t2 = editor.locale.t;
+        const editor2 = this.editor;
+        const t2 = editor2.locale.t;
         const createButton = getButtonCreator({
-          editor,
+          editor: editor2,
           commandName: BOLD,
           plugin: this,
           icon: icons.bold,
           label: t2("Bold"),
           keystroke: "CTRL+B"
         });
-        editor.ui.componentFactory.add(BOLD, () => createButton(ButtonView));
-        editor.ui.componentFactory.add("menuBar:" + BOLD, () => createButton(MenuBarMenuListItemButtonView));
+        editor2.ui.componentFactory.add(BOLD, () => createButton(ButtonView));
+        editor2.ui.componentFactory.add("menuBar:" + BOLD, () => createButton(MenuBarMenuListItemButtonView));
       }
     }
     class Bold extends Plugin {
@@ -72261,16 +72300,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const t2 = this.editor.t;
-        editor.model.schema.extend("$text", {
+        editor2.model.schema.extend("$text", {
           allowAttributes: ITALIC$1
         });
-        editor.model.schema.setAttributeProperties(ITALIC$1, {
+        editor2.model.schema.setAttributeProperties(ITALIC$1, {
           isFormatting: true,
           copyOnEnter: true
         });
-        editor.conversion.attributeToElement({
+        editor2.conversion.attributeToElement({
           model: ITALIC$1,
           view: "i",
           upcastAlso: [
@@ -72282,9 +72321,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             }
           ]
         });
-        editor.commands.add(ITALIC$1, new AttributeCommand(editor, ITALIC$1));
-        editor.keystrokes.set("CTRL+I", ITALIC$1);
-        editor.accessibility.addKeystrokeInfos({
+        editor2.commands.add(ITALIC$1, new AttributeCommand(editor2, ITALIC$1));
+        editor2.keystrokes.set("CTRL+I", ITALIC$1);
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Italic text"),
@@ -72307,18 +72346,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const t2 = editor.locale.t;
+        const editor2 = this.editor;
+        const t2 = editor2.locale.t;
         const createButton = getButtonCreator({
-          editor,
+          editor: editor2,
           commandName: ITALIC,
           plugin: this,
           icon: italicIcon,
           keystroke: "CTRL+I",
           label: t2("Italic")
         });
-        editor.ui.componentFactory.add(ITALIC, () => createButton(ButtonView));
-        editor.ui.componentFactory.add("menuBar:" + ITALIC, () => createButton(MenuBarMenuListItemButtonView));
+        editor2.ui.componentFactory.add(ITALIC, () => createButton(ButtonView));
+        editor2.ui.componentFactory.add("menuBar:" + ITALIC, () => createButton(MenuBarMenuListItemButtonView));
       }
     }
     class Italic extends Plugin {
@@ -72488,12 +72527,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return "Enter";
       }
       init() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
         const t2 = this.editor.t;
         view.addObserver(EnterObserver);
-        editor.commands.add("enter", new EnterCommand(editor));
+        editor2.commands.add("enter", new EnterCommand(editor2));
         this.listenTo(viewDocument, "enter", (evt, data) => {
           if (!viewDocument.isComposing) {
             data.preventDefault();
@@ -72501,12 +72540,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (data.isSoft) {
             return;
           }
-          editor.execute("enter");
+          editor2.execute("enter");
           view.scrollToTheSelection();
         }, {
           priority: "low"
         });
-        editor.accessibility.addKeystrokeInfos({
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Insert a hard break (a new paragraph)"),
@@ -72599,10 +72638,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return "ShiftEnter";
       }
       init() {
-        const editor = this.editor;
-        const schema = editor.model.schema;
-        const conversion = editor.conversion;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const schema = editor2.model.schema;
+        const conversion = editor2.conversion;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
         const t2 = this.editor.t;
         schema.register("softBreak", {
@@ -72618,7 +72657,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           view: (modelElement, { writer }) => writer.createEmptyElement("br")
         });
         view.addObserver(EnterObserver);
-        editor.commands.add("shiftEnter", new ShiftEnterCommand(editor));
+        editor2.commands.add("shiftEnter", new ShiftEnterCommand(editor2));
         this.listenTo(viewDocument, "enter", (evt, data) => {
           if (!viewDocument.isComposing) {
             data.preventDefault();
@@ -72626,12 +72665,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (!data.isSoft) {
             return;
           }
-          editor.execute("shiftEnter");
+          editor2.execute("shiftEnter");
           view.scrollToTheSelection();
         }, {
           priority: "low"
         });
-        editor.accessibility.addKeystrokeInfos({
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Insert a soft break (a <code>&lt;br&gt;</code> element)"),
@@ -72715,8 +72754,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const editingView = editor.editing.view;
+        const editor2 = this.editor;
+        const editingView = editor2.editing.view;
         this.on("change:isEnabled", (evt, data, isEnabled2) => {
           editingView.change((writer) => {
             for (const root2 of editingView.document.roots) {
@@ -72728,7 +72767,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             }
           });
           if (!isEnabled2) {
-            editor.model.change((writer) => {
+            editor2.model.change((writer) => {
               writer.removeSelectionAttribute(TYPE_AROUND_SELECTION_ATTRIBUTE);
             });
           }
@@ -72760,11 +72799,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param position The position where the paragraph is inserted. Either `'before'` or `'after'` the widget.
       */
       _insertParagraph(widgetModelElement, position) {
-        const editor = this.editor;
-        const editingView = editor.editing.view;
-        const attributesToCopy = editor.model.schema.getAttributesWithProperty(widgetModelElement, "copyOnReplace", true);
-        editor.execute("insertParagraph", {
-          position: editor.model.createPositionAt(widgetModelElement, position),
+        const editor2 = this.editor;
+        const editingView = editor2.editing.view;
+        const attributesToCopy = editor2.model.schema.getAttributesWithProperty(widgetModelElement, "copyOnReplace", true);
+        editor2.execute("insertParagraph", {
+          position: editor2.model.createPositionAt(widgetModelElement, position),
           attributes: attributesToCopy
         });
         editingView.focus();
@@ -72800,8 +72839,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @returns Returns `true` when the paragraph was inserted (the attribute was present) and `false` otherwise.
       */
       _insertParagraphAccordingToFakeCaretPosition() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const modelSelection = model.document.selection;
         const typeAroundFakeCaretPosition = getTypeAroundFakeCaretPosition(modelSelection);
         if (!typeAroundFakeCaretPosition) {
@@ -72819,14 +72858,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * wrapper which renders DOM buttons that users can use to insert paragraphs.
       */
       _enableTypeAroundUIInjection() {
-        const editor = this.editor;
-        const schema = editor.model.schema;
-        const t2 = editor.locale.t;
+        const editor2 = this.editor;
+        const schema = editor2.model.schema;
+        const t2 = editor2.locale.t;
         const buttonTitles = {
           before: t2("Insert paragraph before block"),
           after: t2("Insert paragraph after block")
         };
-        editor.editing.downcastDispatcher.on("insert", (evt, data, conversionApi) => {
+        editor2.editing.downcastDispatcher.on("insert", (evt, data, conversionApi) => {
           const viewElement = conversionApi.mapper.toViewElement(data.item);
           if (!viewElement) {
             return;
@@ -72868,11 +72907,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       *    attribute (the former also removes widget CSS classes).
       */
       _enableTypeAroundFakeCaretActivationUsingKeyboardArrows() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const modelSelection = model.document.selection;
         const schema = model.schema;
-        const editingView = editor.editing.view;
+        const editingView = editor2.editing.view;
         this._listenToIfEnabled(editingView.document, "arrowKey", (evt, domEventData) => {
           this._handleArrowKeyPress(evt, domEventData);
         }, {
@@ -72886,23 +72925,23 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (!data.directChange) {
             return;
           }
-          editor.model.change((writer) => {
+          editor2.model.change((writer) => {
             writer.removeSelectionAttribute(TYPE_AROUND_SELECTION_ATTRIBUTE);
           });
         });
         this._listenToIfEnabled(model.document, "change:data", () => {
           const selectedModelElement = modelSelection.getSelectedElement();
           if (selectedModelElement) {
-            const selectedViewElement = editor.editing.mapper.toViewElement(selectedModelElement);
+            const selectedViewElement = editor2.editing.mapper.toViewElement(selectedModelElement);
             if (isTypeAroundWidget(selectedViewElement, selectedModelElement, schema)) {
               return;
             }
           }
-          editor.model.change((writer) => {
+          editor2.model.change((writer) => {
             writer.removeSelectionAttribute(TYPE_AROUND_SELECTION_ATTRIBUTE);
           });
         });
-        this._listenToIfEnabled(editor.editing.downcastDispatcher, "selection", (evt, data, conversionApi) => {
+        this._listenToIfEnabled(editor2.editing.downcastDispatcher, "selection", (evt, data, conversionApi) => {
           const writer = conversionApi.writer;
           if (this._currentFakeCaretModelElement) {
             const selectedViewElement2 = conversionApi.mapper.toViewElement(this._currentFakeCaretModelElement);
@@ -72926,9 +72965,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           writer.addClass(positionToWidgetCssClass(typeAroundFakeCaretPosition), selectedViewElement);
           this._currentFakeCaretModelElement = selectedModelElement;
         });
-        this._listenToIfEnabled(editor.ui.focusTracker, "change:isFocused", (evt, name, isFocused) => {
+        this._listenToIfEnabled(editor2.ui.focusTracker, "change:isFocused", (evt, name, isFocused) => {
           if (!isFocused) {
-            editor.model.change((writer) => {
+            editor2.model.change((writer) => {
               writer.removeSelectionAttribute(TYPE_AROUND_SELECTION_ATTRIBUTE);
             });
           }
@@ -72950,15 +72989,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * includes inline widgets, which are ignored by the widget type around plugin).
       */
       _handleArrowKeyPress(evt, domEventData) {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const modelSelection = model.document.selection;
         const schema = model.schema;
-        const editingView = editor.editing.view;
+        const editingView = editor2.editing.view;
         const keyCode = domEventData.keyCode;
-        const isForward = isForwardArrowKeyCode(keyCode, editor.locale.contentLanguageDirection);
+        const isForward = isForwardArrowKeyCode(keyCode, editor2.locale.contentLanguageDirection);
         const selectedViewElement = editingView.document.selection.getSelectedElement();
-        const selectedModelElement = editor.editing.mapper.toModelElement(selectedViewElement);
+        const selectedModelElement = editor2.editing.mapper.toModelElement(selectedViewElement);
         let shouldStopAndPreventDefault;
         if (isTypeAroundWidget(selectedViewElement, selectedModelElement, schema)) {
           shouldStopAndPreventDefault = this._handleArrowKeyPressOnSelectedWidget(isForward);
@@ -72983,8 +73022,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * process the event any further. Returns `false` otherwise.
       */
       _handleArrowKeyPressOnSelectedWidget(isForward) {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const modelSelection = model.document.selection;
         const typeAroundFakeCaretPosition = getTypeAroundFakeCaretPosition(modelSelection);
         return model.change((writer) => {
@@ -73016,12 +73055,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * process the event any further. Returns `false` otherwise.
       */
       _handleArrowKeyPressWhenSelectionNextToAWidget(isForward) {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const schema = model.schema;
-        const widgetPlugin = editor.plugins.get("Widget");
+        const widgetPlugin = editor2.plugins.get("Widget");
         const modelElementNextToSelection = widgetPlugin._getObjectElementNextToSelection(isForward);
-        const viewElementNextToSelection = editor.editing.mapper.toViewElement(modelElementNextToSelection);
+        const viewElementNextToSelection = editor2.editing.mapper.toViewElement(modelElementNextToSelection);
         if (isTypeAroundWidget(viewElementNextToSelection, modelElementNextToSelection, schema)) {
           model.change((writer) => {
             widgetPlugin._setSelectionOverElement(modelElementNextToSelection);
@@ -73041,10 +73080,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * process the event any further. Returns `false` otherwise.
       */
       _handleArrowKeyPressWhenNonCollapsedSelection(isForward) {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const schema = model.schema;
-        const mapper = editor.editing.mapper;
+        const mapper = editor2.editing.mapper;
         const modelSelection = model.document.selection;
         const selectedModelNode = isForward ? modelSelection.getLastPosition().nodeBefore : modelSelection.getFirstPosition().nodeAfter;
         const selectedViewNode = mapper.toViewElement(selectedModelNode);
@@ -73063,8 +73102,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * that insert a paragraph next to a widget.
       */
       _enableInsertingParagraphsOnButtonClick() {
-        const editor = this.editor;
-        const editingView = editor.editing.view;
+        const editor2 = this.editor;
+        const editingView = editor2.editing.view;
         this._listenToIfEnabled(editingView.document, "mousedown", (evt, domEventData) => {
           const button = getClosestTypeAroundDomButton(domEventData.domTarget);
           if (!button) {
@@ -73072,7 +73111,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
           const buttonPosition = getTypeAroundButtonPosition(button);
           const widgetViewElement = getClosestWidgetViewElement(button, editingView.domConverter);
-          const widgetModelElement = editor.editing.mapper.toModelElement(widgetViewElement);
+          const widgetModelElement = editor2.editing.mapper.toModelElement(widgetViewElement);
           this._insertParagraph(widgetModelElement, buttonPosition);
           domEventData.preventDefault();
           evt.stop();
@@ -73092,16 +73131,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * was pressed or not.
       */
       _enableInsertingParagraphsOnEnterKeypress() {
-        const editor = this.editor;
-        const selection = editor.model.document.selection;
-        const editingView = editor.editing.view;
+        const editor2 = this.editor;
+        const selection = editor2.model.document.selection;
+        const editingView = editor2.editing.view;
         this._listenToIfEnabled(editingView.document, "enter", (evt, domEventData) => {
           if (evt.eventPhase != "atTarget") {
             return;
           }
           const selectedModelElement = selection.getSelectedElement();
-          const selectedViewElement = editor.editing.mapper.toViewElement(selectedModelElement);
-          const schema = editor.model.schema;
+          const selectedViewElement = editor2.editing.mapper.toViewElement(selectedModelElement);
+          const schema = editor2.model.schema;
           let wasHandled;
           if (this._insertParagraphAccordingToFakeCaretPosition()) {
             wasHandled = true;
@@ -73131,8 +73170,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * sooner or later.
       */
       _enableInsertingParagraphsOnTypingKeystroke() {
-        const editor = this.editor;
-        const viewDocument = editor.editing.view.document;
+        const editor2 = this.editor;
+        const viewDocument = editor2.editing.view.document;
         this._listenToIfEnabled(viewDocument, "insertText", (evt, data) => {
           if (this._insertParagraphAccordingToFakeCaretPosition()) {
             data.selection = viewDocument.selection;
@@ -73163,9 +73202,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * before or after a widget (depending on the content surrounding the widget).
       */
       _enableDeleteIntegration() {
-        const editor = this.editor;
-        const editingView = editor.editing.view;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const editingView = editor2.editing.view;
+        const model = editor2.model;
         const schema = model.schema;
         this._listenToIfEnabled(editingView.document, "delete", (evt, domEventData) => {
           if (evt.eventPhase != "atTarget") {
@@ -73181,7 +73220,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           const isDeleteForward = direction == "forward";
           const shouldDeleteEntireWidget = isFakeCaretBefore === isDeleteForward;
           if (shouldDeleteEntireWidget) {
-            editor.execute("delete", {
+            editor2.execute("delete", {
               selection: model.createSelection(selectedModelWidget, "on")
             });
           } else {
@@ -73190,7 +73229,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
               if (!range2.isCollapsed) {
                 model.change((writer) => {
                   writer.setSelection(range2);
-                  editor.execute(isDeleteForward ? "deleteForward" : "delete");
+                  editor2.execute(isDeleteForward ? "deleteForward" : "delete");
                 });
               } else {
                 const probe = model.createSelection(range2.start);
@@ -73200,7 +73239,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
                 if (!probe.focus.isEqual(range2.start)) {
                   model.change((writer) => {
                     writer.setSelection(range2);
-                    editor.execute(isDeleteForward ? "deleteForward" : "delete");
+                    editor2.execute(isDeleteForward ? "deleteForward" : "delete");
                   });
                 } else {
                   const deepestEmptyRangeAncestor = getDeepestEmptyElementAncestor(schema, range2.start.parent);
@@ -73224,10 +73263,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * The content is inserted according to the `widget-type-around` selection attribute (see {@link #_handleArrowKeyPress}).
       */
       _enableInsertContentIntegration() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const model = this.editor.model;
         const documentSelection = model.document.selection;
-        this._listenToIfEnabled(editor.model, "insertContent", (evt, [content, selectable]) => {
+        this._listenToIfEnabled(editor2.model, "insertContent", (evt, [content, selectable]) => {
           if (selectable && !selectable.is("documentSelection")) {
             return;
           }
@@ -73256,10 +73295,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * The object is inserted according to the `widget-type-around` selection attribute (see {@link #_handleArrowKeyPress}).
       */
       _enableInsertObjectIntegration() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const model = this.editor.model;
         const documentSelection = model.document.selection;
-        this._listenToIfEnabled(editor.model, "insertObject", (evt, args) => {
+        this._listenToIfEnabled(editor2.model, "insertObject", (evt, args) => {
           const [, selectable, options = {}] = args;
           if (selectable && !selectable.is("documentSelection")) {
             return;
@@ -73283,10 +73322,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * plain text pasting.
       */
       _enableDeleteContentIntegration() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const model = this.editor.model;
         const documentSelection = model.document.selection;
-        this._listenToIfEnabled(editor.model, "deleteContent", (evt, [selection]) => {
+        this._listenToIfEnabled(editor2.model, "deleteContent", (evt, [selection]) => {
           if (selection && !selection.is("documentSelection")) {
             return;
           }
@@ -73511,10 +73550,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
-        const t2 = editor.t;
+        const t2 = editor2.t;
         this.editor.editing.downcastDispatcher.on("selection", (evt, data, conversionApi) => {
           const viewWriter = conversionApi.writer;
           const modelSelection = data.selection;
@@ -73525,7 +73564,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (!selectedModelElement) {
             return;
           }
-          const selectedViewElement = editor.editing.mapper.toViewElement(selectedModelElement);
+          const selectedViewElement = editor2.editing.mapper.toViewElement(selectedModelElement);
           if (!isWidget(selectedViewElement)) {
             return;
           }
@@ -73618,7 +73657,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }, {
           priority: "low"
         });
-        editor.accessibility.addKeystrokeInfoGroup({
+        editor2.accessibility.addKeystrokeInfoGroup({
           id: "widget",
           label: t2("Keystrokes that can be used when a widget is selected (for example: image, table, etc.)"),
           keystrokes: [
@@ -73663,23 +73702,33 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Handles {@link module:engine/view/document~Document#event:mousedown mousedown} events on widget elements.
       */
       _onMousedown(eventInfo, domEventData) {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
         let element = domEventData.target;
+        if (!element) {
+          return;
+        }
         if (domEventData.domEvent.detail >= 3) {
           if (this._selectBlockContent(element)) {
             domEventData.preventDefault();
           }
           return;
         }
-        if (isInsideNestedEditable(element)) {
-          return;
-        }
         if (!isWidget(element)) {
-          element = element.findAncestor(isWidget);
-          if (!element) {
+          const editableOrWidgetElement = findClosestEditableOrWidgetAncestor(element);
+          if (!editableOrWidgetElement) {
             return;
+          }
+          if (isWidget(editableOrWidgetElement)) {
+            element = editableOrWidgetElement;
+          } else {
+            const clickTargetFromPoint = getElementFromMouseEvent(view, domEventData);
+            if (clickTargetFromPoint && isWidget(clickTargetFromPoint)) {
+              element = clickTargetFromPoint;
+            } else {
+              return;
+            }
           }
         }
         if (env.isAndroid) {
@@ -73688,16 +73737,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!viewDocument.isFocused) {
           view.focus();
         }
-        const modelElement = editor.editing.mapper.toModelElement(element);
+        const modelElement = editor2.editing.mapper.toModelElement(element);
         this._setSelectionOverElement(modelElement);
       }
       /**
       * Selects entire block content, e.g. on triple click it selects entire paragraph.
       */
       _selectBlockContent(element) {
-        const editor = this.editor;
-        const model = editor.model;
-        const mapper = editor.editing.mapper;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const mapper = editor2.editing.mapper;
         const schema = model.schema;
         const viewElement = mapper.findMappedViewAncestor(this.editor.editing.view.createPositionAt(element, 0));
         const modelElement = findTextBlockAncestor(mapper.toModelElement(viewElement), model.schema);
@@ -73862,19 +73911,19 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Moves the document selection into the first nested editable.
       */
       _selectFirstNestedEditable() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const view = this.editor.editing.view;
         const viewDocument = view.document;
         for (const item of viewDocument.selection.getFirstRange().getItems()) {
           if (item.is("editableElement")) {
-            const modelElement = editor.editing.mapper.toModelElement(item);
+            const modelElement = editor2.editing.mapper.toModelElement(item);
             /* istanbul ignore next -- @preserve */
             if (!modelElement) {
               continue;
             }
-            const position = editor.model.createPositionAt(modelElement, 0);
-            const newRange = editor.model.schema.getNearestSelectionRange(position, "forward");
-            editor.model.change((writer) => {
+            const position = editor2.model.createPositionAt(modelElement, 0);
+            const newRange = editor2.model.schema.getNearestSelectionRange(position, "forward");
+            editor2.model.change((writer) => {
               writer.setSelection(newRange);
             });
             return true;
@@ -73886,9 +73935,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Updates the document selection so that it selects first ancestor widget.
       */
       _selectAncestorWidget() {
-        const editor = this.editor;
-        const mapper = editor.editing.mapper;
-        const selection = editor.editing.view.document.selection;
+        const editor2 = this.editor;
+        const mapper = editor2.editing.mapper;
+        const selection = editor2.editing.view.document.selection;
         const positionParent = selection.getFirstPosition().parent;
         const positionParentElement = positionParent.is("$text") ? positionParent.parent : positionParent;
         const viewElement = positionParentElement.findAncestor(isWidget);
@@ -73900,24 +73949,49 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!modelElement) {
           return false;
         }
-        editor.model.change((writer) => {
+        editor2.model.change((writer) => {
           writer.setSelection(modelElement, "on");
         });
         return true;
       }
     }
-    function isInsideNestedEditable(element) {
+    function findClosestEditableOrWidgetAncestor(element) {
       let currentElement = element;
       while (currentElement) {
-        if (currentElement.is("editableElement") && !currentElement.is("rootElement")) {
-          return true;
-        }
-        if (isWidget(currentElement)) {
-          return false;
+        if (currentElement.is("editableElement") || isWidget(currentElement)) {
+          return currentElement;
         }
         currentElement = currentElement.parent;
       }
-      return false;
+      return null;
+    }
+    function getElementFromMouseEvent(view, domEventData) {
+      const domRange = getRangeFromMouseEvent(domEventData.domEvent);
+      let viewRange = null;
+      if (domRange) {
+        viewRange = view.domConverter.domRangeToView(domRange);
+      } else {
+        viewRange = view.createRange(view.createPositionAt(domEventData.target, 0));
+      }
+      if (!viewRange) {
+        return null;
+      }
+      const viewPosition = viewRange.start;
+      if (!viewPosition.parent) {
+        return null;
+      }
+      let viewNode = viewPosition.parent;
+      if (viewPosition.parent.is("editableElement")) {
+        if (viewPosition.isAtEnd && viewPosition.nodeBefore) {
+          viewNode = viewPosition.nodeBefore;
+        } else if (viewPosition.isAtStart && viewPosition.nodeAfter) {
+          viewNode = viewPosition.nodeAfter;
+        }
+      }
+      if (viewNode.is("$text")) {
+        return viewNode.parent;
+      }
+      return viewNode;
     }
     function isChild(element, parent2) {
       if (!parent2) {
@@ -74010,27 +74084,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           })
         };
         if (domEvent.type == "drop" || domEvent.type == "dragover") {
-          evtData.dropRange = getDropViewRange(this.view, domEvent);
+          const domRange = getRangeFromMouseEvent(domEvent);
+          evtData.dropRange = domRange && this.view.domConverter.domRangeToView(domRange);
         }
         this.fire(domEvent.type, domEvent, evtData);
       }
-    }
-    function getDropViewRange(view, domEvent) {
-      const domDoc = domEvent.target.ownerDocument;
-      const x2 = domEvent.clientX;
-      const y2 = domEvent.clientY;
-      let domRange;
-      if (domDoc.caretRangeFromPoint && domDoc.caretRangeFromPoint(x2, y2)) {
-        domRange = domDoc.caretRangeFromPoint(x2, y2);
-      } else if (domEvent.rangeParent) {
-        domRange = domDoc.createRange();
-        domRange.setStart(domEvent.rangeParent, domEvent.rangeOffset);
-        domRange.collapse(true);
-      }
-      if (domRange) {
-        return view.domConverter.domRangeToView(domRange);
-      }
-      return null;
     }
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -74540,8 +74598,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         view.addObserver(ClipboardObserver);
         this._setupPasteDrop();
         this._setupCopyCut();
@@ -74568,13 +74626,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * The clipboard paste pipeline.
       */
       _setupPasteDrop() {
-        const editor = this.editor;
-        const model = editor.model;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
         const clipboardMarkersUtils = this.editor.plugins.get("ClipboardMarkersUtils");
         this.listenTo(viewDocument, "clipboardInput", (evt, data) => {
-          if (data.method == "paste" && !editor.model.canEditAt(editor.model.document.selection)) {
+          if (data.method == "paste" && !editor2.model.canEditAt(editor2.model.document.selection)) {
             evt.stop();
           }
         }, {
@@ -74639,9 +74697,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * The clipboard copy/cut pipeline.
       */
       _setupCopyCut() {
-        const editor = this.editor;
-        const modelDocument = editor.model.document;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const modelDocument = editor2.model.document;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
         const onCopyCut = (evt, data) => {
           const dataTransfer = data.dataTransfer;
@@ -74652,7 +74710,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           priority: "low"
         });
         this.listenTo(viewDocument, "cut", (evt, data) => {
-          if (!editor.model.canEditAt(editor.model.document.selection)) {
+          if (!editor2.model.canEditAt(editor2.model.document.selection)) {
             data.preventDefault();
           } else {
             onCopyCut(evt, data);
@@ -74661,7 +74719,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           priority: "low"
         });
         this.listenTo(this, "outputTransformation", (evt, data) => {
-          const content = editor.data.toView(data.content);
+          const content = editor2.data.toView(data.content);
           viewDocument.fire("clipboardOutput", {
             dataTransfer: data.dataTransfer,
             content,
@@ -74676,7 +74734,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             data.dataTransfer.setData("text/plain", viewToPlainText(data.content));
           }
           if (data.method == "cut") {
-            editor.model.deleteContent(modelDocument.selection);
+            editor2.model.deleteContent(modelDocument.selection);
           }
         }, {
           priority: "low"
@@ -74820,9 +74878,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Creates downcast conversion for the drop target marker.
       */
       _setupDropMarker() {
-        const editor = this.editor;
-        editor.ui.view.body.add(this._dropTargetLineView);
-        editor.conversion.for("editingDowncast").markerToHighlight({
+        const editor2 = this.editor;
+        editor2.ui.view.body.add(this._dropTargetLineView);
+        editor2.conversion.for("editingDowncast").markerToHighlight({
           model: "drop-target",
           view: {
             classes: [
@@ -74830,10 +74888,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             ]
           }
         });
-        editor.conversion.for("editingDowncast").markerToElement({
+        editor2.conversion.for("editingDowncast").markerToElement({
           model: "drop-target",
           view: (data, { writer }) => {
-            if (editor.model.schema.checkChild(data.markerRange.start, "$text")) {
+            if (editor2.model.schema.checkChild(data.markerRange.start, "$text")) {
               this._dropTargetLineView.isVisible = false;
               return this._createDropTargetPosition(writer);
             } else {
@@ -74852,9 +74910,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param targetRange The range to set the marker to.
       */
       _updateDropMarker(targetRange) {
-        const editor = this.editor;
-        const markers = editor.model.markers;
-        editor.model.change((writer) => {
+        const editor2 = this.editor;
+        const markers = editor2.model.markers;
+        editor2.model.change((writer) => {
           if (markers.has("drop-target")) {
             if (!markers.get("drop-target").getRange().isEqual(targetRange)) {
               writer.updateMarker("drop-target", {
@@ -74946,10 +75004,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return new Rect(domScrollable).excludeScrollbarsAndBorders();
       }
     }
-    function findDropTargetRange(editor, targetViewElement, targetViewRanges, clientX, clientY, blockMode, draggedRange) {
-      const model = editor.model;
-      const mapper = editor.editing.mapper;
-      const targetModelElement = getClosestMappedModelElement(editor, targetViewElement);
+    function findDropTargetRange(editor2, targetViewElement, targetViewRanges, clientX, clientY, blockMode, draggedRange) {
+      const model = editor2.model;
+      const mapper = editor2.editing.mapper;
+      const targetModelElement = getClosestMappedModelElement(editor2, targetViewElement);
       let modelElement = targetModelElement;
       while (modelElement) {
         if (!blockMode) {
@@ -74962,18 +75020,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
                 if (model.schema.checkChild(targetModelPosition, "$text")) {
                   return model.createRange(targetModelPosition);
                 } else if (targetViewPosition) {
-                  return findDropTargetRangeForElement(editor, getClosestMappedModelElement(editor, targetViewPosition.parent), clientX, clientY);
+                  return findDropTargetRangeForElement(editor2, getClosestMappedModelElement(editor2, targetViewPosition.parent), clientX, clientY);
                 }
               }
             }
           } else if (model.schema.isInline(modelElement)) {
-            return findDropTargetRangeForElement(editor, modelElement, clientX, clientY);
+            return findDropTargetRangeForElement(editor2, modelElement, clientX, clientY);
           }
         }
         if (model.schema.isBlock(modelElement)) {
-          return findDropTargetRangeForElement(editor, modelElement, clientX, clientY);
+          return findDropTargetRangeForElement(editor2, modelElement, clientX, clientY);
         } else if (model.schema.checkChild(modelElement, "$block")) {
-          const childNodes = Array.from(modelElement.getChildren()).filter((node) => node.is("element") && !shouldIgnoreElement(editor, node));
+          const childNodes = Array.from(modelElement.getChildren()).filter((node) => node.is("element") && !shouldIgnoreElement(editor2, node));
           let startIndex = 0;
           let endIndex = childNodes.length;
           if (endIndex == 0) {
@@ -74981,22 +75039,22 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
           while (startIndex < endIndex - 1) {
             const middleIndex = Math.floor((startIndex + endIndex) / 2);
-            const side = findElementSide(editor, childNodes[middleIndex], clientX, clientY);
+            const side = findElementSide(editor2, childNodes[middleIndex], clientX, clientY);
             if (side == "before") {
               endIndex = middleIndex;
             } else {
               startIndex = middleIndex;
             }
           }
-          return findDropTargetRangeForElement(editor, childNodes[startIndex], clientX, clientY);
+          return findDropTargetRangeForElement(editor2, childNodes[startIndex], clientX, clientY);
         }
         modelElement = modelElement.parent;
       }
       return null;
     }
-    function shouldIgnoreElement(editor, modelElement) {
-      const mapper = editor.editing.mapper;
-      const domConverter = editor.editing.view.domConverter;
+    function shouldIgnoreElement(editor2, modelElement) {
+      const mapper = editor2.editing.mapper;
+      const domConverter = editor2.editing.view.domConverter;
       const viewElement = mapper.toViewElement(modelElement);
       if (!viewElement) {
         return true;
@@ -75004,25 +75062,25 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       const domElement = domConverter.mapViewToDom(viewElement);
       return global$1.window.getComputedStyle(domElement).float != "none";
     }
-    function findDropTargetRangeForElement(editor, modelElement, clientX, clientY) {
-      const model = editor.model;
-      return model.createRange(model.createPositionAt(modelElement, findElementSide(editor, modelElement, clientX, clientY)));
+    function findDropTargetRangeForElement(editor2, modelElement, clientX, clientY) {
+      const model = editor2.model;
+      return model.createRange(model.createPositionAt(modelElement, findElementSide(editor2, modelElement, clientX, clientY)));
     }
-    function findElementSide(editor, modelElement, clientX, clientY) {
-      const mapper = editor.editing.mapper;
-      const domConverter = editor.editing.view.domConverter;
+    function findElementSide(editor2, modelElement, clientX, clientY) {
+      const mapper = editor2.editing.mapper;
+      const domConverter = editor2.editing.view.domConverter;
       const viewElement = mapper.toViewElement(modelElement);
       const domElement = domConverter.mapViewToDom(viewElement);
       const rect = new Rect(domElement);
-      if (editor.model.schema.isInline(modelElement)) {
+      if (editor2.model.schema.isInline(modelElement)) {
         return clientX < (rect.left + rect.right) / 2 ? "before" : "after";
       } else {
         return clientY < (rect.top + rect.bottom) / 2 ? "before" : "after";
       }
     }
-    function getClosestMappedModelElement(editor, element) {
-      const mapper = editor.editing.mapper;
-      const view = editor.editing.view;
+    function getClosestMappedModelElement(editor2, element) {
+      const mapper = editor2.editing.mapper;
+      const view = editor2.editing.view;
       const targetModelElement = mapper.toModelElement(element);
       if (targetModelElement) {
         return targetModelElement;
@@ -75064,8 +75122,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        this.listenTo(editor, "change:isReadOnly", (evt, name, isReadOnly) => {
+        const editor2 = this.editor;
+        this.listenTo(editor2, "change:isReadOnly", (evt, name, isReadOnly) => {
           if (isReadOnly) {
             this.forceDisabled("readOnlyMode");
             this._isBlockDragging = false;
@@ -75076,8 +75134,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (env.isAndroid) {
           this.forceDisabled("noAndroidSupport");
         }
-        if (editor.plugins.has("BlockToolbar")) {
-          const blockToolbar = editor.plugins.get("BlockToolbar");
+        if (editor2.plugins.has("BlockToolbar")) {
+          const blockToolbar = editor2.plugins.get("BlockToolbar");
           const element = blockToolbar.buttonView.element;
           this._domEmitter.listenTo(element, "dragstart", (evt, data) => this._handleBlockDragStart(data));
           this._domEmitter.listenTo(global$1.document, "dragover", (evt, data) => this._handleBlockDragging(data));
@@ -75206,8 +75264,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         this._draggedRange = null;
         this._draggingUid = "";
         this._draggableElement = null;
@@ -75217,7 +75275,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this._setupContentInsertionIntegration();
         this._setupClipboardInputIntegration();
         this._setupDraggableAttributeHandling();
-        this.listenTo(editor, "change:isReadOnly", (evt, name, isReadOnly) => {
+        this.listenTo(editor2, "change:isReadOnly", (evt, name, isReadOnly) => {
           if (isReadOnly) {
             this.forceDisabled("readOnlyMode");
           } else {
@@ -75252,11 +75310,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Drag and drop events handling.
       */
       _setupDragging() {
-        const editor = this.editor;
-        const model = editor.model;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
-        const dragDropTarget = editor.plugins.get(DragDropTarget);
+        const dragDropTarget = editor2.plugins.get(DragDropTarget);
         this.listenTo(viewDocument, "dragstart", (evt, data) => {
           if (data.target && data.target.is("editableElement")) {
             data.preventDefault();
@@ -75337,10 +75395,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Integration with the `clipboardInput` event.
       */
       _setupClipboardInputIntegration() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
-        const dragDropTarget = editor.plugins.get(DragDropTarget);
+        const dragDropTarget = editor2.plugins.get(DragDropTarget);
         this.listenTo(viewDocument, "clipboardInput", (evt, data) => {
           if (data.method != "drop") {
             return;
@@ -75364,7 +75422,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             return;
           }
           data.targetRanges = [
-            editor.editing.mapper.toViewRange(targetRange)
+            editor2.editing.mapper.toViewRange(targetRange)
           ];
         }, {
           priority: "high"
@@ -75399,8 +75457,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Adds listeners that add the `draggable` attribute to the elements while the mouse button is down so the dragging could start.
       */
       _setupDraggableAttributeHandling() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
         this.listenTo(viewDocument, "mousedown", (evt, data) => {
           if (env.isAndroid || !data) {
@@ -75408,7 +75466,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
           this._clearDraggableAttributesDelayed.cancel();
           let draggableElement = findDraggableWidget(data.target);
-          if (env.isBlink && !editor.isReadOnly && !draggableElement && !viewDocument.selection.isCollapsed) {
+          if (env.isBlink && !editor2.isReadOnly && !draggableElement && !viewDocument.selection.isCollapsed) {
             const selectedElement = viewDocument.selection.getSelectedElement();
             if (!selectedElement || !isWidget(selectedElement)) {
               draggableElement = viewDocument.selection.editableElement;
@@ -75418,7 +75476,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             view.change((writer) => {
               writer.setAttribute("draggable", "true", draggableElement);
             });
-            this._draggableElement = editor.editing.mapper.toModelElement(draggableElement);
+            this._draggableElement = editor2.editing.mapper.toModelElement(draggableElement);
           }
         });
         this.listenTo(viewDocument, "mouseup", () => {
@@ -75445,13 +75503,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param moved Whether the move succeeded.
       */
       _finalizeDragging(moved) {
-        const editor = this.editor;
-        const model = editor.model;
-        const dragDropTarget = editor.plugins.get(DragDropTarget);
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const dragDropTarget = editor2.plugins.get(DragDropTarget);
         dragDropTarget.removeDropMarker();
         this._clearDraggableAttributes();
-        if (editor.plugins.has("WidgetToolbarRepository")) {
-          const widgetToolbarRepository = editor.plugins.get("WidgetToolbarRepository");
+        if (editor2.plugins.has("WidgetToolbarRepository")) {
+          const widgetToolbarRepository = editor2.plugins.get("WidgetToolbarRepository");
           widgetToolbarRepository.clearForceDisabled("dragDrop");
         }
         this._draggingUid = "";
@@ -75481,16 +75539,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Sets the dragged source range based on event target and document selection.
       */
       _prepareDraggedRange(target) {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const selection = model.document.selection;
         const draggableWidget = target ? findDraggableWidget(target) : null;
         if (draggableWidget) {
-          const modelElement = editor.editing.mapper.toModelElement(draggableWidget);
+          const modelElement = editor2.editing.mapper.toModelElement(draggableWidget);
           this._draggedRange = LiveRange.fromRange(model.createRangeOn(modelElement));
           this._blockMode = model.schema.isBlock(modelElement);
-          if (editor.plugins.has("WidgetToolbarRepository")) {
-            const widgetToolbarRepository = editor.plugins.get("WidgetToolbarRepository");
+          if (editor2.plugins.has("WidgetToolbarRepository")) {
+            const widgetToolbarRepository = editor2.plugins.get("WidgetToolbarRepository");
             widgetToolbarRepository.forceDisabled("dragDrop");
           }
           return;
@@ -75543,7 +75601,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (env.isiOS) {
           preview.style.backgroundColor = "white";
         }
-        preview.innerHTML = dataTransfer.getData("text/html");
+        view.domConverter.setContentOf(preview, dataTransfer.getData("text/html"));
         dataTransfer.setDragImage(preview, 0, 0);
         this._previewContainer.appendChild(preview);
       }
@@ -75610,12 +75668,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const model = editor.model;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const view = editor2.editing.view;
         const selection = model.document.selection;
         view.addObserver(ClipboardObserver);
-        editor.plugins.get(ClipboardPipeline).on("contentInsertion", (evt, data) => {
+        editor2.plugins.get(ClipboardPipeline).on("contentInsertion", (evt, data) => {
           if (!isUnformattedInlineContent(data.content, model)) {
             return;
           }
@@ -75680,9 +75738,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const t2 = this.editor.t;
-        editor.accessibility.addKeystrokeInfos({
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Copy selected content"),
@@ -75711,8 +75769,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param editor The editor instance.
       * @param view The view of the UI.
       */
-      constructor(editor, view) {
-        super(editor);
+      constructor(editor2, view) {
+        super(editor2);
         /**
         * The main (top–most) view of the editor UI.
         */
@@ -75726,9 +75784,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         */
         __publicField(this, "_elementReplacer");
         this.view = view;
-        this._toolbarConfig = normalizeToolbarConfig(editor.config.get("toolbar"));
+        this._toolbarConfig = normalizeToolbarConfig(editor2.config.get("toolbar"));
         this._elementReplacer = new ElementReplacer();
-        this.listenTo(editor.editing.view, "scrollToTheSelection", this._handleScrollToTheSelectionWithStickyPanel.bind(this));
+        this.listenTo(editor2.editing.view, "scrollToTheSelection", this._handleScrollToTheSelectionWithStickyPanel.bind(this));
       }
       /**
       * @inheritDoc
@@ -75742,9 +75800,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param replacementElement The DOM element that will be the source for the created editor.
       */
       init(replacementElement) {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const view = this.view;
-        const editingView = editor.editing.view;
+        const editingView = editor2.editing.view;
         const editable = view.editable;
         const editingRoot = editingView.document.getRoot();
         editable.name = editingRoot.rootName;
@@ -75762,6 +75820,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           this._initMenuBar(view.menuBarView);
         }
         this._initDialogPluginIntegration();
+        this._initContextualBalloonIntegration();
         this.fire("ready");
       }
       /**
@@ -75772,7 +75831,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         const view = this.view;
         const editingView = this.editor.editing.view;
         this._elementReplacer.restore();
-        editingView.detachDomRoot(view.editable.name);
+        if (editingView.getDomRoot(view.editable.name)) {
+          editingView.detachDomRoot(view.editable.name);
+        }
         view.destroy();
       }
       /**
@@ -75790,12 +75851,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Enable the placeholder text on the editing root.
       */
       _initPlaceholder() {
-        const editor = this.editor;
-        const editingView = editor.editing.view;
+        const editor2 = this.editor;
+        const editingView = editor2.editing.view;
         const editingRoot = editingView.document.getRoot();
-        const sourceElement = editor.sourceElement;
+        const sourceElement = editor2.sourceElement;
         let placeholderText;
-        const placeholder = editor.config.get("placeholder");
+        const placeholder = editor2.config.get("placeholder");
         if (placeholder) {
           placeholderText = typeof placeholder === "string" ? placeholder : placeholder[this.view.editable.name];
         }
@@ -75811,6 +75872,51 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           isDirectHost: false,
           keepOnFocus: true
         });
+      }
+      /**
+      * Provides an integration between the sticky toolbar and {@link module:ui/panel/balloon/contextualballoon contextual balloon plugin}.
+      * It allows the contextual balloon to consider the height of the
+      * {@link module:editor-classic/classiceditoruiview~ClassicEditorUIView#stickyPanel}. It prevents the balloon from overlapping
+      * the sticky toolbar by adjusting the balloon's position using viewport offset configuration.
+      */
+      _initContextualBalloonIntegration() {
+        if (!this.editor.plugins.has("ContextualBalloon")) {
+          return;
+        }
+        const { stickyPanel } = this.view;
+        const contextualBalloon = this.editor.plugins.get("ContextualBalloon");
+        contextualBalloon.on("getPositionOptions", (evt) => {
+          const position = evt.return;
+          if (!position || !stickyPanel.isSticky || !stickyPanel.element) {
+            return;
+          }
+          const stickyPanelHeight = new Rect(stickyPanel.element).height;
+          const target = typeof position.target === "function" ? position.target() : position.target;
+          const limiter = typeof position.limiter === "function" ? position.limiter() : position.limiter;
+          if (target && limiter && new Rect(target).height >= new Rect(limiter).height - stickyPanelHeight) {
+            return;
+          }
+          const viewportOffsetConfig = {
+            ...position.viewportOffsetConfig
+          };
+          const newTopViewportOffset = (viewportOffsetConfig.top || 0) + stickyPanelHeight;
+          evt.return = {
+            ...position,
+            viewportOffsetConfig: {
+              ...viewportOffsetConfig,
+              top: newTopViewportOffset
+            }
+          };
+        }, {
+          priority: "low"
+        });
+        const updateBalloonPosition = () => {
+          if (contextualBalloon.visibleView) {
+            contextualBalloon.updatePosition();
+          }
+        };
+        this.listenTo(stickyPanel, "change:isSticky", updateBalloonPosition);
+        this.listenTo(this.editor.ui, "change:viewportOffset", updateBalloonPosition);
       }
       /**
       * Provides an integration between the sticky toolbar and {@link module:utils/dom/scroll~scrollViewportToShowTarget}.
@@ -75878,6 +75984,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param options.shouldToolbarGroupWhenFull When set `true` enables automatic items grouping
       * in the main {@link module:editor-classic/classiceditoruiview~ClassicEditorUIView#toolbar toolbar}.
       * See {@link module:ui/toolbar/toolbarview~ToolbarOptions#shouldGroupWhenFull} to learn more.
+      * @param options.label When set, this value will be used as an accessible `aria-label` of the
+      * {@link module:ui/editableui/editableuiview~EditableUIView editable view}.
       */
       constructor(locale, editingView, options = {}) {
         super(locale);
@@ -75901,7 +76009,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (options.useMenuBar) {
           this.menuBarView = new MenuBarView(locale);
         }
-        this.editable = new InlineEditableUIView(locale, editingView);
+        this.editable = new InlineEditableUIView(locale, editingView, void 0, {
+          label: options.label
+        });
       }
       /**
       * @inheritDoc
@@ -75953,7 +76063,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         const menuBarConfig = this.config.get("menuBar");
         const view = new ClassicEditorUIView(this.locale, this.editing.view, {
           shouldToolbarGroupWhenFull,
-          useMenuBar: menuBarConfig.isVisible
+          useMenuBar: menuBarConfig.isVisible,
+          label: this.config.get("label")
         });
         this.ui = new ClassicEditorUI(this, view);
         attachToForm(this);
@@ -76063,8 +76174,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static create(sourceElementOrData, config2 = {}) {
         return new Promise((resolve) => {
-          const editor = new this(sourceElementOrData, config2);
-          resolve(editor.initPlugins().then(() => editor.ui.init(isElement$1(sourceElementOrData) ? sourceElementOrData : null)).then(() => editor.data.init(editor.config.get("initialData"))).then(() => editor.fire("ready")).then(() => editor));
+          const editor2 = new this(sourceElementOrData, config2);
+          resolve(editor2.initPlugins().then(() => editor2.ui.init(isElement$1(sourceElementOrData) ? sourceElementOrData : null)).then(() => editor2.data.init(editor2.config.get("initialData"))).then(() => editor2.fire("ready")).then(() => editor2));
         });
       }
     }
@@ -76082,8 +76193,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         this.affectsData = false;
       }
       /**
@@ -76121,18 +76232,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const t2 = editor.t;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const t2 = editor2.t;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
-        editor.commands.add("selectAll", new SelectAllCommand(editor));
+        editor2.commands.add("selectAll", new SelectAllCommand(editor2));
         this.listenTo(viewDocument, "keydown", (eventInfo, domEventData) => {
           if (getCode(domEventData) === SELECT_ALL_KEYSTROKE) {
-            editor.execute("selectAll");
+            editor2.execute("selectAll");
             domEventData.preventDefault();
           }
         });
-        editor.accessibility.addKeystrokeInfos({
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Select all"),
@@ -76154,15 +76265,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        editor.ui.componentFactory.add("selectAll", () => {
+        const editor2 = this.editor;
+        editor2.ui.componentFactory.add("selectAll", () => {
           const buttonView = this._createButton(ButtonView);
           buttonView.set({
             tooltip: true
           });
           return buttonView;
         });
-        editor.ui.componentFactory.add("menuBar:selectAll", () => {
+        editor2.ui.componentFactory.add("menuBar:selectAll", () => {
           return this._createButton(MenuBarMenuListItemButtonView);
         });
       }
@@ -76170,10 +76281,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Creates a button for select all command to use either in toolbar or in menu bar.
       */
       _createButton(ButtonClass) {
-        const editor = this.editor;
-        const locale = editor.locale;
-        const command = editor.commands.get("selectAll");
-        const view = new ButtonClass(editor.locale);
+        const editor2 = this.editor;
+        const locale = editor2.locale;
+        const command = editor2.commands.get("selectAll");
+        const view = new ButtonClass(editor2.locale);
         const t2 = locale.t;
         view.set({
           label: t2("Select all"),
@@ -76182,8 +76293,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         });
         view.bind("isEnabled").to(command, "isEnabled");
         this.listenTo(view, "execute", () => {
-          editor.execute("selectAll");
-          editor.editing.view.focus();
+          editor2.execute("selectAll");
+          editor2.editing.view.focus();
         });
         return view;
       }
@@ -76213,8 +76324,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         /**
         * Stack of items stored by the command. These are pairs of:
         *
@@ -76230,7 +76341,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         __publicField(this, "_createdBatches", /* @__PURE__ */ new WeakSet());
         this.refresh();
         this._isEnabledBasedOnSelection = false;
-        this.listenTo(editor.data, "set", (evt, data) => {
+        this.listenTo(editor2.data, "set", (evt, data) => {
           data[1] = {
             ...data[1]
           };
@@ -76243,7 +76354,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }, {
           priority: "high"
         });
-        this.listenTo(editor.data, "set", (evt, data) => {
+        this.listenTo(editor2.data, "set", (evt, data) => {
           const options = data[1];
           if (!options.batchType.isUndoable) {
             this.clearStack();
@@ -76444,13 +76555,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const t2 = editor.t;
-        this._undoCommand = new UndoCommand(editor);
-        this._redoCommand = new RedoCommand(editor);
-        editor.commands.add("undo", this._undoCommand);
-        editor.commands.add("redo", this._redoCommand);
-        this.listenTo(editor.model, "applyOperation", (evt, args) => {
+        const editor2 = this.editor;
+        const t2 = editor2.t;
+        this._undoCommand = new UndoCommand(editor2);
+        this._redoCommand = new RedoCommand(editor2);
+        editor2.commands.add("undo", this._undoCommand);
+        editor2.commands.add("redo", this._redoCommand);
+        this.listenTo(editor2.model, "applyOperation", (evt, args) => {
           const operation = args[0];
           if (!operation.isDocumentOperation) {
             return;
@@ -76478,10 +76589,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this.listenTo(this._undoCommand, "revert", (evt, undoneBatch, undoingBatch) => {
           this._redoCommand.addBatch(undoingBatch);
         });
-        editor.keystrokes.set("CTRL+Z", "undo");
-        editor.keystrokes.set("CTRL+Y", "redo");
-        editor.keystrokes.set("CTRL+SHIFT+Z", "redo");
-        editor.accessibility.addKeystrokeInfos({
+        editor2.keystrokes.set("CTRL+Z", "undo");
+        editor2.keystrokes.set("CTRL+Y", "redo");
+        editor2.keystrokes.set("CTRL+SHIFT+Z", "redo");
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Undo"),
@@ -76513,9 +76624,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const locale = editor.locale;
-        const t2 = editor.t;
+        const editor2 = this.editor;
+        const locale = editor2.locale;
+        const t2 = editor2.t;
         const localizedUndoIcon = locale.uiLanguageDirection == "ltr" ? icons.undo : icons.redo;
         const localizedRedoIcon = locale.uiLanguageDirection == "ltr" ? icons.redo : icons.undo;
         this._addButtonsToFactory("undo", t2("Undo"), "CTRL+Z", localizedUndoIcon);
@@ -76530,15 +76641,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param Icon Source of the icon.
       */
       _addButtonsToFactory(name, label, keystroke, Icon) {
-        const editor = this.editor;
-        editor.ui.componentFactory.add(name, () => {
+        const editor2 = this.editor;
+        editor2.ui.componentFactory.add(name, () => {
           const buttonView = this._createButton(ButtonView, name, label, keystroke, Icon);
           buttonView.set({
             tooltip: true
           });
           return buttonView;
         });
-        editor.ui.componentFactory.add("menuBar:" + name, () => {
+        editor2.ui.componentFactory.add("menuBar:" + name, () => {
           return this._createButton(MenuBarMenuListItemButtonView, name, label, keystroke, Icon);
         });
       }
@@ -76546,9 +76657,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * TODO
       */
       _createButton(ButtonClass, name, label, keystroke, Icon) {
-        const editor = this.editor;
-        const locale = editor.locale;
-        const command = editor.commands.get(name);
+        const editor2 = this.editor;
+        const locale = editor2.locale;
+        const command = editor2.commands.get(name);
         const view = new ButtonClass(locale);
         view.set({
           label,
@@ -76557,8 +76668,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         });
         view.bind("isEnabled").to(command, "isEnabled");
         this.listenTo(view, "execute", () => {
-          editor.execute(name);
-          editor.editing.view.focus();
+          editor2.execute(name);
+          editor2.editing.view.focus();
         });
         return view;
       }
@@ -76611,8 +76722,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
      * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
      */
     class ParagraphCommand extends Command {
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         this._isEnabledBasedOnSelection = false;
       }
       /**
@@ -76655,8 +76766,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       return schema.checkChild(block2.parent, "paragraph") && !schema.isObject(block2);
     }
     class InsertParagraphCommand extends Command {
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         this._isEnabledBasedOnSelection = false;
       }
       /**
@@ -76721,18 +76832,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const model = editor.model;
-        editor.commands.add("paragraph", new ParagraphCommand(editor));
-        editor.commands.add("insertParagraph", new InsertParagraphCommand(editor));
+        const editor2 = this.editor;
+        const model = editor2.model;
+        editor2.commands.add("paragraph", new ParagraphCommand(editor2));
+        editor2.commands.add("insertParagraph", new InsertParagraphCommand(editor2));
         model.schema.register("paragraph", {
           inheritAllFrom: "$block"
         });
-        editor.conversion.elementToElement({
+        editor2.conversion.elementToElement({
           model: "paragraph",
           view: "p"
         });
-        editor.conversion.for("upcast").elementToElement({
+        editor2.conversion.for("upcast").elementToElement({
           model: (viewElement, { writer }) => {
             if (!_Paragraph.paragraphLikeElements.has(viewElement.name)) {
               return null;
@@ -76808,8 +76919,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param editor Editor instance.
       * @param modelElements Names of the element which this command can apply in the model.
       */
-      constructor(editor, modelElements) {
-        super(editor);
+      constructor(editor2, modelElements) {
+        super(editor2);
         /**
         * Set of defined model's elements names that this command support.
         * See {@link module:heading/headingconfig~HeadingOption}.
@@ -76862,9 +76973,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
-        editor.config.define("heading", {
+      constructor(editor2) {
+        super(editor2);
+        editor2.config.define("heading", {
           options: [
             {
               model: "paragraph",
@@ -76904,32 +77015,32 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const options = editor.config.get("heading.options");
+        const editor2 = this.editor;
+        const options = editor2.config.get("heading.options");
         const modelElements = [];
         for (const option of options) {
           if (option.model === "paragraph") {
             continue;
           }
-          editor.model.schema.register(option.model, {
+          editor2.model.schema.register(option.model, {
             inheritAllFrom: "$block"
           });
-          editor.conversion.elementToElement(option);
+          editor2.conversion.elementToElement(option);
           modelElements.push(option.model);
         }
-        this._addDefaultH1Conversion(editor);
-        editor.commands.add("heading", new HeadingCommand(editor, modelElements));
+        this._addDefaultH1Conversion(editor2);
+        editor2.commands.add("heading", new HeadingCommand(editor2, modelElements));
       }
       /**
       * @inheritDoc
       */
       afterInit() {
-        const editor = this.editor;
-        const enterCommand = editor.commands.get("enter");
-        const options = editor.config.get("heading.options");
+        const editor2 = this.editor;
+        const enterCommand = editor2.commands.get("enter");
+        const options = editor2.config.get("heading.options");
         if (enterCommand) {
           this.listenTo(enterCommand, "afterExecute", (evt, data) => {
-            const positionParent = editor.model.document.selection.getFirstPosition().parent;
+            const positionParent = editor2.model.document.selection.getFirstPosition().parent;
             const isHeading = options.some((option) => positionParent.is("element", option.model));
             if (isHeading && !positionParent.is("element", defaultModelElement) && positionParent.childCount === 0) {
               data.writer.rename(positionParent, defaultModelElement);
@@ -76942,8 +77053,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       *
       * @param editor Editor instance on which to add the `h1` conversion.
       */
-      _addDefaultH1Conversion(editor) {
-        editor.conversion.for("upcast").elementToElement({
+      _addDefaultH1Conversion(editor2) {
+        editor2.conversion.for("upcast").elementToElement({
           model: "heading1",
           view: "h1",
           // With a `low` priority, `paragraph` plugin autoparagraphing mechanism is executed. Make sure
@@ -76956,8 +77067,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
      * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
      */
-    function getLocalizedOptions(editor) {
-      const t2 = editor.t;
+    function getLocalizedOptions(editor2) {
+      const t2 = editor2.t;
       const localizedTitles = {
         "Paragraph": t2("Paragraph"),
         "Heading 1": t2("Heading 1"),
@@ -76967,7 +77078,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         "Heading 5": t2("Heading 5"),
         "Heading 6": t2("Heading 6")
       };
-      return editor.config.get("heading.options").map((option) => {
+      return editor2.config.get("heading.options").map((option) => {
         const title = localizedTitles[option.title];
         if (title && title != option.title) {
           option.title = title;
@@ -76986,16 +77097,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const t2 = editor.t;
-        const options = getLocalizedOptions(editor);
+        const editor2 = this.editor;
+        const t2 = editor2.t;
+        const options = getLocalizedOptions(editor2);
         const defaultTitle = t2("Choose heading");
         const accessibleLabel = t2("Heading");
-        editor.ui.componentFactory.add("heading", (locale) => {
+        editor2.ui.componentFactory.add("heading", (locale) => {
           const titles = {};
           const itemDefinitions = new Collection();
-          const headingCommand = editor.commands.get("heading");
-          const paragraphCommand = editor.commands.get("paragraph");
+          const headingCommand = editor2.commands.get("heading");
+          const paragraphCommand = editor2.commands.get("paragraph");
           const commands = [
             headingCommand
           ];
@@ -77067,17 +77178,17 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           });
           this.listenTo(dropdownView, "execute", (evt) => {
             const { commandName, commandValue } = evt.source;
-            editor.execute(commandName, commandValue ? {
+            editor2.execute(commandName, commandValue ? {
               value: commandValue
             } : void 0);
-            editor.editing.view.focus();
+            editor2.editing.view.focus();
           });
           return dropdownView;
         });
-        editor.ui.componentFactory.add("menuBar:heading", (locale) => {
+        editor2.ui.componentFactory.add("menuBar:heading", (locale) => {
           const menuView = new MenuBarMenuView(locale);
-          const headingCommand = editor.commands.get("heading");
-          const paragraphCommand = editor.commands.get("paragraph");
+          const headingCommand = editor2.commands.get("heading");
+          const paragraphCommand = editor2.commands.get("paragraph");
           const commands = [
             headingCommand
           ];
@@ -77107,10 +77218,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             buttonView.delegate("execute").to(menuView);
             buttonView.on("execute", () => {
               const commandName = option.model === "paragraph" ? "paragraph" : "heading";
-              editor.execute(commandName, {
+              editor2.execute(commandName, {
                 value: option.model
               });
-              editor.editing.view.focus();
+              editor2.editing.view.focus();
             });
             if (option.model === "paragraph") {
               buttonView.bind("isOn").to(paragraphCommand, "value");
@@ -77614,10 +77725,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @fires execute
       */
       execute() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const model = this.editor.model;
         const selection = model.document.selection;
-        const linkCommand = editor.commands.get("link");
+        const linkCommand = editor2.commands.get("link");
         model.change((writer) => {
           const rangesToUnlink = selection.isCollapsed ? [
             findAttributeRange(selection.getFirstPosition(), "linkHref", selection.getAttribute("linkHref"), model)
@@ -77718,9 +77829,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
-        editor.config.define("link", {
+      constructor(editor2) {
+        super(editor2);
+        editor2.config.define("link", {
           allowCreatingEmptyLinks: false,
           addTargetToExternalLinks: false
         });
@@ -77729,22 +77840,22 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const allowedProtocols = this.editor.config.get("link.allowedProtocols");
-        editor.model.schema.extend("$text", {
+        editor2.model.schema.extend("$text", {
           allowAttributes: "linkHref"
         });
-        editor.conversion.for("dataDowncast").attributeToElement({
+        editor2.conversion.for("dataDowncast").attributeToElement({
           model: "linkHref",
           view: createLinkElement
         });
-        editor.conversion.for("editingDowncast").attributeToElement({
+        editor2.conversion.for("editingDowncast").attributeToElement({
           model: "linkHref",
           view: (href, conversionApi) => {
             return createLinkElement(ensureSafeUrl(href, allowedProtocols), conversionApi);
           }
         });
-        editor.conversion.for("upcast").elementToAttribute({
+        editor2.conversion.for("upcast").elementToAttribute({
           view: {
             name: "a",
             attributes: {
@@ -77756,14 +77867,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             value: (viewElement) => viewElement.getAttribute("href")
           }
         });
-        editor.commands.add("link", new LinkCommand(editor));
-        editor.commands.add("unlink", new UnlinkCommand(editor));
-        const linkDecorators = getLocalizedDecorators(editor.t, normalizeDecorators(editor.config.get("link.decorators")));
+        editor2.commands.add("link", new LinkCommand(editor2));
+        editor2.commands.add("unlink", new UnlinkCommand(editor2));
+        const linkDecorators = getLocalizedDecorators(editor2.t, normalizeDecorators(editor2.config.get("link.decorators")));
         this._enableAutomaticDecorators(linkDecorators.filter((item) => item.mode === DECORATOR_AUTOMATIC));
         this._enableManualDecorators(linkDecorators.filter((item) => item.mode === DECORATOR_MANUAL));
-        const twoStepCaretMovementPlugin = editor.plugins.get(TwoStepCaretMovement);
+        const twoStepCaretMovementPlugin = editor2.plugins.get(TwoStepCaretMovement);
         twoStepCaretMovementPlugin.registerAttribute("linkHref");
-        inlineHighlight(editor, "linkHref", "a", HIGHLIGHT_CLASS);
+        inlineHighlight(editor2, "linkHref", "a", HIGHLIGHT_CLASS);
         this._enableLinkOpen();
         this._enableSelectionAttributesFixer();
         this._enableClipboardIntegration();
@@ -77778,10 +77889,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * {@link module:link/linkconfig~LinkConfig#addTargetToExternalLinks `config.link.addTargetToExternalLinks`}.
       */
       _enableAutomaticDecorators(automaticDecoratorDefinitions) {
-        const editor = this.editor;
-        const command = editor.commands.get("link");
+        const editor2 = this.editor;
+        const command = editor2.commands.get("link");
         const automaticDecorators = command.automaticDecorators;
-        if (editor.config.get("link.addTargetToExternalLinks")) {
+        if (editor2.config.get("link.addTargetToExternalLinks")) {
           automaticDecorators.add({
             id: "linkIsExternal",
             mode: DECORATOR_AUTOMATIC,
@@ -77794,7 +77905,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }
         automaticDecorators.add(automaticDecoratorDefinitions);
         if (automaticDecorators.length) {
-          editor.conversion.for("downcast").add(automaticDecorators.getDispatcher());
+          editor2.conversion.for("downcast").add(automaticDecorators.getDispatcher());
         }
       }
       /**
@@ -77810,16 +77921,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!manualDecoratorDefinitions.length) {
           return;
         }
-        const editor = this.editor;
-        const command = editor.commands.get("link");
+        const editor2 = this.editor;
+        const command = editor2.commands.get("link");
         const manualDecorators = command.manualDecorators;
         manualDecoratorDefinitions.forEach((decoratorDefinition) => {
-          editor.model.schema.extend("$text", {
+          editor2.model.schema.extend("$text", {
             allowAttributes: decoratorDefinition.id
           });
           const decorator = new ManualDecorator(decoratorDefinition);
           manualDecorators.add(decorator);
-          editor.conversion.for("downcast").attributeToElement({
+          editor2.conversion.for("downcast").attributeToElement({
             model: decorator.id,
             view: (manualDecoratorValue, { writer, schema }, { item }) => {
               if (!(item.is("selection") || schema.isInline(item))) {
@@ -77840,7 +77951,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
               }
             }
           });
-          editor.conversion.for("upcast").elementToAttribute({
+          editor2.conversion.for("upcast").elementToAttribute({
             view: {
               name: "a",
               ...decorator._createPattern()
@@ -77856,8 +77967,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * {@link module:engine/view/document~Document#event:click} to enable link following.
       */
       _enableLinkOpen() {
-        const editor = this.editor;
-        const view = editor.editing.view;
+        const editor2 = this.editor;
+        const view = editor2.editing.view;
         const viewDocument = view.document;
         this.listenTo(viewDocument, "click", (evt, data) => {
           const shouldOpen = env.isMac ? data.domEvent.metaKey : data.domEvent.ctrlKey;
@@ -77882,7 +77993,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           context: "$capture"
         });
         this.listenTo(viewDocument, "keydown", (evt, data) => {
-          const linkCommand = editor.commands.get("link");
+          const linkCommand = editor2.commands.get("link");
           const url = linkCommand.value;
           const shouldOpen = !!url && data.keyCode === keyCodes.enter && data.altKey;
           if (!shouldOpen) {
@@ -77898,8 +78009,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * This is to ensure that there is no left-over link decorator attributes on the document selection that is no longer in a link.
       */
       _enableSelectionAttributesFixer() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const selection = model.document.selection;
         this.listenTo(selection, "change:attribute", (evt, { attributeKeys }) => {
           if (!attributeKeys.includes("linkHref") || selection.hasAttribute("linkHref")) {
@@ -77914,13 +78025,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Enables URL fixing on pasting.
       */
       _enableClipboardIntegration() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const defaultProtocol = this.editor.config.get("link.defaultProtocol");
         if (!defaultProtocol) {
           return;
         }
-        this.listenTo(editor.plugins.get("ClipboardPipeline"), "contentInsertion", (evt, data) => {
+        this.listenTo(editor2.plugins.get("ClipboardPipeline"), "contentInsertion", (evt, data) => {
           model.change((writer) => {
             const range2 = writer.createRangeIn(data.content);
             for (const item of range2.getItems()) {
@@ -78417,13 +78528,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
+        const editor2 = this.editor;
         const t2 = this.editor.t;
-        editor.editing.view.addObserver(ClickObserver);
-        this._balloon = editor.plugins.get(ContextualBalloon);
+        editor2.editing.view.addObserver(ClickObserver);
+        this._balloon = editor2.plugins.get(ContextualBalloon);
         this._createToolbarLinkButton();
         this._enableBalloonActivators();
-        editor.conversion.for("editingDowncast").markerToHighlight({
+        editor2.conversion.for("editingDowncast").markerToHighlight({
           model: VISUAL_SELECTION_MARKER_NAME,
           view: {
             classes: [
@@ -78431,7 +78542,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             ]
           }
         });
-        editor.conversion.for("editingDowncast").markerToElement({
+        editor2.conversion.for("editingDowncast").markerToElement({
           model: VISUAL_SELECTION_MARKER_NAME,
           view: (data, { writer }) => {
             if (!data.markerRange.isCollapsed) {
@@ -78445,7 +78556,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             return markerElement;
           }
         });
-        editor.accessibility.addKeystrokeInfos({
+        editor2.accessibility.addKeystrokeInfos({
           keystrokes: [
             {
               label: t2("Create link"),
@@ -78491,10 +78602,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Creates the {@link module:link/ui/linkactionsview~LinkActionsView} instance.
       */
       _createActionsView() {
-        const editor = this.editor;
-        const actionsView = new LinkActionsView(editor.locale, editor.config.get("link"));
-        const linkCommand = editor.commands.get("link");
-        const unlinkCommand = editor.commands.get("unlink");
+        const editor2 = this.editor;
+        const actionsView = new LinkActionsView(editor2.locale, editor2.config.get("link"));
+        const linkCommand = editor2.commands.get("link");
+        const unlinkCommand = editor2.commands.get("unlink");
         actionsView.bind("href").to(linkCommand, "value");
         actionsView.editButtonView.bind("isEnabled").to(linkCommand);
         actionsView.unlinkButtonView.bind("isEnabled").to(unlinkCommand);
@@ -78502,7 +78613,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           this._addFormView();
         });
         this.listenTo(actionsView, "unlink", () => {
-          editor.execute("unlink");
+          editor2.execute("unlink");
           this._hideUI();
         });
         actionsView.keystrokes.set("Esc", (data, cancel2) => {
@@ -78519,10 +78630,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Creates the {@link module:link/ui/linkformview~LinkFormView} instance.
       */
       _createFormView() {
-        const editor = this.editor;
-        const linkCommand = editor.commands.get("link");
-        const defaultProtocol = editor.config.get("link.defaultProtocol");
-        const formView = new (CssTransitionDisablerMixin(LinkFormView))(editor.locale, linkCommand, getFormValidators(editor));
+        const editor2 = this.editor;
+        const linkCommand = editor2.commands.get("link");
+        const defaultProtocol = editor2.config.get("link.defaultProtocol");
+        const formView = new (CssTransitionDisablerMixin(LinkFormView))(editor2.locale, linkCommand, getFormValidators(editor2));
         formView.urlInputView.fieldView.bind("value").to(linkCommand, "value");
         formView.urlInputView.bind("isEnabled").to(linkCommand, "isEnabled");
         formView.saveButtonView.bind("isEnabled").to(linkCommand, "isEnabled");
@@ -78530,12 +78641,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (formView.isValid()) {
             const { value } = formView.urlInputView.fieldView.element;
             const parsedUrl = addLinkProtocolIfApplicable(value, defaultProtocol);
-            editor.execute("link", parsedUrl, formView.getDecoratorSwitchesState());
+            editor2.execute("link", parsedUrl, formView.getDecoratorSwitchesState());
             this._closeFormView();
           }
         });
         this.listenTo(formView.urlInputView, "change:errorText", () => {
-          editor.ui.update();
+          editor2.ui.update();
         });
         this.listenTo(formView, "cancel", () => {
           this._closeFormView();
@@ -78551,15 +78662,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * a {@link #_balloon} attached to the selection.
       */
       _createToolbarLinkButton() {
-        const editor = this.editor;
-        editor.ui.componentFactory.add("link", () => {
+        const editor2 = this.editor;
+        editor2.ui.componentFactory.add("link", () => {
           const button = this._createButton(ButtonView);
           button.set({
             tooltip: true
           });
           return button;
         });
-        editor.ui.componentFactory.add("menuBar:link", () => {
+        editor2.ui.componentFactory.add("menuBar:link", () => {
           const button = this._createButton(MenuBarMenuListItemButtonView);
           button.set({
             role: "menuitemcheckbox"
@@ -78571,10 +78682,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Creates a button for link command to use either in toolbar or in menu bar.
       */
       _createButton(ButtonClass) {
-        const editor = this.editor;
-        const locale = editor.locale;
-        const command = editor.commands.get("link");
-        const view = new ButtonClass(editor.locale);
+        const editor2 = this.editor;
+        const locale = editor2.locale;
+        const command = editor2.commands.get("link");
+        const view = new ButtonClass(editor2.locale);
         const t2 = locale.t;
         view.set({
           label: t2("Link"),
@@ -78592,17 +78703,17 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * {@link #formView} should be displayed.
       */
       _enableBalloonActivators() {
-        const editor = this.editor;
-        const viewDocument = editor.editing.view.document;
+        const editor2 = this.editor;
+        const viewDocument = editor2.editing.view.document;
         this.listenTo(viewDocument, "click", () => {
           const parentLink = this._getSelectedLinkElement();
           if (parentLink) {
             this._showUI();
           }
         });
-        editor.keystrokes.set(LINK_KEYSTROKE, (keyEvtData, cancel2) => {
+        editor2.keystrokes.set(LINK_KEYSTROKE, (keyEvtData, cancel2) => {
           cancel2();
-          if (editor.commands.get("link").isEnabled) {
+          if (editor2.commands.get("link").isEnabled) {
             this._showUI(true);
           }
         });
@@ -78665,8 +78776,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (this._isFormInPanel) {
           return;
         }
-        const editor = this.editor;
-        const linkCommand = editor.commands.get("link");
+        const editor2 = this.editor;
+        const linkCommand = editor2.commands.get("link");
         this.formView.disableCssTransitions();
         this.formView.resetFormStatus();
         this._balloon.add({
@@ -78744,10 +78855,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!this._isUIInPanel) {
           return;
         }
-        const editor = this.editor;
-        this.stopListening(editor.ui, "update");
+        const editor2 = this.editor;
+        this.stopListening(editor2.ui, "update");
         this.stopListening(this._balloon, "change:visibleView");
-        editor.editing.view.focus();
+        editor2.editing.view.focus();
         this._removeFormView();
         this._balloon.remove(this.actionsView);
         this._hideFakeVisualSelection();
@@ -78759,8 +78870,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * See: {@link #_hideUI} to learn when the UI stops reacting to the `update` event.
       */
       _startUpdatingUI() {
-        const editor = this.editor;
-        const viewDocument = editor.editing.view.document;
+        const editor2 = this.editor;
+        const viewDocument = editor2.editing.view.document;
         let prevSelectedLink = this._getSelectedLinkElement();
         let prevSelectionParent = getSelectionParent();
         const update2 = () => {
@@ -78777,7 +78888,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         function getSelectionParent() {
           return viewDocument.selection.focus.getAncestors().reverse().find((node) => node.is("element"));
         }
-        this.listenTo(editor.ui, "update", update2);
+        this.listenTo(editor2.ui, "update", update2);
         this.listenTo(this._balloon, "change:visibleView", update2);
       }
       /**
@@ -78922,9 +79033,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     function findLinkElementAncestor(position) {
       return position.getAncestors().find((ancestor) => isLinkElement(ancestor)) || null;
     }
-    function getFormValidators(editor) {
-      const t2 = editor.t;
-      const allowCreatingEmptyLinks = editor.config.get("link.allowCreatingEmptyLinks");
+    function getFormValidators(editor2) {
+      const t2 = editor2.t;
+      const allowCreatingEmptyLinks = editor2.config.get("link.allowCreatingEmptyLinks");
       return [
         (form) => {
           if (!allowCreatingEmptyLinks && !form.url.length) {
@@ -78960,8 +79071,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const selection = editor.model.document.selection;
+        const editor2 = this.editor;
+        const selection = editor2.model.document.selection;
         selection.on("change:range", () => {
           this.isEnabled = !selection.anchor.parent.is("element", "codeBlock");
         });
@@ -78991,8 +79102,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Extends the document selection to includes all links that intersects with given `selectedRange`.
       */
       _selectEntireLinks(writer, selectedRange) {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const selection = model.document.selection;
         const selStart = selection.getFirstPosition();
         const selEnd = selection.getLastPosition();
@@ -79008,11 +79119,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Enables autolinking on pasting a URL when some content is selected.
       */
       _enablePasteLinking() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const selection = model.document.selection;
-        const clipboardPipeline = editor.plugins.get("ClipboardPipeline");
-        const linkCommand = editor.commands.get("link");
+        const clipboardPipeline = editor2.plugins.get("ClipboardPipeline");
+        const linkCommand = editor2.commands.get("link");
         clipboardPipeline.on("inputTransformation", (evt, data) => {
           if (!this.isEnabled || !linkCommand.isEnabled || selection.isCollapsed || data.method !== "paste") {
             return;
@@ -79041,8 +79152,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Enables autolinking on typing.
       */
       _enableTypingHandling() {
-        const editor = this.editor;
-        const watcher = new TextWatcher(editor.model, (text2) => {
+        const editor2 = this.editor;
+        const watcher = new TextWatcher(editor2.model, (text2) => {
           if (!isSingleSpaceAtTheEnd(text2)) {
             return;
           }
@@ -79060,7 +79171,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
           const linkEnd = range2.end.getShiftedBy(-1);
           const linkStart = linkEnd.getShiftedBy(-url.length);
-          const linkRange = editor.model.createRange(linkStart, linkEnd);
+          const linkRange = editor2.model.createRange(linkStart, linkEnd);
           this._applyAutoLink(url, linkRange);
         });
         watcher.bind("isEnabled").to(this);
@@ -79069,9 +79180,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Enables autolinking on the <kbd>Enter</kbd> key.
       */
       _enableEnterHandling() {
-        const editor = this.editor;
-        const model = editor.model;
-        const enterCommand = editor.commands.get("enter");
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const enterCommand = editor2.commands.get("enter");
         if (!enterCommand) {
           return;
         }
@@ -79088,9 +79199,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Enables autolinking on the <kbd>Shift</kbd>+<kbd>Enter</kbd> keyboard shortcut.
       */
       _enableShiftEnterHandling() {
-        const editor = this.editor;
-        const model = editor.model;
-        const shiftEnterCommand = editor.commands.get("shiftEnter");
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const shiftEnterCommand = editor2.commands.get("shiftEnter");
         if (!shiftEnterCommand) {
           return;
         }
@@ -79607,8 +79718,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param indentDirection The direction of indent. If it is equal to `backward`, the command
       * will outdent a list item.
       */
-      constructor(editor, indentDirection) {
-        super(editor);
+      constructor(editor2, indentDirection) {
+        super(editor2);
         /**
         * Determines by how much the command will change the list item's indent attribute.
         */
@@ -79714,8 +79825,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param editor The editor instance.
       * @param type List type that will be handled by this command.
       */
-      constructor(editor, type, options = {}) {
-        super(editor);
+      constructor(editor2, type, options = {}) {
+        super(editor2);
         /**
         * The type of the list created by the command.
         */
@@ -79869,8 +79980,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param editor The editor instance.
       * @param direction Whether list item should be merged before or after the selected block.
       */
-      constructor(editor, direction) {
-        super(editor);
+      constructor(editor2, direction) {
+        super(editor2);
         /**
         * Whether list item should be merged before or after the selected block.
         */
@@ -80023,8 +80134,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @param editor The editor instance.
       * @param direction Whether list item should be split before or after the selected block.
       */
-      constructor(editor, direction) {
-        super(editor);
+      constructor(editor2, direction) {
+        super(editor2);
         /**
         * Whether list item should be split before or after the selected block.
         */
@@ -80044,8 +80155,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @fires afterExecute
       */
       execute() {
-        const editor = this.editor;
-        editor.model.change((writer) => {
+        const editor2 = this.editor;
+        editor2.model.change((writer) => {
           const changedBlocks = splitListItemBefore(this._getStartBlock(), writer);
           this._fireAfterExecute(changedBlocks);
         });
@@ -80639,13 +80750,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
-      constructor(editor) {
-        super(editor);
+      constructor(editor2) {
+        super(editor2);
         /**
         * The list of registered downcast strategies.
         */
         __publicField(this, "_downcastStrategies", []);
-        editor.config.define("list.multiBlock", true);
+        editor2.config.define("list.multiBlock", true);
       }
       /**
       * @inheritDoc
@@ -80668,10 +80779,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       init() {
-        const editor = this.editor;
-        const model = editor.model;
-        const multiBlock = editor.config.get("list.multiBlock");
-        if (editor.plugins.has("LegacyListEditing")) {
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const multiBlock = editor2.config.get("list.multiBlock");
+        if (editor2.plugins.has("LegacyListEditing")) {
           throw new CKEditorError("list-feature-conflict", this, {
             conflictPlugin: "LegacyListEditing"
           });
@@ -80700,21 +80811,21 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             copyOnReplace: true
           });
         }
-        editor.commands.add("numberedList", new ListCommand(editor, "numbered"));
-        editor.commands.add("bulletedList", new ListCommand(editor, "bulleted"));
-        editor.commands.add("customNumberedList", new ListCommand(editor, "customNumbered", {
+        editor2.commands.add("numberedList", new ListCommand(editor2, "numbered"));
+        editor2.commands.add("bulletedList", new ListCommand(editor2, "bulleted"));
+        editor2.commands.add("customNumberedList", new ListCommand(editor2, "customNumbered", {
           multiLevel: true
         }));
-        editor.commands.add("customBulletedList", new ListCommand(editor, "customBulleted", {
+        editor2.commands.add("customBulletedList", new ListCommand(editor2, "customBulleted", {
           multiLevel: true
         }));
-        editor.commands.add("indentList", new ListIndentCommand(editor, "forward"));
-        editor.commands.add("outdentList", new ListIndentCommand(editor, "backward"));
-        editor.commands.add("splitListItemBefore", new ListSplitCommand(editor, "before"));
-        editor.commands.add("splitListItemAfter", new ListSplitCommand(editor, "after"));
+        editor2.commands.add("indentList", new ListIndentCommand(editor2, "forward"));
+        editor2.commands.add("outdentList", new ListIndentCommand(editor2, "backward"));
+        editor2.commands.add("splitListItemBefore", new ListSplitCommand(editor2, "before"));
+        editor2.commands.add("splitListItemAfter", new ListSplitCommand(editor2, "after"));
         if (multiBlock) {
-          editor.commands.add("mergeListItemBackward", new ListMergeCommand(editor, "backward"));
-          editor.commands.add("mergeListItemForward", new ListMergeCommand(editor, "forward"));
+          editor2.commands.add("mergeListItemBackward", new ListMergeCommand(editor2, "backward"));
+          editor2.commands.add("mergeListItemForward", new ListMergeCommand(editor2, "forward"));
         }
         this._setupDeleteIntegration();
         this._setupEnterIntegration();
@@ -80726,8 +80837,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       afterInit() {
-        const editor = this.editor;
-        const commands = editor.commands;
+        const editor2 = this.editor;
+        const commands = editor2.commands;
         const indent2 = commands.get("indent");
         const outdent2 = commands.get("outdent");
         if (indent2) {
@@ -80768,15 +80879,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * keys in and around document lists.
       */
       _setupDeleteIntegration() {
-        const editor = this.editor;
-        const mergeBackwardCommand = editor.commands.get("mergeListItemBackward");
-        const mergeForwardCommand = editor.commands.get("mergeListItemForward");
-        this.listenTo(editor.editing.view.document, "delete", (evt, data) => {
-          const selection = editor.model.document.selection;
-          if (getSelectedBlockObject(editor.model)) {
+        const editor2 = this.editor;
+        const mergeBackwardCommand = editor2.commands.get("mergeListItemBackward");
+        const mergeForwardCommand = editor2.commands.get("mergeListItemForward");
+        this.listenTo(editor2.editing.view.document, "delete", (evt, data) => {
+          const selection = editor2.model.document.selection;
+          if (getSelectedBlockObject(editor2.model)) {
             return;
           }
-          editor.model.change(() => {
+          editor2.model.change(() => {
             const firstPosition = selection.getFirstPosition();
             if (selection.isCollapsed && data.direction == "backward") {
               if (!firstPosition.isAtStart) {
@@ -80792,15 +80903,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
               });
               if (!previousBlock && positionParent.getAttribute("listIndent") === 0) {
                 if (!isLastBlockOfListItem(positionParent)) {
-                  editor.execute("splitListItemAfter");
+                  editor2.execute("splitListItemAfter");
                 }
-                editor.execute("outdentList");
+                editor2.execute("outdentList");
               } else {
                 if (!mergeBackwardCommand || !mergeBackwardCommand.isEnabled) {
                   return;
                 }
                 mergeBackwardCommand.execute({
-                  shouldMergeOnBlocksContentLevel: shouldMergeOnBlocksContentLevel(editor.model, "backward")
+                  shouldMergeOnBlocksContentLevel: shouldMergeOnBlocksContentLevel(editor2.model, "backward")
                 });
               }
               data.preventDefault();
@@ -80813,7 +80924,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
                 return;
               }
               mergeForwardCommand.execute({
-                shouldMergeOnBlocksContentLevel: shouldMergeOnBlocksContentLevel(editor.model, "forward")
+                shouldMergeOnBlocksContentLevel: shouldMergeOnBlocksContentLevel(editor2.model, "forward")
               });
               data.preventDefault();
               evt.stop();
@@ -80828,26 +80939,26 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * in document lists.
       */
       _setupEnterIntegration() {
-        const editor = this.editor;
-        const model = editor.model;
-        const commands = editor.commands;
+        const editor2 = this.editor;
+        const model = editor2.model;
+        const commands = editor2.commands;
         const enterCommand = commands.get("enter");
-        this.listenTo(editor.editing.view.document, "enter", (evt, data) => {
+        this.listenTo(editor2.editing.view.document, "enter", (evt, data) => {
           const doc = model.document;
           const positionParent = doc.selection.getFirstPosition().parent;
           if (doc.selection.isCollapsed && isListItemBlock(positionParent) && positionParent.isEmpty && !data.isSoft) {
             const isFirstBlock = isFirstBlockOfListItem(positionParent);
             const isLastBlock = isLastBlockOfListItem(positionParent);
             if (isFirstBlock && isLastBlock) {
-              editor.execute("outdentList");
+              editor2.execute("outdentList");
               data.preventDefault();
               evt.stop();
             } else if (isFirstBlock && !isLastBlock) {
-              editor.execute("splitListItemAfter");
+              editor2.execute("splitListItemAfter");
               data.preventDefault();
               evt.stop();
             } else if (isLastBlock) {
-              editor.execute("splitListItemBefore");
+              editor2.execute("splitListItemBefore");
               data.preventDefault();
               evt.stop();
             }
@@ -80861,7 +80972,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (!splitCommand.isEnabled) {
             return;
           }
-          const doc = editor.model.document;
+          const doc = editor2.model.document;
           const positionParent = doc.selection.getLastPosition().parent;
           const listItemBlocks = getAllListItemBlocks(positionParent);
           if (listItemBlocks.length === 2) {
@@ -80874,12 +80985,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * presses in document lists.
       */
       _setupTabIntegration() {
-        const editor = this.editor;
-        this.listenTo(editor.editing.view.document, "tab", (evt, data) => {
+        const editor2 = this.editor;
+        this.listenTo(editor2.editing.view.document, "tab", (evt, data) => {
           const commandName = data.shiftKey ? "outdentList" : "indentList";
           const command = this.editor.commands.get(commandName);
           if (command.isEnabled) {
-            editor.execute(commandName);
+            editor2.execute(commandName);
             data.stopPropagation();
             data.preventDefault();
             evt.stop();
@@ -80892,12 +81003,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Registers the conversion helpers for the document-list feature.
       */
       _setupConversion() {
-        const editor = this.editor;
-        const model = editor.model;
+        const editor2 = this.editor;
+        const model = editor2.model;
         const attributeNames = this.getListAttributeNames();
-        const multiBlock = editor.config.get("list.multiBlock");
+        const multiBlock = editor2.config.get("list.multiBlock");
         const elementName = multiBlock ? "paragraph" : "listItem";
-        editor.conversion.for("upcast").elementToElement({
+        editor2.conversion.for("upcast").elementToElement({
           view: "li",
           model: (viewElement, { writer }) => writer.createElement(elementName, {
             listType: ""
@@ -80917,12 +81028,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           dispatcher.on("element:li", listItemUpcastConverter());
         });
         if (!multiBlock) {
-          editor.conversion.for("downcast").elementToElement({
+          editor2.conversion.for("downcast").elementToElement({
             model: "listItem",
             view: "p"
           });
         }
-        editor.conversion.for("editingDowncast").elementToElement({
+        editor2.conversion.for("editingDowncast").elementToElement({
           model: elementName,
           view: bogusParagraphCreator(attributeNames),
           converterPriority: "high"
@@ -80930,7 +81041,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           dispatcher.on("attribute", listItemDowncastConverter(attributeNames, this._downcastStrategies, model));
           dispatcher.on("remove", listItemDowncastRemoveConverter(model.schema));
         });
-        editor.conversion.for("dataDowncast").elementToElement({
+        editor2.conversion.for("dataDowncast").elementToElement({
           model: elementName,
           view: bogusParagraphCreator(attributeNames, {
             dataPipeline: true
@@ -80941,10 +81052,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             dataPipeline: true
           }));
         });
-        const modelToViewPositionMapper = createModelToViewPositionMapper(this._downcastStrategies, editor.editing.view);
-        editor.editing.mapper.on("modelToViewPosition", modelToViewPositionMapper);
-        editor.data.mapper.on("modelToViewPosition", modelToViewPositionMapper);
-        this.listenTo(model.document, "change:data", reconvertItemsOnDataChange(model, editor.editing, attributeNames, this), {
+        const modelToViewPositionMapper = createModelToViewPositionMapper(this._downcastStrategies, editor2.editing.view);
+        editor2.editing.mapper.on("modelToViewPosition", modelToViewPositionMapper);
+        editor2.data.mapper.on("modelToViewPosition", modelToViewPositionMapper);
+        this.listenTo(model.document, "change:data", reconvertItemsOnDataChange(model, editor2.editing, attributeNames, this), {
           priority: "high"
         });
         this.on("checkAttributes:item", (evt, { viewElement, modelAttributes }) => {
@@ -81012,9 +81123,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Informs editor accessibility features about keystrokes brought by the plugin.
       */
       _setupAccessibilityIntegration() {
-        const editor = this.editor;
-        const t2 = editor.t;
-        editor.accessibility.addKeystrokeInfoGroup({
+        const editor2 = this.editor;
+        const t2 = editor2.t;
+        editor2.accessibility.addKeystrokeInfoGroup({
           id: "list",
           label: t2("Keystrokes that can be used in a list"),
           keystrokes: [
@@ -81144,17 +81255,17 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         previousSibling
       ]);
     }
-    function createUIComponents(editor, commandName, label, icon) {
-      editor.ui.componentFactory.add(commandName, () => {
-        const buttonView = _createButton(ButtonView, editor, commandName, label, icon);
+    function createUIComponents(editor2, commandName, label, icon) {
+      editor2.ui.componentFactory.add(commandName, () => {
+        const buttonView = _createButton(ButtonView, editor2, commandName, label, icon);
         buttonView.set({
           tooltip: true,
           isToggleable: true
         });
         return buttonView;
       });
-      editor.ui.componentFactory.add(`menuBar:${commandName}`, () => {
-        const buttonView = _createButton(MenuBarMenuListItemButtonView, editor, commandName, label, icon);
+      editor2.ui.componentFactory.add(`menuBar:${commandName}`, () => {
+        const buttonView = _createButton(MenuBarMenuListItemButtonView, editor2, commandName, label, icon);
         buttonView.set({
           role: "menuitemcheckbox",
           isToggleable: true
@@ -81162,17 +81273,17 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return buttonView;
       });
     }
-    function _createButton(ButtonClass, editor, commandName, label, icon) {
-      const command = editor.commands.get(commandName);
-      const view = new ButtonClass(editor.locale);
+    function _createButton(ButtonClass, editor2, commandName, label, icon) {
+      const command = editor2.commands.get(commandName);
+      const view = new ButtonClass(editor2.locale);
       view.set({
         label,
         icon
       });
       view.bind("isOn", "isEnabled").to(command, "value", "isEnabled");
       view.on("execute", () => {
-        editor.execute(commandName);
-        editor.editing.view.focus();
+        editor2.execute(commandName);
+        editor2.editing.view.focus();
       });
       return view;
     }
@@ -83414,7 +83525,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     })(ckeditor);
     var ckeditorExports = ckeditor.exports;
     const CKEditor = /* @__PURE__ */ getDefaultExportFromCjs(ckeditorExports);
-    const _sfc_main$Q = {
+    const _sfc_main$W = {
       components: {
         ckeditor: CKEditor.component
       },
@@ -83445,7 +83556,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         };
       }
     };
-    function _sfc_render$Q(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$W(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_ckeditor = resolveComponent("ckeditor");
       return openBlock(), createBlock(_component_ckeditor, {
         editor: $data.editor,
@@ -83453,7 +83564,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         config: $data.editorConfig
       }, null, 8, ["editor", "model-value", "config"]);
     }
-    const textEditor$1 = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["render", _sfc_render$Q], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/text-editor.vue"]]);
+    const editor = /* @__PURE__ */ _export_sfc(_sfc_main$W, [["render", _sfc_render$W], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/text-editor.vue"]]);
     function useDataStatus(component_data) {
       const NOT_APPLICABLE_KEY = "not_applicable";
       const NOT_AVAILABLE_KEY = "not_available";
@@ -83888,7 +83999,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         };
       }
       createApp(options, input_data) {
-        return createApp(options, input_data).component("tooltip", tooltip).component("dialogBox", dialogBox).component("simpleText", simpleText).component("simpleTextarea", simpleTextarea).component("simpleUrl", simpleUrl).component("simpleEmail", simpleEmail).component("simplePassword", simplePassword).component("rating", rating).component("dropdown", dropdown).component("simpleDate", simpleDate).component("simpleNumeric", simpleNumeric).component("toggle", toggle).component("checkbox", checkbox).component("selector-species_animal", selectorSpeciesAnimal).component("upload", uploadFile).component("textEditor", textEditor$1);
+        return createApp(options, input_data).component("tooltip", tooltip).component("dialogBox", dialogBox).component("simpleText", simpleText).component("simpleTextarea", simpleTextarea).component("simpleUrl", simpleUrl).component("simpleEmail", simpleEmail).component("simplePassword", simplePassword).component("rating", rating).component("dropdown", dropdown).component("simpleDate", simpleDate).component("simpleNumeric", simpleNumeric).component("toggle", toggle).component("checkbox", checkbox).component("selector-species_animal", selectorSpeciesAnimal).component("upload", uploadFile).component("textEditor", editor);
       }
     }
     const Accordion = {
@@ -83976,7 +84087,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }
       }
     };
-    const _sfc_main$P = {
+    const _sfc_main$V = {
       __name: "progress_bar",
       props: {
         value: {
@@ -84011,23 +84122,23 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$B = { class: "progress-bar" };
-    const _hoisted_2$v = {
+    const _hoisted_1$H = { class: "progress-bar" };
+    const _hoisted_2$z = {
       key: 1,
       class: "label"
     };
-    function _sfc_render$P(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$B, [
+    function _sfc_render$V(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$H, [
         $props.value !== null ? (openBlock(), createElementBlock("div", {
           key: 0,
           class: normalizeClass(["bar", { "float-right": $props.negative }]),
           style: normalizeStyle($setup.style)
         }, null, 6)) : createCommentVNode("", true),
-        $props.value !== null ? (openBlock(), createElementBlock("div", _hoisted_2$v, toDisplayString($props.value) + "% " + toDisplayString($props.additional_label), 1)) : createCommentVNode("", true)
+        $props.value !== null ? (openBlock(), createElementBlock("div", _hoisted_2$z, toDisplayString($props.value) + "% " + toDisplayString($props.additional_label), 1)) : createCommentVNode("", true)
       ]);
     }
-    const progress_bar = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["render", _sfc_render$P], ["__scopeId", "data-v-420937fa"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/progress_bar.vue"]]);
-    const _sfc_main$O = {
+    const progress_bar = /* @__PURE__ */ _export_sfc(_sfc_main$V, [["render", _sfc_render$V], ["__scopeId", "data-v-420937fa"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/progress_bar.vue"]]);
+    const _sfc_main$U = {
       __name: "imet_score_bar",
       props: {
         value: {
@@ -84066,28 +84177,28 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$A = { class: "score-bar text-2xs" };
-    const _hoisted_2$u = {
+    const _hoisted_1$G = { class: "score-bar text-2xs" };
+    const _hoisted_2$y = {
       key: 0,
       class: "score-bar__limit-left"
     };
-    const _hoisted_3$o = {
+    const _hoisted_3$r = {
       key: 1,
       class: "score-bar__limit-right"
     };
-    function _sfc_render$O(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$A, [
-        $props.showLimits && $props.min !== null ? (openBlock(), createElementBlock("div", _hoisted_2$u, toDisplayString($props.min) + "%", 1)) : createCommentVNode("", true),
+    function _sfc_render$U(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$G, [
+        $props.showLimits && $props.min !== null ? (openBlock(), createElementBlock("div", _hoisted_2$y, toDisplayString($props.min) + "%", 1)) : createCommentVNode("", true),
         createVNode($setup["progress_bar"], {
           value: $setup.score_value,
           color: $props.color,
           negative: $setup.negative
         }, null, 8, ["value", "color", "negative"]),
-        $props.showLimits && $props.max !== null ? (openBlock(), createElementBlock("div", _hoisted_3$o, toDisplayString($props.max) + "%", 1)) : createCommentVNode("", true)
+        $props.showLimits && $props.max !== null ? (openBlock(), createElementBlock("div", _hoisted_3$r, toDisplayString($props.max) + "%", 1)) : createCommentVNode("", true)
       ]);
     }
-    const imetScoreBar = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["render", _sfc_render$O], ["__scopeId", "data-v-6f11f8bd"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_bar.vue"]]);
-    const _sfc_main$N = {
+    const imetScoreBar = /* @__PURE__ */ _export_sfc(_sfc_main$U, [["render", _sfc_render$U], ["__scopeId", "data-v-6f11f8bd"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_bar.vue"]]);
+    const _sfc_main$T = {
       __name: "imet_radar",
       props: {
         width: {
@@ -84175,14 +84286,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    function _sfc_render$N(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$T(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "radar",
         style: normalizeStyle("width:" + $props.width + "px; height: " + $props.height + "px;")
       }, null, 4);
     }
-    const imetRadar = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["render", _sfc_render$N], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_radar.vue"]]);
-    const _sfc_main$M = {
+    const imet_radar = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["render", _sfc_render$T], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_radar.vue"]]);
+    const _sfc_main$S = {
       __name: "multiple-files-upload",
       props: {
         uploadUrl: {
@@ -84299,10 +84410,10 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$z = { class: "dropzone-custom-content" };
-    const _hoisted_2$t = { class: "dropzone-custom-title" };
-    const _hoisted_3$n = ["href"];
-    function _sfc_render$M(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$F = { class: "dropzone-custom-content" };
+    const _hoisted_2$x = { class: "dropzone-custom-title" };
+    const _hoisted_3$q = ["href"];
+    function _sfc_render$S(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock(Fragment, null, [
         createVNode($setup["vueDropzone"], {
           ref: "dropzoneComponent",
@@ -84315,8 +84426,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           onVdropzoneFileAdded: $setup.fileAdded
         }, {
           default: withCtx(() => [
-            createBaseVNode("div", _hoisted_1$z, [
-              createBaseVNode("h3", _hoisted_2$t, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.multiple_files_description")), 1)
+            createBaseVNode("div", _hoisted_1$F, [
+              createBaseVNode("h3", _hoisted_2$x, toDisplayString($setup.Locale.getLabel("modular-forms::common.upload.multiple_files_description")), 1)
             ])
           ]),
           _: 1
@@ -84324,18 +84435,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         withDirectives(createBaseVNode("a", {
           class: "btn-nav",
           href: $props.backUrl
-        }, toDisplayString($setup.Locale.getLabel("modular-forms::common.go_back")), 9, _hoisted_3$n), [
+        }, toDisplayString($setup.Locale.getLabel("modular-forms::common.go_back")), 9, _hoisted_3$q), [
           [vShow, $setup.files_added > 0 && $setup.files_added === $setup.files_uploaded]
         ])
       ], 64);
     }
-    const multipleFilesUpload = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["render", _sfc_render$M], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/multiple-files-upload.vue"]]);
+    const multipleFilesUpload = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["render", _sfc_render$S], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/multiple-files-upload.vue"]]);
     const marineIcon = "/build/assets/fish-PuECKpUO.png";
     const terrestrialIcon = "/build/assets/tree-1D_APfEu.png";
     const TERRESTRIAL_AND_MARINE = "terrestrial_and_marine";
     const TERRESTRIAL = "terrestrial";
     const MARINE = "marine";
-    const _sfc_main$L = {
+    const _sfc_main$R = {
       __name: "scope_icon",
       props: {
         scope: {
@@ -84356,9 +84467,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$y = ["src"];
-    const _hoisted_2$s = ["src"];
-    function _sfc_render$L(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$E = ["src"];
+    const _hoisted_2$w = ["src"];
+    function _sfc_render$R(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock(Fragment, null, [
         $props.scope === $setup.TERRESTRIAL_AND_MARINE || $props.scope === $setup.TERRESTRIAL ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
@@ -84366,7 +84477,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             style: { "height": "28px" },
             src: $setup.terrestrialIcon,
             class: "inline mr-2"
-          }, null, 8, _hoisted_1$y),
+          }, null, 8, _hoisted_1$E),
           createVNode(_component_tooltip, null, {
             default: withCtx(() => [
               createTextVNode(toDisplayString($setup.Locale.getLabel("imet-core::common.terrestrial")), 1)
@@ -84379,7 +84490,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             style: { "height": "28px" },
             src: $setup.marineIcon,
             class: "inline mr-2"
-          }, null, 8, _hoisted_2$s),
+          }, null, 8, _hoisted_2$w),
           createVNode(_component_tooltip, null, {
             default: withCtx(() => [
               createTextVNode(toDisplayString($setup.Locale.getLabel("imet-core::common.marine")), 1)
@@ -84389,13 +84500,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ], 64)) : createCommentVNode("", true)
       ], 64);
     }
-    const scopeIcon = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["render", _sfc_render$L], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/scope_icon.vue"]]);
+    const scopeIcon = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["render", _sfc_render$R], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/scope_icon.vue"]]);
     class BaseImet extends Base {
       constructor(options, input_data) {
-        return super(options, input_data).component("imet_score_bar", imetScoreBar).component("imet_radar", imetRadar).component("multiple-files-upload", multipleFilesUpload).component("scope-icon", scopeIcon);
+        return super(options, input_data).component("imet_score_bar", imetScoreBar).component("imet_radar", imet_radar).component("multiple-files-upload", multipleFilesUpload).component("scope-icon", scopeIcon);
       }
     }
-    const _sfc_main$K = {
+    const _sfc_main$Q = {
       __name: "imet_encoders_responsibles",
       props: {
         max_visible: {
@@ -84462,56 +84573,52 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _withScopeId$4 = (n2) => (pushScopeId("data-v-2aa7151e"), n2 = n2(), popScopeId(), n2);
-    const _hoisted_1$x = { class: "imet_responsible" };
-    const _hoisted_2$r = { key: 0 };
-    const _hoisted_3$m = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createBaseVNode("br", null, null, -1));
-    const _hoisted_4$i = { key: 0 };
-    const _hoisted_5$g = { key: 1 };
-    const _hoisted_6$d = { key: 0 };
-    const _hoisted_7$b = { key: 2 };
-    const _hoisted_8$a = { key: 0 };
-    const _hoisted_9$9 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-plus-square" }, null, -1));
-    const _hoisted_10$7 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createBaseVNode("i", { class: "fas fa-minus-square" }, null, -1));
-    function _sfc_render$K(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$x, [
-        $setup.to_be_shown["internal"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_2$r, [
+    const _hoisted_1$D = { class: "imet_responsible" };
+    const _hoisted_2$v = { key: 0 };
+    const _hoisted_3$p = { key: 0 };
+    const _hoisted_4$k = { key: 1 };
+    const _hoisted_5$j = { key: 0 };
+    const _hoisted_6$e = { key: 2 };
+    const _hoisted_7$b = { key: 0 };
+    function _sfc_render$Q(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$D, [
+        $setup.to_be_shown["internal"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_2$v, [
           createBaseVNode("b", null, toDisplayString($setup.Locale.getLabel("imet-core::common.responsible_internal")), 1),
-          createTextVNode(":"),
-          _hoisted_3$m,
+          _cache[0] || (_cache[0] = createTextVNode(":")),
+          _cache[1] || (_cache[1] = createBaseVNode("br", null, null, -1)),
           createBaseVNode("ul", null, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.to_be_shown["internal"], (resp) => {
               return openBlock(), createElementBlock("li", null, [
                 createTextVNode(toDisplayString(resp["Name"]) + " ", 1),
-                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_4$i, [
+                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_3$p, [
                   createBaseVNode("i", null, "(" + toDisplayString(resp["Institution"]) + ")", 1)
                 ])) : createCommentVNode("", true)
               ]);
             }), 256))
           ])
         ])) : createCommentVNode("", true),
-        $setup.to_be_shown["external"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_5$g, [
+        $setup.to_be_shown["external"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_4$k, [
           createBaseVNode("b", null, toDisplayString($setup.Locale.getLabel("imet-core::common.responsible_external")), 1),
-          createTextVNode(": "),
+          _cache[2] || (_cache[2] = createTextVNode(": ")),
           createBaseVNode("ul", null, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.to_be_shown["external"], (resp) => {
               return openBlock(), createElementBlock("li", null, [
                 createTextVNode(toDisplayString(resp["Name"]) + " ", 1),
-                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_6$d, [
+                resp["Institution"] ? (openBlock(), createElementBlock("span", _hoisted_5$j, [
                   createBaseVNode("i", null, "(" + toDisplayString(resp["Institution"]) + ")", 1)
                 ])) : createCommentVNode("", true)
               ]);
             }), 256))
           ])
         ])) : createCommentVNode("", true),
-        $setup.to_be_shown["encoders"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_7$b, [
+        $setup.to_be_shown["encoders"].length > 0 ? (openBlock(), createElementBlock("div", _hoisted_6$e, [
           createBaseVNode("b", null, toDisplayString($setup.Locale.getLabel("imet-core::common.encoders")), 1),
-          createTextVNode(": "),
+          _cache[3] || (_cache[3] = createTextVNode(": ")),
           createBaseVNode("ul", null, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.to_be_shown["encoders"], (resp) => {
               return openBlock(), createElementBlock("li", null, [
                 createTextVNode(toDisplayString(resp["name"]) + " ", 1),
-                resp["institution"] ? (openBlock(), createElementBlock("span", _hoisted_8$a, [
+                resp["institution"] ? (openBlock(), createElementBlock("span", _hoisted_7$b, [
                   createBaseVNode("i", null, "(" + toDisplayString(resp["institution"]) + ")", 1)
                 ])) : createCommentVNode("", true)
               ]);
@@ -84523,7 +84630,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           class: "btn-nav small",
           onClick: $setup.toggleShown
         }, [
-          _hoisted_9$9,
+          _cache[4] || (_cache[4] = createBaseVNode("i", { class: "fas fa-plus-square" }, null, -1)),
           createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.view_all")), 1)
         ])) : createCommentVNode("", true),
         $setup.showHidden ? (openBlock(), createElementBlock("button", {
@@ -84531,18 +84638,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           class: "btn-nav small",
           onClick: $setup.toggleShown
         }, [
-          _hoisted_10$7,
+          _cache[5] || (_cache[5] = createBaseVNode("i", { class: "fas fa-minus-square" }, null, -1)),
           createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.hide")), 1)
         ])) : createCommentVNode("", true)
       ]);
     }
-    const imetEncodersResponsibles = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$K], ["__scopeId", "data-v-2aa7151e"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_encoders_responsibles.vue"]]);
+    const imetEncodersResponsibles = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["render", _sfc_render$Q], ["__scopeId", "data-v-2aa7151e"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_encoders_responsibles.vue"]]);
     class FormListImet extends FormList {
       constructor(options, input_data) {
-        return super(options, input_data).component("imet_encoders_responsibles", imetEncodersResponsibles).component("imet_radar", imetRadar);
+        return super(options, input_data).component("imet_encoders_responsibles", imetEncodersResponsibles).component("imet_radar", imet_radar);
       }
     }
-    const _sfc_main$J = {
+    const _sfc_main$P = {
       __name: "selector-wdpa",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -84586,13 +84693,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return __returned__;
       }
     };
-    const _hoisted_1$w = { class: "result_left" };
-    const _hoisted_2$q = {
+    const _hoisted_1$C = { class: "result_left" };
+    const _hoisted_2$u = {
       key: 0,
       target: "_blank",
       href: "https://www.protectedplanet.net/'+item.wdpa_id+'"
     };
-    function _sfc_render$J(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$P(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createBlock($setup["selectorDialog"], {
         modelValue: $setup.inputValue,
         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
@@ -84611,12 +84718,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ]),
         searchResultItem: withCtx(({ item }) => [
           createBaseVNode("td", null, [
-            createBaseVNode("span", _hoisted_1$w, [
+            createBaseVNode("span", _hoisted_1$C, [
               createBaseVNode("b", null, toDisplayString(item.name), 1)
             ])
           ]),
           createBaseVNode("td", null, [
-            item.wdpa_id !== null ? (openBlock(), createElementBlock("a", _hoisted_2$q, toDisplayString(item.wdpa_id), 1)) : createCommentVNode("", true)
+            item.wdpa_id !== null ? (openBlock(), createElementBlock("a", _hoisted_2$u, toDisplayString(item.wdpa_id), 1)) : createCommentVNode("", true)
           ]),
           createBaseVNode("td", null, toDisplayString(item.country_name), 1),
           createBaseVNode("td", null, toDisplayString(item.iucn_category), 1)
@@ -84624,7 +84731,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         _: 1
       }, 8, ["modelValue", "parent-id", "search-url", "label-url", "multiple"]);
     }
-    const selectorWdpa = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["render", _sfc_render$J], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/selector-wdpa.vue"]]);
+    const selectorWdpa = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["render", _sfc_render$P], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/selector-wdpa.vue"]]);
     class ModuleImet extends Module {
       constructor(input_data = {}, custom_props = {}) {
         return super(input_data, custom_props).component("selector-wdpa", selectorWdpa).component("scope-icon", scopeIcon).component("imet_score_bar", imetScoreBar);
@@ -84845,7 +84952,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
     }
     /*!
-     * pinia v2.2.2
+     * pinia v2.2.4
      * (c) 2024 Eduardo San Martin Morote
      * @license MIT
      */
@@ -86140,7 +86247,7 @@ This will fail in production.`);
         return refs;
       }
     }
-    const _sfc_main$I = {
+    const _sfc_main$O = {
       __name: "imet_score_row",
       props: {
         value: {
@@ -86195,22 +86302,20 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$v = {
+    const _hoisted_1$B = {
       key: 0,
       class: "histogram-row__code text-center font-bold"
     };
-    const _hoisted_2$p = { class: "histogram-row__value text-right font-bold" };
-    const _hoisted_3$l = /* @__PURE__ */ createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1);
-    const _hoisted_4$h = /* @__PURE__ */ createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1);
-    function _sfc_render$I(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_2$t = { class: "histogram-row__value text-right font-bold" };
+    function _sfc_render$O(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         class: normalizeClass(["histogram-row", { "border-b border-gray-400 pb-2 mb-2": $props.isHeader }])
       }, [
-        !$props.isHeader && $props.code != null ? (openBlock(), createElementBlock("div", _hoisted_1$v, toDisplayString($props.code), 1)) : createCommentVNode("", true),
+        !$props.isHeader && $props.code != null ? (openBlock(), createElementBlock("div", _hoisted_1$B, toDisplayString($props.code), 1)) : createCommentVNode("", true),
         createBaseVNode("div", {
           class: normalizeClass(["histogram-row__title text-left", { "text-xl font-bold text-primary-600": $props.isHeader, "short": $props.shortLabel || $props.isHeader }])
         }, toDisplayString($props.label), 3),
-        createBaseVNode("div", _hoisted_2$p, toDisplayString($setup.format($props.value)), 1),
+        createBaseVNode("div", _hoisted_2$t, toDisplayString($setup.format($props.value)), 1),
         createBaseVNode("div", {
           class: "histogram-row__progress-bar text-2xs pl-4",
           style: normalizeStyle($setup.grid_according_to_histogram_type)
@@ -86220,7 +86325,7 @@ This will fail in production.`);
             value: $setup.format($props.value),
             color: $props.color
           }, null, 8, ["value", "color"])) : $props.histogram_type === "0_to_100" ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-            _hoisted_3$l,
+            _cache[0] || (_cache[0] = createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1)),
             createVNode($setup["imet_score_bar"], {
               value: $setup.format($props.value),
               color: $props.color
@@ -86232,7 +86337,7 @@ This will fail in production.`);
               min: -100,
               max: 0
             }, null, 8, ["value", "color"]),
-            _hoisted_4$h
+            _cache[1] || (_cache[1] = createBaseVNode("div", { class: "histogram-row__progress-bar__spacer" }, null, -1))
           ], 64)) : $props.histogram_type === "minus100_to_100" ? (openBlock(), createElementBlock(Fragment, { key: 3 }, [
             createVNode($setup["imet_score_bar"], {
               value: $setup.format($props.value) < 0 ? $setup.format($props.value) : null,
@@ -86250,8 +86355,8 @@ This will fail in production.`);
         ], 4)
       ], 2);
     }
-    const imet_score_row = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["render", _sfc_render$I], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_row.vue"]]);
-    const _sfc_main$H = {
+    const imet_score_row = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["render", _sfc_render$O], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_row.vue"]]);
+    const _sfc_main$N = {
       __name: "imet_process_radar",
       props: {
         values: {
@@ -86334,16 +86439,16 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$u = {
+    const _hoisted_1$A = {
       ref: "radar",
       class: "imet_process_radar",
       style: { "height": "250px" }
     };
-    function _sfc_render$H(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$u, null, 512);
+    function _sfc_render$N(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$A, null, 512);
     }
-    const imet_process_radar = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$H], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_process_radar.vue"]]);
-    const _sfc_main$G = {
+    const imet_process_radar = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["render", _sfc_render$N], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_process_radar.vue"]]);
+    const _sfc_main$M = {
       __name: "imet_scores",
       props: {
         current_step: {
@@ -86359,11 +86464,14 @@ This will fail in production.`);
           default: () => {
           }
         },
+        render_radar: {
+          type: Boolean,
+          default: null
+        },
         store: null
       },
       setup(__props, { expose: __expose }) {
         __expose();
-        const Locale2 = window.ModularForms.Helpers.Locale;
         const props = __props;
         const { api_data } = storeToRefs(props.store);
         const score_properties = {
@@ -86458,33 +86566,30 @@ This will fail in production.`);
         function histogram_type(step_key, idx) {
           return properties.value[step_key].hasOwnProperty("histogram_types") ? properties.value[step_key].histogram_types[idx] : "0_to_100_full_width";
         }
-        const __returned__ = { Locale: Locale2, props, api_data, score_properties, properties, radar_values, histogram_type, computed, get storeToRefs() {
+        const __returned__ = { props, api_data, score_properties, properties, radar_values, histogram_type, computed, ref, onMounted, defineComponent, createVNode, render, get storeToRefs() {
           return storeToRefs;
-        }, imet_score_row, imet_process_radar, imet_radar: imetRadar };
+        }, imet_score_row, imet_process_radar, imet_radar };
         Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
         return __returned__;
       }
     };
-    const _hoisted_1$t = { class: "flex w-full flex-row items-center" };
-    const _hoisted_2$o = { class: "grow" };
-    const _hoisted_3$k = {
-      key: 0,
-      class: "mb-10"
-    };
-    const _hoisted_4$g = {
+    const _hoisted_1$z = { class: "flex w-full flex-row items-center" };
+    const _hoisted_2$s = { class: "grow" };
+    const _hoisted_3$o = { key: 0 };
+    const _hoisted_4$j = {
       key: 0,
       class: "mt-4"
     };
-    const _hoisted_5$f = {
+    const _hoisted_5$i = {
       key: 1,
       class: "mt-4"
     };
-    function _sfc_render$G(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$M(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock(Fragment, null, [
-        createBaseVNode("div", _hoisted_1$t, [
-          createBaseVNode("div", _hoisted_2$o, [
+        createBaseVNode("div", _hoisted_1$z, [
+          createBaseVNode("div", _hoisted_2$s, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.properties, (step_props, step_key) => {
-              return openBlock(), createElementBlock("div", null, [
+              return openBlock(), createElementBlock("div", { key: step_key }, [
                 createVNode($setup["imet_score_row"], {
                   label: $props.labels[step_key],
                   value: $setup.api_data["scores"][step_key].avg_indicator,
@@ -86492,17 +86597,22 @@ This will fail in production.`);
                   "short-label": true
                 }, null, 8, ["label", "value", "color"])
               ]);
-            }), 256))
+            }), 128))
           ]),
-          createVNode($setup["imet_radar"], {
-            values: $setup.radar_values,
-            width: 380,
-            height: 250
-          }, null, 8, ["values"])
+          $setup.props.render_radar ? (openBlock(), createElementBlock("div", _hoisted_3$o, [
+            createVNode($setup["imet_radar"], {
+              values: $setup.radar_values,
+              width: 380,
+              height: 250
+            }, null, 8, ["values"])
+          ])) : createCommentVNode("", true)
         ]),
         (openBlock(true), createElementBlock(Fragment, null, renderList($setup.properties, (step_props, step_key) => {
           return openBlock(), createElementBlock(Fragment, null, [
-            $props.current_step === step_key || $props.current_step === "management_effectiveness" ? (openBlock(), createElementBlock("div", _hoisted_3$k, [
+            $props.current_step === step_key || $props.current_step === "management_effectiveness" ? (openBlock(), createElementBlock("div", {
+              class: "mb-10",
+              key: step_key
+            }, [
               createVNode($setup["imet_score_row"], {
                 label: $props.labels[step_key],
                 value: $setup.api_data["scores"][step_key].avg_indicator,
@@ -86510,7 +86620,7 @@ This will fail in production.`);
                 "is-header": true
               }, null, 8, ["label", "value", "color"]),
               (openBlock(true), createElementBlock(Fragment, null, renderList(step_props.indexes, (index, idx) => {
-                return openBlock(), createElementBlock("div", null, [
+                return openBlock(), createElementBlock("div", { key: index }, [
                   createVNode($setup["imet_score_row"], {
                     label: $props.labels[index],
                     code: index,
@@ -86519,10 +86629,11 @@ This will fail in production.`);
                     color: step_props.color
                   }, null, 8, ["label", "code", "value", "histogram_type", "color"])
                 ]);
-              }), 256)),
-              step_key === "context" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_4$g, [
+              }), 128)),
+              step_key === "context" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_4$j, [
                 (openBlock(), createElementBlock(Fragment, null, renderList(["C11", "C12", "C13", "C14", "C15"], (ctx_key) => {
                   return createVNode($setup["imet_score_row"], {
+                    key: ctx_key,
                     label: $props.labels[ctx_key],
                     code: ctx_key,
                     value: $setup.api_data["scores"]["context"][ctx_key],
@@ -86530,7 +86641,7 @@ This will fail in production.`);
                     color: step_props.color
                   }, null, 8, ["label", "code", "value", "color"]);
                 }), 64))
-              ])) : step_key === "process" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_5$f, [
+              ])) : step_key === "process" && $props.version !== "oecm" ? (openBlock(), createElementBlock("div", _hoisted_5$i, [
                 createVNode($setup["imet_process_radar"], {
                   values: [
                     $setup.api_data["scores"]["process"]["PRA"],
@@ -86555,7 +86666,7 @@ This will fail in production.`);
         }), 256))
       ], 64);
     }
-    const imetScores = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$G], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_scores.vue"]]);
+    const imetScores = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["render", _sfc_render$M], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_scores.vue"]]);
     const useScoreStore = /* @__PURE__ */ defineStore("score", {
       state: () => ({
         api: {}
@@ -86608,7 +86719,7 @@ This will fail in production.`);
         return createApp(options, input_data).component("imet_scores", imetScores).use(createPinia());
       }
     }
-    const _sfc_main$F = {
+    const _sfc_main$L = {
       __name: "action-button-cookie",
       props: {
         event: {
@@ -86628,7 +86739,7 @@ This will fail in production.`);
         __expose();
         const props = __props;
         const emitter = inject("emitter");
-        const selected = inject("selected");
+        const selected2 = inject("selected");
         onMounted(() => {
           emitter.on("store_cookie_and_value", (name, values2) => {
             store_to_cookie_by_id_and_value(name, values2);
@@ -86636,7 +86747,7 @@ This will fail in production.`);
         });
         function store_to_cookie_by_id_and_value(cookieName, data_values = null) {
           if (data_values === null) {
-            data_values = selected.value;
+            data_values = selected2.value;
           }
           if (data_values.length > 0) {
             const cookie = get_cookie();
@@ -86660,19 +86771,19 @@ This will fail in production.`);
         function get_cookie(cookieName) {
           return window.ModularForms.Helpers.Cookie.getByName(cookieName);
         }
-        const __returned__ = { props, emitter, selected, store_to_cookie_by_id_and_value, get_cookie, inject, onMounted };
+        const __returned__ = { props, emitter, selected: selected2, store_to_cookie_by_id_and_value, get_cookie, inject, onMounted };
         Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
         return __returned__;
       }
     };
-    function _sfc_render$F(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$L(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("button", {
         class: normalizeClass($props.className),
         onClick: _cache[0] || (_cache[0] = ($event) => $setup.store_to_cookie_by_id_and_value("analysis"))
       }, toDisplayString($props.label), 3);
     }
-    const actionButtonCookie = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["render", _sfc_render$F], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button-cookie.vue"]]);
-    const _sfc_main$E = {
+    const actionButtonCookie = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["render", _sfc_render$L], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button-cookie.vue"]]);
+    const _sfc_main$K = {
       __name: "label-cloud",
       props: {
         sourceOfData: {
@@ -86778,22 +86889,18 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _withScopeId$3 = (n2) => (pushScopeId("data-v-29abde70"), n2 = n2(), popScopeId(), n2);
-    const _hoisted_1$s = { class: "vue-cloud flex flex-col" };
-    const _hoisted_2$n = {
+    const _hoisted_1$y = { class: "vue-cloud flex flex-col" };
+    const _hoisted_2$r = {
       key: 0,
       class: "flex flex-row justify-center gap-4"
     };
-    const _hoisted_3$j = { class: "m-4 flex flex-row justify-center gap-4" };
-    const _hoisted_4$f = ["onClick"];
-    const _hoisted_5$e = { class: "p-2 bg-yellow-100 rounded border border-yellow-200" };
-    const _hoisted_6$c = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ createBaseVNode("button", { type: "button" }, [
-      /* @__PURE__ */ createBaseVNode("span", { "aria-hidden": "true" }, "×")
-    ], -1));
-    function _sfc_render$E(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_3$n = { class: "m-4 flex flex-row justify-center gap-4" };
+    const _hoisted_4$i = ["onClick"];
+    const _hoisted_5$h = { class: "p-2 bg-yellow-100 rounded border border-yellow-200" };
+    function _sfc_render$K(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_action_button = resolveComponent("action_button");
-      return openBlock(), createElementBlock("div", _hoisted_1$s, [
-        $setup.has_selected() ? (openBlock(), createElementBlock("div", _hoisted_2$n, [
+      return openBlock(), createElementBlock("div", _hoisted_1$y, [
+        $setup.has_selected() ? (openBlock(), createElementBlock("div", _hoisted_2$r, [
           createBaseVNode("button", {
             class: "btn-nav",
             onClick: $setup.scaling_up
@@ -86806,24 +86913,26 @@ This will fail in production.`);
             emitter: $setup.emitter
           }, null, 8, ["label", "emitter"])
         ])) : createCommentVNode("", true),
-        createBaseVNode("div", _hoisted_3$j, [
+        createBaseVNode("div", _hoisted_3$n, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($setup.selections, (selection) => {
             return openBlock(), createElementBlock("div", {
               class: "",
               key: selection.id,
               onClick: ($event) => $setup.remove_item(selection)
             }, [
-              createBaseVNode("div", _hoisted_5$e, [
+              createBaseVNode("div", _hoisted_5$h, [
                 createBaseVNode("strong", null, toDisplayString(selection.value), 1),
-                _hoisted_6$c
+                _cache[0] || (_cache[0] = createBaseVNode("button", { type: "button" }, [
+                  createBaseVNode("span", { "aria-hidden": "true" }, "×")
+                ], -1))
               ])
-            ], 8, _hoisted_4$f);
+            ], 8, _hoisted_4$i);
           }), 128))
         ])
       ]);
     }
-    const LabelCloud = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$E], ["__scopeId", "data-v-29abde70"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/label-cloud.vue"]]);
-    const _sfc_main$D = {
+    const LabelCloud = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$K], ["__scopeId", "data-v-29abde70"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/label-cloud.vue"]]);
+    const _sfc_main$J = {
       __name: "action-button",
       props: {
         event: {
@@ -86869,28 +86978,28 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$D(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$J(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("button", {
         class: normalizeClass($props.className),
         onClick: $setup.action
       }, toDisplayString($props.label), 3);
     }
-    const actionButton = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$D], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button.vue"]]);
+    const actionButton = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["render", _sfc_render$J], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button.vue"]]);
     class ScalingList {
       constructor(input_data = {}) {
         const options = {
           name: "ScalingList",
           setup() {
-            const selected = ref([]);
+            const selected2 = ref([]);
             const are_checked_all = ref(false);
             const emitter = mitt();
             provide("emitter", emitter);
-            provide("selected", selected);
+            provide("selected", selected2);
             const is_checked = (id) => {
-              return selected.value.some((item) => parseInt(item.id) === id);
+              return selected2.value.some((item) => parseInt(item.id) === id);
             };
             function clearSelections() {
-              selected.value = [];
+              selected2.value = [];
               are_checked_all.value = false;
             }
             function retrieve_check_boxes() {
@@ -86903,7 +87012,7 @@ This will fail in production.`);
                   const check_box = checkboxes_list[key];
                   const exist = is_checked(parseInt(check_box.defaultValue));
                   if (!exist) {
-                    selected.value.push({
+                    selected2.value.push({
                       id: check_box.defaultValue,
                       value: check_box.getAttribute("data-name")
                     });
@@ -86916,20 +87025,20 @@ This will fail in production.`);
             }
             const selectValueByIdAndValue = (id, value) => {
               if (is_checked(parseInt(id))) {
-                selected.value = selected.value.filter((item) => parseInt(item.id) !== parseInt(id));
+                selected2.value = selected2.value.filter((item) => parseInt(item.id) !== parseInt(id));
               } else {
-                selected.value.push({ id, value });
+                selected2.value.push({ id, value });
               }
             };
             const add_all = () => {
               input_data.listItems.forEach(function(item) {
                 selectValueByIdAndValue(item.id, item.value);
               });
-              emitter.emit("store_cookie_and_value", "analysis", JSON.stringify(selected.value));
-              selected.value = [];
+              emitter.emit("store_cookie_and_value", "analysis", JSON.stringify(selected2.value));
+              selected2.value = [];
             };
             const is_value_included = (value) => {
-              return selected.value.some((item) => parseInt(item.id) === parseInt(value));
+              return selected2.value.some((item) => parseInt(item.id) === parseInt(value));
             };
             const sortList = (list) => {
               return list.sort((a2, b2) => {
@@ -86938,7 +87047,7 @@ This will fail in production.`);
             };
             return {
               emitter,
-              selected,
+              selected: selected2,
               is_checked,
               check_all,
               are_checked_all,
@@ -86957,11 +87066,11 @@ This will fail in production.`);
         app.component("action_button_cookie", actionButtonCookie);
         app.component("label_cloud", LabelCloud);
         app.component("imet_encoders_responsibles", imetEncodersResponsibles);
-        app.component("imet_radar", imetRadar);
+        app.component("imet_radar", imet_radar);
         return app;
       }
     }
-    const _sfc_main$C = {
+    const _sfc_main$I = {
       __name: "general_info",
       props: {
         values: {
@@ -87006,40 +87115,40 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$r = { id: "general-elements" };
-    const _hoisted_2$m = { class: "max-w-12xl m-auto" };
-    const _hoisted_3$i = { class: "strong text-left" };
-    const _hoisted_4$e = { class: "text-left" };
-    const _hoisted_5$d = { class: "strong text-left" };
-    const _hoisted_6$b = { class: "text-left" };
+    const _hoisted_1$x = { id: "general-elements" };
+    const _hoisted_2$q = { class: "max-w-12xl m-auto" };
+    const _hoisted_3$m = { class: "strong text-left" };
+    const _hoisted_4$h = { class: "text-left" };
+    const _hoisted_5$g = { class: "strong text-left" };
+    const _hoisted_6$d = { class: "text-left" };
     const _hoisted_7$a = { class: "strong text-left" };
-    const _hoisted_8$9 = { class: "text-left" };
-    const _hoisted_9$8 = { class: "strong text-left" };
-    const _hoisted_10$6 = { class: "text-left" };
-    const _hoisted_11$5 = { class: "strong text-left" };
+    const _hoisted_8$7 = { class: "text-left" };
+    const _hoisted_9$6 = { class: "strong text-left" };
+    const _hoisted_10$4 = { class: "text-left" };
+    const _hoisted_11$4 = { class: "strong text-left" };
     const _hoisted_12$3 = { class: "text-left" };
-    const _hoisted_13$2 = { class: "strong text-left" };
-    const _hoisted_14$1 = { class: "text-left" };
-    const _hoisted_15$1 = { class: "strong text-left" };
-    const _hoisted_16$1 = { class: "text-left" };
-    function _sfc_render$C(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$r, [
-        createBaseVNode("table", _hoisted_2$m, [
+    const _hoisted_13$3 = { class: "strong text-left" };
+    const _hoisted_14$3 = { class: "text-left" };
+    const _hoisted_15$3 = { class: "strong text-left" };
+    const _hoisted_16$3 = { class: "text-left" };
+    function _sfc_render$I(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$x, [
+        createBaseVNode("table", _hoisted_2$q, [
           createBaseVNode("tbody", null, [
             createBaseVNode("tr", null, [
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_3$i, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.country")) + ": ", 1)
+                createBaseVNode("div", _hoisted_3$m, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.country")) + ": ", 1)
               ]),
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_4$e, toDisplayString($setup.info.countries), 1)
+                createBaseVNode("div", _hoisted_4$h, toDisplayString($setup.info.countries), 1)
               ])
             ]),
             createBaseVNode("tr", null, [
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_5$d, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.network")) + ": ", 1)
+                createBaseVNode("div", _hoisted_5$g, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.network")) + ": ", 1)
               ]),
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_6$b, toDisplayString($setup.info.network), 1)
+                createBaseVNode("div", _hoisted_6$d, toDisplayString($setup.info.network), 1)
               ])
             ]),
             createBaseVNode("tr", null, [
@@ -87047,20 +87156,20 @@ This will fail in production.`);
                 createBaseVNode("div", _hoisted_7$a, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.total_surface_protected")) + ": ", 1)
               ]),
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_8$9, toDisplayString($setup.info.total_surface_protected_areas) + " [km2] ", 1)
+                createBaseVNode("div", _hoisted_8$7, toDisplayString($setup.info.total_surface_protected_areas) + " [km2] ", 1)
               ])
             ]),
             createBaseVNode("tr", null, [
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_9$8, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.ecoregions")) + ": ", 1)
+                createBaseVNode("div", _hoisted_9$6, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.ecoregions")) + ": ", 1)
               ]),
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_10$6, toDisplayString($setup.info.eco_regions), 1)
+                createBaseVNode("div", _hoisted_10$4, toDisplayString($setup.info.eco_regions), 1)
               ])
             ]),
             createBaseVNode("tr", null, [
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_11$5, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.vision")) + ": ", 1)
+                createBaseVNode("div", _hoisted_11$4, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.vision")) + ": ", 1)
               ]),
               createBaseVNode("td", null, [
                 createBaseVNode("div", _hoisted_12$3, toDisplayString($setup.info.local_vision), 1)
@@ -87068,26 +87177,26 @@ This will fail in production.`);
             ]),
             createBaseVNode("tr", null, [
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_13$2, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.mission")) + ": ", 1)
+                createBaseVNode("div", _hoisted_13$3, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.mission")) + ": ", 1)
               ]),
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_14$1, toDisplayString($setup.info.local_mission), 1)
+                createBaseVNode("div", _hoisted_14$3, toDisplayString($setup.info.local_mission), 1)
               ])
             ]),
             createBaseVNode("tr", null, [
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_15$1, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.objectives")) + ": ", 1)
+                createBaseVNode("div", _hoisted_15$3, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.general_info.objectives")) + ": ", 1)
               ]),
               createBaseVNode("td", null, [
-                createBaseVNode("div", _hoisted_16$1, toDisplayString($setup.info.local_objective), 1)
+                createBaseVNode("div", _hoisted_16$3, toDisplayString($setup.info.local_objective), 1)
               ])
             ])
           ])
         ])
       ]);
     }
-    const generalInfo = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$C], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/general_info.vue"]]);
-    const _sfc_main$B = {
+    const generalInfo = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["render", _sfc_render$I], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/general_info.vue"]]);
+    const _sfc_main$H = {
       name: "elements",
       props: {
         values: {
@@ -87109,12 +87218,12 @@ This will fail in production.`);
         }
       }
     };
-    const _hoisted_1$q = { class: "mt-5" };
-    const _hoisted_2$l = { class: "strong" };
-    const _hoisted_3$h = { class: "strong" };
-    function _sfc_render$B(_ctx, _cache, $props, $setup, $data, $options) {
-      return withDirectives((openBlock(), createElementBlock("div", _hoisted_1$q, [
-        createBaseVNode("div", _hoisted_2$l, toDisplayString($props.title), 1),
+    const _hoisted_1$w = { class: "mt-5" };
+    const _hoisted_2$p = { class: "strong" };
+    const _hoisted_3$l = { class: "strong" };
+    function _sfc_render$H(_ctx, _cache, $props, $setup, $data, $options) {
+      return withDirectives((openBlock(), createElementBlock("div", _hoisted_1$w, [
+        createBaseVNode("div", _hoisted_2$p, toDisplayString($props.title), 1),
         renderSlot(_ctx.$slots, "default"),
         (openBlock(true), createElementBlock(Fragment, null, renderList($props.values, (list, index) => {
           return openBlock(), createElementBlock("div", {
@@ -87122,7 +87231,7 @@ This will fail in production.`);
             id: "collapse-habitats",
             key: index
           }, [
-            createBaseVNode("div", _hoisted_3$h, toDisplayString(index), 1),
+            createBaseVNode("div", _hoisted_3$l, toDisplayString(index), 1),
             createBaseVNode("ul", null, [
               (openBlock(true), createElementBlock(Fragment, null, renderList(list[0], (item, k2) => {
                 return openBlock(), createElementBlock("li", { key: k2 }, toDisplayString(item), 1);
@@ -87134,7 +87243,7 @@ This will fail in production.`);
         [vShow, $props.show_element]
       ]);
     }
-    const elements = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$B], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context/elements.vue"]]);
+    const elements = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$H], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context/elements.vue"]]);
     function useResize(component_data) {
       component_data.chart || ref(null);
       const emitter = component_data.emitter;
@@ -87163,7 +87272,7 @@ This will fail in production.`);
       onBeforeUnmount(() => {
         window.removeEventListener("resize", handleResize);
       });
-      return { initResize, save_data };
+      return { initResize, save_data, handleResize };
     }
     function useBar(component_data) {
       const zoom = component_data.zoom;
@@ -87257,7 +87366,7 @@ This will fail in production.`);
         default: ""
       }
     };
-    const _sfc_main$A = {
+    const _sfc_main$G = {
       __name: "imet_bar_chart",
       props: {
         ...common,
@@ -87357,15 +87466,15 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$A(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$G(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "chartContainer",
         class: "bar",
         style: normalizeStyle("width:" + _ctx.width + "; min-height: " + _ctx.height + ";")
       }, null, 4);
     }
-    const imetBarChart = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$A], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_bar_chart.vue"]]);
-    const _sfc_main$z = {
+    const imetBarChart = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$G], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_bar_chart.vue"]]);
+    const _sfc_main$F = {
       __name: "management_context",
       props: {
         values: {
@@ -87463,27 +87572,27 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$p = {
+    const _hoisted_1$v = {
       key: 0,
       id: "species"
     };
-    const _hoisted_2$k = {
+    const _hoisted_2$o = {
       key: 0,
       class: "mb-3"
     };
-    const _hoisted_3$g = {
+    const _hoisted_3$k = {
       key: 0,
       class: "mb-3"
     };
-    const _hoisted_4$d = {
+    const _hoisted_4$g = {
       key: 0,
       id: "habitats"
     };
-    const _hoisted_5$c = {
+    const _hoisted_5$f = {
       key: 0,
       class: "mb-3"
     };
-    const _hoisted_6$a = {
+    const _hoisted_6$c = {
       key: 0,
       id: "climate_change"
     };
@@ -87491,17 +87600,17 @@ This will fail in production.`);
       key: 0,
       class: "mb-3"
     };
-    const _hoisted_8$8 = {
+    const _hoisted_8$6 = {
       key: 0,
       id: "ecosystem_services"
     };
-    const _hoisted_9$7 = { class: "mb-3" };
-    const _hoisted_10$5 = {
+    const _hoisted_9$5 = { class: "mb-3" };
+    const _hoisted_10$3 = {
       key: 0,
       id: "threats"
     };
-    const _hoisted_11$4 = { class: "mb-3" };
-    function _sfc_render$z(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_11$3 = { class: "mb-3" };
+    function _sfc_render$F(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_container_actions = resolveComponent("container_actions");
       return openBlock(), createElementBlock("div", null, [
         createBaseVNode("div", null, [
@@ -87521,7 +87630,7 @@ This will fail in production.`);
             exclude_elements: ""
           }, {
             default: withCtx((species_data) => [
-              $setup.data.show_species ? (openBlock(), createElementBlock("div", _hoisted_1$p, [
+              $setup.data.show_species ? (openBlock(), createElementBlock("div", _hoisted_1$v, [
                 createVNode($setup["elements"], {
                   values: species_data.props.group0,
                   title: $setup.stores.BaseStore.localization("imet-core::analysis_report.management_context.animal_species"),
@@ -87529,7 +87638,7 @@ This will fail in production.`);
                   show_element: $setup.data.show_species
                 }, {
                   default: withCtx(() => [
-                    $setup.data.show_species && $setup.data.show_group0 ? (openBlock(), createElementBlock("div", _hoisted_2$k, [
+                    $setup.data.show_species && $setup.data.show_group0 ? (openBlock(), createElementBlock("div", _hoisted_2$o, [
                       createVNode($setup["imet_bar_chart"], {
                         fields: $setup.remove_parenthesis_words(Object.keys($setup.data.species_statistics_group0)),
                         title_data: $setup.stores.BaseStore.localization("imet-core::analysis_report.management_context.animal_species_chart"),
@@ -87548,7 +87657,7 @@ This will fail in production.`);
                   show_element: $setup.data.show_species
                 }, {
                   default: withCtx(() => [
-                    $setup.data.show_species && $setup.data.show_group1 ? (openBlock(), createElementBlock("div", _hoisted_3$g, [
+                    $setup.data.show_species && $setup.data.show_group1 ? (openBlock(), createElementBlock("div", _hoisted_3$k, [
                       createVNode($setup["imet_bar_chart"], {
                         fields: $setup.remove_parenthesis_words(Object.keys($setup.data.species_statistics_group1)),
                         title_data: $setup.stores.BaseStore.localization("imet-core::analysis_report.management_context.plant_species_chart"),
@@ -87583,13 +87692,13 @@ This will fail in production.`);
             exclude_elements: ""
           }, {
             default: withCtx((habitats_data) => [
-              $setup.data.show_habitats ? (openBlock(), createElementBlock("div", _hoisted_4$d, [
+              $setup.data.show_habitats ? (openBlock(), createElementBlock("div", _hoisted_4$g, [
                 createVNode($setup["elements"], {
                   values: habitats_data.props,
                   show_element: $setup.data.show_habitats
                 }, {
                   default: withCtx(() => [
-                    $setup.data.show_habitats ? (openBlock(), createElementBlock("div", _hoisted_5$c, [
+                    $setup.data.show_habitats ? (openBlock(), createElementBlock("div", _hoisted_5$f, [
                       createVNode($setup["imet_bar_chart"], {
                         fields: $setup.remove_parenthesis_words(Object.keys($setup.data.habitats_statistics)),
                         title_data: $setup.stores.BaseStore.localization("imet-core::analysis_report.management_context.habitats_chart"),
@@ -87626,7 +87735,7 @@ This will fail in production.`);
             exclude_elements: ""
           }, {
             default: withCtx((climate_change_data) => [
-              $setup.data.show_climate ? (openBlock(), createElementBlock("div", _hoisted_6$a, [
+              $setup.data.show_climate ? (openBlock(), createElementBlock("div", _hoisted_6$c, [
                 createVNode($setup["elements"], {
                   values: climate_change_data.props,
                   show_element: $setup.data.show_climate
@@ -87669,13 +87778,13 @@ This will fail in production.`);
             exclude_elements: ""
           }, {
             default: withCtx((ecosystem_services_data) => [
-              $setup.data.show_ecosystem ? (openBlock(), createElementBlock("div", _hoisted_8$8, [
+              $setup.data.show_ecosystem ? (openBlock(), createElementBlock("div", _hoisted_8$6, [
                 createVNode($setup["elements"], {
                   values: ecosystem_services_data.props,
                   show_element: $setup.data.show_ecosystem
                 }, {
                   default: withCtx(() => [
-                    createBaseVNode("div", _hoisted_9$7, [
+                    createBaseVNode("div", _hoisted_9$5, [
                       createVNode($setup["imet_bar_chart"], {
                         fields: $setup.remove_parenthesis_words(Object.keys($setup.data.ecosystem_services_statistics)),
                         title_data: $setup.stores.BaseStore.localization("imet-core::analysis_report.management_context.ecosystem_services_chart"),
@@ -87712,13 +87821,13 @@ This will fail in production.`);
             exclude_elements: ""
           }, {
             default: withCtx((threats_data) => [
-              $setup.data.show_threats ? (openBlock(), createElementBlock("div", _hoisted_10$5, [
+              $setup.data.show_threats ? (openBlock(), createElementBlock("div", _hoisted_10$3, [
                 createVNode($setup["elements"], {
                   values: threats_data.props,
                   show_element: $setup.data.show_threats
                 }, {
                   default: withCtx(() => [
-                    createBaseVNode("div", _hoisted_11$4, [
+                    createBaseVNode("div", _hoisted_11$3, [
                       createVNode($setup["imet_bar_chart"], {
                         fields: $setup.remove_parenthesis_words(Object.keys($setup.data.threats_statistics)),
                         title: $setup.stores.BaseStore.localization("imet-core::analysis_report.management_context.occurrences_threats"),
@@ -87738,8 +87847,8 @@ This will fail in production.`);
         ])
       ]);
     }
-    const managementContext = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$z], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context.vue"]]);
-    const _sfc_main$y = {
+    const managementContext = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["render", _sfc_render$F], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context.vue"]]);
+    const _sfc_main$E = {
       __name: "drop_drag_area",
       props: {
         drop_id: {
@@ -87768,7 +87877,7 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$y(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$E(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         style: normalizeStyle("background-color:" + $props.color),
         class: "drop-zones d-grid gap-1 rounded",
@@ -87781,8 +87890,8 @@ This will fail in production.`);
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ], 36);
     }
-    const drop_drag_area = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$y], ["__scopeId", "data-v-0367b2c5"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/drop_drag_area.vue"]]);
-    const _sfc_main$x = {
+    const drop_drag_area = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$E], ["__scopeId", "data-v-0367b2c5"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/drop_drag_area.vue"]]);
+    const _sfc_main$D = {
       __name: "draggable_item",
       props: {
         item: {
@@ -87828,10 +87937,8 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _withScopeId$2 = (n2) => (pushScopeId("data-v-010a90de"), n2 = n2(), popScopeId(), n2);
-    const _hoisted_1$o = ["id"];
-    const _hoisted_2$j = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-grip-vertical mr-2 cursor-grab" }, null, -1));
-    function _sfc_render$x(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$u = ["id"];
+    function _sfc_render$D(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         id: $props.item.id,
         class: normalizeClass(["item_class", "default-zone-element"]),
@@ -87840,7 +87947,7 @@ This will fail in production.`);
         onDragstart: _cache[2] || (_cache[2] = ($event) => $setup.startDrag($event, $props.item)),
         onDragover: _cache[3] || (_cache[3] = ($event) => $setup.dragOver($event, $props.item))
       }, [
-        _hoisted_2$j,
+        _cache[4] || (_cache[4] = createBaseVNode("i", { class: "fa-solid fa-grip-vertical mr-2 cursor-grab" }, null, -1)),
         renderSlot(_ctx.$slots, "default", {}, void 0, true),
         createBaseVNode("span", null, toDisplayString($props.item.name), 1),
         $props.is_removable ? (openBlock(), createElementBlock("i", {
@@ -87849,11 +87956,11 @@ This will fail in production.`);
           "aria-hidden": "true",
           onClick: _cache[0] || (_cache[0] = ($event) => $setup.removeItem(_ctx.evt, $props.item.id))
         })) : createCommentVNode("", true)
-      ], 40, _hoisted_1$o);
+      ], 40, _hoisted_1$u);
     }
-    const draggable_item = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$x], ["__scopeId", "data-v-010a90de"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/draggable_item.vue"]]);
+    const draggable_item = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$D], ["__scopeId", "data-v-010a90de"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/draggable_item.vue"]]);
     const func_to_call = "get_grouping_analysis";
-    const _sfc_main$w = {
+    const _sfc_main$C = {
       __name: "grouping",
       props: {
         values: {
@@ -87906,8 +88013,8 @@ This will fail in production.`);
         });
         function show_diagrams(type = "radar", params = null) {
           data.type = type;
-          const render = data.list.some((item) => item.list !== null);
-          if (render) {
+          const render2 = data.list.some((item) => item.list !== null);
+          if (render2) {
             trigger_incoming_data.value = {
               parameters: data.list.filter((item) => item.list !== null).map((item) => {
                 let group = data.list_of_components.find((comp) => comp.id === item.list);
@@ -88012,66 +88119,55 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _withScopeId$1 = (n2) => (pushScopeId("data-v-d9cda725"), n2 = n2(), popScopeId(), n2);
-    const _hoisted_1$n = { id: "js-grouping-action-buttons" };
-    const _hoisted_2$i = { class: "mb-2" };
-    const _hoisted_3$f = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("i", {
-      class: "fa fa-plus",
-      "aria-hidden": "true"
-    }, null, -1));
-    const _hoisted_4$c = {
+    const _hoisted_1$t = { id: "js-grouping-action-buttons" };
+    const _hoisted_2$n = { class: "mb-2" };
+    const _hoisted_3$j = {
       class: "flex flex-row justify-center dropzone-areas",
       id: "dropzone-areas"
     };
-    const _hoisted_5$b = {
+    const _hoisted_4$f = {
       class: "text-center mb-4 py-1 px-2 font-bold",
       style: { "background": "rgba(255,255,255,0.7)" }
     };
-    const _hoisted_6$9 = {
+    const _hoisted_5$e = {
       key: 0,
       class: "text-center"
     };
-    const _hoisted_7$8 = ["id", "value"];
-    const _hoisted_8$7 = {
+    const _hoisted_6$b = ["id", "value"];
+    const _hoisted_7$8 = {
       key: 1,
       class: "text-center"
     };
-    const _hoisted_9$6 = ["onClick"];
-    const _hoisted_10$4 = ["onClick"];
-    const _hoisted_11$3 = ["onClick"];
-    const _hoisted_12$2 = {
+    const _hoisted_8$5 = ["onClick"];
+    const _hoisted_9$4 = ["onClick"];
+    const _hoisted_10$2 = ["onClick"];
+    const _hoisted_11$2 = {
       class: "flex flex-row gap-1 justify-center mb-5",
       id: "js-render-buttons"
     };
-    const _hoisted_13$1 = { key: 0 };
-    const _hoisted_14 = {
+    const _hoisted_12$2 = { key: 0 };
+    const _hoisted_13$2 = {
       key: 0,
       class: "list-head"
     };
-    const _hoisted_15 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("button", { class: "btn-nav small blue" }, [
-      /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-info-circle" })
-    ], -1));
-    const _hoisted_16 = {
+    const _hoisted_14$2 = {
       key: 1,
       class: "list-head"
     };
-    const _hoisted_17 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("button", { class: "btn-nav small blue" }, [
-      /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-info-circle" })
-    ], -1));
-    const _hoisted_18 = {
+    const _hoisted_15$2 = {
       id: "render_image",
       class: "mt-3"
     };
-    const _hoisted_19 = {
+    const _hoisted_16$2 = {
       key: 0,
       class: "flex flex-row justify-center gap-2"
     };
-    const _hoisted_20 = ["innerHTML"];
-    function _sfc_render$w(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_17$2 = ["innerHTML"];
+    function _sfc_render$C(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_tooltip = resolveComponent("tooltip");
       return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("div", _hoisted_1$n, [
-          createBaseVNode("div", _hoisted_2$i, [
+        createBaseVNode("div", _hoisted_1$t, [
+          createBaseVNode("div", _hoisted_2$n, [
             createBaseVNode("button", {
               type: "button",
               class: "btn-nav mb-1 mr-1",
@@ -88088,7 +88184,10 @@ This will fail in production.`);
               onClick: _cache[0] || (_cache[0] = ($event) => $setup.add_group()),
               class: "btn-nav blue mb-1"
             }, [
-              _hoisted_3$f,
+              _cache[6] || (_cache[6] = createBaseVNode("i", {
+                class: "fa fa-plus",
+                "aria-hidden": "true"
+              }, null, -1)),
               createTextVNode(" " + toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.grouping.add_group")), 1)
             ])) : createCommentVNode("", true)
           ])
@@ -88115,7 +88214,7 @@ This will fail in production.`);
             ]);
           }), 128))
         ], 32),
-        createBaseVNode("div", _hoisted_4$c, [
+        createBaseVNode("div", _hoisted_3$j, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($setup.data.list_of_components, (i2, index) => {
             return openBlock(), createElementBlock("div", {
               class: "ml-1",
@@ -88130,34 +88229,34 @@ This will fail in production.`);
                 color: i2.color
               }, {
                 default: withCtx(() => [
-                  createBaseVNode("div", _hoisted_5$b, [
-                    i2.input_visible ? (openBlock(), createElementBlock("span", _hoisted_6$9, [
+                  createBaseVNode("div", _hoisted_4$f, [
+                    i2.input_visible ? (openBlock(), createElementBlock("span", _hoisted_5$e, [
                       createBaseVNode("input", {
                         type: "text",
                         id: "item-" + i2.id,
                         value: i2.name,
                         maxlength: "25",
                         size: "15"
-                      }, null, 8, _hoisted_7$8)
+                      }, null, 8, _hoisted_6$b)
                     ])) : createCommentVNode("", true),
-                    !i2.input_visible ? (openBlock(), createElementBlock("span", _hoisted_8$7, toDisplayString(i2.name), 1)) : createCommentVNode("", true),
+                    !i2.input_visible ? (openBlock(), createElementBlock("span", _hoisted_7$8, toDisplayString(i2.name), 1)) : createCommentVNode("", true),
                     !i2.input_visible ? (openBlock(), createElementBlock("i", {
                       key: 2,
                       class: "fa fa-pen",
                       "aria-hidden": "true",
                       onClick: ($event) => $setup.edit_component_name(i2.id)
-                    }, null, 8, _hoisted_9$6)) : createCommentVNode("", true),
+                    }, null, 8, _hoisted_8$5)) : createCommentVNode("", true),
                     i2.input_visible ? (openBlock(), createElementBlock("i", {
                       key: 3,
                       class: "fa fa-save",
                       "aria-hidden": "true",
                       onClick: ($event) => $setup.save_component_name(i2.id)
-                    }, null, 8, _hoisted_10$4)) : createCommentVNode("", true),
+                    }, null, 8, _hoisted_9$4)) : createCommentVNode("", true),
                     createBaseVNode("i", {
                       class: "fa fa-trash",
                       "aria-hidden": "true",
                       onClick: ($event) => $setup.remove_component_from_list(i2.id)
-                    }, null, 8, _hoisted_11$3)
+                    }, null, 8, _hoisted_10$2)
                   ]),
                   (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list_items(i2.id), (item, index2) => {
                     return openBlock(), createElementBlock("div", { key: index2 }, [
@@ -88170,7 +88269,7 @@ This will fail in production.`);
             ]);
           }), 128))
         ]),
-        createBaseVNode("div", _hoisted_12$2, [
+        createBaseVNode("div", _hoisted_11$2, [
           createBaseVNode("button", {
             type: "button",
             onClick: _cache[4] || (_cache[4] = ($event) => $setup.show_diagrams("radar")),
@@ -88182,19 +88281,23 @@ This will fail in production.`);
             class: "btn-nav"
           }, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.grouping.render_scatter")), 1)
         ]),
-        $setup.data.show_selected_legend ? (openBlock(), createElementBlock("div", _hoisted_13$1, [
-          $setup.data.type === "scatter" ? (openBlock(), createElementBlock("div", _hoisted_14, [
+        $setup.data.show_selected_legend ? (openBlock(), createElementBlock("div", _hoisted_12$2, [
+          $setup.data.type === "scatter" ? (openBlock(), createElementBlock("div", _hoisted_13$2, [
             createTextVNode(toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.grouping.scatter_plot")) + " ", 1),
-            _hoisted_15,
+            _cache[7] || (_cache[7] = createBaseVNode("button", { class: "btn-nav small blue" }, [
+              createBaseVNode("span", { class: "fas fa-fw fa-info-circle" })
+            ], -1)),
             createVNode(_component_tooltip, null, {
               default: withCtx(() => [
                 createTextVNode(toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.guidance.info.group_scatter")), 1)
               ]),
               _: 1
             })
-          ])) : $setup.data.type === "radar" ? (openBlock(), createElementBlock("div", _hoisted_16, [
+          ])) : $setup.data.type === "radar" ? (openBlock(), createElementBlock("div", _hoisted_14$2, [
             createTextVNode(toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.grouping.radar")) + " ", 1),
-            _hoisted_17,
+            _cache[8] || (_cache[8] = createBaseVNode("button", { class: "btn-nav small blue" }, [
+              createBaseVNode("span", { class: "fas fa-fw fa-info-circle" })
+            ], -1)),
             createVNode(_component_tooltip, null, {
               default: withCtx(() => [
                 createTextVNode(toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.guidance.info.group_radar")), 1)
@@ -88203,8 +88306,8 @@ This will fail in production.`);
             })
           ])) : createCommentVNode("", true)
         ])) : createCommentVNode("", true),
-        createBaseVNode("div", _hoisted_18, [
-          $setup.data.show_selected_legend ? (openBlock(), createElementBlock("div", _hoisted_19, [
+        createBaseVNode("div", _hoisted_15$2, [
+          $setup.data.show_selected_legend ? (openBlock(), createElementBlock("div", _hoisted_16$2, [
             (openBlock(true), createElementBlock(Fragment, null, renderList($setup.data.list_of_components, (i2, index) => {
               return openBlock(), createElementBlock("div", {
                 class: "legend_radars",
@@ -88219,7 +88322,7 @@ This will fail in production.`);
                     class: "bg-white border border-gray-100 py-1 px-2",
                     key: index2,
                     innerHTML: item.name
-                  }, null, 8, _hoisted_20);
+                  }, null, 8, _hoisted_17$2);
                 }), 128))
               ]);
             }), 128))
@@ -88228,8 +88331,8 @@ This will fail in production.`);
         ])
       ]);
     }
-    const grouping = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$w], ["__scopeId", "data-v-d9cda725"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/grouping.vue"]]);
-    const _sfc_main$v = {
+    const grouping = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$C], ["__scopeId", "data-v-d9cda725"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/grouping.vue"]]);
+    const _sfc_main$B = {
       __name: "text_editor",
       props: {
         value: { type: String, default: "" },
@@ -88241,7 +88344,7 @@ This will fail in production.`);
         const props = __props;
         const emitter = inject("emitter");
         const ckeditor2 = CKEditor.component;
-        const editor = ClassicEditor;
+        const editor2 = ClassicEditor;
         const editorData = ref("");
         const editorConfig = {
           plugins: [
@@ -88276,7 +88379,7 @@ This will fail in production.`);
         const onEditorInput = (value) => {
           editorData.value = value;
         };
-        const __returned__ = { props, emitter, ckeditor: ckeditor2, editor, editorData, editorConfig, onEditorInput, ref, watch, inject, onMounted, get ClassicEditor() {
+        const __returned__ = { props, emitter, ckeditor: ckeditor2, editor: editor2, editorData, editorConfig, onEditorInput, ref, watch, inject, onMounted, get ClassicEditor() {
           return ClassicEditor;
         }, get Essentials() {
           return Essentials;
@@ -88301,11 +88404,11 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$m = { class: "text-editor-edit" };
-    const _hoisted_2$h = ["innerHTML"];
-    function _sfc_render$v(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$s = { class: "text-editor-edit" };
+    const _hoisted_2$m = ["innerHTML"];
+    function _sfc_render$B(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("div", _hoisted_1$m, [
+        createBaseVNode("div", _hoisted_1$s, [
           createVNode($setup["ckeditor"], {
             editor: $setup.editor,
             modelValue: $setup.editorData,
@@ -88317,11 +88420,11 @@ This will fail in production.`);
         createBaseVNode("div", {
           class: "text-editor-print",
           innerHTML: $setup.editorData
-        }, null, 8, _hoisted_2$h)
+        }, null, 8, _hoisted_2$m)
       ]);
     }
-    const textEditor = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$v], ["__scopeId", "data-v-d5a03537"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/text_editor.vue"]]);
-    const _sfc_main$u = {
+    const textEditor = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$B], ["__scopeId", "data-v-d5a03537"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/text_editor.vue"]]);
+    const _sfc_main$A = {
       __name: "map_view",
       props: {
         form_ids: {
@@ -88391,32 +88494,30 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$l = {
+    const _hoisted_1$r = {
       id: "maps",
       class: "align-items-center"
     };
-    const _hoisted_2$g = {
+    const _hoisted_2$l = {
       key: 0,
       style: { "width": "100%", "height": "700px" }
     };
-    const _hoisted_3$e = /* @__PURE__ */ createBaseVNode("div", {
-      id: "map-load",
-      class: "ml-3",
-      style: { "width": "100%", "height": "650px" }
-    }, null, -1);
-    const _hoisted_4$b = [
-      _hoisted_3$e
-    ];
-    const _hoisted_5$a = {
+    const _hoisted_3$i = {
       key: 1,
       class: "dopa_not_available"
     };
-    function _sfc_render$u(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$l, [
-        !$setup.no_internet_connection ? (openBlock(), createElementBlock("div", _hoisted_2$g, [..._hoisted_4$b])) : (openBlock(), createElementBlock("div", _hoisted_5$a, toDisplayString($setup.error_message), 1))
+    function _sfc_render$A(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$r, [
+        !$setup.no_internet_connection ? (openBlock(), createElementBlock("div", _hoisted_2$l, _cache[0] || (_cache[0] = [
+          createBaseVNode("div", {
+            id: "map-load",
+            class: "ml-3",
+            style: { "width": "100%", "height": "650px" }
+          }, null, -1)
+        ]))) : (openBlock(), createElementBlock("div", _hoisted_3$i, toDisplayString($setup.error_message), 1))
       ]);
     }
-    const mapView = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$u], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/map_view.vue"]]);
+    const mapView = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$A], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/map_view.vue"]]);
     class DBStorage {
       constructor() {
       }
@@ -88491,7 +88592,7 @@ This will fail in production.`);
         return `basket`;
       }
     }
-    const _sfc_main$t = {
+    const _sfc_main$z = {
       __name: "preview_template",
       props: {
         scaling_up_id: {
@@ -88503,7 +88604,6 @@ This will fail in production.`);
         __expose();
         const props = __props;
         const items = ref([]);
-        const classDiv = ref("");
         const pixelsPage = ref(0);
         const images = ref([]);
         onMounted(async () => {
@@ -88539,20 +88639,20 @@ This will fail in production.`);
             items.value.push("/" + item.item);
           });
         }
-        const __returned__ = { props, items, classDiv, pixelsPage, images, imageLoaded, isHeightEnough, printElement, ref, watch, onMounted, get basket_store() {
+        const __returned__ = { props, items, pixelsPage, images, imageLoaded, isHeightEnough, printElement, ref, watch, onMounted, get basket_store() {
           return BasketStore;
         } };
         Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
         return __returned__;
       }
     };
-    const _hoisted_1$k = ["id"];
-    const _hoisted_2$f = ["onLoad", "src", "id"];
-    function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$q = ["id"];
+    const _hoisted_2$k = ["onLoad", "src", "id"];
+    function _sfc_render$z(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
         (openBlock(true), createElementBlock(Fragment, null, renderList($setup.items, (item, idx) => {
           return openBlock(), createElementBlock("div", {
-            class: normalizeClass($setup.classDiv),
+            class: "img-fluid",
             id: "image-content" + idx,
             key: idx
           }, [
@@ -88561,13 +88661,13 @@ This will fail in production.`);
                 onLoad: ($event) => $setup.imageLoaded(idx),
                 src: item,
                 id: idx
-              }, null, 40, _hoisted_2$f)
+              }, null, 40, _hoisted_2$k)
             ])
-          ], 10, _hoisted_1$k);
+          ], 8, _hoisted_1$q);
         }), 128))
       ]);
     }
-    const previewTemplate = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$t], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/preview_template.vue"]]);
+    const previewTemplate = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$z], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/preview_template.vue"]]);
     function useAjax(component_data) {
       let event_parameters = {};
       let func_parameter = {};
@@ -88691,7 +88791,7 @@ This will fail in production.`);
         default: ""
       }
     };
-    const _sfc_main$s = {
+    const _sfc_main$y = {
       __name: "container",
       props: {
         ...commonProps$1,
@@ -88819,44 +88919,41 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$j = { key: 0 };
-    const _hoisted_2$e = /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-spinner fa-spin text-primary-800" }, null, -1);
-    const _hoisted_3$d = /* @__PURE__ */ createBaseVNode("span", { class: "sr-only" }, "Loading...", -1);
-    const _hoisted_4$a = [
-      _hoisted_2$e,
-      _hoisted_3$d
-    ];
-    const _hoisted_5$9 = { key: 1 };
-    const _hoisted_6$8 = ["innerHTML"];
-    const _hoisted_7$7 = ["innerHTML"];
-    const _hoisted_8$6 = ["innerHTML"];
-    const _hoisted_9$5 = {
+    const _hoisted_1$p = { key: 0 };
+    const _hoisted_2$j = { key: 1 };
+    const _hoisted_3$h = ["innerHTML"];
+    const _hoisted_4$e = ["innerHTML"];
+    const _hoisted_5$d = ["innerHTML"];
+    const _hoisted_6$a = {
       key: 3,
       class: "container-menu"
     };
-    function _sfc_render$s(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$y(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
-        $setup.show_loader ? (openBlock(), createElementBlock("div", _hoisted_1$j, [..._hoisted_4$a])) : (openBlock(), createElementBlock("div", _hoisted_5$9, [
+        $setup.show_loader ? (openBlock(), createElementBlock("div", _hoisted_1$p, _cache[0] || (_cache[0] = [
+          createBaseVNode("i", { class: "fa fa-spinner fa-spin text-primary-800" }, null, -1),
+          createBaseVNode("span", { class: "sr-only" }, "Loading...", -1)
+        ]))) : (openBlock(), createElementBlock("div", _hoisted_2$j, [
           $setup.error_returned ? (openBlock(), createElementBlock("div", {
             key: 0,
             class: "dopa_not_available",
             innerHTML: $setup.stores.BaseStore.localization("entities.dopa_not_available")
-          }, null, 8, _hoisted_6$8)) : $setup.timeout ? (openBlock(), createElementBlock("div", {
+          }, null, 8, _hoisted_3$h)) : $setup.timeout ? (openBlock(), createElementBlock("div", {
             key: 1,
             class: "dopa_not_available",
             innerHTML: $setup.stores.BaseStore.localization("entities.dopa_not_available")
-          }, null, 8, _hoisted_7$7)) : $setup.error_wrong ? (openBlock(), createElementBlock("div", {
+          }, null, 8, _hoisted_4$e)) : $setup.error_wrong ? (openBlock(), createElementBlock("div", {
             key: 2,
             class: "dopa_not_available",
             innerHTML: $setup.stores.BaseStore.localization("imet-core::analysis_report.error_wrong")
-          }, null, 8, _hoisted_8$6)) : (openBlock(), createElementBlock("div", _hoisted_9$5, [
+          }, null, 8, _hoisted_5$d)) : (openBlock(), createElementBlock("div", _hoisted_6$a, [
             renderSlot(_ctx.$slots, "default", { props: $setup.data })
           ]))
         ]))
       ]);
     }
-    const container = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$s], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container.vue"]]);
-    const _sfc_main$r = {
+    const container = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$y], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container.vue"]]);
+    const _sfc_main$x = {
       __name: "container_view",
       props: {
         element: {
@@ -88915,32 +89012,26 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$i = { id: "menu-header-header-main" };
-    const _hoisted_2$d = { class: "list-head" };
-    const _hoisted_3$c = { key: 0 };
-    const _hoisted_4$9 = /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-spinner fa-spin fa-2x text-primary-800" }, null, -1);
-    const _hoisted_5$8 = /* @__PURE__ */ createBaseVNode("span", { class: "sr-only" }, "Loading...", -1);
-    const _hoisted_6$7 = [
-      _hoisted_4$9,
-      _hoisted_5$8
-    ];
-    const _hoisted_7$6 = { key: 1 };
-    const _hoisted_8$5 = ["innerHTML"];
-    const _hoisted_9$4 = ["innerHTML"];
-    const _hoisted_10$3 = ["innerHTML"];
-    const _hoisted_11$2 = {
+    const _hoisted_1$o = { id: "menu-header-header-main" };
+    const _hoisted_2$i = { class: "list-head" };
+    const _hoisted_3$g = { key: 0 };
+    const _hoisted_4$d = { key: 1 };
+    const _hoisted_5$c = ["innerHTML"];
+    const _hoisted_6$9 = ["innerHTML"];
+    const _hoisted_7$7 = ["innerHTML"];
+    const _hoisted_8$4 = {
       key: 3,
       class: "container-menu"
     };
-    function _sfc_render$r(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$x(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_guidance = resolveComponent("guidance");
       return openBlock(), createElementBlock("div", null, [
         createBaseVNode("div", {
           class: "",
           onClick: _cache[0] || (_cache[0] = ($event) => $setup.toggle_view())
         }, [
-          createBaseVNode("div", _hoisted_1$i, [
-            createBaseVNode("div", _hoisted_2$d, [
+          createBaseVNode("div", _hoisted_1$o, [
+            createBaseVNode("div", _hoisted_2$i, [
               createBaseVNode("span", {
                 class: normalizeClass(["fas fa-fw", { "fa-plus": !$setup.data.show_view, "fa-minus": $setup.data.show_view }])
               }, null, 2),
@@ -88949,20 +89040,23 @@ This will fail in production.`);
           ])
         ]),
         withDirectives(createBaseVNode("div", null, [
-          $setup.data.show_loader ? (openBlock(), createElementBlock("div", _hoisted_3$c, [..._hoisted_6$7])) : (openBlock(), createElementBlock("div", _hoisted_7$6, [
+          $setup.data.show_loader ? (openBlock(), createElementBlock("div", _hoisted_3$g, _cache[1] || (_cache[1] = [
+            createBaseVNode("i", { class: "fa fa-spinner fa-spin fa-2x text-primary-800" }, null, -1),
+            createBaseVNode("span", { class: "sr-only" }, "Loading...", -1)
+          ]))) : (openBlock(), createElementBlock("div", _hoisted_4$d, [
             _ctx.error_returned ? (openBlock(), createElementBlock("div", {
               key: 0,
               class: "dopa_not_available",
               innerHTML: $setup.stores.BaseStore.localization("entities.dopa_not_available")
-            }, null, 8, _hoisted_8$5)) : _ctx.timeout ? (openBlock(), createElementBlock("div", {
+            }, null, 8, _hoisted_5$c)) : _ctx.timeout ? (openBlock(), createElementBlock("div", {
               key: 1,
               class: "dopa_not_available",
               innerHTML: $setup.stores.BaseStore.localization("entities.dopa_not_available")
-            }, null, 8, _hoisted_9$4)) : _ctx.error_wrong ? (openBlock(), createElementBlock("div", {
+            }, null, 8, _hoisted_6$9)) : _ctx.error_wrong ? (openBlock(), createElementBlock("div", {
               key: 2,
               class: "dopa_not_available",
               innerHTML: $setup.stores.BaseStore.localization("imet-core::analysis_report.error_wrong")
-            }, null, 8, _hoisted_10$3)) : (openBlock(), createElementBlock("div", _hoisted_11$2, [
+            }, null, 8, _hoisted_7$7)) : (openBlock(), createElementBlock("div", _hoisted_8$4, [
               createVNode(_component_guidance, { label: $props.info_label }, null, 8, ["label"]),
               renderSlot(_ctx.$slots, "default", { props: $setup.data })
             ]))
@@ -88972,8 +89066,8 @@ This will fail in production.`);
         ])
       ]);
     }
-    const containerView = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$r], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_view.vue"]]);
-    const _sfc_main$q = {
+    const containerView = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$x], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_view.vue"]]);
+    const _sfc_main$w = {
       __name: "container_analysis_management_cycle",
       props: {
         ...commonProps$1,
@@ -89066,25 +89160,19 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$h = { class: "mb-2" };
-    const _hoisted_2$c = { key: 0 };
-    const _hoisted_3$b = /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-spinner fa-spin text-primary-800" }, null, -1);
-    const _hoisted_4$8 = /* @__PURE__ */ createBaseVNode("span", { class: "sr-only" }, "Loading...", -1);
-    const _hoisted_5$7 = [
-      _hoisted_3$b,
-      _hoisted_4$8
-    ];
-    const _hoisted_6$6 = { key: 1 };
-    const _hoisted_7$5 = ["innerHTML"];
-    const _hoisted_8$4 = ["innerHTML"];
-    const _hoisted_9$3 = ["innerHTML"];
-    const _hoisted_10$2 = {
+    const _hoisted_1$n = { class: "mb-2" };
+    const _hoisted_2$h = { key: 0 };
+    const _hoisted_3$f = { key: 1 };
+    const _hoisted_4$c = ["innerHTML"];
+    const _hoisted_5$b = ["innerHTML"];
+    const _hoisted_6$8 = ["innerHTML"];
+    const _hoisted_7$6 = {
       key: 3,
       class: "container-menu mt-3"
     };
-    const _hoisted_11$1 = { class: "text-right mt-3" };
-    const _hoisted_12$1 = ["innerHTML"];
-    function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_8$3 = { class: "text-right mt-3" };
+    const _hoisted_9$3 = ["innerHTML"];
+    function _sfc_render$w(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_guidance = resolveComponent("guidance");
       const _component_checkboxes_list = resolveComponent("checkboxes_list");
       return openBlock(), createElementBlock("div", null, [
@@ -89105,7 +89193,7 @@ This will fail in production.`);
             ], 2)
           ], 2)
         ]),
-        withDirectives(createBaseVNode("div", _hoisted_1$h, [
+        withDirectives(createBaseVNode("div", _hoisted_1$n, [
           createVNode(_component_guidance, {
             label: $setup.props.info_label
           }, null, 8, ["label"]),
@@ -89114,28 +89202,31 @@ This will fail in production.`);
             event: `apply_filter_${$setup.data.randomKeyEvent}`,
             class: "p-2"
           }, null, 8, ["items", "event"]),
-          $setup.show_loader ? (openBlock(), createElementBlock("div", _hoisted_2$c, [..._hoisted_5$7])) : (openBlock(), createElementBlock("div", _hoisted_6$6, [
+          $setup.show_loader ? (openBlock(), createElementBlock("div", _hoisted_2$h, _cache[2] || (_cache[2] = [
+            createBaseVNode("i", { class: "fa fa-spinner fa-spin text-primary-800" }, null, -1),
+            createBaseVNode("span", { class: "sr-only" }, "Loading...", -1)
+          ]))) : (openBlock(), createElementBlock("div", _hoisted_3$f, [
             $setup.error_returned ? (openBlock(), createElementBlock("div", {
               key: 0,
               class: "dopa_not_available mt-3",
               innerHTML: $setup.stores.BaseStore.localization("entities.dopa_not_available")
-            }, null, 8, _hoisted_7$5)) : $setup.timeout ? (openBlock(), createElementBlock("div", {
+            }, null, 8, _hoisted_4$c)) : $setup.timeout ? (openBlock(), createElementBlock("div", {
               key: 1,
               class: "dopa_not_available mt-3",
               innerHTML: $setup.stores.BaseStore.localization("entities.dopa_not_available")
-            }, null, 8, _hoisted_8$4)) : $setup.error_wrong ? (openBlock(), createElementBlock("div", {
+            }, null, 8, _hoisted_5$b)) : $setup.error_wrong ? (openBlock(), createElementBlock("div", {
               key: 2,
               class: "dopa_not_available mt-3",
               innerHTML: $setup.stores.BaseStore.localization("imet-core::analysis_report.error_wrong")
-            }, null, 8, _hoisted_9$3)) : Object.entries($setup.data.values).length > 0 ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
+            }, null, 8, _hoisted_6$8)) : Object.entries($setup.data.values).length > 0 ? (openBlock(), createElementBlock("div", _hoisted_7$6, [
               renderSlot(_ctx.$slots, "default", { props: $setup.data })
             ])) : createCommentVNode("", true),
-            createBaseVNode("div", _hoisted_11$1, [
+            createBaseVNode("div", _hoisted_8$3, [
               createBaseVNode("div", {
                 class: "btn-nav red",
                 onClick: _cache[1] || (_cache[1] = ($event) => $setup.toggle_view()),
                 innerHTML: $setup.stores.BaseStore.localization("imet-core::analysis_report.close")
-              }, null, 8, _hoisted_12$1)
+              }, null, 8, _hoisted_9$3)
             ])
           ]))
         ], 512), [
@@ -89143,8 +89234,8 @@ This will fail in production.`);
         ])
       ]);
     }
-    const containerAnalysisManagementCycle = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$q], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_analysis_management_cycle.vue"]]);
-    const _sfc_main$p = {
+    const containerAnalysisManagementCycle = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$w], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_analysis_management_cycle.vue"]]);
+    const _sfc_main$v = {
       __name: "container_section",
       props: {
         name: {
@@ -89200,23 +89291,23 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$g = ["id"];
-    const _hoisted_2$b = { class: "module-header" };
-    const _hoisted_3$a = {
+    const _hoisted_1$m = ["id"];
+    const _hoisted_2$g = { class: "module-header" };
+    const _hoisted_3$e = {
       key: 0,
       class: "module-code text-center"
     };
-    const _hoisted_4$7 = { class: "module-body bg-white scaling_up_module_container_body" };
-    const _hoisted_5$6 = { class: "text-right mt-3" };
-    const _hoisted_6$5 = ["innerHTML"];
-    function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_4$b = { class: "module-body bg-white scaling_up_module_container_body" };
+    const _hoisted_5$a = { class: "text-right mt-3" };
+    const _hoisted_6$7 = ["innerHTML"];
+    function _sfc_render$v(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_guidance = resolveComponent("guidance");
       return openBlock(), createElementBlock("div", {
         class: "module-container",
         id: $props.name
       }, [
-        createBaseVNode("div", _hoisted_2$b, [
-          $setup.code_is_visible() ? (openBlock(), createElementBlock("div", _hoisted_3$a, toDisplayString($props.code), 1)) : createCommentVNode("", true),
+        createBaseVNode("div", _hoisted_2$g, [
+          $setup.code_is_visible() ? (openBlock(), createElementBlock("div", _hoisted_3$e, toDisplayString($props.code), 1)) : createCommentVNode("", true),
           createBaseVNode("div", {
             class: "module-title",
             onClick: _cache[0] || (_cache[0] = ($event) => $setup.toggle_view())
@@ -89232,22 +89323,22 @@ This will fail in production.`);
         }, null, 8, ["label"]), [
           [vShow, $setup.data.show_view]
         ]),
-        withDirectives(createBaseVNode("div", _hoisted_4$7, [
+        withDirectives(createBaseVNode("div", _hoisted_4$b, [
           renderSlot(_ctx.$slots, "default", { props: $setup.data }),
-          createBaseVNode("div", _hoisted_5$6, [
+          createBaseVNode("div", _hoisted_5$a, [
             createBaseVNode("div", {
               class: "btn-nav red",
               onClick: _cache[1] || (_cache[1] = ($event) => $setup.toggle_view()),
               innerHTML: $setup.stores.BaseStore.localization("imet-core::analysis_report.close")
-            }, null, 8, _hoisted_6$5)
+            }, null, 8, _hoisted_6$7)
           ])
         ], 512), [
           [vShow, $setup.data.show_view]
         ])
-      ], 8, _hoisted_1$g);
+      ], 8, _hoisted_1$m);
     }
-    const containerSection = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$p], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_section.vue"]]);
-    const _sfc_main$o = {
+    const containerSection = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$v], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_section.vue"]]);
+    const _sfc_main$u = {
       __name: "container_upper_lower_radars",
       props: {
         width: {
@@ -89350,9 +89441,9 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$f = ["id"];
-    const _hoisted_2$a = ["id"];
-    function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$l = ["id"];
+    const _hoisted_2$f = ["id"];
+    function _sfc_render$u(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_scaling_radar = resolveComponent("scaling_radar");
       const _component_datatable_interact_with_radar = resolveComponent("datatable_interact_with_radar");
       const _component_container_actions = resolveComponent("container_actions");
@@ -89387,7 +89478,7 @@ This will fail in production.`);
                     refresh_average: false,
                     key: "asd_" + index
                   }, null, 8, ["width", "height", "single", "unselect_legends_on_load", "show_legends", "values", "indicators", "event_key"]))
-                ], 8, _hoisted_2$a),
+                ], 8, _hoisted_2$f),
                 createVNode(_component_datatable_interact_with_radar, {
                   values_with_indicators_keys: true,
                   refresh_average: false,
@@ -89398,11 +89489,11 @@ This will fail in production.`);
               ]),
               _: 2
             }, 1032, ["data", "name"])
-          ], 8, _hoisted_1$f);
+          ], 8, _hoisted_1$l);
         }), 128))
       ], 4);
     }
-    const containerUpperLowerRadars = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$o], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_upper_lower_radars.vue"]]);
+    const containerUpperLowerRadars = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$u], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_upper_lower_radars.vue"]]);
     const WOFF = "application/font-woff";
     const JPEG = "image/jpeg";
     const mimes = {
@@ -90110,7 +90201,6 @@ This will fail in production.`);
         toPng(element, {
           canvasWidth: element.clientWidth ?? size2,
           filter: (node) => {
-            console.log({ node });
             const classNames = node == null ? void 0 : node.className;
             node == null ? void 0 : node.id;
             if (typeof classNames !== "string") {
@@ -90147,7 +90237,7 @@ This will fail in production.`);
         htmlToImageFunc
       };
     }
-    const _sfc_main$n = {
+    const _sfc_main$t = {
       __name: "html_to_image",
       props: {
         element: {
@@ -90177,11 +90267,11 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
       return null;
     }
-    const html_to_image = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$n], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/tools/html_to_image.vue"]]);
-    const _sfc_main$m = {
+    const html_to_image = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$t], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/tools/html_to_image.vue"]]);
+    const _sfc_main$s = {
       __name: "container_actions",
       props: {
         name: {
@@ -90294,33 +90384,27 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$e = ["id"];
-    const _hoisted_2$9 = { class: "mb-2 mt-1" };
-    const _hoisted_3$9 = { class: "mb-2 mt-2" };
-    const _hoisted_4$6 = {
+    const _hoisted_1$k = ["id"];
+    const _hoisted_2$e = { class: "mb-2 mt-1" };
+    const _hoisted_3$d = { class: "mb-2 mt-2" };
+    const _hoisted_4$a = {
       key: 0,
       class: "mt-3 text-black-50 font-bold generic-comments"
     };
-    const _hoisted_5$5 = { class: "text-right" };
-    const _hoisted_6$4 = { key: 0 };
-    const _hoisted_7$4 = /* @__PURE__ */ createBaseVNode("i", { class: "fa fa-spinner fa-spin text-primary-800" }, null, -1);
-    const _hoisted_8$3 = /* @__PURE__ */ createBaseVNode("span", { class: "sr-only" }, "Loading...", -1);
-    const _hoisted_9$2 = [
-      _hoisted_7$4,
-      _hoisted_8$3
-    ];
-    const _hoisted_10$1 = {
+    const _hoisted_5$9 = { class: "text-right" };
+    const _hoisted_6$6 = { key: 0 };
+    const _hoisted_7$5 = {
       key: 1,
       class: "text-center"
     };
-    function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$s(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_text_editor = resolveComponent("text_editor");
       return openBlock(), createElementBlock("div", { id: $props.name }, [
-        createBaseVNode("div", _hoisted_2$9, [
+        createBaseVNode("div", _hoisted_2$e, [
           renderSlot(_ctx.$slots, "default", { props: $props.data })
         ]),
-        createBaseVNode("div", _hoisted_3$9, [
-          $props.show_comments ? (openBlock(), createElementBlock("div", _hoisted_4$6, toDisplayString($setup.title) + " :", 1)) : createCommentVNode("", true),
+        createBaseVNode("div", _hoisted_3$d, [
+          $props.show_comments ? (openBlock(), createElementBlock("div", _hoisted_4$a, toDisplayString($setup.title) + " :", 1)) : createCommentVNode("", true),
           $props.show_comments ? (openBlock(), createBlock(_component_text_editor, {
             key: 1,
             save_data: $setup.get_data,
@@ -90331,20 +90415,23 @@ This will fail in production.`);
             exclude_elements: $props.exclude_elements,
             event_id: $setup.uniqueEventId
           }, null, 8, ["element", "exclude_elements", "event_id"]),
-          createBaseVNode("div", _hoisted_5$5, [
+          createBaseVNode("div", _hoisted_5$9, [
             createBaseVNode("button", {
               type: "button",
               class: "btn-nav my-3 exclude-element",
               onClick: $setup.save
             }, [
-              $setup.loading ? (openBlock(), createElementBlock("span", _hoisted_6$4, [..._hoisted_9$2])) : createCommentVNode("", true),
-              !$setup.loading ? (openBlock(), createElementBlock("span", _hoisted_10$1, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.add_analysis")), 1)) : createCommentVNode("", true)
+              $setup.loading ? (openBlock(), createElementBlock("span", _hoisted_6$6, _cache[0] || (_cache[0] = [
+                createBaseVNode("i", { class: "fa fa-spinner fa-spin text-primary-800" }, null, -1),
+                createBaseVNode("span", { class: "sr-only" }, "Loading...", -1)
+              ]))) : createCommentVNode("", true),
+              !$setup.loading ? (openBlock(), createElementBlock("span", _hoisted_7$5, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.add_analysis")), 1)) : createCommentVNode("", true)
             ])
           ])
         ])
-      ], 8, _hoisted_1$e);
+      ], 8, _hoisted_1$k);
     }
-    const containerActions = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$m], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_actions.vue"]]);
+    const containerActions = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$s], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_actions.vue"]]);
     function useList(component_data) {
       const sortBy2 = ref(component_data.sortBy || null);
       const sortDir = ref(component_data.sortDir || "asc");
@@ -90538,12 +90625,12 @@ This will fail in production.`);
       function colorArea(color, value = "") {
         return `<div class="p-3 mb-2 " style="background-color: ${color}">${value}</div>`;
       }
-      function parse_data(selected = null, items, columns, values_with_indicators_keys) {
+      function parse_data(selected2 = null, items, columns, values_with_indicators_keys) {
         const values2 = Object.entries({ ...items });
         const data = [];
         values2.forEach((value, idx) => {
           var _a2;
-          if (selected !== null && selected[value[0]] || selected === null && ((_a2 = value[1]) == null ? void 0 : _a2.legend_selected)) {
+          if (selected2 !== null && selected2[value[0]] || selected2 === null && ((_a2 = value[1]) == null ? void 0 : _a2.legend_selected)) {
             const item = {};
             columns.forEach((column, idx2) => {
               if (!["color", "name"].includes(column["field"])) {
@@ -90579,7 +90666,7 @@ This will fail in production.`);
         sort
       };
     }
-    const _sfc_main$l = {
+    const _sfc_main$r = {
       __name: "datatable_custom",
       props: {
         columns: {
@@ -90620,11 +90707,11 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$d = { id: "global_scores" };
-    const _hoisted_2$8 = ["onClick"];
-    const _hoisted_3$8 = ["innerHTML"];
-    function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("table", _hoisted_1$d, [
+    const _hoisted_1$j = { id: "global_scores" };
+    const _hoisted_2$d = ["onClick"];
+    const _hoisted_3$c = ["innerHTML"];
+    function _sfc_render$r(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("table", _hoisted_1$j, [
         createBaseVNode("thead", null, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($props.columns, (column) => {
             return openBlock(), createElementBlock("th", {
@@ -90635,7 +90722,7 @@ This will fail in production.`);
               createBaseVNode("i", {
                 class: normalizeClass($setup.sort_icon(column.field))
               }, null, 2)
-            ], 8, _hoisted_2$8);
+            ], 8, _hoisted_2$d);
           }), 128))
         ]),
         createBaseVNode("tbody", null, [
@@ -90645,15 +90732,15 @@ This will fail in production.`);
                 return openBlock(), createElementBlock("td", {
                   innerHTML: value[column.field],
                   key: column.field
-                }, null, 8, _hoisted_3$8);
+                }, null, 8, _hoisted_3$c);
               }), 128))
             ]);
           }), 128))
         ])
       ]);
     }
-    const datatableCustom = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_custom.vue"]]);
-    const _sfc_main$k = {
+    const datatableCustom = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$r], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_custom.vue"]]);
+    const _sfc_main$q = {
       __name: "datatable_interact_with_radar",
       props: {
         values: {
@@ -90708,10 +90795,10 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$c = { key: 0 };
-    function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$i = { key: 0 };
+    function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_datatable_scaling = resolveComponent("datatable_scaling");
-      return $setup.data.length ? (openBlock(), createElementBlock("div", _hoisted_1$c, [
+      return $setup.data.length ? (openBlock(), createElementBlock("div", _hoisted_1$i, [
         (openBlock(), createBlock(_component_datatable_scaling, {
           columns: $props.columns,
           default_order: $props.default_order,
@@ -90721,8 +90808,8 @@ This will fail in production.`);
         }, null, 8, ["columns", "default_order", "refresh_average", "values"]))
       ])) : createCommentVNode("", true);
     }
-    const datatableInteractWithRadar = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_radar.vue"]]);
-    const _sfc_main$j = {
+    const datatableInteractWithRadar = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$q], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_radar.vue"]]);
+    const _sfc_main$p = {
       __name: "datatable_interact_with_scatter",
       props: {
         values: {
@@ -90767,11 +90854,11 @@ This will fail in production.`);
           });
           parse_data();
         });
-        function parse_data(selected = null) {
+        function parse_data(selected2 = null) {
           const values2 = Object.entries({ ...props.values });
           const items = [];
           values2.forEach((value, idx) => {
-            if (selected === null || selected[value[1].name]) {
+            if (selected2 === null || selected2[value[1].name]) {
               items.push({
                 name: value[1]["name"],
                 context: value[1]["value"][0],
@@ -90789,10 +90876,10 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$b = { key: 0 };
-    function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$h = { key: 0 };
+    function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
       const _component_datatable_scaling = resolveComponent("datatable_scaling");
-      return $setup.data.length ? (openBlock(), createElementBlock("div", _hoisted_1$b, [
+      return $setup.data.length ? (openBlock(), createElementBlock("div", _hoisted_1$h, [
         (openBlock(), createBlock(_component_datatable_scaling, {
           columns: $props.columns,
           default_order: $props.default_order,
@@ -90802,8 +90889,8 @@ This will fail in production.`);
         }, null, 8, ["columns", "default_order", "refresh_average", "values"]))
       ])) : createCommentVNode("", true);
     }
-    const datatableInteractWithScatter = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_scatter.vue"]]);
-    const _sfc_main$i = {
+    const datatableInteractWithScatter = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$p], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_scatter.vue"]]);
+    const _sfc_main$o = {
       __name: "datatable_scaling",
       props: {
         columns: {
@@ -90865,25 +90952,25 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$a = { class: "mb-4" };
-    const _hoisted_2$7 = {
+    const _hoisted_1$g = { class: "mb-4" };
+    const _hoisted_2$c = {
       key: 0,
       class: "mb-3 mt-1",
       style: { "font-size": "12px" }
     };
-    const _hoisted_3$7 = { class: "align-center" };
-    const _hoisted_4$5 = { id: "global_scores" };
-    const _hoisted_5$4 = ["onClick"];
-    const _hoisted_6$3 = ["innerHTML"];
-    const _hoisted_7$3 = ["innerHTML"];
+    const _hoisted_3$b = { class: "align-center" };
+    const _hoisted_4$9 = { id: "global_scores" };
+    const _hoisted_5$8 = ["onClick"];
+    const _hoisted_6$5 = ["innerHTML"];
+    const _hoisted_7$4 = ["innerHTML"];
     const _hoisted_8$2 = { class: "flex flex-row items-center text-sm" };
-    const _hoisted_9$1 = { class: "text-right mr-4" };
-    function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$a, [
-        $setup.average.length ? (openBlock(), createElementBlock("div", _hoisted_2$7, [
-          createBaseVNode("div", _hoisted_3$7, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.average_explained")), 1)
+    const _hoisted_9$2 = { class: "text-right mr-4" };
+    function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$g, [
+        $setup.average.length ? (openBlock(), createElementBlock("div", _hoisted_2$c, [
+          createBaseVNode("div", _hoisted_3$b, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.average_explained")), 1)
         ])) : createCommentVNode("", true),
-        createBaseVNode("table", _hoisted_4$5, [
+        createBaseVNode("table", _hoisted_4$9, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($props.columns, (column, idx) => {
             return openBlock(), createElementBlock("th", {
               onClick: ($event) => $setup.sort(column.field),
@@ -90894,7 +90981,7 @@ This will fail in production.`);
               createBaseVNode("i", {
                 class: normalizeClass($setup.sort_icon(column.field))
               }, null, 2)
-            ], 12, _hoisted_5$4);
+            ], 12, _hoisted_5$8);
           }), 128)),
           (openBlock(true), createElementBlock(Fragment, null, renderList($setup.items, (value, index) => {
             return openBlock(), createElementBlock("tr", { key: index }, [
@@ -90903,18 +90990,18 @@ This will fail in production.`);
                   innerHTML: $setup.get_value(value[column.field]),
                   class: normalizeClass(idx === 0 ? "" : $setup.score_class(value[column.field])),
                   key: column.field
-                }, null, 10, _hoisted_6$3);
+                }, null, 10, _hoisted_6$5);
               }), 128)) : (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList($props.columns, (column) => {
                 return openBlock(), createElementBlock("td", {
                   innerHTML: $setup.get_value(value[column.field]),
                   key: column.field
-                }, null, 8, _hoisted_7$3);
+                }, null, 8, _hoisted_7$4);
               }), 128))
             ]);
           }), 128))
         ]),
         createBaseVNode("div", _hoisted_8$2, [
-          createBaseVNode("div", _hoisted_9$1, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.scaling_legend")) + " : ", 1),
+          createBaseVNode("div", _hoisted_9$2, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.scaling_legend")) + " : ", 1),
           createBaseVNode("div", {
             class: normalizeClass(["text-center px-3 py-2", $setup.score_class(null)])
           }, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.no_value").toLowerCase()), 3),
@@ -90939,8 +91026,8 @@ This will fail in production.`);
         ])
       ]);
     }
-    const datatableScaling = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_scaling.vue"]]);
-    const _sfc_main$h = {
+    const datatableScaling = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$o], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_scaling.vue"]]);
+    const _sfc_main$n = {
       __name: "bar_reverse",
       props: {
         ...common,
@@ -91018,7 +91105,7 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createBlock($setup["imet_bar_chart"], {
         title_data: _ctx.title_data,
         title: _ctx.title,
@@ -91029,8 +91116,8 @@ This will fail in production.`);
         "computed-object": $setup.bar_options
       }, null, 8, ["title_data", "title", "values", "colors", "fields", "rotate", "computed-object"]);
     }
-    const barReverse = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_reverse.vue"]]);
-    const _sfc_main$g = {
+    const barReverse = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$n], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_reverse.vue"]]);
+    const _sfc_main$m = {
       __name: "bar_category_stack",
       props: {
         ...common,
@@ -91268,15 +91355,15 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "chart",
         class: "bar",
         style: normalizeStyle("width:" + _ctx.width + "; min-height: " + $setup.height_value + "px;")
       }, null, 4);
     }
-    const barCategoryStack = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_category_stack.vue"]]);
-    const _sfc_main$f = {
+    const barCategoryStack = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$m], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_category_stack.vue"]]);
+    const _sfc_main$l = {
       __name: "imet_bar_error",
       props: {
         ...common,
@@ -91562,14 +91649,14 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "chart_container",
         class: "imet_bar_error",
         style: normalizeStyle("width:100%; height: " + $props.height + ";")
       }, null, 4);
     }
-    const imetBarError = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/imet_bar_error.vue"]]);
+    const imetBarError = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/imet_bar_error.vue"]]);
     function useRadar(component_data) {
       const always_first_in_legend = component_data.always_first_in_legend;
       const radar_indicators_for_negative = component_data.radar_indicators_for_negative;
@@ -91862,7 +91949,7 @@ This will fail in production.`);
         default: ""
       }
     };
-    const _sfc_main$e = {
+    const _sfc_main$k = {
       __name: "scaling_radar",
       props: {
         ...commonProps
@@ -91969,15 +92056,15 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "chartCont",
         class: "imet_radar",
         style: normalizeStyle("width:100%; min-height: " + _ctx.height + "px;")
       }, null, 4);
     }
-    const scalingRadar = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scaling_radar.vue"]]);
-    const _sfc_main$d = {
+    const scalingRadar = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scaling_radar.vue"]]);
+    const _sfc_main$j = {
       __name: "treemap",
       props: {
         width: {
@@ -92044,15 +92131,15 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "chartContainer",
         class: "treemap",
         style: normalizeStyle("width:" + $props.width + "; height: " + $props.height + ";")
       }, null, 4);
     }
-    const treemap = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/treemap.vue"]]);
-    const _sfc_main$c = {
+    const treemap = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/treemap.vue"]]);
+    const _sfc_main$i = {
       __name: "chart_bar",
       props: {
         title: {
@@ -92152,17 +92239,17 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$9 = {
+    const _hoisted_1$f = {
       ref: "barRef",
       class: "bar"
     };
-    function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("div", _hoisted_1$9, null, 512)
+        createBaseVNode("div", _hoisted_1$f, null, 512)
       ]);
     }
-    const scalingDopaChartBar = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c], ["__scopeId", "data-v-ce31dc5d"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_bar.vue"]]);
-    const _sfc_main$b = {
+    const dopa_chart_bar = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__scopeId", "data-v-ce31dc5d"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_bar.vue"]]);
+    const _sfc_main$h = {
       __name: "chart_doughnut",
       props: {
         title: {
@@ -92247,17 +92334,17 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    const _hoisted_1$8 = {
+    const _hoisted_1$e = {
       ref: "chartContainer",
       class: "doughnut"
     };
-    function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("div", _hoisted_1$8, null, 512)
+        createBaseVNode("div", _hoisted_1$e, null, 512)
       ]);
     }
-    const scalingDopaChartDoughnut = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__scopeId", "data-v-7aa99828"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_doughnut.vue"]]);
-    const _sfc_main$a = {
+    const scalingDopaChartDoughnut = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__scopeId", "data-v-7aa99828"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_doughnut.vue"]]);
+    const _sfc_main$g = {
       __name: "scatter",
       props: {
         title: {
@@ -92447,15 +92534,15 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "chartContainer",
         class: "scatter",
         style: normalizeStyle("width:" + $props.width + "; height: " + $props.height + ";")
       }, null, 4);
     }
-    const scatter = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scatter.vue"]]);
-    const _sfc_main$9 = {
+    const scatter = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scatter.vue"]]);
+    const _sfc_main$f = {
       __name: "radar_threats",
       props: {
         ...commonProps
@@ -92562,14 +92649,14 @@ This will fail in production.`);
         return __returned__;
       }
     };
-    function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", {
         ref: "chartCont",
         class: "imet_radar",
         style: normalizeStyle("width:100%; min-height: " + _ctx.height + "px;")
       }, null, 4);
     }
-    const radarThreats = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/radar_threats.vue"]]);
+    const radarThreats = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/radar_threats.vue"]]);
     function tryOnScopeDispose(fn2) {
       if (getCurrentScope()) {
         onScopeDispose(fn2);
@@ -99077,7 +99164,7 @@ ${$$2(r2)}`), n2;
       ], 64);
     }
     const re = /* @__PURE__ */ q(qo, [["render", jo], ["__scopeId", "data-v-354ca836"]]);
-    const _sfc_main$8 = {
+    const _sfc_main$e = {
       __name: "color_picker",
       props: {
         text_box_name: {
@@ -99112,8 +99199,8 @@ ${$$2(r2)}`), n2;
         return __returned__;
       }
     };
-    const _hoisted_1$7 = ["value", "name", "id"];
-    function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$d = ["value", "name", "id"];
+    function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
         createVNode($setup["ColorPicker"], {
           pureColor: $setup.color,
@@ -99131,11 +99218,11 @@ ${$$2(r2)}`), n2;
           id: `color-${$props.text_box_name}`,
           class: "field-edit",
           readonly: ""
-        }, null, 8, _hoisted_1$7)
+        }, null, 8, _hoisted_1$d)
       ]);
     }
-    const colorPicker = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/tools/color_picker.vue"]]);
-    const _sfc_main$7 = {
+    const colorPicker = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/tools/color_picker.vue"]]);
+    const _sfc_main$d = {
       props: {
         url: {
           type: String,
@@ -99148,22 +99235,22 @@ ${$$2(r2)}`), n2;
       },
       name: "preview_item"
     };
-    const _hoisted_1$6 = { class: "img-container" };
-    const _hoisted_2$6 = ["src", "width"];
-    const _hoisted_3$6 = { class: "img-text" };
-    function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+    const _hoisted_1$c = { class: "img-container" };
+    const _hoisted_2$b = ["src", "width"];
+    const _hoisted_3$a = { class: "img-text" };
+    function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$c, [
         createBaseVNode("img", {
           src: "/" + $props.url,
           width: $props.width
-        }, null, 8, _hoisted_2$6),
-        createBaseVNode("div", _hoisted_3$6, [
+        }, null, 8, _hoisted_2$b),
+        createBaseVNode("div", _hoisted_3$a, [
           renderSlot(_ctx.$slots, "default", {}, void 0, true)
         ])
       ]);
     }
-    const preview_item = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-ed216a7c"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket/preview_item.vue"]]);
-    const _sfc_main$6 = {
+    const preview_item = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__scopeId", "data-v-ed216a7c"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket/preview_item.vue"]]);
+    const _sfc_main$c = {
       __name: "basket",
       setup(__props, { expose: __expose }) {
         __expose();
@@ -99214,22 +99301,18 @@ ${$$2(r2)}`), n2;
         return __returned__;
       }
     };
-    const _withScopeId = (n2) => (pushScopeId("data-v-8fca49ba"), n2 = n2(), popScopeId(), n2);
-    const _hoisted_1$5 = { class: "basket" };
-    const _hoisted_2$5 = { class: "basket-menu" };
-    const _hoisted_3$5 = { class: "badge badge-pill badge-primary" };
-    const _hoisted_4$4 = { class: "basket-content" };
-    const _hoisted_5$3 = { class: "flex justify-start gap-2" };
-    const _hoisted_6$2 = ["onClick"];
-    const _hoisted_7$2 = { key: 1 };
-    const _hoisted_8$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { style: { "display": "none" } }, [
-      /* @__PURE__ */ createBaseVNode("div", { id: "template" })
-    ], -1));
-    function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$b = { class: "basket" };
+    const _hoisted_2$a = { class: "basket-menu" };
+    const _hoisted_3$9 = { class: "badge badge-pill badge-primary" };
+    const _hoisted_4$8 = { class: "basket-content" };
+    const _hoisted_5$7 = { class: "flex justify-start gap-2" };
+    const _hoisted_6$4 = ["onClick"];
+    const _hoisted_7$3 = { key: 1 };
+    function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("div", _hoisted_1$5, [
-          createBaseVNode("div", _hoisted_2$5, [
-            createBaseVNode("span", _hoisted_3$5, toDisplayString($setup.preview_images.length), 1),
+        createBaseVNode("div", _hoisted_1$b, [
+          createBaseVNode("div", _hoisted_2$a, [
+            createBaseVNode("span", _hoisted_3$9, toDisplayString($setup.preview_images.length), 1),
             createBaseVNode("i", {
               onClick: _cache[0] || (_cache[0] = ($event) => $setup.remove_all()),
               class: "fa fa-trash text-red-800"
@@ -99239,30 +99322,32 @@ ${$$2(r2)}`), n2;
               onClick: $setup.printElement
             })
           ]),
-          createBaseVNode("div", _hoisted_4$4, [
+          createBaseVNode("div", _hoisted_4$8, [
             $setup.preview_images.length > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($setup.preview_images, (image2, idx) => {
               return openBlock(), createElementBlock("div", {
                 key: image2.id
               }, [
-                createBaseVNode("div", _hoisted_5$3, [
+                createBaseVNode("div", _hoisted_5$7, [
                   createBaseVNode("i", {
                     onClick: ($event) => $setup.remove_item(image2.id),
                     class: "fa fa-times fa-2x text-red-800"
-                  }, null, 8, _hoisted_6$2),
+                  }, null, 8, _hoisted_6$4),
                   createVNode($setup["preview_item"], {
                     url: image2.url,
                     width: "100%"
                   }, null, 8, ["url"])
                 ])
               ]);
-            }), 128)) : (openBlock(), createElementBlock("div", _hoisted_7$2, " Basket is empty "))
+            }), 128)) : (openBlock(), createElementBlock("div", _hoisted_7$3, " Basket is empty "))
           ])
         ]),
-        _hoisted_8$1
+        _cache[1] || (_cache[1] = createBaseVNode("div", { style: { "display": "none" } }, [
+          createBaseVNode("div", { id: "template" })
+        ], -1))
       ]);
     }
-    const basket = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6], ["__scopeId", "data-v-8fca49ba"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket.vue"]]);
-    const _sfc_main$5 = {
+    const basket = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c], ["__scopeId", "data-v-8fca49ba"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket.vue"]]);
+    const _sfc_main$b = {
       __name: "guidance",
       props: {
         label: {
@@ -99293,31 +99378,30 @@ ${$$2(r2)}`), n2;
         return __returned__;
       }
     };
-    const _hoisted_1$4 = {
+    const _hoisted_1$a = {
       key: 0,
       class: "module-bar info-bar mt-2 mb-2 guidance",
       style: { "grid-column": "span 2" },
       id: "guidance"
     };
-    const _hoisted_2$4 = /* @__PURE__ */ createBaseVNode("div", { class: "icon blue" }, [
-      /* @__PURE__ */ createBaseVNode("span", {
-        class: "fas fa-fw fa-info-circle",
-        style: { "font-size": "1.4em" }
-      })
-    ], -1);
-    const _hoisted_3$4 = { class: "message" };
-    const _hoisted_4$3 = ["innerHTML"];
-    const _hoisted_5$2 = ["innerHTML"];
-    const _hoisted_6$1 = ["innerHTML"];
-    const _hoisted_7$1 = ["innerHTML"];
-    function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
-      return $setup.hasGuidance ? (openBlock(), createElementBlock("div", _hoisted_1$4, [
-        _hoisted_2$4,
-        createBaseVNode("div", _hoisted_3$4, [
+    const _hoisted_2$9 = { class: "message" };
+    const _hoisted_3$8 = ["innerHTML"];
+    const _hoisted_4$7 = ["innerHTML"];
+    const _hoisted_5$6 = ["innerHTML"];
+    const _hoisted_6$3 = ["innerHTML"];
+    function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+      return $setup.hasGuidance ? (openBlock(), createElementBlock("div", _hoisted_1$a, [
+        _cache[2] || (_cache[2] = createBaseVNode("div", { class: "icon blue" }, [
+          createBaseVNode("span", {
+            class: "fas fa-fw fa-info-circle",
+            style: { "font-size": "1.4em" }
+          })
+        ], -1)),
+        createBaseVNode("div", _hoisted_2$9, [
           createBaseVNode("div", null, [
             createBaseVNode("span", {
               innerHTML: $setup.stores.BaseStore.localization($props.label + ".intro")
-            }, null, 8, _hoisted_4$3),
+            }, null, 8, _hoisted_3$8),
             !$setup.show_more && $setup.key_exist() ? (openBlock(), createElementBlock("a", {
               key: 0,
               href: "#",
@@ -99332,22 +99416,22 @@ ${$$2(r2)}`), n2;
             key: 0,
             class: "mt-2",
             innerHTML: $setup.stores.BaseStore.localization($props.label + ".info")
-          }, null, 8, _hoisted_5$2)) : createCommentVNode("", true),
+          }, null, 8, _hoisted_4$7)) : createCommentVNode("", true),
           $setup.show_more && $setup.key_exist(".table") ? (openBlock(), createElementBlock("div", {
             key: 1,
             class: "mt-5 p-2 border border-dark",
             innerHTML: $setup.stores.BaseStore.localization($props.label + ".table")
-          }, null, 8, _hoisted_6$1)) : createCommentVNode("", true),
+          }, null, 8, _hoisted_5$6)) : createCommentVNode("", true),
           $setup.show_more && $setup.key_exist(".extra_info") ? (openBlock(), createElementBlock("div", {
             key: 2,
             class: "mt-2",
             innerHTML: $setup.stores.BaseStore.localization($props.label + ".extra_info")
-          }, null, 8, _hoisted_7$1)) : createCommentVNode("", true)
+          }, null, 8, _hoisted_6$3)) : createCommentVNode("", true)
         ])
       ])) : createCommentVNode("", true);
     }
-    const guidance = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/guidance.vue"]]);
-    const _sfc_main$4 = {
+    const guidance = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/guidance.vue"]]);
+    const _sfc_main$a = {
       __name: "small_menu",
       props: {
         items: {
@@ -99397,32 +99481,32 @@ ${$$2(r2)}`), n2;
         return __returned__;
       }
     };
-    const _hoisted_1$3 = {
+    const _hoisted_1$9 = {
       class: "smallMenu",
       style: { "min-height": "80px" }
     };
-    const _hoisted_2$3 = {
+    const _hoisted_2$8 = {
       key: 0,
       class: "standalone js-smallMenu",
       id: "smallMenu"
     };
-    const _hoisted_3$3 = ["innerHTML", "onClick"];
-    function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("div", _hoisted_1$3, [
-        $setup.listNames.length > 1 ? (openBlock(), createElementBlock("div", _hoisted_2$3, [
+    const _hoisted_3$7 = ["innerHTML", "onClick"];
+    function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$9, [
+        $setup.listNames.length > 1 ? (openBlock(), createElementBlock("div", _hoisted_2$8, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($setup.listNames, (item, idx) => {
             return openBlock(), createElementBlock("div", {
               class: normalizeClass({ active: $setup.isSelected(idx) }),
               innerHTML: item,
               onClick: ($event) => $setup.scrollToSection(idx),
               key: idx
-            }, null, 10, _hoisted_3$3);
+            }, null, 10, _hoisted_3$7);
           }), 128))
         ])) : createCommentVNode("", true)
       ]);
     }
-    const smallMenu = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/menus/small_menu.vue"]]);
-    const _sfc_main$3 = {
+    const smallMenu = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/menus/small_menu.vue"]]);
+    const _sfc_main$9 = {
       props: {
         title: {
           type: String,
@@ -99452,26 +99536,26 @@ ${$$2(r2)}`), n2;
         }
       }
     };
-    const _hoisted_1$2 = {
+    const _hoisted_1$8 = {
       key: 0,
       class: "list-key-numbers"
     };
-    const _hoisted_2$2 = {
+    const _hoisted_2$7 = {
       key: 0,
       class: "list-head"
     };
-    const _hoisted_3$2 = { class: "grid grid-cols-3 gap-4" };
-    const _hoisted_4$2 = { class: "text-sm mb-1" };
-    function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-      return $props.api_data !== null ? (openBlock(), createElementBlock("div", _hoisted_1$2, [
-        $props.title != null ? (openBlock(), createElementBlock("div", _hoisted_2$2, toDisplayString($props.title), 1)) : createCommentVNode("", true),
-        createBaseVNode("div", _hoisted_3$2, [
+    const _hoisted_3$6 = { class: "grid grid-cols-3 gap-4" };
+    const _hoisted_4$6 = { class: "text-sm mb-1" };
+    function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+      return $props.api_data !== null ? (openBlock(), createElementBlock("div", _hoisted_1$8, [
+        $props.title != null ? (openBlock(), createElementBlock("div", _hoisted_2$7, toDisplayString($props.title), 1)) : createCommentVNode("", true),
+        createBaseVNode("div", _hoisted_3$6, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($props.indicators, (item) => {
             return openBlock(), createElementBlock("div", {
               key: item.label,
               class: "flex flex-col items-center"
             }, [
-              createBaseVNode("span", _hoisted_4$2, toDisplayString(item.label), 1),
+              createBaseVNode("span", _hoisted_4$6, toDisplayString(item.label), 1),
               createBaseVNode("span", {
                 class: "text-lg font-bold highlight",
                 style: normalizeStyle({ color: item.color })
@@ -99481,8 +99565,8 @@ ${$$2(r2)}`), n2;
         ])
       ])) : createCommentVNode("", true);
     }
-    const dopaIndicatorsTable = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/indicators_table.vue"]]);
-    const _sfc_main$2 = {
+    const dopa_indicators_table = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/indicators_table.vue"]]);
+    const _sfc_main$8 = {
       __name: "checkboxes_list",
       props: {
         items: {
@@ -99526,7 +99610,7 @@ ${$$2(r2)}`), n2;
             checkboxes.value = checkboxes.value.filter((item) => item !== value);
           } else {
             checkboxes.value.push(value);
-            selected();
+            selected2();
           }
           show_overall.value = false;
         }
@@ -99562,28 +99646,28 @@ ${$$2(r2)}`), n2;
           } else {
             clearSelections();
           }
-          selected();
+          selected2();
         }
-        function selected() {
+        function selected2() {
           emitter.emit("actionData", JSON.stringify(checkboxes.value));
         }
         function clearSelections() {
           checkboxes.value = [];
           are_checked_all.value = false;
         }
-        const __returned__ = { are_checked_all, checkboxes, pas, show_overall, emitter, stores, props, is_checked, selectValue, checkboxes_ids, enable_overall, button_status, check_all, selected, clearSelections, ref, onMounted, inject };
+        const __returned__ = { are_checked_all, checkboxes, pas, show_overall, emitter, stores, props, is_checked, selectValue, checkboxes_ids, enable_overall, button_status, check_all, selected: selected2, clearSelections, ref, onMounted, inject };
         Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
         return __returned__;
       }
     };
-    const _hoisted_1$1 = { class: "grid grid-cols-2 gap-4 pb-4 pt-4" };
-    const _hoisted_2$1 = ["checked", "data-name", "onClick", "value"];
-    const _hoisted_3$1 = { class: "flex flex-row justify-center gap-4" };
-    const _hoisted_4$1 = ["disabled"];
-    const _hoisted_5$1 = { key: 0 };
-    function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$7 = { class: "grid grid-cols-2 gap-4 pb-4 pt-4" };
+    const _hoisted_2$6 = ["checked", "data-name", "onClick", "value"];
+    const _hoisted_3$5 = { class: "flex flex-row justify-center gap-4" };
+    const _hoisted_4$5 = ["disabled"];
+    const _hoisted_5$5 = { key: 0 };
+    function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock(Fragment, null, [
-        createBaseVNode("div", _hoisted_1$1, [
+        createBaseVNode("div", _hoisted_1$7, [
           $setup.pas.length > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($setup.pas, (selection, i2) => {
             return openBlock(), createElementBlock("div", {
               key: i2,
@@ -99596,17 +99680,17 @@ ${$$2(r2)}`), n2;
                 "data-name": selection.name,
                 onClick: ($event) => $setup.selectValue(selection.FormID),
                 value: selection.FormID
-              }, null, 8, _hoisted_2$1),
+              }, null, 8, _hoisted_2$6),
               createBaseVNode("strong", null, " " + toDisplayString(selection.name), 1)
             ]);
           }), 128)) : createCommentVNode("", true)
         ]),
-        createBaseVNode("div", _hoisted_3$1, [
+        createBaseVNode("div", _hoisted_3$5, [
           createBaseVNode("button", {
             disabled: $setup.button_status(),
             onClick: _cache[0] || (_cache[0] = ($event) => $setup.enable_overall()),
             class: "btn-nav"
-          }, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.apply")), 9, _hoisted_4$1),
+          }, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.apply")), 9, _hoisted_4$5),
           createBaseVNode("button", {
             onClick: _cache[1] || (_cache[1] = ($event) => $setup.check_all()),
             class: "btn-nav"
@@ -99616,14 +99700,14 @@ ${$$2(r2)}`), n2;
             class: "btn-nav red"
           }, toDisplayString($setup.stores.BaseStore.localization("imet-core::analysis_report.reset")), 1)
         ]),
-        $setup.show_overall ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
+        $setup.show_overall ? (openBlock(), createElementBlock("div", _hoisted_5$5, [
           renderSlot(_ctx.$slots, "default", {
             props: { "ids": $setup.checkboxes_ids(), "show_view": $setup.show_overall }
           })
         ])) : createCommentVNode("", true)
       ], 64);
     }
-    const checkboxesList = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/checkboxes_list.vue"]]);
+    const checkboxesList = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/checkboxes_list.vue"]]);
     class LocaleStorage {
       constructor() {
       }
@@ -100759,7 +100843,7 @@ ${$$2(r2)}`), n2;
         }
       }
     };
-    const _sfc_main$1 = {
+    const _sfc_main$7 = {
       __name: "app",
       props: {
         scaling_up_id: {
@@ -100801,12 +100885,12 @@ ${$$2(r2)}`), n2;
         return __returned__;
       }
     };
-    function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", null, [
         renderSlot(_ctx.$slots, "default")
       ]);
     }
-    const application = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/app.vue"]]);
+    const application = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/app.vue"]]);
     class Report {
       constructor(input_data = {}) {
         const options = {
@@ -100866,7 +100950,7 @@ ${$$2(r2)}`), n2;
         app.component("imet_bar_error", imetBarError);
         app.component("scaling_radar", scalingRadar);
         app.component("treemap", treemap);
-        app.component("dopa_chart_bar", scalingDopaChartBar);
+        app.component("dopa_chart_bar", dopa_chart_bar);
         app.component("dopa_chart_doughnut", scalingDopaChartDoughnut);
         app.component("scatter", scatter);
         app.component("radar_threats", radarThreats);
@@ -100877,7 +100961,7 @@ ${$$2(r2)}`), n2;
         app.component("checkboxes_list", checkboxesList);
         app.component("tooltip", tooltip);
         app.component("imet_bar_chart", imetBarChart);
-        app.component("dopa_indicators_table", dopaIndicatorsTable);
+        app.component("dopa_indicators_table", dopa_indicators_table);
         app.component("text_editor", textEditor);
         return app;
       }
@@ -100908,6 +100992,1019 @@ ${$$2(r2)}`), n2;
         app.component("app", application);
         app.component("preview_template", previewTemplate);
         return app;
+      }
+    }
+    const _sfc_main$6 = {
+      name: "dopa_radar",
+      props: {
+        data: {
+          type: [Number, String],
+          default: null
+        },
+        radar_width: {
+          type: Number,
+          default: 400
+        },
+        radar_height: {
+          type: Number,
+          default: 350
+        }
+      },
+      data: function() {
+        return {
+          labels: [],
+          radar1: [],
+          radar2: []
+        };
+      },
+      mounted() {
+        let _this = this;
+        let elem = this.$el.querySelector("div.dopa_radar");
+        if (this.data != null && this.data != "null" && this.data !== "[]") {
+          debugger;
+          this.chart = init(elem);
+          this.chart.setOption(_this.radar_options());
+        }
+      },
+      methods: {
+        get_values() {
+          var _a2;
+          let _this = this;
+          (_a2 = JSON.parse(this.data)) == null ? void 0 : _a2.forEach(function(item) {
+            _this.labels.push({ name: item.title.replace(" ", "\n"), max: 100 });
+            _this.radar1.push(item.country_avg);
+            _this.radar2.push(item.site_norm_value);
+          });
+        },
+        radar_options() {
+          this.get_values();
+          return {
+            tooltip: {
+              trigger: "axis"
+            },
+            legend: {
+              data: ["Country Average", "Protected Area"]
+            },
+            radar: {
+              indicator: this.labels,
+              radius: 100,
+              center: ["50%", "55%"],
+              name: {
+                textStyle: {
+                  color: "#111"
+                }
+              }
+            },
+            series: [
+              {
+                type: "radar",
+                data: [
+                  {
+                    value: this.radar2,
+                    itemStyle: {
+                      color: "#8fbf4b"
+                    },
+                    areaStyle: {
+                      color: "#8fbf4b",
+                      opacity: 0.4
+                    },
+                    symbolSize: 6,
+                    name: "Protected Area",
+                    tooltip: {
+                      trigger: "item"
+                    }
+                  },
+                  {
+                    value: this.radar1,
+                    itemStyle: {
+                      color: "#679b95"
+                    },
+                    areaStyle: {
+                      color: "#679b95",
+                      opacity: 0.4
+                    },
+                    symbolSize: 6,
+                    name: "Country Average",
+                    tooltip: {
+                      trigger: "item"
+                    }
+                  }
+                ]
+              }
+            ]
+          };
+        }
+      }
+    };
+    const _hoisted_1$6 = { class: "container" };
+    function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+        createBaseVNode("div", {
+          class: "dopa_radar",
+          style: normalizeStyle("width:" + $props.radar_width + "px; height: " + $props.radar_height + "px;")
+        }, null, 4)
+      ]);
+    }
+    const dopa_radar = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_radar.vue"]]);
+    const _sfc_main$5 = {
+      __name: "editor",
+      props: {
+        modelValue: {
+          type: String,
+          required: true
+        },
+        action: {
+          type: String,
+          required: true,
+          validator: (value) => ["edit", "show"].includes(value)
+        },
+        field: {
+          type: String,
+          required: true
+        }
+      },
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose, emit: __emit }) {
+        __expose();
+        const props = __props;
+        const emit = __emit;
+        const updateContent = (value) => {
+          emit("update:modelValue", value);
+        };
+        const __returned__ = { props, emit, updateContent };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$5 = { class: "mt-2" };
+    const _hoisted_2$5 = {
+      key: 0,
+      class: "text-editor-edit"
+    };
+    const _hoisted_3$4 = {
+      key: 1,
+      class: "field-preview",
+      style: { "max-width": "none", "margin-bottom": "10px" }
+    };
+    const _hoisted_4$4 = ["innerHTML"];
+    const _hoisted_5$4 = ["innerHTML"];
+    function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_editor = resolveComponent("editor", true);
+      return openBlock(), createElementBlock("div", _hoisted_1$5, [
+        $setup.props.action === "edit" ? (openBlock(), createElementBlock("div", _hoisted_2$5, [
+          createVNode(_component_editor, {
+            "model-value": $props.modelValue,
+            "onUpdate:modelValue": $setup.updateContent
+          }, null, 8, ["model-value"])
+        ])) : $setup.props.action === "show" ? (openBlock(), createElementBlock("div", _hoisted_3$4, [
+          createBaseVNode("div", { innerHTML: $props.modelValue }, null, 8, _hoisted_4$4)
+        ])) : createCommentVNode("", true),
+        createBaseVNode("div", {
+          class: "text-editor-print",
+          innerHTML: $props.modelValue
+        }, null, 8, _hoisted_5$4)
+      ]);
+    }
+    const report_editor = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5], ["__scopeId", "data-v-9cca538b"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/editor.vue"]]);
+    class Analysis {
+      constructor(input_data = {}, custom_props = {}) {
+        let _this = this;
+        const options = {
+          name: "Analysis",
+          setup() {
+            return _this.setupApp(input_data);
+          }
+        };
+        return this.createApp(options, input_data);
+      }
+      setupApp(input_data) {
+        const status = ref(input_data.status);
+        const report = reactive(input_data.report);
+        const scores = input_data.scores;
+        const labels = input_data.labels;
+        watch(report, () => {
+          status.value = "changed";
+        }, {
+          deep: true
+        });
+        onMounted(() => {
+          if (input_data.connection) {
+            loadMap();
+          }
+        });
+        function saveReport() {
+          status.value = "loading";
+          fetch(input_data.url, {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-Token": window.Laravel.csrfToken
+            },
+            body: JSON.stringify({
+              _method: "PATCH",
+              report
+            })
+          }).then((response) => response.json()).then(function(data) {
+            if (!(data.hasOwnProperty("status") && data.status === "success")) {
+              status.value = "error";
+            }
+            status.value = "saved";
+          }).catch(function(error) {
+            status.value = "error";
+          });
+        }
+        function printReport() {
+          window.print();
+        }
+        let radar_values = {};
+        ["context", "planning", "inputs", "process", "outputs", "outcomes"].forEach(function(value, index) {
+          let label = labels[value];
+          radar_values[label] = scores[value].avg_indicator || null;
+        });
+        function loadMap() {
+          const report_map = new window.mapboxgl.Map({
+            container: "map",
+            style: BiopamaWDPA.base_layer,
+            center: [30, 0],
+            zoom: 4,
+            minZoom: 2,
+            maxZoom: 12,
+            attributionControl: false
+          });
+          report_map.on("load", function() {
+            BiopamaWDPA.addWdpaLayer(report_map, input_data.wdpa_id);
+          });
+        }
+        return {
+          status,
+          report,
+          scores,
+          radar_values,
+          saveReport,
+          printReport,
+          dopa_indicators: input_data.dopa_indicators,
+          api_data: input_data.api_data,
+          connection: input_data.connection
+        };
+      }
+      createApp(options, input_data) {
+        return createApp(options, input_data).component("dopa_indicators_table", dopa_indicators_table).component("editor", editor).component("report-editor", report_editor).component("dopa_radar", dopa_radar).component("dopa_chart_bar", dopa_chart_bar).component("imet_radar", imet_radar);
+      }
+    }
+    const _sfc_main$4 = {
+      __name: "checkbox-boolean",
+      props: {
+        id: { type: String, default: "" },
+        value: { type: [String, Number, Boolean, Array, Object], default: null },
+        dataClass: { type: String, default: "" },
+        dataRules: { type: String, default: "" },
+        dataNumeric: { type: Boolean, default: false },
+        label: { type: String, default: null }
+      },
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose, emit: __emit }) {
+        __expose();
+        const props = __props;
+        const emit = __emit;
+        const inputValue = ref(props.value === true || props.value === "1" || props.value === 1);
+        const isChecked = computed(() => {
+          return inputValue.value === true || inputValue.value === 1 || inputValue.value === "1";
+        });
+        watch(() => props.value, (newValue) => {
+          inputValue.value = newValue;
+        });
+        const checkChange = () => {
+          inputValue.value = !inputValue.value;
+          setModuleValue();
+        };
+        const emitValue = (value) => {
+          emit("update:modelValue", value);
+        };
+        onBeforeMount(() => {
+          if (props.value === null) {
+            setModuleValue();
+          }
+        });
+        onMounted(() => {
+          document.querySelector(".checkbox").classList.remove("field-edit");
+        });
+        const setModuleValue = () => {
+          let moduleValue = false;
+          if (props.dataNumeric) {
+            moduleValue = inputValue.value ? true : false;
+          } else {
+            moduleValue = inputValue.value;
+          }
+          emitValue(moduleValue);
+        };
+        const __returned__ = { props, emit, inputValue, isChecked, checkChange, emitValue, setModuleValue, ref, computed, watch, onBeforeMount, onMounted };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$4 = ["name", "id", "checked"];
+    const _hoisted_2$4 = ["for", "innerHTML"];
+    function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("span", {
+        class: normalizeClass(["checkbox", $props.dataClass])
+      }, [
+        createBaseVNode("input", {
+          type: "checkbox",
+          name: $props.id,
+          id: "bool-check_" + $props.id,
+          checked: $setup.isChecked,
+          onClick: $setup.checkChange
+        }, null, 8, _hoisted_1$4),
+        createBaseVNode("label", {
+          for: "bool-check_" + $props.id,
+          innerHTML: $props.label
+        }, null, 8, _hoisted_2$4)
+      ], 2);
+    }
+    const checkbox_boolean = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/checkbox-boolean.vue"]]);
+    const _sfc_main$3 = {
+      __name: "objectives",
+      props: {
+        report: {
+          type: [Object, Array],
+          default: () => ({})
+        },
+        objectives: {
+          type: Object,
+          default: () => ({})
+        }
+      },
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const Locale2 = window.ModularForms.Helpers.Locale;
+        const checkboxes = ref([]);
+        const are_checked_all = ref(false);
+        const saveDisabled = ref(false);
+        const listItems = ref([]);
+        onMounted(() => {
+          let data = "{}";
+          if ("objectives" in props.report[0] && props.report[0]["objectives"]) {
+            data = props.report[0]["objectives"];
+          }
+          const objectives2 = JSON.parse(data);
+          checkboxes.value = Array.isArray(objectives2) ? objectives2 : [];
+        });
+        const selectValue = (value) => {
+          if (checkboxes.includes(value)) {
+            checkboxes = checkboxes.filter((item) => item !== value);
+          } else {
+            checkboxes.push(value);
+            selected();
+          }
+        };
+        const selectValueByIdAndValue = (id, value) => {
+          if (is_value_included(id)) {
+            checkboxes.value = checkboxes.value.filter((item) => item.id !== id);
+          } else {
+            checkboxes.value.push({ id, value });
+          }
+          props.report[0]["objectives"] = JSON.stringify(checkboxes.value);
+        };
+        const is_value_included = (id) => {
+          if (checkboxes.value.length) {
+            return checkboxes.value.some((check2) => check2.id === id);
+          }
+          return false;
+        };
+        const is_checked = (id) => {
+          if (checkboxes.value.length) {
+            return checkboxes.value.some((checkbox2) => checkbox2.id === id);
+          }
+          return false;
+        };
+        const initSettings = (items) => {
+          listItems.value = items;
+        };
+        const toggle2 = () => {
+          saveDisabled.value = checkboxes.value.length === 0;
+        };
+        const check_all = () => {
+          if (!are_checked_all.value) {
+            const checkboxes2 = [...document.querySelectorAll(".vue-checkboxes")];
+            for (const key in checkboxes2) {
+              if (key > 0) {
+                const check_box = checkboxes2[key];
+                const exist = is_value_included(parseInt(check_box.defaultValue));
+                if (!exist) {
+                  checkboxes2.push({
+                    id: check_box.defaultValue,
+                    value: check_box.getAttribute("data-name")
+                  });
+                }
+              }
+            }
+          } else {
+            clearSelections();
+          }
+          selected();
+        };
+        const clearSelections = () => {
+          checkboxes.value = [];
+          are_checked_all.value = false;
+        };
+        const __returned__ = { props, Locale: Locale2, checkboxes, are_checked_all, saveDisabled, listItems, selectValue, selectValueByIdAndValue, is_value_included, is_checked, initSettings, toggle: toggle2, check_all, clearSelections, ref, onMounted, computed };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$3 = { class: "module-container" };
+    const _hoisted_2$3 = { class: "module-header" };
+    const _hoisted_3$3 = { class: "module-title" };
+    const _hoisted_4$3 = { class: "module-body" };
+    const _hoisted_5$3 = { class: "max-w-12xl" };
+    const _hoisted_6$2 = { class: "w-8/12" };
+    const _hoisted_7$2 = ["innerHTML"];
+    const _hoisted_8$1 = { class: "col text-center" };
+    const _hoisted_9$1 = { class: "checkbox" };
+    const _hoisted_10$1 = ["checked", "data-name", "id", "onClick", "value"];
+    const _hoisted_11$1 = ["for"];
+    const _hoisted_12$1 = { class: "max-w-12xl" };
+    const _hoisted_13$1 = { class: "w-8/12" };
+    const _hoisted_14$1 = ["innerHTML"];
+    const _hoisted_15$1 = { class: "col text-center" };
+    const _hoisted_16$1 = { class: "checkbox" };
+    const _hoisted_17$1 = ["checked", "data-name", "id", "onClick", "value"];
+    const _hoisted_18$1 = ["for"];
+    function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("div", _hoisted_1$3, [
+        createBaseVNode("div", _hoisted_2$3, [
+          createBaseVNode("div", _hoisted_3$3, toDisplayString($setup.Locale.getLabel("imet-core::oecm_report.general_planning.objectives_title")), 1)
+        ]),
+        createBaseVNode("div", _hoisted_4$3, [
+          createBaseVNode("table", _hoisted_5$3, [
+            createBaseVNode("tr", null, [
+              createBaseVNode("th", _hoisted_6$2, toDisplayString($setup.Locale.getLabel("imet-core::oecm_report.general_planning.intervention_context")), 1),
+              createBaseVNode("th", null, toDisplayString($setup.Locale.getLabel("imet-core::oecm_report.general_planning.prioritize_in_management")), 1)
+            ]),
+            (openBlock(true), createElementBlock(Fragment, null, renderList($props.objectives["context"], (objective, index) => {
+              return openBlock(), createElementBlock("tr", {
+                class: "mt-3",
+                key: index
+              }, [
+                createBaseVNode("td", { innerHTML: objective }, null, 8, _hoisted_7$2),
+                createBaseVNode("td", _hoisted_8$1, [
+                  createBaseVNode("span", _hoisted_9$1, [
+                    createBaseVNode("input", {
+                      type: "checkbox",
+                      checked: $setup.is_checked(index),
+                      "data-name": objective,
+                      id: objective,
+                      onClick: ($event) => $setup.selectValueByIdAndValue(index, objective),
+                      class: "vue-checkboxes",
+                      value: index
+                    }, null, 8, _hoisted_10$1),
+                    createBaseVNode("label", { for: objective }, null, 8, _hoisted_11$1)
+                  ])
+                ])
+              ]);
+            }), 128))
+          ]),
+          createBaseVNode("table", _hoisted_12$1, [
+            createBaseVNode("tr", null, [
+              createBaseVNode("th", _hoisted_13$1, toDisplayString($setup.Locale.getLabel("imet-core::oecm_report.general_planning.management_evaluation")), 1),
+              createBaseVNode("th", null, toDisplayString($setup.Locale.getLabel("imet-core::oecm_report.general_planning.prioritize_in_management")), 1)
+            ]),
+            (openBlock(true), createElementBlock(Fragment, null, renderList($props.objectives["evaluation"], (objective, index) => {
+              return openBlock(), createElementBlock("tr", {
+                class: "mt-3",
+                key: index
+              }, [
+                createBaseVNode("td", { innerHTML: objective }, null, 8, _hoisted_14$1),
+                createBaseVNode("td", _hoisted_15$1, [
+                  createBaseVNode("span", _hoisted_16$1, [
+                    createBaseVNode("input", {
+                      type: "checkbox",
+                      checked: $setup.is_checked(index),
+                      "data-name": objective,
+                      id: objective,
+                      onClick: ($event) => $setup.selectValueByIdAndValue(index, objective),
+                      class: "vue-checkboxes",
+                      value: index
+                    }, null, 8, _hoisted_17$1),
+                    createBaseVNode("label", { for: objective }, null, 8, _hoisted_18$1)
+                  ])
+                ])
+              ]);
+            }), 128))
+          ])
+        ])
+      ]);
+    }
+    const objectives = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/report/oecm/objectives.vue"]]);
+    const _sfc_main$2 = {
+      name: "roadmap",
+      props: {
+        action: {
+          type: String,
+          default: "edit"
+        },
+        report: {
+          type: [Object, Array],
+          default: () => {
+          }
+        },
+        group_key: {
+          type: Number,
+          default: 0
+        },
+        default_schema: {
+          type: Object,
+          default: () => {
+          }
+        }
+      },
+      mounted: function() {
+        if (!this.current_report) {
+          this.get_values();
+        }
+      },
+      data() {
+        return {
+          Locale: window.ModularForms.Helpers.Locale,
+          current_report: null,
+          outcome2_list: [1, 2],
+          outcome1_list: [1, 2]
+        };
+      },
+      methods: {
+        outcome_list_add_items(list, label = "annual_targets2_activity") {
+          const arr = [3, 4, 5];
+          let add2 = 0;
+          for (const i2 in arr) {
+            for (const key in this.current_report) {
+              if (key.startsWith(label + arr[i2])) {
+                if (this.current_report[key] !== this.default_schema[key]) {
+                  add2 = arr[i2];
+                }
+              }
+            }
+          }
+          for (let i2 = 3; i2 <= add2; i2++) {
+            list.push(i2);
+          }
+        },
+        get_values: function() {
+          if (Array.isArray(this.report)) {
+            this.current_report = this.report[this.group_key];
+          } else {
+            this.current_report = this.report[0];
+          }
+          this.current_report.group_key = this.group_key;
+          this.outcome_list_add_items(this.outcome2_list);
+          this.outcome_list_add_items(this.outcome1_list, "annual_targets1_activity");
+        },
+        add_activity_outcome2_item: function() {
+          this.outcome2_list.push(this.outcome2_list.length + 1);
+        },
+        add_activity_outcome1_item: function() {
+          this.outcome1_list.push(this.outcome1_list.length + 1);
+        },
+        remove_outcome2_item: function() {
+          this.outcome2_list.pop();
+        },
+        remove_outcome1_item: function() {
+          this.outcome1_list.pop();
+        }
+      }
+    };
+    const _hoisted_1$2 = { class: "module-container" };
+    const _hoisted_2$2 = {
+      key: 0,
+      class: "module-body flex flex-col gap-y-4"
+    };
+    const _hoisted_3$2 = { class: "flex width-full content-center justify-between" };
+    const _hoisted_4$2 = { class: "width w-8/12" };
+    const _hoisted_5$2 = { class: "flex" };
+    const _hoisted_6$1 = { class: "w-6/12" };
+    const _hoisted_7$1 = { class: "w-6/12" };
+    const _hoisted_8 = { class: "flex width-full content-center justify-between" };
+    const _hoisted_9 = { class: "width w-8/12" };
+    const _hoisted_10 = { class: "flex" };
+    const _hoisted_11 = { class: "w-6/12" };
+    const _hoisted_12 = { class: "w-6/12" };
+    const _hoisted_13 = { class: "flex width-full content-center justify-between" };
+    const _hoisted_14 = { class: "width w-8/12" };
+    const _hoisted_15 = { class: "flex" };
+    const _hoisted_16 = { class: "flex width-full content-center justify-between" };
+    const _hoisted_17 = { class: "width w-8/12" };
+    const _hoisted_18 = { class: "flex" };
+    const _hoisted_19 = { class: "w-6/12" };
+    const _hoisted_20 = { class: "w-6/12" };
+    const _hoisted_21 = { class: "flex width-full content-center justify-between" };
+    const _hoisted_22 = { class: "width w-8/12" };
+    const _hoisted_23 = { class: "flex" };
+    function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_report_editor = resolveComponent("report-editor");
+      const _component_checkbox_boolean = resolveComponent("checkbox-boolean");
+      return openBlock(), createElementBlock("div", _hoisted_1$2, [
+        _cache[18] || (_cache[18] = createBaseVNode("div", { class: "module-header" }, [
+          createBaseVNode("div", { class: "module-title" })
+        ], -1)),
+        $data.current_report ? (openBlock(), createElementBlock("div", _hoisted_2$2, [
+          createBaseVNode("div", _hoisted_3$2, [
+            createBaseVNode("div", _hoisted_4$2, [
+              createBaseVNode("h4", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.possible_roadmap")), 1)
+            ]),
+            createBaseVNode("div", null, [
+              createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.year")) + "1", 1)
+            ]),
+            createBaseVNode("div", null, [
+              createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.year")) + "2", 1)
+            ]),
+            createBaseVNode("div", null, [
+              createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.year")) + "3", 1)
+            ]),
+            createBaseVNode("div", null, [
+              createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.year")) + "4", 1)
+            ]),
+            createBaseVNode("div", null, [
+              createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.year")) + "5", 1)
+            ])
+          ]),
+          createBaseVNode("div", _hoisted_5$2, [
+            createBaseVNode("h5", _hoisted_6$1, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.long_term_objectives")), 1),
+            createBaseVNode("div", _hoisted_7$1, [
+              createVNode(_component_report_editor, {
+                modelValue: $data.current_report["long_term"],
+                "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $data.current_report["long_term"] = $event),
+                onUpdate: _cache[1] || (_cache[1] = ($event) => $data.current_report["long_term"] = $event),
+                action: $props.action
+              }, null, 8, ["modelValue", "action"])
+            ])
+          ]),
+          createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.outcome")) + " 1", 1),
+          createBaseVNode("div", _hoisted_8, [
+            createBaseVNode("div", _hoisted_9, [
+              createVNode(_component_report_editor, {
+                modelValue: $data.current_report["outcome"],
+                "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => $data.current_report["outcome"] = $event),
+                onUpdate: _cache[3] || (_cache[3] = ($event) => $data.current_report["outcome"] = $event),
+                action: $props.action
+              }, null, 8, ["modelValue", "action"])
+            ]),
+            (openBlock(), createElementBlock(Fragment, null, renderList([1, 2, 3, 4, 5], (year) => {
+              return createBaseVNode("div", {
+                class: "col",
+                key: year
+              }, [
+                createVNode(_component_checkbox_boolean, {
+                  value: $data.current_report["outcome_year" + year],
+                  modelValue: $data.current_report["outcome_year" + year],
+                  "onUpdate:modelValue": ($event) => $data.current_report["outcome_year" + year] = $event,
+                  onUpdate: ($event) => $data.current_report["outcome_year" + year] = $event,
+                  id: $data.current_report["group_key"] + "_outcome_year" + year
+                }, null, 8, ["value", "modelValue", "onUpdate:modelValue", "onUpdate", "id"])
+              ]);
+            }), 64))
+          ]),
+          createBaseVNode("div", _hoisted_10, [
+            createBaseVNode("div", _hoisted_11, [
+              createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.annual_multi_annual_targets")), 1)
+            ]),
+            createBaseVNode("div", _hoisted_12, [
+              createVNode(_component_report_editor, {
+                modelValue: $data.current_report["annual_targets1"],
+                "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => $data.current_report["annual_targets1"] = $event),
+                onUpdate: _cache[5] || (_cache[5] = ($event) => $data.current_report["annual_targets1"] = $event),
+                action: $props.action
+              }, null, 8, ["modelValue", "action"])
+            ])
+          ]),
+          (openBlock(true), createElementBlock(Fragment, null, renderList(this.outcome1_list.length, (activity) => {
+            return openBlock(), createElementBlock("div", { key: activity }, [
+              createBaseVNode("h6", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.activity")) + " " + toDisplayString(activity), 1),
+              createBaseVNode("div", _hoisted_13, [
+                createBaseVNode("div", _hoisted_14, [
+                  createVNode(_component_report_editor, {
+                    modelValue: $data.current_report["annual_targets1_activity" + activity],
+                    "onUpdate:modelValue": ($event) => $data.current_report["annual_targets1_activity" + activity] = $event,
+                    onUpdate: ($event) => $data.current_report["annual_targets1_activity" + activity] = $event,
+                    action: $props.action
+                  }, null, 8, ["modelValue", "onUpdate:modelValue", "onUpdate", "action"])
+                ]),
+                (openBlock(), createElementBlock(Fragment, null, renderList([1, 2, 3, 4, 5], (year) => {
+                  return createBaseVNode("div", {
+                    class: "col",
+                    key: year
+                  }, [
+                    createVNode(_component_checkbox_boolean, {
+                      value: $data.current_report["annual_targets1_activity" + activity + "_year" + year],
+                      modelValue: $data.current_report["annual_targets1_activity" + activity + "_year" + year],
+                      "onUpdate:modelValue": ($event) => $data.current_report["annual_targets1_activity" + activity + "_year" + year] = $event,
+                      onUpdate: ($event) => $data.current_report["annual_targets1_activity" + activity + "_year" + year] = $event,
+                      id: $data.current_report["group_key"] + "_annual_targets1_activity" + activity + "_year" + year
+                    }, null, 8, ["value", "modelValue", "onUpdate:modelValue", "onUpdate", "id"])
+                  ]);
+                }), 64))
+              ])
+            ]);
+          }), 128)),
+          createBaseVNode("div", _hoisted_15, [
+            $data.outcome1_list.length < 5 ? (openBlock(), createElementBlock("button", {
+              key: 0,
+              type: "button",
+              class: "btn-nav small add-item",
+              onClick: _cache[6] || (_cache[6] = (...args) => $options.add_activity_outcome1_item && $options.add_activity_outcome1_item(...args))
+            }, [
+              _cache[14] || (_cache[14] = createBaseVNode("span", { class: "fas fa-fw fa-plus-circle white" }, null, -1)),
+              createTextVNode(" " + toDisplayString($data.Locale.getLabel("modular-forms::common.add_item")), 1)
+            ])) : createCommentVNode("", true),
+            $data.outcome1_list.length > 1 ? (openBlock(), createElementBlock("button", {
+              key: 1,
+              type: "button",
+              class: "btn-nav small red remove-item",
+              onClick: _cache[7] || (_cache[7] = (...args) => $options.remove_outcome1_item && $options.remove_outcome1_item(...args))
+            }, _cache[15] || (_cache[15] = [
+              createBaseVNode("span", { class: "fas fa-fw fa-trash white" }, null, -1)
+            ]))) : createCommentVNode("", true)
+          ]),
+          createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.outcome")) + " 2", 1),
+          createBaseVNode("div", _hoisted_16, [
+            createBaseVNode("div", _hoisted_17, [
+              createVNode(_component_report_editor, {
+                modelValue: $data.current_report["outcome2"],
+                "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => $data.current_report["outcome2"] = $event),
+                onUpdate: _cache[9] || (_cache[9] = ($event) => $data.current_report["outcome2"] = $event),
+                action: $props.action
+              }, null, 8, ["modelValue", "action"])
+            ]),
+            (openBlock(), createElementBlock(Fragment, null, renderList([1, 2, 3, 4, 5], (year) => {
+              return createBaseVNode("div", {
+                class: "col",
+                key: year
+              }, [
+                createVNode(_component_checkbox_boolean, {
+                  value: $data.current_report["outcome2_year" + year],
+                  modelValue: $data.current_report["outcome2_year" + year],
+                  "onUpdate:modelValue": ($event) => $data.current_report["outcome2_year" + year] = $event,
+                  onUpdate: ($event) => $data.current_report["outcome2_year" + year] = $event,
+                  id: $data.current_report["group_key"] + "_outcome2_year" + year
+                }, null, 8, ["value", "modelValue", "onUpdate:modelValue", "onUpdate", "id"])
+              ]);
+            }), 64))
+          ]),
+          createBaseVNode("div", _hoisted_18, [
+            createBaseVNode("div", _hoisted_19, [
+              createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.annual_multi_annual_targets")), 1)
+            ]),
+            createBaseVNode("div", _hoisted_20, [
+              createVNode(_component_report_editor, {
+                modelValue: $data.current_report["annual_targets2"],
+                "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => $data.current_report["annual_targets2"] = $event),
+                onUpdate: _cache[11] || (_cache[11] = ($event) => $data.current_report["annual_targets2"] = $event),
+                action: $props.action
+              }, null, 8, ["modelValue", "action"])
+            ])
+          ]),
+          (openBlock(true), createElementBlock(Fragment, null, renderList(this.outcome2_list.length, (activity) => {
+            return openBlock(), createElementBlock("div", { key: activity }, [
+              createBaseVNode("h6", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.activity")) + " " + toDisplayString(activity), 1),
+              createBaseVNode("div", _hoisted_21, [
+                createBaseVNode("div", _hoisted_22, [
+                  createVNode(_component_report_editor, {
+                    modelValue: $data.current_report["annual_targets2_activity" + activity],
+                    "onUpdate:modelValue": ($event) => $data.current_report["annual_targets2_activity" + activity] = $event,
+                    onUpdate: ($event) => $data.current_report["annual_targets2_activity" + activity] = $event,
+                    action: $props.action
+                  }, null, 8, ["modelValue", "onUpdate:modelValue", "onUpdate", "action"])
+                ]),
+                (openBlock(), createElementBlock(Fragment, null, renderList([1, 2, 3, 4, 5], (year) => {
+                  return createBaseVNode("div", {
+                    class: "col",
+                    key: year
+                  }, [
+                    createVNode(_component_checkbox_boolean, {
+                      value: $data.current_report["annual_targets2_activity" + activity + "_year" + year],
+                      modelValue: $data.current_report["annual_targets2_activity" + activity + "_year" + year],
+                      "onUpdate:modelValue": ($event) => $data.current_report["annual_targets2_activity" + activity + "_year" + year] = $event,
+                      onUpdate: ($event) => $data.current_report["annual_targets2_activity" + activity + "_year" + year] = $event,
+                      id: $data.current_report["group_key"] + "_annual_targets2_activity" + activity + "_year" + year
+                    }, null, 8, ["value", "modelValue", "onUpdate:modelValue", "onUpdate", "id"])
+                  ]);
+                }), 64))
+              ])
+            ]);
+          }), 128)),
+          createBaseVNode("div", _hoisted_23, [
+            $data.outcome2_list.length < 5 ? (openBlock(), createElementBlock("button", {
+              key: 0,
+              type: "button",
+              class: "btn-nav small add-item",
+              onClick: _cache[12] || (_cache[12] = (...args) => $options.add_activity_outcome2_item && $options.add_activity_outcome2_item(...args))
+            }, [
+              _cache[16] || (_cache[16] = createBaseVNode("span", { class: "fas fa-fw fa-plus-circle white" }, null, -1)),
+              createTextVNode(" " + toDisplayString($data.Locale.getLabel("modular-forms::common.add_item")), 1)
+            ])) : createCommentVNode("", true),
+            $data.outcome2_list.length > 1 ? (openBlock(), createElementBlock("button", {
+              key: 1,
+              type: "button",
+              class: "btn-nav small red remove-item",
+              onClick: _cache[13] || (_cache[13] = (...args) => $options.remove_outcome2_item && $options.remove_outcome2_item(...args))
+            }, _cache[17] || (_cache[17] = [
+              createBaseVNode("span", { class: "fas fa-fw fa-trash white" }, null, -1)
+            ]))) : createCommentVNode("", true)
+          ])
+        ])) : createCommentVNode("", true)
+      ]);
+    }
+    const roadmap = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__scopeId", "data-v-d11a656e"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/report/oecm/roadmap.vue"]]);
+    const _sfc_main$1 = {
+      name: "table_input",
+      props: {
+        action: {
+          type: String,
+          default: "edit"
+        },
+        report: {
+          type: [Object, Array],
+          default: () => {
+          }
+        },
+        group_key: {
+          type: Number,
+          default: 0
+        }
+      },
+      data() {
+        return {
+          Locale: window.ModularForms.Helpers.Locale,
+          current_report: null
+        };
+      },
+      mounted: function() {
+        if (!this.current_report) {
+          this.get_values();
+        }
+      },
+      methods: {
+        get_values: function() {
+          if (Array.isArray(this.report)) {
+            this.current_report = this.report[this.group_key];
+          } else {
+            this.current_report = this.report[0];
+          }
+          this.current_report.group_key = this.group_key;
+        },
+        label_item: function() {
+          if (this.group_key) {
+            return "." + this.group_key;
+          }
+          return "";
+        }
+      }
+    };
+    const _hoisted_1$1 = ["id"];
+    const _hoisted_2$1 = { class: "module-header" };
+    const _hoisted_3$1 = {
+      class: "module-title",
+      id: "ar5"
+    };
+    const _hoisted_4$1 = {
+      key: 0,
+      class: "module-body"
+    };
+    const _hoisted_5$1 = {
+      key: 1,
+      class: "field-preview",
+      style: { "max-width": "none", "margin-bottom": "10px" }
+    };
+    function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_editor = resolveComponent("editor");
+      return openBlock(), createElementBlock("div", {
+        class: "module-container",
+        id: $props.group_key
+      }, [
+        createBaseVNode("div", _hoisted_2$1, [
+          createBaseVNode("div", _hoisted_3$1, "AR.5" + toDisplayString(this.label_item()) + " " + toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.title")), 1)
+        ]),
+        $data.current_report ? (openBlock(), createElementBlock("div", _hoisted_4$1, [
+          createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.previous_state")), 1),
+          ($props.action = "edit") ? (openBlock(), createBlock(_component_editor, {
+            key: 0,
+            modelValue: $data.current_report["previous_state"],
+            "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $data.current_report["previous_state"] = $event),
+            onUpdate: _cache[1] || (_cache[1] = ($event) => $data.current_report["previous_state"] = $event)
+          }, null, 8, ["modelValue"])) : (openBlock(), createElementBlock("div", _hoisted_5$1, toDisplayString($data.current_report.previous_state) + "} ", 1)),
+          createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.impacts")), 1),
+          createVNode(_component_editor, {
+            modelValue: $data.current_report["impacts"],
+            "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => $data.current_report["impacts"] = $event),
+            onUpdate: _cache[3] || (_cache[3] = ($event) => $data.current_report["impacts"] = $event)
+          }, null, 8, ["modelValue"]),
+          createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.responses")), 1),
+          createVNode(_component_editor, {
+            modelValue: $data.current_report["responses"],
+            "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => $data.current_report["responses"] = $event),
+            onUpdate: _cache[5] || (_cache[5] = ($event) => $data.current_report["responses"] = $event)
+          }, null, 8, ["modelValue"]),
+          createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.proposed_short")), 1),
+          createVNode(_component_editor, {
+            modelValue: $data.current_report["proposed_short"],
+            "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => $data.current_report["proposed_short"] = $event),
+            onUpdate: _cache[7] || (_cache[7] = ($event) => $data.current_report["proposed_short"] = $event)
+          }, null, 8, ["modelValue"]),
+          createBaseVNode("h5", null, toDisplayString($data.Locale.getLabel("imet-core::oecm_report.table_of_planning.proposed_long")), 1),
+          createVNode(_component_editor, {
+            modelValue: $data.current_report["proposed_long"],
+            "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => $data.current_report["proposed_long"] = $event),
+            onUpdate: _cache[9] || (_cache[9] = ($event) => $data.current_report["proposed_long"] = $event)
+          }, null, 8, ["modelValue"])
+        ])) : createCommentVNode("", true)
+      ], 8, _hoisted_1$1);
+    }
+    const table_input = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/report/oecm/table_input.vue"]]);
+    class OECMAnalysis extends Analysis {
+      constructor(input_data = {}, custom_props = {}) {
+        return super(input_data, custom_props).component("objectives", objectives).component("roadmap", roadmap).component("table_input", table_input).component("checkbox-boolean", checkbox_boolean).component("imet_score_bar", imetScoreBar);
+      }
+      setupApp(input_data) {
+        let setup_obj = super.setupApp(input_data);
+        let table_input_elems = ref(input_data.table_input_elems);
+        let short_long_objectives = input_data.short_long_objectives;
+        let loading_objectives = input_data.loading_objectives;
+        let error_objectives = input_data.error_objectives;
+        const default_schema = input_data.default_schema;
+        const objectives_url = input_data.objectives_url;
+        onMounted(() => {
+          if (setup_obj.report.length > 0) {
+            for (const items in setup_obj.report) {
+              for (const item in setup_obj.report[items]) {
+                if (setup_obj.report[items][item] === null) {
+                  setup_obj.report[items][item] = "";
+                }
+              }
+            }
+            table_input_elems.value = setup_obj.report.map((elem, index) => index);
+          }
+          getObjectives();
+        });
+        const reportLength = computed(() => {
+          return setup_obj.report.length;
+        });
+        watch(setup_obj.status, (value) => {
+          if (value === "saved") {
+            setTimeout(() => {
+              setup_obj.status = "idle";
+            }, 4e3);
+          }
+        });
+        watch(setup_obj.report, () => {
+          setup_obj.status = "changed";
+        }, { deep: true });
+        function addItem() {
+          if (table_input_elems.value.length < 10) {
+            const id = table_input_elems.value.length;
+            table_input_elems.value.push(id);
+            const new_schema = JSON.parse(JSON.stringify(default_schema));
+            for (const item in new_schema) {
+              if (new_schema[item] === null) {
+                new_schema[item] = "";
+              }
+            }
+            setup_obj.report.push(new_schema);
+          }
+        }
+        function deleteItem(index) {
+          const key = table_input_elems.value.pop();
+          setup_obj.report.splice(key, 1);
+        }
+        function getObjectives() {
+          loading_objectives = true;
+          fetch(objectives_url, {
+            method: "get",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-Token": window.Laravel.csrfToken
+            }
+          }).then((response) => response.json()).then(function(data) {
+            error_objectives = false;
+            short_long_objectives = data;
+            loading_objectives = false;
+          }).catch((error) => {
+            error_objectives = true;
+            loading_objectives = false;
+          });
+        }
+        return {
+          ...setup_obj,
+          addItem,
+          deleteItem,
+          getObjectives,
+          reportLength,
+          table_input_elems,
+          short_long_objectives,
+          loading_objectives,
+          error_objectives
+        };
+      }
+      createApp(options, input_data) {
+        return super.createApp(options, input_data);
       }
     }
     function useLoadFromPrevious(component_data) {
@@ -102448,6 +103545,8 @@ ${$$2(r2)}`), n2;
     window.ImetCore.Apps.ScalingList = ScalingList;
     window.ImetCore.Apps.Report = Report;
     window.ImetCore.Apps.Preview = Preview;
+    window.ImetCore.Apps.Analysis = Analysis;
+    window.ImetCore.Apps.OECMAnalysis = OECMAnalysis;
     window.ImetCore.Apps.Modules = {
       ImetV1: {
         context: {},
@@ -102650,56 +103749,50 @@ ${$$2(r2)}`), n2;
       key: 1,
       class: "text-red-600 text-sm"
     };
-    const _hoisted_6 = /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1);
-    const _hoisted_7 = {
+    const _hoisted_6 = {
       key: 2,
       class: "text-red-600 text-sm"
     };
-    const _hoisted_8 = /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1);
-    const _hoisted_9 = {
+    const _hoisted_7 = {
       key: 0,
       class: "italic text-xs pr-2"
     };
-    const _hoisted_10 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-rotate" }, null, -1);
-    const _hoisted_11 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-check-circle text-green-600 pl-2" }, null, -1);
-    const _hoisted_12 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-down-long" }, null, -1);
-    const _hoisted_13 = /* @__PURE__ */ createBaseVNode("span", { class: "fas fa-fw fa-xmark-circle text-red-600 pl-2" }, null, -1);
     function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", _hoisted_1, [
         createBaseVNode("div", null, [
           createBaseVNode("span", {
             class: normalizeClass(["fi", "fi-" + $props.iso2.toLowerCase()])
           }, null, 2),
-          createTextVNode(),
+          _cache[2] || (_cache[2] = createTextVNode()),
           createBaseVNode("span", _hoisted_2, toDisplayString($props.name), 1)
         ]),
         createBaseVNode("div", _hoisted_3, [
           $setup.loading ? (openBlock(), createElementBlock("i", _hoisted_4)) : $setup.api_key_error ? (openBlock(), createElementBlock("span", _hoisted_5, [
-            _hoisted_6,
+            _cache[3] || (_cache[3] = createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1)),
             createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.errors.missing_api_token")), 1)
-          ])) : $setup.api_error ? (openBlock(), createElementBlock("span", _hoisted_7, [
-            _hoisted_8,
+          ])) : $setup.api_error ? (openBlock(), createElementBlock("span", _hoisted_6, [
+            _cache[4] || (_cache[4] = createBaseVNode("i", { class: "fa-solid fa-triangle-exclamation pl-2" }, null, -1)),
             createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.errors.generic")), 1)
           ])) : $setup.downloaded ? (openBlock(), createElementBlock(Fragment, { key: 3 }, [
-            $setup.updated ? (openBlock(), createElementBlock("span", _hoisted_9, toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.last_update")) + ": " + toDisplayString($setup.updated), 1)) : createCommentVNode("", true),
+            $setup.updated ? (openBlock(), createElementBlock("span", _hoisted_7, toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.last_update")) + ": " + toDisplayString($setup.updated), 1)) : createCommentVNode("", true),
             !$setup.loaded ? (openBlock(), createElementBlock("button", {
               key: 1,
               class: "btn-nav gray small whitespace-nowrap",
               onClick: _cache[0] || (_cache[0] = ($event) => $setup.update($props.iso3))
             }, [
-              _hoisted_10,
+              _cache[5] || (_cache[5] = createBaseVNode("span", { class: "fas fa-fw fa-rotate" }, null, -1)),
               createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.update")), 1)
             ])) : createCommentVNode("", true),
-            _hoisted_11
+            _cache[6] || (_cache[6] = createBaseVNode("span", { class: "fas fa-fw fa-check-circle text-green-600 pl-2" }, null, -1))
           ], 64)) : (openBlock(), createElementBlock(Fragment, { key: 4 }, [
             createBaseVNode("button", {
               class: "btn-nav gray small whitespace-nowrap",
               onClick: _cache[1] || (_cache[1] = ($event) => $setup.update($props.iso3))
             }, [
-              _hoisted_12,
+              _cache[7] || (_cache[7] = createBaseVNode("span", { class: "fas fa-fw fa-down-long" }, null, -1)),
               createTextVNode(" " + toDisplayString($setup.Locale.getLabel("offline.settings.protected_areas.download")), 1)
             ]),
-            _hoisted_13
+            _cache[8] || (_cache[8] = createBaseVNode("span", { class: "fas fa-fw fa-xmark-circle text-red-600 pl-2" }, null, -1))
           ], 64))
         ])
       ]);

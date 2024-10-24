@@ -1822,7 +1822,6 @@ var BoundingRect = function() {
   };
   return BoundingRect2;
 }();
-const BoundingRect$1 = BoundingRect;
 var SILENT = "silent";
 function makeEventPacket(eveType, targetInfo, event) {
   return {
@@ -1876,7 +1875,7 @@ var handlerNames = [
   "mousemove",
   "contextmenu"
 ];
-var tmpRect$1 = new BoundingRect$1(0, 0, 0, 0);
+var tmpRect$1 = new BoundingRect(0, 0, 0, 0);
 var Handler = function(_super) {
   __extends(Handler2, _super);
   function Handler2(storage2, painter, proxy, painterRoot, pointerSize) {
@@ -1990,7 +1989,7 @@ var Handler = function(_super) {
       var candidates = [];
       var pointerSize = this._pointerSize;
       var targetSizeHalf = pointerSize / 2;
-      var pointerRect = new BoundingRect$1(x - targetSizeHalf, y - targetSizeHalf, pointerSize, pointerSize);
+      var pointerRect = new BoundingRect(x - targetSizeHalf, y - targetSizeHalf, pointerSize, pointerSize);
       for (var i = list.length - 1; i >= 0; i--) {
         var el = list[i];
         if (el !== exclude && !el.ignore && !el.ignoreCoarsePointer && (!el.parent || !el.parent.ignoreCoarsePointer)) {
@@ -5445,7 +5444,6 @@ function copyTransform(target, source) {
     target[propName] = source[propName];
   }
 }
-const Transformable$1 = Transformable;
 var textWidthCache = {};
 function getWidth(text, font) {
   font = font || DEFAULT_FONT;
@@ -5465,7 +5463,7 @@ function innerGetBoundingRect(text, font, textAlign, textBaseline) {
   var height = getLineHeight(font);
   var x = adjustTextX(0, width, textAlign);
   var y = adjustTextY(0, height, textBaseline);
-  var rect = new BoundingRect$1(x, y, width, height);
+  var rect = new BoundingRect(x, y, width, height);
   return rect;
 }
 function getBoundingRect(text, font, textAlign, textBaseline) {
@@ -5474,7 +5472,7 @@ function getBoundingRect(text, font, textAlign, textBaseline) {
   if (len2 === 1) {
     return innerGetBoundingRect(textLines[0], font, textAlign, textBaseline);
   } else {
-    var uniondRect = new BoundingRect$1(0, 0, 0, 0);
+    var uniondRect = new BoundingRect(0, 0, 0, 0);
     for (var i = 0; i < textLines.length; i++) {
       var rect = innerGetBoundingRect(textLines[i], font, textAlign, textBaseline);
       i === 0 ? uniondRect.copy(rect) : uniondRect.union(rect);
@@ -5613,7 +5611,7 @@ var DEFAULT_ANIMATABLE_MAP = reduce(TRANSFORMABLE_PROPS, function(obj, key) {
   return obj;
 }, { ignore: false });
 var tmpTextPosCalcRes = {};
-var tmpBoundingRect = new BoundingRect$1(0, 0, 0, 0);
+var tmpBoundingRect = new BoundingRect(0, 0, 0, 0);
 var Element = function() {
   function Element2(props) {
     this.id = guid();
@@ -6155,7 +6153,7 @@ var Element = function() {
         throw new Error("Text element has been added to zrender.");
       }
     }
-    textEl.innerTransformable = new Transformable$1();
+    textEl.innerTransformable = new Transformable();
     this._attachComponent(textEl);
     this._textContent = textEl;
     this.markRedraw();
@@ -6400,7 +6398,7 @@ var Element = function() {
   return Element2;
 }();
 mixin(Element, Eventful);
-mixin(Element, Transformable$1);
+mixin(Element, Transformable);
 function animateTo(animatable, target, cfg, animationProps, reverse2) {
   cfg = cfg || {};
   var animators = [];
@@ -6742,7 +6740,7 @@ var Group$3 = function(_super) {
     }
   };
   Group2.prototype.getBoundingRect = function(includeChildren) {
-    var tmpRect2 = new BoundingRect$1(0, 0, 0, 0);
+    var tmpRect2 = new BoundingRect(0, 0, 0, 0);
     var children = includeChildren || this._children;
     var tmpMat = [];
     var rect = null;
@@ -6754,7 +6752,7 @@ var Group$3 = function(_super) {
       var childRect = child.getBoundingRect();
       var transform2 = child.getLocalTransform(tmpMat);
       if (transform2) {
-        BoundingRect$1.applyTransform(tmpRect2, childRect, transform2);
+        BoundingRect.applyTransform(tmpRect2, childRect, transform2);
         rect = rect || tmpRect2.clone();
         rect.union(tmpRect2);
       } else {
@@ -6767,7 +6765,6 @@ var Group$3 = function(_super) {
   return Group2;
 }(Element);
 Group$3.prototype.type = "group";
-const Group$4 = Group$3;
 /*!
 * ZRender, a high performance 2d drawing library.
 *
@@ -7023,7 +7020,7 @@ var ZRender = function() {
     }
     var roots2 = this.storage.getRoots();
     for (var i = 0; i < roots2.length; i++) {
-      if (roots2[i] instanceof Group$4) {
+      if (roots2[i] instanceof Group$3) {
         roots2[i].removeSelfFromZr(this);
       }
     }
@@ -8669,9 +8666,9 @@ var Displayable = function(_super) {
       var shadowSize = style.shadowBlur || 0;
       var shadowOffsetX = style.shadowOffsetX || 0;
       var shadowOffsetY = style.shadowOffsetY || 0;
-      rect = this._paintRect || (this._paintRect = new BoundingRect$1(0, 0, 0, 0));
+      rect = this._paintRect || (this._paintRect = new BoundingRect(0, 0, 0, 0));
       if (transform2) {
-        BoundingRect$1.applyTransform(rect, elRect, transform2);
+        BoundingRect.applyTransform(rect, elRect, transform2);
       } else {
         rect.copy(elRect);
       }
@@ -8693,7 +8690,7 @@ var Displayable = function(_super) {
   };
   Displayable2.prototype.setPrevPaintRect = function(paintRect) {
     if (paintRect) {
-      this._prevPaintRect = this._prevPaintRect || new BoundingRect$1(0, 0, 0, 0);
+      this._prevPaintRect = this._prevPaintRect || new BoundingRect(0, 0, 0, 0);
       this._prevPaintRect.copy(paintRect);
     } else {
       this._prevPaintRect = null;
@@ -8871,8 +8868,8 @@ var Displayable = function(_super) {
   }();
   return Displayable2;
 }(Element);
-var tmpRect = new BoundingRect$1(0, 0, 0, 0);
-var viewRect = new BoundingRect$1(0, 0, 0, 0);
+var tmpRect = new BoundingRect(0, 0, 0, 0);
+var viewRect = new BoundingRect(0, 0, 0, 0);
 function isDisplayableCulled(el, width, height) {
   tmpRect.copy(el.getBoundingRect());
   if (el.transform) {
@@ -8882,7 +8879,6 @@ function isDisplayableCulled(el, width, height) {
   viewRect.height = height;
   return !tmpRect.intersect(viewRect);
 }
-const Displayable$1 = Displayable;
 var mathMin$9 = Math.min;
 var mathMax$9 = Math.max;
 var mathSin$4 = Math.sin;
@@ -9356,7 +9352,7 @@ var PathProxy = function() {
     if (i === 0) {
       min[0] = min[1] = max[0] = max[1] = 0;
     }
-    return new BoundingRect$1(min[0], min[1], max[0] - min[0], max[1] - min[1]);
+    return new BoundingRect(min[0], min[1], max[0] - min[0], max[1] - min[1]);
   };
   PathProxy2.prototype._calculateLength = function() {
     var data = this.data;
@@ -10441,7 +10437,7 @@ var Path = function(_super) {
     pathProto.__dirty = REDRAW_BIT | STYLE_CHANGED_BIT | SHAPE_CHANGED_BIT;
   }();
   return Path2;
-}(Displayable$1);
+}(Displayable);
 var DEFAULT_TSPAN_STYLE = defaults({
   strokeFirst: true,
   font: DEFAULT_FONT,
@@ -10496,7 +10492,7 @@ var TSpan = function(_super) {
     tspanProto.dirtyRectTolerance = 10;
   }();
   return TSpan2;
-}(Displayable$1);
+}(Displayable);
 TSpan.prototype.type = "tspan";
 var DEFAULT_IMAGE_STYLE = defaults({
   x: 0,
@@ -10555,14 +10551,13 @@ var ZRImage = function(_super) {
   ZRImage2.prototype.getBoundingRect = function() {
     var style = this.style;
     if (!this._rect) {
-      this._rect = new BoundingRect$1(style.x || 0, style.y || 0, this.getWidth(), this.getHeight());
+      this._rect = new BoundingRect(style.x || 0, style.y || 0, this.getWidth(), this.getHeight());
     }
     return this._rect;
   };
   return ZRImage2;
-}(Displayable$1);
+}(Displayable);
 ZRImage.prototype.type = "image";
-const ZRImage$1 = ZRImage;
 function buildPath$2(ctx, shape) {
   var x = shape.x;
   var y = shape.y;
@@ -10736,7 +10731,6 @@ var Rect$2 = function(_super) {
   return Rect2;
 }(Path);
 Rect$2.prototype.type = "rect";
-const Rect$3 = Rect$2;
 var DEFAULT_RICH_TEXT_COLOR = {
   fill: "#000"
 };
@@ -10837,7 +10831,7 @@ var ZRText = function(_super) {
       this._updateSubTexts();
     }
     if (!this._rect) {
-      var tmpRect2 = new BoundingRect$1(0, 0, 0, 0);
+      var tmpRect2 = new BoundingRect(0, 0, 0, 0);
       var children = this._children;
       var tmpMat = [];
       var rect = null;
@@ -10974,7 +10968,7 @@ var ZRText = function(_super) {
       setSeparateFont(subElStyle, style);
       textY += lineHeight;
       if (fixedBoundingRect) {
-        el.setBoundingRect(new BoundingRect$1(adjustTextX(subElStyle.x, style.width, subElStyle.textAlign), adjustTextY(subElStyle.y, calculatedLineHeight, subElStyle.textBaseline), contentWidth, calculatedLineHeight));
+        el.setBoundingRect(new BoundingRect(adjustTextX(subElStyle.x, style.width, subElStyle.textAlign), adjustTextY(subElStyle.y, calculatedLineHeight, subElStyle.textBaseline), contentWidth, calculatedLineHeight));
       }
     }
   };
@@ -11089,7 +11083,7 @@ var ZRText = function(_super) {
     }
     var textWidth = token.contentWidth;
     var textHeight = token.contentHeight;
-    el.setBoundingRect(new BoundingRect$1(adjustTextX(subElStyle.x, textWidth, subElStyle.textAlign), adjustTextY(subElStyle.y, textHeight, subElStyle.textBaseline), textWidth, textHeight));
+    el.setBoundingRect(new BoundingRect(adjustTextX(subElStyle.x, textWidth, subElStyle.textAlign), adjustTextY(subElStyle.y, textHeight, subElStyle.textBaseline), textWidth, textHeight));
   };
   ZRText2.prototype._renderBackground = function(style, topStyle, x, y, width, height) {
     var textBackgroundColor = style.backgroundColor;
@@ -11102,7 +11096,7 @@ var ZRText = function(_super) {
     var rectEl;
     var imgEl;
     if (isPlainOrGradientBg || style.lineHeight || textBorderWidth && textBorderColor) {
-      rectEl = this._getOrCreateChild(Rect$3);
+      rectEl = this._getOrCreateChild(Rect$2);
       rectEl.useStyle(rectEl.createStyle());
       rectEl.style.fill = null;
       var rectShape = rectEl.shape;
@@ -11118,7 +11112,7 @@ var ZRText = function(_super) {
       rectStyle.fill = textBackgroundColor || null;
       rectStyle.fillOpacity = retrieve2(style.fillOpacity, 1);
     } else if (isImageBg) {
-      imgEl = this._getOrCreateChild(ZRImage$1);
+      imgEl = this._getOrCreateChild(ZRImage);
       imgEl.onload = function() {
         self2.dirtyStyle();
       };
@@ -11162,7 +11156,7 @@ var ZRText = function(_super) {
     return font && trim$1(font) || style.textFont || style.font;
   };
   return ZRText2;
-}(Displayable$1);
+}(Displayable);
 var VALID_TEXT_ALIGN = { left: true, right: 1, center: 1 };
 var VALID_TEXT_VERTICAL_ALIGN = { top: 1, bottom: 1, middle: 1 };
 var FONT_PARTS = ["fontStyle", "fontWeight", "fontSize", "fontFamily"];
@@ -11224,7 +11218,6 @@ function getStyleText(style) {
 function needDrawBackground(style) {
   return !!(style.backgroundColor || style.lineHeight || style.borderWidth && style.borderColor);
 }
-const ZRText$1 = ZRText;
 var getECData = makeInner();
 var setCommonECData = function(seriesIndex, dataType, dataIdx, el) {
   if (el) {
@@ -12223,7 +12216,6 @@ var Circle = function(_super) {
   return Circle2;
 }(Path);
 Circle.prototype.type = "circle";
-const Circle$1 = Circle;
 var EllipseShape = /* @__PURE__ */ function() {
   function EllipseShape2() {
     this.cx = 0;
@@ -12259,7 +12251,6 @@ var Ellipse = function(_super) {
   return Ellipse2;
 }(Path);
 Ellipse.prototype.type = "ellipse";
-const Ellipse$1 = Ellipse;
 var PI$6 = Math.PI;
 var PI2$3 = PI$6 * 2;
 var mathSin$1 = Math.sin;
@@ -12504,7 +12495,6 @@ var Sector = function(_super) {
   return Sector2;
 }(Path);
 Sector.prototype.type = "sector";
-const Sector$1 = Sector;
 var RingShape = /* @__PURE__ */ function() {
   function RingShape2() {
     this.cx = 0;
@@ -12534,7 +12524,6 @@ var Ring = function(_super) {
   return Ring2;
 }(Path);
 Ring.prototype.type = "ring";
-const Ring$1 = Ring;
 function smoothBezier(points2, smooth, isLoop, constraint) {
   var cps = [];
   var v = [];
@@ -12640,7 +12629,6 @@ var Polygon = function(_super) {
   return Polygon2;
 }(Path);
 Polygon.prototype.type = "polygon";
-const Polygon$1 = Polygon;
 var PolylineShape = /* @__PURE__ */ function() {
   function PolylineShape2() {
     this.points = null;
@@ -12670,7 +12658,6 @@ var Polyline$1 = function(_super) {
   return Polyline2;
 }(Path);
 Polyline$1.prototype.type = "polyline";
-const Polyline$2 = Polyline$1;
 var subPixelOptimizeOutputShape = {};
 var LineShape = /* @__PURE__ */ function() {
   function LineShape2() {
@@ -12734,7 +12721,6 @@ var Line$1 = function(_super) {
   return Line2;
 }(Path);
 Line$1.prototype.type = "line";
-const Line$2 = Line$1;
 var out = [];
 var BezierCurveShape = /* @__PURE__ */ function() {
   function BezierCurveShape2() {
@@ -12825,7 +12811,6 @@ var BezierCurve = function(_super) {
   return BezierCurve2;
 }(Path);
 BezierCurve.prototype.type = "bezier-curve";
-const BezierCurve$1 = BezierCurve;
 var ArcShape = /* @__PURE__ */ function() {
   function ArcShape2() {
     this.cx = 0;
@@ -12866,7 +12851,6 @@ var Arc = function(_super) {
   return Arc2;
 }(Path);
 Arc.prototype.type = "arc";
-const Arc$1 = Arc;
 var CompoundPath = function(_super) {
   __extends(CompoundPath2, _super);
   function CompoundPath2() {
@@ -12913,7 +12897,6 @@ var CompoundPath = function(_super) {
   };
   return CompoundPath2;
 }(Path);
-const CompoundPath$1 = CompoundPath;
 var Gradient = function() {
   function Gradient2(colorStops) {
     this.colorStops = colorStops || [];
@@ -12940,7 +12923,6 @@ var LinearGradient = function(_super) {
   }
   return LinearGradient2;
 }(Gradient);
-const LinearGradient$1 = LinearGradient;
 var RadialGradient = function(_super) {
   __extends(RadialGradient2, _super);
   function RadialGradient2(x, y, r, colorStops, globalCoord) {
@@ -12954,7 +12936,6 @@ var RadialGradient = function(_super) {
   }
   return RadialGradient2;
 }(Gradient);
-const RadialGradient$1 = RadialGradient;
 var extent = [0, 0];
 var extent2 = [0, 0];
 var minTv = new Point();
@@ -13070,7 +13051,6 @@ var OrientedBoundingRect = function() {
   };
   return OrientedBoundingRect2;
 }();
-const OrientedBoundingRect$1 = OrientedBoundingRect;
 var m = [];
 var IncrementalDisplayable = function(_super) {
   __extends(IncrementalDisplayable2, _super);
@@ -13150,7 +13130,7 @@ var IncrementalDisplayable = function(_super) {
   };
   IncrementalDisplayable2.prototype.getBoundingRect = function() {
     if (!this._rect) {
-      var rect = new BoundingRect$1(Infinity, Infinity, -Infinity, -Infinity);
+      var rect = new BoundingRect(Infinity, Infinity, -Infinity, -Infinity);
       for (var i = 0; i < this._displayables.length; i++) {
         var displayable = this._displayables[i];
         var childRect = displayable.getBoundingRect().clone();
@@ -13177,8 +13157,7 @@ var IncrementalDisplayable = function(_super) {
     return false;
   };
   return IncrementalDisplayable2;
-}(Displayable$1);
-const IncrementalDisplayable$1 = IncrementalDisplayable;
+}(Displayable);
 var transitionStore = makeInner();
 function getAnimationConfig(animationType, animatableModel, dataIndex, extraOpts, extraDelayParams) {
   var animationPayload;
@@ -13347,7 +13326,7 @@ function makePath(pathData, opts, rect, layout2) {
   return path;
 }
 function makeImage(imageUrl, rect, layout2) {
-  var zrImg = new ZRImage$1({
+  var zrImg = new ZRImage({
     style: {
       image: imageUrl,
       x: rect.x,
@@ -13416,7 +13395,7 @@ function getTransform$1(target, ancestor) {
 }
 function applyTransform(target, transform2, invert$1) {
   if (transform2 && !isArrayLike(transform2)) {
-    transform2 = Transformable$1.getLocalTransform(transform2);
+    transform2 = Transformable.getLocalTransform(transform2);
   }
   if (invert$1) {
     transform2 = invert([], transform2);
@@ -13511,7 +13490,7 @@ function createIcon(iconStr, opt, rect) {
     height: 2
   };
   if (iconStr) {
-    return iconStr.indexOf("image://") === 0 ? (style.image = iconStr.slice(8), defaults(style, rect), new ZRImage$1(innerOpts)) : makePath(iconStr.replace("path://", ""), innerOpts, rect, "center");
+    return iconStr.indexOf("image://") === 0 ? (style.image = iconStr.slice(8), defaults(style, rect), new ZRImage(innerOpts)) : makePath(iconStr.replace("path://", ""), innerOpts, rect, "center");
   }
 }
 function linePolygonIntersect(a1x, a1y, a2x, a2y, points2) {
@@ -13606,39 +13585,39 @@ function traverseElements(els, cb) {
     }
   }
 }
-registerShape("circle", Circle$1);
-registerShape("ellipse", Ellipse$1);
-registerShape("sector", Sector$1);
-registerShape("ring", Ring$1);
-registerShape("polygon", Polygon$1);
-registerShape("polyline", Polyline$2);
-registerShape("rect", Rect$3);
-registerShape("line", Line$2);
-registerShape("bezierCurve", BezierCurve$1);
-registerShape("arc", Arc$1);
+registerShape("circle", Circle);
+registerShape("ellipse", Ellipse);
+registerShape("sector", Sector);
+registerShape("ring", Ring);
+registerShape("polygon", Polygon);
+registerShape("polyline", Polyline$1);
+registerShape("rect", Rect$2);
+registerShape("line", Line$1);
+registerShape("bezierCurve", BezierCurve);
+registerShape("arc", Arc);
 const graphic$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  Arc: Arc$1,
-  BezierCurve: BezierCurve$1,
-  BoundingRect: BoundingRect$1,
-  Circle: Circle$1,
-  CompoundPath: CompoundPath$1,
-  Ellipse: Ellipse$1,
-  Group: Group$4,
-  Image: ZRImage$1,
-  IncrementalDisplayable: IncrementalDisplayable$1,
-  Line: Line$2,
-  LinearGradient: LinearGradient$1,
-  OrientedBoundingRect: OrientedBoundingRect$1,
+  Arc,
+  BezierCurve,
+  BoundingRect,
+  Circle,
+  CompoundPath,
+  Ellipse,
+  Group: Group$3,
+  Image: ZRImage,
+  IncrementalDisplayable,
+  Line: Line$1,
+  LinearGradient,
+  OrientedBoundingRect,
   Path,
   Point,
-  Polygon: Polygon$1,
-  Polyline: Polyline$2,
-  RadialGradient: RadialGradient$1,
-  Rect: Rect$3,
-  Ring: Ring$1,
-  Sector: Sector$1,
-  Text: ZRText$1,
+  Polygon,
+  Polyline: Polyline$1,
+  RadialGradient,
+  Rect: Rect$2,
+  Ring,
+  Sector,
+  Text: ZRText,
   applyTransform,
   clipPointsByRect,
   clipRectByRect,
@@ -13709,7 +13688,7 @@ function getLabelText(opt, stateModels, interpolatedValue) {
 }
 function setLabelStyle(targetEl, labelStatesModels, opt, stateSpecified) {
   opt = opt || EMPTY_OBJ;
-  var isSetOnText = targetEl instanceof ZRText$1;
+  var isSetOnText = targetEl instanceof ZRText;
   var needsCreateText = false;
   for (var i = 0; i < DISPLAY_STATES.length; i++) {
     var stateModel = labelStatesModels[DISPLAY_STATES[i]];
@@ -13722,7 +13701,7 @@ function setLabelStyle(targetEl, labelStatesModels, opt, stateSpecified) {
   if (needsCreateText) {
     if (!isSetOnText) {
       if (!textContent) {
-        textContent = new ZRText$1();
+        textContent = new ZRText();
         targetEl.setTextContent(textContent);
       }
       if (targetEl.stateProxy) {
@@ -14029,7 +14008,7 @@ function animateLabelValue(textEl, dataIndex, data, animatableModel, labelFetche
 }
 var PATH_COLOR = ["textStyle", "color"];
 var textStyleParams = ["fontStyle", "fontWeight", "fontSize", "fontFamily", "padding", "lineHeight", "rich", "width", "height", "overflow"];
-var tmpText = new ZRText$1();
+var tmpText = new ZRText();
 var TextStyleMixin = (
   /** @class */
   function() {
@@ -14211,7 +14190,6 @@ mixin(Model, LineStyleMixin);
 mixin(Model, ItemStyleMixin);
 mixin(Model, AreaStyleMixin);
 mixin(Model, TextStyleMixin);
-const Model$1 = Model;
 var base = Math.round(Math.random() * 10);
 function getUID(type) {
   return [type || "", base++].join("_");
@@ -14555,7 +14533,7 @@ var SYSTEM_LANG = !env.domSupported ? DEFAULT_LOCALE : function() {
 }();
 function registerLocale(locale, localeObj) {
   locale = locale.toUpperCase();
-  localeModels[locale] = new Model$1(localeObj);
+  localeModels[locale] = new Model(localeObj);
   localeStorage[locale] = localeObj;
 }
 function createLocaleObject(locale) {
@@ -14652,7 +14630,7 @@ function format$1(time2, template, isUTC, lang) {
   var S = date[millisecondsGetterName(isUTC)]();
   var a = H >= 12 ? "pm" : "am";
   var A = a.toUpperCase();
-  var localeModel = lang instanceof Model$1 ? lang : getLocaleModel(lang || SYSTEM_LANG) || getDefaultLocaleModel();
+  var localeModel = lang instanceof Model ? lang : getLocaleModel(lang || SYSTEM_LANG) || getDefaultLocaleModel();
   var timeModel = localeModel.getModel("time");
   var month = timeModel.get("month");
   var monthAbbr = timeModel.get("monthAbbr");
@@ -14796,7 +14774,7 @@ function millisecondsSetterName(isUTC) {
   return isUTC ? "setUTCMilliseconds" : "setMilliseconds";
 }
 function getTextRect(text, font, align, verticalAlign, padding, rich, truncate, lineHeight) {
-  var textEl = new ZRText$1({
+  var textEl = new ZRText({
     style: {
       text,
       font,
@@ -15086,7 +15064,7 @@ function getLayoutRect(positionInfo, containerRect, margin) {
   if (isNaN(height)) {
     height = containerHeight - verticalMargin - top - (bottom || 0);
   }
-  var rect = new BoundingRect$1(left + margin[3], top + margin[0], width, height);
+  var rect = new BoundingRect(left + margin[3], top + margin[0], width, height);
   rect.margin = margin;
   return rect;
 }
@@ -15102,7 +15080,7 @@ function positionElement(el, positionInfo, containerRect, margin, opt, out2) {
   }
   var rect;
   if (boundingMode === "raw") {
-    rect = el.type === "group" ? new BoundingRect$1(0, 0, +positionInfo.width || 0, +positionInfo.height || 0) : el.getBoundingRect();
+    rect = el.type === "group" ? new BoundingRect(0, 0, +positionInfo.width || 0, +positionInfo.height || 0) : el.getBoundingRect();
   } else {
     rect = el.getBoundingRect();
     if (el.needLocalTransform()) {
@@ -15292,9 +15270,9 @@ var ComponentModel = (
       proto2.componentIndex = 0;
     }();
     return ComponentModel2;
-  }(Model$1)
+  }(Model)
 );
-mountExtend(ComponentModel, Model$1);
+mountExtend(ComponentModel, Model);
 enableClassManagement(ComponentModel);
 enableSubTypeDefaulter(ComponentModel);
 enableTopologicalTravel(ComponentModel, getDependencies);
@@ -15791,8 +15769,8 @@ var GlobalModel = (
     GlobalModel2.prototype.init = function(option, parentModel, ecModel, theme2, locale, optionManager) {
       theme2 = theme2 || {};
       this.option = null;
-      this._theme = new Model$1(theme2);
-      this._locale = new Model$1(locale);
+      this._theme = new Model(theme2);
+      this._locale = new Model(locale);
       this._optionManager = optionManager;
     };
     GlobalModel2.prototype.setOption = function(option, opts, optionPreprocessorFuncs2) {
@@ -16205,7 +16183,7 @@ var GlobalModel = (
       };
     }();
     return GlobalModel2;
-  }(Model$1)
+  }(Model)
 );
 function isNotTargetSeries(seriesModel, payload) {
   if (payload) {
@@ -19879,7 +19857,7 @@ var ComponentView = (
   /** @class */
   function() {
     function ComponentView2() {
-      this.group = new Group$4();
+      this.group = new Group$3();
       this.uid = getUID("viewComponent");
     }
     ComponentView2.prototype.init = function(ecModel, api) {
@@ -19925,7 +19903,7 @@ var ChartView = (
   /** @class */
   function() {
     function ChartView2() {
-      this.group = new Group$4();
+      this.group = new Group$3();
       this.uid = getUID("viewChart");
       this.renderTask = createTask({
         plan: renderTaskPlan,
@@ -20194,7 +20172,7 @@ var seriesStyleTask = {
     }
   }
 };
-var sharedModel = new Model$1();
+var sharedModel = new Model();
 var dataStyleTask = {
   createOnAllSeries: true,
   performRawSeries: true,
@@ -20287,8 +20265,8 @@ function defaultLoading(api, opts) {
     lineWidth: 5,
     zlevel: 0
   });
-  var group = new Group$4();
-  var mask = new Rect$3({
+  var group = new Group$3();
+  var mask = new Rect$2({
     style: {
       fill: opts.maskColor
     },
@@ -20296,7 +20274,7 @@ function defaultLoading(api, opts) {
     z: 1e4
   });
   group.add(mask);
-  var textContent = new ZRText$1({
+  var textContent = new ZRText({
     style: {
       text: opts.text,
       fill: opts.textColor,
@@ -20308,7 +20286,7 @@ function defaultLoading(api, opts) {
     zlevel: opts.zlevel,
     z: 10001
   });
-  var labelRect = new Rect$3({
+  var labelRect = new Rect$2({
     style: {
       fill: "none"
     },
@@ -20323,7 +20301,7 @@ function defaultLoading(api, opts) {
   group.add(labelRect);
   var arc;
   if (opts.showSpinner) {
-    arc = new Arc$1({
+    arc = new Arc({
       shape: {
         startAngle: -PI$5 / 2,
         endAngle: -PI$5 / 2 + 0.1,
@@ -21315,11 +21293,11 @@ var Arrow = Path.extend({
   }
 });
 var symbolCtors = {
-  line: Line$2,
-  rect: Rect$3,
-  roundRect: Rect$3,
-  square: Rect$3,
-  circle: Circle$1,
+  line: Line$1,
+  rect: Rect$2,
+  roundRect: Rect$2,
+  square: Rect$2,
+  circle: Circle,
   diamond: Diamond,
   pin: Pin,
   arrow: Arrow,
@@ -21438,9 +21416,9 @@ function createSymbol$1(symbolType, x, y, w, h, color2, keepAspect) {
   }
   var symbolPath;
   if (symbolType.indexOf("image://") === 0) {
-    symbolPath = makeImage(symbolType.slice(8), new BoundingRect$1(x, y, w, h), keepAspect ? "center" : "cover");
+    symbolPath = makeImage(symbolType.slice(8), new BoundingRect(x, y, w, h), keepAspect ? "center" : "cover");
   } else if (symbolType.indexOf("path://") === 0) {
-    symbolPath = makePath(symbolType.slice(7), {}, new BoundingRect$1(x, y, w, h), keepAspect ? "center" : "cover");
+    symbolPath = makePath(symbolType.slice(7), {}, new BoundingRect(x, y, w, h), keepAspect ? "center" : "cover");
   } else {
     symbolPath = new SymbolClz({
       shape: {
@@ -22015,7 +21993,7 @@ function brush$1(ctx, el, scope, isLast) {
       }
       bindPathAndTextCommonStyle(ctx, el, prevEl, forceSetStyle, scope);
       brushText(ctx, el, style);
-    } else if (el instanceof ZRImage$1) {
+    } else if (el instanceof ZRImage) {
       if (scope.lastDrawType !== DRAW_TYPE_IMAGE) {
         forceSetStyle = true;
         scope.lastDrawType = DRAW_TYPE_IMAGE;
@@ -22840,7 +22818,7 @@ var ECharts = (
           return zr_1.painter.toDataURL();
         } else {
           if (opts.connectedBackgroundColor) {
-            zr_1.add(new Rect$3({
+            zr_1.add(new Rect$2({
               shape: {
                 x: 0,
                 y: 0,
@@ -22853,7 +22831,7 @@ var ECharts = (
             }));
           }
           each$f(canvasList_1, function(item) {
-            var img = new ZRImage$1({
+            var img = new ZRImage({
               style: {
                 x: item.left * dpr_1 - left_1,
                 y: item.top * dpr_1 - top_1,
@@ -25101,7 +25079,7 @@ var SeriesData = (
     SeriesData2.prototype.getItemModel = function(idx) {
       var hostModel = this.hostModel;
       var dataItem = this.getRawDataItem(idx);
-      return new Model$1(dataItem, hostModel, hostModel && hostModel.ecModel);
+      return new Model(dataItem, hostModel, hostModel && hostModel.ecModel);
     };
     SeriesData2.prototype.diff = function(otherList) {
       var thisList = this;
@@ -25296,7 +25274,6 @@ var SeriesData = (
     return SeriesData2;
   }()
 );
-const SeriesData$1 = SeriesData;
 function createDimensions(source, opt) {
   return prepareSeriesDataSchema(source, opt).dimensions;
 }
@@ -25782,7 +25759,7 @@ function createSeriesData(sourceRaw, seriesModel, opt) {
     schema,
     store
   });
-  var data = new SeriesData$1(schema, seriesModel);
+  var data = new SeriesData(schema, seriesModel);
   data.setCalculationInfo(stackCalculationInfo);
   var dimValueGetter = firstCategoryDimIndex != null && isNeedCompleteOrdinalData(source) ? function(itemOpt, dimName, dataIndex, dimIndex) {
     return dimIndex === firstCategoryDimIndex ? dataIndex : this.defaultDimValueGetter(itemOpt, dimName, dataIndex, dimIndex);
@@ -27464,7 +27441,7 @@ function rotateTextRect(textRect, rotate2) {
   var beforeHeight = textRect.height;
   var afterWidth = beforeWidth * Math.abs(Math.cos(rotateRadians)) + Math.abs(beforeHeight * Math.sin(rotateRadians));
   var afterHeight = beforeWidth * Math.abs(Math.sin(rotateRadians)) + Math.abs(beforeHeight * Math.cos(rotateRadians));
-  var rotatedRect = new BoundingRect$1(textRect.x, textRect.y, afterWidth, afterHeight);
+  var rotatedRect = new BoundingRect(textRect.x, textRect.y, afterWidth, afterHeight);
   return rotatedRect;
 }
 function getOptionCategoryInterval(model) {
@@ -27515,8 +27492,8 @@ var dataStack = {
 };
 function createScale(dataExtent, option) {
   var axisModel = option;
-  if (!(option instanceof Model$1)) {
-    axisModel = new Model$1(option);
+  if (!(option instanceof Model)) {
+    axisModel = new Model(option);
   }
   var scale2 = createScaleByModel$1(axisModel);
   scale2.setExtent(dataExtent[0], dataExtent[1]);
@@ -27691,7 +27668,7 @@ var GeoJSONRegion = (
       if (!(isFinite(min3[0]) && isFinite(min3[1]) && isFinite(max3[0]) && isFinite(max3[1]))) {
         min3[0] = min3[1] = max3[0] = max3[1] = 0;
       }
-      rect = new BoundingRect$1(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
+      rect = new BoundingRect(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
       if (!projection) {
         this._rect = rect;
       }
@@ -27729,7 +27706,7 @@ var GeoJSONRegion = (
       } else if (!height) {
         height = width / aspect;
       }
-      var target = new BoundingRect$1(x, y, width, height);
+      var target = new BoundingRect(x, y, width, height);
       var transform2 = rect.calculateTransform(target);
       var geometries = this.geometries;
       for (var i = 0; i < geometries.length; i++) {
@@ -27903,24 +27880,24 @@ const time = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty
 }, Symbol.toStringTag, { value: "Module" }));
 const graphic = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  Arc: Arc$1,
-  BezierCurve: BezierCurve$1,
-  BoundingRect: BoundingRect$1,
-  Circle: Circle$1,
-  CompoundPath: CompoundPath$1,
-  Ellipse: Ellipse$1,
-  Group: Group$4,
-  Image: ZRImage$1,
-  IncrementalDisplayable: IncrementalDisplayable$1,
-  Line: Line$2,
-  LinearGradient: LinearGradient$1,
-  Polygon: Polygon$1,
-  Polyline: Polyline$2,
-  RadialGradient: RadialGradient$1,
-  Rect: Rect$3,
-  Ring: Ring$1,
-  Sector: Sector$1,
-  Text: ZRText$1,
+  Arc,
+  BezierCurve,
+  BoundingRect,
+  Circle,
+  CompoundPath,
+  Ellipse,
+  Group: Group$3,
+  Image: ZRImage,
+  IncrementalDisplayable,
+  Line: Line$1,
+  LinearGradient,
+  Polygon,
+  Polyline: Polyline$1,
+  RadialGradient,
+  Rect: Rect$2,
+  Ring,
+  Sector,
+  Text: ZRText,
   clipPointsByRect,
   clipRectByRect,
   createIcon,
@@ -28384,7 +28361,6 @@ function fixOnBandTicksCoords(axis, ticksCoords, alignWithLabel, clamp2) {
     return inverse ? a > b : a < b;
   }
 }
-const Axis$1 = Axis;
 function extendComponentModel(proto2) {
   var Model2 = ComponentModel.extend(proto2);
   ComponentModel.registerClass(Model2);
@@ -28799,7 +28775,7 @@ function setLabelLineStyle(targetEl, statesModels, defaultStyle) {
         continue;
       }
       if (!labelLine) {
-        labelLine = new Polyline$2();
+        labelLine = new Polyline$1();
         targetEl.setTextGuideLine(labelLine);
         if (!isNormal && (labelIgnoreNormal || !showNormal)) {
           setLabelLineState(labelLine, true, "normal", statesModels.normal);
@@ -28849,7 +28825,7 @@ function prepareLayoutList(input) {
     globalRect.y -= minMargin / 2;
     globalRect.width += minMargin;
     globalRect.height += minMargin;
-    var obb = isAxisAligned ? new OrientedBoundingRect$1(localRect, transform2) : null;
+    var obb = isAxisAligned ? new OrientedBoundingRect(localRect, transform2) : null;
     list.push({
       label,
       labelLine: rawItem.labelLine,
@@ -28993,7 +28969,7 @@ function hideOverlap(labelList) {
   labelList.sort(function(a, b) {
     return b.priority - a.priority;
   });
-  var globalRect = new BoundingRect$1(0, 0, 0, 0);
+  var globalRect = new BoundingRect(0, 0, 0, 0);
   function hideEl(el) {
     if (!el.ignore) {
       var emphasisState = el.ensureState("emphasis");
@@ -29027,10 +29003,10 @@ function hideOverlap(labelList) {
         break;
       }
       if (!existsTextCfg.obb) {
-        existsTextCfg.obb = new OrientedBoundingRect$1(existsTextCfg.localRect, existsTextCfg.transform);
+        existsTextCfg.obb = new OrientedBoundingRect(existsTextCfg.localRect, existsTextCfg.transform);
       }
       if (!obb) {
-        obb = new OrientedBoundingRect$1(localRect, transform2);
+        obb = new OrientedBoundingRect(localRect, transform2);
       }
       if (obb.intersect(existsTextCfg.obb)) {
         overlapped = true;
@@ -29074,7 +29050,7 @@ function prepareLayoutCallbackParams(labelItem, hostEl) {
   };
 }
 var LABEL_OPTION_TO_STYLE_KEYS = ["align", "verticalAlign", "width", "height", "fontSize"];
-var dummyTransformable = new Transformable$1();
+var dummyTransformable = new Transformable();
 var labelLayoutInnerStore = makeInner();
 var labelLineAnimationStore = makeInner();
 function extendWithKeys(target, source, keys2) {
@@ -29103,7 +29079,7 @@ var LabelManager = (
       var textConfig = hostEl.textConfig || {};
       var labelTransform = label.getComputedTransform();
       var labelRect = label.getBoundingRect().plain();
-      BoundingRect$1.applyTransform(labelRect, labelRect, labelTransform);
+      BoundingRect.applyTransform(labelRect, labelRect, labelTransform);
       if (labelTransform) {
         dummyTransformable.setLocalTransform(labelTransform);
       } else {
@@ -29116,7 +29092,7 @@ var LabelManager = (
       if (host) {
         hostRect = host.getBoundingRect().plain();
         var transform2 = host.getComputedTransform();
-        BoundingRect$1.applyTransform(hostRect, hostRect, transform2);
+        BoundingRect.applyTransform(hostRect, hostRect, transform2);
       }
       var labelGuide = hostRect && host.getTextGuideLine();
       this._labelList.push({
@@ -29531,7 +29507,7 @@ var svgStrokeProps = map$1(strokeProps, function(prop) {
 });
 function mapStyleToAttrs(updateAttr2, style, el, forceUpdate) {
   var opacity = style.opacity == null ? 1 : style.opacity;
-  if (el instanceof ZRImage$1) {
+  if (el instanceof ZRImage) {
     updateAttr2("opacity", opacity);
     return;
   }
@@ -29781,7 +29757,7 @@ function createCSSAnimation(el, attrs, scope, onlyShape) {
   var animators = el.animators;
   var len2 = animators.length;
   var cssAnimations = [];
-  if (el instanceof CompoundPath$1) {
+  if (el instanceof CompoundPath) {
     var animationCfg = createCompoundPathCSSAnimation(el, attrs, scope);
     if (animationCfg) {
       cssAnimations.push(animationCfg);
@@ -30214,7 +30190,7 @@ function brushSVGTSpan(el, scope) {
 function brush(el, scope) {
   if (el instanceof Path) {
     return brushSVGPath(el, scope);
-  } else if (el instanceof ZRImage$1) {
+  } else if (el instanceof ZRImage) {
     return brushSVGImage(el, scope);
   } else if (el instanceof TSpan) {
     return brushSVGTSpan(el, scope);
@@ -31007,13 +30983,13 @@ var Layer = function(_super) {
     var mergedRepaintRects = [];
     var maxRepaintRectCount = this.maxRepaintRectCount;
     var full = false;
-    var pendingRect = new BoundingRect$1(0, 0, 0, 0);
+    var pendingRect = new BoundingRect(0, 0, 0, 0);
     function addRectToMergePool(rect) {
       if (!rect.isFinite() || rect.isZero()) {
         return;
       }
       if (mergedRepaintRects.length === 0) {
-        var boundingRect = new BoundingRect$1(0, 0, 0, 0);
+        var boundingRect = new BoundingRect(0, 0, 0, 0);
         boundingRect.copy(rect);
         mergedRepaintRects.push(boundingRect);
       } else {
@@ -31023,7 +30999,7 @@ var Layer = function(_super) {
         for (var i2 = 0; i2 < mergedRepaintRects.length; ++i2) {
           var mergedRect = mergedRepaintRects[i2];
           if (mergedRect.intersect(rect)) {
-            var pendingRect_1 = new BoundingRect$1(0, 0, 0, 0);
+            var pendingRect_1 = new BoundingRect(0, 0, 0, 0);
             pendingRect_1.copy(mergedRect);
             pendingRect_1.union(rect);
             mergedRepaintRects[i2] = pendingRect_1;
@@ -31047,7 +31023,7 @@ var Layer = function(_super) {
           isMerged = true;
         }
         if (!isMerged) {
-          var boundingRect = new BoundingRect$1(0, 0, 0, 0);
+          var boundingRect = new BoundingRect(0, 0, 0, 0);
           boundingRect.copy(rect);
           mergedRepaintRects.push(boundingRect);
         }
@@ -31820,7 +31796,7 @@ var LineSeriesModel = (
       });
     };
     LineSeriesModel2.prototype.getLegendIcon = function(opt) {
-      var group = new Group$4();
+      var group = new Group$3();
       var line = createSymbol$1("line", 0, opt.itemHeight / 2, opt.itemWidth, 0, opt.lineStyle.stroke, false);
       group.add(line);
       line.setStyle(opt.lineStyle);
@@ -32065,7 +32041,7 @@ var Symbol$1 = (
       cursorStyle && symbolPath.attr("cursor", cursorStyle);
       var symbolStyle = data.getItemVisual(idx, "style");
       var visualColor = symbolStyle.fill;
-      if (symbolPath instanceof ZRImage$1) {
+      if (symbolPath instanceof ZRImage) {
         var pathStyle = symbolPath.style;
         symbolPath.useStyle(extend({
           // TODO other properties like x, y ?
@@ -32161,7 +32137,7 @@ var Symbol$1 = (
       return normalizeSymbolSize(data.getItemVisual(idx, "symbolSize"));
     };
     return Symbol2;
-  }(Group$4)
+  }(Group$3)
 );
 function driftSymbol(dx, dy) {
   this.parent.drift(dx, dy);
@@ -32196,7 +32172,7 @@ var SymbolDraw = (
   /** @class */
   function() {
     function SymbolDraw2(SymbolCtor) {
-      this.group = new Group$4();
+      this.group = new Group$3();
       this._SymbolCtor = SymbolCtor || Symbol$1;
     }
     SymbolDraw2.prototype.updateData = function(data, opt) {
@@ -32805,7 +32781,7 @@ function createGridClipPath(cartesian, hasAnimation, seriesModel, done, during) 
     x = Math.floor(x);
     width++;
   }
-  var clipPath = new Rect$3({
+  var clipPath = new Rect$2({
     shape: {
       x,
       y,
@@ -32846,7 +32822,7 @@ function createPolarClipPath(polar, hasAnimation, seriesModel) {
   var sectorArea = polar.getArea();
   var r0 = round$3(sectorArea.r0, 1);
   var r = round$3(sectorArea.r, 1);
-  var clipPath = new Sector$1({
+  var clipPath = new Sector({
     shape: {
       cx: round$3(polar.cx, 1),
       cy: round$3(polar.cy, 1),
@@ -33085,7 +33061,7 @@ function getVisualGradient(data, coordSys, api) {
     offset: inRangeStopLen ? colorStopsInRange[0].offset : 0.5,
     color: outerColors[0] || "transparent"
   });
-  var gradient = new LinearGradient$1(0, 0, 0, 0, colorStopsInRange, true);
+  var gradient = new LinearGradient(0, 0, 0, 0, colorStopsInRange, true);
   gradient[coordDim] = minCoord;
   gradient[coordDim + "2"] = maxCoord;
   return gradient;
@@ -33252,7 +33228,7 @@ var LineView = (
       return _super !== null && _super.apply(this, arguments) || this;
     }
     LineView2.prototype.init = function() {
-      var lineGroup = new Group$4();
+      var lineGroup = new Group$3();
       var symbolDraw = new SymbolDraw();
       this.group.add(symbolDraw.group);
       this._symbolDraw = symbolDraw;
@@ -33649,7 +33625,7 @@ var LineView = (
         }
         var endLabel = this._endLabel;
         if (!endLabel) {
-          endLabel = this._endLabel = new ZRText$1({
+          endLabel = this._endLabel = new ZRText({
             z2: 200
             // should be higher than item symbol
           });
@@ -34585,7 +34561,7 @@ var BarView = (
         var el = oldData.getItemGraphicEl(dataIndex);
         el && removeElementWithFadeOut(el, seriesModel, dataIndex);
       }).execute();
-      var bgGroup = this._backgroundGroup || (this._backgroundGroup = new Group$4());
+      var bgGroup = this._backgroundGroup || (this._backgroundGroup = new Group$3());
       bgGroup.removeAll();
       for (var i = 0; i < bgEls.length; ++i) {
         bgGroup.add(bgEls[i]);
@@ -34800,7 +34776,7 @@ var clip = {
 };
 var elementCreator = {
   cartesian2d: function(seriesModel, data, newIndex, layout2, isHorizontal, animationModel, axisModel, isUpdate, roundCap) {
-    var rect = new Rect$3({
+    var rect = new Rect$2({
       shape: extend({}, layout2),
       z2: 1
     });
@@ -34814,7 +34790,7 @@ var elementCreator = {
     return rect;
   },
   polar: function(seriesModel, data, newIndex, layout2, isRadial, animationModel, axisModel, isUpdate, roundCap) {
-    var ShapeClass = !isRadial && roundCap ? SausagePath : Sector$1;
+    var ShapeClass = !isRadial && roundCap ? SausagePath : Sector;
     var sector = new ShapeClass({
       shape: layout2,
       z2: 1
@@ -35145,7 +35121,7 @@ function createBackgroundShape(isHorizontalOrRadial, layout2, coord) {
   }
 }
 function createBackgroundEl(coord, isHorizontalOrRadial, layout2) {
-  var ElementClz = coord.type === "polar" ? Sector$1 : Rect$3;
+  var ElementClz = coord.type === "polar" ? Sector : Rect$2;
   return new ElementClz({
     shape: createBackgroundShape(isHorizontalOrRadial, layout2, coord),
     silent: true,
@@ -35760,7 +35736,7 @@ var PiePiece = (
     function PiePiece2(data, idx, startAngle) {
       var _this = _super.call(this) || this;
       _this.z2 = 2;
-      var text = new ZRText$1();
+      var text = new ZRText();
       _this.setTextContent(text);
       _this.updateData(data, idx, startAngle, true);
       return _this;
@@ -35884,7 +35860,7 @@ var PiePiece = (
       } else {
         var polyline = this.getTextGuideLine();
         if (!polyline) {
-          polyline = new Polyline$2();
+          polyline = new Polyline$1();
           this.setTextGuideLine(polyline);
         }
         setLabelLineStyle(this, getLabelLineStatesModels(itemModel), {
@@ -35894,7 +35870,7 @@ var PiePiece = (
       }
     };
     return PiePiece2;
-  }(Sector$1)
+  }(Sector)
 );
 var PieView = (
   /** @class */
@@ -35924,7 +35900,7 @@ var PieView = (
       }
       if (data.count() === 0 && seriesModel.get("showEmptyCircle")) {
         var layoutData = getSeriesLayoutData(seriesModel);
-        var sector = new Sector$1({
+        var sector = new Sector({
           shape: extend(getBasicPieLayout(seriesModel, api), layoutData)
         });
         sector.useStyle(seriesModel.getModel("emptyCircleStyle").getItemStyle());
@@ -35974,7 +35950,7 @@ function createSeriesDataSimply(seriesModel, opt, nameList) {
   }, opt);
   var source = seriesModel.getSource();
   var dimensions = prepareSeriesDataSchema(source, opt).dimensions;
-  var list = new SeriesData$1(dimensions, seriesModel);
+  var list = new SeriesData(dimensions, seriesModel);
   list.initData(source, nameList);
   return list;
 }
@@ -36381,7 +36357,7 @@ var LargeSymbolPath = (
           minY = Math.min(y, minY);
           maxY = Math.max(y, maxY);
         }
-        rect = this._rect = new BoundingRect$1(minX - w / 2, minY - h / 2, maxX - minX + w, maxY - minY + h);
+        rect = this._rect = new BoundingRect(minX - w / 2, minY - h / 2, maxX - minX + w, maxY - minY + h);
       }
       return rect;
     };
@@ -36392,7 +36368,7 @@ var LargeSymbolDraw = (
   /** @class */
   function() {
     function LargeSymbolDraw2() {
-      this.group = new Group$4();
+      this.group = new Group$3();
     }
     LargeSymbolDraw2.prototype.updateData = function(data, opt) {
       this._clear();
@@ -36921,7 +36897,7 @@ var Cartesian2D = (
       var zoneDiag1 = this.dataToPoint(data1);
       var zoneDiag2 = this.dataToPoint(data2);
       var area = this.getArea();
-      var zone = new BoundingRect$1(zoneDiag1[0], zoneDiag1[1], zoneDiag2[0] - zoneDiag1[0], zoneDiag2[1] - zoneDiag1[1]);
+      var zone = new BoundingRect(zoneDiag1[0], zoneDiag1[1], zoneDiag2[0] - zoneDiag1[0], zoneDiag2[1] - zoneDiag1[1]);
       return area.intersect(zone);
     };
     Cartesian2D2.prototype.dataToPoint = function(data, clamp2, out2) {
@@ -36971,7 +36947,7 @@ var Cartesian2D = (
       var y = Math.min(yExtent[0], yExtent[1]) - tolerance;
       var width = Math.max(xExtent[0], xExtent[1]) - x + tolerance;
       var height = Math.max(yExtent[0], yExtent[1]) - y + tolerance;
-      return new BoundingRect$1(x, y, width, height);
+      return new BoundingRect(x, y, width, height);
     };
     return Cartesian2D2;
   }(Cartesian)
@@ -37009,7 +36985,7 @@ var Axis2D = (
       this.scale.setSortInfo(info);
     };
     return Axis2D2;
-  }(Axis$1)
+  }(Axis)
 );
 function layout$2(gridModel, axisModel, opt) {
   opt = opt || {};
@@ -37531,7 +37507,7 @@ var AxisBuilder = (
   /** @class */
   function() {
     function AxisBuilder2(axisModel, opt) {
-      this.group = new Group$4();
+      this.group = new Group$3();
       this.opt = opt;
       this.axisModel = axisModel;
       defaults(opt, {
@@ -37544,7 +37520,7 @@ var AxisBuilder = (
           return true;
         }
       });
-      var transformGroup = new Group$4({
+      var transformGroup = new Group$3({
         x: opt.position[0],
         y: opt.position[1],
         rotation: opt.rotation
@@ -37621,7 +37597,7 @@ var builders = {
     var lineStyle = extend({
       lineCap: "round"
     }, axisModel.getModel(["axisLine", "lineStyle"]).getLineStyle());
-    var line = new Line$2({
+    var line = new Line$1({
       shape: {
         x1: pt12[0],
         y1: pt12[1],
@@ -37732,7 +37708,7 @@ var builders = {
     var truncateOpt = axisModel.get("nameTruncate", true) || {};
     var ellipsis = truncateOpt.ellipsis;
     var maxWidth = retrieve(opt.nameTruncateMaxWidth, truncateOpt.maxWidth, axisNameAvailableWidth);
-    var textEl = new ZRText$1({
+    var textEl = new ZRText({
       x: pos[0],
       y: pos[1],
       rotation: labelLayout2.rotation,
@@ -37867,7 +37843,7 @@ function createTicks(ticksCoords, tickTransform, tickEndCoord, tickLineStyle, an
       applyTransform$1(pt12, pt12, tickTransform);
       applyTransform$1(pt22, pt22, tickTransform);
     }
-    var tickEl = new Line$2({
+    var tickEl = new Line$1({
       shape: {
         x1: pt12[0],
         y1: pt12[1],
@@ -37951,7 +37927,7 @@ function buildAxisLabel(group, transformGroup, axisModel, opt) {
     if (rawCategoryData && rawCategoryData[tickValue]) {
       var rawCategoryItem = rawCategoryData[tickValue];
       if (isObject$3(rawCategoryItem) && rawCategoryItem.textStyle) {
-        itemLabelModel = new Model$1(rawCategoryItem.textStyle, labelModel, axisModel.ecModel);
+        itemLabelModel = new Model(rawCategoryItem.textStyle, labelModel, axisModel.ecModel);
       }
     }
     var textColor = itemLabelModel.getTextColor() || axisModel.get(["axisLine", "lineStyle", "color"]);
@@ -37962,7 +37938,7 @@ function buildAxisLabel(group, transformGroup, axisModel, opt) {
     var verticalAlign = itemLabelModel.getShallow("verticalAlign", true) || itemLabelModel.getShallow("baseline", true) || labelLayout2.textVerticalAlign;
     var verticalAlignMin = retrieve2(itemLabelModel.getShallow("verticalAlignMinLabel", true), verticalAlign);
     var verticalAlignMax = retrieve2(itemLabelModel.getShallow("verticalAlignMaxLabel", true), verticalAlign);
-    var textEl = new ZRText$1({
+    var textEl = new ZRText({
       x: tickCoord,
       y: opt.labelOffset + opt.labelDirection * labelMargin,
       rotation: labelLayout2.rotation,
@@ -38121,7 +38097,7 @@ function makeAxisPointerModel(axis, baseTooltipModel, globalAxisPointerModel, ec
       crossStyle && defaults(labelOption, crossStyle.textStyle);
     }
   }
-  return axis.model.getModel("axisPointer", new Model$1(volatileOption, globalAxisPointerModel, ecModel));
+  return axis.model.getModel("axisPointer", new Model(volatileOption, globalAxisPointerModel, ecModel));
 }
 function collectSeriesInfo(result, ecModel) {
   ecModel.eachSeries(function(seriesModel) {
@@ -38308,7 +38284,7 @@ function rectCoordAxisBuildSplitArea(axisView, axisGroup, axisModel, gridModel) 
     }
     var tickValue = ticksCoords[i - 1].tickValue;
     tickValue != null && newSplitAreaColors.set(tickValue, colorIndex);
-    axisGroup.add(new Rect$3({
+    axisGroup.add(new Rect$2({
       anid: tickValue != null ? "area_" + tickValue : null,
       shape: {
         x,
@@ -38344,7 +38320,7 @@ var CartesianAxisView = (
     CartesianAxisView2.prototype.render = function(axisModel, ecModel, api, payload) {
       this.group.removeAll();
       var oldAxisGroup = this._axisGroup;
-      this._axisGroup = new Group$4();
+      this._axisGroup = new Group$3();
       this.group.add(this._axisGroup);
       if (!axisModel.get("show")) {
         return;
@@ -38416,7 +38392,7 @@ var axisElementBuilders$2 = {
       }
       var colorIndex = lineCount++ % lineColors.length;
       var tickValue = ticksCoords[i].tickValue;
-      var line = new Line$2({
+      var line = new Line$1({
         anid: tickValue != null ? "line_" + ticksCoords[i].tickValue : null,
         autoBatch: true,
         shape: {
@@ -38461,7 +38437,7 @@ var axisElementBuilders$2 = {
           p2[0] = gridRect.x + gridRect.width;
           p2[1] = tickCoord;
         }
-        var line = new Line$2({
+        var line = new Line$1({
           anid: "minor_line_" + minorTicksCoords[i][k].tickValue,
           autoBatch: true,
           shape: {
@@ -38520,7 +38496,7 @@ var GridView = (
     GridView2.prototype.render = function(gridModel, ecModel) {
       this.group.removeAll();
       if (gridModel.get("show")) {
-        this.group.add(new Rect$3({
+        this.group.add(new Rect$2({
           shape: gridModel.coordinateSystem.getRect(),
           style: defaults({
             fill: gridModel.get("backgroundColor")
@@ -38681,8 +38657,8 @@ var RadarView$1 = (
         if (!points2) {
           return;
         }
-        var polygon = new Polygon$1();
-        var polyline = new Polyline$2();
+        var polygon = new Polygon();
+        var polyline = new Polyline$1();
         var target = {
           shape: {
             points: points2
@@ -38692,8 +38668,8 @@ var RadarView$1 = (
         polyline.shape.points = getInitialPoints(points2);
         initProps(polygon, target, seriesModel, idx);
         initProps(polyline, target, seriesModel, idx);
-        var itemGroup = new Group$4();
-        var symbolGroup = new Group$4();
+        var itemGroup = new Group$3();
+        var symbolGroup = new Group$3();
         itemGroup.add(polyline);
         itemGroup.add(polygon);
         itemGroup.add(symbolGroup);
@@ -38751,7 +38727,7 @@ var RadarView$1 = (
         var emphasisModel = itemModel.getModel("emphasis");
         var itemHoverStyle = emphasisModel.getModel("itemStyle").getItemStyle();
         symbolGroup.eachChild(function(symbolPath) {
-          if (symbolPath instanceof ZRImage$1) {
+          if (symbolPath instanceof ZRImage) {
             var pathStyle = symbolPath.style;
             symbolPath.useStyle(extend({
               // TODO other properties like x, y ?
@@ -38936,7 +38912,7 @@ var RadarModel = (
         } else if (isFunction(nameFormatter)) {
           innerIndicatorOpt.name = nameFormatter(innerIndicatorOpt.name, innerIndicatorOpt);
         }
-        var model = new Model$1(innerIndicatorOpt, null, this.ecModel);
+        var model = new Model(innerIndicatorOpt, null, this.ecModel);
         mixin(model, AxisModelCommonMixin.prototype);
         model.mainType = "radar";
         model.componentIndex = this.componentIndex;
@@ -39048,7 +39024,7 @@ var RadarView = (
         for (var i = 0; i < ticksRadius.length; i++) {
           if (showSplitLine) {
             var colorIndex = getColorIndex(splitLines, splitLineColorsArr, i);
-            splitLines[colorIndex].push(new Circle$1({
+            splitLines[colorIndex].push(new Circle({
               shape: {
                 cx,
                 cy,
@@ -39058,7 +39034,7 @@ var RadarView = (
           }
           if (showSplitArea && i < ticksRadius.length - 1) {
             var colorIndex = getColorIndex(splitAreas, splitAreaColorsArr, i);
-            splitAreas[colorIndex].push(new Ring$1({
+            splitAreas[colorIndex].push(new Ring({
               shape: {
                 cx,
                 cy,
@@ -39092,7 +39068,7 @@ var RadarView = (
           }
           if (showSplitLine) {
             var colorIndex = getColorIndex(splitLines, splitLineColorsArr, i);
-            splitLines[colorIndex].push(new Polyline$2({
+            splitLines[colorIndex].push(new Polyline$1({
               shape: {
                 points: points2
               }
@@ -39100,7 +39076,7 @@ var RadarView = (
           }
           if (showSplitArea && prevPoints) {
             var colorIndex = getColorIndex(splitAreas, splitAreaColorsArr, i - 1);
-            splitAreas[colorIndex].push(new Polygon$1({
+            splitAreas[colorIndex].push(new Polygon({
               shape: {
                 points: points2.concat(prevPoints)
               }
@@ -39146,7 +39122,7 @@ var IndicatorAxis = (
       return _this;
     }
     return IndicatorAxis2;
-  }(Axis$1)
+  }(Axis)
 );
 var Radar = (
   /** @class */
@@ -39575,7 +39551,7 @@ var SVGParser = function() {
       }
     }
     this._defsUsePending = [];
-    var root = new Group$4();
+    var root = new Group$3();
     this._root = root;
     var named = [];
     var viewBox = svg.getAttribute("viewBox") || "";
@@ -39608,7 +39584,7 @@ var SVGParser = function() {
       viewBoxTransform = makeViewBoxTransform(viewBoxRect, { x: 0, y: 0, width, height });
       if (!opt.ignoreViewBox) {
         var elRoot = root;
-        root = new Group$4();
+        root = new Group$3();
         root.add(elRoot);
         elRoot.scaleX = elRoot.scaleY = viewBoxTransform.scale;
         elRoot.x = viewBoxTransform.x;
@@ -39616,7 +39592,7 @@ var SVGParser = function() {
       }
     }
     if (!opt.ignoreRootClip && width != null && height != null) {
-      root.setClipPath(new Rect$3({
+      root.setClipPath(new Rect$2({
         shape: { x: 0, y: 0, width, height }
       }));
     }
@@ -39724,13 +39700,13 @@ var SVGParser = function() {
   SVGParser2.internalField = function() {
     nodeParsers = {
       "g": function(xmlNode, parentGroup) {
-        var g = new Group$4();
+        var g = new Group$3();
         inheritStyle(parentGroup, g);
         parseAttributes(xmlNode, g, this._defsUsePending, false, false);
         return g;
       },
       "rect": function(xmlNode, parentGroup) {
-        var rect = new Rect$3();
+        var rect = new Rect$2();
         inheritStyle(parentGroup, rect);
         parseAttributes(xmlNode, rect, this._defsUsePending, false, false);
         rect.setShape({
@@ -39743,7 +39719,7 @@ var SVGParser = function() {
         return rect;
       },
       "circle": function(xmlNode, parentGroup) {
-        var circle = new Circle$1();
+        var circle = new Circle();
         inheritStyle(parentGroup, circle);
         parseAttributes(xmlNode, circle, this._defsUsePending, false, false);
         circle.setShape({
@@ -39755,7 +39731,7 @@ var SVGParser = function() {
         return circle;
       },
       "line": function(xmlNode, parentGroup) {
-        var line = new Line$2();
+        var line = new Line$1();
         inheritStyle(parentGroup, line);
         parseAttributes(xmlNode, line, this._defsUsePending, false, false);
         line.setShape({
@@ -39768,7 +39744,7 @@ var SVGParser = function() {
         return line;
       },
       "ellipse": function(xmlNode, parentGroup) {
-        var ellipse = new Ellipse$1();
+        var ellipse = new Ellipse();
         inheritStyle(parentGroup, ellipse);
         parseAttributes(xmlNode, ellipse, this._defsUsePending, false, false);
         ellipse.setShape({
@@ -39786,7 +39762,7 @@ var SVGParser = function() {
         if (pointsStr) {
           pointsArr = parsePoints(pointsStr);
         }
-        var polygon = new Polygon$1({
+        var polygon = new Polygon({
           shape: {
             points: pointsArr || []
           },
@@ -39802,7 +39778,7 @@ var SVGParser = function() {
         if (pointsStr) {
           pointsArr = parsePoints(pointsStr);
         }
-        var polyline = new Polyline$2({
+        var polyline = new Polyline$1({
           shape: {
             points: pointsArr || []
           },
@@ -39813,7 +39789,7 @@ var SVGParser = function() {
         return polyline;
       },
       "image": function(xmlNode, parentGroup) {
-        var img = new ZRImage$1();
+        var img = new ZRImage();
         inheritStyle(parentGroup, img);
         parseAttributes(xmlNode, img, this._defsUsePending, false, false);
         img.setStyle({
@@ -39833,7 +39809,7 @@ var SVGParser = function() {
         var dy = xmlNode.getAttribute("dy") || "0";
         this._textX = parseFloat(x) + parseFloat(dx);
         this._textY = parseFloat(y) + parseFloat(dy);
-        var g = new Group$4();
+        var g = new Group$3();
         inheritStyle(parentGroup, g);
         parseAttributes(xmlNode, g, this._defsUsePending, false, true);
         return g;
@@ -39849,7 +39825,7 @@ var SVGParser = function() {
         }
         var dx = xmlNode.getAttribute("dx") || "0";
         var dy = xmlNode.getAttribute("dy") || "0";
-        var g = new Group$4();
+        var g = new Group$3();
         inheritStyle(parentGroup, g);
         parseAttributes(xmlNode, g, this._defsUsePending, false, true);
         this._textX += parseFloat(dx);
@@ -39874,7 +39850,7 @@ var paintServerParsers = {
     var y1 = parseInt(xmlNode.getAttribute("y1") || "0", 10);
     var x2 = parseInt(xmlNode.getAttribute("x2") || "10", 10);
     var y2 = parseInt(xmlNode.getAttribute("y2") || "0", 10);
-    var gradient = new LinearGradient$1(x1, y1, x2, y2);
+    var gradient = new LinearGradient(x1, y1, x2, y2);
     parsePaintServerUnit(xmlNode, gradient);
     parseGradientColorStops(xmlNode, gradient);
     return gradient;
@@ -39883,7 +39859,7 @@ var paintServerParsers = {
     var cx = parseInt(xmlNode.getAttribute("cx") || "0", 10);
     var cy = parseInt(xmlNode.getAttribute("cy") || "0", 10);
     var r = parseInt(xmlNode.getAttribute("r") || "0", 10);
-    var gradient = new RadialGradient$1(cx, cy, r);
+    var gradient = new RadialGradient(cx, cy, r);
     parsePaintServerUnit(xmlNode, gradient);
     parseGradientColorStops(xmlNode, gradient);
     return gradient;
@@ -40206,7 +40182,7 @@ var GeoSVGResource = (
       } catch (e2) {
         throw new Error("Invalid svg format\n" + e2.message);
       }
-      var root = new Group$4();
+      var root = new Group$3();
       root.add(rootFromParse);
       root.isGeoSVGGraphicRoot = true;
       var svgWidth = result.width;
@@ -40243,7 +40219,7 @@ var GeoSVGResource = (
             bRectHeight = calculatedBoundingRect.height;
           }
         }
-        boundingRect = this._boundingRect = new BoundingRect$1(bRectX, bRectY, bRectWidth, bRectHeight);
+        boundingRect = this._boundingRect = new BoundingRect(bRectX, bRectY, bRectWidth, bRectHeight);
       }
       if (viewBoxRect) {
         var viewBoxTransform = makeViewBoxTransform(viewBoxRect, boundingRect);
@@ -40251,7 +40227,7 @@ var GeoSVGResource = (
         rootFromParse.x = viewBoxTransform.x;
         rootFromParse.y = viewBoxTransform.y;
       }
-      root.setClipPath(new Rect$3({
+      root.setClipPath(new Rect$2({
         shape: boundingRect.plain()
       }));
       var named = [];
@@ -40400,7 +40376,7 @@ var GeoJSONResource = (
       });
       return {
         regions: finalRegions,
-        boundingRect: parsed.boundingRect || new BoundingRect$1(0, 0, 0, 0),
+        boundingRect: parsed.boundingRect || new BoundingRect(0, 0, 0, 0),
         regionsMap
       };
     };
@@ -40543,15 +40519,15 @@ var MapDraw = (
   /** @class */
   function() {
     function MapDraw2(api) {
-      var group = new Group$4();
+      var group = new Group$3();
       this.uid = getUID("ec_map_draw");
       this._controller = new RoamController(api.getZr());
       this._controllerHost = {
         target: group
       };
       this.group = group;
-      group.add(this._regionsGroup = new Group$4());
-      group.add(this._svgGroup = new Group$4());
+      group.add(this._regionsGroup = new Group$3());
+      group.add(this._svgGroup = new Group$3());
     }
     MapDraw2.prototype.draw = function(mapOrGeoModel, ecModel, api, fromView, payload) {
       var isGeo = mapOrGeoModel.mainType === "geo";
@@ -40635,7 +40611,7 @@ var MapDraw = (
         var regionGroup = regionsGroupByName.get(regionName);
         var _a2 = regionsInfoByName.get(regionName) || {}, dataIdx = _a2.dataIdx, regionModel = _a2.regionModel;
         if (!regionGroup) {
-          regionGroup = regionsGroupByName.set(regionName, new Group$4());
+          regionGroup = regionsGroupByName.set(regionName, new Group$3());
           regionsGroup.add(regionGroup);
           dataIdx = data ? data.indexOfName(regionName) : null;
           regionModel = viewBuildCtx.isGeo ? mapOrGeoModel.getRegionModel(regionName) : data ? data.getItemModel(dataIdx) : null;
@@ -40653,7 +40629,7 @@ var MapDraw = (
               polys = projectPolys(polys, projectionStream);
             }
             each$f(polys, function(poly) {
-              polygonSubpaths.push(new Polygon$1(getPolyShape(poly)));
+              polygonSubpaths.push(new Polygon(getPolyShape(poly)));
             });
           } else {
             var points2 = geometry.points;
@@ -40661,7 +40637,7 @@ var MapDraw = (
               points2 = projectPolys(points2, projectionStream, true);
             }
             each$f(points2, function(points3) {
-              polylineSubpaths.push(new Polyline$2(getPolyShape(points3)));
+              polylineSubpaths.push(new Polyline$1(getPolyShape(points3)));
             });
           }
         });
@@ -40670,7 +40646,7 @@ var MapDraw = (
           if (!subpaths.length) {
             return;
           }
-          var compoundPath = new CompoundPath$1({
+          var compoundPath = new CompoundPath({
             culling: true,
             segmentIgnoreThreshold: 1,
             shape: {
@@ -40716,10 +40692,10 @@ var MapDraw = (
         var el = namedItem.el;
         var dataIdx = data ? data.indexOfName(regionName) : null;
         var regionModel = mapOrGeoModel.getRegionModel(regionName);
-        if (OPTION_STYLE_ENABLED_TAG_MAP.get(svgNodeTagLower) != null && el instanceof Displayable$1) {
+        if (OPTION_STYLE_ENABLED_TAG_MAP.get(svgNodeTagLower) != null && el instanceof Displayable) {
           applyOptionStyleForRegion(viewBuildCtx, el, dataIdx, regionModel);
         }
-        if (el instanceof Displayable$1) {
+        if (el instanceof Displayable) {
           el.culling = true;
         }
         el.z2EmphasisLift = 0;
@@ -41071,7 +41047,7 @@ var MapView = (
         }
         var point = layout2.point;
         var offset = layout2.offset;
-        var circle = new Circle$1({
+        var circle = new Circle({
           style: {
             // Because the special of map draw.
             // Which needs statistic of multiple series and draw on one map.
@@ -41398,13 +41374,13 @@ var View = (
       var _this = _super.call(this) || this;
       _this.type = "view";
       _this.dimensions = ["x", "y"];
-      _this._roamTransformable = new Transformable$1();
-      _this._rawTransformable = new Transformable$1();
+      _this._roamTransformable = new Transformable();
+      _this._rawTransformable = new Transformable();
       _this.name = name;
       return _this;
     }
     View2.prototype.setBoundingRect = function(x, y, width, height) {
-      this._rect = new BoundingRect$1(x, y, width, height);
+      this._rect = new BoundingRect(x, y, width, height);
       return this._rect;
     };
     View2.prototype.getBoundingRect = function() {
@@ -41412,12 +41388,12 @@ var View = (
     };
     View2.prototype.setViewRect = function(x, y, width, height) {
       this._transformTo(x, y, width, height);
-      this._viewRect = new BoundingRect$1(x, y, width, height);
+      this._viewRect = new BoundingRect(x, y, width, height);
     };
     View2.prototype._transformTo = function(x, y, width, height) {
       var rect = this.getBoundingRect();
       var rawTransform = this._rawTransformable;
-      rawTransform.transform = rect.calculateTransform(new BoundingRect$1(x, y, width, height));
+      rawTransform.transform = rect.calculateTransform(new BoundingRect(x, y, width, height));
       var rawParent = rawTransform.parent;
       rawTransform.parent = null;
       rawTransform.decomposeTransform();
@@ -41490,7 +41466,7 @@ var View = (
     View2.prototype.getTransformInfo = function() {
       var rawTransformable = this._rawTransformable;
       var roamTransformable = this._roamTransformable;
-      var dummyTransformable2 = new Transformable$1();
+      var dummyTransformable2 = new Transformable();
       dummyTransformable2.transform = roamTransformable.transform;
       dummyTransformable2.decomposeTransform();
       return {
@@ -41538,7 +41514,7 @@ var View = (
     };
     View2.dimensions = ["x", "y"];
     return View2;
-  }(Transformable$1)
+  }(Transformable)
 );
 function getCoordSys$4(finder) {
   var seriesModel = finder.seriesModel;
@@ -41611,7 +41587,7 @@ var Geo = (
         rect.y = -rect.y - rect.height;
       }
       var rawTransformable = this._rawTransformable;
-      rawTransformable.transform = rect.calculateTransform(new BoundingRect$1(x, y, width, height));
+      rawTransformable.transform = rect.calculateTransform(new BoundingRect(x, y, width, height));
       var rawParent = rawTransformable.parent;
       rawTransformable.parent = null;
       rawTransformable.decomposeTransform();
@@ -41682,7 +41658,6 @@ function getCoordSys$3(finder) {
   var seriesModel = finder.seriesModel;
   return geoModel ? geoModel.coordinateSystem : seriesModel ? seriesModel.coordinateSystem || (seriesModel.getReferringComponents("geo", SINGLE_REFERRING).models[0] || {}).coordinateSystem : null;
 }
-const Geo$1 = Geo;
 function resizeGeo(geoModel, api) {
   var boundingCoords = geoModel.get("boundingCoords");
   if (boundingCoords != null) {
@@ -41785,7 +41760,7 @@ var GeoCreator = (
       }
       ecModel.eachComponent("geo", function(geoModel, idx) {
         var mapName = geoModel.get("map");
-        var geo = new Geo$1(mapName + idx, mapName, extend({
+        var geo = new Geo(mapName + idx, mapName, extend({
           nameMap: geoModel.get("nameMap")
         }, getCommonGeoProperties(geoModel)));
         geo.zoomLimit = geoModel.get("scaleLimit");
@@ -41814,7 +41789,7 @@ var GeoCreator = (
         var nameMapList = map$1(mapSeries, function(singleMapSeries) {
           return singleMapSeries.get("nameMap");
         });
-        var geo = new Geo$1(mapType, mapType, extend({
+        var geo = new Geo(mapType, mapType, extend({
           nameMap: mergeAll(nameMapList)
         }, getCommonGeoProperties(mapSeries[0])));
         geo.zoomLimit = retrieve.apply(null, map$1(mapSeries, function(singleMapSeries) {
@@ -41877,7 +41852,7 @@ var GeoModel = (
       this._optionModelMap = reduce(option.regions || [], function(optionModelMap, regionOpt) {
         var regionName = regionOpt.name;
         if (regionName) {
-          optionModelMap.set(regionName, new Model$1(regionOpt, _this, _this.ecModel));
+          optionModelMap.set(regionName, new Model(regionOpt, _this, _this.ecModel));
           if (regionOpt.selected) {
             selectedMap[regionName] = true;
           }
@@ -41889,7 +41864,7 @@ var GeoModel = (
       }
     };
     GeoModel2.prototype.getRegionModel = function(name) {
-      return this._optionModelMap.get(name) || new Model$1(null, this, this.ecModel);
+      return this._optionModelMap.get(name) || new Model(null, this, this.ecModel);
     };
     GeoModel2.prototype.getFormattedLabel = function(name, status) {
       var regionModel = this.getRegionModel(name);
@@ -42404,7 +42379,7 @@ var TreeView = (
     function TreeView2() {
       var _this = _super !== null && _super.apply(this, arguments) || this;
       _this.type = TreeView2.type;
-      _this._mainGroup = new Group$4();
+      _this._mainGroup = new Group$3();
       return _this;
     }
     TreeView2.prototype.init = function(ecModel, api) {
@@ -42687,7 +42662,7 @@ function drawEdge(seriesModel, node, virtualRoot, symbolEl, sourceOldLayout, sou
   if (edgeShape === "curve") {
     if (node.parentNode && node.parentNode !== virtualRoot) {
       if (!edge) {
-        edge = symbolEl.__edge = new BezierCurve$1({
+        edge = symbolEl.__edge = new BezierCurve({
           shape: getEdgeShape(layout2, orient, curvature, sourceOldLayout, sourceOldLayout)
         });
       }
@@ -43171,7 +43146,7 @@ var Tree = (
         coordDimensions: ["value"],
         dimensionsCount: dimMax
       }).dimensions;
-      var list = new SeriesData$1(dimensions, hostModel);
+      var list = new SeriesData(dimensions, hostModel);
       list.initData(listData);
       beforeLink && beforeLink(list);
       linkSeriesData({
@@ -43255,7 +43230,7 @@ var TreeSeriesModel = (
         children: option.data
       };
       var leaves = option.leaves || {};
-      var leavesModel = new Model$1(leaves, this, this.ecModel);
+      var leavesModel = new Model(leaves, this, this.ecModel);
       var tree = Tree.createTree(root, this, beforeLink);
       function beforeLink(nodeData) {
         nodeData.wrapMethod("getItemModel", function(model, idx) {
@@ -43611,12 +43586,12 @@ var TreemapSeriesModel = (
       completeTreeValue$1(root);
       var levels = option.levels || [];
       var designatedVisualItemStyle = this.designatedVisualItemStyle = {};
-      var designatedVisualModel = new Model$1({
+      var designatedVisualModel = new Model({
         itemStyle: designatedVisualItemStyle
       }, this, ecModel);
       levels = option.levels = setDefault(levels, ecModel);
       var levelModels = map$1(levels || [], function(levelDefine) {
-        return new Model$1(levelDefine, designatedVisualModel, ecModel);
+        return new Model(levelDefine, designatedVisualModel, ecModel);
       }, this);
       var tree = Tree.createTree(root, this, beforeLink);
       function beforeLink(nodeData) {
@@ -43824,7 +43799,7 @@ function setDefault(levels, ecModel) {
   var hasColorDefine;
   var hasDecalDefine;
   each$f(levels, function(levelDefine) {
-    var model = new Model$1(levelDefine);
+    var model = new Model(levelDefine);
     var modelColor = model.get("color");
     var modelDecal = model.get("decal");
     if (model.get(["itemStyle", "color"]) || modelColor && modelColor !== "none") {
@@ -43850,7 +43825,7 @@ var Breadcrumb = (
   /** @class */
   function() {
     function Breadcrumb2(containerGroup) {
-      this.group = new Group$4();
+      this.group = new Group$3();
       containerGroup.add(this.group);
     }
     Breadcrumb2.prototype.render = function(seriesModel, api, targetNode, onSelect) {
@@ -43914,14 +43889,14 @@ var Breadcrumb = (
           itemWidth = emptyItemWidth;
           text = null;
         }
-        var el = new Polygon$1({
+        var el = new Polygon({
           shape: {
             points: makeItemPoints(lastX, 0, itemWidth, height, i === renderList.length - 1, i === 0)
           },
           style: defaults(normalStyleModel.getItemStyle(), {
             lineJoin: "bevel"
           }),
-          textContent: new ZRText$1({
+          textContent: new ZRText({
             style: createTextStyle$1(textStyleModel, {
               text
             })
@@ -44026,8 +44001,8 @@ var AnimationWrap = (
 function createWrap() {
   return new AnimationWrap();
 }
-var Group$2 = Group$4;
-var Rect$1 = Rect$3;
+var Group$2 = Group$3;
+var Rect$1 = Rect$2;
 var DRAG_THRESHOLD = 3;
 var PATH_LABEL_NOAMAL = "label";
 var PATH_UPPERLABEL_NORMAL = "upperLabel";
@@ -44236,7 +44211,7 @@ var TreemapView = (
           if (!last) {
             return;
           }
-          if (el instanceof Group$4) {
+          if (el instanceof Group$3) {
             if (last.oldX != null) {
               target.x = el.x;
               target.y = el.y;
@@ -44285,7 +44260,7 @@ var TreemapView = (
         controller.on("pan", bind$1(this._onPan, this));
         controller.on("zoom", bind$1(this._onZoom, this));
       }
-      var rect = new BoundingRect$1(0, 0, api.getWidth(), api.getHeight());
+      var rect = new BoundingRect(0, 0, api.getWidth(), api.getHeight());
       controller.setPointerChecker(function(e2, x, y) {
         return rect.contain(x, y);
       });
@@ -44334,7 +44309,7 @@ var TreemapView = (
         if (!rootLayout) {
           return;
         }
-        var rect = new BoundingRect$1(rootLayout.x, rootLayout.y, rootLayout.width, rootLayout.height);
+        var rect = new BoundingRect(rootLayout.x, rootLayout.y, rootLayout.width, rootLayout.height);
         var zoomLimit = null;
         var _controllerHost = this._controllerHost;
         zoomLimit = _controllerHost.zoomLimit;
@@ -44688,7 +44663,7 @@ function renderNode(seriesModel, thisStorage, oldStorage, reRoot, lastsForAnimat
       prepareAnimationWhenHasOld(lasts, element);
     } else if (!thisInvisible) {
       element = new Ctor();
-      if (element instanceof Displayable$1) {
+      if (element instanceof Displayable) {
         element.z2 = calculateZ2(depth2, z);
       }
       prepareAnimationWhenNoOld(lasts, element);
@@ -44707,7 +44682,7 @@ function renderNode(seriesModel, thisStorage, oldStorage, reRoot, lastsForAnimat
   function prepareAnimationWhenNoOld(lasts, element) {
     var lastCfg = lasts[thisRawIndex] = {};
     var parentNode2 = thisNode.parentNode;
-    var isGroup = element instanceof Group$4;
+    var isGroup = element instanceof Group$3;
     if (parentNode2 && (!reRoot || reRoot.direction === "drillDown")) {
       var parentOldX = 0;
       var parentOldY = 0;
@@ -45289,7 +45264,7 @@ const treemapLayout = {
     prunning(
       treeRoot,
       // Transform to base element coordinate system.
-      new BoundingRect$1(-layoutInfo.x, -layoutInfo.y, ecWidth, ecHeight),
+      new BoundingRect(-layoutInfo.x, -layoutInfo.y, ecWidth, ecHeight),
       viewAbovePath,
       viewRoot,
       0
@@ -45570,7 +45545,7 @@ function prunning(node, clipRect, viewAbovePath, viewRoot, depth) {
     invisible: !isAboveViewRoot && !clipRect.intersect(nodeLayout),
     isAboveViewRoot
   }, true);
-  var childClipRect = new BoundingRect$1(clipRect.x - nodeLayout.x, clipRect.y - nodeLayout.y, clipRect.width, clipRect.height);
+  var childClipRect = new BoundingRect(clipRect.x - nodeLayout.x, clipRect.y - nodeLayout.y, clipRect.width, clipRect.height);
   each$b(node.viewChildren || [], function(child) {
     prunning(child, childClipRect, viewAbovePath, viewRoot, depth + 1);
   });
@@ -46275,8 +46250,8 @@ function createViewCoordSys(ecModel, api) {
   });
   return viewList;
 }
-var straightLineProto = Line$2.prototype;
-var bezierCurveProto = BezierCurve$1.prototype;
+var straightLineProto = Line$1.prototype;
+var bezierCurveProto = BezierCurve.prototype;
 var StraightLineShape = (
   /** @class */
   /* @__PURE__ */ function() {
@@ -46684,13 +46659,13 @@ var Line = (
       }
     };
     return Line2;
-  }(Group$4)
+  }(Group$3)
 );
 var LineDraw = (
   /** @class */
   function() {
     function LineDraw2(LineCtor) {
-      this.group = new Group$4();
+      this.group = new Group$3();
       this._LineCtor = LineCtor || Line;
     }
     LineDraw2.prototype.updateData = function(lineData) {
@@ -47504,10 +47479,10 @@ function createGraphFromNodeEdge(nodes, edges, seriesModel, directed, beforeLink
       coordDimensions,
       encodeDefine: seriesModel.getEncode()
     }).dimensions;
-    nodeData = new SeriesData$1(dimensions, seriesModel);
+    nodeData = new SeriesData(dimensions, seriesModel);
     nodeData.initData(nodes);
   }
-  var edgeData = new SeriesData$1(["value"], seriesModel);
+  var edgeData = new SeriesData(["value"], seriesModel);
   edgeData.initData(validEdges, linkNameList);
   beforeLink && beforeLink(nodeData, edgeData);
   linkSeriesData({
@@ -47578,7 +47553,7 @@ var GraphSeriesModel = (
           }
           return model;
         });
-        var oldGetModel = Model$1.prototype.getModel;
+        var oldGetModel = Model.prototype.getModel;
         function newGetModel(path, parentModel) {
           var model = oldGetModel.call(this, path, parentModel);
           model.resolveParentPath = resolveParentPath;
@@ -47641,7 +47616,7 @@ var GraphSeriesModel = (
           value: 0
         }, category);
       });
-      var categoriesData = new SeriesData$1(["value"], this);
+      var categoriesData = new SeriesData(["value"], this);
       categoriesData.initData(categories);
       this._categoriesData = categoriesData;
       this._categoriesModels = categoriesData.mapArray(function(idx) {
@@ -47874,7 +47849,7 @@ var GaugeView = (
       var endAngle = -seriesModel.get("endAngle") / 180 * Math.PI;
       var axisLineModel = seriesModel.getModel("axisLine");
       var roundCap = axisLineModel.get("roundCap");
-      var MainPath = roundCap ? SausagePath : Sector$1;
+      var MainPath = roundCap ? SausagePath : Sector;
       var showAxis = axisLineModel.get("show");
       var lineStyleModel = axisLineModel.getModel("lineStyle");
       var axisLineWidth = lineStyleModel.get("width");
@@ -47959,7 +47934,7 @@ var GaugeView = (
         unitY = Math.sin(angle);
         if (splitLineModel.get("show")) {
           var distance2 = splitLineDistance ? splitLineDistance + axisLineWidth : axisLineWidth;
-          var splitLine = new Line$2({
+          var splitLine = new Line$1({
             shape: {
               x1: unitX * (r - distance2) + cx,
               y1: unitY * (r - distance2) + cy,
@@ -47995,7 +47970,7 @@ var GaugeView = (
             rotate2 = rotateType * Math.PI / 180;
           }
           if (rotate2 === 0) {
-            group.add(new ZRText$1({
+            group.add(new ZRText({
               style: createTextStyle$1(labelModel, {
                 text: label,
                 x: textStyleX,
@@ -48008,7 +47983,7 @@ var GaugeView = (
               silent: true
             }));
           } else {
-            group.add(new ZRText$1({
+            group.add(new ZRText({
               style: createTextStyle$1(labelModel, {
                 text: label,
                 x: textStyleX,
@@ -48031,7 +48006,7 @@ var GaugeView = (
           for (var j = 0; j <= subSplitNumber; j++) {
             unitX = Math.cos(angle);
             unitY = Math.sin(angle);
-            var tickLine = new Line$2({
+            var tickLine = new Line$1({
               shape: {
                 x1: unitX * (r - distance2) + cx,
                 y1: unitY * (r - distance2) + cy,
@@ -48100,7 +48075,7 @@ var GaugeView = (
       }
       function createProgress(idx, endAngle2) {
         var roundCap = progressModel.get("roundCap");
-        var ProgressPath = roundCap ? SausagePath : Sector$1;
+        var ProgressPath = roundCap ? SausagePath : Sector;
         var isOverlap = progressModel.get("overlap");
         var progressWidth = isOverlap ? progressModel.get("width") : axisLineWidth / data.count();
         var r0 = isOverlap ? posInfo.r - progressWidth : posInfo.r - (idx + 1) * progressWidth;
@@ -48180,7 +48155,7 @@ var GaugeView = (
             var pointer = data.getItemGraphicEl(idx);
             var symbolStyle = data.getItemVisual(idx, "style");
             var visualColor = symbolStyle.fill;
-            if (pointer instanceof ZRImage$1) {
+            if (pointer instanceof ZRImage) {
               var pathStyle = pointer.style;
               pointer.useStyle(extend({
                 image: pathStyle.image,
@@ -48233,16 +48208,16 @@ var GaugeView = (
       var valueDim = data.mapDimension("value");
       var minVal = +seriesModel.get("min");
       var maxVal = +seriesModel.get("max");
-      var contentGroup = new Group$4();
+      var contentGroup = new Group$3();
       var newTitleEls = [];
       var newDetailEls = [];
       var hasAnimation = seriesModel.isAnimationEnabled();
       var showPointerAbove = seriesModel.get(["pointer", "showAbove"]);
       data.diff(this._data).add(function(idx) {
-        newTitleEls[idx] = new ZRText$1({
+        newTitleEls[idx] = new ZRText({
           silent: true
         });
-        newDetailEls[idx] = new ZRText$1({
+        newDetailEls[idx] = new ZRText({
           silent: true
         });
       }).update(function(idx, oldIdx) {
@@ -48252,7 +48227,7 @@ var GaugeView = (
       data.each(function(idx) {
         var itemModel = data.getItemModel(idx);
         var value = data.get(valueDim, idx);
-        var itemGroup = new Group$4();
+        var itemGroup = new Group$3();
         var autoColor = getColor(linearMap$2(value, [minVal, maxVal], [0, 1], true));
         var itemTitleModel = itemModel.getModel("title");
         if (itemTitleModel.get("show")) {
@@ -48473,8 +48448,8 @@ var FunnelPiece = (
     function FunnelPiece2(data, idx) {
       var _this = _super.call(this) || this;
       var polygon = _this;
-      var labelLine = new Polyline$2();
-      var text = new ZRText$1();
+      var labelLine = new Polyline$1();
+      var text = new ZRText();
       polygon.setTextContent(text);
       _this.setTextGuideLine(labelLine);
       _this.updateData(data, idx, true);
@@ -48576,7 +48551,7 @@ var FunnelPiece = (
       });
     };
     return FunnelPiece2;
-  }(Polygon$1)
+  }(Polygon)
 );
 var FunnelView = (
   /** @class */
@@ -49006,7 +48981,7 @@ var ParallelView$1 = (
     function ParallelView2() {
       var _this = _super !== null && _super.apply(this, arguments) || this;
       _this.type = ParallelView2.type;
-      _this._dataGroup = new Group$4();
+      _this._dataGroup = new Group$3();
       _this._initialized = false;
       return _this;
     }
@@ -49082,7 +49057,7 @@ var ParallelView$1 = (
 function createGridClipShape$2(coordSys, seriesModel, cb) {
   var parallelModel = coordSys.model;
   var rect = coordSys.getRect();
-  var rectEl = new Rect$3({
+  var rectEl = new Rect$2({
     shape: {
       x: rect.x,
       y: rect.y,
@@ -49113,7 +49088,7 @@ function createLinePoints(data, dataIndex, dimensions, coordSys) {
 }
 function addEl(data, dataGroup, dataIndex, dimensions, coordSys) {
   var points2 = createLinePoints(data, dataIndex, dimensions, coordSys);
-  var line = new Polyline$2({
+  var line = new Polyline$1({
     shape: {
       points: points2
     },
@@ -49441,7 +49416,7 @@ var ParallelAxis = (
       return this.coordinateSystem.getModel().get("layout") !== "horizontal";
     };
     return ParallelAxis2;
-  }(Axis$1)
+  }(Axis)
 );
 function sliderMove(delta, handleEnds, extent3, handleIndex, minSpan, maxSpan) {
   delta = delta || 0;
@@ -49908,7 +49883,7 @@ var BrushController = (
         assert(zr);
       }
       _this._zr = zr;
-      _this.group = new Group$4();
+      _this.group = new Group$3();
       _this._uid = "brushController_" + baseUID++;
       each$f(pointerHandlers, function(handler, eventName) {
         this._handlers[eventName] = bind$1(handler, this);
@@ -50124,8 +50099,8 @@ function getTrackEnds(track) {
   return [track[0], track[tail]];
 }
 function createBaseRectCover(rectRangeConverter, controller, brushOption, edgeNameSequences) {
-  var cover = new Group$4();
-  cover.add(new Rect$3({
+  var cover = new Group$3();
+  cover.add(new Rect$2({
     name: "main",
     style: makeStyle(brushOption),
     silent: true,
@@ -50137,7 +50112,7 @@ function createBaseRectCover(rectRangeConverter, controller, brushOption, edgeNa
     })
   }));
   each$f(edgeNameSequences, function(nameSequence) {
-    cover.add(new Rect$3({
+    cover.add(new Rect$2({
       name: nameSequence.join(""),
       style: {
         opacity: 0
@@ -50435,8 +50410,8 @@ var coverRenderers = {
   },
   polygon: {
     createCover: function(controller, brushOption) {
-      var cover = new Group$4();
-      cover.add(new Polyline$2({
+      var cover = new Group$3();
+      cover.add(new Polyline$1({
         name: "main",
         style: makeStyle(brushOption),
         silent: true
@@ -50448,7 +50423,7 @@ var coverRenderers = {
     },
     endCreating: function(controller, cover) {
       cover.remove(cover.childAt(0));
-      cover.add(new Polygon$1({
+      cover.add(new Polygon({
         name: "main",
         draggable: true,
         drift: curry$1(driftPolygon, controller, cover),
@@ -50525,7 +50500,7 @@ function makeRectIsTargetByCursor(rect, api, targetModel) {
   };
 }
 function normalizeRect(rect) {
-  return BoundingRect$1.create(rect);
+  return BoundingRect.create(rect);
 }
 var elementList$1 = ["axisLine", "axisTickLabel", "axisName"];
 var ParallelAxisView = (
@@ -50549,7 +50524,7 @@ var ParallelAxisView = (
       this.api = api;
       this.group.removeAll();
       var oldAxisGroup = this._axisGroup;
-      this._axisGroup = new Group$4();
+      this._axisGroup = new Group$3();
       this.group.add(this._axisGroup);
       if (!axisModel.get("show")) {
         return;
@@ -50573,7 +50548,7 @@ var ParallelAxisView = (
       var extent3 = axisModel.axis.getExtent();
       var extentLen = extent3[1] - extent3[0];
       var extra = Math.min(30, Math.abs(extentLen) * 0.1);
-      var rect = BoundingRect$1.create({
+      var rect = BoundingRect.create({
         x: extent3[0],
         y: -areaWidth / 2,
         width: extentLen,
@@ -50862,7 +50837,7 @@ var SankeyView = (
         var dragY = itemModel.get("localY");
         var emphasisModel = itemModel.getModel("emphasis");
         var borderRadius = itemModel.get(["itemStyle", "borderRadius"]) || 0;
-        var rect = new Rect$3({
+        var rect = new Rect$2({
           shape: {
             x: dragX != null ? dragX * width : layout2.x,
             y: dragY != null ? dragY * height : layout2.y,
@@ -50942,7 +50917,7 @@ function applyCurveStyle(curveProps, orient, edge) {
       var sourceColor = edge.node1.getVisual("color");
       var targetColor = edge.node2.getVisual("color");
       if (isString(sourceColor) && isString(targetColor)) {
-        curveProps.fill = new LinearGradient$1(0, 0, +(orient === "horizontal"), +(orient === "vertical"), [{
+        curveProps.fill = new LinearGradient(0, 0, +(orient === "horizontal"), +(orient === "vertical"), [{
           color: sourceColor,
           offset: 0
         }, {
@@ -50953,7 +50928,7 @@ function applyCurveStyle(curveProps, orient, edge) {
   }
 }
 function createGridClipShape$1(rect, seriesModel, cb) {
-  var rectEl = new Rect$3({
+  var rectEl = new Rect$2({
     shape: {
       x: rect.x - 10,
       y: rect.y - 10,
@@ -50985,7 +50960,7 @@ var SankeySeriesModel = (
       var levelModels = this.levelModels;
       for (var i = 0; i < levels.length; i++) {
         if (levels[i].depth != null && levels[i].depth >= 0) {
-          levelModels[levels[i].depth] = new Model$1(levels[i], this, ecModel);
+          levelModels[levels[i].depth] = new Model(levels[i], this, ecModel);
         } else {
           {
             throw new Error("levels[i].depth is mandatory and should be natural number");
@@ -52583,7 +52558,7 @@ var EffectSymbol = (
     function EffectSymbol2(data, idx) {
       var _this = _super.call(this) || this;
       var symbol = new Symbol$1(data, idx);
-      var rippleGroup = new Group$4();
+      var rippleGroup = new Group$3();
       _this.add(symbol);
       _this.add(rippleGroup);
       _this.updateData(data, idx);
@@ -52703,7 +52678,7 @@ var EffectSymbol = (
       cb && cb();
     };
     return EffectSymbol2;
-  }(Group$4)
+  }(Group$3)
 );
 var EffectScatterView = (
   /** @class */
@@ -52968,7 +52943,7 @@ var EffectLine = (
       this._updateEffectAnimation(lineData, effectModel, idx);
     };
     return EffectLine2;
-  }(Group$4)
+  }(Group$3)
 );
 var Polyline = (
   /** @class */
@@ -52981,7 +52956,7 @@ var Polyline = (
     }
     Polyline2.prototype._createPolyline = function(lineData, idx, seriesScope) {
       var points2 = lineData.getItemLayout(idx);
-      var line = new Polyline$2({
+      var line = new Polyline$1({
         shape: {
           points: points2
         }
@@ -53026,7 +53001,7 @@ var Polyline = (
       polyline.setShape("points", lineData.getItemLayout(idx));
     };
     return Polyline2;
-  }(Group$4)
+  }(Group$3)
 );
 var EffectPolyline = (
   /** @class */
@@ -53248,7 +53223,7 @@ var LargeLinesPath = (
           minY = Math.min(y, minY);
           maxY = Math.max(y, maxY);
         }
-        rect = this._rect = new BoundingRect$1(minX, minY, maxX, maxY);
+        rect = this._rect = new BoundingRect(minX, minY, maxX, maxY);
       }
       return rect;
     };
@@ -53259,7 +53234,7 @@ var LargeLineDraw = (
   /** @class */
   function() {
     function LargeLineDraw2() {
-      this.group = new Group$4();
+      this.group = new Group$3();
     }
     LargeLineDraw2.prototype.updateData = function(data) {
       this._clear();
@@ -53686,7 +53661,7 @@ var LinesSeriesModel = (
           throw new Error("Unknown coordinate system " + option.coordinateSystem);
         }
       }
-      var lineData = new SeriesData$1(["value"], this);
+      var lineData = new SeriesData(["value"], this);
       lineData.hasItemOption = false;
       lineData.initData(option.data, [], function(dataItem, dimName, dataIndex, dimIndex) {
         if (dataItem instanceof Array) {
@@ -54047,7 +54022,7 @@ var HeatmapView = (
             continue;
           }
           var point = coordSys.dataToPoint([dataDimX, dataDimY]);
-          rect = new Rect$3({
+          rect = new Rect$2({
             shape: {
               x: point[0] - width / 2,
               y: point[1] - height / 2,
@@ -54060,7 +54035,7 @@ var HeatmapView = (
           if (isNaN(data.get(dataDims[1], idx))) {
             continue;
           }
-          rect = new Rect$3({
+          rect = new Rect$2({
             z2: 1,
             shape: coordSys.dataToRect([data.get(dataDims[0], idx)]).contentShape,
             style
@@ -54137,7 +54112,7 @@ var HeatmapView = (
         inRange: inRangeVisuals.color.getColorMapper(),
         outOfRange: outOfRangeVisuals.color.getColorMapper()
       }, isInRange);
-      var img = new ZRImage$1({
+      var img = new ZRImage({
         style: {
           width,
           height,
@@ -54213,7 +54188,7 @@ var LAYOUT_ATTRS = [{
   index: 1,
   posDesc: ["top", "bottom"]
 }];
-var pathForLineWidth = new Circle$1();
+var pathForLineWidth = new Circle();
 var PictorialBarView = (
   /** @class */
   function(_super) {
@@ -54556,7 +54531,7 @@ function createOrUpdateBarRect(bar, symbolMeta, isUpdate) {
   var rectShape = extend({}, symbolMeta.barRectShape);
   var barRect = bar.__pictorialBarRect;
   if (!barRect) {
-    barRect = bar.__pictorialBarRect = new Rect$3({
+    barRect = bar.__pictorialBarRect = new Rect$2({
       z2: 2,
       shape: rectShape,
       silent: true,
@@ -54587,7 +54562,7 @@ function createOrUpdateClip(bar, opt, symbolMeta, isUpdate) {
       }, animationModel, dataIndex);
     } else {
       clipShape[valueDim.wh] = 0;
-      clipPath = new Rect$3({
+      clipPath = new Rect$2({
         shape: clipShape
       });
       bar.__pictorialBundle.setClipPath(clipPath);
@@ -54616,8 +54591,8 @@ function isAnimationEnabled() {
   return this.parentModel.isAnimationEnabled() && !!this.getShallow("animation");
 }
 function createBar(data, opt, symbolMeta, isUpdate) {
-  var bar = new Group$4();
-  var bundle = new Group$4();
+  var bar = new Group$3();
+  var bundle = new Group$3();
   bar.add(bundle);
   bar.__pictorialBundle = bundle;
   bundle.x = symbolMeta.bundlePosition[0];
@@ -54696,7 +54671,7 @@ function updateCommon(bar, opt, symbolMeta) {
   var blurScope = emphasisModel.get("blurScope");
   var hoverScale = emphasisModel.get("scale");
   eachPath(bar, function(path) {
-    if (path instanceof ZRImage$1) {
+    if (path instanceof ZRImage) {
       var pathStyle = path.style;
       path.useStyle(extend({
         // TODO other properties like dx, dy ?
@@ -54845,7 +54820,7 @@ var ThemeRiverView = (
         var margin = labelModel.get("margin");
         var emphasisModel = seriesModel.getModel("emphasis");
         if (status === "add") {
-          var layerGroup = newLayersGroups[idx] = new Group$4();
+          var layerGroup = newLayersGroups[idx] = new Group$3();
           polygon = new ECPolygon({
             shape: {
               points: points0,
@@ -54908,7 +54883,7 @@ var ThemeRiverView = (
   }(ChartView)
 );
 function createGridClipShape(rect, seriesModel, cb) {
-  var rectEl = new Rect$3({
+  var rectEl = new Rect$2({
     shape: {
       x: rect.x - 10,
       y: rect.y - 10,
@@ -55007,7 +54982,7 @@ var ThemeRiverSeriesModel = (
           itemName: 2
         }
       }).dimensions;
-      var list = new SeriesData$1(dimensions, this);
+      var list = new SeriesData(dimensions, this);
       list.initData(data);
       return list;
     };
@@ -55213,7 +55188,7 @@ var SunburstPiece = (
         inside: true
       };
       getECData(_this).seriesIndex = seriesModel.seriesIndex;
-      var text = new ZRText$1({
+      var text = new ZRText({
         z2: DEFAULT_TEXT_Z,
         silent: node.getModel().get(["label", "silent"])
       });
@@ -55363,7 +55338,7 @@ var SunburstPiece = (
       label.dirtyStyle();
     };
     return SunburstPiece2;
-  }(Sector$1)
+  }(Sector)
 );
 var ROOT_TO_NODE_ACTION = "sunburstRootToNode";
 var HIGHLIGHT_ACTION = "sunburstHighlight";
@@ -55578,7 +55553,7 @@ var SunburstSeriesModel = (
       };
       completeTreeValue(root);
       var levelModels = this._levelModels = map$1(option.levels || [], function(levelDefine) {
-        return new Model$1(levelDefine, this, ecModel);
+        return new Model(levelDefine, this, ecModel);
       }, this);
       var tree = Tree.createTree(root, this, beforeLink);
       function beforeLink(nodeData) {
@@ -56371,7 +56346,7 @@ function applyPropsTransition(el, elOption, dataIndex, model, transFromProps) {
 function applyMiscProps(el, elOption) {
   hasOwn(elOption, "silent") && (el.silent = elOption.silent);
   hasOwn(elOption, "ignore") && (el.ignore = elOption.ignore);
-  if (el instanceof Displayable$1) {
+  if (el instanceof Displayable) {
     hasOwn(elOption, "invisible") && (el.invisible = elOption.invisible);
   }
   if (el instanceof Path) {
@@ -56721,7 +56696,7 @@ function isPath(el) {
   return el instanceof Path;
 }
 function isDisplayable(el) {
-  return el instanceof Displayable$1;
+  return el instanceof Displayable;
 }
 function copyElement(sourceEl, targetEl) {
   targetEl.copyTransform(sourceEl);
@@ -56828,12 +56803,12 @@ function createEl$1(elOption) {
     el = makePath(pathData, null, pathRect, shape.layout || "center");
     customInnerStore(el).customPathData = pathData;
   } else if (graphicType === "image") {
-    el = new ZRImage$1({});
+    el = new ZRImage({});
     customInnerStore(el).customImagePath = elOption.style.image;
   } else if (graphicType === "text") {
-    el = new ZRText$1({});
+    el = new ZRText({});
   } else if (graphicType === "group") {
-    el = new Group$4();
+    el = new Group$3();
   } else if (graphicType === "compoundPath") {
     throw new Error('"compoundPath" is not supported yet.');
   } else {
@@ -57392,7 +57367,7 @@ var BaseAxisPointer = (
       this._lastGraphicKey = graphicKey;
       var moveAnimation = this._moveAnimation = this.determineAnimation(axisModel, axisPointerModel);
       if (!group) {
-        group = this._group = new Group$4();
+        group = this._group = new Group$3();
         this.createPointerEl(group, elOption, axisModel, axisPointerModel);
         this.createLabelEl(group, elOption, axisModel, axisPointerModel);
         api.getZr().add(group);
@@ -57443,7 +57418,7 @@ var BaseAxisPointer = (
     };
     BaseAxisPointer2.prototype.createLabelEl = function(group, elOption, axisModel, axisPointerModel) {
       if (elOption.label) {
-        var labelEl = inner$b(group).labelEl = new ZRText$1(clone$1(elOption.label));
+        var labelEl = inner$b(group).labelEl = new ZRText(clone$1(elOption.label));
         group.add(labelEl);
         updateLabelShowHide(labelEl, axisPointerModel);
       }
@@ -58579,10 +58554,10 @@ var RadiusAxis = (
       return this.polar.pointToData(point, clamp2)[this.dim === "radius" ? 0 : 1];
     };
     return RadiusAxis2;
-  }(Axis$1)
+  }(Axis)
 );
-RadiusAxis.prototype.dataToRadius = Axis$1.prototype.dataToCoord;
-RadiusAxis.prototype.radiusToData = Axis$1.prototype.coordToData;
+RadiusAxis.prototype.dataToRadius = Axis.prototype.dataToCoord;
+RadiusAxis.prototype.radiusToData = Axis.prototype.coordToData;
 var inner$8 = makeInner();
 var AngleAxis = (
   /** @class */
@@ -58623,10 +58598,10 @@ var AngleAxis = (
       return interval;
     };
     return AngleAxis2;
-  }(Axis$1)
+  }(Axis)
 );
-AngleAxis.prototype.dataToAngle = Axis$1.prototype.dataToCoord;
-AngleAxis.prototype.angleToData = Axis$1.prototype.coordToData;
+AngleAxis.prototype.dataToAngle = Axis.prototype.dataToCoord;
+AngleAxis.prototype.angleToData = Axis.prototype.coordToData;
 var polarDimensions = ["radius", "angle"];
 var Polar = (
   /** @class */
@@ -58757,7 +58732,6 @@ function getCoordSys$2(finder) {
   var polarModel = finder.polarModel;
   return polarModel && polarModel.coordinateSystem || seriesModel && seriesModel.coordinateSystem;
 }
-const Polar$1 = Polar;
 function resizePolar(polar, polarModel, api) {
   var center2 = polarModel.get("center");
   var width = api.getWidth();
@@ -58824,7 +58798,7 @@ var polarCreator = {
   create: function(ecModel, api) {
     var polarList = [];
     ecModel.eachComponent("polar", function(polarModel, idx) {
-      var polar = new Polar$1(idx + "");
+      var polar = new Polar(idx + "");
       polar.update = updatePolarScale;
       var radiusAxis = polar.getRadiusAxis();
       var angleAxis = polar.getAngleAxis();
@@ -58938,7 +58912,7 @@ var angelAxisElementsBuilders = {
         silent: true
       });
     } else {
-      shape = new Ring$1({
+      shape = new Ring({
         shape: {
           cx: polar.cx,
           cy: polar.cy,
@@ -58958,7 +58932,7 @@ var angelAxisElementsBuilders = {
     var tickLen = (tickModel.get("inside") ? -1 : 1) * tickModel.get("length");
     var radius = radiusExtent[getRadiusIdx(polar)];
     var lines = map$1(ticksAngles, function(tickAngleItem) {
-      return new Line$2({
+      return new Line$1({
         shape: getAxisLineShape(polar, [radius, radius + tickLen], tickAngleItem.coord)
       });
     });
@@ -58979,7 +58953,7 @@ var angelAxisElementsBuilders = {
     var lines = [];
     for (var i = 0; i < minorTickAngles.length; i++) {
       for (var k = 0; k < minorTickAngles[i].length; k++) {
-        lines.push(new Line$2({
+        lines.push(new Line$1({
           shape: getAxisLineShape(polar, [radius, radius + tickLen], minorTickAngles[i][k].coord)
         }));
       }
@@ -59007,10 +58981,10 @@ var angelAxisElementsBuilders = {
       if (rawCategoryData && rawCategoryData[tickValue]) {
         var rawCategoryItem = rawCategoryData[tickValue];
         if (isObject$3(rawCategoryItem) && rawCategoryItem.textStyle) {
-          labelModel = new Model$1(rawCategoryItem.textStyle, commonLabelModel, commonLabelModel.ecModel);
+          labelModel = new Model(rawCategoryItem.textStyle, commonLabelModel, commonLabelModel.ecModel);
         }
       }
-      var textEl = new ZRText$1({
+      var textEl = new ZRText({
         silent: AxisBuilder.isLabelSilent(angleAxisModel),
         style: createTextStyle$1(labelModel, {
           x: p[0],
@@ -59040,7 +59014,7 @@ var angelAxisElementsBuilders = {
     for (var i = 0; i < ticksAngles.length; i++) {
       var colorIndex = lineCount++ % lineColors.length;
       splitLines[colorIndex] = splitLines[colorIndex] || [];
-      splitLines[colorIndex].push(new Line$2({
+      splitLines[colorIndex].push(new Line$1({
         shape: getAxisLineShape(polar, radiusExtent, ticksAngles[i].coord)
       }));
     }
@@ -59063,7 +59037,7 @@ var angelAxisElementsBuilders = {
     var lines = [];
     for (var i = 0; i < minorTickAngles.length; i++) {
       for (var k = 0; k < minorTickAngles[i].length; k++) {
-        lines.push(new Line$2({
+        lines.push(new Line$1({
           shape: getAxisLineShape(polar, radiusExtent, minorTickAngles[i][k].coord)
         }));
       }
@@ -59093,7 +59067,7 @@ var angelAxisElementsBuilders = {
       var coord = i === len2 ? ticksAngles[0].coord : ticksAngles[i].coord;
       var colorIndex = lineCount++ % areaColors.length;
       splitAreas[colorIndex] = splitAreas[colorIndex] || [];
-      splitAreas[colorIndex].push(new Sector$1({
+      splitAreas[colorIndex].push(new Sector({
         shape: {
           cx: polar.cx,
           cy: polar.cy,
@@ -59135,7 +59109,7 @@ var RadiusAxisView = (
         return;
       }
       var oldAxisGroup = this._axisGroup;
-      var newAxisGroup = this._axisGroup = new Group$4();
+      var newAxisGroup = this._axisGroup = new Group$3();
       this.group.add(newAxisGroup);
       var radiusAxis = radiusAxisModel.axis;
       var polar = radiusAxis.polar;
@@ -59205,7 +59179,7 @@ var axisElementBuilders$1 = {
     var lines = [];
     for (var i = 0; i < minorTicksCoords.length; i++) {
       for (var k = 0; k < minorTicksCoords[i].length; k++) {
-        lines.push(new Circle$1({
+        lines.push(new Circle({
           shape: {
             cx: polar.cx,
             cy: polar.cy,
@@ -59235,7 +59209,7 @@ var axisElementBuilders$1 = {
     for (var i = 1; i < ticksCoords.length; i++) {
       var colorIndex = lineCount++ % areaColors.length;
       splitAreas[colorIndex] = splitAreas[colorIndex] || [];
-      splitAreas[colorIndex].push(new Sector$1({
+      splitAreas[colorIndex].push(new Sector({
         shape: {
           cx: polar.cx,
           cy: polar.cy,
@@ -59556,7 +59530,7 @@ var SingleAxisView = (
       var group = this.group;
       group.removeAll();
       var oldAxisGroup = this._axisGroup;
-      this._axisGroup = new Group$4();
+      this._axisGroup = new Group$3();
       var layout2 = layout$1(axisModel);
       var axisBuilder = new AxisBuilder(axisModel, layout2);
       each$f(axisBuilderAttrs, axisBuilder.add, axisBuilder);
@@ -59610,7 +59584,7 @@ var axisElementBuilders = {
         p2[0] = gridRect.x + gridRect.width;
         p2[1] = tickCoord;
       }
-      var line = new Line$2({
+      var line = new Line$1({
         shape: {
           x1: p1[0],
           y1: p1[1],
@@ -59714,7 +59688,7 @@ var SingleAxis = (
       return this.coordinateSystem.pointToData(point)[0];
     };
     return SingleAxis2;
-  }(Axis$1)
+  }(Axis)
 );
 var singleDimensions = ["single"];
 var Single = (
@@ -60121,7 +60095,7 @@ var CalendarView = (
       var sh = coordSys.getCellHeight();
       for (var i = rangeData.start.time; i <= rangeData.end.time; i = coordSys.getNextNDay(i, 1).time) {
         var point = coordSys.dataToRect([i], false).tl;
-        var rect = new Rect$3({
+        var rect = new Rect$2({
           shape: {
             x: point[0],
             y: point[1],
@@ -60174,7 +60148,7 @@ var CalendarView = (
       return rs;
     };
     CalendarView2.prototype._drawSplitline = function(points2, lineStyle, group) {
-      var poyline = new Polyline$2({
+      var poyline = new Polyline$1({
         z2: 20,
         shape: {
           points: points2
@@ -60264,7 +60238,7 @@ var CalendarView = (
         nameMap: name
       };
       var content = this._formatterLabel(formatter, params);
-      var yearText = new ZRText$1({
+      var yearText = new ZRText({
         z2: 30,
         style: createTextStyle$1(yearLabel, {
           text: content
@@ -60339,7 +60313,7 @@ var CalendarView = (
           nameMap: name_1
         };
         var content = this._formatterLabel(formatter, params);
-        var monthText = new ZRText$1({
+        var monthText = new ZRText({
           z2: 30,
           style: extend(createTextStyle$1(monthLabel, {
             text: content
@@ -60399,7 +60373,7 @@ var CalendarView = (
         var point = coordSys.dataToRect([tmpD.time], false).center;
         var day = i;
         day = Math.abs((i + firstDayOfWeek) % 7);
-        var weekText = new ZRText$1({
+        var weekText = new ZRText({
           z2: 30,
           style: extend(createTextStyle$1(dayLabel, {
             text: nameMap[day]
@@ -60839,9 +60813,9 @@ var nonShapeGraphicElements = {
   path: null,
   compoundPath: null,
   // Supported in graphic component.
-  group: Group$4,
-  image: ZRImage$1,
-  text: ZRText$1
+  group: Group$3,
+  image: ZRImage,
+  text: ZRText
 };
 var inner$7 = makeInner();
 var GraphicComponentView = (
@@ -60935,9 +60909,9 @@ var GraphicComponentView = (
         if (el && textContentOption) {
           if (isMerge) {
             var textContentExisting = el.getTextContent();
-            textContentExisting ? textContentExisting.attr(textContentOption) : el.setTextContent(new ZRText$1(textContentOption));
+            textContentExisting ? textContentExisting.attr(textContentOption) : el.setTextContent(new ZRText(textContentOption));
           } else if (isReplace) {
-            el.setTextContent(new ZRText$1(textContentOption));
+            el.setTextContent(new ZRText(textContentOption));
           }
         }
         if (el) {
@@ -61082,7 +61056,7 @@ function removeEl$1(elExisting, elOption, elMap, graphicModel) {
 function updateCommonAttrs(el, elOption, defaultZ, defaultZlevel) {
   if (!el.isGroup) {
     each$f([
-      ["cursor", Displayable$1.prototype.cursor],
+      ["cursor", Displayable.prototype.cursor],
       // We should not support configure z and zlevel in the element level.
       // But seems we didn't limit it previously. So here still use it to avoid breaking.
       ["zlevel", defaultZlevel || 0],
@@ -61951,7 +61925,7 @@ function makeBackground(rect, componentModel) {
   var padding = normalizeCssArray(componentModel.get("padding"));
   var style = componentModel.getItemStyle(["color", "opacity"]);
   style.fill = componentModel.get("backgroundColor");
-  rect = new Rect$3({
+  rect = new Rect$2({
     shape: {
       x: rect.x - padding[3],
       y: rect.y - padding[0],
@@ -61992,7 +61966,7 @@ var ToolboxView = (
         var featureName = featureNames[newIndex];
         var oldName = featureNames[oldIndex];
         var featureOpt = featureOpts[featureName];
-        var featureModel = new Model$1(featureOpt, toolboxModel, toolboxModel.ecModel);
+        var featureModel = new Model(featureOpt, toolboxModel, toolboxModel.ecModel);
         var feature;
         if (payload && payload.newTitle != null && payload.featureName === featureName) {
           featureOpt.title = payload.newTitle;
@@ -62076,7 +62050,7 @@ var ToolboxView = (
           path.setStyle(iconStyleModel.getItemStyle());
           var pathEmphasisState = path.ensureState("emphasis");
           pathEmphasisState.style = iconStyleEmphasisModel.getItemStyle();
-          var textContent = new ZRText$1({
+          var textContent = new ZRText({
             style: {
               text: titlesMap[iconName],
               align: iconStyleEmphasisModel.get("textAlign"),
@@ -62136,7 +62110,7 @@ var ToolboxView = (
         var emphasisTextState = textContent && textContent.ensureState("emphasis");
         if (emphasisTextState && !isFunction(emphasisTextState) && titleText) {
           var emphasisTextStyle = emphasisTextState.style || (emphasisTextState.style = {});
-          var rect = getBoundingRect(titleText, ZRText$1.makeFont(emphasisTextStyle));
+          var rect = getBoundingRect(titleText, ZRText.makeFont(emphasisTextStyle));
           var offsetX = icon.x + group.x;
           var offsetY = icon.y + group.y + itemSize;
           var needPutOnTop = false;
@@ -63760,7 +63734,7 @@ var TooltipRichContent = (
         this._zr.remove(this.el);
       }
       var textStyleModel = tooltipModel.getModel("textStyle");
-      this.el = new ZRText$1({
+      this.el = new ZRText({
         style: {
           rich: markupStyleCreator.richTextStyles,
           text: content,
@@ -63874,7 +63848,7 @@ function makeStyleCoord(out2, zr, zrX, zrY) {
   out2[2] = out2[0] / zr.getWidth();
   out2[3] = out2[1] / zr.getHeight();
 }
-var proxyRect = new Rect$3({
+var proxyRect = new Rect$2({
   shape: {
     x: -1,
     y: -1,
@@ -64417,15 +64391,15 @@ function buildTooltipModel(modelCascade, globalTooltipModel, defaultTooltipOptio
   var ecModel = globalTooltipModel.ecModel;
   var resultModel;
   if (defaultTooltipOption) {
-    resultModel = new Model$1(defaultTooltipOption, ecModel, ecModel);
-    resultModel = new Model$1(globalTooltipModel.option, resultModel, ecModel);
+    resultModel = new Model(defaultTooltipOption, ecModel, ecModel);
+    resultModel = new Model(globalTooltipModel.option, resultModel, ecModel);
   } else {
     resultModel = globalTooltipModel;
   }
   for (var i = modelCascade.length - 1; i >= 0; i--) {
     var tooltipOpt = modelCascade[i];
     if (tooltipOpt) {
-      if (tooltipOpt instanceof Model$1) {
+      if (tooltipOpt instanceof Model) {
         tooltipOpt = tooltipOpt.get("tooltip", true);
       }
       if (isString(tooltipOpt)) {
@@ -64434,7 +64408,7 @@ function buildTooltipModel(modelCascade, globalTooltipModel, defaultTooltipOptio
         };
       }
       if (tooltipOpt) {
-        resultModel = new Model$1(tooltipOpt, resultModel, ecModel);
+        resultModel = new Model(tooltipOpt, resultModel, ecModel);
       }
     }
   }
@@ -64756,7 +64730,7 @@ var selector = {
       var width = itemLayout.width;
       var height = itemLayout.height;
       var p = points2[0];
-      if (contain(points2, x, y) || contain(points2, x + width, y) || contain(points2, x, y + height) || contain(points2, x + width, y + height) || BoundingRect$1.create(itemLayout).contain(p[0], p[1]) || linePolygonIntersect(x, y, x + width, y, points2) || linePolygonIntersect(x, y, x, y + height, points2) || linePolygonIntersect(x + width, y, x + width, y + height, points2) || linePolygonIntersect(x, y + height, x + width, y + height, points2)) {
+      if (contain(points2, x, y) || contain(points2, x + width, y) || contain(points2, x, y + height) || contain(points2, x + width, y + height) || BoundingRect.create(itemLayout).contain(p[0], p[1]) || linePolygonIntersect(x, y, x + width, y, points2) || linePolygonIntersect(x, y, x, y + height, points2) || linePolygonIntersect(x + width, y, x + width, y + height, points2) || linePolygonIntersect(x, y + height, x + width, y + height, points2)) {
         return true;
       }
     }
@@ -64956,7 +64930,7 @@ var boundingRectBuilders = {
   }
 };
 function getBoundingRectFromMinMax(minMax) {
-  return new BoundingRect$1(minMax[0][0], minMax[1][0], minMax[0][1] - minMax[0][0], minMax[1][1] - minMax[1][0]);
+  return new BoundingRect(minMax[0][0], minMax[1][0], minMax[0][1] - minMax[0][0], minMax[1][1] - minMax[1][0]);
 }
 var BrushView = (
   /** @class */
@@ -65079,7 +65053,7 @@ function generateBrushOption(option, brushOption) {
     brushType: option.brushType,
     brushMode: option.brushMode,
     transformable: option.transformable,
-    brushStyle: new Model$1(option.brushStyle).getItemStyle(),
+    brushStyle: new Model(option.brushStyle).getItemStyle(),
     removeOnClick: option.removeOnClick,
     z: option.z
   }, brushOption, true);
@@ -65261,7 +65235,7 @@ var TitleView = (
       var subtextStyleModel = titleModel.getModel("subtextStyle");
       var textAlign = titleModel.get("textAlign");
       var textVerticalAlign = retrieve2(titleModel.get("textBaseline"), titleModel.get("textVerticalAlign"));
-      var textEl = new ZRText$1({
+      var textEl = new ZRText({
         style: createTextStyle$1(textStyleModel, {
           text: titleModel.get("text"),
           fill: textStyleModel.getTextColor()
@@ -65272,7 +65246,7 @@ var TitleView = (
       });
       var textRect = textEl.getBoundingRect();
       var subText = titleModel.get("subtext");
-      var subTextEl = new ZRText$1({
+      var subTextEl = new ZRText({
         style: createTextStyle$1(subtextStyleModel, {
           text: subText,
           fill: subtextStyleModel.getTextColor(),
@@ -65348,7 +65322,7 @@ var TitleView = (
       var padding = layoutRect.margin;
       var style = titleModel.getItemStyle(["color", "opacity"]);
       style.fill = titleModel.get("backgroundColor");
-      var rect = new Rect$3({
+      var rect = new Rect$2({
         shape: {
           x: groupRect.x - padding[3],
           y: groupRect.y - padding[0],
@@ -65441,7 +65415,7 @@ var TimelineModel = (
         time: "time",
         value: "number"
       }[axisType] || "number";
-      var data = this._data = new SeriesData$1([{
+      var data = this._data = new SeriesData([{
         name: "value",
         type: dimType
       }], this);
@@ -65623,7 +65597,7 @@ var TimelineAxis = (
       return this.model.get("orient") === "horizontal";
     };
     return TimelineAxis2;
-  }(Axis$1)
+  }(Axis)
 );
 var PI = Math.PI;
 var labelDataIndexStore = makeInner();
@@ -65820,7 +65794,7 @@ var SliderTimelineView = (
       return axis;
     };
     SliderTimelineView2.prototype._createGroup = function(key) {
-      var newGroup = this[key] = new Group$4();
+      var newGroup = this[key] = new Group$3();
       this.group.add(newGroup);
       return newGroup;
     };
@@ -65829,7 +65803,7 @@ var SliderTimelineView = (
       if (!timelineModel.get(["lineStyle", "show"])) {
         return;
       }
-      var line = new Line$2({
+      var line = new Line$1({
         shape: {
           x1: axisExtent[0],
           y1: 0,
@@ -65843,7 +65817,7 @@ var SliderTimelineView = (
         z2: 1
       });
       group.add(line);
-      var progressLine = this._progressLine = new Line$2({
+      var progressLine = this._progressLine = new Line$1({
         shape: {
           x1: axisExtent[0],
           x2: this._currentPointer ? this._currentPointer.x : axisExtent[0],
@@ -65905,7 +65879,7 @@ var SliderTimelineView = (
         var hoverLabelModel = itemModel.getModel(["emphasis", "label"]);
         var progressLabelModel = itemModel.getModel(["progress", "label"]);
         var tickCoord = axis.dataToCoord(labelItem.tickValue);
-        var textEl = new ZRText$1({
+        var textEl = new ZRText({
           x: tickCoord,
           y: 0,
           rotation: layoutInfo.labelRotation - layoutInfo.rotation,
@@ -66102,7 +66076,7 @@ function getViewRect(model, api) {
 }
 function makeControlIcon(timelineModel, objPath, rect, opts) {
   var style = opts.style;
-  var icon = createIcon(timelineModel.get(["controlStyle", objPath]), opts || {}, new BoundingRect$1(rect[0], rect[1], rect[2], rect[3]));
+  var icon = createIcon(timelineModel.get(["controlStyle", objPath]), opts || {}, new BoundingRect(rect[0], rect[1], rect[2], rect[3]));
   if (style) {
     icon.setStyle(style);
   }
@@ -66727,7 +66701,7 @@ function createData(coordSys, seriesModel, mpModel) {
       type: "float"
     }];
   }
-  var mpData = new SeriesData$1(coordDimsInfos, mpModel);
+  var mpData = new SeriesData(coordDimsInfos, mpModel);
   var dataOpt = map$1(mpModel.get("data"), curry$1(dataTransform, seriesModel));
   if (coordSys) {
     dataOpt = filter(dataOpt, curry$1(dataFilter, coordSys));
@@ -67028,9 +67002,9 @@ function createList$1(coordSys, seriesModel, mlModel) {
       type: "float"
     }];
   }
-  var fromData = new SeriesData$1(coordDimsInfos, mlModel);
-  var toData = new SeriesData$1(coordDimsInfos, mlModel);
-  var lineData = new SeriesData$1([], mlModel);
+  var fromData = new SeriesData(coordDimsInfos, mlModel);
+  var toData = new SeriesData(coordDimsInfos, mlModel);
+  var lineData = new SeriesData([], mlModel);
   var optData = map$1(mlModel.get("data"), curry$1(markLineTransform, seriesModel, coordSys, mlModel));
   if (coordSys) {
     optData = filter(optData, curry$1(markLineFilter, coordSys));
@@ -67239,7 +67213,7 @@ var MarkAreaView = (
       var seriesData = seriesModel.getData();
       var areaGroupMap = this.markerGroupMap;
       var polygonGroup = areaGroupMap.get(seriesId) || areaGroupMap.set(seriesId, {
-        group: new Group$4()
+        group: new Group$3()
       });
       this.group.add(polygonGroup.group);
       this.markKeep(polygonGroup);
@@ -67279,7 +67253,7 @@ var MarkAreaView = (
       areaData.diff(inner$2(polygonGroup).data).add(function(idx) {
         var layout2 = areaData.getItemLayout(idx);
         if (!layout2.allClipped) {
-          var polygon = new Polygon$1({
+          var polygon = new Polygon({
             shape: {
               points: layout2.points
             }
@@ -67298,7 +67272,7 @@ var MarkAreaView = (
               }
             }, maModel, newIdx);
           } else {
-            polygon = new Polygon$1({
+            polygon = new Polygon({
               shape: {
                 points: layout2.points
               }
@@ -67354,13 +67328,13 @@ function createList(coordSys, seriesModel, maModel) {
         type: coordDimsInfos_1[idx % 2].type
       };
     });
-    areaData = new SeriesData$1(dataDims, maModel);
+    areaData = new SeriesData(dataDims, maModel);
   } else {
     dataDims = [{
       name: "value",
       type: "float"
     }];
-    areaData = new SeriesData$1(dataDims, maModel);
+    areaData = new SeriesData(dataDims, maModel);
   }
   var optData = map$1(maModel.get("data"), curry$1(markAreaTransform, seriesModel, coordSys, maModel));
   if (coordSys) {
@@ -67496,7 +67470,7 @@ var LegendModel = (
           return null;
         }
         legendNameMap.set(dataItem.name, true);
-        return new Model$1(dataItem, this, this.ecModel);
+        return new Model(dataItem, this, this.ecModel);
       }, this);
       this._data = filter(legendData, function(item) {
         return !!item;
@@ -67640,7 +67614,7 @@ var LegendModel = (
 );
 var curry = curry$1;
 var each$3 = each$f;
-var Group$1 = Group$4;
+var Group$1 = Group$3;
 var LegendView = (
   /** @class */
   function(_super) {
@@ -67786,7 +67760,7 @@ var LegendView = (
       var selectorGroup = this.getSelectorGroup();
       each$3(selector2, function createSelectorButton(selectorItem) {
         var type = selectorItem.type;
-        var labelText = new ZRText$1({
+        var labelText = new ZRText({
           style: {
             x: 0,
             y: 0,
@@ -67855,7 +67829,7 @@ var LegendView = (
         content = formatter(name);
       }
       var textColor = isSelected ? textStyleModel.getTextColor() : legendItemModel.get("inactiveColor");
-      itemGroup.add(new ZRText$1({
+      itemGroup.add(new ZRText({
         style: createTextStyle$1(textStyleModel, {
           text: content,
           x: textX,
@@ -67867,7 +67841,7 @@ var LegendView = (
           inheritColor: textColor
         })
       }));
-      var hitRect = new Rect$3({
+      var hitRect = new Rect$2({
         shape: itemGroup.getBoundingRect(),
         style: {
           // Cannot use 'invisible' because SVG SSR will miss the node
@@ -68159,7 +68133,7 @@ function mergeAndNormalizeLayoutParams(legendModel, target, raw) {
     ignoreSize: !!ignoreSize
   });
 }
-var Group = Group$4;
+var Group = Group$3;
 var WH = ["width", "height"];
 var XY = ["x", "y"];
 var ScrollableLegendView = (
@@ -68193,7 +68167,7 @@ var ScrollableLegendView = (
       var pageIconSizeArr = isArray$1(pageIconSize) ? pageIconSize : [pageIconSize, pageIconSize];
       createPageButton("pagePrev", 0);
       var pageTextStyleModel = legendModel.getModel("pageTextStyle");
-      controllerGroup.add(new ZRText$1({
+      controllerGroup.add(new ZRText({
         name: "pageText",
         style: {
           // Placeholder to calculate a proper layout.
@@ -68307,7 +68281,7 @@ var ScrollableLegendView = (
         };
         clipShape[wh] = Math.max(maxSize[wh] - controllerRect[wh] - pageButtonGap, 0);
         clipShape[hw] = mainRect[hw];
-        containerGroup.setClipPath(new Rect$3({
+        containerGroup.setClipPath(new Rect$2({
           shape: clipShape
         }));
         containerGroup.__rectSize = clipShape[wh];
@@ -68883,7 +68857,7 @@ var SliderZoomModel = (
     return SliderZoomModel2;
   }(DataZoomModel)
 );
-var Rect = Rect$3;
+var Rect = Rect$2;
 var DEFAULT_LOCATION_EDGE_GAP = 7;
 var DEFAULT_FRAME_BORDER_WIDTH = 1;
 var DEFAULT_FILLER_SIZE = 30;
@@ -68947,7 +68921,7 @@ var SliderZoomView = (
       this._displayables.brushRect = null;
       this._resetLocation();
       this._resetInterval();
-      var barGroup = this._displayables.sliderGroup = new Group$4();
+      var barGroup = this._displayables.sliderGroup = new Group$3();
       this._renderBackground();
       this._renderHandle();
       this._renderDataShadow();
@@ -69122,8 +69096,8 @@ var SliderZoomView = (
       var dataZoomModel = this.dataZoomModel;
       function createDataShadowGroup(isSelectedArea) {
         var model = dataZoomModel.getModel(isSelectedArea ? "selectedDataBackground" : "dataBackground");
-        var group2 = new Group$4();
-        var polygon = new Polygon$1({
+        var group2 = new Group$3();
+        var polygon = new Polygon({
           shape: {
             points: polygonPts
           },
@@ -69132,7 +69106,7 @@ var SliderZoomView = (
           silent: true,
           z2: -20
         });
-        var polyline = new Polyline$2({
+        var polyline = new Polyline$1({
           shape: {
             points: polylinePts
           },
@@ -69258,7 +69232,7 @@ var SliderZoomView = (
         }
         sliderGroup.add(handles[handleIndex] = path);
         var textStyleModel = dataZoomModel.getModel("textStyle");
-        thisGroup.add(handleLabels[handleIndex] = new ZRText$1({
+        thisGroup.add(handleLabels[handleIndex] = new ZRText({
           silent: true,
           invisible: true,
           style: createTextStyle$1(textStyleModel, {
@@ -69276,7 +69250,7 @@ var SliderZoomView = (
       var actualMoveZone = filler;
       if (brushSelect) {
         var moveHandleHeight = parsePercent(dataZoomModel.get("moveHandleSize"), size[1]);
-        var moveHandle_1 = displayables.moveHandle = new Rect$3({
+        var moveHandle_1 = displayables.moveHandle = new Rect$2({
           style: dataZoomModel.getModel("moveHandleStyle").getItemStyle(),
           silent: true,
           shape: {
@@ -69291,7 +69265,7 @@ var SliderZoomView = (
         moveHandleIcon.y = size[1] + moveHandleHeight / 2 - 0.5;
         moveHandle_1.ensureState("emphasis").style = dataZoomModel.getModel(["emphasis", "moveHandleStyle"]).getItemStyle();
         var moveZoneExpandSize = Math.min(size[1] / 2, Math.max(moveHandleHeight, 10));
-        actualMoveZone = displayables.moveZone = new Rect$3({
+        actualMoveZone = displayables.moveZone = new Rect$2({
           invisible: true,
           shape: {
             y: size[1] - moveZoneExpandSize,
@@ -69372,7 +69346,7 @@ var SliderZoomView = (
         var segGroup = dataShadowSegs[i];
         var clipPath = segGroup.getClipPath();
         if (!clipPath) {
-          clipPath = new Rect$3();
+          clipPath = new Rect$2();
           segGroup.setClipPath(clipPath);
         }
         clipPath.setShape({
@@ -70080,7 +70054,7 @@ var VisualMapView = (
       var visualMapModel = this.visualMapModel;
       var padding = normalizeCssArray(visualMapModel.get("padding") || 0);
       var rect = group.getBoundingRect();
-      group.add(new Rect$3({
+      group.add(new Rect$2({
         z2: -1,
         silent: true,
         shape: {
@@ -70233,7 +70207,7 @@ var ContinuousView = (
       var align = this._applyTransform(endsIndex === 0 ? "bottom" : "top", barGroup);
       var orient = this._orient;
       var textStyleModel = this.visualMapModel.textStyleModel;
-      this.group.add(new ZRText$1({
+      this.group.add(new ZRText({
         style: createTextStyle$1(textStyleModel, {
           x: position2[0],
           y: position2[1],
@@ -70251,11 +70225,11 @@ var ContinuousView = (
       var useHandle = this._useHandle;
       var itemAlign = getItemAlign(visualMapModel, this.api, itemSize);
       var mainGroup = shapes.mainGroup = this._createBarGroup(itemAlign);
-      var gradientBarGroup = new Group$4();
+      var gradientBarGroup = new Group$3();
       mainGroup.add(gradientBarGroup);
       gradientBarGroup.add(shapes.outOfRange = createPolygon());
       gradientBarGroup.add(shapes.inRange = createPolygon(null, useHandle ? getCursor(this._orient) : null, bind$1(this._dragHandle, this, "all", false), bind$1(this._dragHandle, this, "all", true)));
-      gradientBarGroup.setClipPath(new Rect$3({
+      gradientBarGroup.setClipPath(new Rect$2({
         shape: {
           x: 0,
           y: 0,
@@ -70302,7 +70276,7 @@ var ContinuousView = (
       setAsHighDownDispatcher(handleThumb, true);
       mainGroup.add(handleThumb);
       var textStyleModel = this.visualMapModel.textStyleModel;
-      var handleLabel = new ZRText$1({
+      var handleLabel = new ZRText({
         cursor,
         draggable: true,
         drift: onDrift,
@@ -70339,7 +70313,7 @@ var ContinuousView = (
         x: itemSize[0] / 2
       });
       var indicatorStyle = visualMapModel.getModel("indicatorStyle").getItemStyle();
-      if (indicator instanceof ZRImage$1) {
+      if (indicator instanceof ZRImage) {
         var pathStyle = indicator.style;
         indicator.useStyle(extend({
           // TODO other properties like x, y ?
@@ -70354,7 +70328,7 @@ var ContinuousView = (
       }
       mainGroup.add(indicator);
       var textStyleModel = this.visualMapModel.textStyleModel;
-      var indicatorLabel = new ZRText$1({
+      var indicatorLabel = new ZRText({
         silent: true,
         invisible: true,
         style: createTextStyle$1(textStyleModel, {
@@ -70446,7 +70420,7 @@ var ContinuousView = (
       var symbolSizes = [this.getControllerVisual(dataInterval[0], "symbolSize", opts), this.getControllerVisual(dataInterval[1], "symbolSize", opts)];
       var barPoints = this._createBarPoints(handleEnds, symbolSizes);
       return {
-        barColor: new LinearGradient$1(0, 0, 0, 1, colorStops),
+        barColor: new LinearGradient(0, 0, 0, 1, colorStops),
         barPoints,
         handlesColor: [colorStops[0].color, colorStops[colorStops.length - 1].color]
       };
@@ -70482,7 +70456,7 @@ var ContinuousView = (
     ContinuousView2.prototype._createBarGroup = function(itemAlign) {
       var orient = this._orient;
       var inverse = this.visualMapModel.get("inverse");
-      return new Group$4(orient === "horizontal" && !inverse ? {
+      return new Group$3(orient === "horizontal" && !inverse ? {
         scaleX: itemAlign === "bottom" ? 1 : -1,
         rotation: Math.PI / 2
       } : orient === "horizontal" && inverse ? {
@@ -70715,7 +70689,7 @@ var ContinuousView = (
   }(VisualMapView)
 );
 function createPolygon(points2, cursor, onDrift, onDragEnd) {
-  return new Polygon$1({
+  return new Polygon({
     shape: {
       points: points2
     },
@@ -71215,14 +71189,14 @@ var PiecewiseVisualMapView = (
       endsText && this._renderEndsText(thisGroup, endsText[0], itemSize, showLabel, itemAlign);
       each$f(viewData.viewPieceList, function(item) {
         var piece = item.piece;
-        var itemGroup = new Group$4();
+        var itemGroup = new Group$3();
         itemGroup.onclick = bind$1(this._onItemClick, this, piece);
         this._enableHoverLink(itemGroup, item.indexInModelPieceList);
         var representValue = visualMapModel.getRepresentValue(piece);
         this._createItemSymbol(itemGroup, representValue, [0, 0, itemSize[0], itemSize[1]]);
         if (showLabel) {
           var visualState = this.visualMapModel.getValueState(representValue);
-          itemGroup.add(new ZRText$1({
+          itemGroup.add(new ZRText({
             style: {
               x: itemAlign === "right" ? -textGap : itemSize[0] + textGap,
               y: itemSize[1] / 2,
@@ -71274,9 +71248,9 @@ var PiecewiseVisualMapView = (
       if (!text) {
         return;
       }
-      var itemGroup = new Group$4();
+      var itemGroup = new Group$3();
       var textStyleModel = this.visualMapModel.textStyleModel;
-      itemGroup.add(new ZRText$1({
+      itemGroup.add(new ZRText({
         style: createTextStyle$1(textStyleModel, {
           x: showLabel ? itemAlign === "right" ? itemSize[0] : 0 : itemSize[0] / 2,
           y: itemSize[1] / 2,
@@ -72344,7 +72318,7 @@ function binaryDividePolygon(polygonShape) {
   var min3 = [];
   var max3 = [];
   fromPoints(points2, min3, max3);
-  var boundingRect = new BoundingRect$1(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
+  var boundingRect = new BoundingRect(min3[0], min3[1], max3[0] - min3[0], max3[1] - min3[1]);
   var width = boundingRect.width;
   var height = boundingRect.height;
   var x = boundingRect.x;
@@ -72400,11 +72374,11 @@ function split(path, count2) {
   switch (path.type) {
     case "rect":
       divideRect(shape, count2, outShapes);
-      OutShapeCtor = Rect$3;
+      OutShapeCtor = Rect$2;
       break;
     case "sector":
       divideSector(shape, count2, outShapes);
-      OutShapeCtor = Sector$1;
+      OutShapeCtor = Sector;
       break;
     case "circle":
       divideSector({
@@ -72415,7 +72389,7 @@ function split(path, count2) {
         cx: shape.cx,
         cy: shape.cy
       }, count2, outShapes);
-      OutShapeCtor = Sector$1;
+      OutShapeCtor = Sector;
       break;
     default:
       var m2 = path.getComputedTransform();
@@ -72463,7 +72437,7 @@ function split(path, count2) {
           left -= selfCount;
         }
       }
-      OutShapeCtor = Polygon$1;
+      OutShapeCtor = Polygon;
       break;
   }
   if (!OutShapeCtor) {
@@ -72914,7 +72888,7 @@ function combineMorph(fromList, toPath, animationOpts) {
   var oldDone = animationOpts.done;
   var oldDuring = animationOpts.during;
   var individualDelay = animationOpts.individualDelay;
-  var identityTransform = new Transformable$1();
+  var identityTransform = new Transformable();
   for (var i = 0; i < separateCount; i++) {
     var from = fromPathList[i];
     var to = toSubPathList[i];
@@ -73291,7 +73265,7 @@ function stopAnimation(el) {
 function animateElementStyles(el, dataIndex, seriesModel) {
   var animationConfig = getAnimationConfig("update", seriesModel, dataIndex);
   animationConfig && el.traverse(function(child) {
-    if (child instanceof Displayable$1) {
+    if (child instanceof Displayable) {
       var oldStyle = getOldStyle(child);
       if (oldStyle) {
         child.animateFrom({
@@ -73727,12 +73701,12 @@ use(installUniversalTransition);
 use(installLabelLayout);
 const echarts = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  Axis: Axis$1,
+  Axis,
   ChartView,
   ComponentModel,
   ComponentView,
-  List: SeriesData$1,
-  Model: Model$1,
+  List: SeriesData,
+  Model,
   PRIORITY,
   SeriesModel,
   color,
