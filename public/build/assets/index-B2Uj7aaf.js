@@ -5,12 +5,12 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
-import { m as mergeModels, d as ref, i as inject, u as useModel, e as computed, f as onBeforeMount, w as watch, g as resolveComponent, h as createBlock, j as withCtx, o as openBlock, c as createElementBlock, F as Fragment, k as renderList, l as createBaseVNode, b as createCommentVNode, t as toDisplayString, p as withDirectives, v as vShow, q as withKeys, s as withModifiers, x as vModelText, r as renderSlot, y as reactive, z as onMounted, A as createApp, n as normalizeClass, B as createVNode, a as createTextVNode, C as resolveDirective, D as normalizeProps, E as guardReactiveProps, G as resolveDynamicComponent, H as mergeProps, I as toHandlers, T as Transition, J as provide, K as vModelSelect, L as vue_esmBundler, M as unref, N as toRaw, O as nextTick, P as normalizeStyle, Q as effectScope, R as markRaw, S as isRef, U as isReactive, V as toRef, W as hasInjectionContext, X as getCurrentInstance, Y as getCurrentScope, Z as onScopeDispose, _ as toRefs, $ as defineComponent, a0 as render, a1 as onBeforeUnmount, a2 as readonly, a3 as shallowRef, a4 as useSlots, a5 as Teleport, a6 as pushScopeId, a7 as popScopeId } from "./vue-Dq8g2AwM.js";
-import { _ as _export_sfc, v as vueDropzone } from "./dropzone-C8hpOl0G.js";
-import { c as commonjsGlobal, g as getDefaultExportFromCjs, a as getAugmentedNamespace, m as mapboxgl } from "./mapbox-BMcF0oVF.js";
+import { m as mergeModels, d as ref, i as inject, u as useModel, e as computed, f as onBeforeMount, w as watch, g as resolveComponent, h as createBlock, j as withCtx, o as openBlock, c as createElementBlock, F as Fragment, k as renderList, l as createBaseVNode, b as createCommentVNode, t as toDisplayString, p as withDirectives, v as vShow, q as withKeys, s as withModifiers, x as vModelText, r as renderSlot, y as reactive, z as onMounted, A as resolveDirective, B as normalizeProps, C as guardReactiveProps, a as createTextVNode, D as resolveDynamicComponent, E as mergeProps, G as toHandlers, H as createVNode, n as normalizeClass, T as Transition, I as createApp, J as provide, K as vModelSelect, L as vue_esmBundler, M as unref, N as toRaw, O as nextTick, P as normalizeStyle, Q as effectScope, R as markRaw, S as isRef, U as isReactive, V as toRef, W as hasInjectionContext, X as getCurrentInstance, Y as getCurrentScope, Z as onScopeDispose, _ as toRefs, $ as defineComponent, a0 as render, a1 as onBeforeUnmount, a2 as readonly, a3 as shallowRef, a4 as useSlots, a5 as Teleport, a6 as pushScopeId, a7 as popScopeId } from "./vue-CftvIENP.js";
+import { _ as _export_sfc, v as vueDropzone } from "./dropzone-CNduCgSz.js";
+import { c as commonjsGlobal, g as getDefaultExportFromCjs, a as getAugmentedNamespace, m as mapboxgl } from "./mapbox-BJtTVmXE.js";
 import { i as init, e as echarts } from "./echarts-Bf8QDmg4.js";
 var require_index_001 = __commonJS({
-  "assets/index-BOUS8f0u.js"(exports, module) {
+  "assets/index-B2Uj7aaf.js"(exports, module) {
     var _a, _b, _c, _d, _e2, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o2, _p, _q, _r2, _s, _t2, _u, _v, _w, _x, _y, _z, _A, _B, _C, _D, _E, _F, _G, _H, _I, _J, _K, _L, _M, _N, _O, _P, _Q, _R, _S, _T, _U, _V, _W, _X, _Y;
     class I18n {
       /**
@@ -410,7 +410,7 @@ var require_index_001 = __commonJS({
         const props = __props;
         const dialogComponent = ref(null);
         const selectorComponent_AfterSearch = inject("afterSearch", null);
-        const selectorComponent_AfterLabelRetrieve = inject("AfterLabelRetrieve", null);
+        const selectorComponent_AfterLabelRetrieve = inject("afterLabelRetrieve", null);
         const selectorComponent_SetLabel = inject("setLabel", null);
         const selectorComponent_SetValue = inject("setValue", null);
         const selectorComponent_beforeDialogClose = inject("beforeDialogClose", null);
@@ -623,7 +623,7 @@ var require_index_001 = __commonJS({
               applyAndClose();
             }
           } else {
-            setError(Locale2.getLabel("common.validation_error"));
+            setError(Locale2.getLabel("modular-forms::common.validation_error"));
           }
         }
         function saveNewItem() {
@@ -735,7 +735,6 @@ var require_index_001 = __commonJS({
                 withDirectives(createBaseVNode("input", {
                   type: "text",
                   class: "field-edit dialog_search_by_key",
-                  autofocus: "",
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.searchKey = $event),
                   onKeydown: withKeys(withModifiers($setup.applySearch, ["prevent"]), ["enter"])
                 }, null, 40, _hoisted_11$6), [
@@ -1501,7 +1500,7 @@ var require_index_001 = __commonJS({
       }
       return value instanceof Node || value instanceof getWindow$2(value).Node;
     }
-    function isElement$3(value) {
+    function isElement$4(value) {
       if (!hasWindow()) {
         return false;
       }
@@ -1542,7 +1541,7 @@ var require_index_001 = __commonJS({
     }
     function isContainingBlock(elementOrCss) {
       const webkit = isWebKit();
-      const css = isElement$3(elementOrCss) ? getComputedStyle$2(elementOrCss) : elementOrCss;
+      const css = isElement$4(elementOrCss) ? getComputedStyle$2(elementOrCss) : elementOrCss;
       return css.transform !== "none" || css.perspective !== "none" || (css.containerType ? css.containerType !== "normal" : false) || !webkit && (css.backdropFilter ? css.backdropFilter !== "none" : false) || !webkit && (css.filter ? css.filter !== "none" : false) || ["transform", "perspective", "filter"].some((value) => (css.willChange || "").includes(value)) || ["paint", "layout", "strict", "content"].some((value) => (css.contain || "").includes(value));
     }
     function getContainingBlock$1(element) {
@@ -1568,7 +1567,7 @@ var require_index_001 = __commonJS({
       return getWindow$2(element).getComputedStyle(element);
     }
     function getNodeScroll$1(element) {
-      if (isElement$3(element)) {
+      if (isElement$4(element)) {
         return {
           scrollLeft: element.scrollLeft,
           scrollTop: element.scrollTop
@@ -1641,7 +1640,7 @@ var require_index_001 = __commonJS({
       };
     }
     function unwrapElement(element) {
-      return !isElement$3(element) ? element.contextElement : element;
+      return !isElement$4(element) ? element.contextElement : element;
     }
     function getScale(element) {
       const domElement = unwrapElement(element);
@@ -1699,7 +1698,7 @@ var require_index_001 = __commonJS({
       let scale = createCoords(1);
       if (includeScale) {
         if (offsetParent) {
-          if (isElement$3(offsetParent)) {
+          if (isElement$4(offsetParent)) {
             scale = getScale(offsetParent);
           }
         } else {
@@ -1713,7 +1712,7 @@ var require_index_001 = __commonJS({
       let height = clientRect.height / scale.y;
       if (domElement) {
         const win = getWindow$2(domElement);
-        const offsetWin = offsetParent && isElement$3(offsetParent) ? getWindow$2(offsetParent) : offsetParent;
+        const offsetWin = offsetParent && isElement$4(offsetParent) ? getWindow$2(offsetParent) : offsetParent;
         let currentWin = win;
         let currentIFrame = getFrameElement(currentWin);
         while (currentIFrame && offsetParent && offsetWin !== currentWin) {
@@ -1738,6 +1737,28 @@ var require_index_001 = __commonJS({
         x: x2,
         y: y2
       });
+    }
+    function getWindowScrollBarX$1(element, rect) {
+      const leftScroll = getNodeScroll$1(element).scrollLeft;
+      if (!rect) {
+        return getBoundingClientRect$1(getDocumentElement$1(element)).left + leftScroll;
+      }
+      return rect.left + leftScroll;
+    }
+    function getHTMLOffset(documentElement, scroll, ignoreScrollbarX) {
+      if (ignoreScrollbarX === void 0) {
+        ignoreScrollbarX = false;
+      }
+      const htmlRect = documentElement.getBoundingClientRect();
+      const x2 = htmlRect.left + scroll.scrollLeft - (ignoreScrollbarX ? 0 : (
+        // RTL <body> scrollbar.
+        getWindowScrollBarX$1(documentElement, htmlRect)
+      ));
+      const y2 = htmlRect.top + scroll.scrollTop;
+      return {
+        x: x2,
+        y: y2
+      };
     }
     function convertOffsetParentRelativeRectToViewportRelativeRect(_ref) {
       let {
@@ -1770,22 +1791,16 @@ var require_index_001 = __commonJS({
           offsets.y = offsetRect.y + offsetParent.clientTop;
         }
       }
+      const htmlOffset = documentElement && !isOffsetParentAnElement && !isFixed ? getHTMLOffset(documentElement, scroll, true) : createCoords(0);
       return {
         width: rect.width * scale.x,
         height: rect.height * scale.y,
-        x: rect.x * scale.x - scroll.scrollLeft * scale.x + offsets.x,
-        y: rect.y * scale.y - scroll.scrollTop * scale.y + offsets.y
+        x: rect.x * scale.x - scroll.scrollLeft * scale.x + offsets.x + htmlOffset.x,
+        y: rect.y * scale.y - scroll.scrollTop * scale.y + offsets.y + htmlOffset.y
       };
     }
     function getClientRects(element) {
       return Array.from(element.getClientRects());
-    }
-    function getWindowScrollBarX$1(element, rect) {
-      const leftScroll = getNodeScroll$1(element).scrollLeft;
-      if (!rect) {
-        return getBoundingClientRect$1(getDocumentElement$1(element)).left + leftScroll;
-      }
-      return rect.left + leftScroll;
     }
     function getDocumentRect$1(element) {
       const html2 = getDocumentElement$1(element);
@@ -1851,21 +1866,22 @@ var require_index_001 = __commonJS({
         rect = getViewportRect$1(element, strategy);
       } else if (clippingAncestor === "document") {
         rect = getDocumentRect$1(getDocumentElement$1(element));
-      } else if (isElement$3(clippingAncestor)) {
+      } else if (isElement$4(clippingAncestor)) {
         rect = getInnerBoundingClientRect$1(clippingAncestor, strategy);
       } else {
         const visualOffsets = getVisualOffsets(element);
         rect = {
-          ...clippingAncestor,
           x: clippingAncestor.x - visualOffsets.x,
-          y: clippingAncestor.y - visualOffsets.y
+          y: clippingAncestor.y - visualOffsets.y,
+          width: clippingAncestor.width,
+          height: clippingAncestor.height
         };
       }
       return rectToClientRect$1(rect);
     }
     function hasFixedPositionAncestor(element, stopNode) {
       const parentNode = getParentNode$1(element);
-      if (parentNode === stopNode || !isElement$3(parentNode) || isLastTraversableNode(parentNode)) {
+      if (parentNode === stopNode || !isElement$4(parentNode) || isLastTraversableNode(parentNode)) {
         return false;
       }
       return getComputedStyle$2(parentNode).position === "fixed" || hasFixedPositionAncestor(parentNode, stopNode);
@@ -1875,11 +1891,11 @@ var require_index_001 = __commonJS({
       if (cachedResult) {
         return cachedResult;
       }
-      let result2 = getOverflowAncestors(element, [], false).filter((el) => isElement$3(el) && getNodeName$1(el) !== "body");
+      let result2 = getOverflowAncestors(element, [], false).filter((el) => isElement$4(el) && getNodeName$1(el) !== "body");
       let currentContainingBlockComputedStyle = null;
       const elementIsFixed = getComputedStyle$2(element).position === "fixed";
       let currentNode = elementIsFixed ? getParentNode$1(element) : element;
-      while (isElement$3(currentNode) && !isLastTraversableNode(currentNode)) {
+      while (isElement$4(currentNode) && !isLastTraversableNode(currentNode)) {
         const computedStyle = getComputedStyle$2(currentNode);
         const currentNodeIsContaining = isContainingBlock(currentNode);
         if (!currentNodeIsContaining && computedStyle.position === "fixed") {
@@ -1953,16 +1969,9 @@ var require_index_001 = __commonJS({
           offsets.x = getWindowScrollBarX$1(documentElement);
         }
       }
-      let htmlX = 0;
-      let htmlY = 0;
-      if (documentElement && !isOffsetParentAnElement && !isFixed) {
-        const htmlRect = documentElement.getBoundingClientRect();
-        htmlY = htmlRect.top + scroll.scrollTop;
-        htmlX = htmlRect.left + scroll.scrollLeft - // RTL <body> scrollbar.
-        getWindowScrollBarX$1(documentElement, htmlRect);
-      }
-      const x2 = rect.left + scroll.scrollLeft - offsets.x - htmlX;
-      const y2 = rect.top + scroll.scrollTop - offsets.y - htmlY;
+      const htmlOffset = documentElement && !isOffsetParentAnElement && !isFixed ? getHTMLOffset(documentElement, scroll) : createCoords(0);
+      const x2 = rect.left + scroll.scrollLeft - offsets.x - htmlOffset.x;
+      const y2 = rect.top + scroll.scrollTop - offsets.y - htmlOffset.y;
       return {
         x: x2,
         y: y2,
@@ -1994,7 +2003,7 @@ var require_index_001 = __commonJS({
       if (!isHTMLElement$1(element)) {
         let svgOffsetParent = getParentNode$1(element);
         while (svgOffsetParent && !isLastTraversableNode(svgOffsetParent)) {
-          if (isElement$3(svgOffsetParent) && !isStaticPositioned(svgOffsetParent)) {
+          if (isElement$4(svgOffsetParent) && !isStaticPositioned(svgOffsetParent)) {
             return svgOffsetParent;
           }
           svgOffsetParent = getParentNode$1(svgOffsetParent);
@@ -2036,7 +2045,7 @@ var require_index_001 = __commonJS({
       getClientRects,
       getDimensions,
       getScale,
-      isElement: isElement$3,
+      isElement: isElement$4,
       isRTL
     };
     function observeMove(element, onMove) {
@@ -2408,583 +2417,6 @@ var require_index_001 = __commonJS({
       ]);
     }
     const dialogBox = /* @__PURE__ */ _export_sfc(_sfc_main$1b, [["render", _sfc_render$1b], ["__scopeId", "data-v-903b9ef3"], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/dialog_box.vue"]]);
-    class Base {
-      constructor(options, input_data) {
-        const app = createApp(
-          options || {},
-          input_data || {}
-        );
-        app.component("tooltip", tooltip);
-        app.component("dialogBox", dialogBox);
-        return app;
-      }
-    }
-    const _sfc_main$1a = {
-      props: {
-        name: {
-          type: String,
-          default: null
-        },
-        iso2: {
-          type: String,
-          default: null
-        }
-      },
-      computed: {
-        countryName: function() {
-          return this.name || null;
-        },
-        flagClasses: function() {
-          if (this.iso2 === null || this.iso2 === "") {
-            return "";
-          }
-          let iso2 = this.iso2.toLowerCase();
-          iso2 = iso2 === "en" ? "gb" : iso2;
-          iso2 = iso2 === "sp" ? "es" : iso2;
-          return "fi fi-" + iso2;
-        }
-      }
-    };
-    function _sfc_render$1a(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_tooltip = resolveComponent("tooltip");
-      return openBlock(), createElementBlock("span", null, [
-        createBaseVNode("span", {
-          class: normalizeClass($options.flagClasses)
-        }, null, 2),
-        createVNode(_component_tooltip, null, {
-          default: withCtx(() => [
-            createTextVNode(toDisplayString($options.countryName), 1)
-          ]),
-          _: 1
-        })
-      ]);
-    }
-    const flag = /* @__PURE__ */ _export_sfc(_sfc_main$1a, [["render", _sfc_render$1a], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/flag.vue"]]);
-    const _sfc_main$19 = {
-      __name: "destroyFormButton",
-      props: {
-        action: {
-          type: String,
-          required: true
-        }
-      },
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const Locale2 = window.ModularForms.Helpers.Locale;
-        const csrfToken = window.Laravel.csrfToken;
-        const props = __props;
-        const destroyDialog = ref(null);
-        function closeDestroyDialog() {
-          destroyDialog.value.closeDialog();
-        }
-        const __returned__ = { Locale: Locale2, csrfToken, props, destroyDialog, closeDestroyDialog, ref };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    const _hoisted_1$T = { class: "with_header_and_footer" };
-    const _hoisted_2$G = { class: "header" };
-    const _hoisted_3$x = { class: "footer" };
-    const _hoisted_4$n = ["action"];
-    const _hoisted_5$m = ["value"];
-    const _hoisted_6$g = {
-      type: "submit",
-      class: "btn-nav small red"
-    };
-    function _sfc_render$19(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_tooltip = resolveComponent("tooltip");
-      const _component_dialog_box = resolveComponent("dialog-box");
-      return openBlock(), createBlock(_component_dialog_box, { ref: "destroyDialog" }, {
-        "dialog-anchor": withCtx(() => [
-          _cache[0] || (_cache[0] = createBaseVNode("button", {
-            type: "button",
-            class: "btn-nav small red"
-          }, [
-            createBaseVNode("span", { class: "fas fa-fw fa-trash" })
-          ], -1)),
-          createVNode(_component_tooltip, null, {
-            default: withCtx(() => [
-              createTextVNode(toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
-            ]),
-            _: 1
-          })
-        ]),
-        "dialog-content": withCtx(() => [
-          createBaseVNode("div", _hoisted_1$T, [
-            createBaseVNode("div", _hoisted_2$G, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_deletion")), 1),
-            _cache[4] || (_cache[4] = createBaseVNode("div", { class: "body" }, null, -1)),
-            createBaseVNode("div", _hoisted_3$x, [
-              _cache[3] || (_cache[3] = createBaseVNode("div", { class: "spacer" }, null, -1)),
-              createBaseVNode("button", {
-                type: "button",
-                onClick: $setup.closeDestroyDialog,
-                class: "btn-nav small green"
-              }, toDisplayString($setup.Locale.getLabel("modular-forms::common.cancel")), 1),
-              createBaseVNode("form", {
-                style: { "display": "inline-block" },
-                method: "POST",
-                action: $props.action
-              }, [
-                createBaseVNode("input", {
-                  type: "hidden",
-                  name: "_token",
-                  value: $setup.csrfToken
-                }, null, 8, _hoisted_5$m),
-                _cache[2] || (_cache[2] = createBaseVNode("input", {
-                  type: "hidden",
-                  name: "_method",
-                  value: "DELETE"
-                }, null, -1)),
-                createBaseVNode("button", _hoisted_6$g, [
-                  _cache[1] || (_cache[1] = createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1)),
-                  createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
-                ])
-              ], 8, _hoisted_4$n)
-            ])
-          ])
-        ]),
-        _: 1
-      }, 512);
-    }
-    const destroyButton = /* @__PURE__ */ _export_sfc(_sfc_main$19, [["render", _sfc_render$19], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/components/destroyFormButton.vue"]]);
-    class FormList {
-      constructor(input_data = {}) {
-        const options = {
-          name: "FormList"
-        };
-        const app = createApp(
-          options || {},
-          input_data || {}
-        );
-        app.component("flag", flag);
-        app.component("tooltip", tooltip);
-        app.component("dialogBox", dialogBox);
-        app.component("destroyButton", destroyButton);
-        return app;
-      }
-    }
-    class FormErrors {
-      constructor(input_data = {}) {
-        const options = {
-          name: "FormErrors",
-          props: {
-            initial_errors: {
-              type: Array,
-              default: () => []
-            }
-          },
-          setup(props) {
-            const validation_errors = reactive(props.initial_errors);
-            let has_errors = computed(() => {
-              return Object.entries(validation_errors).length >= 1 && typeof validation_errors[0] !== "undefined" && validation_errors[0] !== null;
-            });
-            onMounted(() => {
-              displayNonValidModules();
-            });
-            watch(validation_errors, () => {
-              displayNonValidModules();
-            });
-            function displayNonValidModules() {
-              let error_class = "validation-error";
-              let invalid_modules = validation_errors.map((a2) => "module_" + a2.key);
-              let containers = document.querySelectorAll(".module-container");
-              containers.forEach(function(container2) {
-                if (invalid_modules.includes(container2.id)) {
-                  if (!container2.classList.contains(error_class)) {
-                    container2.classList.add(error_class);
-                  }
-                } else {
-                  if (container2.classList.contains(error_class)) {
-                    container2.classList.remove(error_class);
-                  }
-                }
-              });
-            }
-            function refreshErrors(errors) {
-              validation_errors.forEach(function(error, index) {
-                validation_errors.splice(index, 1);
-              });
-              errors.forEach(function(error, index) {
-                validation_errors[index] = JSON.parse(JSON.stringify(error));
-              });
-            }
-            return {
-              validation_errors,
-              has_errors,
-              refreshErrors
-            };
-          }
-        };
-        return createApp(options, input_data);
-      }
-    }
-    function mitt(n2) {
-      return { all: n2 = n2 || /* @__PURE__ */ new Map(), on: function(t2, e2) {
-        var i2 = n2.get(t2);
-        i2 ? i2.push(e2) : n2.set(t2, [e2]);
-      }, off: function(t2, e2) {
-        var i2 = n2.get(t2);
-        i2 && (e2 ? i2.splice(i2.indexOf(e2) >>> 0, 1) : n2.set(t2, []));
-      }, emit: function(t2, e2) {
-        var i2 = n2.get(t2);
-        i2 && i2.slice().map(function(n3) {
-          n3(e2);
-        }), (i2 = n2.get("*")) && i2.slice().map(function(n3) {
-          n3(t2, e2);
-        });
-      } };
-    }
-    const _sfc_main$18 = {
-      __name: "simple-text",
-      props: /* @__PURE__ */ mergeModels({
-        id: {
-          type: String,
-          default: null
-        },
-        tooltipEnabled: {
-          type: Boolean,
-          default: true
-        }
-      }, {
-        "modelValue": {},
-        "modelModifiers": {}
-      }),
-      emits: ["update:modelValue"],
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const props = __props;
-        const inputValue = useModel(__props, "modelValue");
-        const __returned__ = { props, inputValue };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    const _hoisted_1$S = ["id", "name"];
-    function _sfc_render$18(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_tooltip = resolveComponent("tooltip");
-      return openBlock(), createElementBlock("span", null, [
-        withDirectives(createBaseVNode("input", {
-          type: "text",
-          id: $props.id,
-          name: $props.id,
-          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
-          class: "field-edit",
-          autocomplete: "off"
-        }, null, 8, _hoisted_1$S), [
-          [vModelText, $setup.inputValue]
-        ]),
-        $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
-          key: 0,
-          "anchor-elem-id": $props.id
-        }, {
-          default: withCtx(() => [
-            createTextVNode(toDisplayString($setup.inputValue), 1)
-          ]),
-          _: 1
-        }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
-      ]);
-    }
-    const simpleText = /* @__PURE__ */ _export_sfc(_sfc_main$18, [["render", _sfc_render$18], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-text.vue"]]);
-    const _sfc_main$17 = {
-      __name: "simple-textarea",
-      props: /* @__PURE__ */ mergeModels({
-        id: {
-          type: String,
-          default: null
-        },
-        disabled: {
-          type: Boolean,
-          default: false
-        }
-      }, {
-        "modelValue": {},
-        "modelModifiers": {}
-      }),
-      emits: ["update:modelValue"],
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const props = __props;
-        const inputValue = useModel(__props, "modelValue");
-        function onInput(e2) {
-          inputValue.value = e2.target.innerText;
-        }
-        const __returned__ = { props, inputValue, onInput };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    const _hoisted_1$R = ["id", "textContent"];
-    const _hoisted_2$F = ["id", "textContent"];
-    function _sfc_render$17(_ctx, _cache, $props, $setup, $data, $options) {
-      return openBlock(), createElementBlock("span", null, [
-        $props.disabled ? (openBlock(), createElementBlock("span", {
-          key: 0,
-          id: $props.id,
-          class: "field-preview disabled",
-          onInput: $setup.onInput,
-          textContent: toDisplayString($setup.inputValue)
-        }, null, 40, _hoisted_1$R)) : (openBlock(), createElementBlock("span", {
-          key: 1,
-          id: $props.id,
-          class: "field-preview",
-          contenteditable: "",
-          onInput: $setup.onInput,
-          textContent: toDisplayString($setup.inputValue)
-        }, null, 40, _hoisted_2$F))
-      ]);
-    }
-    const simpleTextarea = /* @__PURE__ */ _export_sfc(_sfc_main$17, [["render", _sfc_render$17], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-textarea.vue"]]);
-    const _sfc_main$16 = {
-      __name: "simple-url",
-      props: /* @__PURE__ */ mergeModels({
-        id: {
-          type: String,
-          default: null
-        },
-        dataRules: {
-          type: String,
-          default: ""
-        }
-      }, {
-        "modelValue": {},
-        "modelModifiers": {}
-      }),
-      emits: ["update:modelValue"],
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const props = __props;
-        const inputValue = useModel(__props, "modelValue");
-        const __returned__ = { props, inputValue };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    function _sfc_render$16(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_simple_text = resolveComponent("simple-text");
-      return openBlock(), createBlock(_component_simple_text, {
-        modelValue: $setup.inputValue,
-        "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
-        id: $props.id,
-        name: $props.id,
-        "data-rules": $props.dataRules !== "" ? $props.dataRules + "|url" : "url"
-      }, null, 8, ["modelValue", "id", "name", "data-rules"]);
-    }
-    const simpleUrl = /* @__PURE__ */ _export_sfc(_sfc_main$16, [["render", _sfc_render$16], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-url.vue"]]);
-    const _sfc_main$15 = {
-      __name: "simple-email",
-      props: /* @__PURE__ */ mergeModels({
-        id: {
-          type: String,
-          default: null
-        },
-        dataRules: {
-          type: String,
-          default: ""
-        }
-      }, {
-        "modelValue": {},
-        "modelModifiers": {}
-      }),
-      emits: ["update:modelValue"],
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const props = __props;
-        const inputValue = useModel(__props, "modelValue");
-        const __returned__ = { props, inputValue };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    function _sfc_render$15(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_simple_text = resolveComponent("simple-text");
-      return openBlock(), createBlock(_component_simple_text, {
-        modelValue: $setup.inputValue,
-        "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
-        id: $props.id,
-        name: $props.id,
-        "data-rules": $props.dataRules !== "" ? $props.dataRules + "|email" : "email"
-      }, null, 8, ["modelValue", "id", "name", "data-rules"]);
-    }
-    const simpleEmail = /* @__PURE__ */ _export_sfc(_sfc_main$15, [["render", _sfc_render$15], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-email.vue"]]);
-    const _sfc_main$14 = {
-      __name: "simple-password",
-      props: /* @__PURE__ */ mergeModels({
-        id: {
-          type: String,
-          default: null
-        },
-        tooltipEnabled: {
-          type: Boolean,
-          default: true
-        }
-      }, {
-        "modelValue": {},
-        "modelModifiers": {}
-      }),
-      emits: ["update:modelValue"],
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const props = __props;
-        const inputValue = useModel(__props, "modelValue");
-        const __returned__ = { props, inputValue };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    const _hoisted_1$Q = ["id", "name"];
-    function _sfc_render$14(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_tooltip = resolveComponent("tooltip");
-      return openBlock(), createElementBlock("span", null, [
-        withDirectives(createBaseVNode("input", {
-          type: "password",
-          id: $props.id,
-          name: $props.id,
-          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
-          class: "field-edit",
-          autocomplete: "off"
-        }, null, 8, _hoisted_1$Q), [
-          [vModelText, $setup.inputValue]
-        ]),
-        $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
-          key: 0,
-          "anchor-elem-id": $props.id
-        }, {
-          default: withCtx(() => [
-            createTextVNode(toDisplayString($setup.inputValue), 1)
-          ]),
-          _: 1
-        }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
-      ]);
-    }
-    const simplePassword = /* @__PURE__ */ _export_sfc(_sfc_main$14, [["render", _sfc_render$14], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-password.vue"]]);
-    const _sfc_main$13 = {
-      __name: "rating",
-      props: /* @__PURE__ */ mergeModels({
-        id: {
-          type: String,
-          default: null
-        },
-        ratingType: String,
-        legend: {
-          type: Array,
-          default: () => null
-        }
-      }, {
-        "modelValue": {},
-        "modelModifiers": {}
-      }),
-      emits: ["update:modelValue"],
-      setup(__props, { expose: __expose }) {
-        __expose();
-        const props = __props;
-        const ratingOptions = ref(null);
-        const list = computed(() => {
-          return buildOptionList();
-        });
-        const inputValue = useModel(__props, "modelValue");
-        function buildOptionList() {
-          let list2 = [];
-          let ratingType = props.ratingType;
-          if (ratingType.includes("WithNA")) {
-            list2.push({ "value": "-99", "label": "N/A" });
-            ratingType = ratingType.replace("WithNA", "");
-          }
-          ratingType = ratingType.replace("Minus", "-");
-          let [min2, max2] = ratingType.split("to");
-          for (let i2 = min2; i2 <= max2; i2++) {
-            list2.push({ "value": i2, "label": i2 });
-          }
-          return list2;
-        }
-        function isNA(value) {
-          return value === "-99" || value === -99;
-        }
-        function setActive(value) {
-          let applyClass = __applyClass(value, inputValue.value);
-          return applyClass ? "active" : "";
-        }
-        function __applyClass(localValue, globalValue) {
-          if (!isNA(localValue) && parseFloat(localValue) <= parseFloat(globalValue)) {
-            return true;
-          } else if (isNA(localValue) && isNA(globalValue)) {
-            return true;
-          }
-          return false;
-        }
-        function setHover(evt) {
-          let hoverValue = evt.target.getAttribute("rate");
-          let ratingItems = ratingOptions.value.querySelectorAll(".rating");
-          for (let item of ratingItems.values()) {
-            let value = item.getAttribute("rate");
-            let applyClass = __applyClass(value, hoverValue);
-            if (applyClass && evt.type === "mouseover") {
-              item.classList.add("hover");
-            } else {
-              item.classList.remove("hover");
-            }
-          }
-        }
-        function updateRating(value) {
-          if (inputValue.value !== null && value.toString() === inputValue.value.toString()) {
-            value = null;
-          }
-          inputValue.value = value;
-          let ratingItems = ratingOptions.value.querySelectorAll(".rating");
-          for (let item of ratingItems.values()) {
-            item.classList.remove("hover");
-          }
-        }
-        function tooltipLabel(index) {
-          if (props.legend != null) {
-            if (props.legend.hasOwnProperty(index)) {
-              return props.legend[index].charAt(0).toUpperCase() + props.legend[index].slice(1);
-            }
-          }
-          return "";
-        }
-        const __returned__ = { props, ratingOptions, list, inputValue, buildOptionList, isNA, setActive, __applyClass, setHover, updateRating, tooltipLabel, computed, ref };
-        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-        return __returned__;
-      }
-    };
-    const _hoisted_1$P = {
-      ref: "ratingOptions",
-      class: "rating-container"
-    };
-    const _hoisted_2$E = ["onClick", "rate"];
-    const _hoisted_3$w = ["id"];
-    function _sfc_render$13(_ctx, _cache, $props, $setup, $data, $options) {
-      const _component_tooltip = resolveComponent("tooltip");
-      return openBlock(), createElementBlock("div", null, [
-        createBaseVNode("span", _hoisted_1$P, [
-          (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list, (item, index) => {
-            return openBlock(), createElementBlock("span", null, [
-              createBaseVNode("span", {
-                class: normalizeClass(["rating field-edit", [$setup.isNA(item["value"]) ? "ratingNa" : "ratingNum", $setup.setActive(item["value"])]]),
-                onClick: ($event) => $setup.updateRating(item["value"]),
-                onMouseover: $setup.setHover,
-                onMouseout: $setup.setHover,
-                rate: item["value"]
-              }, toDisplayString(item["label"]), 43, _hoisted_2$E),
-              createVNode(_component_tooltip, null, {
-                default: withCtx(() => [
-                  createTextVNode(toDisplayString($setup.tooltipLabel(index)), 1)
-                ]),
-                _: 2
-              }, 1024)
-            ]);
-          }), 256))
-        ], 512),
-        withDirectives(createBaseVNode("input", {
-          type: "hidden",
-          id: $props.id,
-          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_3$w), [
-          [vModelText, $setup.inputValue]
-        ])
-      ]);
-    }
-    const rating = /* @__PURE__ */ _export_sfc(_sfc_main$13, [["render", _sfc_render$13], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/rating.vue"]]);
     function useList$1(component_data) {
       const sortBy2 = ref(component_data.sortBy || null);
       const sortDir = ref(component_data.sortDir || "asc");
@@ -3812,7 +3244,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
         "v-select": Ce$2
       }
     };
-    const _sfc_main$12 = /* @__PURE__ */ Object.assign(__default__, {
+    const _sfc_main$1a = /* @__PURE__ */ Object.assign(__default__, {
       __name: "dropdown",
       props: /* @__PURE__ */ mergeModels({
         id: {
@@ -3931,8 +3363,8 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
         return __returned__;
       }
     });
-    const _hoisted_1$O = ["id"];
-    function _sfc_render$12(_ctx, _cache, $props, $setup, $data, $options) {
+    const _hoisted_1$T = ["id"];
+    function _sfc_render$1a(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("span", null, [
         createVNode($setup["vSelect"], {
           taggable: $props.taggable,
@@ -3950,12 +3382,590 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
           type: "hidden",
           id: $props.id,
           "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.inputValue = $event)
-        }, null, 8, _hoisted_1$O), [
+        }, null, 8, _hoisted_1$T), [
           [vModelText, $setup.inputValue]
         ])
       ]);
     }
-    const dropdown = /* @__PURE__ */ _export_sfc(_sfc_main$12, [["render", _sfc_render$12], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/dropdown.vue"]]);
+    const dropdown = /* @__PURE__ */ _export_sfc(_sfc_main$1a, [["render", _sfc_render$1a], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/dropdown.vue"]]);
+    class Base {
+      constructor(options, input_data) {
+        const app = createApp(
+          options || {},
+          input_data || {}
+        );
+        app.component("tooltip", tooltip);
+        app.component("dialogBox", dialogBox);
+        app.component("dropdown", dropdown);
+        return app;
+      }
+    }
+    const _sfc_main$19 = {
+      props: {
+        name: {
+          type: String,
+          default: null
+        },
+        iso2: {
+          type: String,
+          default: null
+        }
+      },
+      computed: {
+        countryName: function() {
+          return this.name || null;
+        },
+        flagClasses: function() {
+          if (this.iso2 === null || this.iso2 === "") {
+            return "";
+          }
+          let iso2 = this.iso2.toLowerCase();
+          iso2 = iso2 === "en" ? "gb" : iso2;
+          iso2 = iso2 === "sp" ? "es" : iso2;
+          return "fi fi-" + iso2;
+        }
+      }
+    };
+    function _sfc_render$19(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_tooltip = resolveComponent("tooltip");
+      return openBlock(), createElementBlock("span", null, [
+        createBaseVNode("span", {
+          class: normalizeClass($options.flagClasses)
+        }, null, 2),
+        createVNode(_component_tooltip, null, {
+          default: withCtx(() => [
+            createTextVNode(toDisplayString($options.countryName), 1)
+          ]),
+          _: 1
+        })
+      ]);
+    }
+    const flag = /* @__PURE__ */ _export_sfc(_sfc_main$19, [["render", _sfc_render$19], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/templates/flag.vue"]]);
+    const _sfc_main$18 = {
+      __name: "destroyFormButton",
+      props: {
+        action: {
+          type: String,
+          required: true
+        }
+      },
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const Locale2 = window.ModularForms.Helpers.Locale;
+        const csrfToken = window.Laravel.csrfToken;
+        const props = __props;
+        const destroyDialog = ref(null);
+        function closeDestroyDialog() {
+          destroyDialog.value.closeDialog();
+        }
+        const __returned__ = { Locale: Locale2, csrfToken, props, destroyDialog, closeDestroyDialog, ref };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$S = { class: "with_header_and_footer" };
+    const _hoisted_2$G = { class: "header" };
+    const _hoisted_3$x = { class: "footer" };
+    const _hoisted_4$n = ["action"];
+    const _hoisted_5$m = ["value"];
+    const _hoisted_6$g = {
+      type: "submit",
+      class: "btn-nav small red"
+    };
+    function _sfc_render$18(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_tooltip = resolveComponent("tooltip");
+      const _component_dialog_box = resolveComponent("dialog-box");
+      return openBlock(), createBlock(_component_dialog_box, { ref: "destroyDialog" }, {
+        "dialog-anchor": withCtx(() => [
+          _cache[0] || (_cache[0] = createBaseVNode("button", {
+            type: "button",
+            class: "btn-nav small red"
+          }, [
+            createBaseVNode("span", { class: "fas fa-fw fa-trash" })
+          ], -1)),
+          createVNode(_component_tooltip, null, {
+            default: withCtx(() => [
+              createTextVNode(toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
+            ]),
+            _: 1
+          })
+        ]),
+        "dialog-content": withCtx(() => [
+          createBaseVNode("div", _hoisted_1$S, [
+            createBaseVNode("div", _hoisted_2$G, toDisplayString($setup.Locale.getLabel("modular-forms::common.confirm_deletion")), 1),
+            _cache[4] || (_cache[4] = createBaseVNode("div", { class: "body" }, null, -1)),
+            createBaseVNode("div", _hoisted_3$x, [
+              _cache[3] || (_cache[3] = createBaseVNode("div", { class: "spacer" }, null, -1)),
+              createBaseVNode("button", {
+                type: "button",
+                onClick: $setup.closeDestroyDialog,
+                class: "btn-nav small green"
+              }, toDisplayString($setup.Locale.getLabel("modular-forms::common.cancel")), 1),
+              createBaseVNode("form", {
+                style: { "display": "inline-block" },
+                method: "POST",
+                action: $props.action
+              }, [
+                createBaseVNode("input", {
+                  type: "hidden",
+                  name: "_token",
+                  value: $setup.csrfToken
+                }, null, 8, _hoisted_5$m),
+                _cache[2] || (_cache[2] = createBaseVNode("input", {
+                  type: "hidden",
+                  name: "_method",
+                  value: "DELETE"
+                }, null, -1)),
+                createBaseVNode("button", _hoisted_6$g, [
+                  _cache[1] || (_cache[1] = createBaseVNode("span", { class: "fas fa-fw fa-trash" }, null, -1)),
+                  createTextVNode(" " + toDisplayString($setup.Locale.getLabel("modular-forms::common.delete")), 1)
+                ])
+              ], 8, _hoisted_4$n)
+            ])
+          ])
+        ]),
+        _: 1
+      }, 512);
+    }
+    const destroyButton = /* @__PURE__ */ _export_sfc(_sfc_main$18, [["render", _sfc_render$18], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/components/destroyFormButton.vue"]]);
+    class FormList {
+      constructor(input_data = {}) {
+        const options = {
+          name: "FormList"
+        };
+        const app = createApp(
+          options || {},
+          input_data || {}
+        );
+        app.component("flag", flag);
+        app.component("tooltip", tooltip);
+        app.component("dialogBox", dialogBox);
+        app.component("destroyButton", destroyButton);
+        return app;
+      }
+    }
+    class FormErrors {
+      constructor(input_data = {}) {
+        const options = {
+          name: "FormErrors",
+          props: {
+            initial_errors: {
+              type: Array,
+              default: () => []
+            }
+          },
+          setup(props) {
+            const validation_errors = reactive(props.initial_errors);
+            let has_errors = computed(() => {
+              return Object.entries(validation_errors).length >= 1 && typeof validation_errors[0] !== "undefined" && validation_errors[0] !== null;
+            });
+            onMounted(() => {
+              displayNonValidModules();
+            });
+            watch(validation_errors, () => {
+              displayNonValidModules();
+            });
+            function displayNonValidModules() {
+              let error_class = "validation-error";
+              let invalid_modules = validation_errors.map((a2) => "module_" + a2.key);
+              let containers = document.querySelectorAll(".module-container");
+              containers.forEach(function(container2) {
+                if (invalid_modules.includes(container2.id)) {
+                  if (!container2.classList.contains(error_class)) {
+                    container2.classList.add(error_class);
+                  }
+                } else {
+                  if (container2.classList.contains(error_class)) {
+                    container2.classList.remove(error_class);
+                  }
+                }
+              });
+            }
+            function refreshErrors(errors) {
+              validation_errors.forEach(function(error, index) {
+                validation_errors.splice(index, 1);
+              });
+              errors.forEach(function(error, index) {
+                validation_errors[index] = JSON.parse(JSON.stringify(error));
+              });
+            }
+            return {
+              validation_errors,
+              has_errors,
+              refreshErrors
+            };
+          }
+        };
+        return createApp(options, input_data);
+      }
+    }
+    function mitt(n2) {
+      return { all: n2 = n2 || /* @__PURE__ */ new Map(), on: function(t2, e2) {
+        var i2 = n2.get(t2);
+        i2 ? i2.push(e2) : n2.set(t2, [e2]);
+      }, off: function(t2, e2) {
+        var i2 = n2.get(t2);
+        i2 && (e2 ? i2.splice(i2.indexOf(e2) >>> 0, 1) : n2.set(t2, []));
+      }, emit: function(t2, e2) {
+        var i2 = n2.get(t2);
+        i2 && i2.slice().map(function(n3) {
+          n3(e2);
+        }), (i2 = n2.get("*")) && i2.slice().map(function(n3) {
+          n3(t2, e2);
+        });
+      } };
+    }
+    const _sfc_main$17 = {
+      __name: "simple-text",
+      props: /* @__PURE__ */ mergeModels({
+        id: {
+          type: String,
+          default: null
+        },
+        tooltipEnabled: {
+          type: Boolean,
+          default: true
+        }
+      }, {
+        "modelValue": {},
+        "modelModifiers": {}
+      }),
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const inputValue = useModel(__props, "modelValue");
+        const __returned__ = { props, inputValue };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$R = ["id", "name"];
+    function _sfc_render$17(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_tooltip = resolveComponent("tooltip");
+      return openBlock(), createElementBlock("span", null, [
+        withDirectives(createBaseVNode("input", {
+          type: "text",
+          id: $props.id,
+          name: $props.id,
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
+          class: "field-edit",
+          autocomplete: "off"
+        }, null, 8, _hoisted_1$R), [
+          [vModelText, $setup.inputValue]
+        ]),
+        $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
+          key: 0,
+          "anchor-elem-id": $props.id
+        }, {
+          default: withCtx(() => [
+            createTextVNode(toDisplayString($setup.inputValue), 1)
+          ]),
+          _: 1
+        }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
+      ]);
+    }
+    const simpleText = /* @__PURE__ */ _export_sfc(_sfc_main$17, [["render", _sfc_render$17], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-text.vue"]]);
+    const _sfc_main$16 = {
+      __name: "simple-textarea",
+      props: /* @__PURE__ */ mergeModels({
+        id: {
+          type: String,
+          default: null
+        },
+        disabled: {
+          type: Boolean,
+          default: false
+        }
+      }, {
+        "modelValue": {},
+        "modelModifiers": {}
+      }),
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const inputValue = useModel(__props, "modelValue");
+        function onInput(e2) {
+          inputValue.value = e2.target.innerText;
+        }
+        const __returned__ = { props, inputValue, onInput };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$Q = ["id", "textContent"];
+    const _hoisted_2$F = ["id", "textContent"];
+    function _sfc_render$16(_ctx, _cache, $props, $setup, $data, $options) {
+      return openBlock(), createElementBlock("span", null, [
+        $props.disabled ? (openBlock(), createElementBlock("span", {
+          key: 0,
+          id: $props.id,
+          class: "field-preview disabled",
+          onInput: $setup.onInput,
+          textContent: toDisplayString($setup.inputValue)
+        }, null, 40, _hoisted_1$Q)) : (openBlock(), createElementBlock("span", {
+          key: 1,
+          id: $props.id,
+          class: "field-preview",
+          contenteditable: "",
+          onInput: $setup.onInput,
+          textContent: toDisplayString($setup.inputValue)
+        }, null, 40, _hoisted_2$F))
+      ]);
+    }
+    const simpleTextarea = /* @__PURE__ */ _export_sfc(_sfc_main$16, [["render", _sfc_render$16], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-textarea.vue"]]);
+    const _sfc_main$15 = {
+      __name: "simple-url",
+      props: /* @__PURE__ */ mergeModels({
+        id: {
+          type: String,
+          default: null
+        },
+        dataRules: {
+          type: String,
+          default: ""
+        }
+      }, {
+        "modelValue": {},
+        "modelModifiers": {}
+      }),
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const inputValue = useModel(__props, "modelValue");
+        const __returned__ = { props, inputValue };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    function _sfc_render$15(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_simple_text = resolveComponent("simple-text");
+      return openBlock(), createBlock(_component_simple_text, {
+        modelValue: $setup.inputValue,
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
+        id: $props.id,
+        name: $props.id,
+        "data-rules": $props.dataRules !== "" ? $props.dataRules + "|url" : "url"
+      }, null, 8, ["modelValue", "id", "name", "data-rules"]);
+    }
+    const simpleUrl = /* @__PURE__ */ _export_sfc(_sfc_main$15, [["render", _sfc_render$15], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-url.vue"]]);
+    const _sfc_main$14 = {
+      __name: "simple-email",
+      props: /* @__PURE__ */ mergeModels({
+        id: {
+          type: String,
+          default: null
+        },
+        dataRules: {
+          type: String,
+          default: ""
+        }
+      }, {
+        "modelValue": {},
+        "modelModifiers": {}
+      }),
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const inputValue = useModel(__props, "modelValue");
+        const __returned__ = { props, inputValue };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    function _sfc_render$14(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_simple_text = resolveComponent("simple-text");
+      return openBlock(), createBlock(_component_simple_text, {
+        modelValue: $setup.inputValue,
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
+        id: $props.id,
+        name: $props.id,
+        "data-rules": $props.dataRules !== "" ? $props.dataRules + "|email" : "email"
+      }, null, 8, ["modelValue", "id", "name", "data-rules"]);
+    }
+    const simpleEmail = /* @__PURE__ */ _export_sfc(_sfc_main$14, [["render", _sfc_render$14], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-email.vue"]]);
+    const _sfc_main$13 = {
+      __name: "simple-password",
+      props: /* @__PURE__ */ mergeModels({
+        id: {
+          type: String,
+          default: null
+        },
+        tooltipEnabled: {
+          type: Boolean,
+          default: true
+        }
+      }, {
+        "modelValue": {},
+        "modelModifiers": {}
+      }),
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const inputValue = useModel(__props, "modelValue");
+        const __returned__ = { props, inputValue };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$P = ["id", "name"];
+    function _sfc_render$13(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_tooltip = resolveComponent("tooltip");
+      return openBlock(), createElementBlock("span", null, [
+        withDirectives(createBaseVNode("input", {
+          type: "password",
+          id: $props.id,
+          name: $props.id,
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event),
+          class: "field-edit",
+          autocomplete: "off"
+        }, null, 8, _hoisted_1$P), [
+          [vModelText, $setup.inputValue]
+        ]),
+        $props.tooltipEnabled ? (openBlock(), createBlock(_component_tooltip, {
+          key: 0,
+          "anchor-elem-id": $props.id
+        }, {
+          default: withCtx(() => [
+            createTextVNode(toDisplayString($setup.inputValue), 1)
+          ]),
+          _: 1
+        }, 8, ["anchor-elem-id"])) : createCommentVNode("", true)
+      ]);
+    }
+    const simplePassword = /* @__PURE__ */ _export_sfc(_sfc_main$13, [["render", _sfc_render$13], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/simple-password.vue"]]);
+    const _sfc_main$12 = {
+      __name: "rating",
+      props: /* @__PURE__ */ mergeModels({
+        id: {
+          type: String,
+          default: null
+        },
+        ratingType: String,
+        legend: {
+          type: Array,
+          default: () => null
+        }
+      }, {
+        "modelValue": {},
+        "modelModifiers": {}
+      }),
+      emits: ["update:modelValue"],
+      setup(__props, { expose: __expose }) {
+        __expose();
+        const props = __props;
+        const ratingOptions = ref(null);
+        const list = computed(() => {
+          return buildOptionList();
+        });
+        const inputValue = useModel(__props, "modelValue");
+        function buildOptionList() {
+          let list2 = [];
+          let ratingType = props.ratingType;
+          if (ratingType.includes("WithNA")) {
+            list2.push({ "value": "-99", "label": "N/A" });
+            ratingType = ratingType.replace("WithNA", "");
+          }
+          ratingType = ratingType.replace("Minus", "-");
+          let [min2, max2] = ratingType.split("to");
+          for (let i2 = min2; i2 <= max2; i2++) {
+            list2.push({ "value": i2, "label": i2 });
+          }
+          return list2;
+        }
+        function isNA(value) {
+          return value === "-99" || value === -99;
+        }
+        function setActive(value) {
+          let applyClass = __applyClass(value, inputValue.value);
+          return applyClass ? "active" : "";
+        }
+        function __applyClass(localValue, globalValue) {
+          if (!isNA(localValue) && parseFloat(localValue) <= parseFloat(globalValue)) {
+            return true;
+          } else if (isNA(localValue) && isNA(globalValue)) {
+            return true;
+          }
+          return false;
+        }
+        function setHover(evt) {
+          let hoverValue = evt.target.getAttribute("rate");
+          let ratingItems = ratingOptions.value.querySelectorAll(".rating");
+          for (let item of ratingItems.values()) {
+            let value = item.getAttribute("rate");
+            let applyClass = __applyClass(value, hoverValue);
+            if (applyClass && evt.type === "mouseover") {
+              item.classList.add("hover");
+            } else {
+              item.classList.remove("hover");
+            }
+          }
+        }
+        function updateRating(value) {
+          if (inputValue.value !== null && value.toString() === inputValue.value.toString()) {
+            value = null;
+          }
+          inputValue.value = value;
+          let ratingItems = ratingOptions.value.querySelectorAll(".rating");
+          for (let item of ratingItems.values()) {
+            item.classList.remove("hover");
+          }
+        }
+        function tooltipLabel(index) {
+          if (props.legend != null) {
+            if (props.legend.hasOwnProperty(index)) {
+              return props.legend[index].charAt(0).toUpperCase() + props.legend[index].slice(1);
+            }
+          }
+          return "";
+        }
+        const __returned__ = { props, ratingOptions, list, inputValue, buildOptionList, isNA, setActive, __applyClass, setHover, updateRating, tooltipLabel, computed, ref };
+        Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+        return __returned__;
+      }
+    };
+    const _hoisted_1$O = {
+      ref: "ratingOptions",
+      class: "rating-container"
+    };
+    const _hoisted_2$E = ["onClick", "rate"];
+    const _hoisted_3$w = ["id"];
+    function _sfc_render$12(_ctx, _cache, $props, $setup, $data, $options) {
+      const _component_tooltip = resolveComponent("tooltip");
+      return openBlock(), createElementBlock("div", null, [
+        createBaseVNode("span", _hoisted_1$O, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList($setup.list, (item, index) => {
+            return openBlock(), createElementBlock("span", null, [
+              createBaseVNode("span", {
+                class: normalizeClass(["rating field-edit", [$setup.isNA(item["value"]) ? "ratingNa" : "ratingNum", $setup.setActive(item["value"])]]),
+                onClick: ($event) => $setup.updateRating(item["value"]),
+                onMouseover: $setup.setHover,
+                onMouseout: $setup.setHover,
+                rate: item["value"]
+              }, toDisplayString(item["label"]), 43, _hoisted_2$E),
+              createVNode(_component_tooltip, null, {
+                default: withCtx(() => [
+                  createTextVNode(toDisplayString($setup.tooltipLabel(index)), 1)
+                ]),
+                _: 2
+              }, 1024)
+            ]);
+          }), 256))
+        ], 512),
+        withDirectives(createBaseVNode("input", {
+          type: "hidden",
+          id: $props.id,
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.inputValue = $event)
+        }, null, 8, _hoisted_3$w), [
+          [vModelText, $setup.inputValue]
+        ])
+      ]);
+    }
+    const rating = /* @__PURE__ */ _export_sfc(_sfc_main$12, [["render", _sfc_render$12], ["__file", "/var/www/html/vendor/andreamarelli/modular-forms/src/resources/assets/js/inputs/rating.vue"]]);
     var airDatepicker = { exports: {} };
     (function(module2, exports2) {
       !function(e2, t2) {
@@ -5223,14 +5233,14 @@ https://vue-select.org/api/props.html#getoptionkey`, e2, t2);
           }
           if (props.dateType === "day") {
             options.dateFormat = "yyyy-MM-dd";
-            if (inputValue.value !== null) {
+            if (typeof inputValue.value !== "undefined" && inputValue.value !== null) {
               options.selectedDates = [inputValue.value];
             }
           } else if (props.dateType === "year") {
             options.dateFormat = "yyyy";
             options.view = "years";
             options.minView = "years";
-            if (inputValue.value !== null) {
+            if (typeof inputValue.value !== "undefined" && inputValue.value !== null) {
               options.selectedDates = [inputValue.value + "-01-01"];
             }
           }
@@ -16049,7 +16059,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
           return list2;
         }
         function isSelected(value) {
-          return value !== null && inputValue.value !== null && value.toString() === inputValue.value.toString();
+          return value !== null && inputValue.value !== null && typeof inputValue.value !== "undefined" && value.toString() === inputValue.value.toString();
         }
         function setOption(value) {
           inputValue.value = inputValue.value === value ? null : value;
@@ -20103,7 +20113,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
     }
     var nodeIsDate = nodeUtil && nodeUtil.isDate;
     var isDate = nodeIsDate ? baseUnary(nodeIsDate) : baseIsDate;
-    function isElement$2(value) {
+    function isElement$3(value) {
       return isObjectLike(value) && value.nodeType === 1 && !isPlainObject$2(value);
     }
     var mapTag$2 = "[object Map]", setTag$2 = "[object Set]";
@@ -21923,7 +21933,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       isBoolean,
       isBuffer,
       isDate,
-      isElement: isElement$2,
+      isElement: isElement$3,
       isEmpty,
       isEqual,
       isEqualWith,
@@ -22818,7 +22828,7 @@ To solve that, you'd need to either set \`decimalPlacesRawValue\` to \`null\`, o
       isBoolean,
       isBuffer,
       isDate,
-      isElement: isElement$2,
+      isElement: isElement$3,
       isEmpty,
       isEqual,
       isEqualWith,
@@ -23438,8 +23448,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         documentationMessage
       ];
     }
-    const version = "43.2.0";
-    const releaseDate = new Date(2024, 9, 2);
+    const version = "43.3.1";
+    const releaseDate = new Date(2024, 10, 6);
     /* istanbul ignore next -- @preserve */
     if (globalThis.CKEDITOR_VERSION) {
       throw new CKEditorError("ckeditor-duplicated-modules", null);
@@ -24300,7 +24310,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       return cloneDeepWith(source, leaveItemReferences);
     }
     function leaveItemReferences(value) {
-      return isElement$2(value) || typeof value === "function" ? value : void 0;
+      return isElement$3(value) || typeof value === "function" ? value : void 0;
     }
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -25184,7 +25194,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         limiter = limiter();
       }
       const positionedElementAncestor = getPositionedAncestor(element);
-      const constrainedViewportRect = getConstrainedViewportRect$1(viewportOffsetConfig);
+      const constrainedViewportRect = getConstrainedViewportRect(viewportOffsetConfig);
       const elementRect = new Rect(element);
       const visibleTargetRect = getVisibleViewportIntersectionRect(target, constrainedViewportRect);
       let bestPosition;
@@ -25217,7 +25227,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
       return visibleSourceRect.getIntersection(viewportRect);
     }
-    function getConstrainedViewportRect$1(viewportOffsetConfig) {
+    function getConstrainedViewportRect(viewportOffsetConfig) {
       viewportOffsetConfig = Object.assign({
         top: 0,
         bottom: 0,
@@ -26387,81 +26397,217 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       return iteratorItem.value;
     }
     class FocusTracker extends (/* @__PURE__ */ DomEmitterMixin(/* @__PURE__ */ ObservableMixin())) {
+      // @if CK_DEBUG_FOCUSTRACKER // public _label?: string;
       constructor() {
         super();
         /**
-        * List of registered elements.
+        * List of registered DOM elements.
         *
         * @internal
         */
         __publicField(this, "_elements", /* @__PURE__ */ new Set());
         /**
-        * Event loop timeout.
+        * List of views with external focus trackers that contribute to the state of this focus tracker.
+        *
+        * @internal
         */
-        __publicField(this, "_nextEventLoopTimeout", null);
+        __publicField(this, "_externalViews", /* @__PURE__ */ new Set());
+        /**
+        * Asynchronous blur event timeout.
+        */
+        __publicField(this, "_blurTimeout", null);
         this.set("isFocused", false);
         this.set("focusedElement", null);
       }
       /**
-      * List of registered elements.
+      * List of registered DOM elements.
+      *
+      * **Note**: The list does do not include elements from {@link #externalViews}.
       */
       get elements() {
         return Array.from(this._elements.values());
       }
       /**
-      * Starts tracking the specified element.
+      * List of external focusable views that contribute to the state of this focus tracker. See {@link #add} to learn more.
       */
-      add(element) {
+      get externalViews() {
+        return Array.from(this._externalViews.values());
+      }
+      /**
+      * Starts tracking a specified DOM element or a {@link module:ui/view~View} instance.
+      *
+      * * If a DOM element is passed, the focus tracker listens to the `focus` and `blur` events on this element.
+      * Tracked elements are listed in {@link #elements}.
+      * * If a {@link module:ui/view~View} instance is passed that has a `FocusTracker` instance ({@link ~ViewWithFocusTracker}),
+      * the external focus tracker's state ({@link #isFocused}, {@link #focusedElement}) starts contributing to the current tracker instance.
+      * This allows for increasing the "reach" of a focus tracker instance, by connecting two or more focus trackers together when DOM
+      * elements they track are located in different subtrees in DOM. External focus trackers are listed in {@link #externalViews}.
+      * * If a {@link module:ui/view~View} instance is passed that has no `FocusTracker` (**not** a {@link ~ViewWithFocusTracker}),
+      * its {@link module:ui/view~View#element} is used to track focus like any other DOM element.
+      */
+      add(elementOrView) {
+        if (isElement$2(elementOrView)) {
+          this._addElement(elementOrView);
+        } else {
+          if (isViewWithFocusTracker(elementOrView)) {
+            this._addView(elementOrView);
+          } else {
+            if (!elementOrView.element) {
+              throw new CKEditorError("focustracker-add-view-missing-element", {
+                focusTracker: this,
+                view: elementOrView
+              });
+            }
+            this._addElement(elementOrView.element);
+          }
+        }
+      }
+      /**
+      * Stops tracking focus in the specified DOM element or a {@link module:ui/view~View view instance}. See {@link #add} to learn more.
+      */
+      remove(elementOrView) {
+        if (isElement$2(elementOrView)) {
+          this._removeElement(elementOrView);
+        } else {
+          if (isViewWithFocusTracker(elementOrView)) {
+            this._removeView(elementOrView);
+          } else {
+            this._removeElement(elementOrView.element);
+          }
+        }
+      }
+      /**
+      * Adds a DOM element to the focus tracker and starts listening to the `focus` and `blur` events on it.
+      */
+      _addElement(element) {
         if (this._elements.has(element)) {
           throw new CKEditorError("focustracker-add-element-already-exist", this);
         }
-        this.listenTo(element, "focus", () => this._focus(element), {
+        this.listenTo(element, "focus", () => {
+          const externalFocusedViewInSubtree = this.externalViews.find((view) => isExternalViewSubtreeFocused(element, view));
+          if (externalFocusedViewInSubtree) {
+            this._focus(externalFocusedViewInSubtree.element);
+          } else {
+            this._focus(element);
+          }
+        }, {
           useCapture: true
         });
-        this.listenTo(element, "blur", () => this._blur(), {
+        this.listenTo(element, "blur", () => {
+          this._blur();
+        }, {
           useCapture: true
         });
         this._elements.add(element);
       }
       /**
-      * Stops tracking the specified element and stops listening on this element.
+      * Removes a DOM element from the focus tracker.
       */
-      remove(element) {
-        if (element === this.focusedElement) {
-          this._blur();
-        }
+      _removeElement(element) {
         if (this._elements.has(element)) {
           this.stopListening(element);
           this._elements.delete(element);
         }
+        if (element === this.focusedElement) {
+          this._blur();
+        }
+      }
+      /**
+      * Adds an external {@link module:ui/view~View view instance} to this focus tracker and makes it contribute to this focus tracker's
+      * state either by its `View#element` or by its `View#focusTracker` instance.
+      */
+      _addView(view) {
+        if (view.element) {
+          this._addElement(view.element);
+        }
+        this.listenTo(view.focusTracker, "change:focusedElement", () => {
+          if (view.focusTracker.focusedElement) {
+            if (view.element) {
+              this._focus(view.element);
+            }
+          } else {
+            this._blur();
+          }
+        });
+        this._externalViews.add(view);
+      }
+      /**
+      * Removes an external {@link module:ui/view~View view instance} from this focus tracker.
+      */
+      _removeView(view) {
+        if (view.element) {
+          this._removeElement(view.element);
+        }
+        this.stopListening(view.focusTracker);
+        this._externalViews.delete(view);
       }
       /**
       * Destroys the focus tracker by:
-      * - Disabling all event listeners attached to tracked elements.
-      * - Removing all tracked elements that were previously added.
+      * - Disabling all event listeners attached to tracked elements or external views.
+      * - Removing all tracked elements and views that were previously added.
       */
       destroy() {
         this.stopListening();
+        this._elements.clear();
+        this._externalViews.clear();
+        this.isFocused = false;
+        this.focusedElement = null;
       }
       /**
-      * Stores currently focused element and set {@link #isFocused} as `true`.
+      * Stores currently focused element as {@link #focusedElement} and sets {@link #isFocused} `true`.
       */
       _focus(element) {
-        clearTimeout(this._nextEventLoopTimeout);
+        this._clearBlurTimeout();
         this.focusedElement = element;
         this.isFocused = true;
       }
       /**
-      * Clears currently focused element and set {@link #isFocused} as `false`.
-      * This method uses `setTimeout` to change order of fires `blur` and `focus` events.
+      * Clears currently {@link #focusedElement} and sets {@link #isFocused} `false`.
+      *
+      * This method uses `setTimeout()` to change order of `blur` and `focus` events calls, ensuring that moving focus between
+      * two elements within a single focus tracker's scope, will not cause `[ blurA, focusB ]` sequence but just `[ focusB ]`.
+      * The former would cause a momentary change of `#isFocused` to `false` which is not desired because any logic listening to
+      * a focus tracker state would experience UI flashes and glitches as the user focus travels across the UI.
       */
       _blur() {
-        clearTimeout(this._nextEventLoopTimeout);
-        this._nextEventLoopTimeout = setTimeout(() => {
+        const isAnyElementFocused = this.elements.find((element) => element.contains(document.activeElement));
+        if (isAnyElementFocused) {
+          return;
+        }
+        const isAnyExternalViewFocused = this.externalViews.find((view) => {
+          return view.focusTracker.isFocused && !view.focusTracker._blurTimeout;
+        });
+        if (isAnyExternalViewFocused) {
+          return;
+        }
+        this._clearBlurTimeout();
+        this._blurTimeout = setTimeout(() => {
           this.focusedElement = null;
           this.isFocused = false;
         }, 0);
       }
+      /**
+      * Clears the asynchronous blur event timeout on demand. See {@link #_blur} to learn more.
+      */
+      _clearBlurTimeout() {
+        clearTimeout(this._blurTimeout);
+        this._blurTimeout = null;
+      }
+    }
+    function isViewWithFocusTracker(view) {
+      return "focusTracker" in view && view.focusTracker instanceof FocusTracker;
+    }
+    function isElement$2(value) {
+      return isElement$3(value);
+    }
+    function isExternalViewSubtreeFocused(subTreeRoot, view) {
+      if (isFocusedView(subTreeRoot, view)) {
+        return true;
+      }
+      return !!view.focusTracker.externalViews.find((view2) => isFocusedView(subTreeRoot, view2));
+    }
+    function isFocusedView(subTreeRoot, view) {
+      return !!view.element && view.element.contains(document.activeElement) && subTreeRoot.contains(view.element);
     }
     class KeystrokeHandler {
       /**
@@ -33763,7 +33909,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this.renderingMode = renderingMode;
         this.blockFillerMode = blockFillerMode || (renderingMode === "editing" ? "br" : "nbsp");
         this.preElements = [
-          "pre"
+          "pre",
+          "textarea"
         ];
         this.blockElements = [
           "address",
@@ -34737,6 +34884,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           }
           if (this._isInlineObjectElement(viewElement)) {
             inlineNodes.push(viewElement);
+            this._processDomInlineNodes(null, nestedInlineNodes, options);
           } else {
             for (const inlineNode of nestedInlineNodes) {
               inlineNodes.push(inlineNode);
@@ -36522,6 +36670,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * Attributes set on this node.
         */
         __publicField(this, "_attrs");
+        /**
+        * Index of this node in its parent or `null` if the node has no parent.
+        *
+        * @internal
+        */
+        __publicField(this, "_index", null);
+        /**
+        * Offset at which this node starts in its parent or `null` if the node has no parent.
+        *
+        * @internal
+        */
+        __publicField(this, "_startOffset", null);
         this._attrs = toMap(attrs);
       }
       /**
@@ -36532,53 +36692,35 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
       /**
       * Index of this node in its parent or `null` if the node has no parent.
-      *
-      * Accessing this property throws an error if this node's parent element does not contain it.
-      * This means that model tree got broken.
       */
       get index() {
-        let pos;
-        if (!this.parent) {
-          return null;
-        }
-        if ((pos = this.parent.getChildIndex(this)) === null) {
-          throw new CKEditorError("model-node-not-found-in-parent", this);
-        }
-        return pos;
+        return this._index;
       }
       /**
       * Offset at which this node starts in its parent. It is equal to the sum of {@link #offsetSize offsetSize}
       * of all its previous siblings. Equals to `null` if node has no parent.
-      *
-      * Accessing this property throws an error if this node's parent element does not contain it.
-      * This means that model tree got broken.
       */
       get startOffset() {
-        let pos;
-        if (!this.parent) {
-          return null;
-        }
-        if ((pos = this.parent.getChildStartOffset(this)) === null) {
-          throw new CKEditorError("model-node-not-found-in-parent", this);
-        }
-        return pos;
+        return this._startOffset;
       }
       /**
-      * Offset size of this node. Represents how much "offset space" is occupied by the node in it's parent.
-      * It is important for {@link module:engine/model/position~Position position}. When node has `offsetSize` greater than `1`, position
-      * can be placed between that node start and end. `offsetSize` greater than `1` is for nodes that represents more
-      * than one entity, i.e. {@link module:engine/model/text~Text text node}.
+      * Offset size of this node.
+      *
+      * Represents how much "offset space" is occupied by the node in its parent. It is important for
+      * {@link module:engine/model/position~Position position}. When node has `offsetSize` greater than `1`, position can be placed between
+      * that node start and end. `offsetSize` greater than `1` is for nodes that represents more than one entity, i.e.
+      * a {@link module:engine/model/text~Text text node}.
       */
       get offsetSize() {
         return 1;
       }
       /**
-      * Offset at which this node ends in it's parent. It is equal to the sum of this node's
+      * Offset at which this node ends in its parent. It is equal to the sum of this node's
       * {@link module:engine/model/node~Node#startOffset start offset} and {@link #offsetSize offset size}.
       * Equals to `null` if the node has no parent.
       */
       get endOffset() {
-        if (!this.parent) {
+        if (this.startOffset === null) {
           return null;
         }
         return this.startOffset + this.offsetSize;
@@ -36773,7 +36915,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return new this.constructor(this._attrs);
       }
       /**
-      * Removes this node from it's parent.
+      * Removes this node from its parent.
       *
       * @internal
       * @see module:engine/model/writer~Writer#remove
@@ -36828,7 +36970,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     };
     class NodeList {
       /**
-      * Creates an empty node list.
+      * Creates a node list.
       *
       * @internal
       * @param nodes Nodes contained in this node list.
@@ -36838,6 +36980,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         * Nodes contained in this node list.
         */
         __publicField(this, "_nodes", []);
+        /**
+        * This array maps numbers (offsets) to node that is placed at that offset.
+        *
+        * This array is similar to `_nodes` with the difference that one node may occupy multiple consecutive items in the array.
+        *
+        * This array is needed to quickly retrieve a node that is placed at given offset.
+        */
+        __publicField(this, "_offsetToNode", []);
         if (nodes) {
           this._insertNodes(0, nodes);
         }
@@ -36860,7 +37010,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Sum of {@link module:engine/model/node~Node#offsetSize offset sizes} of all nodes contained inside this node list.
       */
       get maxOffset() {
-        return this._nodes.reduce((sum2, node) => sum2 + node.offsetSize, 0);
+        return this._offsetToNode.length;
       }
       /**
       * Gets the node at the given index. Returns `null` if incorrect index was passed.
@@ -36869,32 +37019,32 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return this._nodes[index] || null;
       }
       /**
-      * Returns an index of the given node. Returns `null` if given node is not inside this node list.
+      * Gets the node at the given offset. Returns `null` if incorrect offset was passed.
       */
-      getNodeIndex(node) {
-        const index = this._nodes.indexOf(node);
-        return index == -1 ? null : index;
+      getNodeAtOffset(offset2) {
+        return this._offsetToNode[offset2] || null;
       }
       /**
-      * Returns the starting offset of given node. Starting offset is equal to the sum of
-      * {@link module:engine/model/node~Node#offsetSize offset sizes} of all nodes that are before this node in this node list.
+      * Returns an index of the given node or `null` if given node does not have a parent.
+      *
+      * This is an alias to {@link module:engine/model/node~Node#index}.
+      */
+      getNodeIndex(node) {
+        return node.index;
+      }
+      /**
+      * Returns the offset at which given node is placed in its parent or `null` if given node does not have a parent.
+      *
+      * This is an alias to {@link module:engine/model/node~Node#startOffset}.
       */
       getNodeStartOffset(node) {
-        const index = this.getNodeIndex(node);
-        if (index === null) {
-          return null;
-        }
-        let sum2 = 0;
-        for (let i2 = 0; i2 < index; i2++) {
-          sum2 += this._nodes[i2].offsetSize;
-        }
-        return sum2;
+        return node.startOffset;
       }
       /**
       * Converts index to offset in node list.
       *
-      * Returns starting offset of a node that is at given index. Throws {@link module:utils/ckeditorerror~CKEditorError CKEditorError}
-      * `model-nodelist-index-out-of-bounds` if given index is less than `0` or more than {@link #length}.
+      * Throws {@link module:utils/ckeditorerror~CKEditorError CKEditorError} `model-nodelist-index-out-of-bounds` if given index is less
+      * than `0` or more than {@link #length}.
       */
       indexToOffset(index) {
         if (index == this._nodes.length) {
@@ -36909,24 +37059,21 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * Converts offset in node list to index.
       *
-      * Returns index of a node that occupies given offset. Throws {@link module:utils/ckeditorerror~CKEditorError CKEditorError}
-      * `model-nodelist-offset-out-of-bounds` if given offset is less than `0` or more than {@link #maxOffset}.
+      * Throws {@link module:utils/ckeditorerror~CKEditorError CKEditorError} `model-nodelist-offset-out-of-bounds` if given offset is less
+      * than `0` or more than {@link #maxOffset}.
       */
       offsetToIndex(offset2) {
-        let totalOffset = 0;
-        for (const node of this._nodes) {
-          if (offset2 >= totalOffset && offset2 < totalOffset + node.offsetSize) {
-            return this.getNodeIndex(node);
-          }
-          totalOffset += node.offsetSize;
+        if (offset2 == this._offsetToNode.length) {
+          return this._nodes.length;
         }
-        if (totalOffset != offset2) {
+        const node = this._offsetToNode[offset2];
+        if (!node) {
           throw new CKEditorError("model-nodelist-offset-out-of-bounds", this, {
             offset: offset2,
             nodeList: this
           });
         }
-        return this.length;
+        return this.getNodeIndex(node);
       }
       /**
       * Inserts given nodes at given index.
@@ -36941,7 +37088,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             throw new CKEditorError("model-nodelist-insertnodes-not-node", this);
           }
         }
-        this._nodes = spliceArray(this._nodes, Array.from(nodes), index, 0);
+        const nodesArray = Array.from(nodes);
+        const offsetsArray = makeOffsetsArray(nodesArray);
+        let offset2 = this.indexToOffset(index);
+        this._nodes = spliceArray(this._nodes, nodesArray, index, 0);
+        this._offsetToNode = spliceArray(this._offsetToNode, offsetsArray, offset2, 0);
+        for (let i2 = index; i2 < this._nodes.length; i2++) {
+          this._nodes[i2]._index = i2;
+          this._nodes[i2]._startOffset = offset2;
+          offset2 += this._nodes[i2].offsetSize;
+        }
       }
       /**
       * Removes one or more nodes starting at the given index.
@@ -36952,7 +37108,24 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @returns Array containing removed nodes.
       */
       _removeNodes(indexStart, howMany = 1) {
-        return this._nodes.splice(indexStart, howMany);
+        if (howMany == 0) {
+          return [];
+        }
+        let offset2 = this.indexToOffset(indexStart);
+        const nodes = this._nodes.splice(indexStart, howMany);
+        const lastNode = nodes[nodes.length - 1];
+        const removedOffsetSum = lastNode.startOffset + lastNode.offsetSize - offset2;
+        this._offsetToNode.splice(offset2, removedOffsetSum);
+        for (const node of nodes) {
+          node._index = null;
+          node._startOffset = null;
+        }
+        for (let i2 = indexStart; i2 < this._nodes.length; i2++) {
+          this._nodes[i2]._index = i2;
+          this._nodes[i2]._startOffset = offset2;
+          offset2 += this._nodes[i2].offsetSize;
+        }
+        return nodes;
       }
       /**
       * Converts `NodeList` instance to an array containing nodes that were inserted in the node list. Nodes
@@ -36963,6 +37136,15 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       toJSON() {
         return this._nodes.map((node) => node.toJSON());
       }
+    }
+    function makeOffsetsArray(nodes) {
+      const offsets = [];
+      for (const node of nodes) {
+        const start2 = offsets.length;
+        offsets.length += node.offsetSize;
+        offsets.fill(node, start2);
+      }
+      return offsets;
     }
     class Text extends Node$1 {
       /**
@@ -37226,10 +37408,22 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return this.childCount === 0;
       }
       /**
-      * Gets the child at the given index.
+      * Gets the child at the given index. Returns `null` if incorrect index was passed.
+      *
+      * @param index Index in this element.
+      * @returns Child node.
       */
       getChild(index) {
         return this._children.getNode(index);
+      }
+      /**
+      * Gets the child at the given offset. Returns `null` if incorrect index was passed.
+      *
+      * @param offset Offset in this element.
+      * @returns Child node.
+      */
+      getChildAtOffset(offset2) {
+        return this._children.getNodeAtOffset(offset2);
       }
       /**
       * Returns an iterator that iterates over all of this element's children.
@@ -37290,8 +37484,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       getNodeByPath(relativePath) {
         let node = this;
-        for (const index of relativePath) {
-          node = node.getChild(node.offsetToIndex(index));
+        for (const offset2 of relativePath) {
+          node = node.getChildAtOffset(offset2);
         }
         return node;
       }
@@ -37798,7 +37992,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       get parent() {
         let parent2 = this.root;
         for (let i2 = 0; i2 < this.path.length - 1; i2++) {
-          parent2 = parent2.getChild(parent2.offsetToIndex(this.path[i2]));
+          parent2 = parent2.getChildAtOffset(this.path[i2]);
           if (!parent2) {
             throw new CKEditorError("model-position-path-incorrect", this, {
               position: this
@@ -37828,14 +38022,14 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return getTextNodeAtPosition(this, this.parent);
       }
       /**
-      * Node directly after this position or `null` if this position is in text node.
+      * Node directly after this position. Returns `null` if this position is at the end of its parent, or if it is in a text node.
       */
       get nodeAfter() {
         const parent2 = this.parent;
         return getNodeAfterPosition(this, parent2, getTextNodeAtPosition(this, parent2));
       }
       /**
-      * Node directly before this position or `null` if this position is in text node.
+      * Node directly before this position. Returns `null` if this position is at the start of its parent, or if it is in a text node.
       */
       get nodeBefore() {
         const parent2 = this.parent;
@@ -37852,6 +38046,22 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       get isAtEnd() {
         return this.offset == this.parent.maxOffset;
+      }
+      /**
+      * Checks whether the position is valid in current model tree, that is whether it points to an existing place in the model.
+      */
+      isValid() {
+        if (this.offset < 0) {
+          return false;
+        }
+        let parent2 = this.root;
+        for (let i2 = 0; i2 < this.path.length - 1; i2++) {
+          parent2 = parent2.getChildAtOffset(this.path[i2]);
+          if (!parent2) {
+            return false;
+          }
+        }
+        return this.offset <= parent2.maxOffset;
       }
       /**
       * Checks whether this position is before or after given position.
@@ -38435,7 +38645,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       return type === "position" || type === "model:position";
     };
     function getTextNodeAtPosition(position, positionParent) {
-      const node = positionParent.getChild(positionParent.offsetToIndex(position.offset));
+      const node = positionParent.getChildAtOffset(position.offset);
       if (node && node.is("$text") && node.startOffset < position.offset) {
         return node;
       }
@@ -38445,7 +38655,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       if (textNode !== null) {
         return null;
       }
-      return positionParent.getChild(positionParent.offsetToIndex(position.offset));
+      return positionParent.getChildAtOffset(position.offset);
     }
     function getNodeBeforePosition(position, positionParent, textNode) {
       if (textNode !== null) {
@@ -52192,7 +52402,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @returns `true` if `range` is valid, `false` otherwise.
       */
       _validateSelectionRange(range2) {
-        return validateTextNodePosition(range2.start) && validateTextNodePosition(range2.end);
+        return range2.start.isValid() && range2.end.isValid() && validateTextNodePosition(range2.start) && validateTextNodePosition(range2.end);
       }
       /**
       * Performs post-fixer loops. Executes post-fixer callbacks as long as none of them has done any changes to the model.
@@ -52696,11 +52906,20 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * Gets the child at the given index. Returns `null` if incorrect index was passed.
       *
-      * @param index Index of child.
+      * @param index Index in this document fragment.
       * @returns Child node.
       */
       getChild(index) {
         return this._children.getNode(index);
+      }
+      /**
+      * Gets the child at the given offset. Returns `null` if incorrect index was passed.
+      *
+      * @param offset Offset in this document fragment.
+      * @returns Child node.
+      */
+      getChildAtOffset(offset2) {
+        return this._children.getNodeAtOffset(offset2);
       }
       /**
       * Returns an iterator that iterates over all of this document fragment's children.
@@ -52748,8 +52967,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       getNodeByPath(relativePath) {
         let node = this;
-        for (const index of relativePath) {
-          node = node.getChild(node.offsetToIndex(index));
+        for (const offset2 of relativePath) {
+          node = node.getChildAtOffset(offset2);
         }
         return node;
       }
@@ -56088,7 +56307,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           if (this._initUsingData) {
             return this.create(existingRoots, updatedConfig, updatedConfig.context);
           } else {
-            if (isElement$2(this._elementOrData)) {
+            if (isElement$3(this._elementOrData)) {
               return this.create(this._elementOrData, updatedConfig, updatedConfig.context);
             } else {
               return this.create(this._editables, updatedConfig, updatedConfig.context);
@@ -56249,7 +56468,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       _cloneEditorConfiguration(config2) {
         return cloneDeepWith(config2, (value, key) => {
-          if (isElement$2(value)) {
+          if (isElement$3(value)) {
             return value;
           }
           if (key === "context") {
@@ -56852,6 +57071,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * @inheritDoc
       */
       static get isContextPlugin() {
+        return false;
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return false;
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isPremiumPlugin() {
         return false;
       }
     }
@@ -62299,6 +62530,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
                 class: [
                   "ck",
                   "ck-dialog",
+                  bind2.if("isModal", "ck-dialog_modal"),
                   bind2.to("className")
                 ],
                 role: "dialog",
@@ -62355,7 +62587,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       * Returns the element that should be used as a drag handle.
       */
       get dragHandleElement() {
-        if (this.headerView) {
+        if (this.headerView && !this.isModal) {
           return this.headerView.element;
         } else {
           return null;
@@ -62542,10 +62774,30 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return new Rect(this.element.firstElementChild);
       }
       /**
-      * Calculates the viewport rect.
+      * Returns a viewport `Rect` shrunk by the viewport offset config from all sides.
+      *
+      * TODO: This is a duplicate from position.ts module. It should either be exported there or land somewhere in utils.
       */
       _getViewportRect() {
-        return getConstrainedViewportRect(this._getViewportOffset());
+        const viewportRect = new Rect(global$1.window);
+        if (this.isModal) {
+          return viewportRect;
+        }
+        const viewportOffset = {
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0,
+          ...this._getViewportOffset()
+        };
+        viewportRect.top += viewportOffset.top;
+        viewportRect.height -= viewportOffset.top;
+        viewportRect.bottom -= viewportOffset.bottom;
+        viewportRect.height -= viewportOffset.bottom;
+        viewportRect.left += viewportOffset.left;
+        viewportRect.right -= viewportOffset.right;
+        viewportRect.width -= viewportOffset.left + viewportOffset.right;
+        return viewportRect;
       }
       /**
       * Collects all focusable elements inside the dialog parts
@@ -62596,23 +62848,6 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     */
     __publicField(_DialogView, "defaultOffset", 15);
     let DialogView = _DialogView;
-    function getConstrainedViewportRect(viewportOffset) {
-      viewportOffset = Object.assign({
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0
-      }, viewportOffset);
-      const viewportRect = new Rect(global$1.window);
-      viewportRect.top += viewportOffset.top;
-      viewportRect.height -= viewportOffset.top;
-      viewportRect.bottom -= viewportOffset.bottom;
-      viewportRect.height -= viewportOffset.bottom;
-      viewportRect.left += viewportOffset.left;
-      viewportRect.right -= viewportOffset.right;
-      viewportRect.width -= viewportOffset.left + viewportOffset.right;
-      return viewportRect;
-    }
     const _Dialog = class _Dialog extends Plugin {
       /**
       * @inheritDoc
@@ -62651,6 +62886,19 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "Dialog";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
+      destroy() {
+        super.destroy();
+        this._unlockBodyScroll();
       }
       /**
       * Initiates listeners for the `show` and `hide` events emitted by this plugin.
@@ -62829,6 +63077,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         if (!position) {
           position = isModal ? DialogViewPosition.SCREEN_CENTER : DialogViewPosition.EDITOR_CENTER;
         }
+        if (isModal) {
+          this._lockBodyScroll();
+        }
         view.set({
           position,
           _isVisible: true,
@@ -62868,6 +63119,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         }
         const editor2 = this.editor;
         const view = this.view;
+        if (view.isModal) {
+          this._unlockBodyScroll();
+        }
         if (view.contentView) {
           view.contentView.reset();
         }
@@ -62879,6 +63133,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         this.id = null;
         this.isOpen = false;
         _Dialog._visibleDialogPlugin = null;
+      }
+      /**
+      * Makes the <body> unscrollable (e.g. when the modal shows up).
+      */
+      _lockBodyScroll() {
+        document.documentElement.classList.add("ck-dialog-scroll-locked");
+      }
+      /**
+      * Makes the <body> scrollable again (e.g. once the modal hides).
+      */
+      _unlockBodyScroll() {
+        document.documentElement.classList.remove("ck-dialog-scroll-locked");
       }
     };
     /**
@@ -63188,6 +63454,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "AccessibilityHelp";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -65589,7 +65861,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     __publicField(_BalloonPanelView, "defaultPositions", /* @__PURE__ */ _BalloonPanelView.generatePositions());
     let BalloonPanelView = _BalloonPanelView;
     function getDomElement(object2) {
-      if (isElement$2(object2)) {
+      if (isElement$3(object2)) {
         return object2;
       }
       if (isRange(object2)) {
@@ -65810,13 +66082,13 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         super.render();
         this.focusTracker.add(this.element);
         for (const item of this.items) {
-          this.focusTracker.add(item.element);
+          this.focusTracker.add(item);
         }
         this.items.on("add", (evt, item) => {
-          this.focusTracker.add(item.element);
+          this.focusTracker.add(item);
         });
         this.items.on("remove", (evt, item) => {
-          this.focusTracker.remove(item.element);
+          this.focusTracker.remove(item);
         });
         this.keystrokes.listenTo(this.element);
         this._behavior.render(this);
@@ -66530,6 +66802,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         toolbarView.items.addMany(buttons);
       }
       dropdownView.panelView.children.add(toolbarView);
+      dropdownView.focusTracker.add(toolbarView);
       toolbarView.items.delegate("execute").to(dropdownView);
     }
     function addListToDropdown(dropdownView, itemsOrCallback, options = {}) {
@@ -66594,9 +66867,18 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         },
         contextElements: () => [
           dropdownView.element,
-          ...dropdownView.focusTracker.elements
+          // Include all elements connected to the dropdown's focus tracker, but exclude those that are direct children
+          // of DropdownView#element. They would be identified as descendants of #element anyway upon clicking and would
+          // not contribute to the logic.
+          ...getFocusTrackerTreeElements(dropdownView.focusTracker).filter((element) => !dropdownView.element.contains(element))
         ]
       });
+    }
+    function getFocusTrackerTreeElements(focusTracker) {
+      return [
+        ...focusTracker.elements,
+        ...focusTracker.externalViews.flatMap((view) => getFocusTrackerTreeElements(view.focusTracker))
+      ];
     }
     function closeDropdownOnExecute(dropdownView) {
       dropdownView.on("execute", (evt) => {
@@ -66964,7 +67246,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       _onLeaveOrBlur(evt, { target, relatedTarget }) {
         if (evt.name === "mouseleave") {
-          if (!isElement$2(target)) {
+          if (!isElement$3(target)) {
             return;
           }
           const balloonElement = this.balloonPanelView.element;
@@ -67090,7 +67372,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
     __publicField(_TooltipManager, "_instance", null);
     let TooltipManager = _TooltipManager;
     function getDescendantWithTooltip(element) {
-      if (!isElement$2(element)) {
+      if (!isElement$3(element)) {
         return null;
       }
       return element.closest("[data-cke-tooltip-text]:not([data-cke-tooltip-disabled])");
@@ -68606,11 +68888,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       addToolbar(toolbarView, options = {}) {
         if (toolbarView.isRendered) {
-          this.focusTracker.add(toolbarView.element);
+          this.focusTracker.add(toolbarView);
           this.editor.keystrokes.listenTo(toolbarView.element);
         } else {
           toolbarView.once("render", () => {
-            this.focusTracker.add(toolbarView.element);
+            this.focusTracker.add(toolbarView);
             this.editor.keystrokes.listenTo(toolbarView.element);
           });
         }
@@ -69248,6 +69530,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "ContextualBalloon";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -70765,6 +71053,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const model = editor2.model;
@@ -71441,6 +71735,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const view = editor2.editing.view;
@@ -71513,6 +71813,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "Typing";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
     }
     /**
@@ -71671,6 +71977,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "TwoStepCaretMovement";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -72173,6 +72485,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const t2 = this.editor.t;
@@ -72256,6 +72574,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const t2 = editor2.locale.t;
@@ -72287,6 +72611,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       static get pluginName() {
         return "Bold";
       }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
     }
     const ITALIC$1 = "italic";
     class ItalicEditing extends Plugin {
@@ -72295,6 +72625,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "ItalicEditing";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -72345,6 +72681,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const t2 = editor2.locale.t;
@@ -72375,6 +72717,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "Italic";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
     }
     /**
@@ -72526,6 +72874,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       static get pluginName() {
         return "Enter";
       }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
       init() {
         const editor2 = this.editor;
         const view = editor2.editing.view;
@@ -72637,6 +72991,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       static get pluginName() {
         return "ShiftEnter";
       }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
       init() {
         const editor2 = this.editor;
         const schema = editor2.model.schema;
@@ -72740,6 +73100,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "WidgetTypeAround";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -73540,6 +73906,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       static get requires() {
         return [
           WidgetTypeAround,
@@ -74181,6 +74553,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return "ClipboardMarkersUtils";
       }
       /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
       * Registers marker name as copyable in clipboard pipeline.
       *
       * @param markerName Name of marker that can be copied.
@@ -74589,6 +74967,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       static get requires() {
         return [
           ClipboardMarkersUtils
@@ -74811,6 +75195,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "DragDropTarget";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -75121,6 +75511,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         this.listenTo(editor2, "change:isReadOnly", (evt, name, isReadOnly) => {
@@ -75248,6 +75644,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "DragDrop";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -75659,6 +76061,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       static get requires() {
         return [
           ClipboardPipeline
@@ -75722,6 +76130,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "Clipboard";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -76183,7 +76597,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       return isElement$1(sourceElementOrData) ? getDataFromElement(sourceElementOrData) : sourceElementOrData;
     }
     function isElement$1(value) {
-      return isElement$2(value);
+      return isElement$3(value);
     }
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -76231,6 +76645,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const t2 = editor2.t;
@@ -76260,6 +76680,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "SelectAllUI";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -76314,6 +76740,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "SelectAll";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
     }
     /**
@@ -76554,6 +76986,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const t2 = editor2.t;
@@ -76619,6 +77057,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "UndoUI";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -76690,6 +77134,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       static get pluginName() {
         return "Undo";
       }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
     }
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -76715,6 +77165,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "Essentials";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
     }
     /**
@@ -76827,6 +77283,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "Paragraph";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -76973,6 +77435,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       constructor(editor2) {
         super(editor2);
         editor2.config.define("heading", {
@@ -77092,6 +77560,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "HeadingUI";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -77253,6 +77727,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       static get pluginName() {
         return "Heading";
       }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
     }
     /**
      * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
@@ -77338,6 +77818,9 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           dispatcher.on("attribute:linkHref:imageBlock", (evt, data, { writer, mapper }) => {
             const viewFigure = mapper.toViewElement(data.item);
             const linkInImage = Array.from(viewFigure.getChildren()).find((child) => child.is("element", "a"));
+            if (!linkInImage) {
+              return;
+            }
             for (const item of this._definitions) {
               const attributes = toMap(item.attributes);
               if (item.callback(data.attributeNewValue)) {
@@ -77815,6 +78298,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "LinkEditing";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
       /**
       * @inheritDoc
@@ -78527,6 +79016,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const t2 = this.editor.t;
@@ -79070,6 +79565,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const editor2 = this.editor;
         const selection = editor2.model.document.selection;
@@ -79285,6 +79786,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "Link";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
     }
     /**
@@ -80196,6 +80703,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         return "ListUtils";
       }
       /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
       * Expands the given list of selected blocks to include all the items of the lists they're in.
       *
       * @param blocks The list of selected blocks.
@@ -80767,6 +81280,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       static get requires() {
         return [
           Enter,
@@ -81297,6 +81816,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       /**
       * @inheritDoc
       */
+      static get isOfficialPlugin() {
+        return true;
+      }
+      /**
+      * @inheritDoc
+      */
       init() {
         const t2 = this.editor.t;
         if (!this.editor.ui.componentFactory.has("numberedList")) {
@@ -81322,6 +81847,12 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       */
       static get pluginName() {
         return "List";
+      }
+      /**
+      * @inheritDoc
+      */
+      static get isOfficialPlugin() {
+        return true;
       }
     }
     const LIST_STYLE_TYPES = [
@@ -83617,10 +84148,16 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       const accordion_title_field = component_data.accordion_title_field;
       const records = unref(component_data.records);
       const empty_record = unref(component_data.empty_record);
+      const custom_methods = component_data.custom_methods;
       function accordionTitle(index) {
         let group_key = records[index][group_key_field] || null;
-        let title = toRaw(records[index][accordion_title_field]) || "";
         let title_index = indexInGroup(index, group_key) + 1;
+        let title = null;
+        if (typeof custom_methods.accordionTitle === "function") {
+          title = custom_methods.accordionTitle(records, index, accordion_title_field);
+        } else {
+          title = toRaw(records[index][accordion_title_field]) || "";
+        }
         return title_index + " - " + title;
       }
       function recordIsInGroup(record, group_key) {
@@ -83879,7 +84416,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         };
         return this.createApp(options, input_data);
       }
-      setupApp(props, input_data) {
+      setupApp(props, input_data, custom_methods = {}) {
         const moduleContainer = document.querySelector("#module_" + props.module_key);
         const emitter = mitt();
         let records = reactive(props.records);
@@ -83905,7 +84442,8 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
           group_key_field: unref(props.group_key_field),
           accordion_title_field: unref(props.accordion_title_field),
           records: unref(records),
-          empty_record: unref(empty_record)
+          empty_record: unref(empty_record),
+          custom_methods
         });
         const { refreshDataStatus, isNotApplicable, isNotAvailable, toggleDataStatus } = useDataStatus({
           enable_not_applicable: props.enable_not_applicable,
@@ -83937,8 +84475,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ensureAteLeastOneRecordPerGroup();
         watch(records, (value) => {
           syncCommonFields();
-          if (status.value !== "init" && status.value !== "changed") {
-            status.value = "changed";
+          if (status.value !== "init") {
+            if (status.value !== "changed") {
+              status.value = "changed";
+              emitter.emit("moduleIsChanged", { module_key: props.module_key });
+            }
             emitter.emit("moduleChanged", { module_key: props.module_key, records: value });
           }
         });
@@ -84137,7 +84678,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         $props.value !== null ? (openBlock(), createElementBlock("div", _hoisted_2$z, toDisplayString($props.value) + "% " + toDisplayString($props.additional_label), 1)) : createCommentVNode("", true)
       ]);
     }
-    const progress_bar = /* @__PURE__ */ _export_sfc(_sfc_main$V, [["render", _sfc_render$V], ["__scopeId", "data-v-cec8b164"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/progress_bar.vue"]]);
+    const progress_bar = /* @__PURE__ */ _export_sfc(_sfc_main$V, [["render", _sfc_render$V], ["__scopeId", "data-v-420937fa"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/progress_bar.vue"]]);
     const _sfc_main$U = {
       __name: "imet_score_bar",
       props: {
@@ -84197,7 +84738,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         $props.showLimits && $props.max !== null ? (openBlock(), createElementBlock("div", _hoisted_3$r, toDisplayString($props.max) + "%", 1)) : createCommentVNode("", true)
       ]);
     }
-    const imetScoreBar = /* @__PURE__ */ _export_sfc(_sfc_main$U, [["render", _sfc_render$U], ["__scopeId", "data-v-0cef61ef"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/imet_score_bar.vue"]]);
+    const imetScoreBar = /* @__PURE__ */ _export_sfc(_sfc_main$U, [["render", _sfc_render$U], ["__scopeId", "data-v-6f11f8bd"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_bar.vue"]]);
     const _sfc_main$T = {
       __name: "imet_radar",
       props: {
@@ -84292,7 +84833,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         style: normalizeStyle("width:" + $props.width + "px; height: " + $props.height + "px;")
       }, null, 4);
     }
-    const imet_radar = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["render", _sfc_render$T], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/imet_radar.vue"]]);
+    const imet_radar = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["render", _sfc_render$T], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_radar.vue"]]);
     const _sfc_main$S = {
       __name: "multiple-files-upload",
       props: {
@@ -84440,7 +84981,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ])
       ], 64);
     }
-    const multipleFilesUpload = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["render", _sfc_render$S], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/inputs/multiple-files-upload.vue"]]);
+    const multipleFilesUpload = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["render", _sfc_render$S], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/multiple-files-upload.vue"]]);
     const marineIcon = "/build/assets/fish-PuECKpUO.png";
     const terrestrialIcon = "/build/assets/tree-1D_APfEu.png";
     const TERRESTRIAL_AND_MARINE = "terrestrial_and_marine";
@@ -84500,7 +85041,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ], 64)) : createCommentVNode("", true)
       ], 64);
     }
-    const scopeIcon = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["render", _sfc_render$R], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/scope_icon.vue"]]);
+    const scopeIcon = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["render", _sfc_render$R], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/scope_icon.vue"]]);
     class BaseImet extends Base {
       constructor(options, input_data) {
         return super(options, input_data).component("imet_score_bar", imetScoreBar).component("imet_radar", imet_radar).component("multiple-files-upload", multipleFilesUpload).component("scope-icon", scopeIcon);
@@ -84643,7 +85184,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         ])) : createCommentVNode("", true)
       ]);
     }
-    const imetEncodersResponsibles = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["render", _sfc_render$Q], ["__scopeId", "data-v-6745d1e0"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/imet_encoders_responsibles.vue"]]);
+    const imetEncodersResponsibles = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["render", _sfc_render$Q], ["__scopeId", "data-v-2aa7151e"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_encoders_responsibles.vue"]]);
     class FormListImet extends FormList {
       constructor(options, input_data) {
         return super(options, input_data).component("imet_encoders_responsibles", imetEncodersResponsibles).component("imet_radar", imet_radar);
@@ -84694,11 +85235,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
     };
     const _hoisted_1$C = { class: "result_left" };
-    const _hoisted_2$u = {
-      key: 0,
-      target: "_blank",
-      href: "https://www.protectedplanet.net/'+item.wdpa_id+'"
-    };
+    const _hoisted_2$u = ["href"];
     function _sfc_render$P(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createBlock($setup["selectorDialog"], {
         modelValue: $setup.inputValue,
@@ -84723,7 +85260,11 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
             ])
           ]),
           createBaseVNode("td", null, [
-            item.wdpa_id !== null ? (openBlock(), createElementBlock("a", _hoisted_2$u, toDisplayString(item.wdpa_id), 1)) : createCommentVNode("", true)
+            item.wdpa_id !== null ? (openBlock(), createElementBlock("a", {
+              key: 0,
+              target: "_blank",
+              href: "https://www.protectedplanet.net/" + item.wdpa_id
+            }, toDisplayString(item.wdpa_id), 9, _hoisted_2$u)) : createCommentVNode("", true)
           ]),
           createBaseVNode("td", null, toDisplayString(item.country_name), 1),
           createBaseVNode("td", null, toDisplayString(item.iucn_category), 1)
@@ -84731,7 +85272,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
         _: 1
       }, 8, ["modelValue", "parent-id", "search-url", "label-url", "multiple"]);
     }
-    const selectorWdpa = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["render", _sfc_render$P], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/inputs/selector-wdpa.vue"]]);
+    const selectorWdpa = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["render", _sfc_render$P], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/selector-wdpa.vue"]]);
     class ModuleImet extends Module {
       constructor(input_data = {}, custom_props = {}) {
         return super(input_data, custom_props).component("selector-wdpa", selectorWdpa).component("scope-icon", scopeIcon).component("imet_score_bar", imetScoreBar);
@@ -84952,7 +85493,7 @@ Read more: ${DOCUMENTATION_URL}#error-${errorName}`;
       }
     }
     /*!
-     * pinia v2.2.4
+     * pinia v2.2.6
      * (c) 2024 Eduardo San Martin Morote
      * @license MIT
      */
@@ -86179,6 +86720,7 @@ Found in store "${store.$id}".`);
       isSyncListening = true;
       return store;
     }
+    /*! #__NO_SIDE_EFFECTS__ */
     // @__NO_SIDE_EFFECTS__
     function defineStore(idOrOptions, setup, setupOptions) {
       let id;
@@ -86235,10 +86777,10 @@ This will fail in production.`);
     }
     function storeToRefs(store) {
       {
-        store = toRaw(store);
+        const rawStore = toRaw(store);
         const refs = {};
-        for (const key in store) {
-          const value = store[key];
+        for (const key in rawStore) {
+          const value = rawStore[key];
           if (isRef(value) || isReactive(value)) {
             refs[key] = // ---
             toRef(store, key);
@@ -86355,7 +86897,7 @@ This will fail in production.`);
         ], 4)
       ], 2);
     }
-    const imet_score_row = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["render", _sfc_render$O], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/imet_score_row.vue"]]);
+    const imet_score_row = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["render", _sfc_render$O], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_score_row.vue"]]);
     const _sfc_main$N = {
       __name: "imet_process_radar",
       props: {
@@ -86447,7 +86989,7 @@ This will fail in production.`);
     function _sfc_render$N(_ctx, _cache, $props, $setup, $data, $options) {
       return openBlock(), createElementBlock("div", _hoisted_1$A, null, 512);
     }
-    const imet_process_radar = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["render", _sfc_render$N], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/imet_process_radar.vue"]]);
+    const imet_process_radar = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["render", _sfc_render$N], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_process_radar.vue"]]);
     const _sfc_main$M = {
       __name: "imet_scores",
       props: {
@@ -86666,7 +87208,7 @@ This will fail in production.`);
         }), 256))
       ], 64);
     }
-    const imetScores = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["render", _sfc_render$M], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/imet_scores.vue"]]);
+    const imetScores = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["render", _sfc_render$M], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_scores.vue"]]);
     const useScoreStore = /* @__PURE__ */ defineStore("score", {
       state: () => ({
         api: {}
@@ -86782,7 +87324,7 @@ This will fail in production.`);
         onClick: _cache[0] || (_cache[0] = ($event) => $setup.store_to_cookie_by_id_and_value("analysis"))
       }, toDisplayString($props.label), 3);
     }
-    const actionButtonCookie = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["render", _sfc_render$L], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button-cookie.vue"]]);
+    const actionButtonCookie = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["render", _sfc_render$L], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button-cookie.vue"]]);
     const _sfc_main$K = {
       __name: "label-cloud",
       props: {
@@ -86931,7 +87473,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const LabelCloud = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$K], ["__scopeId", "data-v-c7f7e05c"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/label-cloud.vue"]]);
+    const LabelCloud = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$K], ["__scopeId", "data-v-29abde70"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/label-cloud.vue"]]);
     const _sfc_main$J = {
       __name: "action-button",
       props: {
@@ -86984,7 +87526,7 @@ This will fail in production.`);
         onClick: $setup.action
       }, toDisplayString($props.label), 3);
     }
-    const actionButton = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["render", _sfc_render$J], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button.vue"]]);
+    const actionButton = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["render", _sfc_render$J], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/action-button.vue"]]);
     class ScalingList {
       constructor(input_data = {}) {
         const options = {
@@ -87195,7 +87737,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const generalInfo = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["render", _sfc_render$I], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/general_info.vue"]]);
+    const generalInfo = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["render", _sfc_render$I], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/general_info.vue"]]);
     const _sfc_main$H = {
       name: "elements",
       props: {
@@ -87243,7 +87785,7 @@ This will fail in production.`);
         [vShow, $props.show_element]
       ]);
     }
-    const elements = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$H], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context/elements.vue"]]);
+    const elements = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$H], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context/elements.vue"]]);
     function useResize(component_data) {
       component_data.chart || ref(null);
       const emitter = component_data.emitter;
@@ -87473,7 +88015,7 @@ This will fail in production.`);
         style: normalizeStyle("width:" + _ctx.width + "; min-height: " + _ctx.height + ";")
       }, null, 4);
     }
-    const imetBarChart = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$G], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/imet_bar_chart.vue"]]);
+    const imetBarChart = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$G], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/imet_bar_chart.vue"]]);
     const _sfc_main$F = {
       __name: "management_context",
       props: {
@@ -87847,7 +88389,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const managementContext = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["render", _sfc_render$F], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context.vue"]]);
+    const managementContext = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["render", _sfc_render$F], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/management_context.vue"]]);
     const _sfc_main$E = {
       __name: "drop_drag_area",
       props: {
@@ -87890,7 +88432,7 @@ This will fail in production.`);
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ], 36);
     }
-    const drop_drag_area = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$E], ["__scopeId", "data-v-cc7865e9"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/drop_drag_area.vue"]]);
+    const drop_drag_area = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$E], ["__scopeId", "data-v-0367b2c5"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/drop_drag_area.vue"]]);
     const _sfc_main$D = {
       __name: "draggable_item",
       props: {
@@ -87958,7 +88500,7 @@ This will fail in production.`);
         })) : createCommentVNode("", true)
       ], 40, _hoisted_1$u);
     }
-    const draggable_item = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$D], ["__scopeId", "data-v-31aa0aa1"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/draggable_item.vue"]]);
+    const draggable_item = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$D], ["__scopeId", "data-v-010a90de"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/drag_and_drop/draggable_item.vue"]]);
     const func_to_call = "get_grouping_analysis";
     const _sfc_main$C = {
       __name: "grouping",
@@ -88331,7 +88873,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const grouping = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$C], ["__scopeId", "data-v-059642f3"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/grouping.vue"]]);
+    const grouping = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$C], ["__scopeId", "data-v-d9cda725"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/grouping.vue"]]);
     const _sfc_main$B = {
       __name: "text_editor",
       props: {
@@ -88423,7 +88965,7 @@ This will fail in production.`);
         }, null, 8, _hoisted_2$m)
       ]);
     }
-    const textEditor = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$B], ["__scopeId", "data-v-84ae2f97"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/text_editor.vue"]]);
+    const textEditor = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$B], ["__scopeId", "data-v-d5a03537"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/text_editor.vue"]]);
     const _sfc_main$A = {
       __name: "map_view",
       props: {
@@ -88517,7 +89059,7 @@ This will fail in production.`);
         ]))) : (openBlock(), createElementBlock("div", _hoisted_3$i, toDisplayString($setup.error_message), 1))
       ]);
     }
-    const mapView = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$A], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/map_view.vue"]]);
+    const mapView = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$A], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/map_view.vue"]]);
     class DBStorage {
       constructor() {
       }
@@ -88667,7 +89209,7 @@ This will fail in production.`);
         }), 128))
       ]);
     }
-    const previewTemplate = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$z], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/preview_template.vue"]]);
+    const previewTemplate = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$z], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/preview_template.vue"]]);
     function useAjax(component_data) {
       let event_parameters = {};
       let func_parameter = {};
@@ -88952,7 +89494,7 @@ This will fail in production.`);
         ]))
       ]);
     }
-    const container = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$y], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container.vue"]]);
+    const container = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$y], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container.vue"]]);
     const _sfc_main$x = {
       __name: "container_view",
       props: {
@@ -89066,7 +89608,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const containerView = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$x], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_view.vue"]]);
+    const containerView = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$x], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_view.vue"]]);
     const _sfc_main$w = {
       __name: "container_analysis_management_cycle",
       props: {
@@ -89234,7 +89776,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const containerAnalysisManagementCycle = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$w], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_analysis_management_cycle.vue"]]);
+    const containerAnalysisManagementCycle = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$w], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_analysis_management_cycle.vue"]]);
     const _sfc_main$v = {
       __name: "container_section",
       props: {
@@ -89337,7 +89879,7 @@ This will fail in production.`);
         ])
       ], 8, _hoisted_1$m);
     }
-    const containerSection = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$v], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_section.vue"]]);
+    const containerSection = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$v], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_section.vue"]]);
     const _sfc_main$u = {
       __name: "container_upper_lower_radars",
       props: {
@@ -89493,7 +90035,7 @@ This will fail in production.`);
         }), 128))
       ], 4);
     }
-    const containerUpperLowerRadars = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$u], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_upper_lower_radars.vue"]]);
+    const containerUpperLowerRadars = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$u], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_upper_lower_radars.vue"]]);
     const WOFF = "application/font-woff";
     const JPEG = "image/jpeg";
     const mimes = {
@@ -90270,7 +90812,7 @@ This will fail in production.`);
     function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
       return null;
     }
-    const html_to_image = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$t], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/tools/html_to_image.vue"]]);
+    const html_to_image = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$t], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/tools/html_to_image.vue"]]);
     const _sfc_main$s = {
       __name: "container_actions",
       props: {
@@ -90431,7 +90973,7 @@ This will fail in production.`);
         ])
       ], 8, _hoisted_1$k);
     }
-    const containerActions = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$s], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_actions.vue"]]);
+    const containerActions = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$s], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/containers/container_actions.vue"]]);
     function useList(component_data) {
       const sortBy2 = ref(component_data.sortBy || null);
       const sortDir = ref(component_data.sortDir || "asc");
@@ -90739,7 +91281,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const datatableCustom = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$r], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_custom.vue"]]);
+    const datatableCustom = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$r], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_custom.vue"]]);
     const _sfc_main$q = {
       __name: "datatable_interact_with_radar",
       props: {
@@ -90808,7 +91350,7 @@ This will fail in production.`);
         }, null, 8, ["columns", "default_order", "refresh_average", "values"]))
       ])) : createCommentVNode("", true);
     }
-    const datatableInteractWithRadar = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$q], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_radar.vue"]]);
+    const datatableInteractWithRadar = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$q], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_radar.vue"]]);
     const _sfc_main$p = {
       __name: "datatable_interact_with_scatter",
       props: {
@@ -90889,7 +91431,7 @@ This will fail in production.`);
         }, null, 8, ["columns", "default_order", "refresh_average", "values"]))
       ])) : createCommentVNode("", true);
     }
-    const datatableInteractWithScatter = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$p], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_scatter.vue"]]);
+    const datatableInteractWithScatter = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$p], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_interact_with_scatter.vue"]]);
     const _sfc_main$o = {
       __name: "datatable_scaling",
       props: {
@@ -91026,7 +91568,7 @@ This will fail in production.`);
         ])
       ]);
     }
-    const datatableScaling = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$o], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_scaling.vue"]]);
+    const datatableScaling = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$o], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/datatables/datatable_scaling.vue"]]);
     const _sfc_main$n = {
       __name: "bar_reverse",
       props: {
@@ -91116,7 +91658,7 @@ This will fail in production.`);
         "computed-object": $setup.bar_options
       }, null, 8, ["title_data", "title", "values", "colors", "fields", "rotate", "computed-object"]);
     }
-    const barReverse = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$n], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_reverse.vue"]]);
+    const barReverse = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$n], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_reverse.vue"]]);
     const _sfc_main$m = {
       __name: "bar_category_stack",
       props: {
@@ -91362,7 +91904,7 @@ This will fail in production.`);
         style: normalizeStyle("width:" + _ctx.width + "; min-height: " + $setup.height_value + "px;")
       }, null, 4);
     }
-    const barCategoryStack = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$m], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_category_stack.vue"]]);
+    const barCategoryStack = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$m], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/bar_category_stack.vue"]]);
     const _sfc_main$l = {
       __name: "imet_bar_error",
       props: {
@@ -91656,7 +92198,7 @@ This will fail in production.`);
         style: normalizeStyle("width:100%; height: " + $props.height + ";")
       }, null, 4);
     }
-    const imetBarError = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/imet_bar_error.vue"]]);
+    const imetBarError = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/bar_charts/imet_bar_error.vue"]]);
     function useRadar(component_data) {
       const always_first_in_legend = component_data.always_first_in_legend;
       const radar_indicators_for_negative = component_data.radar_indicators_for_negative;
@@ -92063,7 +92605,7 @@ This will fail in production.`);
         style: normalizeStyle("width:100%; min-height: " + _ctx.height + "px;")
       }, null, 4);
     }
-    const scalingRadar = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scaling_radar.vue"]]);
+    const scalingRadar = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scaling_radar.vue"]]);
     const _sfc_main$j = {
       __name: "treemap",
       props: {
@@ -92138,7 +92680,7 @@ This will fail in production.`);
         style: normalizeStyle("width:" + $props.width + "; height: " + $props.height + ";")
       }, null, 4);
     }
-    const treemap = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/treemap.vue"]]);
+    const treemap = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/treemap.vue"]]);
     const _sfc_main$i = {
       __name: "chart_bar",
       props: {
@@ -92248,7 +92790,7 @@ This will fail in production.`);
         createBaseVNode("div", _hoisted_1$f, null, 512)
       ]);
     }
-    const dopa_chart_bar = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__scopeId", "data-v-3743f8af"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/dopa/chart_bar.vue"]]);
+    const dopa_chart_bar = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__scopeId", "data-v-ce31dc5d"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_bar.vue"]]);
     const _sfc_main$h = {
       __name: "chart_doughnut",
       props: {
@@ -92343,7 +92885,7 @@ This will fail in production.`);
         createBaseVNode("div", _hoisted_1$e, null, 512)
       ]);
     }
-    const scalingDopaChartDoughnut = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__scopeId", "data-v-dbe889ad"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/dopa/chart_doughnut.vue"]]);
+    const scalingDopaChartDoughnut = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__scopeId", "data-v-7aa99828"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_doughnut.vue"]]);
     const _sfc_main$g = {
       __name: "scatter",
       props: {
@@ -92541,7 +93083,7 @@ This will fail in production.`);
         style: normalizeStyle("width:" + $props.width + "; height: " + $props.height + ";")
       }, null, 4);
     }
-    const scatter = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scatter.vue"]]);
+    const scatter = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/scatter.vue"]]);
     const _sfc_main$f = {
       __name: "radar_threats",
       props: {
@@ -92656,7 +93198,7 @@ This will fail in production.`);
         style: normalizeStyle("width:100%; min-height: " + _ctx.height + "px;")
       }, null, 4);
     }
-    const radarThreats = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/radar_threats.vue"]]);
+    const radarThreats = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/various_charts/radar_threats.vue"]]);
     function tryOnScopeDispose(fn2) {
       if (getCurrentScope()) {
         onScopeDispose(fn2);
@@ -99221,7 +99763,7 @@ ${$$2(r2)}`), n2;
         }, null, 8, _hoisted_1$d)
       ]);
     }
-    const colorPicker = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/tools/color_picker.vue"]]);
+    const colorPicker = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/tools/color_picker.vue"]]);
     const _sfc_main$d = {
       props: {
         url: {
@@ -99249,7 +99791,7 @@ ${$$2(r2)}`), n2;
         ])
       ]);
     }
-    const preview_item = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__scopeId", "data-v-94f03513"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket/preview_item.vue"]]);
+    const preview_item = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__scopeId", "data-v-ed216a7c"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket/preview_item.vue"]]);
     const _sfc_main$c = {
       __name: "basket",
       setup(__props, { expose: __expose }) {
@@ -99346,7 +99888,7 @@ ${$$2(r2)}`), n2;
         ], -1))
       ]);
     }
-    const basket = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c], ["__scopeId", "data-v-30e39cc4"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket.vue"]]);
+    const basket = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c], ["__scopeId", "data-v-8fca49ba"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/basket.vue"]]);
     const _sfc_main$b = {
       __name: "guidance",
       props: {
@@ -99430,7 +99972,7 @@ ${$$2(r2)}`), n2;
         ])
       ])) : createCommentVNode("", true);
     }
-    const guidance = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/guidance.vue"]]);
+    const guidance = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/guidance.vue"]]);
     const _sfc_main$a = {
       __name: "small_menu",
       props: {
@@ -99505,7 +100047,7 @@ ${$$2(r2)}`), n2;
         ])) : createCommentVNode("", true)
       ]);
     }
-    const smallMenu = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/menus/small_menu.vue"]]);
+    const smallMenu = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/menus/small_menu.vue"]]);
     const _sfc_main$9 = {
       props: {
         title: {
@@ -99565,7 +100107,7 @@ ${$$2(r2)}`), n2;
         ])
       ])) : createCommentVNode("", true);
     }
-    const dopa_indicators_table = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/dopa/indicators_table.vue"]]);
+    const dopa_indicators_table = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/indicators_table.vue"]]);
     const _sfc_main$8 = {
       __name: "checkboxes_list",
       props: {
@@ -99707,7 +100249,7 @@ ${$$2(r2)}`), n2;
         ])) : createCommentVNode("", true)
       ], 64);
     }
-    const checkboxesList = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/checkboxes_list.vue"]]);
+    const checkboxesList = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/checkboxes_list.vue"]]);
     class LocaleStorage {
       constructor() {
       }
@@ -100890,7 +101432,7 @@ ${$$2(r2)}`), n2;
         renderSlot(_ctx.$slots, "default")
       ]);
     }
-    const application = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/scaling_up_analysis/components/app.vue"]]);
+    const application = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/scaling_up_analysis/components/app.vue"]]);
     class Report {
       constructor(input_data = {}) {
         const options = {
@@ -101105,7 +101647,7 @@ ${$$2(r2)}`), n2;
         }, null, 4)
       ]);
     }
-    const dopa_radar = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/templates/dopa/chart_radar.vue"]]);
+    const dopa_radar = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/templates/dopa/chart_radar.vue"]]);
     const _sfc_main$5 = {
       __name: "editor",
       props: {
@@ -101165,7 +101707,7 @@ ${$$2(r2)}`), n2;
         }, null, 8, _hoisted_5$4)
       ]);
     }
-    const report_editor = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5], ["__scopeId", "data-v-3195e19f"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/inputs/editor.vue"]]);
+    const report_editor = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5], ["__scopeId", "data-v-9cca538b"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/editor.vue"]]);
     class Analysis {
       constructor(input_data = {}, custom_props = {}) {
         let _this = this;
@@ -101321,7 +101863,7 @@ ${$$2(r2)}`), n2;
         }, null, 8, _hoisted_2$4)
       ], 2);
     }
-    const checkbox_boolean = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/inputs/checkbox-boolean.vue"]]);
+    const checkbox_boolean = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/inputs/checkbox-boolean.vue"]]);
     const _sfc_main$3 = {
       __name: "objectives",
       props: {
@@ -101496,7 +102038,7 @@ ${$$2(r2)}`), n2;
         ])
       ]);
     }
-    const objectives = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/report/oecm/objectives.vue"]]);
+    const objectives = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/report/oecm/objectives.vue"]]);
     const _sfc_main$2 = {
       name: "roadmap",
       props: {
@@ -101813,7 +102355,7 @@ ${$$2(r2)}`), n2;
         ])) : createCommentVNode("", true)
       ]);
     }
-    const roadmap = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__scopeId", "data-v-069c36b4"], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/report/oecm/roadmap.vue"]]);
+    const roadmap = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__scopeId", "data-v-d11a656e"], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/report/oecm/roadmap.vue"]]);
     const _sfc_main$1 = {
       name: "table_input",
       props: {
@@ -101918,7 +102460,7 @@ ${$$2(r2)}`), n2;
         ])) : createCommentVNode("", true)
       ], 8, _hoisted_1$1);
     }
-    const table_input = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__file", "/var/www/packages/imet-core/src/resources/assets/js/report/oecm/table_input.vue"]]);
+    const table_input = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__file", "/var/www/html/vendor/andreamarelli/imet-core/src/resources/assets/js/report/oecm/table_input.vue"]]);
     class OECMAnalysis extends Analysis {
       constructor(input_data = {}, custom_props = {}) {
         return super(input_data, custom_props).component("objectives", objectives).component("roadmap", roadmap).component("table_input", table_input).component("checkbox-boolean", checkbox_boolean).component("imet_score_bar", imetScoreBar);
