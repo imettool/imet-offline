@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use AndreaMarelli\ModularForms\Helpers\File\File;
+use Exception;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
@@ -128,7 +129,12 @@ class SoftwareUpdater
 
         // Retrieve from API
         if($forceApi || !Storage::disk(File::TEMP_STORAGE)->exists($cacheFile)){
-            $apiRequest = Http::get($url);
+            try {
+                $apiRequest = Http::timeout(10)->get($url);
+            } catch (Exception $e) {
+                Log::error('Cannot retrieved releases from GitHub API ('. get_class($e) .'). (URL: ' . $url . ')');
+                return null;
+            }
             if($apiRequest->successful()) {
                 $apiResult = $apiRequest->json();
                 Storage::disk(File::TEMP_STORAGE)->put($cacheFile, json_encode($apiResult));
