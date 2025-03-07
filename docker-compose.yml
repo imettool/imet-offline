@@ -69,12 +69,24 @@ services:
     #entrypoint: [ 'vendor', 'bin', 'phpunit' ]
     entrypoint: [ 'php', 'artisan', 'test' ]
 
-  npm:
+  node:
     build:
       context: .
       dockerfile: docker/node/Dockerfile
       args:
         - UID=${UID-}
+    image: ${COMPOSE_PROJECT_NAME}_node_image
+    volumes:
+      - ./:/var/www/html/
+      - ../imet-core/:/var/www/packages/imet-core
+      - ../modular-forms/:/var/www/packages/modular-forms
+    profiles:
+      - development
+
+  npm:
+    image: ${COMPOSE_PROJECT_NAME}_node_image
+    depends_on:
+      - node
     volumes:
       - ./:/var/www/html/
       - ../imet-core/:/var/www/packages/imet-core
@@ -82,3 +94,15 @@ services:
     profiles:
       - development
     entrypoint: [ 'npm' ]
+
+  npx:
+    image: ${COMPOSE_PROJECT_NAME}_node_image
+    depends_on:
+      - node
+    volumes:
+      - ./:/var/www/html/
+      - ../imet-core/:/var/www/packages/imet-core
+      - ../modular-forms/:/var/www/packages/modular-forms
+    profiles:
+      - development
+    entrypoint: [ 'npx' ]

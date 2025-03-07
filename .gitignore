@@ -3,7 +3,6 @@
 /vendor
 /packages
 
-
 # Development
 .idea/
 npm-debug.log
@@ -12,6 +11,7 @@ _ide_helper.php
 .phpstorm.meta.php
 .phpunit.result.cache
 .cache
+sbom-php.json
 
 # Envirnoment
 .env

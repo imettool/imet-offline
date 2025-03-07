@@ -19,6 +19,7 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
         "brianium/paratest": "^7.2",
+        "cyclonedx/cyclonedx-php-composer": "^5.2",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/tinker": "^2.8",
@@ -57,11 +58,12 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "php artisan package:discover --ansi",
             "php artisan ide-helper:generate",
-            "php artisan ide-helper:meta"
+            "php artisan ide-helper:meta",
+            "php artisan log-viewer:publish",
+            "composer CycloneDX:make-sbom --omit=dev --output-format=JSON --output-file=sbom-php.json"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=imet-core --ansi --force",
-            "@php artisan log-viewer:publish"
+            "@php artisan vendor:publish --tag=imet-core --ansi --force"
         ],
         "post-root-package-install": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -81,7 +83,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "cyclonedx/cyclonedx-php-composer": true
         }
     },
     "minimum-stability": "dev",
