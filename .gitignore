@@ -11,7 +11,7 @@ _ide_helper.php
 .phpstorm.meta.php
 .phpunit.result.cache
 .cache
-sbom-php.json
+sbom-*.json
 
 # Envirnoment
 .env
