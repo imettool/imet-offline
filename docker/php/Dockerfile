@@ -18,7 +18,6 @@ RUN install-php-extensions bcmath
 RUN install-php-extensions \
     exif \
     gd \
-    imagick \
     pdo_pgsql \
     zip
 

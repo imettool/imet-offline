@@ -17,6 +17,7 @@ _ide_helper.php
 .env
 .channel
 .version
+/public/build/
 /public/hot
 /public/storage
 /public/basket
