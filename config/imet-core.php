@@ -1,6 +1,8 @@
 <?php
 return [
 
+    'user' => \App\Models\User::class,
+
     // API tokens
     'mapbox_token' => \Illuminate\Support\Env::getOrFail('MAPBOX_ACCESS_TOKEN'),
 

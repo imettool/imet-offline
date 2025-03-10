@@ -9,11 +9,12 @@
     "license": "MIT",
     "require": {
         "php": ">=8.2",
-        "andreamarelli/imet-core": "dev-alpha",
-        "andreamarelli/modular-forms": "dev-vue3",
+        "andreamarelli/imet-core": "dev-nativephp",
+        "andreamarelli/modular-forms": "dev-nativephp",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.13.0",
         "laravel/ui": "^4.5.2",
+        "nativephp/electron": "^0.9.0",
         "opcodesio/log-viewer": "^3.10"
     },
     "require-dev": {
@@ -63,6 +64,7 @@
             "composer CycloneDX:make-sbom --omit=dev --output-format=JSON --output-file=sbom-php.json"
         ],
         "post-update-cmd": [
+            "@php artisan vendor:publish --tag=modular-forms --ansi --force",
             "@php artisan vendor:publish --tag=imet-core --ansi --force"
         ],
         "post-root-package-install": [
@@ -70,6 +72,10 @@
         ],
         "post-create-project-cmd": [
             "php artisan key:generate --ansi"
+        ],
+        "native:dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -k -c \"#93c5fd,#c4b5fd\" \"php artisan native:serve --no-interaction\" \"npm run dev\" --names=app,vite"
         ]
     },
     "extra": {
