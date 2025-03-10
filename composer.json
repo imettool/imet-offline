@@ -57,15 +57,15 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "php artisan package:discover --ansi",
-            "php artisan ide-helper:generate",
-            "php artisan ide-helper:meta",
-            "php artisan log-viewer:publish",
-            "composer CycloneDX:make-sbom --omit=dev --output-format=JSON --output-file=sbom-php.json"
+            "php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=modular-forms --ansi --force",
-            "@php artisan vendor:publish --tag=imet-core --ansi --force"
+            "php artisan log-viewer:publish",
+            "php artisan vendor:publish --tag=modular-forms --ansi --force",
+            "php artisan vendor:publish --tag=imet-core --ansi --force",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
+            "composer CycloneDX:make-sbom --omit=dev --output-format=JSON --output-file=sbom-php.json"
         ],
         "post-root-package-install": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
