@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "974843139a2b57b0571507694f2b4c41",
+    "content-hash": "45e32eab49b17e054e75f68a8a04a7cb",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-alpha",
+            "version": "dev-tailwind4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "9577cfa0b0ab9e7e19aec4f60cbd4e36e302bf77"
+                "reference": "672a16173091deb62a0964bba9b8ac7a841e6253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/9577cfa0b0ab9e7e19aec4f60cbd4e36e302bf77",
-                "reference": "9577cfa0b0ab9e7e19aec4f60cbd4e36e302bf77",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/672a16173091deb62a0964bba9b8ac7a841e6253",
+                "reference": "672a16173091deb62a0964bba9b8ac7a841e6253",
                 "shasum": ""
             },
             "require": {
-                "andreamarelli/modular-forms": "dev-vue3",
+                "andreamarelli/modular-forms": "dev-tailwind4",
                 "ext-json": "*",
                 "php": ">=8.2"
             },
@@ -55,23 +55,23 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/alpha",
+                "source": "https://github.com/andreamarelli/imet-core/tree/tailwind4",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-03-07T08:58:45+00:00"
+            "time": "2025-03-10T15:04:10+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "dev-vue3",
+            "version": "dev-tailwind4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "cb47e70e070b6481fc6aba95be4ac5ac731b1ff5"
+                "reference": "ddd09d9eb2d6f93a458909b70ee0944c44e897e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/cb47e70e070b6481fc6aba95be4ac5ac731b1ff5",
-                "reference": "cb47e70e070b6481fc6aba95be4ac5ac731b1ff5",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/ddd09d9eb2d6f93a458909b70ee0944c44e897e1",
+                "reference": "ddd09d9eb2d6f93a458909b70ee0944c44e897e1",
                 "shasum": ""
             },
             "require": {
@@ -109,10 +109,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/vue3",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/tailwind4",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-03-07T08:58:35+00:00"
+            "time": "2025-03-10T22:44:32+00:00"
         },
         {
             "name": "brick/math",

@@ -1,2 +1,8 @@
-@import "./sass/layout/header.scss";
-@import "./sass/layout/footer.scss";
+@import "tailwindcss";
+@import "./tailwind.css";
+
+@import "./css/layout/header.css";
+@import "./css/layout/footer.css";
+
+@import "@modular-forms/index.css";
+/*@import "@imet-core/index.css";*/
