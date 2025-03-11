@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "672a16173091deb62a0964bba9b8ac7a841e6253"
+                "reference": "01b787cf78234bef602ad7e71e7c4285d6f52da3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/672a16173091deb62a0964bba9b8ac7a841e6253",
-                "reference": "672a16173091deb62a0964bba9b8ac7a841e6253",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/01b787cf78234bef602ad7e71e7c4285d6f52da3",
+                "reference": "01b787cf78234bef602ad7e71e7c4285d6f52da3",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/tailwind4",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-03-10T15:04:10+00:00"
+            "time": "2025-03-11T07:04:10+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "ddd09d9eb2d6f93a458909b70ee0944c44e897e1"
+                "reference": "b603bf52e2f6c56eae13ea4ba408667786758ca2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/ddd09d9eb2d6f93a458909b70ee0944c44e897e1",
-                "reference": "ddd09d9eb2d6f93a458909b70ee0944c44e897e1",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/b603bf52e2f6c56eae13ea4ba408667786758ca2",
+                "reference": "b603bf52e2f6c56eae13ea4ba408667786758ca2",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/tailwind4",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-03-10T22:44:32+00:00"
+            "time": "2025-03-11T06:14:30+00:00"
         },
         {
             "name": "brick/math",
@@ -7098,16 +7098,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.21.0",
+            "version": "v1.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "531fa0871fbde719c51b12afa3a443b8f4e4b425"
+                "reference": "c44bffbb2334e90fba560933c45948fa4a3f3e86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/531fa0871fbde719c51b12afa3a443b8f4e4b425",
-                "reference": "531fa0871fbde719c51b12afa3a443b8f4e4b425",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/c44bffbb2334e90fba560933c45948fa4a3f3e86",
+                "reference": "c44bffbb2334e90fba560933c45948fa4a3f3e86",
                 "shasum": ""
             },
             "require": {
@@ -7118,9 +7118,9 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.68.5",
-                "illuminate/view": "^11.42.0",
-                "larastan/larastan": "^3.0.4",
+                "friendsofphp/php-cs-fixer": "^3.70.2",
+                "illuminate/view": "^11.44.1",
+                "larastan/larastan": "^3.1.0",
                 "laravel-zero/framework": "^11.36.1",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3",
@@ -7160,7 +7160,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-02-18T03:18:57+00:00"
+            "time": "2025-03-11T03:22:21+00:00"
         },
         {
             "name": "laravel/tinker",
