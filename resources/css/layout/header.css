@@ -1,4 +1,4 @@
-@use "@modular-forms/sass/abstracts/_mixins" as mixins;
+@use "@modular-forms/css/abstracts/_mixins" as mixins;
 
 #imet_header {
     display: flex;

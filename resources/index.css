@@ -1,2 +1,11 @@
-@import "./sass/layout/header.scss";
-@import "./sass/layout/footer.scss";
+/* ##### Import Tailwind configuration ##### */
+@import "tailwindcss";
+@import "./tailwind.css";
+
+/* ##### Import local CSS ##### */
+@import "./css/layout/header.css";
+@import "./css/layout/footer.css";
+
+/* ##### Import packages CSS ##### */
+@import "@modular-forms/index.css";
+@import "@imet-core/index.css";
