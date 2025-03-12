@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "974843139a2b57b0571507694f2b4c41",
+    "content-hash": "2ce1d31d913cdc1b11c4434be057f0fe",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
@@ -12,16 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "9577cfa0b0ab9e7e19aec4f60cbd4e36e302bf77"
+                "reference": "307c1d9a6308d6dd62a0d8f30b5e2f90c0e040d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/9577cfa0b0ab9e7e19aec4f60cbd4e36e302bf77",
-                "reference": "9577cfa0b0ab9e7e19aec4f60cbd4e36e302bf77",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/307c1d9a6308d6dd62a0d8f30b5e2f90c0e040d9",
+                "reference": "307c1d9a6308d6dd62a0d8f30b5e2f90c0e040d9",
                 "shasum": ""
             },
             "require": {
-                "andreamarelli/modular-forms": "dev-vue3",
+                "andreamarelli/modular-forms": "dev-alpha",
                 "ext-json": "*",
                 "php": ">=8.2"
             },
@@ -58,11 +58,11 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/alpha",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-03-07T08:58:45+00:00"
+            "time": "2025-03-12T12:34:48+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "dev-vue3",
+            "version": "dev-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
@@ -109,7 +109,7 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/vue3",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/alpha",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
             "time": "2025-03-07T08:58:35+00:00"
@@ -7098,16 +7098,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.21.0",
+            "version": "v1.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "531fa0871fbde719c51b12afa3a443b8f4e4b425"
+                "reference": "c44bffbb2334e90fba560933c45948fa4a3f3e86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/531fa0871fbde719c51b12afa3a443b8f4e4b425",
-                "reference": "531fa0871fbde719c51b12afa3a443b8f4e4b425",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/c44bffbb2334e90fba560933c45948fa4a3f3e86",
+                "reference": "c44bffbb2334e90fba560933c45948fa4a3f3e86",
                 "shasum": ""
             },
             "require": {
@@ -7118,9 +7118,9 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.68.5",
-                "illuminate/view": "^11.42.0",
-                "larastan/larastan": "^3.0.4",
+                "friendsofphp/php-cs-fixer": "^3.70.2",
+                "illuminate/view": "^11.44.1",
+                "larastan/larastan": "^3.1.0",
                 "laravel-zero/framework": "^11.36.1",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3",
@@ -7160,7 +7160,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-02-18T03:18:57+00:00"
+            "time": "2025-03-11T03:22:21+00:00"
         },
         {
             "name": "laravel/tinker",
