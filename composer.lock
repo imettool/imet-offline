@@ -4,30 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ce1d31d913cdc1b11c4434be057f0fe",
+    "content-hash": "59505d1f1343ff700a0c0b9a8d31ab44",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-alpha",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "307c1d9a6308d6dd62a0d8f30b5e2f90c0e040d9"
+                "reference": "7284ad5bf3a9ad70940f67f23001963dc48f158e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/307c1d9a6308d6dd62a0d8f30b5e2f90c0e040d9",
-                "reference": "307c1d9a6308d6dd62a0d8f30b5e2f90c0e040d9",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/7284ad5bf3a9ad70940f67f23001963dc48f158e",
+                "reference": "7284ad5bf3a9ad70940f67f23001963dc48f158e",
                 "shasum": ""
             },
             "require": {
-                "andreamarelli/modular-forms": "dev-alpha",
+                "andreamarelli/modular-forms": "dev-main",
                 "ext-json": "*",
                 "php": ">=8.2"
             },
             "require-dev": {
                 "orchestra/testbench": "^9.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -55,23 +56,23 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/alpha",
+                "source": "https://github.com/andreamarelli/imet-core/tree/main",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-03-12T12:34:48+00:00"
+            "time": "2025-03-12T14:29:27+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "dev-alpha",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "cb47e70e070b6481fc6aba95be4ac5ac731b1ff5"
+                "reference": "1d0674bf5cfd9e2be6ef063974d9ccc44f07c9d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/cb47e70e070b6481fc6aba95be4ac5ac731b1ff5",
-                "reference": "cb47e70e070b6481fc6aba95be4ac5ac731b1ff5",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/1d0674bf5cfd9e2be6ef063974d9ccc44f07c9d7",
+                "reference": "1d0674bf5cfd9e2be6ef063974d9ccc44f07c9d7",
                 "shasum": ""
             },
             "require": {
@@ -83,8 +84,10 @@
                 "wa72/htmlpagedom": "^3.0"
             },
             "require-dev": {
+                "cyclonedx/cyclonedx-php-composer": "^5.2",
                 "orchestra/testbench": "^9.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -101,6 +104,11 @@
                     "src/helpers.php"
                 ]
             },
+            "scripts": {
+                "sbom": [
+                    "composer CycloneDX:make-sbom --output-format=XML --output-file=sbom-php.xml "
+                ]
+            },
             "authors": [
                 {
                     "name": "Andrea Marelli",
@@ -109,10 +117,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/alpha",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/main",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-03-07T08:58:35+00:00"
+            "time": "2025-03-12T14:03:01+00:00"
         },
         {
             "name": "brick/math",
@@ -1223,16 +1231,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.44.1",
+            "version": "v11.44.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0883d4175f4e2b5c299e7087ad3c74f2ce195c6d"
+                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0883d4175f4e2b5c299e7087ad3c74f2ce195c6d",
-                "reference": "0883d4175f4e2b5c299e7087ad3c74f2ce195c6d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
+                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
                 "shasum": ""
             },
             "require": {
@@ -1434,7 +1442,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-03-05T15:34:10+00:00"
+            "time": "2025-03-12T14:34:30+00:00"
         },
         {
             "name": "laravel/prompts",
