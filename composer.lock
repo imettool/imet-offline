@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "01b787cf78234bef602ad7e71e7c4285d6f52da3"
+                "reference": "e773fd634a2ae3d0168d47da4a56eb551fff3179"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/01b787cf78234bef602ad7e71e7c4285d6f52da3",
-                "reference": "01b787cf78234bef602ad7e71e7c4285d6f52da3",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/e773fd634a2ae3d0168d47da4a56eb551fff3179",
+                "reference": "e773fd634a2ae3d0168d47da4a56eb551fff3179",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/tailwind4",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-03-11T07:04:10+00:00"
+            "time": "2025-03-12T06:44:41+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "b603bf52e2f6c56eae13ea4ba408667786758ca2"
+                "reference": "92d1be71c79f505f396eb4d66a251e039b2dfffe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/b603bf52e2f6c56eae13ea4ba408667786758ca2",
-                "reference": "b603bf52e2f6c56eae13ea4ba408667786758ca2",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/92d1be71c79f505f396eb4d66a251e039b2dfffe",
+                "reference": "92d1be71c79f505f396eb4d66a251e039b2dfffe",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/tailwind4",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-03-11T06:14:30+00:00"
+            "time": "2025-03-12T06:12:52+00:00"
         },
         {
             "name": "brick/math",

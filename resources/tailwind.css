@@ -17,21 +17,18 @@
     --color-contextual-primary: oklch(0.546 0.245 262.881);
     --color-contextual-info: oklch(0.789 0.154 211.53);
     --color-contextual-success: oklch(0.627 0.194 149.214);
-    --color-contextual-warning: oklch(0.75 0.183 55.934);
+    --color-contextual-warning: oklch(0.879 0.169 91.605);
     --color-contextual-danger: oklch(0.704 0.191 22.216);
 
     --color-contextual-light-primary: oklch(0.882 0.059 254.128);
     --color-contextual-light-info: oklch(0.97 0.014 254.604);
     --color-contextual-light-success: oklch(0.925 0.084 155.995);
-    --color-contextual-light-warning: oklch(0.901 0.076 70.697);
+    --color-contextual-light-warning: oklch(0.962 0.059 95.617);
     --color-contextual-light-danger: oklch(0.936 0.032 17.717);
 
-    --text-2xs: {
-        font-size: 0.7rem;
-        line-height: 0.8em;
-    }
+    --text-2xs: 0.7rem;
 }
 
-@source "views";
-@source "vendor/andreamarelli/modular-forms/src/resources/views";
-@source "vendor/andreamarelli/imet-core/src/resources/views";
+@source "./views";
+@source "../vendor/andreamarelli/modular-forms/src/resources/views/**/*.blade.php";
+@source "../vendor/andreamarelli/imet-core/src/resources/views/**/*.blade.php";
