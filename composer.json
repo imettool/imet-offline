@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": ">=8.2",
-        "andreamarelli/imet-core": "dev-mapbox",
+        "andreamarelli/imet-core": "dev-main",
         "andreamarelli/modular-forms": "dev-main",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.13.0",
@@ -19,7 +19,6 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
         "brianium/paratest": "^7.2",
-        "cyclonedx/cyclonedx-php-composer": "^5.2",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/tinker": "^2.8",
@@ -59,8 +58,7 @@
             "php artisan package:discover --ansi",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
-            "php artisan log-viewer:publish",
-            "composer CycloneDX:make-sbom --omit=dev --output-format=JSON --output-file=sbom-php.json"
+            "php artisan log-viewer:publish"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=imet-core --ansi --force"
@@ -83,8 +81,7 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true,
-            "cyclonedx/cyclonedx-php-composer": true
+            "php-http/discovery": true
         }
     },
     "minimum-stability": "dev",
