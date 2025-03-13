@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59505d1f1343ff700a0c0b9a8d31ab44",
+    "content-hash": "f5285e54759011d918f1aac6f1db0bdf",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "dev-main",
+            "version": "dev-mapbox",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/imet-core.git",
-                "reference": "7284ad5bf3a9ad70940f67f23001963dc48f158e"
+                "reference": "1fd4091f16282a212170007b1accd6dd774675d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/7284ad5bf3a9ad70940f67f23001963dc48f158e",
-                "reference": "7284ad5bf3a9ad70940f67f23001963dc48f158e",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/1fd4091f16282a212170007b1accd6dd774675d1",
+                "reference": "1fd4091f16282a212170007b1accd6dd774675d1",
                 "shasum": ""
             },
             "require": {
@@ -28,7 +28,6 @@
             "require-dev": {
                 "orchestra/testbench": "^9.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -56,10 +55,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/main",
+                "source": "https://github.com/andreamarelli/imet-core/tree/mapbox",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-03-12T14:29:27+00:00"
+            "time": "2025-03-13T15:00:21+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -67,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreamarelli/modular-forms.git",
-                "reference": "1d0674bf5cfd9e2be6ef063974d9ccc44f07c9d7"
+                "reference": "c23d0d14e7e583dd9b2d9057197a69f37e39a9f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/1d0674bf5cfd9e2be6ef063974d9ccc44f07c9d7",
-                "reference": "1d0674bf5cfd9e2be6ef063974d9ccc44f07c9d7",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/c23d0d14e7e583dd9b2d9057197a69f37e39a9f4",
+                "reference": "c23d0d14e7e583dd9b2d9057197a69f37e39a9f4",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +83,6 @@
                 "wa72/htmlpagedom": "^3.0"
             },
             "require-dev": {
-                "cyclonedx/cyclonedx-php-composer": "^5.2",
                 "orchestra/testbench": "^9.0"
             },
             "default-branch": true,
@@ -104,11 +102,6 @@
                     "src/helpers.php"
                 ]
             },
-            "scripts": {
-                "sbom": [
-                    "composer CycloneDX:make-sbom --output-format=XML --output-file=sbom-php.xml "
-                ]
-            },
             "authors": [
                 {
                     "name": "Andrea Marelli",
@@ -120,7 +113,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/main",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-03-12T14:03:01+00:00"
+            "time": "2025-03-13T09:31:38+00:00"
         },
         {
             "name": "brick/math",

@@ -12,7 +12,6 @@ export default defineConfig({
             output:{
                 manualChunks: {     // split biggest vendors in separate chunks
                     'echarts': ['echarts'],
-                    'mapbox': ['mapbox-gl'],
                     'dropzone': ['dropzone-vue3'],
                     'vue': ['vue']
                 }
