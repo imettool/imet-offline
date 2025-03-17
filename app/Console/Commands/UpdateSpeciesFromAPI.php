@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 
-use AndreaMarelli\ImetCore\Models\Animal;
+use ImetCore\Models\Animal;
 use App\Helpers\SpeciesUpdater;
 use App\Models\Country;
 use Illuminate\Console\Command;

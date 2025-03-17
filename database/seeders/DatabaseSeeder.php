@@ -2,13 +2,13 @@
 
 namespace Database\Seeders;
 
-use AndreaMarelli\ImetCore\Models\ProtectedArea;
-use AndreaMarelli\ModularForms\Helpers\Input\SelectionList;
-use AndreaMarelli\ImetCore\Models\Animal;
+use ImetCore\Models\ProtectedArea;
+use ModularForms\Helpers\Input\SelectionList;
+use ImetCore\Models\Animal;
 use Auth;
 use Exception;
 use Illuminate\Database\Seeder;
-use AndreaMarelli\ImetCore\Models\Imet;
+use ImetCore\Models\Imet;
 use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder

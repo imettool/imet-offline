@@ -1,6 +1,6 @@
 <?php
 
-use AndreaMarelli\ImetCore\Models\Animal;
+use ImetCore\Models\Animal;
 use App\Helpers\SpeciesUpdater;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;

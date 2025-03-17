@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use AndreaMarelli\ImetCore\Models\ProtectedArea;
+use ImetCore\Models\ProtectedArea;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 

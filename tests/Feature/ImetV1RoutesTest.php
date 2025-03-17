@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use AndreaMarelli\ImetCore\Models\Imet\v1\Imet;
-use AndreaMarelli\ImetCore\Models\Imet\v1\Imet_Eval;
+use ImetCore\Models\Imet\v1\Imet;
+use ImetCore\Models\Imet\v1\Imet_Eval;
 use Tests\TestCase;
 
 

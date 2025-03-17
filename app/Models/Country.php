@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use AndreaMarelli\ImetCore\Models\Country as BaseCountry;
-use AndreaMarelli\ModularForms\Helpers\Locale;
+use ImetCore\Models\Country as BaseCountry;
+use ModularForms\Helpers\Locale;
 use Illuminate\Database\Eloquent\Collection;
 
 class Country extends BaseCountry

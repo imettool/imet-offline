@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use AndreaMarelli\ImetCore\Helpers\API\DOPA\DOPA;
+use ImetCore\Helpers\API\DOPA\DOPA;
 
 use Tests\TestCase;
 

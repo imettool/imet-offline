@@ -1,6 +1,6 @@
 <?php
 
-use AndreaMarelli\ImetCore\Models\ProtectedArea;
+use ImetCore\Models\ProtectedArea;
 use App\Helpers\ProtectedAreaUpdater;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;

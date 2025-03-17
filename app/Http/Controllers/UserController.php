@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use AndreaMarelli\ImetCore\Controllers\Imet\Controller;
-use AndreaMarelli\ModularForms\Controllers\FormController;
+use ImetCore\Controllers\Imet\Controller;
+use ModularForms\Controllers\FormController;
 use App\Models\User;
 use Auth;
 use Illuminate\Http\RedirectResponse;
