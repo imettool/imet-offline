@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use AndreaMarelli\ImetCore\Models\User\User as ImetUser;
+use ImetCore\Models\User\User as ImetUser;
 
 /**
  * @property string first_name

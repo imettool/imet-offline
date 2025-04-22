@@ -1,6 +1,6 @@
 <?php
 
-use AndreaMarelli\ImetCore\Helpers\ModuleKey;
+use ImetCore\Helpers\ModuleKey;
 use App\Helpers\SoftwareUpdater;
 use App\Models\Country;
 use Illuminate\Support\Str;
@@ -51,9 +51,9 @@ function get_custom_model_view_by_key($module_key, $view_type = null): ?string
 
 /**
  * Retrieve a list
- * Custom helper function used by AndreaMarelli\ModularForms\Helpers\Input::getList() to retrieve custom lists
+ * Custom helper function used by ModularForms\Helpers\Input::getList() to retrieve custom lists
  *
- * NOTE: Do not call this directly. Use instead AndreaMarelli\ModularForms\Helpers\Input::getList()
+ * NOTE: Do not call this directly. Use instead ModularForms\Helpers\Input::getList()
  */
 function get_custom_list(string $type): array
 {

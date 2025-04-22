@@ -1,5 +1,5 @@
 <?php
-use AndreaMarelli\ModularForms\Helpers\Template;
+use ModularForms\Helpers\Template;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;

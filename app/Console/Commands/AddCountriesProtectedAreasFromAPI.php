@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use AndreaMarelli\ImetCore\Models\ProtectedArea;
-use AndreaMarelli\ModularForms\Exceptions\MissingAPITokenException;
+use ImetCore\Models\ProtectedArea;
+use ModularForms\Exceptions\MissingAPITokenException;
 use App\Helpers\ProtectedAreaUpdater;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;

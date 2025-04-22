@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use AndreaMarelli\ModularForms\Exceptions\MissingAPITokenException;
-use AndreaMarelli\ModularForms\Models\Traits\Payload;
+use ModularForms\Exceptions\MissingAPITokenException;
+use ModularForms\Models\Traits\Payload;
 use App\Helpers\ProtectedAreaUpdater;
 use App\Models\Country;
 use App\Models\ProtectedAreaUpdate;

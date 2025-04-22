@@ -2,9 +2,9 @@
 
 namespace App\Helpers;
 
-use AndreaMarelli\ImetCore\Models\Animal;
-use AndreaMarelli\ModularForms\Helpers\API\DOPA\DOPA;
-use AndreaMarelli\ModularForms\Helpers\File\File;
+use ImetCore\Models\Animal;
+use ModularForms\Helpers\API\DOPA\DOPA;
+use ModularForms\Helpers\File\File;
 use App\Models\Country;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;

@@ -1,6 +1,6 @@
 <?php
 
-use AndreaMarelli\ImetCore\Helpers\Database;
+use ImetCore\Helpers\Database;
 use Illuminate\Support\Str;
 
 return [

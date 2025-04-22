@@ -3,9 +3,9 @@
 namespace App\Helpers;
 
 use App\Models\Country;
-use AndreaMarelli\ImetCore\Models\ProtectedArea;
-use AndreaMarelli\ModularForms\Helpers\API\ProtectedPlanet\ProtectedPlanet as ProtectedPlanetAPI;
-use AndreaMarelli\ModularForms\Helpers\File\File;
+use ImetCore\Models\ProtectedArea;
+use ModularForms\Helpers\API\ProtectedPlanet\ProtectedPlanet as ProtectedPlanetAPI;
+use ModularForms\Helpers\File\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;

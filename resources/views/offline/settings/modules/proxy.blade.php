@@ -1,8 +1,8 @@
 <?php
 /** @var Array $vueData */
 
-use AndreaMarelli\ModularForms\Helpers\DOM;
-use AndreaMarelli\ModularForms\Helpers\Template;
+use ModularForms\Helpers\DOM;
+use ModularForms\Helpers\Template;
 
 ?>
 

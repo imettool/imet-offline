@@ -2,7 +2,7 @@
 /** @var \App\Models\User $item */
 
 if ($item->imet_role == null) {
-    $item->imet_role = \AndreaMarelli\ImetCore\Models\User\Role::ROLE_ADMINISTRATOR;
+    $item->imet_role = \ImetCore\Models\User\Role::ROLE_ADMINISTRATOR;
     $item->save();
 }
 
@@ -70,7 +70,7 @@ if ($item->imet_role == null) {
                         'label' => ucfirst(trans('auth.user.country')),
                         'label_width' => 3
                     ])
-                    {!! \AndreaMarelli\ModularForms\Helpers\Input\DropDown::simple('country', $item->country, 'Country', 'required') !!}
+                    {!! \ModularForms\Helpers\Input\DropDown::simple('country', $item->country, 'Country', 'required') !!}
                 @endcomponent
 
             </div>
