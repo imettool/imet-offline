@@ -1,7 +1,7 @@
 <?php
 /** @var Array $vueData */
 
-use AndreaMarelli\ModularForms\Helpers\DOM;
+use ModularForms\Helpers\DOM;
 
 ?>
 

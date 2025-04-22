@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use AndreaMarelli\ImetCore\Helpers\Database;
+use ImetCore\Helpers\Database;
 use Artisan;
 use Illuminate\Console\Command;
 

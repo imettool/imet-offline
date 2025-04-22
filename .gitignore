@@ -11,10 +11,7 @@ _ide_helper.php
 .phpstorm.meta.php
 .phpunit.result.cache
 .cache
-.nvmrc
 sbom-*.json
-dist/
-composer
 
 # Envirnoment
 .env

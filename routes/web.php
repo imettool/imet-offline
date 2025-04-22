@@ -1,7 +1,7 @@
 <?php
 
-use AndreaMarelli\ImetCore\Controllers\Imet\Controller;
-use AndreaMarelli\ModularForms\Controllers\UploadFileController;
+use ImetCore\Controllers\Imet\Controller;
+use ModularForms\Controllers\UploadFileController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\UserController;

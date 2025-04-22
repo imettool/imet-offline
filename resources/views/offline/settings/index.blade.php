@@ -3,8 +3,8 @@
 /** @var Array $countries */
 /** @var Array $updated_pas_countries */
 
-use AndreaMarelli\ModularForms\Helpers\DOM;
-use AndreaMarelli\ModularForms\Helpers\Template;
+use ModularForms\Helpers\DOM;
+use ModularForms\Helpers\Template;
 
 ?>
 

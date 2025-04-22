@@ -9,8 +9,8 @@
     "license": "MIT",
     "require": {
         "php": ">=8.2",
-        "andreamarelli/imet-core": "dev-nativephp",
-        "andreamarelli/modular-forms": "dev-nativephp",
+        "andreamarelli/imet-core": "dev-beta",
+        "andreamarelli/modular-forms": "dev-beta",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.13.0",
         "laravel/ui": "^4.5.2",
@@ -20,7 +20,6 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
         "brianium/paratest": "^7.2",
-        "cyclonedx/cyclonedx-php-composer": "^5.2",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/tinker": "^2.8",
@@ -60,12 +59,11 @@
             "php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "php artisan log-viewer:publish",
             "php artisan vendor:publish --tag=modular-forms --ansi --force",
             "php artisan vendor:publish --tag=imet-core --ansi --force",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
-            "composer CycloneDX:make-sbom --omit=dev --output-format=JSON --output-file=sbom-php.json"
+            "php artisan log-viewer:publish"
         ],
         "post-root-package-install": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -89,8 +87,7 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true,
-            "cyclonedx/cyclonedx-php-composer": true
+            "php-http/discovery": true
         }
     },
     "minimum-stability": "dev",

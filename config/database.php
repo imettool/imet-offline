@@ -1,6 +1,6 @@
 <?php
 
-use AndreaMarelli\ImetCore\Helpers\Database;
+use ImetCore\Helpers\Database;
 use Illuminate\Support\Str;
 
 return [
@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'default'),
+    'default' => env('DB_CONNECTION', 'offline_public'),
 
     /*
     |--------------------------------------------------------------------------
@@ -36,34 +36,24 @@ return [
 
     'connections' => [
 
-//        'default' => [
-//            'driver' => 'sqlite',
-//            'database' => database_path('database.sqlite'),
-//            'prefix' => '',
-//            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-//        ],
-
         'offline_public' => [
             'driver' => 'sqlite',
-//            'database' => database_path(Database::COMMON_CONNECTION.'.sqlite'),
-            'database' => database_path('database.sqlite'),
-            'prefix' => Database::COMMON_CONNECTION.'_',
+            'database' => database_path(Database::COMMON_CONNECTION.'.sqlite'),
+            'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
         'offline_imet' => [
             'driver' => 'sqlite',
-//            'database' => database_path(Database::IMET_CONNECTION.'.sqlite'),
-            'database' => database_path('database.sqlite'),
-            'prefix' => Database::IMET_CONNECTION.'_',
+            'database' => database_path(Database::IMET_CONNECTION.'.sqlite'),
+            'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
         'offline_oecm' => [
             'driver' => 'sqlite',
-//            'database' => database_path(Database::OECM_CONNECTION.'.sqlite'),
-            'database' => database_path('database.sqlite'),
-            'prefix' => Database::OECM_CONNECTION.'_',
+            'database' => database_path(Database::OECM_CONNECTION.'.sqlite'),
+            'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 

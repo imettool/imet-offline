@@ -1,6 +1,6 @@
 <?php
-use AndreaMarelli\ImetCore\Controllers\Imet\Controller as ImetController;
-use AndreaMarelli\ImetCore\Controllers\Imet\oecm\Controller as OecmController;
+use ImetCore\Controllers\Imet\Controller as ImetController;
+use ImetCore\Controllers\Imet\oecm\Controller as OecmController;
 use App\Helpers\SoftwareUpdater;
 
 ?>

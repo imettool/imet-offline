@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-use AndreaMarelli\ModularForms\Helpers\File\File;
+use ModularForms\Helpers\File\File;
 use Exception;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
