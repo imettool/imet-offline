@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/modular-forms.git",
-                "reference": "12b53e568aa0631e2ec6d94166d6a847dbe255f4"
+                "reference": "a3806791629af8f2ecdf27bdc56b7a886cb7ce3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/12b53e568aa0631e2ec6d94166d6a847dbe255f4",
-                "reference": "12b53e568aa0631e2ec6d94166d6a847dbe255f4",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/a3806791629af8f2ecdf27bdc56b7a886cb7ce3c",
+                "reference": "a3806791629af8f2ecdf27bdc56b7a886cb7ce3c",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/beta",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-04-22T15:25:21+00:00"
+            "time": "2025-04-22T16:42:28+00:00"
         },
         {
             "name": "brick/math",
