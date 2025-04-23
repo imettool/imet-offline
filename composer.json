@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "andreamarelli/imet-core": "dev-beta",
         "andreamarelli/modular-forms": "dev-beta",
         "guzzlehttp/guzzle": "^7.2",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6207d9e9c458bc7ef4302741a75da579",
+    "content-hash": "443fb530b5d3796514beaf57beecbe73",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
@@ -9211,7 +9211,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.2"
+        "php": ">=8.3"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
