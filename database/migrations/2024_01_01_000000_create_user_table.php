@@ -16,7 +16,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('password', 60)->nullable();
             $table->text('remember_token')->nullable();
             $table->integer('last_update_by')->nullable();
@@ -37,6 +37,15 @@ return new class extends Migration
                 'last_name' => 'User',
                 'imet_role' => Role::ROLE_ADMINISTRATOR,
             ]);
+
+        Schema::create('sessions', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->foreignId('user_id')->nullable()->index();
+            $table->string('ip_address', 45)->nullable();
+            $table->text('user_agent')->nullable();
+            $table->longText('payload');
+            $table->integer('last_activity')->index();
+        });
     }
 
     /**
@@ -45,5 +54,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('sessions');
     }
 };

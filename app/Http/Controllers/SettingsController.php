@@ -8,21 +8,15 @@ use App\Helpers\ProtectedAreaUpdater;
 use App\Models\Country;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
-use Exception;
 use Illuminate\Contracts\View\View;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Config;
 
 
-class SettingsController extends BaseController
+class SettingsController extends Controller
 {
-    use AuthorizesRequests, ValidatesRequests;
-
     public function index(): View
     {
         return view('offline.settings.index', [

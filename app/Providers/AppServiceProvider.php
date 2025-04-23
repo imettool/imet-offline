@@ -15,9 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-    // Override ImetCore Aliases in order to extend classes
-        $loader = AliasLoader::getInstance();
-        $loader->alias(\ImetUser::class, \App\Models\User::class);
+
     }
 
     /**
