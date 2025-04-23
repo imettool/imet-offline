@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "dbdd77e7257e529a34ee34138a7a24d4053493b9"
+                "reference": "50db7a0e766ecedadef470ed20663e558bcb8c35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/dbdd77e7257e529a34ee34138a7a24d4053493b9",
-                "reference": "dbdd77e7257e529a34ee34138a7a24d4053493b9",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/50db7a0e766ecedadef470ed20663e558bcb8c35",
+                "reference": "50db7a0e766ecedadef470ed20663e558bcb8c35",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
                 "php": ">=8.2"
             },
             "require-dev": {
-                "orchestra/testbench": "^9.0"
+                "orchestra/testbench": "^10.0"
             },
             "type": "library",
             "extra": {
@@ -55,7 +55,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/beta",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-04-23T08:17:16+00:00"
+            "time": "2025-04-23T08:38:59+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/modular-forms.git",
-                "reference": "a3806791629af8f2ecdf27bdc56b7a886cb7ce3c"
+                "reference": "205f71acfaf264c0721d1989e2da33db46fe7b24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/a3806791629af8f2ecdf27bdc56b7a886cb7ce3c",
-                "reference": "a3806791629af8f2ecdf27bdc56b7a886cb7ce3c",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/205f71acfaf264c0721d1989e2da33db46fe7b24",
+                "reference": "205f71acfaf264c0721d1989e2da33db46fe7b24",
                 "shasum": ""
             },
             "require": {
@@ -80,7 +80,7 @@
                 "wa72/htmlpagedom": "^3.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^9.0"
+                "orchestra/testbench": "^10.0"
             },
             "type": "library",
             "extra": {
@@ -109,7 +109,7 @@
                 "source": "https://github.com/andreamarelli/modular-forms/tree/beta",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-04-22T16:42:28+00:00"
+            "time": "2025-04-23T08:39:26+00:00"
         },
         {
             "name": "brick/math",
