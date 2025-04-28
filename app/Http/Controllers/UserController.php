@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use ImetCore\Controllers\Imet\Controller;
+use Illuminate\Contracts\View\View;
 use ModularForms\Controllers\FormController;
 use App\Models\User;
 use Auth;
@@ -14,11 +14,9 @@ class UserController extends FormController
 {
 
     /**
-     *
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * Manage "confirm" OFFLINE user view
      */
-    public function confirm_offline_user()
+    public function confirm_offline_user(): View
     {
         return view('offline.confirm_user', [
             'item' => Auth::user()
@@ -27,9 +25,6 @@ class UserController extends FormController
 
     /**
      * Manage "update" OFFLINE user
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\RedirectResponse
      */
     public function update_offline_user(Request $request): RedirectResponse
     {

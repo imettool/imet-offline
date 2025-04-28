@@ -1,6 +1,5 @@
 <?php
 
-use ImetCore\Controllers\Imet\Controller;
 use ModularForms\Controllers\UploadFileController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UpdateController;
@@ -35,7 +34,6 @@ Route::middleware(['web', 'auth'])->group(function () {
 
     // Debug/dev
     Route::get('info', function (){ return phpinfo(); });
-    // logs : managed directly by opcodesio/log-viewer package
 
 });
 

@@ -9,13 +9,13 @@ return [
     | Default Cache Store
     |--------------------------------------------------------------------------
     |
-    | This option controls the default cache connection that gets used while
-    | using this caching library. This connection is used when another is
-    | not explicitly specified when executing a given caching function.
+    | This option controls the default cache store that will be used by the
+    | framework. This connection is utilized if another isn't explicitly
+    | specified when running a cache operation inside the application.
     |
     */
 
-    'default' => env('CACHE_DRIVER', 'database'),
+    'default' => env('CACHE_STORE', 'database'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,16 +26,12 @@ return [
     | well as their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
-    | Supported drivers: "apc", "array", "database", "file",
-    |         "memcached", "redis", "dynamodb", "octane", "null"
+    | Supported drivers: "array", "database", "file", "memcached",
+    |                    "redis", "dynamodb", "octane", "null"
     |
     */
 
     'stores' => [
-
-        'apc' => [
-            'driver' => 'apc',
-        ],
 
         'array' => [
             'driver' => 'array',
@@ -46,6 +42,8 @@ return [
             'driver' => 'database',
             'table' => 'cache',
             'connection' => 'offline_public',
+            'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
+            'lock_table' => env('DB_CACHE_LOCK_TABLE'),
         ],
 
         'file' => [
@@ -75,8 +73,8 @@ return [
 
         'redis' => [
             'driver' => 'redis',
-            'connection' => 'cache',
-            'lock_connection' => 'default',
+            'connection' => env('REDIS_CACHE_CONNECTION', 'cache'),
+            'lock_connection' => env('REDIS_CACHE_LOCK_CONNECTION', 'default'),
         ],
 
         'dynamodb' => [
@@ -99,8 +97,8 @@ return [
     | Cache Key Prefix
     |--------------------------------------------------------------------------
     |
-    | When utilizing the APC, database, memcached, Redis, or DynamoDB cache
-    | stores there might be other applications using the same cache. For
+    | When utilizing the APC, database, memcached, Redis, and DynamoDB cache
+    | stores, there might be other applications using the same cache. For
     | that reason, you may prefix every cache key to avoid collisions.
     |
     */
