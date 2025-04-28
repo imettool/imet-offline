@@ -1,6 +1,6 @@
 <?php
 return [
 
-    'user' => \App\Models\User::class
+    'user' => \ModularForms\Models\User\User::class
 
 ];
