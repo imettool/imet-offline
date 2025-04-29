@@ -17,6 +17,7 @@ sbom-*.json
 .env
 .channel
 .version
+.nvmrc
 /public/build/
 /public/hot
 /public/storage

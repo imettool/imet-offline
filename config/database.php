@@ -35,22 +35,22 @@ return [
 
         'offline_public' => [
             'driver' => 'sqlite',
-            'database' => database_path(Database::COMMON_CONNECTION.'.sqlite'),
+            'database' => database_path('offline.sqlite'),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
         'offline_imet' => [
             'driver' => 'sqlite',
-            'database' => database_path(Database::IMET_CONNECTION.'.sqlite'),
-            'prefix' => '',
+            'database' => database_path('offline.sqlite'),
+            'prefix' => 'imet_',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
         'offline_oecm' => [
             'driver' => 'sqlite',
-            'database' => database_path(Database::OECM_CONNECTION.'.sqlite'),
-            'prefix' => '',
+            'database' => database_path('offline.sqlite'),
+            'prefix' => 'oecm_',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 

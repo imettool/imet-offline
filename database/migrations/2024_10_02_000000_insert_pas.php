@@ -1,5 +1,6 @@
 <?php
 
+use ImetCore\Helpers\Database;
 use ImetCore\Models\ProtectedArea;
 use App\Helpers\ProtectedAreaUpdater;
 use Illuminate\Database\Migrations\Migration;
@@ -7,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
+    protected $connection = Database::COMMON_CONNECTION;
 
     /**
      * Run the migrations.

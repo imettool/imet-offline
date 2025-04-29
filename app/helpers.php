@@ -4,6 +4,7 @@ use ImetCore\Helpers\ModuleKey;
 use App\Helpers\SoftwareUpdater;
 use App\Models\Country;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\App;
 
 
 function imet_offline_tool_version(): ?string
