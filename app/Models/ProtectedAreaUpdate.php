@@ -9,7 +9,7 @@ use Illuminate\Support\Carbon;
 
 class ProtectedAreaUpdate extends Model
 {
-    protected $table = 'imet_pas_update';
+    protected $table = 'protected_area_updates';
     const CREATED_AT = null;
     const UPDATED_AT = null;
 
