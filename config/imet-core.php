@@ -1,7 +1,7 @@
 <?php
 return [
 
-    'user' => \ImetCore\Models\User\User::class,
+    'user' => \App\Models\User::class,
 
     // Routes' prefixes
     'web_routes_prefix' => null,

@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => 'sqlite',
+    'default' => Env::getOrFail('DB_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
+        'offline' => [
             'driver' => 'sqlite',
             'database' => database_path('offline.sqlite'),
             'prefix' => '',

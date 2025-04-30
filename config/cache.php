@@ -41,7 +41,7 @@ return [
         'database' => [
             'driver' => 'database',
             'table' => 'cache',
-            'connection' => 'sqlite',
+            'connection' => env('DB_CONNECTION'),
             'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
             'lock_table' => env('DB_CACHE_LOCK_TABLE'),
         ],
