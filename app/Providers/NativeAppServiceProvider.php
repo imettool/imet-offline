@@ -13,7 +13,11 @@ class NativeAppServiceProvider implements ProvidesPhpIni
      */
     public function boot(): void
     {
-        Window::open();
+        Window::open()
+            ->width(1200)
+            ->height(800)
+            ->resizable()
+            ->title('IMET Offline Tool');
     }
 
     /**
@@ -22,6 +26,8 @@ class NativeAppServiceProvider implements ProvidesPhpIni
     public function phpIni(): array
     {
         return [
+            'upload_max_filesize' => '2048M',
+            'post_max_size' => '2048M',
         ];
     }
 }

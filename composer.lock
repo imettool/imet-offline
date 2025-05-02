@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "33fa755038da535d74b295776d89207d8be1134f"
+                "reference": "140a6e207bd7153bb9959c8b786cb4a8eb9062c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/33fa755038da535d74b295776d89207d8be1134f",
-                "reference": "33fa755038da535d74b295776d89207d8be1134f",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/140a6e207bd7153bb9959c8b786cb4a8eb9062c9",
+                "reference": "140a6e207bd7153bb9959c8b786cb4a8eb9062c9",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "source": "https://github.com/andreamarelli/imet-core/tree/nativephp",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-04-30T21:47:37+00:00"
+            "time": "2025-05-01T06:20:45+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -6248,16 +6248,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.6.1",
+            "version": "v5.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "a59a13791077fe3d44f90e7133eb68e7d22eaff2"
+                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/a59a13791077fe3d44f90e7133eb68e7d22eaff2",
-                "reference": "a59a13791077fe3d44f90e7133eb68e7d22eaff2",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
+                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
                 "shasum": ""
             },
             "require": {
@@ -6316,7 +6316,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.1"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.2"
             },
             "funding": [
                 {
@@ -6328,7 +6328,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-20T21:52:34+00:00"
+            "time": "2025-04-30T23:37:27+00:00"
         },
         {
             "name": "voku/portable-ascii",
