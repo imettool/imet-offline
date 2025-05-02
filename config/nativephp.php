@@ -13,7 +13,7 @@ return [
      * usually in the form of a reverse domain name.
      * For example: com.nativephp.app
      */
-    'app_id' => env('NATIVEPHP_APP_ID', 'com.nativephp.app'),
+    'app_id' => env('NATIVEPHP_APP_ID', 'com.imetoffline.app'),
 
     /**
      * If your application allows deep linking, you can specify the scheme
@@ -29,12 +29,12 @@ return [
     /**
      * The author of your application.
      */
-    'author' => env('NATIVEPHP_APP_AUTHOR'),
+    'author' => 'Marelli Andrea, Politopoulos Panagiotis',
 
     /**
      * The copyright notice for your application.
      */
-    'copyright' => env('NATIVEPHP_APP_COPYRIGHT'),
+    'copyright' => 'Copyright (C) 2025 European Union',
 
     /**
      * The default service provider for your application. This provider

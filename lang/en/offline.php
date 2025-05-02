@@ -1,6 +1,13 @@
 <?php
 return [
 
+    'title' => 'IMET Offline Tool',
+    'version' => 'Version',
+    'description' =>
+        '<b>IMET</b> is a <i>Protected Area Management Effectiveness (PAME)</i> tool that allows an in-depth assessment of marine and
+        terrestrial protected areas, regardless of their management categories and governance type. As a decision-support
+        tool, it helps protected area managers take analysis-based management decisions for improved conservation outcomes.',
+
     'settings' => [
         'page_title' => 'Settings',
 

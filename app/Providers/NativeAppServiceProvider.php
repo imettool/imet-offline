@@ -17,7 +17,8 @@ class NativeAppServiceProvider implements ProvidesPhpIni
             ->width(1200)
             ->height(800)
             ->resizable()
-            ->title('IMET Offline Tool');
+            ->hideMenu()
+            ->title(trans('offline.title'));
     }
 
     /**

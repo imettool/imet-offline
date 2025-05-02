@@ -2,12 +2,15 @@
 use App\Helpers\SoftwareUpdater;
 ?>
 <section id="imet_footer">
+
+    <!-- Version -->
     <div>
-        <span class="mr-4 font-bold">IMET Offline Tool</span>
-        Version: <span class="version">{{ SoftwareUpdater::getCurrentVersion() }}</span>
-        @if(SoftwareUpdater::isBetaChannel())
-            Channel: <span class="channel">BETA</span>
-        @endif
+        @lang('offline.version'): <span class="font-bold text-primary-600">{{ config('nativephp.version')  }}</span>
     </div>
+
+    <div></div>
+
+    <!-- Copyright -->
+    <div class="font-bold">{{ config('nativephp.copyright') }}</div>
 
 </section>

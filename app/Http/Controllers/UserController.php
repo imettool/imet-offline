@@ -33,7 +33,7 @@ class UserController extends FormController
         if ($item->isDirty()) {
             $item->save();
         }
-        return redirect()->route('welcome');
+        return redirect()->route('home');
     }
 
 }
