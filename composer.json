@@ -9,8 +9,8 @@
     "license": "MIT",
     "require": {
         "php": ">=8.3",
-        "andreamarelli/imet-core": "dev-nativephp",
-        "andreamarelli/modular-forms": "dev-beta",
+        "andreamarelli/imet-core": "^2.0",
+        "andreamarelli/modular-forms": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^12.10.0",
         "laravel/ui": "^4.5.2",
@@ -59,8 +59,6 @@
             "php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "php artisan vendor:publish --tag=modular-forms --ansi --force",
-            "php artisan vendor:publish --tag=imet-core --ansi --force",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
             "php artisan log-viewer:publish"
