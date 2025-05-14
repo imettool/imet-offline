@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('imet_pas_update', function (Blueprint $table) {
+        Schema::create('protected_area_updates', function (Blueprint $table) {
             $table->string('country')->primary();
             $table->string('last_update_date');
         });
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('imet_pas_update');
+        Schema::dropIfExists('protected_area_updates');
     }
 };

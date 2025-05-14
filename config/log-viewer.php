@@ -44,7 +44,7 @@ return [
     |
     */
 
-    'back_to_system_url' => '/welcome',
+    'back_to_system_url' => '/home',
 
     'back_to_system_label' => 'Back to IMET', // Displayed by default: "Back to {{ app.name }}"
 

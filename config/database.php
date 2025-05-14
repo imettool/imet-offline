@@ -1,6 +1,6 @@
 <?php
 
-use ImetCore\Helpers\Database;
+use Illuminate\Support\Env;
 use Illuminate\Support\Str;
 
 return [
@@ -17,8 +17,7 @@ return [
     |
     */
 
-
-    'default' => env('DB_CONNECTION', 'offline_public'),
+    'default' => Env::getOrFail('DB_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,26 +32,12 @@ return [
 
     'connections' => [
 
-        'offline_public' => [
+        'offline' => [
             'driver' => 'sqlite',
-            'database' => database_path(Database::COMMON_CONNECTION.'.sqlite'),
+            'database' => database_path('offline.sqlite'),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-        ],
-
-        'offline_imet' => [
-            'driver' => 'sqlite',
-            'database' => database_path(Database::IMET_CONNECTION.'.sqlite'),
-            'prefix' => '',
-            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-        ],
-
-        'offline_oecm' => [
-            'driver' => 'sqlite',
-            'database' => database_path(Database::OECM_CONNECTION.'.sqlite'),
-            'prefix' => '',
-            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-        ],
+        ]
 
     ],
 

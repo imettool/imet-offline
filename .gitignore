@@ -12,11 +12,13 @@ _ide_helper.php
 .phpunit.result.cache
 .cache
 sbom-*.json
+test-native.bat
 
 # Envirnoment
 .env
 .channel
 .version
+.nvmrc
 /public/build/
 /public/hot
 /public/storage

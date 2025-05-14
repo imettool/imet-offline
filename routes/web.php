@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['web', 'auth'])->group(function () {
 
     Route::get('/', function () { return Redirect::to('confirm_user'); });
-    Route::view('welcome', 'offline.welcome')->name('welcome');
+    Route::view('home', 'offline.home')->name('home');
 
     // Settings routes
     Route::get('settings', [SettingsController::class, 'index'])->name('settings');
@@ -25,7 +25,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     // User routes
     Route::get('users/{role_type?}', [UserController::class, 'index'])->name('imet-core::users');
     Route::patch('users', [UserController::class, 'update_roles'])->name('imet-core::users_update');
-    Route::get('confirm_user', [UserController::class, 'confirm_offline_user']);
+    Route::get('confirm_user', [UserController::class, 'confirm_offline_user'])->name('confirm_user');
     Route::patch('confirm_user', [UserController::class, 'update_offline_user'])->name('update_offline_user');
 
     // ###### File upload/download ######

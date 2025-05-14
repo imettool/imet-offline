@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
-
     /**
      * Run the migrations.
      */
@@ -39,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        DB::table('imet_pas')->truncate();
+        DB::table((new ProtectedArea)->getTable())->truncate();
     }
 };
