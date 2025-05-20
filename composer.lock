@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "2.0.0",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "0eb6ccf2aa9955bb8e2420cfd0af37c5bf2d3ce7"
+                "reference": "89ee2b0e2602baa58553115d5718eb5b0f906693"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/0eb6ccf2aa9955bb8e2420cfd0af37c5bf2d3ce7",
-                "reference": "0eb6ccf2aa9955bb8e2420cfd0af37c5bf2d3ce7",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/89ee2b0e2602baa58553115d5718eb5b0f906693",
+                "reference": "89ee2b0e2602baa58553115d5718eb5b0f906693",
                 "shasum": ""
             },
             "require": {
@@ -64,23 +64,23 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/2.0.0",
+                "source": "https://github.com/andreamarelli/imet-core/tree/2.0.6",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-05-14T06:05:23+00:00"
+            "time": "2025-05-20T14:59:46+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "2.0.0",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/modular-forms.git",
-                "reference": "06e469ebad5943b173e1f965a4f84b7caddd802e"
+                "reference": "5331b1314eedd7b8efbad367c2aef3e395961e37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/06e469ebad5943b173e1f965a4f84b7caddd802e",
-                "reference": "06e469ebad5943b173e1f965a4f84b7caddd802e",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/5331b1314eedd7b8efbad367c2aef3e395961e37",
+                "reference": "5331b1314eedd7b8efbad367c2aef3e395961e37",
                 "shasum": ""
             },
             "require": {
@@ -92,6 +92,7 @@
                 "wa72/htmlpagedom": "^3.0"
             },
             "require-dev": {
+                "larastan/larastan": "^3.0",
                 "orchestra/testbench": "^10.0"
             },
             "type": "library",
@@ -126,10 +127,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/2.0.0",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/2.0.3",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-05-14T05:04:39+00:00"
+            "time": "2025-05-20T13:38:25+00:00"
         },
         {
             "name": "brick/math",
@@ -2951,16 +2952,16 @@
         },
         {
             "name": "opcodesio/log-viewer",
-            "version": "v3.17.0",
+            "version": "v3.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opcodesio/log-viewer.git",
-                "reference": "0f8ca746d1407f18f3b50424a3e36c239a48b73f"
+                "reference": "871b7ac2adf8e623b3145e438fb2a2fdc0f8476c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/0f8ca746d1407f18f3b50424a3e36c239a48b73f",
-                "reference": "0f8ca746d1407f18f3b50424a3e36c239a48b73f",
+                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/871b7ac2adf8e623b3145e438fb2a2fdc0f8476c",
+                "reference": "871b7ac2adf8e623b3145e438fb2a2fdc0f8476c",
                 "shasum": ""
             },
             "require": {
@@ -3023,7 +3024,7 @@
             ],
             "support": {
                 "issues": "https://github.com/opcodesio/log-viewer/issues",
-                "source": "https://github.com/opcodesio/log-viewer/tree/v3.17.0"
+                "source": "https://github.com/opcodesio/log-viewer/tree/v3.17.1"
             },
             "funding": [
                 {
@@ -3035,7 +3036,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-11T06:47:28+00:00"
+            "time": "2025-05-19T09:20:51+00:00"
         },
         {
             "name": "opcodesio/mail-parser",
