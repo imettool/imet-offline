@@ -33,11 +33,14 @@ class ResetDevEnv extends Command
         intro('Clearing the logs');
         $this->removeFilesByExtension( base_path('storage/logs'), 'log');
 
-        // Clear the node_modules directory
+        // Clear the assets and node_modules/ directories
         intro('Resetting node_modules/');
         $this->remove(base_path('node_modules/'));
+        $this->remove(base_path('public/build'));
         $this->line('Running npm install');
         Process::run('npm install');
+        $this->line('Running npm run build');
+        Process::run('npm run build');
 
         // Clear the vendor directory
         intro('Resetting vendor/');
