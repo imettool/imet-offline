@@ -4,11 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 
-process.env.NODE_ENV = 'development'; // Force DEVELOPMENT mode    TODO: remove this line when upgrade finished
-
 export default defineConfig({
     build: {
-        minify: process.env.NODE_ENV === 'production',
+        minify: true,
         rollupOptions: {
             output:{
                 manualChunks: {     // split biggest vendors in separate chunks

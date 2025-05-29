@@ -33,15 +33,6 @@ class ResetDevEnv extends Command
         intro('Clearing the logs');
         $this->removeFilesByExtension( base_path('storage/logs'), 'log');
 
-        // Delete the database and create a new one
-        intro('Resetting the database');
-        $databasePath = config('database.connections.offline.database');
-        static::remove($databasePath);
-        $this->line('Creating new database file: ' . $databasePath);
-        $this->filesystem->touch($databasePath);
-        $this->line('Migrating the database');
-        $this->call('migrate:refresh');
-
         // Clear the node_modules directory
         intro('Resetting node_modules/');
         $this->remove(base_path('node_modules/'));
@@ -54,9 +45,18 @@ class ResetDevEnv extends Command
         $this->line('Running composer install');
         Process::run('composer install --no-interaction --optimize-autoloader');
 
+        // Delete the database and create a new one
+        intro('Resetting the database');
+        $databasePath = config('database.connections.offline.database');
+        static::remove($databasePath);
+        $this->line('Creating new database file: ' . $databasePath);
+        $this->filesystem->touch($databasePath);
+        $this->line('Migrating the database');
+        $this->call('migrate:refresh');
+
         // Run native:install
         intro('Running native:install');
-        $this->call('native:install', ['--force' => true]);
+        $this->call('native:install', ['--force' => true, '--installer' => 'npm']);
 
         info('Development environment reset successfully!');
 
