@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => Env::getOrFail('DB_CONNECTION'),
+    'default' => env('DB_CONNECTION', 'offline'),
 
     /*
     |--------------------------------------------------------------------------

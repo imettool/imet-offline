@@ -32,8 +32,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Add github token for composer
 ENV COMPOSER_HOME /var/www/.composer
-ARG COMPOSER_GITHUB_TOKEN
-RUN composer config -g github-oauth.github.com ${COMPOSER_GITHUB_TOKEN}
+ARG GITHUB_TOKEN
+RUN composer config -g github-oauth.github.com ${GITHUB_TOKEN}
 
 # Use host user (to fix file permission). Required on Linux
 ARG UID
