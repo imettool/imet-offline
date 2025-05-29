@@ -15,7 +15,8 @@
         "laravel/framework": "^12.10.0",
         "laravel/ui": "^4.5.2",
         "nativephp/electron": "^1.0",
-        "opcodesio/log-viewer": "^3.10"
+        "opcodesio/log-viewer": "^3.10",
+        "spatie/laravel-csp": "^3.13"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
