@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "89ee2b0e2602baa58553115d5718eb5b0f906693"
+                "reference": "6f3fb278b32d8c551cd0673f3b83a747760f9794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/89ee2b0e2602baa58553115d5718eb5b0f906693",
-                "reference": "89ee2b0e2602baa58553115d5718eb5b0f906693",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/6f3fb278b32d8c551cd0673f3b83a747760f9794",
+                "reference": "6f3fb278b32d8c551cd0673f3b83a747760f9794",
                 "shasum": ""
             },
             "require": {
@@ -64,10 +64,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/2.0.6",
+                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.7",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-05-20T14:59:46+00:00"
+            "time": "2025-05-30T09:15:28+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
