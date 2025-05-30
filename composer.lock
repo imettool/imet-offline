@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "6f3fb278b32d8c551cd0673f3b83a747760f9794"
+                "reference": "024f91bbe324db198e809f407359d6c72a91e659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/6f3fb278b32d8c551cd0673f3b83a747760f9794",
-                "reference": "6f3fb278b32d8c551cd0673f3b83a747760f9794",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/024f91bbe324db198e809f407359d6c72a91e659",
+                "reference": "024f91bbe324db198e809f407359d6c72a91e659",
                 "shasum": ""
             },
             "require": {
@@ -64,10 +64,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.7",
+                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.8",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-05-30T09:15:28+00:00"
+            "time": "2025-05-30T14:59:08+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -127,7 +127,7 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/2.0.3",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/v2.0.3",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
             "time": "2025-05-20T13:38:25+00:00"
