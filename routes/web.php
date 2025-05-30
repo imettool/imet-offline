@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 
-Route::middleware(['web', 'auth'])->group(function () {
+Route::middleware(['web'])->group(function () {
 
     Route::get('/', function () { return Redirect::to('confirm_user'); });
     Route::view('home', 'offline.home')->name('home');

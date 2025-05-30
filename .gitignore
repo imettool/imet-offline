@@ -13,6 +13,8 @@ _ide_helper.php
 .cache
 sbom-*.json
 test-native.bat
+dist/
+build/
 
 # Envirnoment
 .env

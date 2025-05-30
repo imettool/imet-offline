@@ -6,7 +6,7 @@ return [
      * It is used to determine if the app needs to be updated.
      * Increment this value every time you release a new version of your app.
      */
-    'version' => env('NATIVEPHP_APP_VERSION', '3.0.0'),
+    'version' => \Illuminate\Support\Env::getOrFail('NATIVEPHP_APP_VERSION'),
 
     /**
      * The ID of your application. This should be a unique identifier
@@ -37,6 +37,16 @@ return [
     'copyright' => 'Copyright (C) 2025 European Union',
 
     /**
+     * The description of your application.
+     */
+    'description' => 'Integrated Management Effectiveness Tool',
+
+    /**
+     * The Website of your application.
+     */
+    'website' => 'https://rris.biopama.org/node/18795',
+
+    /**
      * The default service provider for your application. This provider
      * takes care of bootstrapping your application and configuring
      * any global hotkeys, menus, windows, etc.
@@ -58,6 +68,12 @@ return [
         'NATIVEPHP_APPLE_ID',
         'NATIVEPHP_APPLE_ID_PASS',
         'NATIVEPHP_APPLE_TEAM_ID',
+        'APP_DEBUG',
+        'APP_URL',
+        'VITE_*',
+        'COMPOSER_*',
+        'HTTP_PORT',
+        'UID'
     ],
 
     /**
@@ -71,6 +87,8 @@ return [
         'content',
         'node_modules',
         '*/tests',
+        '.run',
+        'docker',
     ],
 
     /**
@@ -88,7 +106,7 @@ return [
          * The updater provider to use.
          * Supported: "github", "s3", "spaces"
          */
-        'default' => env('NATIVEPHP_UPDATER_PROVIDER', 'spaces'),
+        'default' => env('NATIVEPHP_UPDATER_PROVIDER', 'github'),
 
         'providers' => [
             'github' => [
@@ -97,29 +115,10 @@ return [
                 'owner' => env('GITHUB_OWNER'),
                 'token' => env('GITHUB_TOKEN'),
                 'vPrefixedTagName' => env('GITHUB_V_PREFIXED_TAG_NAME', true),
-                'private' => env('GITHUB_PRIVATE', false),
-                'channel' => env('GITHUB_CHANNEL', 'latest'),
+                'private' => env('GITHUB_PRIVATE', true),
+                'channel' => env('GITHUB_CHANNEL', 'alpha'),
                 'releaseType' => env('GITHUB_RELEASE_TYPE', 'draft'),
-            ],
-
-            's3' => [
-                'driver' => 's3',
-                'key' => env('AWS_ACCESS_KEY_ID'),
-                'secret' => env('AWS_SECRET_ACCESS_KEY'),
-                'region' => env('AWS_DEFAULT_REGION'),
-                'bucket' => env('AWS_BUCKET'),
-                'endpoint' => env('AWS_ENDPOINT'),
-                'path' => env('NATIVEPHP_UPDATER_PATH', null),
-            ],
-
-            'spaces' => [
-                'driver' => 'spaces',
-                'key' => env('DO_SPACES_KEY_ID'),
-                'secret' => env('DO_SPACES_SECRET_ACCESS_KEY'),
-                'name' => env('DO_SPACES_NAME'),
-                'region' => env('DO_SPACES_REGION'),
-                'path' => env('NATIVEPHP_UPDATER_PATH', null),
-            ],
+            ]
         ],
     ],
 
@@ -131,6 +130,7 @@ return [
             'queues' => ['default'],
             'memory_limit' => 128,
             'timeout' => 60,
+            'sleep' => 3,
         ],
     ],
 
@@ -138,11 +138,11 @@ return [
      * Define your own scripts to run before and after the build process.
      */
     'prebuild' => [
-        // 'npm run build',
+         'npm run build',
     ],
 
     'postbuild' => [
-        // 'rm -rf public/build',
+//         'rm -rf public/build',
     ],
 
     /**
