@@ -7,10 +7,10 @@ use ModularForms\Helpers\Template;
 
     <!-- Logs -->
     <div>
-        <a href="/logs" class="!text-gray-600">
+        <a href="/logs" target="_blank" class="!text-gray-600">
             {!! Template::icon('rectangle-list') !!}
         </a>
-        <a href="https://github.com/andreamarelli/imet/releases/latest" class="!text-gray-600">
+        <a href="https://github.com/andreamarelli/imet/releases/latest" target="_blank" class="!text-gray-600">
             <span class="fa-brands fa-fw fa-github"></span>
         </a>
     </div>

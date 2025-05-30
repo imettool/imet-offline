@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 
+process.env.NODE_ENV = 'development'; // Required for VueDevTools
+
 export default defineConfig({
     build: {
         minify: true,
