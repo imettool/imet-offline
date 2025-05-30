@@ -37,6 +37,16 @@ return [
     'copyright' => 'Copyright (C) 2025 European Union',
 
     /**
+     * The description of your application.
+     */
+    'description' => 'Integrated Management Effectiveness Tool',
+
+    /**
+     * The Website of your application.
+     */
+    'website' => 'https://rris.biopama.org/node/18795',
+
+    /**
      * The default service provider for your application. This provider
      * takes care of bootstrapping your application and configuring
      * any global hotkeys, menus, windows, etc.
@@ -120,6 +130,7 @@ return [
             'queues' => ['default'],
             'memory_limit' => 128,
             'timeout' => 60,
+            'sleep' => 3,
         ],
     ],
 
