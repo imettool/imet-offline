@@ -10,7 +10,7 @@ use Native\Laravel\Events\AutoUpdater\UpdateAvailable;
 use Native\Laravel\Events\AutoUpdater\UpdateDownloaded;
 use Native\Laravel\Events\AutoUpdater\UpdateNotAvailable;
 
-class CheckUpdate
+class UpdaterListener
 {
     public function handle(CheckingForUpdate|UpdateAvailable|UpdateNotAvailable|DownloadProgress|UpdateDownloaded|Error $event): void
     {
