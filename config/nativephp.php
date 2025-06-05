@@ -87,6 +87,7 @@ return [
         'content',
         'node_modules',
         '*/tests',
+        'tests',
         '.run',
         'docker',
     ],
@@ -116,7 +117,7 @@ return [
                 'token' => env('GITHUB_TOKEN'),
                 'vPrefixedTagName' => env('GITHUB_V_PREFIXED_TAG_NAME', true),
                 'private' => env('GITHUB_PRIVATE', true),
-                'channel' => env('GITHUB_CHANNEL', 'alpha'),
+                'channel' => env('GITHUB_CHANNEL', 'latest'),
                 'releaseType' => env('GITHUB_RELEASE_TYPE', 'draft'),
             ]
         ],

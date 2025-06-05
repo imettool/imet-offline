@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: ./docker/php/Dockerfile
       args:
-        - COMPOSER_GITHUB_TOKEN=${COMPOSER_GITHUB_TOKEN}
+        - GITHUB_TOKEN=${COMPOSER_GITHUB_TOKEN}
         - UID=${UID-}
     image: ${COMPOSE_PROJECT_NAME}_php
     restart: unless-stopped

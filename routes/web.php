@@ -18,8 +18,6 @@ Route::middleware(['web'])->group(function () {
     Route::patch('settings/update', [SettingsController::class, 'update'])->name('settings_update');
 
     // User routes
-    Route::get('users/{role_type?}', [UserController::class, 'index'])->name('imet-core::users');
-    Route::patch('users', [UserController::class, 'update_roles'])->name('imet-core::users_update');
     Route::get('confirm_user', [UserController::class, 'confirm_offline_user'])->name('confirm_user');
     Route::patch('confirm_user', [UserController::class, 'update_offline_user'])->name('update_offline_user');
 
