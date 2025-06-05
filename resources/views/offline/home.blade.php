@@ -1,6 +1,10 @@
 @php
 use \Illuminate\Support\Str;
 
+use Native\Laravel\Facades\AutoUpdater;
+
+AutoUpdater::checkForUpdates();
+
 @endphp
 
 @extends('modular-forms::layouts.forms')

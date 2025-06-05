@@ -7,13 +7,16 @@ use Native\Laravel\Events\AutoUpdater\CheckingForUpdate;
 use Native\Laravel\Events\AutoUpdater\DownloadProgress;
 use Native\Laravel\Events\AutoUpdater\Error;
 use Native\Laravel\Events\AutoUpdater\UpdateAvailable;
+use Native\Laravel\Events\AutoUpdater\UpdateCancelled;
 use Native\Laravel\Events\AutoUpdater\UpdateDownloaded;
 use Native\Laravel\Events\AutoUpdater\UpdateNotAvailable;
 
 class UpdaterListener
 {
-    public function handle(CheckingForUpdate|UpdateAvailable|UpdateNotAvailable|DownloadProgress|UpdateDownloaded|Error $event): void
+    public function handle(CheckingForUpdate|UpdateAvailable|UpdateNotAvailable|DownloadProgress|UpdateDownloaded|UpdateCancelled|Error $event): void
     {
+        Log::info(get_class($event));
+
         if($event instanceof CheckingForUpdate){
             Log::info('Checking for updates...');
         } elseif($event instanceof UpdateAvailable) {
@@ -24,6 +27,8 @@ class UpdaterListener
             Log::info('Download progress: ' . $event->percent . '% (' . $event->transferred . ' of ' . $event->total . ' bytes)');
         } elseif($event instanceof UpdateDownloaded) {
             Log::info('Update downloaded successfully.');
+        } elseif($event instanceof UpdateCancelled) {
+            Log::info('Update cancelled.');
         } elseif($event instanceof Error) {
             Log::error('Error occurred while checking for updates: ' . $event->message);
         }
