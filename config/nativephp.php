@@ -60,7 +60,7 @@ return [
      */
     'cleanup_env_keys' => [
         'AWS_*',
-        'GITHUB_*',
+//        'GITHUB_*',
         'DO_SPACES_*',
         '*_SECRET',
         'ZEPHPYR_*',
