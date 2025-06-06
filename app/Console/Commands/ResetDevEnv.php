@@ -37,6 +37,7 @@ class ResetDevEnv extends Command
         intro('Resetting node_modules/');
         $this->remove(base_path('node_modules/'));
         $this->remove(base_path('public/build'));
+        $this->remove(base_path('public/basket'));
         $this->line('Running npm install');
         Process::run('npm install');
         $this->line('Running npm run build');

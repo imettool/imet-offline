@@ -60,7 +60,6 @@ return [
      */
     'cleanup_env_keys' => [
         'AWS_*',
-//        'GITHUB_*',
         'DO_SPACES_*',
         '*_SECRET',
         'ZEPHPYR_*',
@@ -144,6 +143,9 @@ return [
 
     'postbuild' => [
 //         'rm -rf public/build',
+
+        // Add temporary GitHub token for updater while repository is private
+        'echo "token: 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" >> ' . __DIR__.'/../dist/win-unpacked/resources/app-update.yml',
     ],
 
     /**
