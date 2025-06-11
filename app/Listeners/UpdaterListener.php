@@ -15,8 +15,6 @@ class UpdaterListener
 {
     public function handle(CheckingForUpdate|UpdateAvailable|UpdateNotAvailable|DownloadProgress|UpdateDownloaded|UpdateCancelled|Error $event): void
     {
-        Log::info(get_class($event));
-
         if($event instanceof CheckingForUpdate){
             Log::info('Checking for updates...');
         } elseif($event instanceof UpdateAvailable) {
