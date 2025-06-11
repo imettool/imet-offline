@@ -25,11 +25,15 @@ class InitializeOfflineTool implements ShouldQueue
 
         // Force debug mode in the .env file
         $env_path = app_path() . '/../.env';
-        $env_content = file_get_contents($env_path);
-        if(Str::contains($env_content, 'LOG_LEVEL=warning')) {
-            $env_content = Str::replace('LOG_LEVEL=warning', 'LOG_LEVEL=debug', $env_content);
-            file_put_contents($env_path, $env_content);
-            Log::info('LOG_LEVEL forced to debug in .env file.');
+        if (file_exists($env_path)) {
+            $env_content = file_get_contents($env_path);
+            if(Str::contains($env_content, 'LOG_LEVEL=warning')) {
+                $env_content = Str::replace('LOG_LEVEL=warning', 'LOG_LEVEL=debug', $env_content);
+                file_put_contents($env_path, $env_content);
+                Log::warning('LOG_LEVEL forced to debug in .env file.');
+            }
+        } else {
+            Log::error('Trying to force debug mode in .env file, but the file does not exist: ' . $env_path);
         }
 
         // Hard coded: set temporary Github token for auto-updater
@@ -37,14 +41,13 @@ class InitializeOfflineTool implements ShouldQueue
         $github_token = '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';
         $config_file_path = app_path() . '/../../../../app-update.yml';
         if (file_exists($config_file_path)) {
-            Log::info('Config file found: ' . $config_file_path);
             $config_content = file_get_contents($config_file_path);
             if (!Str::contains($config_content, 'token:')) {
                 file_put_contents($config_file_path, PHP_EOL . 'token: ' . $github_token, FILE_APPEND);
-                Log::info('GitHub token set in updater config yml file.');
+                Log::warning('GitHub token set in updater config yml file.');
             }
         } else {
-            Log::warning('Config file not found: ' . $config_file_path);
+            Log::error('Trying to set GitHub token in updater config file, but the file does not exist: ' . $config_file_path);
         }
 
         // Hard coded fix to issue https://github.com/NativePHP/laravel/issues/614  (already fixed with https://github.com/NativePHP/laravel/pull/597)
@@ -68,8 +71,10 @@ class InitializeOfflineTool implements ShouldQueue
                     $content = str_replace('public ?int $stagingPercentage,', 'public ?int $stagingPercentage = null,', $content);
                     $content = str_replace('public ?string $minimumSystemVersion,', 'public ?string $minimumSystemVersion = null,', $content);
                     file_put_contents($file_path, $content);
-                    Log::info('Fixed ' . $file . ' event file. (https://github.com/NativePHP/laravel/issues/614)');
+                    Log::warning('Fixed ' . $file . ' event file. (https://github.com/NativePHP/laravel/issues/614)');
                 }
+            } else {
+                Log::error('Trying to fix event file, but the file does not exist: ' . $file_path);
             }
         }
 
