@@ -65,11 +65,21 @@ class InitializeOfflineTool implements ShouldQueue
             if (file_exists($file_path)) {
                 $content = file_get_contents($file_path);
                 if(!Str::contains($content, ' = null,')){
-                    $content = str_replace('public ?string $stack,', 'public ?string $stack = null,', $content);
-                    $content = str_replace('public ?string $releaseName,', 'public ?string $releaseName = null,', $content);
-                    $content = str_replace('public string|array|null $releaseNotes,', 'public string|array|null $releaseNotes = null,', $content);
-                    $content = str_replace('public ?int $stagingPercentage,', 'public ?int $stagingPercentage = null,', $content);
-                    $content = str_replace('public ?string $minimumSystemVersion,', 'public ?string $minimumSystemVersion = null,', $content);
+                    if(!Str::contains($content, 'public ?string $stack = null')){
+                        $content = str_replace('public ?string $stack', 'public ?string $stack = null', $content);
+                    }
+                    if(!Str::contains($content, 'public ?string $releaseName = null')){
+                        $content = str_replace('public ?string $releaseName', 'public ?string $releaseName = null', $content);
+                    }
+                    if(!Str::contains($content, 'public string|array|null $releaseNotes = null,')){
+                        $content = str_replace('public string|array|null $releaseNotes', 'public string|array|null $releaseNotes = null', $content);
+                    }
+                    if(!Str::contains($content, 'public ?int $stagingPercentage = null,')){
+                        $content = str_replace('public ?int $stagingPercentage', 'public ?int $stagingPercentage = null', $content);
+                    }
+                    if(!Str::contains($content, 'public ?string $minimumSystemVersion = null,')){
+                        $content = str_replace('public ?string $minimumSystemVersion', 'public ?string $minimumSystemVersion = null', $content);
+                    }
                     file_put_contents($file_path, $content);
                     Log::warning('Fixed ' . $file . ' event file. (https://github.com/NativePHP/laravel/issues/614)');
                 }
