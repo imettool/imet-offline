@@ -9,6 +9,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Str;
 use Log;
+use Native\Laravel\Facades\App;
 
 class InitializeOfflineTool implements ShouldQueue
 {
@@ -22,6 +23,7 @@ class InitializeOfflineTool implements ShouldQueue
      */
     public function handle(): void
     {
+        $relaunch_to_apply = false;
 
         // Force debug mode in the .env file
         $env_path = app_path() . '/../.env';
@@ -31,6 +33,7 @@ class InitializeOfflineTool implements ShouldQueue
                 $env_content = Str::replace('LOG_LEVEL=warning', 'LOG_LEVEL=debug', $env_content);
                 file_put_contents($env_path, $env_content);
                 Log::warning('LOG_LEVEL forced to debug in .env file.');
+                $relaunch_to_apply = true;
             }
         } else {
             Log::error('Trying to force debug mode in .env file, but the file does not exist: ' . $env_path);
@@ -45,6 +48,7 @@ class InitializeOfflineTool implements ShouldQueue
             if (!Str::contains($config_content, 'token:')) {
                 file_put_contents($config_file_path, PHP_EOL . 'token: ' . $github_token, FILE_APPEND);
                 Log::warning('GitHub token set in updater config yml file.');
+                $relaunch_to_apply = true;
             }
         } else {
             Log::error('Trying to set GitHub token in updater config file, but the file does not exist: ' . $config_file_path);
@@ -82,12 +86,18 @@ class InitializeOfflineTool implements ShouldQueue
                     }
                     file_put_contents($file_path, $content);
                     Log::warning('Fixed ' . $file . ' event file. (https://github.com/NativePHP/laravel/issues/614)');
+                    $relaunch_to_apply = true;
                 }
             } else {
                 Log::error('Trying to fix event file, but the file does not exist: ' . $file_path);
             }
         }
 
+        // Relaunch the application to apply changes
+        if($relaunch_to_apply) {
+            Log::warning('Relaunching the application to apply changes.');
+            App::relaunch();
+        }
     }
 
 }
