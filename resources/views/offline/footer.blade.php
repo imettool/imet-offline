@@ -1,5 +1,4 @@
 <?php
-use App\Helpers\SoftwareUpdater;
 use ModularForms\Helpers\Template;
 
 ?>
@@ -17,7 +16,7 @@ use ModularForms\Helpers\Template;
 
     <!-- Version -->
     <div>
-        @lang('offline.version'): <span class="font-bold text-primary-600">{{ config('nativephp.version')  }}</span>
+        @lang('offline.version'): <span class="font-bold text-primary-600">{{ imet_offline_tool_version()  }}</span>
     </div>
 
     <!-- Copyright -->

@@ -1,20 +1,18 @@
 <?php
 
 use ImetCore\Helpers\ModuleKey;
-use App\Helpers\SoftwareUpdater;
 use App\Models\Country;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\App;
 
-
+/**
+ * Return the IMET offline tool version
+ */
 function imet_offline_tool_version(): ?string
 {
-    return SoftwareUpdater::getCurrentVersion();
-}
-
-function is_dev_environment(): bool
-{
-    return Str::contains(strtolower(App::environment()), 'dev');
+    return App::environment('local')
+        ? 'DEV (' . config('nativephp.version') . ')'
+        : config('nativephp.version');
 }
 
 /**
