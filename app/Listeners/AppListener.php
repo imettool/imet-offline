@@ -17,7 +17,7 @@ class AppListener
 
         // First boot: onetime modifications
         if(App::environment('production')) {
-            InitializeOfflineTool::dispatch();
+            InitializeOfflineTool::dispatchSync();
         }
 
         // Check for updates
