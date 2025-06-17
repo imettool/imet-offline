@@ -2,7 +2,6 @@
 
 use ModularForms\Controllers\UploadFileController;
 use App\Http\Controllers\SettingsController;
-use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;

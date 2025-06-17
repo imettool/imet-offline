@@ -3,7 +3,6 @@ use ModularForms\Helpers\Template;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
-use App\Helpers\SoftwareUpdater;
 
 $current_route = Route::current()->getName();
 
