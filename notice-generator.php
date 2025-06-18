@@ -9,31 +9,15 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
-namespace App\Listeners;
+include_once __DIR__ . '/vendor/autoload.php';
 
-use App\Jobs\InitializeOfflineTool;
-use Illuminate\Support\Facades\App;
-use Log;
-use Native\Laravel\Events\App\ApplicationBooted;
-use Native\Laravel\Facades\AutoUpdater;
+use App\Helpers\DependencyParser;
 
-class AppListener
-{
-    public function handle(ApplicationBooted $event): void
-    {
-        // Log the application booted event
-        Log::info('Application booted successfully.');
+const WITH_DEV = false;
 
-        // First boot: onetime modifications
-        if(App::environment('production')) {
-            InitializeOfflineTool::dispatchSync();
-        }
-
-        // Check for updates
-        if(App::environment('production')) {
-            AutoUpdater::checkForUpdates();
-        }
-
-    }
-
+try {
+    DependencyParser::generateNoticeFile(WITH_DEV);
+} catch (Exception $e) {
+    print($e->getMessage());
+    die();
 }

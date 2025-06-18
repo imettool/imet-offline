@@ -9,31 +9,17 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
-namespace App\Listeners;
+namespace App\Helpers;
 
-use App\Jobs\InitializeOfflineTool;
-use Illuminate\Support\Facades\App;
-use Log;
-use Native\Laravel\Events\App\ApplicationBooted;
-use Native\Laravel\Facades\AutoUpdater;
+use ImetCore\Helpers\DependencyParser as BaseDependencyParser;
 
-class AppListener
+class DependencyParser extends BaseDependencyParser
 {
-    public function handle(ApplicationBooted $event): void
+    protected static function getNpmDirectDependencyList(bool $includeDev): array
     {
-        // Log the application booted event
-        Log::info('Application booted successfully.');
-
-        // First boot: onetime modifications
-        if(App::environment('production')) {
-            InitializeOfflineTool::dispatchSync();
-        }
-
-        // Check for updates
-        if(App::environment('production')) {
-            AutoUpdater::checkForUpdates();
-        }
-
+        $dependencies = parent::getNpmDirectDependencyList($includeDev);
+        return array_filter($dependencies, function ($dependency) {
+            return $dependency != 'imet-core';
+        });
     }
-
 }
