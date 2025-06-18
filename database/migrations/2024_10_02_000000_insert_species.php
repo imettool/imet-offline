@@ -24,20 +24,25 @@ return new class extends Migration
         // get contents of a file into a string
         $filename = database_path(SpeciesUpdater::CSV_MIGRATION_PATH);
 
-        // Open and read the CSV file
-        $data = [];
-        $handle = fopen($filename, "r");
-        $header = fgetcsv($handle);
-        while (($row = fgetcsv($handle)) !== false) {
-            $data[] = array_combine($header, $row);
-        }
+        // Check if the file exists (only in development environment)
+        if(file_exists($filename)) {
 
-        // Split the data into chunks
-        $data = array_chunk($data, 100);
+            // Open and read the CSV file
+            $data = [];
+            $handle = fopen($filename, "r");
+            $header = fgetcsv($handle);
+            while (($row = fgetcsv($handle)) !== false) {
+                $data[] = array_combine($header, $row);
+            }
 
-        // Upsert data into the database
-        foreach ($data as $chunk) {
-            Animal::upsert($chunk, ['order', 'family', 'genus', 'species'], SpeciesUpdater::MIGRATION_ATTRIBUTES);
+            // Split the data into chunks
+            $data = array_chunk($data, 100);
+
+            // Upsert data into the database
+            foreach ($data as $chunk) {
+                Animal::upsert($chunk, ['order', 'family', 'genus', 'species'], SpeciesUpdater::MIGRATION_ATTRIBUTES);
+            }
+
         }
     }
 
