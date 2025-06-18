@@ -22,4 +22,20 @@ class DependencyParser extends BaseDependencyParser
             return $dependency != 'imet-core';
         });
     }
+
+    /**
+     * Override: hardcode license for imet-core
+     */
+    protected static function retrieveLicense(array $packageInfo): array
+    {
+        $license = parent::retrieveLicense($packageInfo);
+
+        // Hardcoded licenses
+        if($packageInfo['name'] == 'imet-core') {
+            $license[] = 'EUPL-1.2';
+        }
+
+        return $license;
+    }
+
 }

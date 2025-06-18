@@ -12,7 +12,7 @@ __andreamarelli/imet-core 2.0.12__
   * git@github.com:andreamarelli/imet-core
   * License: EUPL-1.2
   * Copyright: 
-    * N/A 
+    * Copyright (C) 2025 European Union
 
 __andreamarelli/modular-forms 2.0.3__
   * git@github.com:andreamarelli/modular-forms
