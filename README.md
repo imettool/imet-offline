@@ -1,19 +1,19 @@
 # IMET Offline
 
-The **IMET Offline** is a desktop application that allows users to conduct assessments of protected areas and conserved
+The IMET Offline is a desktop application that allows users to conduct assessments of protected areas and conserved
 areas without the need for an internet connection. It is built on NativePHP, a framework that allows to create
 cross-platform desktop applications using PHP, HTML, CSS, and JavaScript. The tool is designed to be user-friendly and
 provides a simple interface for users to input data, generate reports, and manage assessments.
 
 ## Technical Requirements
-The **Integrated Management Effectiveness Tool (IMET)** is available for Windows 10 operating system. Support of Windows 11 
-is currently under development and will be available soon.
+The IMET Offline is available for Windows 10. Windows 11 support of is currently under testing and will be available soon.
 
 ## Overview
 
-**Integrated Management Effectiveness Tool (IMET)** is a _Protected Area Management Effectiveness (PAME)_ tool that allows an in-depth assessment of marine and 
-terrestrial protected areas, regardless of their management categories and governance type. As a decision-support tool, 
-it helps protected area managers take analysis-based management decisions for improved conservation outcomes.
+*Integrated Management Effectiveness Tool (IMET)* is a _Protected Area Management Effectiveness (PAME)_ tool that allows 
+an in-depth assessment of marine and terrestrial protected areas, regardless of their management categories and governance 
+type. As a decision-support tool, it helps protected area managers take analysis-based management decisions for improved 
+conservation outcomes.
 
 The objective of the IMET conserved areas tool is to enhancing conservation efforts and sustaining governance in 
 community areas such as Other Effective area-based Conservation Measures (OECMs), Locally-Managed Marine Areas (LMMAs), 
