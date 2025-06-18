@@ -6,7 +6,7 @@ return [
      * It is used to determine if the app needs to be updated.
      * Increment this value every time you release a new version of your app.
      */
-    'version' => json_decode(file_get_contents('composer.json'), true)['version'],
+    'version' => json_decode(file_get_contents(base_path('composer.json')), true)['version'],
 
     /**
      * The ID of your application. This should be a unique identifier
