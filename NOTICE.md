@@ -1,6 +1,6 @@
 imet
 
-version: 3.0.0-rc.19
+version: 3.0.0-rc.20
 
 Copyright (C) 2025 European Union
 
@@ -12,9 +12,9 @@ __andreamarelli/imet-core 2.0.12__
   * git@github.com:andreamarelli/imet-core
   * License: EUPL-1.2
   * Copyright: 
-    * Copyright (C) 2025 European Union
+    * N/A 
 
-__andreamarelli/modular-forms 2.0.3__
+__andreamarelli/modular-forms 2.0.5__
   * git@github.com:andreamarelli/modular-forms
   * License: EUPL-1.2
   * Copyright: 
@@ -26,7 +26,7 @@ __guzzlehttp/guzzle 7.9.3__
   * Copyright: 
     * Copyright (c) 2016 George Mponos <gmponos@gmail.com> 
 
-__laravel/framework v12.18.0__
+__laravel/framework v12.20.0__
   * https://laravel.com
   * License: MIT
   * Copyright: 
@@ -38,31 +38,31 @@ __laravel/ui v4.6.1__
   * Copyright: 
     * Copyright (c) Taylor Otwell 
 
-__nativephp/electron 1.1.0__
+__nativephp/electron 1.1.1__
   * https://github.com/nativephp/electron
   * License: MIT
   * Copyright: 
     * Copyright (c) NativePHP <marcel@beyondco.de> 
 
-__nativephp/laravel 1.1.1__
+__nativephp/laravel 1.1.2__
   * https://github.com/nativephp/laravel
   * License: MIT
   * Copyright: 
     * Copyright (c) NativePHP <marcel@beyondco.de> 
 
-__nunomaduro/collision v8.8.0__
+__nunomaduro/collision v8.8.2__
   * https://github.com/nunomaduro/collision
   * License: MIT
   * Copyright: 
     * Copyright (c) Nuno Maduro <enunomaduro@gmail.com> 
 
-__opcodesio/log-viewer v3.17.1__
+__opcodesio/log-viewer v3.18.0__
   * https://github.com/opcodesio/log-viewer
   * License: MIT
   * Copyright: 
     * Copyright (c) arukompas <arukomp@gmail.com> 
 
-__spatie/laravel-csp 3.13.0__
+__spatie/laravel-csp 3.13.1__
   * https://github.com/spatie/laravel-csp
   * License: MIT
   * Copyright: 
@@ -74,7 +74,7 @@ __spatie/laravel-ignition 2.9.1__
   * Copyright: 
     * Copyright (c) Spatie <info@spatie.be> 
 
-__symfony/console v7.2.7__
+__symfony/console v7.3.1__
   * https://symfony.com
   * License: MIT
   * Copyright: 
