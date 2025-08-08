@@ -9,26 +9,22 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
-use App\Jobs\UpdateSpecies;
-use ImetCore\Models\Species;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Support\Facades\DB;
+namespace App\Console\Commands;
 
-return new class extends Migration
+use App\Jobs\UpdateSpecies as UpdateSpeciesJob;
+use Illuminate\Console\Command;
+
+class UpdateSpecies extends Command
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        UpdateSpecies::dispatchSync();
-    }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    protected $signature = 'imet:update_species';
+
+    protected $description = 'Update species from Catalogue of Life CSV file';
+
+    public function handle(): int
     {
-        DB::table((new Species)->getTable())->truncate();
+        $verbose = $this->option('verbose'); // Check if the verbose option is set (already available in Laravel's Command class)
+        UpdateSpeciesJob::dispatchSync($verbose);
+        return 0;
     }
-};
+}

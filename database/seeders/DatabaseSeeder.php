@@ -13,7 +13,7 @@ namespace Database\Seeders;
 
 use ImetCore\Models\ProtectedArea;
 use ModularForms\Helpers\Input\SelectionList;
-use ImetCore\Models\Animal;
+use ImetCore\Models\Species;
 use Auth;
 use Exception;
 use Illuminate\Database\Seeder;
@@ -99,7 +99,7 @@ class DatabaseSeeder extends Seeder
         }
 
         elseif (Str::contains($type, "selector-species_animal")) {
-            $species = Animal::all()->random();
+            $species = Species::all()->random();
             return $species->phylum
                 . '|' . $species->class
                 . '|' . $species->order

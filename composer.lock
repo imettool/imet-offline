@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "2.0.12",
+            "version": "2.0.14",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "7db7ce1076189e9a93c8ae62e9bb8a222becd533"
+                "reference": "84c8f7ff236a6206280b81265139db47be7dbc0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/7db7ce1076189e9a93c8ae62e9bb8a222becd533",
-                "reference": "7db7ce1076189e9a93c8ae62e9bb8a222becd533",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/84c8f7ff236a6206280b81265139db47be7dbc0c",
+                "reference": "84c8f7ff236a6206280b81265139db47be7dbc0c",
                 "shasum": ""
             },
             "require": {
@@ -64,23 +64,23 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.12",
+                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.14",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-06-17T15:20:41+00:00"
+            "time": "2025-08-08T14:16:06+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "2.0.5",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/modular-forms.git",
-                "reference": "ec34bb3ee01eea43e063a58b73a54fe566c8bab0"
+                "reference": "436e61596882d88c3eac5a8758d742a651f2865b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/ec34bb3ee01eea43e063a58b73a54fe566c8bab0",
-                "reference": "ec34bb3ee01eea43e063a58b73a54fe566c8bab0",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/436e61596882d88c3eac5a8758d742a651f2865b",
+                "reference": "436e61596882d88c3eac5a8758d742a651f2865b",
                 "shasum": ""
             },
             "require": {
@@ -127,10 +127,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/v2.0.5",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/v2.0.7",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-07-02T10:21:14+00:00"
+            "time": "2025-08-07T09:03:30+00:00"
         },
         {
             "name": "brick/math",

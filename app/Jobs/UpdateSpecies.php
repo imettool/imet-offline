@@ -9,26 +9,27 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
-use App\Jobs\UpdateSpecies;
-use ImetCore\Models\Species;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Support\Facades\DB;
+namespace App\Jobs;
 
-return new class extends Migration
+use App\Helpers\SpeciesUpdater;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+
+class UpdateSpecies implements ShouldQueue
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        UpdateSpecies::dispatchSync();
-    }
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
 
     /**
-     * Reverse the migrations.
+     * Execute the job.
      */
-    public function down(): void
+    public function handle(): void
     {
-        DB::table((new Species)->getTable())->truncate();
+        SpeciesUpdater::updateSpeciesAndVernacularNames(true);
     }
-};
+}
