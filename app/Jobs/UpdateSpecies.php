@@ -30,6 +30,6 @@ class UpdateSpecies implements ShouldQueue
      */
     public function handle(): void
     {
-        SpeciesUpdater::updateSpeciesAndVernacularNames(true);
+        SpeciesUpdater::updateSpeciesAndVernacularNames(false);
     }
 }

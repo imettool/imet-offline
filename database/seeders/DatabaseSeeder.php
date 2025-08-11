@@ -99,7 +99,7 @@ class DatabaseSeeder extends Seeder
         }
 
         elseif (Str::contains($type, "selector-species_animal")) {
-            $species = Species::all()->random();
+            $species = Species::inRandomOrder()->first();
             return $species->phylum
                 . '|' . $species->class
                 . '|' . $species->order
@@ -112,9 +112,9 @@ class DatabaseSeeder extends Seeder
 
         } elseif (Str::contains($type, "selector-wdpa")){
             if(Str::contains($type, 'multiple')){
-                return implode(',', ProtectedArea::all()->random(rand(2,5))->pluck('wdpa_id')->toArray());
+                return implode(',', ProtectedArea::inRandomOrder()->limit(rand(2,5))->get()->pluck('wdpa_id')->toArray());
             }
-            return ProtectedArea::all()->random()->wdpa_id;
+            return ProtectedArea::inRandomOrder()->first()->wdpa_id;
         }
 //        elseif ($type==="selector-wdpa_multiple_withFreeText"){}
 
@@ -123,7 +123,6 @@ class DatabaseSeeder extends Seeder
 
     private static function insertRecords($module, $form_id, int $num_records = 1, string $group_key = null): void
     {
-
         for($y=1; $y<=$num_records; $y++){
             static::insertRecord($module, $form_id, $group_key);
         }
@@ -185,6 +184,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $pas = ProtectedArea::all()->random(10);
+        $modules = array_merge(Imet\v2\Imet::allModules(), Imet\v2\Imet_Eval::allModules());
 
         Auth::loginUsingId(0);
 
@@ -203,7 +203,6 @@ class DatabaseSeeder extends Seeder
                 'UpdateBy' => 0,
             ]);
 
-            $modules = array_merge(Imet\v2\Imet::allModules(), Imet\v2\Imet_Eval::allModules());
             foreach ($modules as $module){
                 $module_type = (new $module)->module_type;
                 $num_records = (Str::contains($module_type, 'TABLE') || Str::contains($module_type, 'ACCORDION'))
