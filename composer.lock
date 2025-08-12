@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf370ae9d02729f1628738fe83d1d6f6",
+    "content-hash": "ebdd909f1da7bea1b24f54e8e2456eac",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "2.0.17",
+            "version": "2.0.18",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:andreamarelli/imet-core.git",
+                "reference": "4fbc182c711e2c4ec6ca714ea545e20aacaa5e56"
+            },
             "dist": {
-                "type": "path",
-                "url": "/var/www/packages/imet-core",
-                "reference": "fd73b4f4d57ab88bdcc0a55cdfa8779edd8e616a"
+                "type": "zip",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/4fbc182c711e2c4ec6ca714ea545e20aacaa5e56",
+                "reference": "4fbc182c711e2c4ec6ca714ea545e20aacaa5e56",
+                "shasum": ""
             },
             "require": {
                 "andreamarelli/modular-forms": "^2.0.7",
@@ -57,9 +63,11 @@
                 }
             ],
             "description": "Imet core package",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.18",
+                "issues": "https://github.com/andreamarelli/imet-core/issues"
+            },
+            "time": "2025-08-11T15:39:56+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
