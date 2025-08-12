@@ -57,6 +57,12 @@ class SpeciesUpdater
         // Update vernacular names from CSV
         static::updateVernacularNamesFromCSV($verbose);
 
+        // Remove all records where species and genus and family are null
+        Species::whereNull('species')
+            ->whereNull('genus')
+            ->whereNull('family')
+            ->delete();
+
         if($verbose) {
             print("Species and vernacular names updated successfully.\n");
         }

@@ -98,7 +98,7 @@ class DatabaseSeeder extends Seeder
             return collect($values)->random();
         }
 
-        elseif (Str::contains($type, "selector-species_animal")) {
+        elseif (Str::contains($type, "selector-species")) {
             $species = Species::inRandomOrder()->first();
             return $species->phylum
                 . '|' . $species->class
@@ -106,9 +106,6 @@ class DatabaseSeeder extends Seeder
                 . '|' . $species->family
                 . '|' . $species->genus
                 . '|' . $species->species;
-//        elseif ($type==="selector-species_animal_withFreeText"){}
-
-            // IMET
 
         } elseif (Str::contains($type, "selector-wdpa")){
             if(Str::contains($type, 'multiple')){
@@ -116,7 +113,6 @@ class DatabaseSeeder extends Seeder
             }
             return ProtectedArea::inRandomOrder()->first()->wdpa_id;
         }
-//        elseif ($type==="selector-wdpa_multiple_withFreeText"){}
 
         return null;
     }
