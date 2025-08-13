@@ -8,7 +8,7 @@
         "andreamarelli/imet-core": "^2.0.6",
         "andreamarelli/modular-forms": "^2.0.3",
         "guzzlehttp/guzzle": "^7.9.3",
-        "laravel/framework": "12.20.0",
+        "laravel/framework": "^12.20.0",
         "laravel/ui": "^4.6.1",
         "nativephp/electron": "^1.1.0",
         "nativephp/laravel": "^1.1.0",
