@@ -60,6 +60,9 @@ class ResetDevEnv extends Command
 
         // Delete the database and create a new one
         intro('Resetting the database');
+        static::remove(database_path('nativephp.sqlite'));
+        static::remove(database_path('nativephp.sqlite-shm'));
+        static::remove(database_path('nativephp.sqlite-wal'));
         $databasePath = config('database.connections.offline.database');
         static::remove($databasePath);
         $this->line('Creating new database file: ' . $databasePath);

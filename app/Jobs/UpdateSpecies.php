@@ -30,6 +30,12 @@ class UpdateSpecies implements ShouldQueue
      */
     public function handle(): void
     {
-        SpeciesUpdater::updateSpeciesAndVernacularNames(false);
+        try{
+            // Update species and vernacular names
+            SpeciesUpdater::updateSpeciesAndVernacularNames();
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            \Log::error('Error updating species: ' . $e->getMessage());
+        }
     }
 }

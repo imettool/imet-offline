@@ -42,7 +42,7 @@ class SpeciesUpdater
         'vernacular_names_kor'
     ];
 
-    const int CHUNK_SIZE = 1000;
+    const int CHUNK_SIZE = 300;
 
     /**
      * Update species and vernacular names from CSV files.
@@ -73,9 +73,13 @@ class SpeciesUpdater
         $filepath = database_path(static::CSV_SPECIES_PATH);
         if(file_exists($filepath)) {
 
+            if($verbose) {
+                print("\nUpserting species from CSV file: " . $filepath . "\n");
+            }
+
             // Upsert species data in chucks using a generator
             $generator = new CSVReader($filepath);
-            foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
+            foreach ($generator->rows(self::CHUNK_SIZE) as $chunk) {
 
                 Species::upsert(
                     values: $chunk,
@@ -88,13 +92,22 @@ class SpeciesUpdater
 
             }
 
+        } else {
+            if($verbose) {
+                print("\nCSV file for species not found: " . $filepath . "\n");
+            }
         }
+
     }
 
     private static function updateVernacularNamesFromCSV(bool $verbose = false): void
     {
         $filepath = database_path(static::CSV_NAMES_PATH);
         if(file_exists($filepath)) {
+
+            if($verbose) {
+                print("\nUpdating vernacular names from CSV file: " . $filepath . "\n");
+            }
 
             // Update vernacular names using a generator
             $generator = new CSVReader($filepath);
@@ -110,7 +123,13 @@ class SpeciesUpdater
                 }
 
             }
+
+        } else {
+            if($verbose) {
+                print("\nCSV file for vernacular names not found: " . $filepath . "\n");
+            }
         }
+
     }
 
 }
