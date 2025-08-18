@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18f3f493eb8fb26e44ce227d08c7bab4",
+    "content-hash": "ff8748cd84e3f83896b787335da1960e",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "2.0.20",
+            "version": "2.0.21",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "256c782cbdb0355f2f2bd771061cef7da93eaa97"
+                "reference": "5a336b85a970ca1da9472b7fa2e1a1ac5cdb285c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/256c782cbdb0355f2f2bd771061cef7da93eaa97",
-                "reference": "256c782cbdb0355f2f2bd771061cef7da93eaa97",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/5a336b85a970ca1da9472b7fa2e1a1ac5cdb285c",
+                "reference": "5a336b85a970ca1da9472b7fa2e1a1ac5cdb285c",
                 "shasum": ""
             },
             "require": {
@@ -64,10 +64,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.20",
+                "source": "https://github.com/andreamarelli/imet-core/tree/v2.0.21",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-08-13T11:49:26+00:00"
+            "time": "2025-08-13T14:11:57+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
@@ -7749,7 +7749,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.3"
+        "php": ">=8.3",
+        "ext-zip": "*"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
