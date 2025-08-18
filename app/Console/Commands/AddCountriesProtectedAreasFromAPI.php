@@ -13,7 +13,7 @@ namespace App\Console\Commands;
 
 use ImetCore\Models\ProtectedArea;
 use ModularForms\Exceptions\MissingAPITokenException;
-use App\Helpers\ProtectedAreaUpdater;
+use App\Helpers\ProtectedAreaUpdaterAPI;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
 use Illuminate\Console\Command;
@@ -58,7 +58,7 @@ class AddCountriesProtectedAreasFromAPI extends Command
     {
         try {
             $this->info('Retrieving Protected Areas for ' . $country . '...');
-            ProtectedAreaUpdater::updateByCountry($country);     // Update Protected Areas for a country
+            ProtectedAreaUpdaterAPI::updateByCountry($country);     // Update Protected Areas for a country
             ProtectedAreaUpdate::setUpdated($country);      // Update last update date
 
         } catch (MissingAPITokenException $e) {
@@ -75,10 +75,10 @@ class AddCountriesProtectedAreasFromAPI extends Command
 
         // Write CSV
         $this->info('Writing CSV file...');
-        $handler = fopen(database_path(ProtectedAreaUpdater::CSV_MIGRATION_PATH), 'w');
-        fputcsv($handler, ProtectedAreaUpdater::MIGRATION_ATTRIBUTES);   // header
+        $handler = fopen(database_path(ProtectedAreaUpdaterAPI::CSV_MIGRATION_PATH), 'w');
+        fputcsv($handler, ProtectedAreaUpdaterAPI::MIGRATION_ATTRIBUTES);   // header
         foreach ($pas as $pa) {
-            fputcsv($handler, $pa->only(ProtectedAreaUpdater::MIGRATION_ATTRIBUTES));
+            fputcsv($handler, $pa->only(ProtectedAreaUpdaterAPI::MIGRATION_ATTRIBUTES));
         }
         fclose($handler);
     }

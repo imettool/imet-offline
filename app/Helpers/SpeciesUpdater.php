@@ -13,6 +13,11 @@ namespace App\Helpers;
 
 use ImetCore\Models\Species;
 
+/**
+ * Class SpeciesUpdater
+ * This class is responsible for updating species and vernacular names from CSV files (expected to be located in the database path).
+ * The CSV are generated from panospolis/catalogue-of-life-species-extractor script which extracts species from the Catalogue of Life
+ */
 class SpeciesUpdater
 {
     private const string CSV_SPECIES_PATH = 'species.csv';

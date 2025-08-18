@@ -19,7 +19,11 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-class ProtectedAreaUpdater
+/**
+ * Class ProtectedAreaUpdaterAPI
+ * This class is responsible for updating protected areas from the ProtectedPlanet API.
+ */
+class ProtectedAreaUpdaterAPI
 {
     const CHUNK_SIZE = 50;
     public const MIGRATION_ATTRIBUTES = ['global_id','country','wdpa_id','name','iucn_category','creation_date','perimeter','area','shape_index'];

@@ -13,7 +13,7 @@ namespace App\Http\Controllers;
 
 use ModularForms\Exceptions\MissingAPITokenException;
 use ModularForms\Models\Traits\Payload;
-use App\Helpers\ProtectedAreaUpdater;
+use App\Helpers\ProtectedAreaUpdaterAPI;
 use App\Models\Country;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
@@ -60,7 +60,7 @@ class SettingsController extends Controller
         Config::set('PROTECTED_PLANET_API_KEY', Settings::getSetting('protected_planet_api_key'));
 
         try{
-            ProtectedAreaUpdater::updateByCountry($country);
+            ProtectedAreaUpdaterAPI::updateByCountry($country);
             ProtectedAreaUpdate::setUpdated($country);
 
         } catch (MissingAPITokenException $e){

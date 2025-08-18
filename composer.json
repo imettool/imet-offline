@@ -5,6 +5,7 @@
     "version": "3.0.0-rc.20",
     "require": {
         "php": ">=8.3",
+        "ext-zip": "*",
         "andreamarelli/imet-core": "^2.0.6",
         "andreamarelli/modular-forms": "^2.0.3",
         "guzzlehttp/guzzle": "^7.9.3",
