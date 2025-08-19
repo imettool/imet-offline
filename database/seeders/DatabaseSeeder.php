@@ -11,7 +11,7 @@
 
 namespace Database\Seeders;
 
-use ImetCore\Models\ProtectedArea;
+use App\Models\ProtectedArea;
 use ModularForms\Helpers\Input\SelectionList;
 use ImetCore\Models\Species;
 use Auth;
@@ -22,7 +22,7 @@ use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
-    const NUM_FORMS = 5;
+    const int NUM_FORMS = 5;
 
     /**
      * @throws Exception
@@ -179,6 +179,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Add protected areas
+        ProtectedArea::factory()->count(50)->create();
+
         $pas = ProtectedArea::all()->random(10);
         $modules = array_merge(Imet\v2\Imet::allModules(), Imet\v2\Imet_Eval::allModules());
 
