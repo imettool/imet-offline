@@ -32,6 +32,10 @@ return [
             ]
         ],
 
+        'user' => [
+            'title' => 'User profile',
+        ],
+
         'api_keys' => [
             'title' => 'API keys',
             'fields' => [

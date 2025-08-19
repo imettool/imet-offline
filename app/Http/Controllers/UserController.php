@@ -11,38 +11,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\View\View;
 use ModularForms\Controllers\FormController;
 use App\Models\User;
-use Auth;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use ModularForms\Models\Traits\Payload;
 
 
 class UserController extends FormController
 {
 
     /**
-     * Manage "confirm" OFFLINE user view
-     */
-    public function confirm_offline_user(): View
-    {
-        return view('offline.confirm_user', [
-            'item' => Auth::user()
-        ]);
-    }
-
-    /**
      * Manage "update" OFFLINE user
      */
-    public function update_offline_user(Request $request): RedirectResponse
+    public function update_offline_user(Request $request): array
     {
-        $item = (new User)->find(0);
-        $item->fill($request->all());
+        $records = Payload::decode($request->input('records_json'));
+
+        $item = (new User)->find($records['id']);
+        $item->fill($records);
         if ($item->isDirty()) {
+            $item->touch();
             $item->save();
         }
-        return redirect()->route('home');
+
+        return [
+            'id' => 0,
+            'status' => 'success',
+            'records' => $item->toArray(),
+        ];
     }
 
 }

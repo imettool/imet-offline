@@ -1,5 +1,6 @@
 <?php
 /** @var Array $vueData */
+/** @var Array $user */
 /** @var Array $countries */
 /** @var Array $updated_pas_countries */
 
@@ -17,6 +18,9 @@ use ModularForms\Helpers\Template;
 {{--    <!-- Proxy settings -->--}}
 {{--    TODO: Work in progress--}}
 {{--    @include('offline.settings.modules.proxy', compact('vueData'))--}}
+
+    <!-- User settings -->
+    @include('offline.settings.modules.user', compact('user'))
 
     <!-- API keys -->
     @include('offline.settings.modules.api_keys' , compact('vueData'))

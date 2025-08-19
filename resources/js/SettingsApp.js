@@ -14,6 +14,7 @@ import {reactive, ref, watch, toRaw, onMounted, nextTick} from "vue";
 
 import simpleText from "@modular-forms/js/inputs/simple-text.vue";
 import simplePassword from "@modular-forms/js/inputs/simple-password.vue";
+import dropdown from "@modular-forms/js/inputs/dropdown.vue";
 
 export default class SettingsApp extends Base {
 
@@ -34,7 +35,6 @@ export default class SettingsApp extends Base {
                 let records_backup = JSON.parse(JSON.stringify(toRaw(records)));
                 let status = ref('init'); // "init" state avoid watch() on records during initialization
                 let warning_on_save = null;
-                let action_url = '/settings';
 
                 const Payload = window.ModularForms.Helpers.Payload;
 
@@ -62,6 +62,8 @@ export default class SettingsApp extends Base {
                         module_key: props.module_key,
                         _method: 'PATCH'
                     }
+
+                    console.log(records, data);
 
                     fetch(props.save_url, {
                         method: 'POST',
@@ -113,7 +115,8 @@ export default class SettingsApp extends Base {
 
         return super(options, input_data)
             .component('simpleText', simpleText)
-            .component('simplePassword', simplePassword);
+            .component('simplePassword', simplePassword)
+            .component('dropdown', dropdown);
     }
 
 }

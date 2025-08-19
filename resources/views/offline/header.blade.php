@@ -9,7 +9,7 @@ $current_route = Route::current()->getName();
 ?>
 
 
-@if($current_route == 'confirm_user')
+@if($current_route == 'update_offline_user')
     <div id="imet_header" class="!justify-center !py-3">
         <div class="font-bold !text-primary-600 !text-xl">@lang('offline.title')</div>
     </div>
@@ -51,6 +51,11 @@ $current_route = Route::current()->getName();
 
         <!-- right menu -->
         <ul class="menu-header">
+
+            <!-- User profile -->
+            <li>
+                <span class="italic">{{ Auth::user()->getName() }}</span>
+            </li>
 
             <!-- Settings -->
             <li>

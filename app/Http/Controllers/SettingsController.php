@@ -11,6 +11,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use ModularForms\Exceptions\MissingAPITokenException;
 use ModularForms\Models\Traits\Payload;
 use App\Helpers\ProtectedAreaUpdaterAPI;
@@ -32,6 +33,12 @@ class SettingsController extends Controller
             'vueData' => [
                 'records' => Settings::get(),
                 'save_url' => route('settings_update'),
+            ],
+            'user' => [
+                'records' => Auth::user()
+                    ->toArray(),
+                'module_key' => 'offline_user',
+                'save_url' => route('update_offline_user')
             ],
             'countries' => Country::getAll(),
             'updated_pas_countries' => ProtectedAreaUpdate::getUpdated()
