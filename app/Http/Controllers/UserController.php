@@ -20,25 +20,5 @@ use ModularForms\Models\Traits\Payload;
 class UserController extends FormController
 {
 
-    /**
-     * Manage "update" OFFLINE user
-     */
-    public function update_offline_user(Request $request): array
-    {
-        $records = Payload::decode($request->input('records_json'));
-
-        $item = (new User)->find($records['id']);
-        $item->fill($records);
-        if ($item->isDirty()) {
-            $item->touch();
-            $item->save();
-        }
-
-        return [
-            'id' => 0,
-            'status' => 'success',
-            'records' => $item->toArray(),
-        ];
-    }
 
 }

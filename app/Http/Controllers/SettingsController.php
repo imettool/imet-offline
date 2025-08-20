@@ -11,6 +11,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Auth;
 use ModularForms\Exceptions\MissingAPITokenException;
 use ModularForms\Models\Traits\Payload;
@@ -81,6 +82,32 @@ class SettingsController extends Controller
             'status' => 'success',
             'updated' => Carbon::now()->format('Y-m')
         ]);
+    }
+
+    /**
+     * Manage "update" OFFLINE user
+     */
+    public function user(Request $request): array
+    {
+        $records = Payload::decode($request->input('records_json'));
+
+        // Validate the records
+        $messages = (new User)->validate($records);
+        if(!empty($messages)){
+            return [
+                'status' => 'validation_error',
+                'errors' => $messages
+            ];
+        }
+
+        // Save the user profile
+        $user = (new User())->update_offline($records);
+
+        return [
+            'id' => 0,
+            'status' => 'success',
+            'records' => $user->toArray(),
+        ];
     }
 
 }

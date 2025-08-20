@@ -18,6 +18,40 @@ return [
         terrestrial protected areas, regardless of their management categories and governance type. As a decision-support
         tool, it helps protected area managers take analysis-based management decisions for improved conservation outcomes.',
 
+    'setup' => [
+
+        'description' =>
+            'Welcome to the <b>IMET Offline Tool</b>!<br> This is the first time you are using the application and simple setup
+                is required to get started.',
+
+        'offline_warning' =>
+            'The IMET Offline Tool is designed to be used in the field, where internet connectivity may be limited or unavailable
+            but during the setup process <b>an internet connection is required</b>. Please ensure that you are connected to the internet before proceeding with the setup.',
+
+        'timeline' => [
+            'info' => [
+                'title' => 'Start setup',
+            ],
+            'user' => [
+                'title' => 'User profile',
+                'description' =>
+                    'Please provide your personal information. This information will remain private and stored locally.
+                    However, the information will be associated with any assessments created or modified with this software;
+                    exporting and sharing the assessment therefore implies sharing this information as well.'
+            ],
+            'wdpas' => [
+                'title' => 'Protected Areas',
+                'description' =>
+                    'Please download the protected areas from Protected Planet API. This is required to retrieve protected areas from Protected Planet API.',
+            ],
+            'done' => [
+                'title' => 'Setup completed !',
+                'description' =>
+                    'The setup is completed. You can now start using the application.',
+            ],
+        ],
+    ],
+
     'settings' => [
         'page_title' => 'Settings',
 

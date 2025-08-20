@@ -33,5 +33,12 @@ use \Illuminate\Support\Str;
 
     </div>
 
+    <style>
+        .content{
+            min-width: 850px !important;
+            max-width: 1050px !important;
+        }
+    </style>
+
 
 @endsection

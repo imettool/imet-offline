@@ -14,7 +14,6 @@ import {reactive, ref, watch, toRaw, onMounted, nextTick} from "vue";
 
 import simpleText from "@modular-forms/js/inputs/simple-text.vue";
 import simplePassword from "@modular-forms/js/inputs/simple-password.vue";
-import dropdown from "@modular-forms/js/inputs/dropdown.vue";
 
 export default class SettingsApp extends Base {
 
@@ -35,6 +34,7 @@ export default class SettingsApp extends Base {
                 let records_backup = JSON.parse(JSON.stringify(toRaw(records)));
                 let status = ref('init'); // "init" state avoid watch() on records during initialization
                 let warning_on_save = null;
+                let error_messages = ref([]);
 
                 const Payload = window.ModularForms.Helpers.Payload;
 
@@ -62,8 +62,7 @@ export default class SettingsApp extends Base {
                         module_key: props.module_key,
                         _method: 'PATCH'
                     }
-
-                    console.log(records, data);
+                    error_messages.value = [];
 
                     fetch(props.save_url, {
                         method: 'POST',
@@ -81,8 +80,15 @@ export default class SettingsApp extends Base {
                                 nextTick().then(() => {
                                     status.value = 'saved';
                                 });
+                                console.log('here');
+                                console.log('redirect_to' in data);
+                                console.log(data.redirect_to !== null);
+                                if('redirect_to' in data && data.redirect_to !== null) {
+                                    window.location.href = data.redirect_to;
+                                }
                             } else if(data.status === 'validation_error') {
                                 status.value = 'error';
+                                error_messages.value = data.errors;
                             }
                         })
                         .catch(function (error) {
@@ -106,6 +112,7 @@ export default class SettingsApp extends Base {
                     records,
                     status,
                     warning_on_save,
+                    error_messages,
                     resetModule,
                     saveModule
                 }
@@ -115,8 +122,7 @@ export default class SettingsApp extends Base {
 
         return super(options, input_data)
             .component('simpleText', simpleText)
-            .component('simplePassword', simplePassword)
-            .component('dropdown', dropdown);
+            .component('simplePassword', simplePassword);
     }
 
 }

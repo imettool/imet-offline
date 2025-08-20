@@ -9,24 +9,29 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
+use App\Http\Controllers\SetupController;
 use ModularForms\Controllers\UploadFileController;
 use App\Http\Controllers\SettingsController;
-use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 
 Route::middleware(['web'])->group(function () {
 
-    Route::get('/', function () { return Redirect::to('home'); });
+    Route::get('/', [SetupController::class, 'index']);
+
+    // Setup routes
+    Route::get('setup/info', [SetupController::class, 'info'])->name('setup.info');
+    Route::get('setup/user', [SetupController::class, 'user'])->name('setup.user');
+    Route::patch('setup/user', [SetupController::class, 'user_save'])->name('setup.user.save');
+    Route::get('setup/wdpas', [SetupController::class, 'wdpas'])->name('setup.wdpas');
+
+
     Route::view('home', 'offline.home')->name('home');
 
     // Settings routes
     Route::get('settings', [SettingsController::class, 'index'])->name('settings');
     Route::patch('settings/update', [SettingsController::class, 'update'])->name('settings_update');
-
-    // User routes
-    Route::patch('update_offline_user', [UserController::class, 'update_offline_user'])->name('update_offline_user');
+    Route::patch('update_offline_user', [SettingsController::class, 'user'])->name('update_offline_user');
 
     // ###### File upload/download ######
     Route::post('file/upload', [UploadFileController::class, 'upload'])->name('upload.file');

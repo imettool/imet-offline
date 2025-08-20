@@ -1,10 +1,9 @@
 <?php
-
-use App\Models\User;
 use ModularForms\Helpers\DOM;
 use ModularForms\Helpers\Input\SelectionList;
 
-/** @var User $user */
+/** @var Array $user */
+
 ?>
 
 
@@ -71,11 +70,7 @@ use ModularForms\Helpers\Input\SelectionList;
 
 @push('scripts')
     <script type="module">
-
         (new window.OfflineImet.SettingsApp(@json($user)))
             .mount('#module_setting_offline_user');
-
     </script>
 @endpush
-
-<?php
