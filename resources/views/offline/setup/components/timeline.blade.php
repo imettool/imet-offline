@@ -40,7 +40,7 @@ $is_current_step = false;
             <div class="bg-white p-4 rounded border border-slate-200 shadow">
                 <div class="font-bold text-nowrap text-slate-900 mb-1">{{ $item['title'] }}</div>
                 @if($is_current_step)
-                    <div class="italic text-sm mb-2">{{ $item['description'] }}</div>
+                    <div class="italic text-sm mb-2">{!! $item['description'] !!}</div>
                 @endif
             </div>
 

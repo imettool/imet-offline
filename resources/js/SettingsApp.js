@@ -80,9 +80,6 @@ export default class SettingsApp extends Base {
                                 nextTick().then(() => {
                                     status.value = 'saved';
                                 });
-                                console.log('here');
-                                console.log('redirect_to' in data);
-                                console.log(data.redirect_to !== null);
                                 if('redirect_to' in data && data.redirect_to !== null) {
                                     window.location.href = data.redirect_to;
                                 }

@@ -102,7 +102,17 @@ class SetupController extends Controller
     {
         return view('offline.setup.wdpas', [
             'current_step' => 'wdpas',
-            'timeline' => trans('offline.setup.timeline')
+            'timeline' => trans('offline.setup.timeline'),
+            'vueData' => [
+                'records' => [
+                    'dataset_upload' => [
+                        'original_filename' => null,
+                        'temp_filename' => null,
+                        'download_link' => null,
+                        'changed' => true
+                    ]
+                ]
+            ]
         ]);
     }
 

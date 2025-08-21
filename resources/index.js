@@ -28,6 +28,9 @@ window.OfflineImet.SettingsApp = SettingsApp;
 import PaUpdate from "./js/PaUpdate.js";
 window.OfflineImet.PaUpdate = PaUpdate;
 
+import ProtectedPlanetUploadApp from "./js/ProtectedPlanetUploadApp.js";
+window.OfflineImet.ProtectedPlanetUploadApp = ProtectedPlanetUploadApp;
+
 //  #########  test in listen NativePHP events  #########
 if(Object.keys(window.Native).length>0){
     window.Native.on("Native\\Laravel\\Events\\Windows\\WindowShown", (payload, event) => {

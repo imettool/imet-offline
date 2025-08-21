@@ -11,6 +11,7 @@
 /* ##### Import local CSS ##### */
 @import "./css/layout/header.css";
 @import "./css/layout/footer.css";
+@import "./css/pages/setup.css";
 
 /* ##### Import packages CSS ##### */
 @import "@modular-forms/index.css";

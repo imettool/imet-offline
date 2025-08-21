@@ -15,10 +15,6 @@
         <img src="{{ asset('icon.png') }}" alt="Logo" class="w-32">
         <div class="text-2xl font-bold text-primary-600">@lang('offline.title')</div>
 
-        @if($current_step === 'user')
-
-        @endif
-
         <!-- Timeline -->
         @include('offline.setup.components.timeline', ['timeline' => $timeline, 'current_step' => $current_step])
 

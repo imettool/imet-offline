@@ -1,0 +1,38 @@
+/*
+ * Copyright (C) 2025 European Union
+ * This program is free software: you can redistribute it and/or modify it under the terms of the
+ * EUROPEAN UNION PUBLIC LICENCE v. 1.2 as published by the European Union.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the EUROPEAN UNION PUBLIC LICENCE v. 1.2 for
+ * further details. You should have received a copy of the EUROPEAN UNION PUBLIC LICENCE v. 1.2. along with this program.
+ * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
+ */
+
+.setup_wdpa_instructions{
+
+    .highlight{
+        @apply font-bold italic;
+    }
+
+    ul{
+        @apply list-inside italic;
+    }
+
+    > div{
+        @apply flex items-start gap-6 my-3;
+
+        > div:first-of-type{
+            @apply flex justify-center items-center text-xl text-white bg-primary-700 rounded-full w-[36px] h-[36px] text-center
+        }
+        > div:last-of-type{
+            @apply mt-1;
+
+            /*input {}*/
+            /*input::file-selector-button {*/
+            /*    @apply px-2 py-0.5 rounded text-shadow-gray-800 border border-gray-800 bg-gray-100 hover:bg-gray-200 cursor-pointer;*/
+            /*}*/
+
+        }
+    }
+
+}
