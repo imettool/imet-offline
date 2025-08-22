@@ -34,11 +34,6 @@ class ProtectedAreaUpdaterCSV
      */
     public static function updateProtectedAreasAndOECMs(array $zip_files = [], bool $verbose = false): void
     {
-        $zip_files = [
-            storage_path('app/WDPA_Aug2025_Public_csv.zip'),
-            storage_path('app/WDPA_WDOECM_Aug2025_Public_all_csv.zip'),
-            storage_path('app/WDOECM_Aug2025_Public_csv.zip')
-        ];
 
         // If there is the file with both protected areas and OECM, we can skip the others
         $file = preg_grep(self::ALL_REGEX, $zip_files);

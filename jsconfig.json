@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+    "baseUrl": ".",
+        "paths": {
+        "@/*": ["./resources/*"],
+            "@vendor/*": ["./vendor/*"],
+            "~/*": ["./node_modules/*"],
+            "@modular-forms/*": ["vendor/andreamarelli/modular-forms/src/resources/assets/*"],
+            "@imet-core/*": ["vendor/andreamarelli/imet-core/src/resources/assets/*"]
+    }
+}
+}

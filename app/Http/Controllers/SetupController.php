@@ -12,13 +12,17 @@
 namespace App\Http\Controllers;
 
 
+use App\Jobs\DummyJob;
+use App\Jobs\UpdateProtectedAreas;
 use App\Models\ProtectedArea;
 use App\Models\User;
 use Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
-use ImetCore\Models\User\Role;
+use ModularForms\Helpers\File\File;
+use ModularForms\Models\Module;
 use ModularForms\Models\Traits\Payload;
 
 class SetupController extends Controller
@@ -105,15 +109,24 @@ class SetupController extends Controller
             'timeline' => trans('offline.setup.timeline'),
             'vueData' => [
                 'records' => [
-                    'dataset_upload' => [
-                        'original_filename' => null,
-                        'temp_filename' => null,
-                        'download_link' => null,
-                        'changed' => true
-                    ]
-                ]
+                    'dataset_upload' => Module::$upload_object
+                ],
+                'save_url' => route('setup.wdpas.save'),
             ]
         ]);
+    }
+
+    /**
+     * Save the protected areas dataset.
+     */
+    public function wdpas_save(Request $request)
+    {
+        $records = Payload::decode($request->input('records'));
+        $file_path = Storage::disk(File::TEMP_STORAGE)->path($records['dataset_upload']['temp_filename']);
+
+        $result = DummyJob::dispatchSync([$file_path]);
+//        UpdateProtectedAreas::dispatchSync([$file_path]);
+        dd($result);
     }
 
 

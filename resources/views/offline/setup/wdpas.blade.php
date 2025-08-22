@@ -78,7 +78,7 @@ use ModularForms\Helpers\Template;
                         <div :class="{'opacity-50': !uploaded}">
                             {!! trans('offline.setup.protected_planet_instructions.apply') !!}
                             <div>
-                                <button :disabled="!uploaded"
+                                <button :disabled="!uploaded" @click=storeDataset
                                     class="btn-nav small">@uclang('modular-forms::common.save')</button>
                             </div>
                         </div>

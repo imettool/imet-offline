@@ -11,33 +11,43 @@
 
 namespace App\Jobs;
 
-use App\Helpers\ProtectedAreaUpdaterCSV;
-use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Log;
 
-class UpdateProtectedAreas implements ShouldQueue
+class DummyJob implements ShouldQueue
 {
     use Dispatchable;
     use InteractsWithQueue;
     use Queueable;
     use SerializesModels;
 
-    /**
-     * Execute the job.
-     */
-    public function handle(array $zip_files = []): void
+    public $jobId;
+
+    public function __construct($jobId)
     {
+        $this->jobId = $jobId;
+    }
+
+    public function handle(array $zip_files = [])
+    {
+        $numSeconds = 5;
+
         try{
-            // Update protected areas and OECMs
-            ProtectedAreaUpdaterCSV::updateProtectedAreasAndOECMs($zip_files);
-        } catch (Exception $e) {
-            // Log the exception or handle it as needed
-            Log::error('Error updating protected areas: ' . $e->getMessage());
+            foreach ($zip_files as $file) {
+                \Log::info("Processing file: " . $file);
+            }
+            for ($i = 1; $i <= $numSeconds; $i++) {
+                sleep(1);
+            }
+            return 0;
+        } catch (\Exception $e) {
+            \Log::error('Error in DummyJob: ' . $e->getMessage());
+            return 1;
         }
+
+
     }
 }

@@ -10,9 +10,9 @@
 
 import Base from "@modular-forms/js/apps/Base.js";
 
-import {reactive, ref, watch, toRaw, onMounted, nextTick} from "vue";
+import {reactive, ref, watch} from "vue";
 
-import uploadFile from "@modular-forms/js/inputs//upload.vue";
+import uploadFile from "@modular-forms/js/inputs/upload.vue";
 
 
 export default class ProtectedPlanetUploadApp extends Base {
@@ -23,7 +23,8 @@ export default class ProtectedPlanetUploadApp extends Base {
             name: 'ProtectedPlanetUploadApp',
 
             props: {
-                records: Object
+                records: Object,
+                save_url: String,
             },
 
             setup(props, context) {
@@ -31,13 +32,46 @@ export default class ProtectedPlanetUploadApp extends Base {
                 let records = reactive(props.records)
                 let uploaded = ref(false);
 
-                watch(records, (value) => {
-                    uploaded.value = value.dataset_upload.temp_filename !== null;
+                const Payload = window.ModularForms.Helpers.Payload;
+
+                watch(records, () => {
+                    toggleUploaded();
                 });
+
+                function toggleUploaded(){
+                    uploaded.value = records['dataset_upload']['temp_filename'] !== null;
+                }
+
+                function storeDataset(){
+
+                    let data = {
+                        _method: 'PATCH',
+                        records:  Payload.encode(records),
+                    }
+
+                    fetch(props.save_url, {
+                        method: 'POST',
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRF-Token": window.Laravel.csrfToken,
+                        },
+                        body: JSON.stringify(data),
+                    })
+                        .then((response) => response.json())
+                        .then(function(data){
+                            if (data.status === 'success') {
+                                console.log(data)
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(data)
+                        });
+                }
 
                 return {
                     records,
-                    uploaded
+                    uploaded,
+                    storeDataset
                 }
 
             }
