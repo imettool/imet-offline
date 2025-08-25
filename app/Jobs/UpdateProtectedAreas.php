@@ -18,7 +18,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 class UpdateProtectedAreas implements ShouldQueue
 {
@@ -27,17 +27,30 @@ class UpdateProtectedAreas implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
+    private string $zipFilePath;
+    private string $originalFilename;
+    private string $jobId;
+
+    public function __construct(string $zipFilePath, string $originalFilename, string $jobId)
+    {
+        $this->zipFilePath = $zipFilePath;
+        $this->originalFilename = $originalFilename;
+        $this->jobId = $jobId;
+    }
+
     /**
      * Execute the job.
      */
-    public function handle(array $zip_files = []): void
+    public function handle(): void
     {
+        Log::info('Job UpdateProtectedAreas launched.');
+
         try{
-            // Update protected areas and OECMs
-            ProtectedAreaUpdaterCSV::updateProtectedAreasAndOECMs($zip_files);
+            ProtectedAreaUpdaterCSV::updateProtectedAreasAndOECMs($this->zipFilePath, $this->originalFilename, $this->jobId);
+            Log::info('Job UpdateProtectedAreas completed successfully.');
+
         } catch (Exception $e) {
-            // Log the exception or handle it as needed
-            Log::error('Error updating protected areas: ' . $e->getMessage());
+            Log::error('Error executing job UpdateProtectedAreas: ' . $e->getMessage());
         }
     }
 }

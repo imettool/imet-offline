@@ -14,16 +14,19 @@ namespace App\Http\Controllers;
 
 use App\Jobs\DummyJob;
 use App\Jobs\UpdateProtectedAreas;
+use App\Models\JobProgress;
 use App\Models\ProtectedArea;
 use App\Models\User;
 use Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 use ModularForms\Helpers\File\File;
 use ModularForms\Models\Module;
 use ModularForms\Models\Traits\Payload;
+use Str;
 
 class SetupController extends Controller
 {
@@ -50,7 +53,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.info', [
             'current_step' => 'info',
-            'timeline' => trans('offline.setup.timeline')
+            'timeline' => trans('setup.timeline')
         ]);
     }
 
@@ -61,7 +64,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.user', [
             'current_step' => 'user',
-            'timeline' => trans('offline.setup.timeline'),
+            'timeline' => trans('setup.timeline'),
             'user' => [
                 'records' => Auth::user()
                     ->toArray(),
@@ -106,12 +109,13 @@ class SetupController extends Controller
     {
         return view('offline.setup.wdpas', [
             'current_step' => 'wdpas',
-            'timeline' => trans('offline.setup.timeline'),
+            'timeline' => trans('setup.timeline'),
             'vueData' => [
                 'records' => [
                     'dataset_upload' => Module::$upload_object
                 ],
                 'save_url' => route('setup.wdpas.save'),
+                'progress_url' => route('setup.wdpas.progress', ['jobId' => 'xxxx']),
             ]
         ]);
     }
@@ -122,11 +126,35 @@ class SetupController extends Controller
     public function wdpas_save(Request $request)
     {
         $records = Payload::decode($request->input('records'));
-        $file_path = Storage::disk(File::TEMP_STORAGE)->path($records['dataset_upload']['temp_filename']);
+        $zipFilePath = Storage::disk(File::TEMP_STORAGE)->path($records['dataset_upload']['temp_filename']);
+        $originalFilename = Storage::disk(File::TEMP_STORAGE)->path($records['dataset_upload']['original_filename']);
 
-        $result = DummyJob::dispatchSync([$file_path]);
-//        UpdateProtectedAreas::dispatchSync([$file_path]);
-        dd($result);
+        $jobId = Str::uuid()->toString();
+        UpdateProtectedAreas::dispatch( $zipFilePath, basename($originalFilename), $jobId);
+        return response()->json([
+            'status' => 'success',
+            'jobId' => $jobId
+        ]);
+    }
+
+    /**
+     * Get the progress of the protected areas dataset import job.
+     */
+    public function wdpa_progress(Request $request, string $jobId)
+    {
+        $progress = JobProgress::find($jobId)?->progress;
+        return $progress ?? 0;
+    }
+
+    /**
+     * Display the setup done page.
+     */
+    public function done(): View
+    {
+        return view('offline.setup.done', [
+            'current_step' => 'done',
+            'timeline' => trans('setup.timeline')
+        ]);
     }
 
 

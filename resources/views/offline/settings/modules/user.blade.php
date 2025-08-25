@@ -9,7 +9,7 @@ use ModularForms\Helpers\Input\SelectionList;
 
 <div class="module-container" id="module_setting_offline_user">
     <div class="module-header">
-        <div class="module-title">{{ ucfirst(trans('offline.settings.user.title')) }}</div>
+        <div class="module-title">{{ ucfirst(trans('settings.user.title')) }}</div>
     </div>
 
     <div class="module-body">

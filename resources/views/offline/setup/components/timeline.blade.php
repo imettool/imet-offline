@@ -42,6 +42,12 @@ $is_current_step = false;
                 @if($is_current_step)
                     <div class="italic text-sm mb-2">{!! $item['description'] !!}</div>
                 @endif
+                @if($is_current_step && $current_step === 'done')
+                    <div class="flex justify-end">
+                    <a href="{{ route('home') }}" class="btn-nav ">@uclang('offline.actions.proceed')</a>
+                    </div>
+                @endif
+
             </div>
 
         </div>

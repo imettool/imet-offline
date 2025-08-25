@@ -24,14 +24,14 @@ use ModularForms\Helpers\Template;
         <!-- Instruction -->
         <div class="w-full mt-4 module-container" id="module_setting_offline_user">
             <div class="module-header">
-                <div class="module-title">{{ ucfirst(trans('offline.setup.timeline.wdpas.title')) }}</div>
+                <div class="module-title">{{ ucfirst(trans('setup.timeline.wdpas.title')) }}</div>
             </div>
             <!-- Protected Planet citation -->
             <div class="module-bar info-bar">
                 <div class="icon"><span class="fas fa-fw fa-info-circle text-lg"></span></div>
                 <div class="message">
-                    <div class="font-bold">@lang('offline.setup.citation'):</div>
-                    <span class="italic">@lang('offline.setup.protected_planet_citation')</span>
+                    <div class="font-bold">@lang('setup.citation'):</div>
+                    <span class="italic">@lang('setup.protected_planet_citation')</span>
                 </div>
             </div>
 
@@ -44,26 +44,26 @@ use ModularForms\Helpers\Template;
                     <!-- Step 1: Browse -->
                     <div>
                         <div>1</div>
-                        <div>{!! trans('offline.setup.protected_planet_instructions.browse') !!}</div>
+                        <div>{!! trans('setup.protected_planet_instructions.browse') !!}</div>
                     </div>
 
                     <!-- Step 2: Locate -->
                     <div>
                         <div>2</div>
-                        <div>{!! trans('offline.setup.protected_planet_instructions.locate') !!}</div>
+                        <div>{!! trans('setup.protected_planet_instructions.locate') !!}</div>
                     </div>
 
                     <!-- Step 3: Download -->
                     <div>
                         <div>3</div>
-                        <div>{!! trans('offline.setup.protected_planet_instructions.download') !!}</div>
+                        <div>{!! trans('setup.protected_planet_instructions.download') !!}</div>
                     </div>
 
                     <!-- Step 4: Upload -->
                     <div>
                         <div>4</div>
                         <div>
-                            {!! trans('offline.setup.protected_planet_instructions.upload') !!}
+                            {!! trans('setup.protected_planet_instructions.upload') !!}
                             <upload
                                 :max-file-size=40000000
                                 upload-url="{{ route('upload.file') }}"
@@ -73,14 +73,27 @@ use ModularForms\Helpers\Template;
                     </div>
 
                     <!-- Step 5: Apply -->
-                    <div>
+                    <div :class="{'opacity-50': !uploaded}">
                         <div>5</div>
-                        <div :class="{'opacity-50': !uploaded}">
-                            {!! trans('offline.setup.protected_planet_instructions.apply') !!}
-                            <div>
-                                <button :disabled="!uploaded" @click=storeDataset
-                                    class="btn-nav small">@uclang('modular-forms::common.save')</button>
+                        <div>
+                            {!! trans('setup.protected_planet_instructions.apply') !!}
+                            <div class="flex gap-3">
+                                <button :disabled="!uploaded || storeStarted" @click=storeDataset
+                                        class="btn-nav">@uclang('modular-forms::common.save')</button>
+                                <progress-bar v-if="storeStarted" :value="storeProgress" color="#005f5a"></progress-bar>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Completed -->
+                    <div :class="{'opacity-50': !storeCompleted}">
+                        <div>6</div>
+                        <div>
+                            {!! trans('setup.protected_planet_instructions.completed') !!}
+                            <br />
+                            <a :disabled="!storeCompleted" :class="{'disabled pointer-events-none': !storeCompleted}"
+                                 href="{{ route('setup.done') }}"
+                                class="btn-nav">@uclang('offline.actions.proceed')</a>
                         </div>
                     </div>
 
@@ -97,6 +110,13 @@ use ModularForms\Helpers\Template;
         .content {
             min-width: 850px !important;
             max-width: 1050px !important;
+        }
+        .progress-bar{
+            color: oklch(0.777 0.152 181.912) !important;
+            height: 24px;
+        }
+        .progress-bar .label{
+            top: 5% !important;
         }
     </style>
 

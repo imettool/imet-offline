@@ -11,11 +11,13 @@
 
 namespace App\Jobs;
 
+use App\Models\JobProgress;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 
 class DummyJob implements ShouldQueue
 {
@@ -24,25 +26,28 @@ class DummyJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public $jobId;
+    public string $jobId;
+    public array $zipFiles;
 
-    public function __construct($jobId)
+
+    public function __construct(string $jobId, array $zipFiles = [])
     {
         $this->jobId = $jobId;
+        $this->zipFiles = $zipFiles;
     }
 
-    public function handle(array $zip_files = [])
+    public function handle(): int
     {
-        $numSeconds = 5;
+        $numSeconds = 4;
 
         try{
-            foreach ($zip_files as $file) {
-                \Log::info("Processing file: " . $file);
-            }
+            JobProgress::updateJobProgress($this->jobId);
             for ($i = 1; $i <= $numSeconds; $i++) {
                 sleep(1);
+                JobProgress::updateJobProgress($this->jobId, round(($i / $numSeconds) * 100));
             }
             return 0;
+
         } catch (\Exception $e) {
             \Log::error('Error in DummyJob: ' . $e->getMessage());
             return 1;

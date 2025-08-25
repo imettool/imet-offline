@@ -11,6 +11,7 @@
 
 namespace App\Helpers;
 
+use App\Models\JobProgress;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use ImetCore\Models\ProtectedArea;
@@ -28,47 +29,38 @@ class ProtectedAreaUpdaterCSV
     const int CHUNK_SIZE = 300;
     const string OFAC_GLOBAL_IDS_FILE = 'ofac_global_ids.csv';
 
+    const int LOG_TYPE_INFO = 1;
+    const int LOG_TYPE_ERROR = 2;
+    const int LOG_TYPE_DEBUG = 3;
+
     /**
      * Update protected areas and OECMs from CSV files.
      * @throws Exception
      */
-    public static function updateProtectedAreasAndOECMs(array $zip_files = [], bool $verbose = false): void
+    public static function updateProtectedAreasAndOECMs(string $zipFilePath, string $originalFilename, string $jobId, bool $verbose = false): void
     {
-
-        // If there is the file with both protected areas and OECM, we can skip the others
-        $file = preg_grep(self::ALL_REGEX, $zip_files);
-        if(!empty($file)){
-            if($verbose){
-                print("Processing Protected Areas and OECMs dataset..." . PHP_EOL);
-            }
-            self::parseFile(reset($file), $verbose);
-            self::applyOfacGlobalIDs($verbose);
-            return;
+        if(preg_match(self::ALL_REGEX, $originalFilename)){
+            static::log("Processing Protected Areas and OECMs dataset ...", $verbose);
+        } elseif(preg_match(self::WDPA_REGEX, $originalFilename)){
+            static::log("Processing Protected Areas dataset ...", $verbose);
+        } elseif(preg_match(self::OECM_REGEX, $originalFilename)){
+            static::log("Processing OECMs dataset ...", $verbose);
         }
 
-        // If there is no file with both protected areas and OECMs, we can process the files separately
-        foreach ($zip_files as $file) {
-            if($verbose){
-                if(preg_match(self::WDPA_REGEX, $file)){
-                    print("Processing Protected Areas dataset..." . PHP_EOL);
-                } elseif(preg_match(self::OECM_REGEX, $file)){
-                    print("Processing OECMs dataset..." . PHP_EOL);
-                }
-            }
-            self::parseFile($file, $verbose);
-            self::applyOfacGlobalIDs($verbose);
-        }
+        JobProgress::updateJobProgress($jobId);
+        self::parseFile($zipFilePath, $originalFilename, $jobId, $verbose);
+        self::applyOfacGlobalIDs($verbose);
     }
 
     /**
      * Parse the CSV file extracted from the ZIP archive.
      * @throws Exception
      */
-    private static function parseFile(string $file, bool $verbose = false): void
+    private static function parseFile(string $zipFilePath, string $originalFilename,  string $jobId, bool $verbose = false): void
     {
-        $base_name = basename($file, '.zip');
-        Zip::extract($file, storage_path('app/' . $base_name), false, true);
-        $csv_file = storage_path('app/' . $base_name . '/' . $base_name . '.csv');
+        $base_name = basename($originalFilename, '.zip');
+        Zip::extract($zipFilePath, storage_path('app/' . $base_name), false, true);
+        $csv_file = storage_path('app/' . $base_name . '/' . basename($originalFilename, '.zip') . '.csv');
         if(file_exists($csv_file)){
             $generator = new CSVReader($csv_file);
             foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
@@ -91,22 +83,23 @@ class ProtectedAreaUpdaterCSV
                 })->toArray();
 
                 try{
+                    // Upsert the current chunk into the database
                     ProtectedArea::upsert(
                         $chunk,
                         ['global_id']
                     );
 
-                    if($verbose){
-                        print("Upsert executed: chunk " . $idx . PHP_EOL);
-                    }
+                    // Update job progress
+                    $progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
+                    JobProgress::updateJobProgress($jobId, $progress);
 
                 } catch (Exception $e) {
-                     Log::error(
-                        'Error while upserting protected areas from CSV file: ' . $csv_file . PHP_EOL .
-                        'Chunk index: ' . $idx . PHP_EOL .
-                        'Error message: ' . $e->getMessage());
+                     static::log('Error while upserting protected areas from CSV file', $verbose, self::LOG_TYPE_ERROR);
                 }
             }
+        } else {
+            static::log('CSV file not found in the extracted ZIP archive (' . $csv_file . ')', $verbose, self::LOG_TYPE_ERROR);
+            throw new Exception("CSV file not found in the extracted ZIP archive: " . $csv_file);
         }
     }
 
@@ -119,9 +112,7 @@ class ProtectedAreaUpdaterCSV
     {
         $filepath = database_path(self::OFAC_GLOBAL_IDS_FILE);
 
-        if($verbose){
-            print("Applying OFAC global IDs from CSV file: " . $filepath . PHP_EOL);
-        }
+        static::log("Applying OFAC global IDs from CSV file: " . $filepath, $verbose);
 
         $generator = new CSVReader($filepath);
         foreach ($generator->rows(self::CHUNK_SIZE) as $chunk) {
@@ -134,7 +125,23 @@ class ProtectedAreaUpdaterCSV
             }
         }
 
+    }
 
+    /**
+     * Log messages to both console (if verbose) and log file.
+     */
+    private static function log(string $message, bool $verbose, int $type = self::LOG_TYPE_INFO): void
+    {
+        if($verbose){
+            print($message . PHP_EOL);
+        }
+        if($type === self::LOG_TYPE_INFO) {
+            Log::info($message);
+        } else if($type === self::LOG_TYPE_ERROR) {
+            Log::error($message);
+        } else if($type === self::LOG_TYPE_DEBUG) {
+            Log::debug($message);
+        }
     }
 
 }

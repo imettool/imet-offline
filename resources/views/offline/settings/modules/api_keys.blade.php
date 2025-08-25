@@ -7,17 +7,17 @@ use ModularForms\Helpers\DOM;
 
 <div class="module-container" id="module_settings_api_keys">
     <div class="module-header">
-        <div class="module-title">{{ ucfirst(trans('offline.settings.api_keys.title')) }}</div>
+        <div class="module-title">{{ ucfirst(trans('settings.api_keys.title')) }}</div>
     </div>
     <div class="module-body">
 
         @component('modular-forms::module.components.field_container', [
             'name' => 'protected_planet_api_key',
-            'label' => ucfirst(trans('offline.settings.api_keys.fields.protected_planet_api_key')),
+            'label' => ucfirst(trans('settings.api_keys.fields.protected_planet_api_key')),
             'label_width' => 2
         ])
             <simple-text {!! DOM::vueAttributes("'protected_planet_api_key'", 'records.protected_planet_api_key') !!}></simple-text>
-            <span class="italic ml-2">@lang('offline.settings.api_keys.protected_planet_api_key_description')</span>
+            <span class="italic ml-2">@lang('settings.api_keys.protected_planet_api_key_description')</span>
         @endcomponent
 
     </div>

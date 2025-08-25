@@ -38,12 +38,12 @@
             <!-- Update -->
             <template v-else-if=downloaded>
                 <span v-if=updated class="italic text-xs pr-2">
-                    {{ Locale.getLabel('offline.settings.protected_areas.last_update') }}: {{ updated }}
+                    {{ Locale.getLabel('settings.protected_areas.last_update') }}: {{ updated }}
                 </span>
                 <template v-if="!loaded">
                     <button class="btn-nav gray small whitespace-nowrap" @click="update(iso3)">
                         <span class="fas fa-fw fa-rotate"></span>
-                        {{ Locale.getLabel('offline.settings.protected_areas.update') }}
+                        {{ Locale.getLabel('settings.protected_areas.update') }}
                     </button>
                 </template>
                 <span class="fas fa-fw fa-check-circle text-green-600 pl-2"></span>
@@ -53,7 +53,7 @@
             <template v-else>
                 <button class="btn-nav gray small whitespace-nowrap" @click="update(iso3)">
                     <span class="fas fa-fw fa-down-long"></span>
-                    {{ Locale.getLabel('offline.settings.protected_areas.download') }}
+                    {{ Locale.getLabel('settings.protected_areas.download') }}
                 </button>
                 <span class="fas fa-fw fa-xmark-circle text-red-600 pl-2"></span>
             </template>

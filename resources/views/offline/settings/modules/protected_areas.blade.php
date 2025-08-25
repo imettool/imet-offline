@@ -10,11 +10,11 @@ use ModularForms\Helpers\Template;
 
 <div class="module-container" id="module_settings_protected_areas">
     <div class="module-header">
-        <div class="module-title">{{ ucfirst(trans('offline.settings.protected_areas.title')) }}</div>
+        <div class="module-title">{{ ucfirst(trans('settings.protected_areas.title')) }}</div>
     </div>
     <div class="module-bar info-bar">
         <div class="icon">{!! Template::icon('info-circle', '', '1.4em') !!}</div>
-        <div class="message">@lang('offline.settings.protected_areas.info')</div>
+        <div class="message">@lang('settings.protected_areas.info')</div>
     </div>
     <div class="module-body py-4">
 
