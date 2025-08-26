@@ -11,6 +11,7 @@
 
 namespace App\Helpers;
 
+use Illuminate\Support\Str;
 use ImetCore\Helpers\DependencyParser as BaseDependencyParser;
 
 class DependencyParser extends BaseDependencyParser
@@ -31,8 +32,13 @@ class DependencyParser extends BaseDependencyParser
         $license = parent::retrieveLicense($packageInfo);
 
         // Hardcoded licenses
-        if($packageInfo['name'] == 'imet-core') {
+        if(Str::contains($packageInfo['name'],'imet-core')) {
             $license[] = 'EUPL-1.2';
+        }
+        // Set default license if multiple licenses are found
+        if(Str::contains($packageInfo['name'],'nette/schema')
+            || Str::contains($packageInfo['name'],'nette/utils')) {
+            $license[] = 'BSD-3';
         }
 
         return $license;
