@@ -12,7 +12,9 @@
 namespace App\Listeners;
 
 use App\Jobs\InitializeOfflineTool;
+use App\Models\JobProgress;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 use Log;
 use Native\Laravel\Events\App\ApplicationBooted;
 use Native\Laravel\Facades\AutoUpdater;
@@ -28,6 +30,12 @@ class AppListener
         if(App::environment('production')) {
             InitializeOfflineTool::dispatchSync();
         }
+
+        // Perform some cleaning
+        JobProgress::truncate();
+        DB::table('failed_jobs')->delete();
+        DB::table('job_batches')->delete();
+        DB::table('jobs')->delete();
 
         // Check for updates
         if(App::environment('production')) {
