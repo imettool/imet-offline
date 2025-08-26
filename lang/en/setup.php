@@ -50,7 +50,7 @@ return [
     'protected_planet_citation' =>
         'UNEP-WCMC and IUCN (2025), Protected Planet: The World Database on Protected Areas (WDPA) and World Database
             on Other Effective Area-based Conservation Measures (WD-OECM) [Online], August 2025, Cambridge, UK: UNEP-WCMC
-            and IUCN. Available at: <a target="_blank" href="http://protectedplanet.net/">www.protectedplanet.net.</a>',
+            and IUCN. Available at: <a target="_blank" href="https://protectedplanet.net/">www.protectedplanet.net.</a>',
 
     'protected_planet_instructions' => [
         'browse' => 'Browse to the <span class="highlight">Protected Planet</span> website (<span class="highlight">www.protectedplanet.net</span>)',

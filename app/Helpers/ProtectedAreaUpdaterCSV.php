@@ -42,6 +42,9 @@ class ProtectedAreaUpdaterCSV
             OfflineLog::info(self::LOG_PREFIX . "Processing Protected Areas dataset ...", $verbose);
         } elseif(preg_match(self::OECM_REGEX, $originalFilename)){
             OfflineLog::info(self::LOG_PREFIX . "Processing OECMs dataset ...", $verbose);
+        } else {
+            OfflineLog::error(self::LOG_PREFIX . "Filename does not match expected patterns: " . $originalFilename, $verbose);
+            throw new Exception("Filename does not match expected patterns: " . $originalFilename);
         }
 
         JobProgress::updateJobProgress($jobId);
