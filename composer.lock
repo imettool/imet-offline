@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff8748cd84e3f83896b787335da1960e",
+    "content-hash": "716c4a0232cd7a1d48edec01ba30e582",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
@@ -1311,16 +1311,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.25.0",
+            "version": "v12.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2ee2ba94ae60efd24c7a787cbb1a2f82f714bb20"
+                "reference": "9bb0cde142eff4727ca6be4d25b8710f08b837c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2ee2ba94ae60efd24c7a787cbb1a2f82f714bb20",
-                "reference": "2ee2ba94ae60efd24c7a787cbb1a2f82f714bb20",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/9bb0cde142eff4727ca6be4d25b8710f08b837c0",
+                "reference": "9bb0cde142eff4727ca6be4d25b8710f08b837c0",
                 "shasum": ""
             },
             "require": {
@@ -1362,7 +1362,7 @@
                 "symfony/mime": "^7.2.0",
                 "symfony/polyfill-php83": "^1.31",
                 "symfony/polyfill-php84": "^1.31",
-                "symfony/polyfill-php85": "^1.31",
+                "symfony/polyfill-php85": "^1.33",
                 "symfony/process": "^7.2.0",
                 "symfony/routing": "^7.2.0",
                 "symfony/uid": "^7.2.0",
@@ -1524,7 +1524,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-08-18T22:20:52+00:00"
+            "time": "2025-08-26T14:17:09+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -2627,16 +2627,16 @@
         },
         {
             "name": "nativephp/php-bin",
-            "version": "1.1.0",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NativePHP/php-bin.git",
-                "reference": "9c7897085ad3560175509f5fce96bca465349663"
+                "reference": "96adcfcadc8b7d117a095140a695702cbaeca412"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NativePHP/php-bin/zipball/9c7897085ad3560175509f5fce96bca465349663",
-                "reference": "9c7897085ad3560175509f5fce96bca465349663",
+                "url": "https://api.github.com/repos/NativePHP/php-bin/zipball/96adcfcadc8b7d117a095140a695702cbaeca412",
+                "reference": "96adcfcadc8b7d117a095140a695702cbaeca412",
                 "shasum": ""
             },
             "type": "library",
@@ -2666,7 +2666,7 @@
                 "php"
             ],
             "support": {
-                "source": "https://github.com/NativePHP/php-bin/tree/1.1.0"
+                "source": "https://github.com/NativePHP/php-bin/tree/1.0.3"
             },
             "funding": [
                 {
@@ -2678,7 +2678,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2025-08-05T20:14:22+00:00"
+            "time": "2025-07-16T08:42:59+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -3950,16 +3950,16 @@
         },
         {
             "name": "spatie/backtrace",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/backtrace.git",
-                "reference": "1607d8870bf597fc4ad79a6945cf0b2e584c2669"
+                "reference": "8c0f16a59ae35ec8c62d85c3c17585158f430110"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/backtrace/zipball/1607d8870bf597fc4ad79a6945cf0b2e584c2669",
-                "reference": "1607d8870bf597fc4ad79a6945cf0b2e584c2669",
+                "url": "https://api.github.com/repos/spatie/backtrace/zipball/8c0f16a59ae35ec8c62d85c3c17585158f430110",
+                "reference": "8c0f16a59ae35ec8c62d85c3c17585158f430110",
                 "shasum": ""
             },
             "require": {
@@ -3998,7 +3998,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/backtrace/issues",
-                "source": "https://github.com/spatie/backtrace/tree/1.8.0"
+                "source": "https://github.com/spatie/backtrace/tree/1.8.1"
             },
             "funding": [
                 {
@@ -4010,7 +4010,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-08-25T16:16:45+00:00"
+            "time": "2025-08-26T08:22:30+00:00"
         },
         {
             "name": "spatie/error-solutions",
