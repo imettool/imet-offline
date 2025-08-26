@@ -143,6 +143,7 @@ class SetupController extends Controller
     public function wdpa_progress(Request $request, string $jobId)
     {
         $progress = JobProgress::find($jobId)?->progress;
+        $progress = $progress>=100 ? 100 : $progress;
         return $progress ?? 0;
     }
 
