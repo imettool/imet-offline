@@ -64,6 +64,7 @@ class SpeciesUpdater
         static::updateVernacularNamesFromCSV($verbose);
 
         // Remove all records where species and genus and family are null
+        OfflineLog::info("Removing records with null species, genus and family", $verbose);
         Species::whereNull('species')
             ->whereNull('genus')
             ->whereNull('family')
@@ -87,8 +88,6 @@ class SpeciesUpdater
                     values: $chunk,
                     uniqueBy: ['col_id'],
                     update: static::CSV_SPECIES_ATTRIBUTES);
-
-                OfflineLog::info("Parsed " . $generator->row_index . "/" . $generator->num_rows . " species.", $verbose);
             }
 
         } else {
@@ -112,8 +111,6 @@ class SpeciesUpdater
                     values: $chunk,
                     uniqueBy: ['col_id'],
                     update: static::CSV_NAMES_ATTRIBUTES);
-
-                OfflineLog::info("Parsed " . $generator->row_index . "/" . $generator->num_rows . " vernacular names.", $verbose);
             }
 
         } else {
