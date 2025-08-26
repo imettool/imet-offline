@@ -13,7 +13,6 @@ namespace App\Helpers;
 
 use App\Models\JobProgress;
 use Exception;
-use Illuminate\Support\Facades\Log;
 use ImetCore\Models\ProtectedArea;
 use ModularForms\Helpers\File\Zip;
 
@@ -29,9 +28,7 @@ class ProtectedAreaUpdaterCSV
     const int CHUNK_SIZE = 300;
     const string OFAC_GLOBAL_IDS_FILE = 'ofac_global_ids.csv';
 
-    const int LOG_TYPE_INFO = 1;
-    const int LOG_TYPE_ERROR = 2;
-    const int LOG_TYPE_DEBUG = 3;
+    const string LOG_PREFIX = '## ProtectedAreaUpdaterCSV ## : ';
 
     /**
      * Update protected areas and OECMs from CSV files.
@@ -40,11 +37,11 @@ class ProtectedAreaUpdaterCSV
     public static function updateProtectedAreasAndOECMs(string $zipFilePath, string $originalFilename, string $jobId, bool $verbose = false): void
     {
         if(preg_match(self::ALL_REGEX, $originalFilename)){
-            static::log("Processing Protected Areas and OECMs dataset ...", $verbose);
+            OfflineLog::info( self::LOG_PREFIX . "Processing Protected Areas and OECMs dataset ...", $verbose);
         } elseif(preg_match(self::WDPA_REGEX, $originalFilename)){
-            static::log("Processing Protected Areas dataset ...", $verbose);
+            OfflineLog::info(self::LOG_PREFIX . "Processing Protected Areas dataset ...", $verbose);
         } elseif(preg_match(self::OECM_REGEX, $originalFilename)){
-            static::log("Processing OECMs dataset ...", $verbose);
+            OfflineLog::info(self::LOG_PREFIX . "Processing OECMs dataset ...", $verbose);
         }
 
         JobProgress::updateJobProgress($jobId);
@@ -94,11 +91,11 @@ class ProtectedAreaUpdaterCSV
                     JobProgress::updateJobProgress($jobId, $progress);
 
                 } catch (Exception $e) {
-                     static::log('Error while upserting protected areas from CSV file', $verbose, self::LOG_TYPE_ERROR);
+                    OfflineLog::error(self::LOG_PREFIX . 'Error while upserting protected areas from CSV file', $verbose);
                 }
             }
         } else {
-            static::log('CSV file not found in the extracted ZIP archive (' . $csv_file . ')', $verbose, self::LOG_TYPE_ERROR);
+            OfflineLog::error(self::LOG_PREFIX . 'CSV file not found in the extracted ZIP archive (' . $csv_file . ')', $verbose);
             throw new Exception("CSV file not found in the extracted ZIP archive: " . $csv_file);
         }
     }
@@ -112,7 +109,7 @@ class ProtectedAreaUpdaterCSV
     {
         $filepath = database_path(self::OFAC_GLOBAL_IDS_FILE);
 
-        static::log("Applying OFAC global IDs from CSV file: " . $filepath, $verbose);
+        OfflineLog::info(self::LOG_PREFIX . "Applying OFAC global IDs from CSV file: " . $filepath, $verbose);
 
         $generator = new CSVReader($filepath);
         foreach ($generator->rows(self::CHUNK_SIZE) as $chunk) {
@@ -125,23 +122,6 @@ class ProtectedAreaUpdaterCSV
             }
         }
 
-    }
-
-    /**
-     * Log messages to both console (if verbose) and log file.
-     */
-    private static function log(string $message, bool $verbose, int $type = self::LOG_TYPE_INFO): void
-    {
-        if($verbose){
-            print($message . PHP_EOL);
-        }
-        if($type === self::LOG_TYPE_INFO) {
-            Log::info($message);
-        } else if($type === self::LOG_TYPE_ERROR) {
-            Log::error($message);
-        } else if($type === self::LOG_TYPE_DEBUG) {
-            Log::debug($message);
-        }
     }
 
 }

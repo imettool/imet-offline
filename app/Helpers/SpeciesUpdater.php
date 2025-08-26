@@ -48,6 +48,7 @@ class SpeciesUpdater
     ];
 
     const int CHUNK_SIZE = 300;
+    const string JOB_LOG_PREFIX = '## SpeciesUpdater ## : ';
 
     /**
      * Update species and vernacular names from CSV files.
@@ -68,9 +69,7 @@ class SpeciesUpdater
             ->whereNull('family')
             ->delete();
 
-        if($verbose) {
-            print("Species and vernacular names updated successfully.\n");
-        }
+        OfflineLog::info("Species and vernacular names updated successfully.", $verbose);
     }
 
     private static function upsertSpeciesFromCSV(bool $verbose = false): void
@@ -78,9 +77,7 @@ class SpeciesUpdater
         $filepath = database_path(static::CSV_SPECIES_PATH);
         if(file_exists($filepath)) {
 
-            if($verbose) {
-                print("\nUpserting species from CSV file: " . $filepath . "\n");
-            }
+            OfflineLog::info("Upserting species from CSV file: " . $filepath, $verbose);
 
             // Upsert species data in chucks using a generator
             $generator = new CSVReader($filepath);
@@ -91,16 +88,11 @@ class SpeciesUpdater
                     uniqueBy: ['col_id'],
                     update: static::CSV_SPECIES_ATTRIBUTES);
 
-                if($verbose) {
-                    print("Parsed " . $generator->row_index . "/" . $generator->num_rows . " species.\n");
-                }
-
+                OfflineLog::info("Parsed " . $generator->row_index . "/" . $generator->num_rows . " species.", $verbose);
             }
 
         } else {
-            if($verbose) {
-                print("\nCSV file for species not found: " . $filepath . "\n");
-            }
+            OfflineLog::error("CSV file for species not found: " . $filepath, $verbose);
         }
 
     }
@@ -110,9 +102,7 @@ class SpeciesUpdater
         $filepath = database_path(static::CSV_NAMES_PATH);
         if(file_exists($filepath)) {
 
-            if($verbose) {
-                print("\nUpdating vernacular names from CSV file: " . $filepath . "\n");
-            }
+            OfflineLog::info("Updating vernacular names from CSV file: " . $filepath, $verbose);
 
             // Update vernacular names using a generator
             $generator = new CSVReader($filepath);
@@ -123,16 +113,11 @@ class SpeciesUpdater
                     uniqueBy: ['col_id'],
                     update: static::CSV_NAMES_ATTRIBUTES);
 
-                if($verbose) {
-                    print("Parsed " . $generator->row_index . "/" . $generator->num_rows . " vernacular names.\n");
-                }
-
+                OfflineLog::info("Parsed " . $generator->row_index . "/" . $generator->num_rows . " vernacular names.", $verbose);
             }
 
         } else {
-            if($verbose) {
-                print("\nCSV file for vernacular names not found: " . $filepath . "\n");
-            }
+            OfflineLog::info("CSV file for vernacular names not found: " . $filepath, $verbose);
         }
 
     }

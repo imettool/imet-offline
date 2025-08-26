@@ -25,6 +25,7 @@ class AppListener
     {
         // Log the application booted event
         Log::info('Application booted successfully.');
+        Log::info('Current version: ' . imet_offline_tool_version());
 
         // First boot: onetime modifications
         if(App::environment('production')) {

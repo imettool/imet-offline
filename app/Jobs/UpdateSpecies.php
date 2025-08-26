@@ -12,11 +12,13 @@
 namespace App\Jobs;
 
 use App\Helpers\SpeciesUpdater;
+use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Log;
 
 class UpdateSpecies implements ShouldQueue
 {
@@ -33,9 +35,9 @@ class UpdateSpecies implements ShouldQueue
         try{
             // Update species and vernacular names
             SpeciesUpdater::updateSpeciesAndVernacularNames();
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             // Log the exception or handle it as needed
-            \Log::error('Error updating species: ' . $e->getMessage());
+            Log::error('Error updating species: ' . $e->getMessage());
         }
     }
 }
