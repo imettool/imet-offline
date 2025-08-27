@@ -61,7 +61,7 @@ class CSVReader
     private function getSize(): void
     {
         $num_rows = 0;
-        while (fgetcsv($this->file, 0, $this->delimiter) !== false) {
+        while (fgetcsv($this->file, 0, $this->delimiter,$enclosure = '"', $escape = '\\') !== false) {
             $num_rows++;
         }
         rewind($this->file);
@@ -79,7 +79,7 @@ class CSVReader
 
         $chunk_data = [];
         $row_index_in_chunk = 0;
-        while (($row_data = fgetcsv($this->file, 0, $this->delimiter)) !== false) {
+        while (($row_data = fgetcsv($this->file, 0, $this->delimiter, $enclosure = '"', $escape = '\\')) !== false) {
 
             // Set header
             if ($this->row_index == $this->header_row_index) {
