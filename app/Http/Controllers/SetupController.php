@@ -13,7 +13,6 @@ namespace App\Http\Controllers;
 
 use App\Helpers\ProtectedAreaUpdaterCSV;
 use App\Helpers\SpeciesUpdater;
-use App\Models\ProtectedArea;
 use App\Models\User;
 use Auth;
 use Exception;

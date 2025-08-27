@@ -9,7 +9,7 @@ $current_route = Route::current()->getName();
 ?>
 
 
-@if($current_route == 'update_offline_user')
+@if(Str::contains($current_route, 'setup.'))
     <div id="imet_header" class="!justify-center !py-3">
         <div class="font-bold !text-primary-600 !text-xl">@lang('offline.title')</div>
     </div>
