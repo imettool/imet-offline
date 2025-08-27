@@ -124,7 +124,7 @@ class ProtectedAreaUpdaterCSV
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = $partial_progress/80*100 + 10; // CSV parsing takes 80% of the job progress, starting from 10%
+                $total_progress = ($partial_progress/100*80) + 10; // CSV parsing takes 80% of the job progress, starting from 10%
                 TaskProgressing::dispatch($jobId, $total_progress);
 
             } catch (Exception $e) {
@@ -156,7 +156,7 @@ class ProtectedAreaUpdaterCSV
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = $partial_progress/10*100 + 90; // OFAC application takes 10% of the job progress, starting from 90%
+                $total_progress = ($partial_progress/100*10) + 90; // OFAC application takes 10% of the job progress, starting from 90%
                 TaskProgressing::dispatch($jobId, $total_progress);
             }
         }

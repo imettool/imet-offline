@@ -25,7 +25,9 @@ class TaskProgressing implements ShouldBroadcastNow
     public function __construct(
         public string  $jobId,
         public string  $progress
-    ){}
+    ){
+        $this->progress = min(100, max(0, (int) $this->progress)); // Ensure progress is between 0 and 100
+    }
 
     public function broadcastOn(): array
     {
