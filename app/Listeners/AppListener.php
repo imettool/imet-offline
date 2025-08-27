@@ -24,19 +24,16 @@ class AppListener
     public function handle(ApplicationBooted $event): void
     {
         // Log the application booted event
-        Log::info('Application booted successfully.');
+        Log::info('Booting application...');
         Log::info('Current version: ' . imet_offline_tool_version());
 
         // First boot: onetime modifications
         if(App::environment('production')) {
+            Log::info('Checking if one-time configurations are needed...');
             InitializeOfflineTool::dispatchSync();
         }
 
-        // Perform some cleaning
-        JobProgress::truncate();
-        DB::table('failed_jobs')->delete();
-        DB::table('job_batches')->delete();
-        DB::table('jobs')->delete();
+        Log::info('Application booted successfully.');
 
         // Check for updates
         if(App::environment('production')) {
