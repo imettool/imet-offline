@@ -41,7 +41,7 @@ class DependencyParser extends BaseDependencyParser
             $license[] = 'BSD-3';
         }
 
-        return $license;
+        return array_unique($license);
     }
 
 }
