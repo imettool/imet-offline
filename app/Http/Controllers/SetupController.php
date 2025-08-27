@@ -12,12 +12,14 @@
 namespace App\Http\Controllers;
 
 
+use App\Helpers\ProtectedAreaUpdaterCSV;
 use App\Jobs\DummyJob;
 use App\Jobs\UpdateProtectedAreas;
 use App\Models\JobProgress;
 use App\Models\ProtectedArea;
 use App\Models\User;
 use Auth;
+use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -107,6 +109,8 @@ class SetupController extends Controller
      */
     public function wdpas(): View
     {
+        $jobId = Str::uuid()->toString();
+
         return view('offline.setup.wdpas', [
             'current_step' => 'wdpas',
             'timeline' => trans('setup.timeline'),
@@ -115,25 +119,27 @@ class SetupController extends Controller
                     'dataset_upload' => Module::$upload_object
                 ],
                 'save_url' => route('setup.wdpas.save'),
-                'progress_url' => route('setup.wdpas.progress', ['jobId' => 'xxxx']),
+                'progress_url' => route('setup.wdpas.progress', ['jobId' => $jobId]),
+                'job_id' => $jobId
             ]
         ]);
     }
 
     /**
-     * Save the protected areas dataset.
+     * Save the protected areas' dataset.
+     * @throws Exception
      */
     public function wdpas_save(Request $request)
     {
         $records = Payload::decode($request->input('records'));
         $zipFilePath = Storage::disk(File::TEMP_STORAGE)->path($records['dataset_upload']['temp_filename']);
         $originalFilename = Storage::disk(File::TEMP_STORAGE)->path($records['dataset_upload']['original_filename']);
+        $jobId = $request->input('job_id');
 
-        $jobId = Str::uuid()->toString();
-        UpdateProtectedAreas::dispatch( $zipFilePath, basename($originalFilename), $jobId);
+        ProtectedAreaUpdaterCSV::updateProtectedAreasAndOECMs($zipFilePath, basename($originalFilename), $jobId);
+
         return response()->json([
-            'status' => 'success',
-            'jobId' => $jobId
+            'status' => 'success'
         ]);
     }
 
@@ -143,8 +149,8 @@ class SetupController extends Controller
     public function wdpa_progress(Request $request, string $jobId)
     {
         $progress = JobProgress::find($jobId)?->progress;
-        $progress = $progress>=100 ? 100 : $progress;
-        return $progress ?? 0;
+        $progress = $progress ?? 0;     // Ensure progress is numeric
+        return min($progress, 100);        // Cap progress at 100%
     }
 
     /**

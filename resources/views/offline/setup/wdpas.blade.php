@@ -75,10 +75,10 @@ use ModularForms\Helpers\Template;
                     <!-- Step 5: Apply -->
                     <div :class="{'opacity-50': !uploaded}">
                         <div>5</div>
-                        <div>
+                        <div :class="{'blur-xs': !uploaded}">
                             {!! trans('setup.protected_planet_instructions.apply') !!}
                             <div class="flex gap-3">
-                                <button :disabled="!uploaded || storeStarted" @click=storeDataset
+                                <button v-show="uploaded && !storeStarted" @click=storeDataset
                                         class="btn-nav">@uclang('modular-forms::common.save')</button>
                                 <progress-bar v-if="storeStarted" :value="storeProgress" color="#005f5a"></progress-bar>
                             </div>
@@ -88,10 +88,10 @@ use ModularForms\Helpers\Template;
                     <!-- Step 6: Completed -->
                     <div :class="{'opacity-50': !storeCompleted}">
                         <div>6</div>
-                        <div>
+                        <div :class="{'blur-xs': !uploaded}">
                             {!! trans('setup.protected_planet_instructions.completed') !!}
                             <br />
-                            <a :disabled="!storeCompleted" :class="{'disabled pointer-events-none': !storeCompleted}"
+                            <a v-show="storeCompleted" :class="{'disabled pointer-events-none': !storeCompleted}"
                                  href="{{ route('setup.done') }}"
                                 class="btn-nav">@uclang('offline.actions.proceed')</a>
                         </div>

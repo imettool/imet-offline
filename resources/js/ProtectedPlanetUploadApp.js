@@ -27,6 +27,7 @@ export default class ProtectedPlanetUploadApp extends Base {
                 records: Object,
                 save_url: String,
                 progress_url: String,
+                job_id: String,
             },
 
             setup(props, context) {
@@ -52,8 +53,12 @@ export default class ProtectedPlanetUploadApp extends Base {
 
                     let payload = {
                         _method: 'PATCH',
-                        records:  Payload.encode(records),
+                        records: Payload.encode(records),
+                        job_id: props.job_id
                     }
+
+                    pollProgress();
+                    storeStarted.value = true;
 
                     fetch(props.save_url, {
                         method: 'POST',
@@ -63,23 +68,16 @@ export default class ProtectedPlanetUploadApp extends Base {
                         },
                         body: JSON.stringify(payload),
                     })
-                        .then((response) => response.json())
-                        .then(function(data){
-                            if (data.status === 'success') {
-                                jobId.value = data.jobId;
-                                storeStarted.value = true;
-                                pollProgress(toRaw(jobId.value));
-                            }
-                        })
+                        .then()
                         .catch(function (error) {
                             console.error(error)
                         });
                 }
 
-                function pollProgress(jobId){
+                function pollProgress(){
 
                     const intervalHandle = setInterval(() => {
-                        fetch(props.progress_url.replace('xxxx', jobId), {
+                        fetch(props.progress_url, {
                             method: 'GET',
                             headers: {
                                 "Content-Type": "application/json",
