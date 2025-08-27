@@ -20,7 +20,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('/', [SetupController::class, 'index']);
 
     // Setup routes
-    Route::get('setup/info', [SetupController::class, 'info'])->name('setup.info');
+    Route::get('setup', [SetupController::class, 'info'])->name('setup.info');
     Route::get('setup/user', [SetupController::class, 'user'])->name('setup.user');
     Route::patch('setup/user', [SetupController::class, 'user_save'])->name('setup.user.save');
     Route::get('setup/wdpas', [SetupController::class, 'wdpas'])->name('setup.wdpas');
