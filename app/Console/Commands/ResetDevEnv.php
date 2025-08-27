@@ -38,9 +38,17 @@ class ResetDevEnv extends Command
         // Reset the NativePHP development environment
         $this->call(ResetCommand::class, ['--with-app-data' => true]);
 
-        // Delete logs
-        intro('Clearing the logs');
-        $this->removeFilesByExtension( base_path('storage/logs'), 'log');
+        // Clear storage
+        intro('Clearing the storage');
+        $this->clearFolder(storage_path('app'), ['public', 'private', '.gitignore']);
+        $this->clearFolder(storage_path('framework/cache/data'), ['.gitignore']);
+        $this->clearFolder(storage_path('framework/cache'), ['data', '.gitignore']);
+        $this->clearFolder(storage_path('framework/sessions'), ['.gitignore']);
+        $this->clearFolder(storage_path('framework/testing'), ['.gitignore']);
+        $this->clearFolder(storage_path('framework/views'), ['.gitignore']);
+        $this->clearFolder(storage_path('framework'), ['cache', 'sessions', 'testing', 'views', '.gitignore']);
+        $this->clearFolder(storage_path('logs'), ['.gitignore']);
+        $this->clearFolder(storage_path('releases'), ['.gitkeep']);
 
         // Clear the assets and node_modules/ directories
         intro('Resetting node_modules/');
@@ -79,6 +87,9 @@ class ResetDevEnv extends Command
         return 0;
     }
 
+    /**
+     * Remove a file or directory if it exists
+     */
     private function remove(string $path): void
     {
         if ($this->filesystem->exists($path)) {
@@ -87,15 +98,14 @@ class ResetDevEnv extends Command
         }
     }
 
-    private function removeFilesByExtension(string $path, string $extension): void
+    /**
+     * Clear all files and folders in a directory except those specified in the $except array
+     */
+    private function clearFolder(string $path, array $except = []): void
     {
-        foreach (array_diff(scandir($path), array('.', '..')) as $file) {
-            if(\Str::endsWith($file, '.' . $extension)) {
-                $filePath = $path . '/' . $file;
-                if ($this->filesystem ->exists($filePath)) {
-                    $this->line('Deleting: ' . $filePath);
-                    $this->filesystem ->remove($filePath);
-                }
+        foreach (array_diff(scandir($path), array('.', '..')) as $item) {
+            if(!in_array($item, $except)) {
+                static::remove($path . '/' . $item);
             }
         }
     }
