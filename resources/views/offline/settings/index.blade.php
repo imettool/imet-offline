@@ -22,10 +22,4 @@ use ModularForms\Helpers\Template;
     <!-- User settings -->
     @include('offline.settings.modules.user', compact('user'))
 
-    <!-- API keys -->
-    @include('offline.settings.modules.api_keys' , compact('vueData'))
-
-    <!-- Protected areas -->
-    @include('offline.settings.modules.protected_areas', compact('countries', 'updated_pas_countries'))
-
 @endsection

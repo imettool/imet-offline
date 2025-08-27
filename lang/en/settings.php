@@ -26,22 +26,6 @@ return [
 
     'user' => [
         'title' => 'User profile',
-    ],
+    ]
 
-    'api_keys' => [
-        'title' => 'API keys',
-        'fields' => [
-            'protected_planet_api_key' => 'Protected Planet API',
-        ],
-        'protected_planet_api_key_description' => '<b>Required</b> to retrieve protected areas from Protected Planet API. Request a key <a href="https://api.protectedplanet.net/" target="_blank">here</a>',
-    ],
-
-    'protected_areas' => [
-        'title' => 'Protected Areas',
-        'info' => 'A <b>Protected Planet API key</b> is required to retrieve protected areas from Protected Planet API.',
-        'api_description' => 'This is required to retrieve protected areas from Protected Planet API.',
-        'last_update' => 'Last update',
-        'update' => 'Update',
-        'download' => 'Download',
-    ],
 ];

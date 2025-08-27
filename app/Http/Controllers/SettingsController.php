@@ -13,17 +13,12 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Auth;
-use ModularForms\Exceptions\MissingAPITokenException;
 use ModularForms\Models\Traits\Payload;
-use App\Helpers\ProtectedAreaUpdaterAPI;
 use App\Models\Country;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Config;
 
 
 class SettingsController extends Controller
@@ -59,29 +54,6 @@ class SettingsController extends Controller
             'records' => $records,
             'status' => 'success',
         ];
-    }
-
-    public function update_pas(Request $request): JsonResponse
-    {
-        $country = $request->input('iso3');
-
-        Config::set('PROTECTED_PLANET_API_KEY', Settings::getSetting('protected_planet_api_key'));
-
-        try{
-            ProtectedAreaUpdaterAPI::updateByCountry($country);
-            ProtectedAreaUpdate::setUpdated($country);
-
-        } catch (MissingAPITokenException $e){
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Protected Planet API key not found'
-            ]);
-        }
-
-        return response()->json([
-            'status' => 'success',
-            'updated' => Carbon::now()->format('Y-m')
-        ]);
     }
 
     /**

@@ -55,7 +55,7 @@ return [
     ],
 
     'species_info' =>
-        'The dataset retrieved from the <b>Catalogue of Life</b> includes all the animal and plant species. Worms, acari,
+        'The dataset retrieved from the <b>Catalogue of Life</b> includes all animal and plant species. Worms, acari,
             insects and other microorganisms are excluded at the moment. The dataset contains the full taxonomy and the
             common names (in multiple languages).',
 

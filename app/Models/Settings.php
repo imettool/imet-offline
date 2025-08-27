@@ -22,7 +22,6 @@ class Settings extends Model
         'proxy_port',
         'proxy_user',
         'proxy_password',
-        'protected_planet_api_key'
     ];
 
     public static function get(): array

@@ -25,9 +25,6 @@ window.OfflineImet = {}
 import SettingsApp from "./js/SettingsApp.js";
 window.OfflineImet.SettingsApp = SettingsApp;
 
-import PaUpdate from "./js/PaUpdate.js";
-window.OfflineImet.PaUpdate = PaUpdate;
-
 import SpeciesSetupApp from "./js/SpeciesSetupApp.js";
 window.OfflineImet.SpeciesSetupApp = SpeciesSetupApp;
 
