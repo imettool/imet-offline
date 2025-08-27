@@ -88,10 +88,7 @@ return [
         '*/tests',
         'tests',
         '.run',
-        'docker',
-        'database/ofac_global_ids.csv',
-        'database/species.csv',
-        'database/vernacular_names.csv',
+        'docker'
     ],
 
     /**

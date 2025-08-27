@@ -9,6 +9,7 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
+use App\Helpers\SpeciesUpdater;
 use App\Jobs\UpdateSpecies;
 use ImetCore\Models\Species;
 use Illuminate\Database\Migrations\Migration;
@@ -21,7 +22,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        UpdateSpecies::dispatchSync();
+        if(DB::table((new Species)->getTable())->count() === 0) {
+            SpeciesUpdater::updateSpeciesAndVernacularNames();
+        }
     }
 
     /**
