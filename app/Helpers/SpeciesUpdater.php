@@ -58,7 +58,7 @@ class SpeciesUpdater
      */
     public static function insertSpeciesAndVernacularNames(string $jobId, bool $verbose = false): void
     {
-        TaskProgressing::dispatch($jobId, 2);
+        TaskProgressing::dispatch($jobId, 1);
 
         // Upsert species data from CSV
         static::upsertSpeciesFromCSV($jobId, $verbose);

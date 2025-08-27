@@ -15,12 +15,12 @@ return [
     'next' => 'Next',
 
     'description' =>
-        'Welcome to the <b>IMET Offline Tool</b>!<br> This is the first time you are using the application and simple setup
+        'Welcome to the <b>IMET Offline Tool</b>!<br> This is the first time you are using the application and a quick setup
                 is required to get started.',
 
     'offline_warning' =>
         'The IMET Offline Tool is designed to be used in the field, where internet connectivity may be limited or unavailable
-            but during the setup process <b>an internet connection is required</b>. Please ensure that you are connected to the internet before proceeding with the setup.',
+            but during this setup process <b>an internet connection is required</b>. Please ensure that you are connected to the internet before proceeding with the setup.',
 
     'timeline' => [
         'info' => [
