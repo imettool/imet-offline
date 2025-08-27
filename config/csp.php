@@ -20,6 +20,7 @@ return [
         [Directive::SCRIPT, [Keyword::SELF, Keyword::UNSAFE_EVAL, Keyword::UNSAFE_INLINE]],
         [Directive::STYLE, [Keyword::SELF, Keyword::UNSAFE_EVAL, Keyword::UNSAFE_INLINE]],
         [Directive::IMG, [Keyword::SELF, 'data:']],
+        [Directive::CONNECT, [Keyword::SELF, 'https://a.tile.openstreetmap.org/']],
     ],
 
     /*
