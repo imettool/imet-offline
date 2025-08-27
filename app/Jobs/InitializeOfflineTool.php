@@ -63,45 +63,6 @@ class InitializeOfflineTool implements ShouldQueue
             Log::error('Trying to set GitHub token in updater config file, but the file does not exist: ' . $config_file_path);
         }
 
-        // Hard coded fix to issue https://github.com/NativePHP/laravel/issues/614  (already fixed with https://github.com/NativePHP/laravel/pull/597)
-        // TODO: to be removed when the PR is merged and released
-        $native_events_path = app_path() . '/../vendor/nativephp/laravel/src/Events/AutoUpdater/';
-        $event_files = [
-            'Error.php',
-            'UpdateAvailable.php',
-            'UpdateCancelled.php',
-            'UpdateDownloaded.php',
-            'UpdateNotAvailable.php',
-        ];
-        foreach ($event_files as $file) {
-            $file_path = $native_events_path . $file;
-            if (file_exists($file_path)) {
-                $content = file_get_contents($file_path);
-                if(!Str::contains($content, ' = null,')){
-                    if(!Str::contains($content, 'public ?string $stack = null')){
-                        $content = str_replace('public ?string $stack', 'public ?string $stack = null', $content);
-                    }
-                    if(!Str::contains($content, 'public ?string $releaseName = null')){
-                        $content = str_replace('public ?string $releaseName', 'public ?string $releaseName = null', $content);
-                    }
-                    if(!Str::contains($content, 'public string|array|null $releaseNotes = null,')){
-                        $content = str_replace('public string|array|null $releaseNotes', 'public string|array|null $releaseNotes = null', $content);
-                    }
-                    if(!Str::contains($content, 'public ?int $stagingPercentage = null,')){
-                        $content = str_replace('public ?int $stagingPercentage', 'public ?int $stagingPercentage = null', $content);
-                    }
-                    if(!Str::contains($content, 'public ?string $minimumSystemVersion = null,')){
-                        $content = str_replace('public ?string $minimumSystemVersion', 'public ?string $minimumSystemVersion = null', $content);
-                    }
-                    file_put_contents($file_path, $content);
-                    Log::warning('Fixed ' . $file . ' event file. (https://github.com/NativePHP/laravel/issues/614)');
-                    $relaunch_to_apply = true;
-                }
-            } else {
-                Log::error('Trying to fix event file, but the file does not exist: ' . $file_path);
-            }
-        }
-
         // Relaunch the application to apply changes
         if($relaunch_to_apply) {
             Log::warning('Relaunching the application to apply changes.');
