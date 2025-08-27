@@ -26,6 +26,7 @@ use ModularForms\Helpers\Template;
             <div class="module-header">
                 <div class="module-title">{{ ucfirst(trans('setup.timeline.wdpas.title')) }}</div>
             </div>
+
             <!-- Protected Planet citation -->
             <div class="module-bar info-bar">
                 <div class="icon"><span class="fas fa-fw fa-info-circle text-lg"></span></div>
@@ -37,9 +38,9 @@ use ModularForms\Helpers\Template;
 
             <div class="module-body">
 
-                <div class="text-lg font-bold italic mt-2 mb-4">Please follow the instruction below</div>
+                <div class="text-lg font-bold italic mt-2 mb-4">@lang('setup.please_follow_instructions')</div>
 
-                <div class="setup_wdpa_instructions" id="protected_planet_upload">
+                <div class="setup_instructions" id="protected_planet_upload">
 
                     <!-- Step 1: Browse -->
                     <div>
@@ -47,21 +48,15 @@ use ModularForms\Helpers\Template;
                         <div>{!! trans('setup.protected_planet_instructions.browse') !!}</div>
                     </div>
 
-                    <!-- Step 2: Locate -->
+                    <!-- Step 2: Download -->
                     <div>
                         <div>2</div>
-                        <div>{!! trans('setup.protected_planet_instructions.locate') !!}</div>
-                    </div>
-
-                    <!-- Step 3: Download -->
-                    <div>
-                        <div>3</div>
                         <div>{!! trans('setup.protected_planet_instructions.download') !!}</div>
                     </div>
 
-                    <!-- Step 4: Upload -->
+                    <!-- Step 3: Upload -->
                     <div>
-                        <div>4</div>
+                        <div>3</div>
                         <div>
                             {!! trans('setup.protected_planet_instructions.upload') !!}
                             <upload :disabled="storeStarted || storeCompleted"
@@ -72,9 +67,9 @@ use ModularForms\Helpers\Template;
                         </div>
                     </div>
 
-                    <!-- Step 5: Apply -->
+                    <!-- Step 4: Apply -->
                     <div :class="{'opacity-50': !uploaded}">
-                        <div>5</div>
+                        <div>4</div>
                         <div :class="{'blur-xs': !uploaded}">
                             {!! trans('setup.protected_planet_instructions.apply') !!}
                             <div class="flex gap-3">
@@ -85,9 +80,9 @@ use ModularForms\Helpers\Template;
                         </div>
                     </div>
 
-                    <!-- Step 6: Completed -->
+                    <!-- Step 5: Completed -->
                     <div :class="{'opacity-50': !storeCompleted}">
-                        <div>6</div>
+                        <div>5</div>
                         <div :class="{'blur-xs': !uploaded}">
                             {!! trans('setup.protected_planet_instructions.completed') !!}
                             <br />

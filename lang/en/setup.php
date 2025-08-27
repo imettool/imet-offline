@@ -11,6 +11,9 @@
 
 return [
 
+    'please_follow_instructions' => 'Please follow the instructions below',
+    'next' => 'Next',
+
     'description' =>
         'Welcome to the <b>IMET Offline Tool</b>!<br> This is the first time you are using the application and simple setup
                 is required to get started.',
@@ -30,6 +33,12 @@ return [
                     However, the information will be associated with any assessments created or modified with this software;
                     exporting and sharing the assessment therefore implies sharing this information as well.'
         ],
+        'species' => [
+            'title' => 'Species',
+            'description' =>
+                'This step is required to integrate species data retrieved from the <b>Catalogue of Life</b> into the
+                    application. The dataset is required in order to precisely identify species during the assessments.',
+        ],
         'wdpas' => [
             'title' => 'Protected Areas and OECMs',
             'description' =>
@@ -45,6 +54,15 @@ return [
         ],
     ],
 
+    'species_info' =>
+        'The dataset retrieved from the <b>Catalogue of Life</b> includes all the animal and plant species. Worms, acari,
+            insects and other microorganisms are excluded at the moment. The dataset contains the full taxonomy and the
+            common names (in multiple languages).',
+
+    'species_instruction' =>
+        'In other to integrate the species data into the application, please click on the following button. This process
+            may take a few minutes, according to the performance of your device. Please be patient and do not close the application.',
+
     'citation' => 'Citation',
 
     'protected_planet_citation' =>
@@ -54,14 +72,14 @@ return [
 
     'protected_planet_instructions' => [
         'browse' => 'Browse to the <span class="highlight">Protected Planet</span> website (<span class="highlight">www.protectedplanet.net</span>)',
-        'locate' => 'Locate and open the <span class="highlight">Downloads</span> banner',
-        'download' => 'Download one of the following datasets (according to your needs):' .
+        'download' => 'Locate the <span class="highlight">Downloads</span> section and download one of the following
+            datasets (according to your needs):' .
             '<ul>' .
             '<li><span class="highlight">WDPA_Aug2025_Public_csv</span>: contains all the Protected Areas</li>' .
             '<li><span class="highlight">WDOECM_Aug2025_Public_csv</span>: contains all the OECMs</li>' .
             '<li><span class="highlight">WDPA_WDOECM_Aug2025_Public_all_csv</span>: contains all the Protected Areas and OECMs</li>' .
             '</ul>',
-        'upload' => 'Using the following field, pick the downloaded file.',
+        'upload' => 'Select the downloaded file, using the following field',
         'apply' => 'Store the dataset in the application by clicking on the following button.',
         'completed' => 'The dataset is stored in the application. You can now proceed.',
     ]

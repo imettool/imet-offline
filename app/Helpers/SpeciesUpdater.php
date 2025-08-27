@@ -11,6 +11,7 @@
 
 namespace App\Helpers;
 
+use App\Events\TaskProgressing;
 use ImetCore\Models\Species;
 
 /**
@@ -55,13 +56,15 @@ class SpeciesUpdater
      *
      * @param bool $verbose
      */
-    public static function updateSpeciesAndVernacularNames(bool $verbose = false): void
+    public static function insertSpeciesAndVernacularNames(string $jobId, bool $verbose = false): void
     {
+        TaskProgressing::dispatch($jobId, 2);
+
         // Upsert species data from CSV
-        static::upsertSpeciesFromCSV($verbose);
+        static::upsertSpeciesFromCSV($jobId, $verbose);
 
         // Update vernacular names from CSV
-        static::updateVernacularNamesFromCSV($verbose);
+        static::updateVernacularNamesFromCSV($jobId, $verbose);
 
         // Remove all records where species and genus and family are null
         OfflineLog::info("Removing records with null species, genus and family", $verbose);
@@ -73,7 +76,7 @@ class SpeciesUpdater
         OfflineLog::info("Species and vernacular names updated successfully.", $verbose);
     }
 
-    private static function upsertSpeciesFromCSV(bool $verbose = false): void
+    private static function upsertSpeciesFromCSV(string $jobId, bool $verbose = false): void
     {
         $filepath = database_path(static::CSV_SPECIES_PATH);
         if(file_exists($filepath)) {
@@ -82,12 +85,18 @@ class SpeciesUpdater
 
             // Upsert species data in chucks using a generator
             $generator = new CSVReader($filepath);
-            foreach ($generator->rows(self::CHUNK_SIZE) as $chunk) {
+            foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
 
+                // Upsert the current chunk into the database
                 Species::upsert(
                     values: $chunk,
                     uniqueBy: ['col_id'],
                     update: static::CSV_SPECIES_ATTRIBUTES);
+
+                // Update job progress
+                $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
+                $total_progress = ($partial_progress/100*50); // CSV parsing takes 50% of the job progress
+                TaskProgressing::dispatch($jobId, $total_progress);
             }
 
         } else {
@@ -96,7 +105,7 @@ class SpeciesUpdater
 
     }
 
-    private static function updateVernacularNamesFromCSV(bool $verbose = false): void
+    private static function updateVernacularNamesFromCSV(string $jobId, bool $verbose = false): void
     {
         $filepath = database_path(static::CSV_NAMES_PATH);
         if(file_exists($filepath)) {
@@ -107,10 +116,16 @@ class SpeciesUpdater
             $generator = new CSVReader($filepath);
             foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
 
+                // Upsert the current chunk into the database
                 Species::upsert(
                     values: $chunk,
                     uniqueBy: ['col_id'],
                     update: static::CSV_NAMES_ATTRIBUTES);
+
+                // Update job progress
+                $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
+                $total_progress = ($partial_progress/100*50) + 50; // CSV parsing takes 50% of the job progress, starting from 50%
+                TaskProgressing::dispatch($jobId, $total_progress);
             }
 
         } else {

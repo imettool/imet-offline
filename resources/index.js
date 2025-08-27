@@ -28,6 +28,9 @@ window.OfflineImet.SettingsApp = SettingsApp;
 import PaUpdate from "./js/PaUpdate.js";
 window.OfflineImet.PaUpdate = PaUpdate;
 
+import SpeciesSetupApp from "./js/SpeciesSetupApp.js";
+window.OfflineImet.SpeciesSetupApp = SpeciesSetupApp;
+
 import ProtectedPlanetUploadApp from "./js/ProtectedPlanetUploadApp.js";
 window.OfflineImet.ProtectedPlanetUploadApp = ProtectedPlanetUploadApp;
 

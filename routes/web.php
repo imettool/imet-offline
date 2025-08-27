@@ -23,6 +23,8 @@ Route::middleware(['web'])->group(function () {
     Route::get('setup', [SetupController::class, 'info'])->name('setup.info');
     Route::get('setup/user', [SetupController::class, 'user'])->name('setup.user');
     Route::patch('setup/user', [SetupController::class, 'user_save'])->name('setup.user.save');
+    Route::get('setup/species', [SetupController::class, 'species'])->name('setup.species');
+    Route::patch('setup/species', [SetupController::class, 'species_save'])->name('setup.species.save');
     Route::get('setup/wdpas', [SetupController::class, 'wdpas'])->name('setup.wdpas');
     Route::patch('setup/wdpas', [SetupController::class, 'wdpas_save'])->name('setup.wdpas.save');
     Route::get('setup/done', [SetupController::class, 'done'])->name('setup.done');

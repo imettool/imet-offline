@@ -10,38 +10,28 @@
 
 import Base from "@modular-forms/js/apps/Base.js";
 
-import {reactive, ref, watch} from "vue";
+import {reactive, ref, watch, toRaw} from "vue";
 
-import uploadFile from "@modular-forms/js/inputs/upload.vue";
 import progressBar from "@imet-core/js/templates/progress_bar.vue";
 
 
-export default class ProtectedPlanetUploadApp extends Base {
+export default class SpeciesSetupApp extends Base {
 
     constructor(input_data) {
 
         const options = {
-            name: 'ProtectedPlanetUploadApp',
+            name: 'SpeciesSetupApp',
 
             props: {
-                records: Object,
                 save_url: String,
                 job_id: String,
             },
 
             setup(props, context) {
 
-                let records = reactive(props.records)
-                let uploaded = ref(false);
-                let storeStarted = ref(false);
-                let storeCompleted = ref(false);
-                let storeProgress = ref(0);
-
-                const Payload = window.ModularForms.Helpers.Payload;
-
-                watch(records, () => {
-                    toggleUploaded();
-                });
+                let taskStarted = ref(false);
+                let taskCompleted = ref(false);
+                let taskProgress = ref(0);
 
                 window.Native.on("App\\Events\\TaskProgressing", (payload, event) => {
                     if(payload.jobId === props.job_id){
@@ -49,19 +39,13 @@ export default class ProtectedPlanetUploadApp extends Base {
                     }
                 });
 
-                function toggleUploaded(){
-                    uploaded.value = records['dataset_upload']['temp_filename'] !== null;
-                }
-
                 function storeDataset(){
-
                     let payload = {
                         _method: 'PATCH',
-                        records: Payload.encode(records),
                         job_id: props.job_id
                     }
 
-                    storeStarted.value = true;
+                    taskStarted.value = true;
 
                     fetch(props.save_url, {
                         method: 'POST',
@@ -76,22 +60,19 @@ export default class ProtectedPlanetUploadApp extends Base {
                             console.error(error)
                         });
                 }
-
                 function updateProgress(progress){
                     progress = parseInt(progress);
-                    storeProgress.value = progress;
+                   taskProgress.value = progress;
                     if(progress >= 100){
-                        storeCompleted.value = true;
+                       taskCompleted.value = true;
                     }
                 }
 
                 return {
-                    records,
-                    uploaded,
                     storeDataset,
-                    storeStarted,
-                    storeProgress,
-                    storeCompleted
+                    taskStarted,
+                    taskProgress,
+                    taskCompleted
                 }
 
             }
@@ -99,7 +80,6 @@ export default class ProtectedPlanetUploadApp extends Base {
         }
 
         return super(options, input_data)
-            .component('upload', uploadFile)
             .component('progressBar', progressBar);
     }
 }

@@ -8,7 +8,7 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
-.setup_wdpa_instructions{
+.setup_instructions{
 
     .highlight{
         @apply font-bold italic;
@@ -22,16 +22,11 @@
         @apply flex items-start gap-6 my-3;
 
         > div:first-of-type{
-            @apply flex justify-center items-center text-xl text-white bg-primary-700 rounded-full w-[36px] h-[36px] text-center
+            @apply flex justify-center items-center text-xl text-white bg-primary-700 rounded-full
+                w-[50px] h-[50px] min-w-[50px] text-center
         }
         > div:last-of-type{
             @apply mt-1;
-
-            /*input {}*/
-            /*input::file-selector-button {*/
-            /*    @apply px-2 py-0.5 rounded text-shadow-gray-800 border border-gray-800 bg-gray-100 hover:bg-gray-200 cursor-pointer;*/
-            /*}*/
-
         }
     }
 

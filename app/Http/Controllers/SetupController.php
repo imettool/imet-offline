@@ -12,6 +12,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ProtectedAreaUpdaterCSV;
+use App\Helpers\SpeciesUpdater;
 use App\Models\ProtectedArea;
 use App\Models\User;
 use Auth;
@@ -21,6 +22,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
+use ImetCore\Models\Species;
 use ModularForms\Helpers\File\File;
 use ModularForms\Models\Module;
 use ModularForms\Models\Traits\Payload;
@@ -36,7 +38,7 @@ class SetupController extends Controller
     public function index()
     {
         // If first boot, redirect to the setup page
-        if(ProtectedArea::count()<=50){
+        if(Species::count() < 10){
             return redirect()->route('setup.info');
         }
 
@@ -96,8 +98,33 @@ class SetupController extends Controller
             'id' => 0,
             'status' => 'success',
             'records' => $user->toArray(),
-            'redirect_to' => route('setup.wdpas'),
+            'redirect_to' => route('setup.species'),
         ];
+    }
+
+    /**
+     * Display the setup species page.
+     */
+    public function species(): View
+    {
+        return view('offline.setup.species', [
+            'current_step' => 'species',
+            'timeline' => trans('setup.timeline'),
+            'vueData' => [
+                'save_url' => route('setup.species.save'),
+                'job_id' => Str::uuid()->toString()
+            ]
+        ]);
+    }
+
+    public function species_save(Request $request): JsonResponse
+    {
+        $jobId = $request->input('job_id');
+        SpeciesUpdater::insertSpeciesAndVernacularNames($jobId);
+
+        return response()->json([
+            'status' => 'success'
+        ]);
     }
 
     /**
@@ -105,8 +132,6 @@ class SetupController extends Controller
      */
     public function wdpas(): View
     {
-        $jobId = Str::uuid()->toString();
-
         return view('offline.setup.wdpas', [
             'current_step' => 'wdpas',
             'timeline' => trans('setup.timeline'),
@@ -115,7 +140,7 @@ class SetupController extends Controller
                     'dataset_upload' => Module::$upload_object
                 ],
                 'save_url' => route('setup.wdpas.save'),
-                'job_id' => $jobId
+                'job_id' => Str::uuid()->toString()
             ]
         ]);
     }

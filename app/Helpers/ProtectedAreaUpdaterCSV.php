@@ -116,6 +116,7 @@ class ProtectedAreaUpdaterCSV
             })->toArray();
 
             try{
+
                 // Upsert the current chunk into the database
                 ProtectedArea::upsert(
                     $chunk,
