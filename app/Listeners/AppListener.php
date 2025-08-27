@@ -12,9 +12,7 @@
 namespace App\Listeners;
 
 use App\Jobs\InitializeOfflineTool;
-use App\Models\JobProgress;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\DB;
 use Log;
 use Native\Laravel\Events\App\ApplicationBooted;
 use Native\Laravel\Facades\AutoUpdater;

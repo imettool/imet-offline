@@ -11,7 +11,7 @@
 
 namespace App\Helpers;
 
-use App\Models\JobProgress;
+use App\Events\TaskProgressing;
 use Exception;
 use ImetCore\Models\ProtectedArea;
 use ZipArchive;
@@ -47,18 +47,17 @@ class ProtectedAreaUpdaterCSV
             throw new Exception("Filename does not match expected patterns: " . $originalFilename);
         }
 
-        JobProgress::updateJobProgress($jobId);
-
         // Extract the CSV file from the ZIP archive
+        TaskProgressing::dispatch($jobId, 2);
         $csvFilePath = self::extractCSVfromZIP($zipFilePath, $originalFilename, $verbose);
-        JobProgress::updateJobProgress($jobId, 10);     // Update progress after extraction (takes 10% of the job progress)
+        TaskProgressing::dispatch($jobId, 10);     // Update progress after extraction (takes 10% of the job progress)
 
         // Parse the CSV file and update the database
         self::parseFile($csvFilePath, $jobId, $verbose);
 
         // Apply OFAC global IDs
         self::applyOfacGlobalIDs($jobId, $verbose);
-        JobProgress::updateJobProgress($jobId, 100);    // Force progress to 100% at the end of the job
+        TaskProgressing::dispatch($jobId, 100);    // Force progress to 100% at the end of the job
     }
 
     /**
@@ -125,8 +124,8 @@ class ProtectedAreaUpdaterCSV
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = $partial_progress/100*80 + 10; // CSV parsing takes 80% of the job progress, starting from 10%
-                JobProgress::updateJobProgress($jobId, $total_progress);
+                $total_progress = $partial_progress/80*100 + 10; // CSV parsing takes 80% of the job progress, starting from 10%
+                TaskProgressing::dispatch($jobId, $total_progress);
 
             } catch (Exception $e) {
                 OfflineLog::error(self::LOG_PREFIX . 'Error while upserting protected areas from CSV file', $verbose);
@@ -157,8 +156,8 @@ class ProtectedAreaUpdaterCSV
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = $partial_progress/100*10 + 90; // OFAC application takes 10% of the job progress, starting from 90%
-                JobProgress::updateJobProgress($jobId, $total_progress);
+                $total_progress = $partial_progress/10*100 + 90; // OFAC application takes 10% of the job progress, starting from 90%
+                TaskProgressing::dispatch($jobId, $total_progress);
             }
         }
 

@@ -26,7 +26,6 @@ export default class ProtectedPlanetUploadApp extends Base {
             props: {
                 records: Object,
                 save_url: String,
-                progress_url: String,
                 job_id: String,
             },
 
@@ -34,7 +33,6 @@ export default class ProtectedPlanetUploadApp extends Base {
 
                 let records = reactive(props.records)
                 let uploaded = ref(false);
-                let jobId = ref(null);
                 let storeStarted = ref(false);
                 let storeCompleted = ref(false);
                 let storeProgress = ref(0);
@@ -43,6 +41,12 @@ export default class ProtectedPlanetUploadApp extends Base {
 
                 watch(records, () => {
                     toggleUploaded();
+                });
+
+                window.Native.on("App\\Events\\TaskProgressing", (payload, event) => {
+                    if(payload.jobId === props.job_id){
+                        updateProgress(payload.progress);
+                    }
                 });
 
                 function toggleUploaded(){
@@ -57,7 +61,7 @@ export default class ProtectedPlanetUploadApp extends Base {
                         job_id: props.job_id
                     }
 
-                    pollProgress();
+                    // pollProgress();
                     storeStarted.value = true;
 
                     fetch(props.save_url, {
@@ -74,29 +78,12 @@ export default class ProtectedPlanetUploadApp extends Base {
                         });
                 }
 
-                function pollProgress(){
-
-                    const intervalHandle = setInterval(() => {
-                        fetch(props.progress_url, {
-                            method: 'GET',
-                            headers: {
-                                "Content-Type": "application/json",
-                                "X-CSRF-Token": window.Laravel.csrfToken,
-                            },
-                        })
-                            .then((response) => response.json())
-                            .then(function(data){
-                                let progress = parseInt(data);
-                                storeProgress.value = progress;
-                                if(progress >= 100){
-                                    storeCompleted.value = true;
-                                    clearInterval(intervalHandle);
-                                }
-                            })
-                            .catch(function (error) {
-                                console.error(error)
-                            });
-                    }, 1000);
+                function updateProgress(progress){
+                    progress = parseInt(progress);
+                    storeProgress.value = progress;
+                    if(progress >= 100){
+                        storeCompleted.value = true;
+                    }
                 }
 
                 return {

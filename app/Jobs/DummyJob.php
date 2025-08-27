@@ -11,13 +11,12 @@
 
 namespace App\Jobs;
 
-use App\Models\JobProgress;
+use App\Events\TaskProgressing;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Log;
 
 class DummyJob implements ShouldQueue
 {
@@ -41,10 +40,10 @@ class DummyJob implements ShouldQueue
         $numSeconds = 4;
 
         try{
-            JobProgress::updateJobProgress($this->jobId);
             for ($i = 1; $i <= $numSeconds; $i++) {
                 sleep(1);
-                JobProgress::updateJobProgress($this->jobId, round(($i / $numSeconds) * 100));
+                $progress = round(($i / $numSeconds) * 100);
+                TaskProgressing::dispatch($this->jobId, $progress);
             }
             return 0;
 

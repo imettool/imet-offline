@@ -64,7 +64,7 @@ use ModularForms\Helpers\Template;
                         <div>4</div>
                         <div>
                             {!! trans('setup.protected_planet_instructions.upload') !!}
-                            <upload
+                            <upload :disabled="storeStarted || storeCompleted"
                                 :max-file-size=40000000
                                 upload-url="{{ route('upload.file') }}"
                                 {!! DOM::vueAttributes("'dataset_upload'", 'records.dataset_upload') !!}
