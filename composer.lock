@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff8748cd84e3f83896b787335da1960e",
+    "content-hash": "b47995eee35f6edfbd05283e17e09ae9",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
@@ -71,16 +71,16 @@
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/modular-forms.git",
-                "reference": "51f68555f6baa5052ec78b0318abf4803f66a160"
+                "reference": "bb5bc19055741a2fe631792da7f0b2c193fdc821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/51f68555f6baa5052ec78b0318abf4803f66a160",
-                "reference": "51f68555f6baa5052ec78b0318abf4803f66a160",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/bb5bc19055741a2fe631792da7f0b2c193fdc821",
+                "reference": "bb5bc19055741a2fe631792da7f0b2c193fdc821",
                 "shasum": ""
             },
             "require": {
@@ -127,10 +127,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/v2.0.8",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/v2.0.9",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-08-12T15:23:57+00:00"
+            "time": "2025-08-27T12:59:14+00:00"
         },
         {
             "name": "brick/math",
@@ -7786,7 +7786,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.3",
+        "php": ">=8.4",
         "ext-zip": "*"
     },
     "platform-dev": {},
