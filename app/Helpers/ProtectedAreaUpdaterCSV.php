@@ -14,7 +14,7 @@ namespace App\Helpers;
 use App\Models\JobProgress;
 use Exception;
 use ImetCore\Models\ProtectedArea;
-use ModularForms\Helpers\File\Zip;
+use ZipArchive;
 
 /**
  * Class ProtectedAreaUpdaterCSV
@@ -25,7 +25,7 @@ class ProtectedAreaUpdaterCSV
     const string ALL_REGEX = '/WDPA_WDOECM_([a-zA-Z]{3}[\d]{4})_Public_all_csv/';
     const string WDPA_REGEX = '/WDPA_([a-zA-Z]{3}[\d]{4})_Public_csv/';
     const string OECM_REGEX = '/WDOECM_([a-zA-Z]{3}[\d]{4})_Public_csv/';
-    const int CHUNK_SIZE = 300;
+    const int CHUNK_SIZE = 200;
     const string OFAC_GLOBAL_IDS_FILE = 'ofac_global_ids.csv';
 
     const string LOG_PREFIX = '## ProtectedAreaUpdaterCSV ## : ';
@@ -48,80 +48,117 @@ class ProtectedAreaUpdaterCSV
         }
 
         JobProgress::updateJobProgress($jobId);
-        self::parseFile($zipFilePath, $originalFilename, $jobId, $verbose);
-        self::applyOfacGlobalIDs($verbose);
+
+        // Extract the CSV file from the ZIP archive
+        $csvFilePath = self::extractCSVfromZIP($zipFilePath, $originalFilename, $verbose);
+        JobProgress::updateJobProgress($jobId, 10);     // Update progress after extraction (takes 10% of the job progress)
+
+        // Parse the CSV file and update the database
+        self::parseFile($csvFilePath, $jobId, $verbose);
+
+        // Apply OFAC global IDs
+        self::applyOfacGlobalIDs($jobId, $verbose);
+        JobProgress::updateJobProgress($jobId, 100);    // Force progress to 100% at the end of the job
+    }
+
+    /**
+     * Extract the CSV file from the ZIP archive.
+     * @throws Exception
+     */
+    private static function extractCSVfromZIP(string $zipFilePath, string $originalFilename, bool $verbose = false): string
+    {
+        $base_name = basename($originalFilename, '.zip');
+        $destination_path = storage_path('app/temp/');
+        $destination_file = $destination_path . $base_name . '.csv';
+
+        // Unzip the file
+        $zip = new ZipArchive();
+        $zipStatus = $zip->open($zipFilePath, ZipArchive::RDONLY);
+        if ($zipStatus !== true) {
+            throw new Exception(self::LOG_PREFIX . 'Unable to open the archive: ' . $zipFilePath);
+        }
+        $zip->extractTo($destination_path, [$base_name . '.csv']);
+        $zip->close();
+
+        // Check if the CSV file was extracted successfully
+        if(!file_exists($destination_file)){
+            $message = self::LOG_PREFIX . 'Unable to extract the CSV file from the archive: ' . $zipFilePath;
+            OfflineLog::error($message, $verbose);
+            throw new Exception($message);
+        }
+
+        return $destination_file;
     }
 
     /**
      * Parse the CSV file extracted from the ZIP archive.
      * @throws Exception
      */
-    private static function parseFile(string $zipFilePath, string $originalFilename,  string $jobId, bool $verbose = false): void
+    private static function parseFile(string $csvFilePath, string $jobId, bool $verbose = false): void
     {
-        $base_name = basename($originalFilename, '.zip');
-        Zip::extract($zipFilePath, storage_path('app/' . $base_name), false, true);
-        $csv_file = storage_path('app/' . $base_name . '/' . basename($originalFilename, '.zip') . '.csv');
-        if(file_exists($csv_file)){
-            $generator = new CSVReader($csv_file);
-            foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
+        $generator = new CSVReader($csvFilePath);
+        foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
 
-                // Prepare the chunk for upsert
-                $chunk = collect($chunk)->map(function ($item) {
-                    return [
-                        'global_id' => $item['ISO3'] !== null && $item['WDPAID'] !== null
-                            ? $item['ISO3'] . '_' . $item['WDPAID']
-                            : null,
-                        'country' => $item['ISO3'] ?? null,
-                        'wdpa_id' => $item['WDPAID'] ?? null,
-                        'name' => $item['NAME'] ?? null,
-                        'iucn_category' => $item['IUCN_CAT'] ?? null,
-                        'creation_date' => $item['STATUS_YR'] ?? null,
-                        'perimeter' => $item['REP_AREA'] ?? null,
-                        'area' => $item['GIS_AREA'] ?? null,
-                        'shape_index' => $item['GIS_M_AREA'] ?? null,
-                    ];
-                })->toArray();
+            // Prepare the chunk for upsert
+            $chunk = collect($chunk)->map(function ($item) {
+                return [
+                    'global_id' => $item['ISO3'] !== null && $item['WDPAID'] !== null
+                        ? $item['ISO3'] . '_' . $item['WDPAID']
+                        : null,
+                    'country' => $item['ISO3'] ?? null,
+                    'wdpa_id' => $item['WDPAID'] ?? null,
+                    'name' => $item['NAME'] ?? null,
+                    'iucn_category' => $item['IUCN_CAT'] ?? null,
+                    'creation_date' => $item['STATUS_YR'] ?? null,
+                    'perimeter' => $item['REP_AREA'] ?? null,
+                    'area' => $item['GIS_AREA'] ?? null,
+                    'shape_index' => $item['GIS_M_AREA'] ?? null,
+                ];
+            })->toArray();
 
-                try{
-                    // Upsert the current chunk into the database
-                    ProtectedArea::upsert(
-                        $chunk,
-                        ['global_id']
-                    );
+            try{
+                // Upsert the current chunk into the database
+                ProtectedArea::upsert(
+                    $chunk,
+                    ['global_id']
+                );
 
-                    // Update job progress
-                    $progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                    JobProgress::updateJobProgress($jobId, $progress);
+                // Update job progress
+                $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
+                $total_progress = $partial_progress/100*80 + 10; // CSV parsing takes 80% of the job progress, starting from 10%
+                JobProgress::updateJobProgress($jobId, $total_progress);
 
-                } catch (Exception $e) {
-                    OfflineLog::error(self::LOG_PREFIX . 'Error while upserting protected areas from CSV file', $verbose);
-                }
+            } catch (Exception $e) {
+                OfflineLog::error(self::LOG_PREFIX . 'Error while upserting protected areas from CSV file', $verbose);
             }
-        } else {
-            OfflineLog::error(self::LOG_PREFIX . 'CSV file not found in the extracted ZIP archive (' . $csv_file . ')', $verbose);
-            throw new Exception("CSV file not found in the extracted ZIP archive: " . $csv_file);
         }
+
     }
 
     /**
      * Apply OFAC global IDs: still needed for import old IMET JSONs (which still using global_id instead of wdpa_id)
-     * @param bool $verbose
-     * @return void
      */
-    private static function applyOfacGlobalIDs(bool $verbose = false): void
+    private static function applyOfacGlobalIDs(string $jobId, bool $verbose = false): void
     {
         $filepath = database_path(self::OFAC_GLOBAL_IDS_FILE);
 
         OfflineLog::info(self::LOG_PREFIX . "Applying OFAC global IDs from CSV file: " . $filepath, $verbose);
 
         $generator = new CSVReader($filepath);
-        foreach ($generator->rows(self::CHUNK_SIZE) as $chunk) {
+        foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
             foreach ($chunk as $row) {
+
+                // Overwrite the global_id
                 $pa = ProtectedArea::where('wdpa_id', $row['wdpa_id'])->first();
                 if($pa !== null){
                     $pa->global_id = $row['global_id'];
                     $pa->save();
                 }
+
+                // Update job progress
+                $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
+                $total_progress = $partial_progress/100*10 + 90; // OFAC application takes 10% of the job progress, starting from 90%
+                JobProgress::updateJobProgress($jobId, $total_progress);
             }
         }
 
