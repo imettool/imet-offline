@@ -9,15 +9,16 @@
  */
 
 #imet_footer {
-    display: flex;
-    @apply bg-gray-100;
-    justify-content: space-evenly;
-    padding: 8px;
-    @apply text-sm;
+    @apply flex justify-evenly p-2 bg-gray-100 text-sm;
     .version{
         @apply font-bold text-primary-600 mr-2;
     }
     .channel{
         @apply font-bold text-red-600;
     }
+}
+
+#update_footer {
+    @apply flex justify-end text-sm px-3 py-1 italic
+
 }

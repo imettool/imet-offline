@@ -22,22 +22,28 @@ use Native\Laravel\Events\AutoUpdater\UpdateNotAvailable;
 
 class UpdaterListener
 {
-    public function handle(CheckingForUpdate|UpdateAvailable|UpdateNotAvailable|DownloadProgress|UpdateDownloaded|UpdateCancelled|Error $event): void
+    public function handle(CheckingForUpdate|
+                           UpdateAvailable|
+                           UpdateNotAvailable|
+                           DownloadProgress|
+                           UpdateDownloaded|
+                           UpdateCancelled|
+                           Error $event): void
     {
         if($event instanceof CheckingForUpdate){
-            Log::info('Checking for updates...');
+            Log::info(trans('offline.update.checking'));
         } elseif($event instanceof UpdateAvailable) {
-            Log::info('Update available: ' . $event->releaseName . ' (Version: ' . $event->version . ')');
+            Log::info(trans('offline.update.available') . ':'  . $event->version);
         } elseif($event instanceof UpdateNotAvailable) {
-            Log::info('No updates available.');
+            Log::info(trans('offline.update.not_available'));
         } elseif($event instanceof DownloadProgress) {
-            Log::info('Download progress: ' . $event->percent . '% (' . $event->transferred . ' of ' . $event->total . ' bytes)');
+            Log::info(trans('offline.update.downloading') . ':'  . $event->percent);
         } elseif($event instanceof UpdateDownloaded) {
-            Log::info('Update downloaded successfully.');
+            Log::info(trans('offline.update.downloaded'));
         } elseif($event instanceof UpdateCancelled) {
-            Log::info('Update cancelled.');
+            Log::info(trans('offline.update.cancelled'));
         } elseif($event instanceof Error) {
-            Log::error('Error occurred while checking for updates: ' . $event->message);
+            Log::info(trans('offline.update.error') . ':'  . $event->message);
         }
     }
 

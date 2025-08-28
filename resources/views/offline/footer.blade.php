@@ -2,6 +2,26 @@
 use ModularForms\Helpers\Template;
 
 ?>
+
+<section id="update_footer">
+
+    <!-- Check for updates -->
+    <div>
+        <span v-if="status === STATUSES['CHECKING']">@lang('offline.update.checking')</span>
+        <span v-else-if="status === STATUSES['NOT_AVAILABLE']">@lang('offline.update.not_available')</span>
+        <span v-else-if="status === STATUSES['AVAILABLE']" class="highlight font-bold">
+            @lang('offline.update.available'): <span v-html="newVersion"></span>
+        </span>
+        <span v-else-if="status === STATUSES['DOWNLOADING']">
+            @lang('offline.update.downloading'): <span v-html="downloadProgress"></span>
+        </span>
+        <span v-else-if="status === STATUSES['DOWNLOADED']" class="highlight">@lang('offline.update.downloaded')</span>
+        <span v-else-if="status === STATUSES['ERROR']" class="error">@lang('offline.update.error')</span>
+    </div>
+
+</section>
+
+
 <section id="imet_footer">
 
     <!-- Logs -->
@@ -23,3 +43,11 @@ use ModularForms\Helpers\Template;
     <div class="font-bold">{{ config('nativephp.copyright') }}</div>
 
 </section>
+
+
+@push('scripts')
+    <script type="module">
+        (new window.OfflineImet.CheckUpdatesApp())
+            .mount('#update_footer');
+    </script>
+@endpush
