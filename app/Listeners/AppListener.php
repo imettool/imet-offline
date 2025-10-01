@@ -11,6 +11,7 @@
 
 namespace App\Listeners;
 
+use App\Helpers\ImetEnv;
 use App\Jobs\InitializeOfflineTool;
 use Illuminate\Support\Facades\App;
 use Log;
@@ -23,7 +24,7 @@ class AppListener
     {
         // Log the application booted event
         Log::info('Booting application...');
-        Log::info('Current version: ' . imet_offline_tool_version());
+        Log::info('Current version: ' . ImetEnv::getVersion());
 
         // First boot: onetime modifications
         if(App::environment('production')) {

@@ -9,24 +9,19 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
-namespace Database\Factories;
+namespace App\Helpers;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\ProtectedArea;
-
-class ProtectedAreaFactory extends Factory
+class ImetEnv extends \ImetCore\Helpers\ImetEnv
 {
-    protected $model = ProtectedArea::class;
 
-    public function definition(): array
+    /**
+     * Return the IMET offline tool version
+     */
+    public static function getVersion(): string
     {
-        $country = fake()->countryISOAlpha3();
-        $wdpaId = fake()->randomNumber(5, true);
-        return [
-            'global_id' => $country . '_' . $wdpaId,
-            'country' => $country,
-            'wdpa_id' => $wdpaId,
-            'name' => fake()->firstName . ' national park',
-        ];
+        return static::isDevEnv()
+            ? 'DEV (' . config('nativephp.version') . ')'
+            : config('nativephp.version');
     }
+
 }

@@ -6,8 +6,8 @@
     "require": {
         "php": ">=8.4",
         "ext-zip": "*",
-        "andreamarelli/imet-core": "^2.0.6",
-        "andreamarelli/modular-forms": "^2.0.3",
+        "andreamarelli/imet-core": "^3.0.1",
+        "andreamarelli/modular-forms": "^3.3.2",
         "guzzlehttp/guzzle": "^7.9.3",
         "laravel/framework": "^12.20.0",
         "laravel/ui": "^4.6.1",

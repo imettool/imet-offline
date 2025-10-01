@@ -11,6 +11,8 @@
 
 namespace Database\Seeders;
 
+use App\Helpers\SpeciesUpdater;
+use App\Models\Country;
 use App\Models\ProtectedArea;
 use ModularForms\Helpers\Input\SelectionList;
 use ImetCore\Models\Species;
@@ -181,6 +183,9 @@ class DatabaseSeeder extends Seeder
     {
         // Add protected areas
         ProtectedArea::factory()->count(50)->create();
+
+        // Add species from CSV
+        SpeciesUpdater::insertSpeciesAndVernacularNames(Str::uuid()->toString());
 
         $pas = ProtectedArea::all()->random(10);
         $modules = array_merge(Imet\v2\Imet::allModules(), Imet\v2\Imet_Eval::allModules());

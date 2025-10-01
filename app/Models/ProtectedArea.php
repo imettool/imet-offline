@@ -11,6 +11,8 @@
 
 namespace App\Models;
 
+use Database\Factories\ProtectedAreaFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use ImetCore\Models\ProtectedArea as BaseProtectedArea;
 
@@ -21,4 +23,10 @@ use ImetCore\Models\ProtectedArea as BaseProtectedArea;
 class ProtectedArea extends BaseProtectedArea
 {
     use HasFactory;
+
+    protected static function newFactory(): Factory
+    {
+        return ProtectedAreaFactory::new();
+    }
+
 }

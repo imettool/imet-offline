@@ -9,24 +9,19 @@
  * If not, see <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12 >.
  */
 
-namespace Database\Factories;
+namespace App\Helpers;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\ProtectedArea;
+use App\Models\Country;
 
-class ProtectedAreaFactory extends Factory
+class SelectionList
 {
-    protected $model = ProtectedArea::class;
-
-    public function definition(): array
+    public static function getCustomList(string $type): array
     {
-        $country = fake()->countryISOAlpha3();
-        $wdpaId = fake()->randomNumber(5, true);
-        return [
-            'global_id' => $country . '_' . $wdpaId,
-            'country' => $country,
-            'wdpa_id' => $wdpaId,
-            'name' => fake()->firstName . ' national park',
-        ];
+        // Non filtered Country list
+        if($type === "Country"){
+            return Country::selectionList();
+        }
+
+        return \ImetCore\Helpers\SelectionList::getCustomList($type);
     }
 }

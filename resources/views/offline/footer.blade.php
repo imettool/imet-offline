@@ -1,4 +1,6 @@
 <?php
+
+use App\Helpers\ImetEnv;
 use ModularForms\Helpers\Template;
 
 ?>
@@ -36,7 +38,7 @@ use ModularForms\Helpers\Template;
 
     <!-- Version -->
     <div>
-        @lang('offline.version'): <span class="font-bold text-primary-600">{{ imet_offline_tool_version()  }}</span>
+        @lang('offline.version'): <span class="font-bold text-primary-600">{{ ImetEnv::getVersion() }}</span>
     </div>
 
     <!-- Copyright -->
