@@ -1,7 +1,7 @@
 {
     "name": "andreamarelli/imet",
     "description": "Imet Offline Tool",
-    "license": "EUPL-1.2",
+    "license": "GPL-3.0-only",
     "version": "3.0.0-rc.25",
     "require": {
         "php": ">=8.4",

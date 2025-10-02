@@ -33,5 +33,8 @@ and in buffer areas of Protected Areas. The IMET conserved areas tool:
 Copyright (C) 2025 European Union
 
 ## License
-The IMET Offline distributed under the terms of the _EU Public License (EUPL) v1.2_. For more details and the full text 
-of the license, please refer to the [LICENSE](LICENSE) file in the repository.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
