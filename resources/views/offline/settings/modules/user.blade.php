@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 use ModularForms\Helpers\DOM;
 use ModularForms\Helpers\Input\SelectionList;
 
@@ -8,8 +10,16 @@ use ModularForms\Helpers\Input\SelectionList;
 
 
 <div class="module-container" id="module_setting_offline_user">
+
     <div class="module-header">
         <div class="module-title">{{ ucfirst(trans('settings.user.title')) }}</div>
+    </div>
+
+    <div class="module-bar info-bar">
+        <div class="icon"><span class="fas fa-fw fa-info-circle text-lg"></span></div>
+        <div class="message">
+            <span>@lang('setup.user.info')</span>
+        </div>
     </div>
 
     <div class="module-body">
@@ -65,12 +75,21 @@ use ModularForms\Helpers\Input\SelectionList;
     </div>
     @include('modular-forms::module.components.bars.save')
 
+    @if(Str::contains(Route::current()->getName(), 'setup'))
+        <div class="module-bar save-bar" v-if="status === 'complete'">
+            <div class="message"></div>
+            <div class="buttons">
+                <a href="{{ route('setup.species') }}" class="btn-nav big">@uclang('setup.next')</a>
+            </div>
+        </div>
+    @endif
+
 </div>
 
 
 @push('scripts')
     <script type="module">
-        (new window.OfflineImet.SettingsApp(@json($user)))
+        (new window.OfflineImet.UserProfileApp(@json($user)))
             .mount('#module_setting_offline_user');
     </script>
 @endpush

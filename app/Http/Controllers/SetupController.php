@@ -11,6 +11,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ImetEnv;
 use App\Helpers\ProtectedAreaUpdaterCSV;
 use App\Helpers\SpeciesUpdater;
 use App\Models\User;
@@ -21,7 +22,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
-use ImetCore\Models\Species;
 use ModularForms\Helpers\File\File;
 use ModularForms\Models\Module;
 use ModularForms\Models\Traits\Payload;
@@ -29,6 +29,13 @@ use Str;
 
 class SetupController extends Controller
 {
+    const array TIMELINE = [
+        'info',
+        'user',
+        'species',
+        'wdpas',
+        'done'
+    ];
 
     /**
      * Display the setup page if the application is in its first boot.
@@ -37,7 +44,7 @@ class SetupController extends Controller
     public function index()
     {
         // If first boot, redirect to the setup page
-        if(Species::count() < 10){
+        if(ImetEnv::isFirstBoot()){
             return redirect()->route('setup.info');
         }
 
@@ -52,7 +59,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.info', [
             'current_step' => 'info',
-            'timeline' => trans('setup.timeline')
+            'timeline' => self::TIMELINE
         ]);
     }
 
@@ -63,7 +70,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.user', [
             'current_step' => 'user',
-            'timeline' => trans('setup.timeline'),
+            'timeline' => self::TIMELINE,
             'user' => [
                 'records' => Auth::user()
                     ->toArray(),
@@ -90,8 +97,7 @@ class SetupController extends Controller
         }
 
         // Save the user profile
-        $user = (new User())->update_offline($records);
-
+        $user = new User()->update_offline($records);
 
         return [
             'id' => 0,
@@ -108,7 +114,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.species', [
             'current_step' => 'species',
-            'timeline' => trans('setup.timeline'),
+            'timeline' => self::TIMELINE,
             'vueData' => [
                 'save_url' => route('setup.species.save'),
                 'job_id' => Str::uuid()->toString()
@@ -133,7 +139,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.wdpas', [
             'current_step' => 'wdpas',
-            'timeline' => trans('setup.timeline'),
+            'timeline' => self::TIMELINE,
             'vueData' => [
                 'records' => [
                     'dataset_upload' => Module::$upload_object
@@ -169,7 +175,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.done', [
             'current_step' => 'done',
-            'timeline' => trans('setup.timeline')
+            'timeline' => self::TIMELINE
         ]);
     }
 

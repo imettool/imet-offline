@@ -4,28 +4,20 @@
 
 ?>
 
-@extends('modular-forms::layouts.forms')
+@extends('layouts.setup')
 
-@section('content')
+@section('setup-content')
 
-    <div class="flex flex-col items-center">
+    <!-- Timeline -->
+    @include('offline.setup.components.timeline', ['timeline' => $timeline, 'current_step' => $current_step])
 
-        <!-- Logo & title -->
-        <img src="{{ asset('icon.png') }}" alt="Logo" class="w-32">
-        <div class="text-2xl font-bold text-primary-600">@lang('offline.title')</div>
+    <!-- Description -->
+    <div class="my-4 text-center">@lang('setup.done.description')</div>
 
-        <!-- Timeline -->
-        @include('offline.setup.components.timeline', ['timeline' => $timeline, 'current_step' => $current_step])
-
-    </div>
-
-    <style>
-        .content{
-            min-width: 850px !important;
-            max-width: 1050px !important;
-        }
-    </style>
-
+    <!-- Proceed buttons -->
+    <a class="btn-nav big !px-4 !text-xl !tracking-normal" href="{{ route('home') }}">
+        @uclang('offline.actions.proceed')
+    </a>
 
 @endsection
 

@@ -11,8 +11,18 @@
 
 namespace App\Helpers;
 
+use ImetCore\Models\Species;
+
 class ImetEnv extends \ImetCore\Helpers\ImetEnv
 {
+
+    /**
+     * Check if the application is in its first boot and the setup process should be run.
+     */
+    public static function isFirstBoot(): bool
+    {
+        return Species::query()->count() < 10;
+    }
 
     /**
      * Return the IMET offline tool version

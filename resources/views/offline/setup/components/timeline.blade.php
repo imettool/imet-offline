@@ -7,13 +7,13 @@ $is_current_step = false;
 
 ?>
 
-<div class="flex w-full gap-4 mx-4 justify-around
+<div class="flex w-full gap-4 mx-4 mb-6 justify-around
      relative before:absolute before:inset-0 before:mt-5 before:-translate-y-px before:w-full before:h-0.5 before:bg-gradient-to-l before:from-transparent before:via-slate-300 before:to-transparent">
 
-    @foreach($timeline as $idx => $item)
+    @foreach($timeline as $item)
 
         @php
-            if($idx === $current_step){
+            if($item === $current_step){
                 $is_prev_step = false;
                 $is_current_step = true;
             } else if(!$is_prev_step){
@@ -38,16 +38,9 @@ $is_current_step = false;
 
             <!-- Card -->
             <div class="bg-white p-4 rounded border border-slate-200 shadow">
-                <div class="font-bold text-nowrap text-slate-900 mb-1">{{ $item['title'] }}</div>
-                @if($is_current_step)
-                    <div class="italic text-sm mb-2">{!! $item['description'] !!}</div>
-                @endif
-                @if($is_current_step && $current_step === 'done')
-                    <div class="flex justify-end">
-                    <a href="{{ route('home') }}" class="btn-nav ">@uclang('offline.actions.proceed')</a>
-                    </div>
-                @endif
-
+                <div class="font-bold text-nowrap text-slate-900 mb-1">
+                    @lang('setup.' . $item . '.timeline')
+                </div>
             </div>
 
         </div>

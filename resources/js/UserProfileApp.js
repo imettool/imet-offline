@@ -15,12 +15,12 @@ import {reactive, ref, watch, toRaw, onMounted, nextTick} from "vue";
 import simpleText from "@modular-forms/js/inputs/simple-text.vue";
 import simplePassword from "@modular-forms/js/inputs/simple-password.vue";
 
-export default class SettingsApp extends Base {
+export default class UserProfileApp extends Base {
 
     constructor(input_data) {
 
         const options = {
-            name: 'SettingsApp',
+            name: 'UserProfileApp',
 
             props: {
                 records: Object,
@@ -46,7 +46,17 @@ export default class SettingsApp extends Base {
 
                 onMounted(() => {
                     status.value = 'idle';
+                    if(isAlreadyComplete()){
+                        status.value = 'complete';
+                    }
                 });
+
+                function isAlreadyComplete(){
+                    return records.name !== null &&
+                        records.organisation !== null &&
+                        records.function !== null &&
+                        records.country !== null;
+                }
 
                 function resetModule(){
                    replaceRecords(records_backup);
@@ -54,6 +64,7 @@ export default class SettingsApp extends Base {
                         status.value = 'idle';
                     });
                 }
+
                 function saveModule(){
                     status.value = 'saving';
 
@@ -91,7 +102,6 @@ export default class SettingsApp extends Base {
                         .catch(function (error) {
                             status.value = 'error';
                         });
-
                 }
 
                 function replaceRecords(newRecords){

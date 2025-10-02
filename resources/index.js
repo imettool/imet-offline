@@ -22,8 +22,8 @@ window.Native = window.Native || {};
 // Apps
 window.OfflineImet = {}
 
-import SettingsApp from "./js/SettingsApp.js";
-window.OfflineImet.SettingsApp = SettingsApp;
+import UserProfileApp from "./js/UserProfileApp.js";
+window.OfflineImet.UserProfileApp = UserProfileApp;
 
 import SpeciesSetupApp from "./js/SpeciesSetupApp.js";
 window.OfflineImet.SpeciesSetupApp = SpeciesSetupApp;

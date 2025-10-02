@@ -1,32 +1,34 @@
 <?php
-use \Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Session;
+
+if (Session::has('lists')) {
+    Session::forget('lists');
+}
+
 ?>
 
-
-@extends('modular-forms::layouts.forms')
-
+@extends('modular-forms::layouts.base')
 
 @section('body')
 
-    <header>
-        @include('offline.header')
-    </header>
+    <body class="flex flex-col">
 
-    <main class="one-col">
-        <section class="content">
+        <header>
+            @include('offline.header')
+        </header>
 
-            <?php
-            if(Session::has('lists')){
-                Session::forget('lists');
-            }
-            ?>
-            @yield('content')
+        <main class="one-col">
+            <section class="content">
 
-        </section>
-    </main>
+                @yield('content')
 
-    <footer>
-        @include('offline.footer')
-    </footer>
+            </section>
+        </main>
+
+        <footer>
+            @include('offline.footer')
+        </footer>
+
+    </body>
 
 @endsection

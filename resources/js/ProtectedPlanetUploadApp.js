@@ -25,7 +25,10 @@ export default class ProtectedPlanetUploadApp extends Base {
 
             props: {
                 records: Object,
-                save_url: String,
+                save_url: {
+                    type: String,
+                    default: null
+                },
                 job_id: String,
             },
 

@@ -25,7 +25,15 @@ return [
     ],
 
     'user' => [
-        'title' => 'User profile',
-    ]
+        'title' => 'Personal information',
+    ],
+
+    'wdpas' => [
+        'info' => 'With the following procedure it is possible to update <b>The World Database on Protected Areas (WDPA)</b>
+                    and <b>The World Database on Other Effective Area-based Conservation Measures (WD-OECM)</b> integrated
+                    into the application.
+                    The datasets are required in order to create new assessments and to associate them with the correct
+                    Protected Area or OECM.'
+    ],
 
 ];

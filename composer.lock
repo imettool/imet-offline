@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31ff5910c3771c89f73885a569d340f0",
+    "content-hash": "07704822e1b56e9b6f158cfce2e73fa9",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
@@ -68,16 +68,16 @@
         },
         {
             "name": "andreamarelli/modular-forms",
-            "version": "3.3.2",
+            "version": "3.3.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/modular-forms.git",
-                "reference": "8f60d050cc4f684d40930f43fd464910ceb9d220"
+                "reference": "f35fc68a5c98b57bac400b86709d3e65d17ff8ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/8f60d050cc4f684d40930f43fd464910ceb9d220",
-                "reference": "8f60d050cc4f684d40930f43fd464910ceb9d220",
+                "url": "https://api.github.com/repos/andreamarelli/modular-forms/zipball/f35fc68a5c98b57bac400b86709d3e65d17ff8ca",
+                "reference": "f35fc68a5c98b57bac400b86709d3e65d17ff8ca",
                 "shasum": ""
             },
             "require": {
@@ -130,10 +130,10 @@
             ],
             "description": "A package to build modular data collection forms",
             "support": {
-                "source": "https://github.com/andreamarelli/modular-forms/tree/v3.3.2",
+                "source": "https://github.com/andreamarelli/modular-forms/tree/v3.3.3",
                 "issues": "https://github.com/andreamarelli/modular-forms/issues"
             },
-            "time": "2025-10-01T13:48:22+00:00"
+            "time": "2025-10-02T09:33:30+00:00"
         },
         {
             "name": "brick/math",
