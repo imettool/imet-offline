@@ -18,9 +18,15 @@ namespace App\Helpers;
 
 use Illuminate\Support\Str;
 use ImetCore\Helpers\DependencyParser as BaseDependencyParser;
+use Override;
 
 class DependencyParser extends BaseDependencyParser
 {
+
+    /**
+     * Override: exclude imet-core from the list of NPM dependencies
+     */
+    #[Override]
     protected static function getNpmDirectDependencyList(bool $includeDev): array
     {
         $dependencies = parent::getNpmDirectDependencyList($includeDev);
@@ -32,6 +38,7 @@ class DependencyParser extends BaseDependencyParser
     /**
      * Override: hardcode license for imet-core
      */
+    #[Override]
     protected static function retrieveLicense(array $packageInfo): array
     {
         $license = parent::retrieveLicense($packageInfo);
@@ -50,6 +57,27 @@ class DependencyParser extends BaseDependencyParser
         }
 
         return array_unique($license);
+    }
+
+    #[\Override]
+    protected static function generateDependenciesOutput(array $dependencies): string
+    {
+        $parentOutput = parent::generateDependenciesOutput($dependencies);
+
+        // Add "Catalogue of Life" entry
+        $colOutput = '__Catalogue of Life, 2025-08-26__' . PHP_EOL;
+        $colOutput .= "  * https://www.catalogueoflife.org/" . PHP_EOL;
+        $colOutput .= "  * License: CC-BY-4.0" . PHP_EOL;
+        $colOutput .= "  * Copyright:" . PHP_EOL;
+        $colOutput .= "     * Copyright (c) 2022, Catalogue of Life." . PHP_EOL;
+        $colOutput .=
+            "  * Citation: Bánki, O., Roskov, Y., Döring, M., Ower, G., Hernández Robles, D. R., Plata Corredor, C. A.,
+            Stjernegaard Jeppesen, T., Örn, A., Pape, T., Hobern, D., Garnett, S., Little, H., DeWalt, R. E., Miller, J.,
+            Orrell, T., Aalbu, R., Abbott, J., Aedo, C., Aescht, E., et al. (2025). Catalogue of Life (Version 2025-09-11).
+            Catalogue of Life Foundation, Amsterdam, Netherlands. https://doi.org/10.48580/dgt98" . PHP_EOL;
+
+
+        return $parentOutput . $colOutput;
     }
 
 }

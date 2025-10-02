@@ -80,6 +80,15 @@ __symfony/console v7.3.4__
   * Copyright: 
     * Copyright (c) 2004-present Fabien Potencier 
 
+__Catalogue of Life, 2025-08-26__
+  * https://www.catalogueoflife.org/
+  * License: CC-BY-4.0
+  * Copyright:
+     * Copyright (c) 2022, Catalogue of Life.
+  * Citation: Bánki, O., Roskov, Y., Döring, M., Ower, G., Hernández Robles, D. R., Plata Corredor, C. A., 
+Stjernegaard Jeppesen, T., Örn, A., Pape, T., Hobern, D., Garnett, S., Little, H., DeWalt, R. E., Miller, J., Orrell, T., 
+Aalbu, R., Abbott, J., Aedo, C., Aescht, E., et al. (2025). Catalogue of Life (Version 2025-09-11). Catalogue of Life Foundation, 
+Amsterdam, Netherlands. https://doi.org/10.48580/dgt98
 ____________
 __EUPL-1.2__
 
