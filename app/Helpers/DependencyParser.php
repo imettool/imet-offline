@@ -36,6 +36,22 @@ class DependencyParser extends BaseDependencyParser
     }
 
     /**
+     * Override: hardcode copyright for specific packages
+     */
+    #[Override]
+    protected static function retrieveCopyright(array $packageInfo, string $mode): ?string
+    {
+        $copyright = parent::retrieveCopyright($packageInfo, $mode);
+
+        // Hardcode copyright for specific packages
+        if(Str::contains($packageInfo['name'], 'imet-core')) {
+            return BaseDependencyParser::COPYRIGHT;
+        }
+
+        return $copyright;
+    }
+
+    /**
      * Override: hardcode license for imet-core
      */
     #[Override]
