@@ -53,21 +53,6 @@ class InitializeOfflineTool implements ShouldQueue
             Log::error('Trying to force debug mode in .env file, but the file does not exist: ' . $env_path);
         }
 
-        // Hard coded: set temporary Github token for auto-updater
-        // TODO: remove as soon as the imet-offline repository is public
-        $github_token = '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';
-        $config_file_path = app_path() . '/../../../../app-update.yml';
-        if (file_exists($config_file_path)) {
-            $config_content = file_get_contents($config_file_path);
-            if (!Str::contains($config_content, 'token:')) {
-                file_put_contents($config_file_path, PHP_EOL . 'token: ' . $github_token, FILE_APPEND);
-                Log::warning('GitHub token set in updater config yml file.');
-                $relaunch_to_apply = true;
-            }
-        } else {
-            Log::error('Trying to set GitHub token in updater config file, but the file does not exist: ' . $config_file_path);
-        }
-
         // Relaunch the application to apply changes
         if($relaunch_to_apply) {
             Log::warning('Relaunching the application to apply changes.');
