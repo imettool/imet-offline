@@ -55,7 +55,7 @@ class InitializeOfflineTool implements ShouldQueue
 
         // Hard coded: set temporary Github token for auto-updater
         // TODO: remove as soon as the imet-offline repository is public
-        $github_token = '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';
+        $github_token = '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';
         $config_file_path = app_path() . '/../../../../app-update.yml';
         if (file_exists($config_file_path)) {
             $config_content = file_get_contents($config_file_path);
