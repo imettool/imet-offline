@@ -23,7 +23,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Str;
 use Log;
-use Native\Laravel\Facades\App;
+use Native\Desktop\Facades\App;
 
 class InitializeOfflineTool implements ShouldQueue
 {

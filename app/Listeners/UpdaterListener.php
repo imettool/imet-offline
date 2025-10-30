@@ -17,13 +17,13 @@
 namespace App\Listeners;
 
 use Log;
-use Native\Laravel\Events\AutoUpdater\CheckingForUpdate;
-use Native\Laravel\Events\AutoUpdater\DownloadProgress;
-use Native\Laravel\Events\AutoUpdater\Error;
-use Native\Laravel\Events\AutoUpdater\UpdateAvailable;
-use Native\Laravel\Events\AutoUpdater\UpdateCancelled;
-use Native\Laravel\Events\AutoUpdater\UpdateDownloaded;
-use Native\Laravel\Events\AutoUpdater\UpdateNotAvailable;
+use Native\Desktop\Events\AutoUpdater\CheckingForUpdate;
+use Native\Desktop\Events\AutoUpdater\DownloadProgress;
+use Native\Desktop\Events\AutoUpdater\Error;
+use Native\Desktop\Events\AutoUpdater\UpdateAvailable;
+use Native\Desktop\Events\AutoUpdater\UpdateCancelled;
+use Native\Desktop\Events\AutoUpdater\UpdateDownloaded;
+use Native\Desktop\Events\AutoUpdater\UpdateNotAvailable;
 
 class UpdaterListener
 {
