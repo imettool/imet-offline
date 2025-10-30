@@ -22,7 +22,6 @@ import '@imet-core/index.js';
 
 // Global variables - make them accessible from modules and from blade views
 window.Laravel = window.Laravel || {};
-window.Native = window.Native || {};
 
 // Apps
 window.OfflineImet = {}
