@@ -56,6 +56,7 @@ class ResetDevEnv extends Command
         $this->clearFolder(storage_path('framework'), ['cache', 'sessions', 'testing', 'views', '.gitignore']);
         $this->clearFolder(storage_path('logs'), ['.gitignore']);
         $this->clearFolder(storage_path('releases'), ['.gitkeep']);
+        $this->clearFolder(base_path('nativephp/electron/dist'), ['.gitkeep']);
 
         // Clear the assets and node_modules/ directories
         intro('Resetting node_modules/');
