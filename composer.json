@@ -2,11 +2,11 @@
     "name": "andreamarelli/imet",
     "description": "Imet Offline Tool",
     "license": "GPL-3.0-only",
-    "version": "3.0.0-rc.26",
+    "version": "3.0.0-rc.27",
     "require": {
         "php": ">=8.4",
         "ext-zip": "*",
-        "andreamarelli/imet-core": "^3.0.1",
+        "andreamarelli/imet-core": "^3.1.0",
         "guzzlehttp/guzzle": "^7.9.3",
         "laravel/framework": "^12.20.0",
         "laravel/ui": "^4.6.1",
