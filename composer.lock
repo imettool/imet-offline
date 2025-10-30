@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "936b05b132f803146b8e893b79c75afb",
+    "content-hash": "a576e70ca767e0d4c1a6e2f3f4a962f4",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "3.1.0",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "98d5b59032010516883fcb4cd074ad29047e9396"
+                "reference": "af55bb7eac34a345ca279e6bb2cc94076e04b4ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/98d5b59032010516883fcb4cd074ad29047e9396",
-                "reference": "98d5b59032010516883fcb4cd074ad29047e9396",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/af55bb7eac34a345ca279e6bb2cc94076e04b4ef",
+                "reference": "af55bb7eac34a345ca279e6bb2cc94076e04b4ef",
                 "shasum": ""
             },
             "require": {
@@ -44,6 +44,18 @@
                     "src/helpers.php"
                 ]
             },
+            "archive": {
+                "exclude": [
+                    ".run",
+                    "dev",
+                    "docker",
+                    ".dockerignore",
+                    ".gitattributes",
+                    ".gitignore",
+                    "docker-compose.yml",
+                    "notice-generator.php"
+                ]
+            },
             "scripts": {
                 "post-update-cmd": [
                     "php notice-generator.php"
@@ -64,10 +76,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/v3.1.0",
+                "source": "https://github.com/andreamarelli/imet-core/tree/v3.1.3",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2025-10-30T11:05:24+00:00"
+            "time": "2025-10-30T15:39:57+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",
