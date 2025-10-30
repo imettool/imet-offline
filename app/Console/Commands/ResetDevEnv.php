@@ -19,8 +19,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Database\Console\Migrations\RefreshCommand;
 use Illuminate\Support\Facades\Process;
-use Native\Electron\Commands\InstallCommand;
-use Native\Electron\Commands\ResetCommand;
+use Native\Desktop\Drivers\Electron\Commands\InstallCommand;
+use Native\Desktop\Drivers\Electron\Commands\ResetCommand;
 use Symfony\Component\Filesystem\Filesystem;
 
 use function Laravel\Prompts\intro;

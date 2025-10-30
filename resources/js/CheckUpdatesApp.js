@@ -44,34 +44,34 @@ export default class CheckUpdatesApp extends Base {
 
                 if(Object.keys(window.Native).length>0) {
 
-                    window.Native.on("Native\\Laravel\\Events\\Windows\\WindowShown", (payload, event) => {
+                    window.Native.on("Native\\Desktop\\Events\\Windows\\WindowShown", (payload, event) => {
                         status.value = STATUSES.CHECKING
                         setTimeout(function () {
                             status.value = STATUSES.IDLE
                         }, 5000);
                     });
 
-                    window.Native.on("Native\\Laravel\\Events\\AutoUpdater\\CheckingForUpdate", (payload, event) => {
+                    window.Native.on("Native\\Desktop\\Events\\AutoUpdater\\CheckingForUpdate", (payload, event) => {
                         status.value = STATUSES.CHECKING
                     });
-                    window.Native.on("Native\\Laravel\\Events\\AutoUpdater\\UpdateNotAvailable", (payload, event) => {
+                    window.Native.on("Native\\Desktop\\Events\\AutoUpdater\\UpdateNotAvailable", (payload, event) => {
                         status.value = STATUSES.NOT_AVAILABLE
                         setTimeout(function () {
                             status.value = STATUSES.IDLE
                         }, 20000);
                     });
-                    window.Native.on("Native\\Laravel\\Events\\AutoUpdater\\UpdateAvailable", (payload, event) => {
+                    window.Native.on("Native\\Desktop\\Events\\AutoUpdater\\UpdateAvailable", (payload, event) => {
                         status.value = STATUSES.AVAILABLE
                         newVersion.value = payload.version;
                     });
-                    window.Native.on("Native\\Laravel\\Events\\AutoUpdater\\DownloadProgress", (payload, event) => {
+                    window.Native.on("Native\\Desktop\\Events\\AutoUpdater\\DownloadProgress", (payload, event) => {
                         status.value = STATUSES.DOWNLOADING
                         downloadProgress.value = Math.floor(payload.percent);
                     });
-                    window.Native.on("Native\\Laravel\\Events\\AutoUpdater\\UpdateDownloaded", (payload, event) => {
+                    window.Native.on("Native\\Desktop\\Events\\AutoUpdater\\UpdateDownloaded", (payload, event) => {
                         status.value = STATUSES.DOWNLOADED
                     });
-                    window.Native.on("Native\\Laravel\\Events\\AutoUpdater\\Error", (payload, event) => {
+                    window.Native.on("Native\\Desktop\\Events\\AutoUpdater\\Error", (payload, event) => {
                         status.value = STATUSES.ERROR
                         errorMessage.value = payload.message;
                     });
