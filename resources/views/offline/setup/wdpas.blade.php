@@ -17,7 +17,7 @@ use ModularForms\Models\Module;
 
     <!-- Instruction -->
     <div class="w-full mt-4">
-        @include('offline.settings.modules.wdpas', ['vueData' => $vueData)
+        @include('offline.settings.modules.wdpas', ['vueData' => $vueData])
     </div>
 
 @endsection
