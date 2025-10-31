@@ -15,13 +15,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 return [
 
     'title' => 'Outil IMET hors ligne',
     'version' => 'Version',
-    'description' =>
-        '<b>IMET</b> est un outil d\'<i>évaluation de l\'efficacité de la gestion des aires protégées (PAME)</i> qui
+    'description' => '<b>IMET</b> est un outil d\'<i>évaluation de l\'efficacité de la gestion des aires protégées (PAME)</i> qui
         permet une évaluation approfondie des aires protégées marines et terrestres, quel que soit leur catégorie de gestion
         ou leur type de gouvernance. En tant qu\'outil d\'aide à la décision, il aide les gestionnaires d\'aires protégées
         à prendre des décisions de gestion basées sur l\'analyse afin d\'améliorer les résultats de conservation.',
@@ -51,4 +49,3 @@ return [
     ],
 
 ];
-

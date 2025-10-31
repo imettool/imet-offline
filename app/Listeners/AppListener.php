@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -29,21 +30,20 @@ class AppListener
     {
         // Log the application booted event
         Log::info('Booting application...');
-        Log::info('Current version: ' . ImetEnv::getVersion());
+        Log::info('Current version: '.ImetEnv::getVersion());
 
         // First boot: onetime modifications
-        if(App::environment('production')) {
+        if (App::environment('production')) {
             Log::info('Checking if one-time configurations are needed...');
-            dispatch_sync(new InitializeOfflineTool());
+            dispatch_sync(new InitializeOfflineTool);
         }
 
         Log::info('Application booted successfully.');
 
         // Check for updates
-        if(App::environment('production')) {
+        if (App::environment('production')) {
             AutoUpdater::checkForUpdates();
         }
 
     }
-
 }

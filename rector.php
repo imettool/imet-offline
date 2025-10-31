@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -80,7 +81,7 @@ return RectorConfig::configure()
         instanceOf: true,
         earlyReturn: true,
         carbon: true,
-    //        rectorPreset: true,           // To be decided: introduce strict type declaration
+        //        rectorPreset: true,           // To be decided: introduce strict type declaration
     )
     ->withRules([
         EmptyToBlankAndFilledFuncRector::class,

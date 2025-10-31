@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -15,11 +16,10 @@
  */
 
 use App\Http\Controllers\AppController;
-use App\Http\Controllers\SetupController;
-use ModularForms\Controllers\UploadFileController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\SetupController;
 use Illuminate\Support\Facades\Route;
-
+use ModularForms\Controllers\UploadFileController;
 
 Route::middleware(['web'])->group(function (): void {
 
@@ -51,7 +51,6 @@ Route::middleware(['web'])->group(function (): void {
     Route::get('apply_update', [AppController::class, 'apply_update'])->name('apply_update');
 
     // Debug/dev
-    Route::get('info', fn(): true => phpinfo());
+    Route::get('info', fn (): true => phpinfo());
 
 });
-

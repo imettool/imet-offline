@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -42,19 +43,20 @@ class ProtectedAreaUpdaterCSV
 
     /**
      * Update protected areas and OECMs from CSV files.
+     *
      * @throws Exception
      */
     public static function updateProtectedAreasAndOECMs(string $zipFilePath, string $originalFilename, string $jobId, bool $verbose = false): void
     {
-        if(preg_match(self::ALL_REGEX, $originalFilename)){
-            OfflineLog::info( self::LOG_PREFIX . "Processing Protected Areas and OECMs dataset ...", $verbose);
-        } elseif(preg_match(self::WDPA_REGEX, $originalFilename)){
-            OfflineLog::info(self::LOG_PREFIX . "Processing Protected Areas dataset ...", $verbose);
-        } elseif(preg_match(self::OECM_REGEX, $originalFilename)){
-            OfflineLog::info(self::LOG_PREFIX . "Processing OECMs dataset ...", $verbose);
+        if (preg_match(self::ALL_REGEX, $originalFilename)) {
+            OfflineLog::info(self::LOG_PREFIX.'Processing Protected Areas and OECMs dataset ...', $verbose);
+        } elseif (preg_match(self::WDPA_REGEX, $originalFilename)) {
+            OfflineLog::info(self::LOG_PREFIX.'Processing Protected Areas dataset ...', $verbose);
+        } elseif (preg_match(self::OECM_REGEX, $originalFilename)) {
+            OfflineLog::info(self::LOG_PREFIX.'Processing OECMs dataset ...', $verbose);
         } else {
-            OfflineLog::error(self::LOG_PREFIX . "Filename does not match expected patterns: " . $originalFilename, $verbose);
-            throw new Exception("Filename does not match expected patterns: " . $originalFilename);
+            OfflineLog::error(self::LOG_PREFIX.'Filename does not match expected patterns: '.$originalFilename, $verbose);
+            throw new Exception('Filename does not match expected patterns: '.$originalFilename);
         }
 
         // Extract the CSV file from the ZIP archive
@@ -72,25 +74,26 @@ class ProtectedAreaUpdaterCSV
 
     /**
      * Extract the CSV file from the ZIP archive.
+     *
      * @throws Throwable
      */
     private static function extractCSVfromZIP(string $zipFilePath, string $originalFilename, bool $verbose = false): string
     {
         $base_name = basename($originalFilename, '.zip');
         $destination_path = storage_path('app/temp/');
-        $destination_file = $destination_path . $base_name . '.csv';
+        $destination_file = $destination_path.$base_name.'.csv';
 
         // Unzip the file
-        $zip = new ZipArchive();
+        $zip = new ZipArchive;
         $zipStatus = $zip->open($zipFilePath, ZipArchive::RDONLY);
-        throw_if($zipStatus !== true, Exception::class, self::LOG_PREFIX . 'Unable to open the archive: ' . $zipFilePath);
+        throw_if($zipStatus !== true, Exception::class, self::LOG_PREFIX.'Unable to open the archive: '.$zipFilePath);
 
-        $zip->extractTo($destination_path, [$base_name . '.csv']);
+        $zip->extractTo($destination_path, [$base_name.'.csv']);
         $zip->close();
 
         // Check if the CSV file was extracted successfully
-        if(!file_exists($destination_file)){
-            $message = self::LOG_PREFIX . 'Unable to extract the CSV file from the archive: ' . $zipFilePath;
+        if (! file_exists($destination_file)) {
+            $message = self::LOG_PREFIX.'Unable to extract the CSV file from the archive: '.$zipFilePath;
             OfflineLog::error($message, $verbose);
             throw new Exception($message);
         }
@@ -100,6 +103,7 @@ class ProtectedAreaUpdaterCSV
 
     /**
      * Parse the CSV file extracted from the ZIP archive.
+     *
      * @throws Exception
      */
     private static function parseFile(string $csvFilePath, string $jobId, bool $verbose = false): void
@@ -108,9 +112,9 @@ class ProtectedAreaUpdaterCSV
         foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
 
             // Prepare the chunk for upsert
-            $chunk = collect($chunk)->map(fn($item): array => [
+            $chunk = collect($chunk)->map(fn ($item): array => [
                 'global_id' => $item['ISO3'] !== null && $item['WDPAID'] !== null
-                    ? $item['ISO3'] . '_' . $item['WDPAID']
+                    ? $item['ISO3'].'_'.$item['WDPAID']
                     : null,
                 'country' => $item['ISO3'] ?? null,
                 'wdpa_id' => $item['WDPAID'] ?? null,
@@ -122,18 +126,18 @@ class ProtectedAreaUpdaterCSV
                 'shape_index' => $item['GIS_M_AREA'] ?? null,
             ])->all();
 
-            try{
+            try {
 
                 // Upsert the current chunk into the database
                 ProtectedArea::query()->upsert($chunk, ['global_id']);
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = ($partial_progress/100*80) + 10; // CSV parsing takes 80% of the job progress, starting from 10%
+                $total_progress = ($partial_progress / 100 * 80) + 10; // CSV parsing takes 80% of the job progress, starting from 10%
                 event(new TaskProgressing($jobId, $total_progress));
 
             } catch (Exception) {
-                OfflineLog::error(self::LOG_PREFIX . 'Error while upserting protected areas from CSV file', $verbose);
+                OfflineLog::error(self::LOG_PREFIX.'Error while upserting protected areas from CSV file', $verbose);
             }
         }
 
@@ -146,7 +150,7 @@ class ProtectedAreaUpdaterCSV
     {
         $filepath = database_path(self::OFAC_GLOBAL_IDS_FILE);
 
-        OfflineLog::info(self::LOG_PREFIX . "Applying OFAC global IDs from CSV file: " . $filepath, $verbose);
+        OfflineLog::info(self::LOG_PREFIX.'Applying OFAC global IDs from CSV file: '.$filepath, $verbose);
 
         $generator = new CSVReader($filepath);
         foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
@@ -154,18 +158,17 @@ class ProtectedAreaUpdaterCSV
 
                 // Overwrite the global_id
                 $pa = ProtectedArea::query()->where('wdpa_id', $row['wdpa_id'])->first();
-                if($pa !== null){
+                if ($pa !== null) {
                     $pa->global_id = $row['global_id'];
                     $pa->save();
                 }
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = ($partial_progress/100*10) + 90; // OFAC application takes 10% of the job progress, starting from 90%
+                $total_progress = ($partial_progress / 100 * 10) + 90; // OFAC application takes 10% of the job progress, starting from 90%
                 event(new TaskProgressing($jobId, $total_progress));
             }
         }
 
     }
-
 }

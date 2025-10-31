@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -17,15 +18,14 @@
 namespace Database\Seeders;
 
 use App\Helpers\SpeciesUpdater;
-use App\Models\Country;
 use App\Models\ProtectedArea;
-use ModularForms\Helpers\Input\SelectionList;
-use ImetCore\Models\Species;
 use Auth;
 use Exception;
 use Illuminate\Database\Seeder;
-use ImetCore\Models\Imet;
 use Illuminate\Support\Str;
+use ImetCore\Models\Imet;
+use ImetCore\Models\Species;
+use ModularForms\Helpers\Input\SelectionList;
 
 class DatabaseSeeder extends Seeder
 {
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
         $type = $field['type'];
 
         // CUSTOM
-        if(Str::contains($type, '_EcosystemServicesImportance')){
+        if (Str::contains($type, '_EcosystemServicesImportance')) {
             return collect([0, 1])->random();
         }
 
@@ -52,41 +52,41 @@ class DatabaseSeeder extends Seeder
             return fake()->words(4, true);
         }
 
-        if ($type === "url") {
+        if ($type === 'url') {
             return fake()->url();
         }
 
-        if ($type === "email") {
+        if ($type === 'email') {
             return fake()->email();
         }
 
-        if ($type === "password") {
+        if ($type === 'password') {
             return fake()->password();
         }
 
-        if (in_array($type, ["integer", "code", "numeric"], true)) {
+        if (in_array($type, ['integer', 'code', 'numeric'], true)) {
             return fake()->randomNumber(4);
         }
 
-        if ($type === "float"
-            || $type === "currency") {
+        if ($type === 'float'
+            || $type === 'currency') {
             return fake()->randomFloat(2);
         }
 
-        if ($type === "date") {
+        if ($type === 'date') {
             return fake()->date();
         }
 
-        if ($type === "dateMaxToday") {
+        if ($type === 'dateMaxToday') {
             return fake()->dateTimeBetween('-4 years', 'now');
         }
 
-        if ($type === "year") {
+        if ($type === 'year') {
             return fake()->year();
         }
 
-        if ($type === "yearMaxCurrent"
-            || $type === "yearMaxPrev") {
+        if ($type === 'yearMaxCurrent'
+            || $type === 'yearMaxPrev') {
             return fake()->dateTimeBetween('-4 years', '-1 year')->format('Y');
         }
 
@@ -94,6 +94,7 @@ class DatabaseSeeder extends Seeder
             $values = Str::contains($type, 'numeric')
                 ? [0, 1]
                 : ['0', '1'];
+
             return collect($values)->random();
         }
 
@@ -108,6 +109,7 @@ class DatabaseSeeder extends Seeder
             || Str::contains($type, 'currency-unit')) {
             $list_type = SelectionList::getListType($type);
             $cached_list = SelectionList::CacheListInSession($list_type);
+
             return collect($cached_list)
                 ->keys()
                 ->random(Str::contains($type, 'multiple') ? random_int(2, 4) : null);
@@ -116,36 +118,38 @@ class DatabaseSeeder extends Seeder
         if (Str::contains($type, 'rating')) {
             $values = [];
             $rating_type = last(explode('-', (string) $type));
-            if(Str::contains($rating_type, 'WithNA')){
+            if (Str::contains($rating_type, 'WithNA')) {
                 $values[] = '-99';
                 $rating_type = Str::replace('WithNA', '', $rating_type);
             }
 
             [$min, $max] = explode('to', (string) $rating_type);
-            if(Str::contains($min, 'Minus')){
+            if (Str::contains($min, 'Minus')) {
                 $min = Str::replace('Minus', '-', $min);
             }
 
             $min = intval($min);
             $max = intval($max);
             $values = array_merge($values, range($min, $max));
+
             return collect($values)->random();
         }
 
-        if (Str::contains($type, "selector-species")) {
+        if (Str::contains($type, 'selector-species')) {
             $species = \ImetCore\Models\Species::query()->inRandomOrder()->first();
+
             return $species->phylum
-                . '|' . $species->class
-                . '|' . $species->order
-                . '|' . $species->family
-                . '|' . $species->genus
-                . '|' . $species->species;
+                .'|'.$species->class
+                .'|'.$species->order
+                .'|'.$species->family
+                .'|'.$species->genus
+                .'|'.$species->species;
         }
 
         // Standard
-        if (Str::contains($type, "selector-wdpa")) {
-            if(Str::contains($type, 'multiple')){
-                return implode(',', \App\Models\ProtectedArea::query()->inRandomOrder()->limit(random_int(2,5))->get()->pluck('wdpa_id')->toArray());
+        if (Str::contains($type, 'selector-wdpa')) {
+            if (Str::contains($type, 'multiple')) {
+                return implode(',', \App\Models\ProtectedArea::query()->inRandomOrder()->limit(random_int(2, 5))->get()->pluck('wdpa_id')->toArray());
             }
 
             return \App\Models\ProtectedArea::query()->inRandomOrder()->first()->wdpa_id;
@@ -156,7 +160,7 @@ class DatabaseSeeder extends Seeder
 
     private function insertRecords($module, $form_id, int $num_records = 1, ?string $group_key = null): void
     {
-        for($y=1; $y<=$num_records; $y++){
+        for ($y = 1; $y <= $num_records; $y++) {
             $this->insertRecord($module, $form_id, $group_key);
         }
     }
@@ -171,40 +175,40 @@ class DatabaseSeeder extends Seeder
 
         // Inject predefined values
         $predefined = $module::getPredefined($form_id);
-        if($predefined!==null){
+        if ($predefined !== null) {
             $values[$predefined['field']] =
-                $predefined['values']!==null && count($predefined['values']) > 0
+                $predefined['values'] !== null && count($predefined['values']) > 0
                 ? (
-                Str::contains((new $module)->module_type, 'GROUP')
-                    ? collect(collect($predefined['values'])->random())->random()
-                    : collect($predefined['values'])->random()
+                    Str::contains((new $module)->module_type, 'GROUP')
+                        ? collect(collect($predefined['values'])->random())->random()
+                        : collect($predefined['values'])->random()
                 )
                 : null;
         }
 
         // Generate fake values (fields)
-        foreach((new $module)->module_fields as $field){
-            if(!array_key_exists($field['name'], $values)){
+        foreach ((new $module)->module_fields as $field) {
+            if (! array_key_exists($field['name'], $values)) {
                 $values[$field['name']] = self::getFake($module, $field);
             }
         }
 
         // Generate fake values (common_fields)
-        if((new $module)->module_common_fields!==null) {
+        if ((new $module)->module_common_fields !== null) {
             foreach ((new $module)->module_common_fields as $field) {
-                if (!array_key_exists($field['name'], $values)) {
+                if (! array_key_exists($field['name'], $values)) {
                     $values[$field['name']] = self::getFake($module, $field);
                 }
             }
         }
 
         // Add $group_key if required
-        if($group_key!==null){
+        if ($group_key !== null) {
             $values[$module::$group_key_field] = $group_key;
         }
 
         // IMET: force IncludeInStatistics to true
-        if(array_key_exists('IncludeInStatistics', $values)){
+        if (array_key_exists('IncludeInStatistics', $values)) {
             $values['IncludeInStatistics'] = '1';
         }
 
@@ -227,7 +231,7 @@ class DatabaseSeeder extends Seeder
 
         Auth::loginUsingId(0);
 
-        for($i=1; $i<=self::NUM_FORMS; $i++){
+        for ($i = 1; $i <= self::NUM_FORMS; $i++) {
 
             $pa = $pas->random();
 
@@ -242,14 +246,14 @@ class DatabaseSeeder extends Seeder
                 'UpdateBy' => 0,
             ]);
 
-            foreach ($modules as $module){
+            foreach ($modules as $module) {
                 $module_type = (new $module)->module_type;
                 $num_records = (Str::contains($module_type, 'TABLE') || Str::contains($module_type, 'ACCORDION'))
                     ? 4
                     : 1;
 
-                if(Str::contains($module_type, 'GROUP')){
-                    foreach (collect((new $module)->module_groups)->keys() as $group_key){
+                if (Str::contains($module_type, 'GROUP')) {
+                    foreach (collect((new $module)->module_groups)->keys() as $group_key) {
                         $this->insertRecords($module, $form_id, $num_records, $group_key);
                     }
                 } else {
@@ -259,7 +263,6 @@ class DatabaseSeeder extends Seeder
             }
 
         }
-
 
     }
 }

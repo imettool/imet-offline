@@ -72,7 +72,7 @@ return [
         'VITE_*',
         'COMPOSER_*',
         'HTTP_PORT',
-        'UID'
+        'UID',
     ],
 
     /**
@@ -88,7 +88,7 @@ return [
         '*/tests',
         'tests',
         '.run',
-        'docker'
+        'docker',
     ],
 
     /**
@@ -118,7 +118,7 @@ return [
                 'private' => env('GITHUB_PRIVATE', true),
                 'channel' => env('GITHUB_CHANNEL', 'latest'),
                 'releaseType' => env('GITHUB_RELEASE_TYPE', 'draft'),
-            ]
+            ],
         ],
     ],
 
@@ -138,11 +138,11 @@ return [
      * Define your own scripts to run before and after the build process.
      */
     'prebuild' => [
-         'npm run build',
+        'npm run build',
     ],
 
     'postbuild' => [
-//         'rm -rf public/build',
+        //         'rm -rf public/build',
     ],
 
     /**

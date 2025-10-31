@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -26,7 +27,7 @@ return [
             'proxy_port' => 'Port',
             'proxy_user' => 'Utilisateur',
             'proxy_password' => 'Mot de passe',
-        ]
+        ],
     ],
 
     'user' => [
@@ -38,8 +39,7 @@ return [
                     aires protégées (WDPA)</b> et <b>la Base de données mondiale sur d'autres mesures efficaces basées
                     sur des zones de conservation (WD-OECM)</b> intégrées à l'application.
                     Les jeux de données sont nécessaires pour créer de nouvelles évaluations et les associer à la bonne
-                    Aire protégée ou OECM."
+                    Aire protégée ou OECM.",
     ],
 
 ];
-

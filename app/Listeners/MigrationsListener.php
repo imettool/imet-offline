@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -24,13 +25,12 @@ class MigrationsListener
 {
     public function handle(MigrationsStarted|MigrationsEnded $event): void
     {
-        if($event instanceof MigrationsStarted){
+        if ($event instanceof MigrationsStarted) {
             Log::info('Migrations started...');
         }
 
-        if($event instanceof MigrationsEnded) {
+        if ($event instanceof MigrationsEnded) {
             Log::info('Migrations ended.');
         }
     }
-
 }

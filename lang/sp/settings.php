@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -26,7 +27,7 @@ return [
             'proxy_port' => 'Puerto',
             'proxy_user' => 'Usuario',
             'proxy_password' => 'Contraseña',
-        ]
+        ],
     ],
 
     'user' => [
@@ -38,8 +39,7 @@ return [
                     (WDPA)</b> y <b>la Base de Datos Mundial sobre Otras Medidas Efectivas basadas en Áreas de Conservación
                     (WD-OECM)</b> integradas en la aplicación.
                     Los conjuntos de datos son necesarios para crear nuevas evaluaciones y asociarlas con el Área Protegida
-                    o OECM correcta.'
+                    o OECM correcta.',
     ],
 
 ];
-

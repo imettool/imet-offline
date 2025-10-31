@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,8 +17,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\ProtectedArea;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends Factory<ProtectedArea>
@@ -28,11 +29,12 @@ class ProtectedAreaFactory extends Factory
     {
         $country = fake()->countryISOAlpha3();
         $wdpaId = fake()->randomNumber(5, true);
+
         return [
-            'global_id' => $country . '_' . $wdpaId,
+            'global_id' => $country.'_'.$wdpaId,
             'country' => $country,
             'wdpa_id' => $wdpaId,
-            'name' => fake()->firstName() . ' national park',
+            'name' => fake()->firstName().' national park',
         ];
     }
 }

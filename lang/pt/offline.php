@@ -15,13 +15,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 return [
 
     'title' => 'Ferramenta IMET offline',
     'version' => 'Versão',
-    'description' =>
-        '<b>IMET</b> é uma ferramenta de <i>Avaliação da Eficácia da Gestão de Áreas Protegidas (PAME)</i> que permite
+    'description' => '<b>IMET</b> é uma ferramenta de <i>Avaliação da Eficácia da Gestão de Áreas Protegidas (PAME)</i> que permite
         uma avaliação aprofundada de áreas protegidas marinhas e terrestres, independentemente das suas categorias de
         gestão e tipo de governança. Como ferramenta de apoio à decisão, ajuda os gestores de áreas protegidas a tomar
         decisões de gestão baseadas em análise para melhorar os resultados da conservação.',
@@ -51,4 +49,3 @@ return [
     ],
 
 ];
-

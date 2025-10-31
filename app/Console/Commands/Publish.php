@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -19,10 +20,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Native\Electron\Commands\PublishCommand;
 
-
 class Publish extends Command
 {
-
     protected $signature = 'imet:publish';
 
     protected $description = 'Publish a new release of the IMET offline application to GitHub';
@@ -35,9 +34,9 @@ class Publish extends Command
         // Publish a new release to GitHub using NativePHP
         $this->call(PublishCommand::class, [
             'os' => 'win',
-            'arch' => 'x64'
+            'arch' => 'x64',
         ]);
+
         return 0;
     }
-
 }

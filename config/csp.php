@@ -1,7 +1,7 @@
 <?php
 
- use Spatie\Csp\Directive;
- use Spatie\Csp\Keyword;
+use Spatie\Csp\Directive;
+use Spatie\Csp\Keyword;
 
 return [
 
@@ -10,7 +10,7 @@ return [
      * any class that extends `Spatie\Csp\Preset`
      */
     'presets' => [
-        Spatie\Csp\Presets\Basic::class
+        Spatie\Csp\Presets\Basic::class,
     ],
 
     /**

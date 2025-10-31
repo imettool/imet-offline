@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,15 +17,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use Auth;
-use ModularForms\Models\Traits\Payload;
 use App\Models\Country;
 use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
+use App\Models\User;
+use Auth;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-
+use ModularForms\Models\Traits\Payload;
 
 class SettingsController extends Controller
 {
@@ -39,10 +39,10 @@ class SettingsController extends Controller
                 'records' => Auth::user()
                     ->toArray(),
                 'module_key' => 'offline_user',
-                'save_url' => route('update_offline_user')
+                'save_url' => route('update_offline_user'),
             ],
             'countries' => Country::getAll(),
-            'updated_pas_countries' => ProtectedAreaUpdate::getUpdated()
+            'updated_pas_countries' => ProtectedAreaUpdate::getUpdated(),
         ]);
     }
 
@@ -51,7 +51,7 @@ class SettingsController extends Controller
         $records = Payload::decode($request->input('records_json'));
         $module_key = $request->input('module_key');
 
-        if($module_key === 'proxy' || $module_key === 'api_keys'){
+        if ($module_key === 'proxy' || $module_key === 'api_keys') {
             Settings::updateSettings($records);
         }
 
@@ -70,10 +70,10 @@ class SettingsController extends Controller
 
         // Validate the records
         $messages = (new User)->validate($records);
-        if($messages !== []){
+        if ($messages !== []) {
             return [
                 'status' => 'validation_error',
-                'errors' => $messages
+                'errors' => $messages,
             ];
         }
 
@@ -86,5 +86,4 @@ class SettingsController extends Controller
             'records' => $user->toArray(),
         ];
     }
-
 }

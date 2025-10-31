@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,7 +17,7 @@
 
 return [
 
-    'in_development'    => 'en développement',
+    'in_development' => 'en développement',
     'page_in_development' => 'la page est encore en cours de développement',
 
     'invalid_request' => 'La requette semble invalide',

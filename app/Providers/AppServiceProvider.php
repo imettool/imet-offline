@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -24,9 +25,7 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Register any application services.
      */
-    public function register(): void
-    {
-    }
+    public function register(): void {}
 
     /**
      * Bootstrap any application services.
@@ -34,6 +33,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // ###### Custom validation Rules ######
-        Validator::extend('custom_text', fn($attribute, $value): int|false => preg_match('/^[0-9\pL\s\'\+\-\_\/\(\)]+$/u', (string) $value));
+        Validator::extend('custom_text', fn ($attribute, $value): int|false => preg_match('/^[0-9\pL\s\'\+\-\_\/\(\)]+$/u', (string) $value));
     }
 }

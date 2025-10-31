@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,11 +17,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Date;
 use ImetCore\Models\ProtectedArea;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Carbon;
-
 
 class ProtectedAreaUpdate extends Model
 {
@@ -41,6 +40,7 @@ class ProtectedAreaUpdate extends Model
         $updates = ProtectedAreaUpdate::all()
             ->map(function ($item): ProtectedAreaUpdate {
                 $item->last_update_date = Date::parse($item->last_update_date)->format('Y-m');
+
                 return $item;
             })
             ->pluck('last_update_date', 'country')
@@ -59,5 +59,4 @@ class ProtectedAreaUpdate extends Model
             ['last_update_date' => Date::now()]
         );
     }
-
 }

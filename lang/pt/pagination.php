@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -27,5 +28,5 @@ return [
     */
 
     'previous' => '&laquo; Anterior',
-    'next'     => 'Próxima &raquo;',
+    'next' => 'Próxima &raquo;',
 ];

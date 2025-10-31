@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,13 +17,11 @@
 
 namespace App\Models;
 
-use ImetCore\Models\Country as BaseCountry;
-use ModularForms\Helpers\Locale;
 use Illuminate\Database\Eloquent\Collection;
+use ImetCore\Models\Country as BaseCountry;
 
 class Country extends BaseCountry
 {
-
     /**
      * Override: get all countries
      */
@@ -49,5 +48,4 @@ class Country extends BaseCountry
             ->orderBy(static::labelKey())
             ->get();
     }
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -40,7 +41,7 @@ class SpeciesUpdater
         'phylum',
         'kingdom',
         'authorship',
-        'environment'
+        'environment',
     ];
 
     private const array CSV_NAMES_ATTRIBUTES = [
@@ -53,7 +54,7 @@ class SpeciesUpdater
         'vernacular_names_ita',
         'vernacular_names_jpn',
         'vernacular_names_zho',
-        'vernacular_names_kor'
+        'vernacular_names_kor',
     ];
 
     const int CHUNK_SIZE = 300;
@@ -74,21 +75,21 @@ class SpeciesUpdater
         self::updateVernacularNamesFromCSV($jobId, $verbose);
 
         // Remove all records where species and genus and family are null
-        OfflineLog::info("Removing records with null species, genus and family", $verbose);
+        OfflineLog::info('Removing records with null species, genus and family', $verbose);
         Species::query()->whereNull('species')
             ->whereNull('genus')
             ->whereNull('family')
             ->delete();
 
-        OfflineLog::info("Species and vernacular names updated successfully.", $verbose);
+        OfflineLog::info('Species and vernacular names updated successfully.', $verbose);
     }
 
     private static function upsertSpeciesFromCSV(string $jobId, bool $verbose = false): void
     {
         $filepath = database_path(self::CSV_SPECIES_PATH);
-        if(file_exists($filepath)) {
+        if (file_exists($filepath)) {
 
-            OfflineLog::info("Upserting species from CSV file: " . $filepath, $verbose);
+            OfflineLog::info('Upserting species from CSV file: '.$filepath, $verbose);
 
             // Upsert species data in chucks using a generator
             $generator = new CSVReader($filepath);
@@ -102,12 +103,12 @@ class SpeciesUpdater
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = ($partial_progress/100*50); // CSV parsing takes 50% of the job progress
+                $total_progress = ($partial_progress / 100 * 50); // CSV parsing takes 50% of the job progress
                 event(new TaskProgressing($jobId, $total_progress));
             }
 
         } else {
-            OfflineLog::error("CSV file for species not found: " . $filepath, $verbose);
+            OfflineLog::error('CSV file for species not found: '.$filepath, $verbose);
         }
 
     }
@@ -115,9 +116,9 @@ class SpeciesUpdater
     private static function updateVernacularNamesFromCSV(string $jobId, bool $verbose = false): void
     {
         $filepath = database_path(self::CSV_NAMES_PATH);
-        if(file_exists($filepath)) {
+        if (file_exists($filepath)) {
 
-            OfflineLog::info("Updating vernacular names from CSV file: " . $filepath, $verbose);
+            OfflineLog::info('Updating vernacular names from CSV file: '.$filepath, $verbose);
 
             // Update vernacular names using a generator
             $generator = new CSVReader($filepath);
@@ -131,14 +132,13 @@ class SpeciesUpdater
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
-                $total_progress = ($partial_progress/100*50) + 50; // CSV parsing takes 50% of the job progress, starting from 50%
+                $total_progress = ($partial_progress / 100 * 50) + 50; // CSV parsing takes 50% of the job progress, starting from 50%
                 event(new TaskProgressing($jobId, $total_progress));
             }
 
         } else {
-            OfflineLog::info("CSV file for vernacular names not found: " . $filepath, $verbose);
+            OfflineLog::info('CSV file for vernacular names not found: '.$filepath, $verbose);
         }
 
     }
-
 }

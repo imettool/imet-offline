@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -33,5 +34,4 @@ class ProtectedArea extends BaseProtectedArea
     {
         return ProtectedAreaFactory::new();
     }
-
 }

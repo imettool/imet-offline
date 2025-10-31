@@ -19,8 +19,7 @@ return [
 
     'title' => 'Herramienta IMET sin conexión',
     'version' => 'Versión',
-    'description' =>
-        '<b>IMET</b> es una herramienta de <i>Evaluación de la Eficacia de la Gestión de Áreas Protegidas (PAME)</i> que
+    'description' => '<b>IMET</b> es una herramienta de <i>Evaluación de la Eficacia de la Gestión de Áreas Protegidas (PAME)</i> que
         permite una evaluación en profundidad de áreas protegidas marinas y terrestres, independientemente de sus categorías
         de gestión y tipo de gobernanza. Como herramienta de apoyo a la toma de decisiones, ayuda a los gestores de áreas
         protegidas a tomar decisiones de gestión basadas en el análisis para mejorar los resultados de conservación.',
@@ -50,4 +49,3 @@ return [
     ],
 
 ];
-

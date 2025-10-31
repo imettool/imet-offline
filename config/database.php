@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Env;
 use Illuminate\Support\Str;
 
 return [
@@ -37,7 +36,7 @@ return [
             'database' => database_path('offline.sqlite'),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-        ]
+        ],
 
     ],
 
@@ -97,6 +96,5 @@ return [
         ],
 
     ],
-
 
 ];

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -18,9 +19,4 @@ namespace App\Http\Controllers;
 
 use ModularForms\Controllers\FormController;
 
-
-class UserController extends FormController
-{
-
-
-}
+class UserController extends FormController {}

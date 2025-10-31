@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -17,7 +18,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
 
 class Settings extends Model
 {
@@ -38,11 +38,12 @@ class Settings extends Model
     public static function updateSettings(array $data): array
     {
         $data = collect($data)
-            ->filter(fn($value, $key): bool => $value!==null && $value!=='')
+            ->filter(fn ($value, $key): bool => $value !== null && $value !== '')
             ->toArray();
 
         $settings = static::query()->find(0);
         $settings->update($data);
+
         return $settings->toArray();
     }
 
@@ -50,5 +51,4 @@ class Settings extends Model
     {
         return static::query()->first()?->$key;
     }
-
 }

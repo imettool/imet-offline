@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -23,7 +24,7 @@ class SelectionList
     public static function getCustomList(string $type): array
     {
         // Non filtered Country list
-        if($type === "Country"){
+        if ($type === 'Country') {
             return Country::selectionList();
         }
 

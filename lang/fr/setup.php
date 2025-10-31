@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -45,7 +46,7 @@ return [
                     J., Orrell, T., Aalbu, R., Abbott, J., Aedo, C., Aescht, E., et al. (2025). <b>Catalogue of Life </b>
                     (Version 2025-09-11). Catalogue of Life Foundation, Amsterdam, Netherlands.
                     <a target="_blank" href="https://doi.org/10.48580/dgt98">https://doi.org/10.48580/dgt98</a>',
-        'instructions' => "Pour intégrer les données d'espèces dans l'application, veuillez cliquer sur le bouton suivant. Ce processus peut prendre quelques minutes en fonction des performances de votre appareil. Veuillez patienter et ne pas fermer l'application."
+        'instructions' => "Pour intégrer les données d'espèces dans l'application, veuillez cliquer sur le bouton suivant. Ce processus peut prendre quelques minutes en fonction des performances de votre appareil. Veuillez patienter et ne pas fermer l'application.",
     ],
 
     'wdpas' => [
@@ -65,15 +66,13 @@ return [
             'apply' => 'Démarrez l\'intégration du jeu de données dans l\'application en cliquant sur le bouton suivant.',
             'completed' => 'Le jeu de données est stocké dans l\'application.',
             'update' => 'Si vous souhaitez mettre à jour le jeu de données à l\'avenir, vous pouvez répéter la même procédure à tout moment depuis la page <span class="highlight">Paramètres</span>.',
-            'next' => 'Vous pouvez maintenant passer à l\'étape suivante.'
-        ]
+            'next' => 'Vous pouvez maintenant passer à l\'étape suivante.',
+        ],
     ],
 
     'done' => [
         'timeline' => 'Configuration terminée !',
-        'description' =>
-            "La configuration est terminée. Vous pouvez maintenant commencer à utiliser l'application.",
+        'description' => "La configuration est terminée. Vous pouvez maintenant commencer à utiliser l'application.",
     ],
 
 ];
-

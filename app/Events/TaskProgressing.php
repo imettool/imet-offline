@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -13,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 
 namespace App\Events;
 
@@ -30,9 +30,9 @@ class TaskProgressing implements ShouldBroadcastNow
     use SerializesModels;
 
     public function __construct(
-        public string  $jobId,
-        public string  $progress
-    ){
+        public string $jobId,
+        public string $progress
+    ) {
         $this->progress = min(100, max(0, (int) $this->progress)); // Ensure progress is between 0 and 100
     }
 
@@ -43,4 +43,3 @@ class TaskProgressing implements ShouldBroadcastNow
         ];
     }
 }
-

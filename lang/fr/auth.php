@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -27,16 +28,16 @@ return [
     |
     */
 
-    'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements',
+    'failed' => 'Ces identifiants ne correspondent pas à nos enregistrements',
     'throttle' => 'Trop de tentatives de connexion. Veuillez essayer de nouveau dans :seconds secondes.',
 
     'user' => [
-        'email'         => 'adresse email',
-        'first_name'    => 'prénom',
-        'last_name'     => 'nom',
-        'organisation'  => 'organisation',
-        'function'      => 'fonction',
-        'country'       => 'pays'
-    ]
+        'email' => 'adresse email',
+        'first_name' => 'prénom',
+        'last_name' => 'nom',
+        'organisation' => 'organisation',
+        'function' => 'fonction',
+        'country' => 'pays',
+    ],
 
 ];

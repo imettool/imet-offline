@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -18,10 +19,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-
 class Template extends Command
 {
-
     protected $signature = 'imet:template_command';
 
     protected $description = 'Empty template to be used for executing temporary commands';
@@ -31,5 +30,4 @@ class Template extends Command
 
         return 0;
     }
-
 }

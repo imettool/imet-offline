@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -21,7 +22,6 @@ use Native\Laravel\Facades\AutoUpdater;
 
 class AppController extends Controller
 {
-
     /**
      * Quit the application and install the downloaded update.
      */
@@ -31,5 +31,4 @@ class AppController extends Controller
 
         return view('offline.apply_update');
     }
-
 }

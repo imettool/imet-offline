@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -23,9 +24,8 @@ use Native\Electron\Commands\InstallCommand;
 use Native\Electron\Commands\ResetCommand;
 use Symfony\Component\Filesystem\Filesystem;
 
-use function Laravel\Prompts\intro;
 use function Laravel\Prompts\info;
-use function Laravel\Prompts\outro;
+use function Laravel\Prompts\intro;
 
 class ResetDevEnv extends Command
 {
@@ -81,7 +81,7 @@ class ResetDevEnv extends Command
         static::remove(database_path('nativephp.sqlite-wal'));
         $databasePath = config('database.connections.offline.database');
         static::remove($databasePath);
-        $this->components->line('info', 'Creating new database file: ' . $databasePath);
+        $this->components->line('info', 'Creating new database file: '.$databasePath);
         $this->filesystem->touch($databasePath);
         $this->components->line('info', 'Migrating the database');
         $this->call(RefreshCommand::class);
@@ -101,7 +101,7 @@ class ResetDevEnv extends Command
     private function remove(string $path): void
     {
         if ($this->filesystem->exists($path)) {
-            $this->line('Deleting: ' . $path);
+            $this->line('Deleting: '.$path);
             $this->filesystem->remove($path);
         }
     }
@@ -112,11 +112,9 @@ class ResetDevEnv extends Command
     private function clearFolder(string $path, array $except = []): void
     {
         foreach (array_diff(scandir($path), ['.', '..']) as $item) {
-            if(!in_array($item, $except)) {
-                static::remove($path . '/' . $item);
+            if (! in_array($item, $except)) {
+                static::remove($path.'/'.$item);
             }
         }
     }
-
 }
-

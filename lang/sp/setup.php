@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -56,7 +57,7 @@ return [
                 <a target="_blank" href="https://doi.org/10.48580/dgt98">https://doi.org/10.48580/dgt98</a>',
         'instructions' => 'Para integrar los datos de especies en la aplicación, haga clic en el siguiente botón. Este
                 proceso puede tardar unos minutos, según el rendimiento de su dispositivo. Por favor, sea paciente y no
-                cierre la aplicación.'
+                cierre la aplicación.',
     ],
 
     'wdpas' => [
@@ -80,13 +81,12 @@ return [
             'completed' => 'El conjunto de datos está almacenado en la aplicación.',
             'update' => 'Si desea actualizar el conjunto de datos en el futuro, puede repetir el mismo procedimiento en
                 cualquier momento desde la página de <span class="highlight">Configuración</span>.',
-            'next' => 'Ahora puede proceder al siguiente paso.'
-        ]
+            'next' => 'Ahora puede proceder al siguiente paso.',
+        ],
     ],
 
     'done' => [
         'timeline' => '¡Configuración completada!',
-        'description' =>
-            'La configuración está completa. Ahora puede comenzar a usar la aplicación.',
+        'description' => 'La configuración está completa. Ahora puede comenzar a usar la aplicación.',
     ],
 ];

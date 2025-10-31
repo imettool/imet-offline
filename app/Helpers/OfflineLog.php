@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -20,14 +21,13 @@ use Illuminate\Support\Facades\Log;
 
 class OfflineLog
 {
-
     /**
      * Log info message (and print if verbose)
      */
     public static function info(string $message, bool $verbose = false): void
     {
-        if($verbose){
-            print($message . PHP_EOL);
+        if ($verbose) {
+            echo $message.PHP_EOL;
         }
 
         Log::info($message);
@@ -39,7 +39,7 @@ class OfflineLog
     public static function error(string $message, bool $verbose = false): void
     {
         if ($verbose) {
-            print($message . PHP_EOL);
+            echo $message.PHP_EOL;
         }
 
         Log::error($message);
@@ -51,7 +51,7 @@ class OfflineLog
     public static function warning(string $message, bool $verbose = false): void
     {
         if ($verbose) {
-            print($message . PHP_EOL);
+            echo $message.PHP_EOL;
         }
 
         Log::warning($message);
@@ -63,10 +63,9 @@ class OfflineLog
     public static function debug(string $message, bool $verbose = false): void
     {
         if ($verbose) {
-            print($message . PHP_EOL);
+            echo $message.PHP_EOL;
         }
 
         Log::debug($message);
     }
-
 }

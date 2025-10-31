@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -20,7 +21,6 @@ use ImetCore\Models\Species;
 
 class ImetEnv extends \ImetCore\Helpers\ImetEnv
 {
-
     /**
      * Check if the application is in its first boot and the setup process should be run.
      */
@@ -35,8 +35,7 @@ class ImetEnv extends \ImetCore\Helpers\ImetEnv
     public static function getVersion(): string
     {
         return static::isDevEnv()
-            ? 'DEV (' . config('nativephp.version') . ')'
+            ? 'DEV ('.config('nativephp.version').')'
             : config('nativephp.version');
     }
-
 }

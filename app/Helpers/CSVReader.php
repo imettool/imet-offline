@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -26,7 +27,6 @@ use Generator;
  * foreach ($csvReader->rows() as $chunk) {
  *     // Process each chunk
  * }
- *
  */
 class CSVReader
 {
@@ -46,8 +46,9 @@ class CSVReader
      * constructor
      */
     public function __construct(string $filePath,
-                                private readonly string $delimiter = ',',
-                                private readonly int $header_row_index = 0) {
+        private readonly string $delimiter = ',',
+        private readonly int $header_row_index = 0)
+    {
         $this->file = fopen($filePath, 'r');
     }
 
@@ -65,7 +66,7 @@ class CSVReader
     private function getSize(): void
     {
         $num_rows = 0;
-        while (fgetcsv($this->file, 0, $this->delimiter,$enclosure = '"', $escape = '\\') !== false) {
+        while (fgetcsv($this->file, 0, $this->delimiter, $enclosure = '"', $escape = '\\') !== false) {
             $num_rows++;
         }
 
@@ -80,7 +81,7 @@ class CSVReader
     {
         $this->getSize();
         $num_chunks = (int) ceil($this->num_rows / $chunk_size);
-        $rows_in_last_chunk = $this->num_rows - (((int) floor($this->num_rows / $chunk_size)) *  $chunk_size);
+        $rows_in_last_chunk = $this->num_rows - (((int) floor($this->num_rows / $chunk_size)) * $chunk_size);
 
         $chunk_data = [];
         $row_index_in_chunk = 0;
@@ -92,10 +93,10 @@ class CSVReader
                 // set rows
             } elseif ($this->row_index > $this->header_row_index) {
                 // add row to chunk
-                $chunk_data[] = array_combine($this->header(),$row_data);
+                $chunk_data[] = array_combine($this->header(), $row_data);
                 $row_index_in_chunk++;
                 // chunk size reached
-                if($row_index_in_chunk === $chunk_size){
+                if ($row_index_in_chunk === $chunk_size) {
 
                     yield $chunk_data;
 
@@ -105,7 +106,7 @@ class CSVReader
                     $chunk_data = [];
                 }
 
-                if($this->chunk_index === $num_chunks - 1 && $row_index_in_chunk === $rows_in_last_chunk-1){
+                if ($this->chunk_index === $num_chunks - 1 && $row_index_in_chunk === $rows_in_last_chunk - 1) {
                     yield $chunk_data;
                 }
             }
@@ -113,6 +114,4 @@ class CSVReader
             $this->row_index++;
         }
     }
-
-
 }

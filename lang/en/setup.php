@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -55,7 +56,7 @@ return [
                     <a target="_blank" href="https://doi.org/10.48580/dgt98">https://doi.org/10.48580/dgt98</a>',
         'instructions' => 'In other to integrate the species data into the application, please click on the following
                     button. This process may take a few minutes, according to the performance of your device. Please be
-                    patient and do not close the application.'
+                    patient and do not close the application.',
     ],
 
     'wdpas' => [
@@ -82,17 +83,13 @@ return [
             'completed' => 'The dataset is stored in the application.',
             'update' => 'If you want to update the dataset in the future, you can repeat the same procedure at any time
                         from the <span class="highlight">Settings</span> page.',
-            'next' => 'You can now proceed to the next step.'
-        ]
+            'next' => 'You can now proceed to the next step.',
+        ],
     ],
 
     'done' => [
         'timeline' => 'Setup completed !',
-        'description' =>
-            'The setup is completed. You can now start using the application.',
+        'description' => 'The setup is completed. You can now start using the application.',
     ],
-
-
-
 
 ];

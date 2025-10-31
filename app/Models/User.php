@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -20,8 +21,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 use ImetCore\Models\User\Role;
 use ImetCore\Models\User\User as ImetUser;
-use ModularForms\Exceptions\ValidationException;
-use ModularForms\Models\Module;
 
 /**
  * @property string first_name
@@ -58,9 +57,9 @@ class User extends ImetUser
     public function validate(array $attributes): array
     {
         $validator = Validator::make($attributes, static::$rules);
+
         return $validator->fails()
             ? $validator->errors()->messages()
             : [];
     }
-
 }

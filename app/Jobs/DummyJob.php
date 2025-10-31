@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -33,14 +34,13 @@ class DummyJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-
-    public function __construct(public string $jobId, public array $zipFiles = []){}
+    public function __construct(public string $jobId, public array $zipFiles = []) {}
 
     public function handle(): int
     {
         $numSeconds = 4;
 
-        try{
+        try {
             for ($i = 1; $i <= $numSeconds; $i++) {
                 Sleep::sleep(1);
                 $progress = round(($i / $numSeconds) * 100);
@@ -50,10 +50,10 @@ class DummyJob implements ShouldQueue
             return 0;
 
         } catch (Exception $exception) {
-            Log::error('Error in DummyJob: ' . $exception->getMessage());
+            Log::error('Error in DummyJob: '.$exception->getMessage());
+
             return 1;
         }
-
 
     }
 }

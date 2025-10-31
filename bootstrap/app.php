@@ -15,9 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-       $middleware->append(Authenticate::class);
-       $middleware->append(SetLocale::class);
-       $middleware->append(AddCspHeaders::class);
+        $middleware->append(Authenticate::class);
+        $middleware->append(SetLocale::class);
+        $middleware->append(AddCspHeaders::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

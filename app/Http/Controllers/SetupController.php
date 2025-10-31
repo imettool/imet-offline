@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -39,7 +40,7 @@ class SetupController extends Controller
         'user',
         'species',
         'wdpas',
-        'done'
+        'done',
     ];
 
     /**
@@ -49,7 +50,7 @@ class SetupController extends Controller
     public function index(): \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
     {
         // If first boot, redirect to the setup page
-        if(ImetEnv::isFirstBoot()){
+        if (ImetEnv::isFirstBoot()) {
             return to_route('setup.info');
         }
 
@@ -64,7 +65,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.info', [
             'current_step' => 'info',
-            'timeline' => self::TIMELINE
+            'timeline' => self::TIMELINE,
         ]);
     }
 
@@ -80,7 +81,7 @@ class SetupController extends Controller
                 'records' => Auth::user()
                     ->toArray(),
                 'module_key' => 'offline_user',
-                'save_url' => route('setup.user.save')
+                'save_url' => route('setup.user.save'),
             ],
         ]);
     }
@@ -94,10 +95,10 @@ class SetupController extends Controller
 
         // Validate the records
         $messages = (new User)->validate($records);
-        if($messages !== []){
+        if ($messages !== []) {
             return [
                 'status' => 'validation_error',
-                'errors' => $messages
+                'errors' => $messages,
             ];
         }
 
@@ -122,8 +123,8 @@ class SetupController extends Controller
             'timeline' => self::TIMELINE,
             'vueData' => [
                 'save_url' => route('setup.species.save'),
-                'job_id' => Str::uuid()->toString()
-            ]
+                'job_id' => Str::uuid()->toString(),
+            ],
         ]);
     }
 
@@ -133,7 +134,7 @@ class SetupController extends Controller
         SpeciesUpdater::insertSpeciesAndVernacularNames($jobId);
 
         return new JsonResponse([
-            'status' => 'success'
+            'status' => 'success',
         ]);
     }
 
@@ -147,16 +148,17 @@ class SetupController extends Controller
             'timeline' => self::TIMELINE,
             'vueData' => [
                 'records' => [
-                    'dataset_upload' => Module::$upload_object
+                    'dataset_upload' => Module::$upload_object,
                 ],
                 'save_url' => route('setup.wdpas.save'),
-                'job_id' => Str::uuid()->toString()
-            ]
+                'job_id' => Str::uuid()->toString(),
+            ],
         ]);
     }
 
     /**
      * Save the protected areas' dataset.
+     *
      * @throws Exception
      */
     public function wdpas_save(Request $request): JsonResponse
@@ -169,7 +171,7 @@ class SetupController extends Controller
         ProtectedAreaUpdaterCSV::updateProtectedAreasAndOECMs($zipFilePath, basename($originalFilename), $jobId);
 
         return new JsonResponse([
-            'status' => 'success'
+            'status' => 'success',
         ]);
     }
 
@@ -180,9 +182,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.done', [
             'current_step' => 'done',
-            'timeline' => self::TIMELINE
+            'timeline' => self::TIMELINE,
         ]);
     }
-
-
 }
