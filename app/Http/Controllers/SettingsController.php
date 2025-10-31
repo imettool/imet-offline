@@ -38,12 +38,13 @@ class SettingsController extends Controller
                     ->toArray(),
                 'module_key' => 'offline_user',
                 'save_url' => route('update_offline_user'),
-            ]
+            ],
         ]);
     }
 
     /**
      * Manage "update" settings
+     *
      * @return array<string, mixed>
      */
     public function update(Request $request): array
@@ -63,6 +64,7 @@ class SettingsController extends Controller
 
     /**
      * Manage "update" OFFLINE user
+     *
      * @return array<string, int|string|array<string, array<string>>>
      */
     public function user(Request $request): array

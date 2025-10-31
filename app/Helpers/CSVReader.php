@@ -30,10 +30,10 @@ use Generator;
  */
 class CSVReader
 {
-    /** @var resource $file */
+    /** @var resource */
     private $file;
 
-    /** @var array<int, string> $header */
+    /** @var array<int, string> */
     private array $header;
 
     public int $row_index = 0;
@@ -56,6 +56,7 @@ class CSVReader
 
     /**
      * Retrieve CSV header
+     *
      * @return array<int, string>
      */
     public function header(): array

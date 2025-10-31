@@ -30,7 +30,7 @@ use ImetCore\Models\User\User as ImetUser;
  */
 class User extends ImetUser
 {
-    /** @var array<string, string> $rules */
+    /** @var array<string, string> */
     public static array $rules = [
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
@@ -40,7 +40,7 @@ class User extends ImetUser
     ];
 
     /**
-     * @param array<string, scalar> $attributes
+     * @param  array<string, scalar>  $attributes
      */
     public function update_offline(array $attributes): Model
     {
@@ -59,7 +59,7 @@ class User extends ImetUser
     }
 
     /**
-     * @param array<string, scalar> $attributes
+     * @param  array<string, scalar>  $attributes
      * @return array<string, array<string>>|null
      */
     public function validate(array $attributes): ?array

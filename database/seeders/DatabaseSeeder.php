@@ -37,8 +37,8 @@ class DatabaseSeeder extends Seeder
     /**
      * Generate fake data for a given field
      *
-     * @param array<string, string> $field
-     * @return mixed
+     * @param  array<string, string>  $field
+     *
      * @throws RandomException
      * @throws Throwable
      */
@@ -169,7 +169,8 @@ class DatabaseSeeder extends Seeder
     /**
      * Insert multiple records for a given module and form_id
      *
-     * @param class-string<Module> $module
+     * @param  class-string<Module>  $module
+     *
      * @throws Throwable
      */
     private function insertRecords(string $module, int $form_id, int $num_records = 1, ?string $group_key = null): void
@@ -182,7 +183,8 @@ class DatabaseSeeder extends Seeder
     /**
      * Insert a single record for a given module and form_id
      *
-     * @param class-string<Module> $module
+     * @param  class-string<Module>  $module
+     *
      * @throws Exception
      * @throws Throwable
      */
@@ -198,8 +200,8 @@ class DatabaseSeeder extends Seeder
         $predefined = $module::getPredefined($form_id);
         if ($predefined !== null) {
             $values[$predefined['field']] = null;
-            if($predefined['values'] !== null && count($predefined['values']) > 0){
-                if(Str::contains((new $module)->module_type, 'GROUP')){
+            if ($predefined['values'] !== null && count($predefined['values']) > 0) {
+                if (Str::contains((new $module)->module_type, 'GROUP')) {
                     $random_group = fake()->randomElement(array_keys($predefined['values']));
                     $values[$predefined['field']] = fake()->randomElement($predefined['values'][$random_group]);
                 } else {
@@ -216,11 +218,9 @@ class DatabaseSeeder extends Seeder
         }
 
         // Generate fake values (common_fields)
-        if ((new $module)->module_common_fields !== []) {
-            foreach ((new $module)->module_common_fields as $field) {
-                if (! array_key_exists($field['name'], $values)) {
-                    $values[$field['name']] = self::getFake($field);
-                }
+        foreach ((new $module)->module_common_fields as $field) {
+            if (! array_key_exists($field['name'], $values)) {
+                $values[$field['name']] = self::getFake($field);
             }
         }
 

@@ -36,13 +36,13 @@ class Settings extends Model
     }
 
     /**
-     * @param array<string, scalar|null> $data
+     * @param  array<string, scalar|null>  $data
      */
     public static function updateSettings(array $data): void
     {
         $data = collect($data)
             ->filter(fn ($value, $key): bool => $value !== null && $value !== '')
-            ->toArray();
+            ->all();
 
         $settings = static::query()->find(0);
         $settings->update($data);

@@ -109,7 +109,7 @@ class ResetDevEnv extends Command
     /**
      * Clear all files and folders in a directory except those specified in the $except array
      *
-     * @param array<int, string> $except
+     * @param  array<int, string>  $except
      */
     private function clearFolder(string $path, array $except = []): void
     {

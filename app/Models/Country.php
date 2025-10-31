@@ -24,7 +24,8 @@ class Country extends BaseCountry
 {
     /**
      * Override: get all countries
-     * @return array<string, string>  Key-value pairs of iso3 => country name
+     *
+     * @return array<string, string> Key-value pairs of iso3 => country name
      */
     #[\Override]
     public static function selectionList(): array
@@ -42,6 +43,7 @@ class Country extends BaseCountry
 
     /**
      * Get all countries
+     *
      * @return Collection<int, self>
      */
     public static function getAll(): Collection

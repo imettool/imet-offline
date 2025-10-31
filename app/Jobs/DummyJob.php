@@ -34,7 +34,6 @@ class DummyJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-
     public function __construct(public string $jobId) {}
 
     public function handle(): int

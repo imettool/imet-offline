@@ -24,7 +24,6 @@ use App\Models\User;
 use Auth;
 use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -35,7 +34,6 @@ use Str;
 
 class SetupController extends Controller
 {
-
     const array TIMELINE = [
         'info',
         'user',
@@ -89,6 +87,7 @@ class SetupController extends Controller
 
     /**
      * Save the user profile information.
+     *
      * @return array<string, int|string|array<string, array<string>>>
      */
     public function user_save(Request $request): array
