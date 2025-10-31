@@ -11,16 +11,22 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 namespace App\Http\Controllers;
 
-use ModularForms\Controllers\FormController;
+use Native\Laravel\AutoUpdater;
 
-
-class UserController extends FormController
+class AppController extends Controller
 {
 
+    /**
+     * Quit the application and install the downloaded update.
+     */
+    public function apply_update(): void
+    {
+        AutoUpdater::quitAndInstall();
+    }
 
 }

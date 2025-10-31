@@ -37,6 +37,7 @@ return [
 
     'actions' => [
         'proceed' => 'Proceed',
+        'quit_and_install' => 'Restart to apply',
     ],
 
     'errors' => [

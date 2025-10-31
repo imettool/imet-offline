@@ -14,6 +14,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\SetupController;
 use ModularForms\Controllers\UploadFileController;
 use App\Http\Controllers\SettingsController;
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['web'])->group(function () {
 
     Route::get('/', [SetupController::class, 'index']);
+    Route::view('home', 'offline.home')->name('home');
 
     // Setup routes
     Route::prefix('setup')->group(function () {
@@ -36,9 +38,6 @@ Route::middleware(['web'])->group(function () {
         Route::get('done', [SetupController::class, 'done'])->name('setup.done');
     });
 
-
-    Route::view('home', 'offline.home')->name('home');
-
     // Settings routes
     Route::get('settings', [SettingsController::class, 'index'])->name('settings');
     Route::patch('settings/update', [SettingsController::class, 'update'])->name('settings_update');
@@ -47,6 +46,9 @@ Route::middleware(['web'])->group(function () {
     // ###### File upload/download ######
     Route::post('file/upload', [UploadFileController::class, 'upload'])->name('upload.file');
     Route::get('file/{hash}', [UploadFileController::class, 'download'])->name('file');
+
+    // Updater
+    Route::get('apply_update', [AppController::class, 'apply_update'])->name('apply_update');
 
     // Debug/dev
     Route::get('info', function (){ return phpinfo(); });
