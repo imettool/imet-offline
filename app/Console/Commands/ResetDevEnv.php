@@ -63,15 +63,15 @@ class ResetDevEnv extends Command
         $this->remove(base_path('node_modules/'));
         $this->remove(base_path('public/build'));
         $this->remove(base_path('public/basket'));
-        $this->components->line('info', 'Running npm install');
+        $this->line( 'Running npm install');
         Process::run('npm install');
-        $this->components->line('info', 'Running npm run build');
+        $this->line( 'Running npm run build');
         Process::run('npm run build');
 
         // Clear the vendor directory
         intro('Resetting vendor/');
         $this->remove(base_path('vendor/'));
-        $this->components->line('info', 'Running composer install');
+        $this->line( 'Running composer install');
         Process::run('composer install --no-interaction --optimize-autoloader');
 
         // Delete the database and create a new one
@@ -81,9 +81,9 @@ class ResetDevEnv extends Command
         self::remove(database_path('nativephp.sqlite-wal'));
         $databasePath = config('database.connections.offline.database');
         self::remove($databasePath);
-        $this->components->line('info', 'Creating new database file: '.$databasePath);
+        $this->line( 'Creating new database file: '.$databasePath);
         $this->filesystem->touch($databasePath);
-        $this->components->line('info', 'Migrating the database');
+        $this->line( 'Migrating the database');
         $this->call(RefreshCommand::class);
 
         // Run native:install

@@ -34,7 +34,7 @@ use RectorLaravel\Set\LaravelSetProvider;
 return RectorConfig::configure()
     ->withPaths([
         __DIR__.'/app',
-        __DIR__.'/bootstrap',
+        __DIR__.'/bootstrap/*.php',
         __DIR__.'/config',
         __DIR__.'/database',
         __DIR__.'/lang',
@@ -55,6 +55,9 @@ return RectorConfig::configure()
         SymplifyQuoteEscapeRector::class => [
             __DIR__.'/lang',                    // Keep always same quote style in lang files
         ],
+        UseComponentPropertyWithinCommandsRector::class => [
+            __DIR__.'/app/Console/Commands/ResetDevEnv.php',
+        ]
     ])
     ->withSetProviders(LaravelSetProvider::class)
     ->withComposerBased(laravel: true)
