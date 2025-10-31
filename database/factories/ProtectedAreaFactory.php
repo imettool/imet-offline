@@ -19,10 +19,11 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\ProtectedArea;
 
+/**
+ * @extends Factory<ProtectedArea>
+ */
 class ProtectedAreaFactory extends Factory
 {
-    protected $model = ProtectedArea::class;
-
     public function definition(): array
     {
         $country = fake()->countryISOAlpha3();
@@ -31,7 +32,7 @@ class ProtectedAreaFactory extends Factory
             'global_id' => $country . '_' . $wdpaId,
             'country' => $country,
             'wdpa_id' => $wdpaId,
-            'name' => fake()->firstName . ' national park',
+            'name' => fake()->firstName() . ' national park',
         ];
     }
 }

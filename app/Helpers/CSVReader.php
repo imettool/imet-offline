@@ -31,25 +31,24 @@ use Generator;
 class CSVReader
 {
     private $file;
-    private string $delimiter;
+
     private array $header;
-    private int $header_row_index;
+
     public int $row_index = 0;
+
     private int $chunk_index = 0;
+
     public int $num_rows = 0;
+
     private const int CHUNK_SIZE = 1000;
 
     /**
      * constructor
-     *
-     * @param string $filePath
-     * @param string $delimiter
-     * @param int $header_row_index
      */
-    public function __construct(string $filePath, string $delimiter = ',', int $header_row_index = 0) {
+    public function __construct(string $filePath,
+                                private readonly string $delimiter = ',',
+                                private readonly int $header_row_index = 0) {
         $this->file = fopen($filePath, 'r');
-        $this->delimiter = $delimiter;
-        $this->header_row_index = $header_row_index;
     }
 
     /**
@@ -69,6 +68,7 @@ class CSVReader
         while (fgetcsv($this->file, 0, $this->delimiter,$enclosure = '"', $escape = '\\') !== false) {
             $num_rows++;
         }
+
         rewind($this->file);
         $this->num_rows = $num_rows;
     }
@@ -87,16 +87,13 @@ class CSVReader
         while (($row_data = fgetcsv($this->file, 0, $this->delimiter, $enclosure = '"', $escape = '\\')) !== false) {
 
             // Set header
-            if ($this->row_index == $this->header_row_index) {
+            if ($this->row_index === $this->header_row_index) {
                 $this->header = $row_data;
-
-            // set rows
-            } else if ($this->row_index > $this->header_row_index){
-
+                // set rows
+            } elseif ($this->row_index > $this->header_row_index) {
                 // add row to chunk
                 $chunk_data[] = array_combine($this->header(),$row_data);
                 $row_index_in_chunk++;
-
                 // chunk size reached
                 if($row_index_in_chunk === $chunk_size){
 
@@ -108,11 +105,11 @@ class CSVReader
                     $chunk_data = [];
                 }
 
-               if($this->chunk_index == $num_chunks-1 && $row_index_in_chunk === $rows_in_last_chunk-1){
-                   yield $chunk_data;
-               }
-
+                if($this->chunk_index === $num_chunks - 1 && $row_index_in_chunk === $rows_in_last_chunk-1){
+                    yield $chunk_data;
+                }
             }
+
             $this->row_index++;
         }
     }

@@ -16,7 +16,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,8 +23,6 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
-     * @return void
      */
     public function register(): void
     {
@@ -33,14 +30,10 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
     public function boot(): void
     {
         // ###### Custom validation Rules ######
-        Validator::extend('custom_text', function($attribute, $value){
-            return preg_match('/^[0-9\pL\s\'\+\-\_\/\(\)]+$/u', $value);
-        });
+        Validator::extend('custom_text', fn($attribute, $value): int|false => preg_match('/^[0-9\pL\s\'\+\-\_\/\(\)]+$/u', (string) $value));
     }
 }

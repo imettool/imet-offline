@@ -16,8 +16,10 @@
 
 declare(strict_types=1);
 
+use Rector\CodingStyle\Rector\FunctionLike\FunctionLikeToFirstClassCallableRector;
+use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
-use Rector\Php80\Rector\ClassConstFetch\ClassOnThisVariableObjectRector;
+use Rector\Php81\Rector\Array_\FirstClassCallableRector;
 use RectorLaravel\Rector\Class_\AddHasFactoryToModelsRector;
 use RectorLaravel\Rector\Class_\RemoveModelPropertyFromFactoriesRector;
 use RectorLaravel\Rector\Class_\UseForwardsCallsTraitRector;
@@ -42,7 +44,16 @@ return RectorConfig::configure()
     ])
     ->withSkip([
         AddHasFactoryToModelsRector::class,
+        FunctionLikeToFirstClassCallableRector::class => [
+            __DIR__.'/routes',                      // do not convert to first class callable in routes
+        ],
+        FirstClassCallableRector::class => [
+            __DIR__.'/routes',                      // do not convert to first class callable in routes
+        ],
         MakeModelAttributesAndScopesProtectedRector::class,
+        SymplifyQuoteEscapeRector::class => [
+            __DIR__.'/lang',                    // Keep always same quote style in lang files
+        ],
     ])
     ->withSetProviders(LaravelSetProvider::class)
     ->withComposerBased(laravel: true)

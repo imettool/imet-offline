@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table): void {
             $table->id();
             $table->string('proxy_host')->nullable();
             $table->string('proxy_port')->nullable();

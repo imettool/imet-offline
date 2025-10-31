@@ -32,7 +32,8 @@ class ResetDevEnv extends Command
     protected $signature = 'imet:reset_dev_environment';
 
     protected $description = 'Resetting the development environment to a clean state';
-    private Filesystem $filesystem;
+
+    private readonly Filesystem $filesystem;
 
     public function __construct()
     {
@@ -62,15 +63,15 @@ class ResetDevEnv extends Command
         $this->remove(base_path('node_modules/'));
         $this->remove(base_path('public/build'));
         $this->remove(base_path('public/basket'));
-        $this->line('Running npm install');
+        $this->components->line('info', 'Running npm install');
         Process::run('npm install');
-        $this->line('Running npm run build');
+        $this->components->line('info', 'Running npm run build');
         Process::run('npm run build');
 
         // Clear the vendor directory
         intro('Resetting vendor/');
         $this->remove(base_path('vendor/'));
-        $this->line('Running composer install');
+        $this->components->line('info', 'Running composer install');
         Process::run('composer install --no-interaction --optimize-autoloader');
 
         // Delete the database and create a new one
@@ -80,9 +81,9 @@ class ResetDevEnv extends Command
         static::remove(database_path('nativephp.sqlite-wal'));
         $databasePath = config('database.connections.offline.database');
         static::remove($databasePath);
-        $this->line('Creating new database file: ' . $databasePath);
+        $this->components->line('info', 'Creating new database file: ' . $databasePath);
         $this->filesystem->touch($databasePath);
-        $this->line('Migrating the database');
+        $this->components->line('info', 'Migrating the database');
         $this->call(RefreshCommand::class);
 
         // Run native:install
@@ -110,7 +111,7 @@ class ResetDevEnv extends Command
      */
     private function clearFolder(string $path, array $except = []): void
     {
-        foreach (array_diff(scandir($path), array('.', '..')) as $item) {
+        foreach (array_diff(scandir($path), ['.', '..']) as $item) {
             if(!in_array($item, $except)) {
                 static::remove($path . '/' . $item);
             }

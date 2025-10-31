@@ -45,7 +45,7 @@ class Country extends BaseCountry
      */
     public static function getAll(): Collection
     {
-        return static::select([static::labelKey(), 'iso3', 'iso2'])
+        return static::query()->select([static::labelKey(), 'iso3', 'iso2'])
             ->orderBy(static::labelKey())
             ->get();
     }

@@ -34,7 +34,7 @@ class AppListener
         // First boot: onetime modifications
         if(App::environment('production')) {
             Log::info('Checking if one-time configurations are needed...');
-            InitializeOfflineTool::dispatchSync();
+            dispatch_sync(new InitializeOfflineTool());
         }
 
         Log::info('Application booted successfully.');

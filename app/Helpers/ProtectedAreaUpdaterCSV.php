@@ -19,6 +19,7 @@ namespace App\Helpers;
 use App\Events\TaskProgressing;
 use Exception;
 use ImetCore\Models\ProtectedArea;
+use Throwable;
 use ZipArchive;
 
 /**
@@ -28,9 +29,13 @@ use ZipArchive;
 class ProtectedAreaUpdaterCSV
 {
     const string ALL_REGEX = '/WDPA_WDOECM_([a-zA-Z]{3}[\d]{4})_Public_all_csv/';
+
     const string WDPA_REGEX = '/WDPA_([a-zA-Z]{3}[\d]{4})_Public_csv/';
+
     const string OECM_REGEX = '/WDOECM_([a-zA-Z]{3}[\d]{4})_Public_csv/';
+
     const int CHUNK_SIZE = 200;
+
     const string OFAC_GLOBAL_IDS_FILE = 'ofac_global_ids.csv';
 
     const string LOG_PREFIX = '## ProtectedAreaUpdaterCSV ## : ';
@@ -53,21 +58,21 @@ class ProtectedAreaUpdaterCSV
         }
 
         // Extract the CSV file from the ZIP archive
-        TaskProgressing::dispatch($jobId, 2);
+        event(new TaskProgressing($jobId, 2));
         $csvFilePath = self::extractCSVfromZIP($zipFilePath, $originalFilename, $verbose);
-        TaskProgressing::dispatch($jobId, 10);     // Update progress after extraction (takes 10% of the job progress)
+        event(new TaskProgressing($jobId, 10));     // Update progress after extraction (takes 10% of the job progress)
 
         // Parse the CSV file and update the database
         self::parseFile($csvFilePath, $jobId, $verbose);
 
         // Apply OFAC global IDs
         self::applyOfacGlobalIDs($jobId, $verbose);
-        TaskProgressing::dispatch($jobId, 100);    // Force progress to 100% at the end of the job
+        event(new TaskProgressing($jobId, 100));    // Force progress to 100% at the end of the job
     }
 
     /**
      * Extract the CSV file from the ZIP archive.
-     * @throws Exception
+     * @throws Throwable
      */
     private static function extractCSVfromZIP(string $zipFilePath, string $originalFilename, bool $verbose = false): string
     {
@@ -78,9 +83,8 @@ class ProtectedAreaUpdaterCSV
         // Unzip the file
         $zip = new ZipArchive();
         $zipStatus = $zip->open($zipFilePath, ZipArchive::RDONLY);
-        if ($zipStatus !== true) {
-            throw new Exception(self::LOG_PREFIX . 'Unable to open the archive: ' . $zipFilePath);
-        }
+        throw_if($zipStatus !== true, Exception::class, self::LOG_PREFIX . 'Unable to open the archive: ' . $zipFilePath);
+
         $zip->extractTo($destination_path, [$base_name . '.csv']);
         $zip->close();
 
@@ -104,36 +108,31 @@ class ProtectedAreaUpdaterCSV
         foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
 
             // Prepare the chunk for upsert
-            $chunk = collect($chunk)->map(function ($item) {
-                return [
-                    'global_id' => $item['ISO3'] !== null && $item['WDPAID'] !== null
-                        ? $item['ISO3'] . '_' . $item['WDPAID']
-                        : null,
-                    'country' => $item['ISO3'] ?? null,
-                    'wdpa_id' => $item['WDPAID'] ?? null,
-                    'name' => $item['NAME'] ?? null,
-                    'iucn_category' => $item['IUCN_CAT'] ?? null,
-                    'creation_date' => $item['STATUS_YR'] ?? null,
-                    'perimeter' => $item['REP_AREA'] ?? null,
-                    'area' => $item['GIS_AREA'] ?? null,
-                    'shape_index' => $item['GIS_M_AREA'] ?? null,
-                ];
-            })->toArray();
+            $chunk = collect($chunk)->map(fn($item): array => [
+                'global_id' => $item['ISO3'] !== null && $item['WDPAID'] !== null
+                    ? $item['ISO3'] . '_' . $item['WDPAID']
+                    : null,
+                'country' => $item['ISO3'] ?? null,
+                'wdpa_id' => $item['WDPAID'] ?? null,
+                'name' => $item['NAME'] ?? null,
+                'iucn_category' => $item['IUCN_CAT'] ?? null,
+                'creation_date' => $item['STATUS_YR'] ?? null,
+                'perimeter' => $item['REP_AREA'] ?? null,
+                'area' => $item['GIS_AREA'] ?? null,
+                'shape_index' => $item['GIS_M_AREA'] ?? null,
+            ])->all();
 
             try{
 
                 // Upsert the current chunk into the database
-                ProtectedArea::upsert(
-                    $chunk,
-                    ['global_id']
-                );
+                ProtectedArea::query()->upsert($chunk, ['global_id']);
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
                 $total_progress = ($partial_progress/100*80) + 10; // CSV parsing takes 80% of the job progress, starting from 10%
-                TaskProgressing::dispatch($jobId, $total_progress);
+                event(new TaskProgressing($jobId, $total_progress));
 
-            } catch (Exception $e) {
+            } catch (Exception) {
                 OfflineLog::error(self::LOG_PREFIX . 'Error while upserting protected areas from CSV file', $verbose);
             }
         }
@@ -154,7 +153,7 @@ class ProtectedAreaUpdaterCSV
             foreach ($chunk as $row) {
 
                 // Overwrite the global_id
-                $pa = ProtectedArea::where('wdpa_id', $row['wdpa_id'])->first();
+                $pa = ProtectedArea::query()->where('wdpa_id', $row['wdpa_id'])->first();
                 if($pa !== null){
                     $pa->global_id = $row['global_id'];
                     $pa->save();
@@ -163,7 +162,7 @@ class ProtectedAreaUpdaterCSV
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);
                 $total_progress = ($partial_progress/100*10) + 90; // OFAC application takes 10% of the job progress, starting from 90%
-                TaskProgressing::dispatch($jobId, $total_progress);
+                event(new TaskProgressing($jobId, $total_progress));
             }
         }
 

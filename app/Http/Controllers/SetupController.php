@@ -46,15 +46,15 @@ class SetupController extends Controller
      * Display the setup page if the application is in its first boot.
      * Redirect to home page if the application is not in its first boot.
      */
-    public function index()
+    public function index(): \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
     {
         // If first boot, redirect to the setup page
         if(ImetEnv::isFirstBoot()){
-            return redirect()->route('setup.info');
+            return to_route('setup.info');
         }
 
         // If not first boot, redirect to the home page
-        return redirect()->route('home');
+        return to_route('home');
     }
 
     /**
@@ -94,7 +94,7 @@ class SetupController extends Controller
 
         // Validate the records
         $messages = (new User)->validate($records);
-        if(!empty($messages)){
+        if($messages !== []){
             return [
                 'status' => 'validation_error',
                 'errors' => $messages
@@ -132,7 +132,7 @@ class SetupController extends Controller
         $jobId = $request->input('job_id');
         SpeciesUpdater::insertSpeciesAndVernacularNames($jobId);
 
-        return response()->json([
+        return new JsonResponse([
             'status' => 'success'
         ]);
     }
@@ -168,7 +168,7 @@ class SetupController extends Controller
 
         ProtectedAreaUpdaterCSV::updateProtectedAreasAndOECMs($zipFilePath, basename($originalFilename), $jobId);
 
-        return response()->json([
+        return new JsonResponse([
             'status' => 'success'
         ]);
     }

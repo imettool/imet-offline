@@ -16,6 +16,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Date;
 use ImetCore\Models\ProtectedArea;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
@@ -24,7 +25,9 @@ use Illuminate\Support\Carbon;
 class ProtectedAreaUpdate extends Model
 {
     protected $table = 'protected_area_updates';
+
     const CREATED_AT = null;
+
     const UPDATED_AT = null;
 
     protected $fillable = ['country', 'last_update_date'];
@@ -36,8 +39,8 @@ class ProtectedAreaUpdate extends Model
     {
         $pas_iso = array_combine(ProtectedArea::getCountriesISO(), array_fill(0, count(ProtectedArea::getCountriesISO()), null));
         $updates = ProtectedAreaUpdate::all()
-            ->map(function ($item) {
-                $item->last_update_date = Carbon::parse($item->last_update_date)->format('Y-m');
+            ->map(function ($item): ProtectedAreaUpdate {
+                $item->last_update_date = Date::parse($item->last_update_date)->format('Y-m');
                 return $item;
             })
             ->pluck('last_update_date', 'country')
@@ -51,9 +54,9 @@ class ProtectedAreaUpdate extends Model
      */
     public static function setUpdated(string $country): void
     {
-        ProtectedAreaUpdate::updateOrCreate(
+        ProtectedAreaUpdate::query()->updateOrCreate(
             ['country' => $country],
-            ['last_update_date' => Carbon::now()]
+            ['last_update_date' => Date::now()]
         );
     }
 

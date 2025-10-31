@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('protected_area_updates', function (Blueprint $table) {
+        Schema::create('protected_area_updates', function (Blueprint $table): void {
             $table->string('country')->primary();
             $table->string('last_update_date');
         });

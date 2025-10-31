@@ -45,7 +45,7 @@ class ParsePhpExtension extends Command
         $required_extensions = array_unique($required_extensions);
         sort($required_extensions);
 
-        $this->info(implode(', ', $required_extensions));
+        $this->components->info(implode(', ', $required_extensions));
 
         return 0;
     }

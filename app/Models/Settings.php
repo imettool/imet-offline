@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
 class Settings extends Model
 {
     protected $table = 'settings';
+
     protected $fillable = [
         'proxy_host',
         'proxy_port',
@@ -31,23 +32,23 @@ class Settings extends Model
 
     public static function get(): array
     {
-        return static::find(0)->toArray();
+        return static::query()->find(0)->toArray();
     }
 
     public static function updateSettings(array $data): array
     {
-        $data = collect($data)->filter(function($value, $key){
-            return $value!==null && $value!=='';
-        })->toArray();
+        $data = collect($data)
+            ->filter(fn($value, $key): bool => $value!==null && $value!=='')
+            ->toArray();
 
-        $settings = static::find(0);
+        $settings = static::query()->find(0);
         $settings->update($data);
         return $settings->toArray();
     }
 
     public static function getSetting($key): ?string
     {
-        return static::first()?->$key;
+        return static::query()->first()?->$key;
     }
 
 }

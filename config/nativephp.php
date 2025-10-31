@@ -148,5 +148,5 @@ return [
     /**
      * Custom PHP binary path.
      */
-    'binary_path' => env('NATIVEPHP_PHP_BINARY_PATH', null),
+    'binary_path' => env('NATIVEPHP_PHP_BINARY_PATH'),
 ];

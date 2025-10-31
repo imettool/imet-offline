@@ -29,6 +29,7 @@ class OfflineLog
         if($verbose){
             print($message . PHP_EOL);
         }
+
         Log::info($message);
     }
 
@@ -40,6 +41,7 @@ class OfflineLog
         if ($verbose) {
             print($message . PHP_EOL);
         }
+
         Log::error($message);
     }
 
@@ -51,6 +53,7 @@ class OfflineLog
         if ($verbose) {
             print($message . PHP_EOL);
         }
+
         Log::warning($message);
     }
 
@@ -62,6 +65,7 @@ class OfflineLog
         if ($verbose) {
             print($message . PHP_EOL);
         }
+
         Log::debug($message);
     }
 

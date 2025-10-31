@@ -46,6 +46,7 @@ class User extends ImetUser
         if ($item->imet_role == null) {
             $item->imet_role = Role::ROLE_ADMINISTRATOR;
         }
+
         if ($item->isDirty()) {
             $item->touch();
             $item->save();

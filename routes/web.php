@@ -21,13 +21,13 @@ use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::middleware(['web'])->group(function () {
+Route::middleware(['web'])->group(function (): void {
 
     Route::get('/', [SetupController::class, 'index']);
     Route::view('home', 'offline.home')->name('home');
 
     // Setup routes
-    Route::prefix('setup')->group(function () {
+    Route::prefix('setup')->group(function (): void {
         Route::get('/', [SetupController::class, 'info'])->name('setup.info');
         Route::get('user', [SetupController::class, 'user'])->name('setup.user');
         Route::patch('user', [SetupController::class, 'user_save'])->name('setup.user.save');
@@ -51,7 +51,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('apply_update', [AppController::class, 'apply_update'])->name('apply_update');
 
     // Debug/dev
-    Route::get('info', function (){ return phpinfo(); });
+    Route::get('info', fn(): true => phpinfo());
 
 });
 

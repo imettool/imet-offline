@@ -70,7 +70,7 @@ class SettingsController extends Controller
 
         // Validate the records
         $messages = (new User)->validate($records);
-        if(!empty($messages)){
+        if($messages !== []){
             return [
                 'status' => 'validation_error',
                 'errors' => $messages

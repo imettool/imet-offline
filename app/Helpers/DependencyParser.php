@@ -30,9 +30,7 @@ class DependencyParser extends BaseDependencyParser
     protected static function getNpmDirectDependencyList(bool $includeDev): array
     {
         $dependencies = parent::getNpmDirectDependencyList($includeDev);
-        return array_filter($dependencies, function ($dependency) {
-            return $dependency != 'imet-core';
-        });
+        return array_filter($dependencies, fn(string $dependency): bool => $dependency !== 'imet-core');
     }
 
     /**
@@ -63,11 +61,13 @@ class DependencyParser extends BaseDependencyParser
         if(Str::contains($packageInfo['name'],'imet-core')) {
             $license = ['EUPL-1.2'];
         }
+
         // Set default license if multiple licenses are found
         if(Str::contains($packageInfo['name'],'nette/schema')
             || Str::contains($packageInfo['name'],'nette/utils')) {
             $license = ['BSD-3'];
         }
+
         if(Str::contains($packageInfo['name'],'nativephp/php-bin')) {
             $license = ['GPL-3.0-or-later'];
         }

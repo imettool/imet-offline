@@ -17,11 +17,14 @@
 namespace App\Jobs;
 
 use App\Events\TaskProgressing;
+use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Sleep;
+use Log;
 
 class DummyJob implements ShouldQueue
 {
@@ -30,15 +33,8 @@ class DummyJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $jobId;
-    public array $zipFiles;
 
-
-    public function __construct(string $jobId, array $zipFiles = [])
-    {
-        $this->jobId = $jobId;
-        $this->zipFiles = $zipFiles;
-    }
+    public function __construct(public string $jobId, public array $zipFiles = []){}
 
     public function handle(): int
     {
@@ -46,14 +42,15 @@ class DummyJob implements ShouldQueue
 
         try{
             for ($i = 1; $i <= $numSeconds; $i++) {
-                sleep(1);
+                Sleep::sleep(1);
                 $progress = round(($i / $numSeconds) * 100);
-                TaskProgressing::dispatch($this->jobId, $progress);
+                event(new TaskProgressing($this->jobId, $progress));
             }
+
             return 0;
 
-        } catch (\Exception $e) {
-            \Log::error('Error in DummyJob: ' . $e->getMessage());
+        } catch (Exception $exception) {
+            Log::error('Error in DummyJob: ' . $exception->getMessage());
             return 1;
         }
 
