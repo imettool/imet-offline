@@ -76,11 +76,11 @@ class ResetDevEnv extends Command
 
         // Delete the database and create a new one
         intro('Resetting the database');
-        static::remove(database_path('nativephp.sqlite'));
-        static::remove(database_path('nativephp.sqlite-shm'));
-        static::remove(database_path('nativephp.sqlite-wal'));
+        self::remove(database_path('nativephp.sqlite'));
+        self::remove(database_path('nativephp.sqlite-shm'));
+        self::remove(database_path('nativephp.sqlite-wal'));
         $databasePath = config('database.connections.offline.database');
-        static::remove($databasePath);
+        self::remove($databasePath);
         $this->components->line('info', 'Creating new database file: '.$databasePath);
         $this->filesystem->touch($databasePath);
         $this->components->line('info', 'Migrating the database');
@@ -108,12 +108,14 @@ class ResetDevEnv extends Command
 
     /**
      * Clear all files and folders in a directory except those specified in the $except array
+     *
+     * @param array<int, string> $except
      */
     private function clearFolder(string $path, array $except = []): void
     {
         foreach (array_diff(scandir($path), ['.', '..']) as $item) {
             if (! in_array($item, $except)) {
-                static::remove($path.'/'.$item);
+                self::remove($path.'/'.$item);
             }
         }
     }

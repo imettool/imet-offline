@@ -15,31 +15,28 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace App\Events;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-use Illuminate\Broadcasting\Channel;
-use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
-use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Queue\SerializesModels;
-
-class TaskProgressing implements ShouldBroadcastNow
+return new class extends Migration
 {
-    use Dispatchable;
-    use InteractsWithSockets;
-    use SerializesModels;
-
-    public function __construct(
-        public string $jobId,
-        public float|int $progress
-    ) {
-        $this->progress = min(100, max(0, round($this->progress))); // Ensure progress is between 0 and 100
-    }
-
-    public function broadcastOn(): array
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
     {
-        return [
-            new Channel('nativephp'),
-        ];
+        Schema::dropIfExists('protected_area_updates');
     }
-}
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::create('protected_area_updates', function (Blueprint $table): void {
+            $table->string('country')->primary();
+            $table->string('last_update_date');
+        });
+    }
+};

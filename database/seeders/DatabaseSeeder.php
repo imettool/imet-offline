@@ -26,15 +26,23 @@ use Illuminate\Support\Str;
 use ImetCore\Models\Imet;
 use ImetCore\Models\Species;
 use ModularForms\Helpers\Input\SelectionList;
+use ModularForms\Models\Module;
+use Random\RandomException;
+use Throwable;
 
 class DatabaseSeeder extends Seeder
 {
     const int NUM_FORMS = 5;
 
     /**
-     * @throws Exception
+     * Generate fake data for a given field
+     *
+     * @param array<string, string> $field
+     * @return mixed
+     * @throws RandomException
+     * @throws Throwable
      */
-    public static function getFake($module, array $field): mixed
+    public static function getFake(array $field): mixed
     {
         $type = $field['type'];
 
@@ -117,7 +125,7 @@ class DatabaseSeeder extends Seeder
 
         if (Str::contains($type, 'rating')) {
             $values = [];
-            $rating_type = last(explode('-', (string) $type));
+            $rating_type = (string) last(explode('-', (string) $type));
             if (Str::contains($rating_type, 'WithNA')) {
                 $values[] = '-99';
                 $rating_type = Str::replace('WithNA', '', $rating_type);
@@ -136,7 +144,7 @@ class DatabaseSeeder extends Seeder
         }
 
         if (Str::contains($type, 'selector-species')) {
-            $species = \ImetCore\Models\Species::query()->inRandomOrder()->first();
+            $species = Species::query()->inRandomOrder()->first();
 
             return $species->phylum
                 .'|'.$species->class
@@ -149,23 +157,36 @@ class DatabaseSeeder extends Seeder
         // Standard
         if (Str::contains($type, 'selector-wdpa')) {
             if (Str::contains($type, 'multiple')) {
-                return implode(',', \App\Models\ProtectedArea::query()->inRandomOrder()->limit(random_int(2, 5))->get()->pluck('wdpa_id')->toArray());
+                return implode(',', ProtectedArea::query()->inRandomOrder()->limit(random_int(2, 5))->get()->pluck('wdpa_id')->toArray());
             }
 
-            return \App\Models\ProtectedArea::query()->inRandomOrder()->first()->wdpa_id;
+            return ProtectedArea::query()->inRandomOrder()->first()->wdpa_id;
         }
 
         return null;
     }
 
-    private function insertRecords($module, $form_id, int $num_records = 1, ?string $group_key = null): void
+    /**
+     * Insert multiple records for a given module and form_id
+     *
+     * @param class-string<Module> $module
+     * @throws Throwable
+     */
+    private function insertRecords(string $module, int $form_id, int $num_records = 1, ?string $group_key = null): void
     {
         for ($y = 1; $y <= $num_records; $y++) {
             $this->insertRecord($module, $form_id, $group_key);
         }
     }
 
-    private function insertRecord($module, $form_id, ?string $group_key = null): void
+    /**
+     * Insert a single record for a given module and form_id
+     *
+     * @param class-string<Module> $module
+     * @throws Exception
+     * @throws Throwable
+     */
+    private function insertRecord(string $module, int $form_id, ?string $group_key = null): void
     {
         $values = [
             'FormID' => $form_id,
@@ -176,28 +197,29 @@ class DatabaseSeeder extends Seeder
         // Inject predefined values
         $predefined = $module::getPredefined($form_id);
         if ($predefined !== null) {
-            $values[$predefined['field']] =
-                $predefined['values'] !== null && count($predefined['values']) > 0
-                ? (
-                    Str::contains((new $module)->module_type, 'GROUP')
-                        ? collect(collect($predefined['values'])->random())->random()
-                        : collect($predefined['values'])->random()
-                )
-                : null;
+            $values[$predefined['field']] = null;
+            if($predefined['values'] !== null && count($predefined['values']) > 0){
+                if(Str::contains((new $module)->module_type, 'GROUP')){
+                    $random_group = fake()->randomElement(array_keys($predefined['values']));
+                    $values[$predefined['field']] = fake()->randomElement($predefined['values'][$random_group]);
+                } else {
+                    $values[$predefined['field']] = fake()->randomElement($predefined['values']);
+                }
+            }
         }
 
         // Generate fake values (fields)
         foreach ((new $module)->module_fields as $field) {
             if (! array_key_exists($field['name'], $values)) {
-                $values[$field['name']] = self::getFake($module, $field);
+                $values[$field['name']] = self::getFake($field);
             }
         }
 
         // Generate fake values (common_fields)
-        if ((new $module)->module_common_fields !== null) {
+        if ((new $module)->module_common_fields !== []) {
             foreach ((new $module)->module_common_fields as $field) {
                 if (! array_key_exists($field['name'], $values)) {
-                    $values[$field['name']] = self::getFake($module, $field);
+                    $values[$field['name']] = self::getFake($field);
                 }
             }
         }
@@ -217,6 +239,8 @@ class DatabaseSeeder extends Seeder
 
     /**
      * Seed the application's database.
+     *
+     * @throws Throwable
      */
     public function run(): void
     {
@@ -235,7 +259,7 @@ class DatabaseSeeder extends Seeder
 
             $pa = $pas->random();
 
-            $form_id = \ImetCore\Models\Imet\v2\Imet::query()->insertGetId([
+            $form_id = Imet\v2\Imet::query()->insertGetId([
                 'Country' => $pa->country,
                 'Year' => fake()->dateTimeBetween('-4 years', 'now')->format('Y'),
                 'version' => Imet\v2\Imet::$version,
@@ -253,7 +277,7 @@ class DatabaseSeeder extends Seeder
                     : 1;
 
                 if (Str::contains($module_type, 'GROUP')) {
-                    foreach (collect((new $module)->module_groups)->keys() as $group_key) {
+                    foreach (array_keys((new $module)->module_groups) as $group_key) {
                         $this->insertRecords($module, $form_id, $num_records, $group_key);
                     }
                 } else {

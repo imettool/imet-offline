@@ -36,7 +36,7 @@ class ParsePhpExtension extends Command
             if (isset($package['require'])) {
                 foreach ($package['require'] as $requirement => $version) {
                     if (Str::startsWith($requirement, 'ext-')) {
-                        $required_extensions[] = Str::replace('ext-', '', $requirement);
+                        $required_extensions[] = Str::replace('ext-', '', (string) $requirement);
                     }
                 }
             }

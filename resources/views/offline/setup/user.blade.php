@@ -1,7 +1,7 @@
 <?php
-/** @var array $timeline */
+/** @var array<string> $timeline */
 /** @var string $current_step */
-/** @var array $user */
+/** @var array<string, string|array<string, scalar>> $user */
 
 ?>
 

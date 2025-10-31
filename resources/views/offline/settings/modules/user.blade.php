@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 use ModularForms\Helpers\DOM;
 use ModularForms\Helpers\Input\SelectionList;
 
-/** @var Array $user */
+/** @var array<string, string|array<string, scalar>> $user */
 
 ?>
 

@@ -24,6 +24,7 @@ class Country extends BaseCountry
 {
     /**
      * Override: get all countries
+     * @return array<string, string>  Key-value pairs of iso3 => country name
      */
     #[\Override]
     public static function selectionList(): array
@@ -41,10 +42,11 @@ class Country extends BaseCountry
 
     /**
      * Get all countries
+     * @return Collection<int, self>
      */
     public static function getAll(): Collection
     {
-        return static::query()->select([static::labelKey(), 'iso3', 'iso2'])
+        return self::query()->select([static::labelKey(), 'iso3', 'iso2'])
             ->orderBy(static::labelKey())
             ->get();
     }

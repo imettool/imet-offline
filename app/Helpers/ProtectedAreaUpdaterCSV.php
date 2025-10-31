@@ -44,7 +44,7 @@ class ProtectedAreaUpdaterCSV
     /**
      * Update protected areas and OECMs from CSV files.
      *
-     * @throws Exception
+     * @throws Throwable
      */
     public static function updateProtectedAreasAndOECMs(string $zipFilePath, string $originalFilename, string $jobId, bool $verbose = false): void
     {
@@ -112,24 +112,27 @@ class ProtectedAreaUpdaterCSV
         foreach ($generator->rows(self::CHUNK_SIZE) as $idx => $chunk) {
 
             // Prepare the chunk for upsert
-            $chunk = collect($chunk)->map(fn ($item): array => [
-                'global_id' => $item['ISO3'] !== null && $item['WDPAID'] !== null
-                    ? $item['ISO3'].'_'.$item['WDPAID']
-                    : null,
-                'country' => $item['ISO3'] ?? null,
-                'wdpa_id' => $item['WDPAID'] ?? null,
-                'name' => $item['NAME'] ?? null,
-                'iucn_category' => $item['IUCN_CAT'] ?? null,
-                'creation_date' => $item['STATUS_YR'] ?? null,
-                'perimeter' => $item['REP_AREA'] ?? null,
-                'area' => $item['GIS_AREA'] ?? null,
-                'shape_index' => $item['GIS_M_AREA'] ?? null,
-            ])->all();
+            /** @var array<int, array<string, mixed>> $chunk */
+            $data = collect($chunk)
+                ->map(fn ($item): array => [
+                    'global_id' => $item['ISO3'] !== null && $item['WDPAID'] !== null
+                        ? $item['ISO3'].'_'.$item['WDPAID']
+                        : null,
+                    'country' => $item['ISO3'] ?? null,
+                    'wdpa_id' => $item['WDPAID'] ?? null,
+                    'name' => $item['NAME'] ?? null,
+                    'iucn_category' => $item['IUCN_CAT'] ?? null,
+                    'creation_date' => $item['STATUS_YR'] ?? null,
+                    'perimeter' => $item['REP_AREA'] ?? null,
+                    'area' => $item['GIS_AREA'] ?? null,
+                    'shape_index' => $item['GIS_M_AREA'] ?? null,
+                ])
+                ->all();
 
             try {
 
                 // Upsert the current chunk into the database
-                ProtectedArea::query()->upsert($chunk, ['global_id']);
+                ProtectedArea::query()->upsert($data, ['global_id']);
 
                 // Update job progress
                 $partial_progress = intval((($idx + 1) * self::CHUNK_SIZE / $generator->num_rows) * 100);

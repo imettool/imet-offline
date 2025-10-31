@@ -30,12 +30,15 @@ class Settings extends Model
         'proxy_password',
     ];
 
-    public static function get(): array
+    public static function get(): Model
     {
-        return static::query()->find(0)->toArray();
+        return self::query()->find(0);
     }
 
-    public static function updateSettings(array $data): array
+    /**
+     * @param array<string, scalar|null> $data
+     */
+    public static function updateSettings(array $data): void
     {
         $data = collect($data)
             ->filter(fn ($value, $key): bool => $value !== null && $value !== '')
@@ -43,11 +46,9 @@ class Settings extends Model
 
         $settings = static::query()->find(0);
         $settings->update($data);
-
-        return $settings->toArray();
     }
 
-    public static function getSetting($key): ?string
+    public static function getSetting(string $key): ?string
     {
         return static::query()->first()?->$key;
     }

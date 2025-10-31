@@ -23,13 +23,14 @@ use ImetCore\Models\User\Role;
 use ImetCore\Models\User\User as ImetUser;
 
 /**
- * @property string first_name
- * @property string last_name
- * @property string organisation
- * @property string function
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $organisation
+ * @property string $function
  */
 class User extends ImetUser
 {
+    /** @var array<string, string> $rules */
     public static array $rules = [
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
@@ -38,7 +39,10 @@ class User extends ImetUser
         'country' => 'required|string|max:3',
     ];
 
-    public function update_offline(array $attributes): Model|array
+    /**
+     * @param array<string, scalar> $attributes
+     */
+    public function update_offline(array $attributes): Model
     {
         $item = (new User)->find($attributes['id']);
         $item->fill($attributes);
@@ -54,12 +58,16 @@ class User extends ImetUser
         return $item;
     }
 
-    public function validate(array $attributes): array
+    /**
+     * @param array<string, scalar> $attributes
+     * @return array<string, array<string>>|null
+     */
+    public function validate(array $attributes): ?array
     {
         $validator = Validator::make($attributes, static::$rules);
 
         return $validator->fails()
             ? $validator->errors()->messages()
-            : [];
+            : null;
     }
 }

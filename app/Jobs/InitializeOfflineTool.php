@@ -45,7 +45,7 @@ class InitializeOfflineTool implements ShouldQueue
         if (file_exists($env_path)) {
             $env_content = file_get_contents($env_path);
             if (Str::contains($env_content, 'LOG_LEVEL=warning')) {
-                $env_content = Str::replace('LOG_LEVEL=warning', 'LOG_LEVEL=debug', $env_content);
+                $env_content = Str::replace('LOG_LEVEL=warning', 'LOG_LEVEL=debug', (string) $env_content);
                 file_put_contents($env_path, $env_content);
                 Log::warning('LOG_LEVEL forced to debug in .env file.');
                 $relaunch_to_apply = true;

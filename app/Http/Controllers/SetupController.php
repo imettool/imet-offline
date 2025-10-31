@@ -35,6 +35,7 @@ use Str;
 
 class SetupController extends Controller
 {
+
     const array TIMELINE = [
         'info',
         'user',
@@ -88,14 +89,15 @@ class SetupController extends Controller
 
     /**
      * Save the user profile information.
+     * @return array<string, int|string|array<string, array<string>>>
      */
-    public function user_save(Request $request): RedirectResponse|array
+    public function user_save(Request $request): array
     {
         $records = Payload::decode($request->input('records_json'));
 
         // Validate the records
         $messages = (new User)->validate($records);
-        if ($messages !== []) {
+        if ($messages !== null) {
             return [
                 'status' => 'validation_error',
                 'errors' => $messages,

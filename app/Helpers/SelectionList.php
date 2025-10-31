@@ -21,6 +21,11 @@ use App\Models\Country;
 
 class SelectionList
 {
+    /**
+     * Get custom selection list
+     *
+     * @return array<string, string>
+     */
     public static function getCustomList(string $type): array
     {
         // Non filtered Country list

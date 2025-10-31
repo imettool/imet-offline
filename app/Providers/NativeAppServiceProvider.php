@@ -38,6 +38,7 @@ class NativeAppServiceProvider implements ProvidesPhpIni
 
     /**
      * Return an array of php.ini directives to be set.
+     * @return array<string, string>
      */
     public function phpIni(): array
     {

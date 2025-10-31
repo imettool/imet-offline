@@ -17,8 +17,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Country;
-use App\Models\ProtectedAreaUpdate;
 use App\Models\Settings;
 use App\Models\User;
 use Auth;
@@ -32,7 +30,7 @@ class SettingsController extends Controller
     {
         return view('offline.settings.index', [
             'vueData' => [
-                'records' => Settings::get(),
+                'records' => Settings::get()->toArray(),
                 'save_url' => route('settings_update'),
             ],
             'user' => [
@@ -40,12 +38,14 @@ class SettingsController extends Controller
                     ->toArray(),
                 'module_key' => 'offline_user',
                 'save_url' => route('update_offline_user'),
-            ],
-            'countries' => Country::getAll(),
-            'updated_pas_countries' => ProtectedAreaUpdate::getUpdated(),
+            ]
         ]);
     }
 
+    /**
+     * Manage "update" settings
+     * @return array<string, mixed>
+     */
     public function update(Request $request): array
     {
         $records = Payload::decode($request->input('records_json'));
@@ -63,6 +63,7 @@ class SettingsController extends Controller
 
     /**
      * Manage "update" OFFLINE user
+     * @return array<string, int|string|array<string, array<string>>>
      */
     public function user(Request $request): array
     {
@@ -70,7 +71,7 @@ class SettingsController extends Controller
 
         // Validate the records
         $messages = (new User)->validate($records);
-        if ($messages !== []) {
+        if ($messages !== null) {
             return [
                 'status' => 'validation_error',
                 'errors' => $messages,

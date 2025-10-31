@@ -25,13 +25,15 @@ use Generator;
  * Usage:
  * $csvReader = new CSVReader('path/to/file.csv');
  * foreach ($csvReader->rows() as $chunk) {
- *     // Process each chunk
+ *    ... Process each chunk ...
  * }
  */
 class CSVReader
 {
+    /** @var resource $file */
     private $file;
 
+    /** @var array<int, string> $header */
     private array $header;
 
     public int $row_index = 0;
@@ -54,6 +56,7 @@ class CSVReader
 
     /**
      * Retrieve CSV header
+     * @return array<int, string>
      */
     public function header(): array
     {

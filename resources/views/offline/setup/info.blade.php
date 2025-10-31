@@ -1,5 +1,5 @@
 <?php
-/** @var array $timeline */
+/** @var array<string> $timeline */
 /** @var string $current_step */
 
 ?>
