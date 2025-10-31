@@ -21,7 +21,8 @@
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "3.6.0",
-        "fakerphp/faker": "1.24.1"
+        "fakerphp/faker": "1.24.1",
+        "larastan/larastan": "^3.7"
     },
     "repositories": {
         "andreamarelli/modular-forms": {
@@ -70,7 +71,8 @@
         "native:dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -k -c \"#93c5fd,#c4b5fd\" \"php artisan native:serve --no-interaction\" \"npm run dev\" --names=app,vite"
-        ]
+        ],
+        "phpstan": "./vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit 512M"
     },
     "extra": {
         "laravel": {
