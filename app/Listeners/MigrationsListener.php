@@ -26,7 +26,8 @@ class MigrationsListener
     {
         if($event instanceof MigrationsStarted){
             Log::info('Migrations started...');
-        } elseif($event instanceof MigrationsEnded) {
+        }
+        if($event instanceof MigrationsEnded) {
             Log::info('Migrations ended.');
         }
     }
