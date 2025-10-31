@@ -124,14 +124,14 @@ class DatabaseSeeder extends Seeder
         return null;
     }
 
-    private static function insertRecords($module, $form_id, int $num_records = 1, string $group_key = null): void
+    private static function insertRecords($module, $form_id, int $num_records = 1, ?string $group_key = null): void
     {
         for($y=1; $y<=$num_records; $y++){
             static::insertRecord($module, $form_id, $group_key);
         }
     }
 
-    private static function insertRecord($module, $form_id, string $group_key = null): void
+    private static function insertRecord($module, $form_id, ?string $group_key = null): void
     {
         $values = [
             'FormID' => $form_id,
@@ -204,7 +204,7 @@ class DatabaseSeeder extends Seeder
             $form_id = Imet\v2\Imet::insertGetId([
                 'Country' => $pa->country,
                 'Year' => fake()->dateTimeBetween('-4 years', 'now')->format('Y'),
-                'version' => Imet\v2\Imet::version,
+                'version' => Imet\v2\Imet::$version,
                 'language' => collect(['en', 'fr', 'sp', 'pt'])->random(),
                 'wdpa_id' => $pa->wdpa_id,
                 'name' => $pa->name,

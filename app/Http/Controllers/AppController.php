@@ -17,7 +17,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\View\View;
-use Native\Laravel\AutoUpdater;
+use Native\Laravel\Facades\AutoUpdater;
 
 class AppController extends Controller
 {
@@ -27,7 +27,7 @@ class AppController extends Controller
      */
     public function apply_update(): View
     {
-        AutoUpdater::quitAndInstall();
+        new AutoUpdater()->quitAndInstall();
 
         return view('offline.apply_update');
     }

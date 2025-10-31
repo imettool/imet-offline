@@ -24,16 +24,19 @@ class Country extends BaseCountry
 {
 
     /**
-     * Override: get only allowed countries
+     * Override: get all countries
      */
-    public static function selectionList($type = 'PAIRS', Collection $collection = null, $fields = []): array
+    #[\Override]
+    public static function selectionList(): array
     {
-        $label_attribute = 'name_'.Locale::lower();
-        return static
-            ::select(['iso3', $label_attribute])
+        $label_attribute = static::labelKey();
+        $key_attribute = 'iso3';
+
+        return static::query()
+            ->select([$label_attribute, $key_attribute])
             ->get()
-            ->sortBy($label_attribute, SORT_NATURAL|SORT_FLAG_CASE)
-            ->pluck($label_attribute, ('iso3'))
+            ->sortBy($label_attribute, SORT_NATURAL | SORT_FLAG_CASE)
+            ->pluck($label_attribute, $key_attribute)
             ->toArray();
     }
 
@@ -42,8 +45,8 @@ class Country extends BaseCountry
      */
     public static function getAll(): Collection
     {
-        return static::select(['name_'.Locale::lower(), 'iso3', 'iso2'])
-            ->orderBy('name_'.Locale::lower())
+        return static::select([static::labelKey(), 'iso3', 'iso2'])
+            ->orderBy(static::labelKey())
             ->get();
     }
 
