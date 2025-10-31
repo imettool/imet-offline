@@ -14,22 +14,33 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace App\Http\Controllers;
+?>
 
-use Illuminate\Contracts\View\View;
-use Native\Laravel\AutoUpdater;
 
-class AppController extends Controller
-{
+@extends('layouts.base')
 
-    /**
-     * Quit the application and install the downloaded update.
-     */
-    public function apply_update(): View
-    {
-        AutoUpdater::quitAndInstall();
+@section('content')
 
-        return view('offline.apply_update');
-    }
+    <div class="text-3xl mb-4 highlight">@lang('offline.actions.applying_updated')</div>
+    <div class="text-xl">@lang('offline.actions.please_wait')</div>
 
-}
+@endsection
+
+
+@push('scripts')
+    <style>
+        main.one-col{
+            display: flex;
+            flex-direction: column;
+        }
+        .content{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+@endpush
+
+

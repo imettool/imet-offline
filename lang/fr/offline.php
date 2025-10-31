@@ -41,6 +41,8 @@ return [
     'actions' => [
         'proceed' => 'Continuer',
         'quit_and_install' => 'Redémarrer pour appliquer',
+        'applying_updated' => 'L\'application va redémarrer pour appliquer la mise à jour',
+        'please_wait' => 'Veuillez patienter ...',
     ],
 
     'errors' => [

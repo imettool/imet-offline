@@ -38,6 +38,8 @@ return [
     'actions' => [
         'proceed' => 'Proceed',
         'quit_and_install' => 'Restart to apply',
+        'applying_updated' => 'Application is going to restart to apply the update',
+        'please_wait' => 'Please wait ...',
     ],
 
     'errors' => [

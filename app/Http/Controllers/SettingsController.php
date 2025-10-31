@@ -78,7 +78,7 @@ class SettingsController extends Controller
         }
 
         // Save the user profile
-        $user = (new User())->update_offline($records);
+        $user = new User()->update_offline($records);
 
         return [
             'id' => 0,

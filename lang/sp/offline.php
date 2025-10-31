@@ -40,6 +40,8 @@ return [
     'actions' => [
         'proceed' => 'Continuar',
         'quit_and_install' => 'Reiniciar para aplicar',
+        'applying_updated' => 'La aplicación se reiniciará para aplicar la actualización',
+        'please_wait' => 'Por favor espera ...',
     ],
 
     'errors' => [
