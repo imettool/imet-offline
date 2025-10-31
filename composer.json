@@ -21,8 +21,11 @@
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "3.6.0",
+        "driftingly/rector-laravel": "^2.1",
         "fakerphp/faker": "1.24.1",
-        "larastan/larastan": "^3.7"
+        "larastan/larastan": "^3.7",
+        "laravel/pint": "^1.25",
+        "rector/rector": "^2.2"
     },
     "repositories": {
         "andreamarelli/modular-forms": {
@@ -72,7 +75,11 @@
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -k -c \"#93c5fd,#c4b5fd\" \"php artisan native:serve --no-interaction\" \"npm run dev\" --names=app,vite"
         ],
-        "phpstan": "./vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit 512M"
+        "phpstan": "./vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit 512M",
+        "rector": " ./vendor/bin/rector process",
+        "pint": "./vendor/bin/pint --config pint.json",
+        "fix": "composer rector && composer pint",
+        "notice-generator": "php notice-generator.php"
     },
     "extra": {
         "laravel": {
