@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -20,10 +21,15 @@ use App\Models\Country;
 
 class SelectionList
 {
+    /**
+     * Get custom selection list
+     *
+     * @return array<string, string>
+     */
     public static function getCustomList(string $type): array
     {
         // Non filtered Country list
-        if($type === "Country"){
+        if ($type === 'Country') {
             return Country::selectionList();
         }
 

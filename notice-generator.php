@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -14,7 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-include_once __DIR__ . '/vendor/autoload.php';
+include_once __DIR__.'/vendor/autoload.php';
 
 use App\Helpers\DependencyParser;
 
@@ -23,6 +24,6 @@ const WITH_DEV = false;
 try {
     DependencyParser::generateNoticeFile(WITH_DEV);
 } catch (Exception $e) {
-    print($e->getMessage());
-    die();
+    echo $e->getMessage();
+    exit();
 }

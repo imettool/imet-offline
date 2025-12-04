@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -20,17 +21,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 use ImetCore\Models\User\Role;
 use ImetCore\Models\User\User as ImetUser;
-use ModularForms\Exceptions\ValidationException;
-use ModularForms\Models\Module;
 
 /**
- * @property string first_name
- * @property string last_name
- * @property string organisation
- * @property string function
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $organisation
+ * @property string $function
  */
 class User extends ImetUser
 {
+    /** @var array<string, string> */
     public static array $rules = [
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
@@ -39,13 +39,17 @@ class User extends ImetUser
         'country' => 'required|string|max:3',
     ];
 
-    public function update_offline(array $attributes): Model|array
+    /**
+     * @param  array<string, scalar>  $attributes
+     */
+    public function update_offline(array $attributes): Model
     {
         $item = (new User)->find($attributes['id']);
         $item->fill($attributes);
         if ($item->imet_role == null) {
             $item->imet_role = Role::ROLE_ADMINISTRATOR;
         }
+
         if ($item->isDirty()) {
             $item->touch();
             $item->save();
@@ -54,12 +58,16 @@ class User extends ImetUser
         return $item;
     }
 
-    public function validate(array $attributes): array
+    /**
+     * @param  array<string, scalar>  $attributes
+     * @return array<string, array<string>>|null
+     */
+    public function validate(array $attributes): ?array
     {
         $validator = Validator::make($attributes, static::$rules);
+
         return $validator->fails()
             ? $validator->errors()->messages()
-            : [];
+            : null;
     }
-
 }

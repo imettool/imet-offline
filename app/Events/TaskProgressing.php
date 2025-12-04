@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -14,7 +15,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
@@ -25,13 +25,15 @@ use Illuminate\Queue\SerializesModels;
 
 class TaskProgressing implements ShouldBroadcastNow
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
+    use Dispatchable;
+    use InteractsWithSockets;
+    use SerializesModels;
 
     public function __construct(
-        public string  $jobId,
-        public string  $progress
-    ){
-        $this->progress = min(100, max(0, (int) $this->progress)); // Ensure progress is between 0 and 100
+        public string $jobId,
+        public float|int $progress
+    ) {
+        $this->progress = min(100, max(0, round($this->progress))); // Ensure progress is between 0 and 100
     }
 
     public function broadcastOn(): array
@@ -41,4 +43,3 @@ class TaskProgressing implements ShouldBroadcastNow
         ];
     }
 }
-

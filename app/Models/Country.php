@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,35 +17,39 @@
 
 namespace App\Models;
 
-use ImetCore\Models\Country as BaseCountry;
-use ModularForms\Helpers\Locale;
 use Illuminate\Database\Eloquent\Collection;
+use ImetCore\Models\Country as BaseCountry;
 
 class Country extends BaseCountry
 {
-
     /**
-     * Override: get only allowed countries
+     * Override: get all countries
+     *
+     * @return array<string, string> Key-value pairs of iso3 => country name
      */
-    public static function selectionList($type = 'PAIRS', Collection $collection = null, $fields = []): array
+    #[\Override]
+    public static function selectionList(): array
     {
-        $label_attribute = 'name_'.Locale::lower();
-        return static
-            ::select(['iso3', $label_attribute])
+        $label_attribute = static::labelKey();
+        $key_attribute = 'iso3';
+
+        return static::query()
+            ->select([$label_attribute, $key_attribute])
             ->get()
-            ->sortBy($label_attribute, SORT_NATURAL|SORT_FLAG_CASE)
-            ->pluck($label_attribute, ('iso3'))
+            ->sortBy($label_attribute, SORT_NATURAL | SORT_FLAG_CASE)
+            ->pluck($label_attribute, $key_attribute)
             ->toArray();
     }
 
     /**
      * Get all countries
+     *
+     * @return Collection<int, self>
      */
     public static function getAll(): Collection
     {
-        return static::select(['name_'.Locale::lower(), 'iso3', 'iso2'])
-            ->orderBy('name_'.Locale::lower())
+        return self::query()->select([static::labelKey(), 'iso3', 'iso2'])
+            ->orderBy(static::labelKey())
             ->get();
     }
-
 }

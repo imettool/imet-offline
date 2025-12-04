@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -17,13 +18,5 @@
 namespace App\Http\Controllers;
 
 use ModularForms\Controllers\FormController;
-use App\Models\User;
-use Illuminate\Http\Request;
-use ModularForms\Models\Traits\Payload;
 
-
-class UserController extends FormController
-{
-
-
-}
+class UserController extends FormController {}

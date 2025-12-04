@@ -14,11 +14,11 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware) {
-       $middleware->append(Authenticate::class);
-       $middleware->append(SetLocale::class);
-       $middleware->append(AddCspHeaders::class);
+    ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->append(Authenticate::class);
+        $middleware->append(SetLocale::class);
+        $middleware->append(AddCspHeaders::class);
     })
-    ->withExceptions(function (Exceptions $exceptions) {
+    ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();

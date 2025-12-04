@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -31,12 +32,12 @@ return [
     'throttle' => 'Demasiados intentos para iniciar sesión. Por favor, inténtelo de nuevo en : segundos segundos.',
 
     'user' => [
-        'email'         => 'correo electrónico',
-        'first_name'    => 'nombre',
-        'last_name'     => 'apellido',
-        'organisation'  => 'institución',
-        'function'      => 'function',
-        'country'       => 'país'
-    ]
+        'email' => 'correo electrónico',
+        'first_name' => 'nombre',
+        'last_name' => 'apellido',
+        'organisation' => 'institución',
+        'function' => 'function',
+        'country' => 'país',
+    ],
 
 ];

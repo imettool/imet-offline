@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -23,15 +24,17 @@ use ImetCore\Models\ProtectedArea as BaseProtectedArea;
 
 /**
  * Class ProtectedArea
- * Extends the base ProtectedArea model from ImetCore to provide database factory support.
  */
 class ProtectedArea extends BaseProtectedArea
 {
+    /** @use HasFactory<ProtectedAreaFactory> */
     use HasFactory;
 
+    /**
+     * @return Factory<ProtectedArea>
+     */
     protected static function newFactory(): Factory
     {
         return ProtectedAreaFactory::new();
     }
-
 }

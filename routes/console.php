@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -14,10 +15,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-use Illuminate\Foundation\Inspiring;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schedule;
 
-//Schedule::call(function (){
+// Schedule::call(function (){
 //    \Illuminate\Support\Facades\Log::info('here: ' .now());
-//})->everyTenSeconds();
+// })->everyTenSeconds();

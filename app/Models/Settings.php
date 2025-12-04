@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -18,10 +19,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-
 class Settings extends Model
 {
     protected $table = 'settings';
+
     protected $fillable = [
         'proxy_host',
         'proxy_port',
@@ -29,25 +30,26 @@ class Settings extends Model
         'proxy_password',
     ];
 
-    public static function get(): array
+    public static function get(): Model
     {
-        return static::find(0)->toArray();
+        return self::query()->find(0);
     }
 
-    public static function updateSettings(array $data): array
+    /**
+     * @param  array<string, scalar|null>  $data
+     */
+    public static function updateSettings(array $data): void
     {
-        $data = collect($data)->filter(function($value, $key){
-            return $value!==null && $value!=='';
-        })->toArray();
+        $data = collect($data)
+            ->filter(fn ($value, $key): bool => $value !== null && $value !== '')
+            ->all();
 
-        $settings = static::find(0);
+        $settings = static::query()->find(0);
         $settings->update($data);
-        return $settings->toArray();
     }
 
-    public static function getSetting($key): ?string
+    public static function getSetting(string $key): ?string
     {
-        return static::first()?->$key;
+        return static::query()->first()?->$key;
     }
-
 }

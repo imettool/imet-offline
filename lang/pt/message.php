@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,7 +17,7 @@
 
 return [
 
-    'in_development'    => 'in development',
+    'in_development' => 'in development',
     'page_in_development' => 'The page is still under development',
 
     'invalid_request' => 'Invalid request',

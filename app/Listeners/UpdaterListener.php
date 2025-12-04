@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -35,21 +36,20 @@ class UpdaterListener
                            UpdateCancelled|
                            Error $event): void
     {
-        if($event instanceof CheckingForUpdate){
+        if ($event instanceof CheckingForUpdate) {
             Log::info(trans('offline.update.checking'));
-        } elseif($event instanceof UpdateAvailable) {
-            Log::info(trans('offline.update.available') . ':'  . $event->version);
-        } elseif($event instanceof UpdateNotAvailable) {
+        } elseif ($event instanceof UpdateAvailable) {
+            Log::info(trans('offline.update.available').':'.$event->version);
+        } elseif ($event instanceof UpdateNotAvailable) {
             Log::info(trans('offline.update.not_available'));
-        } elseif($event instanceof DownloadProgress) {
-            Log::info(trans('offline.update.downloading') . ':'  . $event->percent);
-        } elseif($event instanceof UpdateDownloaded) {
+        } elseif ($event instanceof DownloadProgress) {
+            Log::info(trans('offline.update.downloading').':'.$event->percent);
+        } elseif ($event instanceof UpdateDownloaded) {
             Log::info(trans('offline.update.downloaded'));
-        } elseif($event instanceof UpdateCancelled) {
+        } elseif ($event instanceof UpdateCancelled) {
             Log::info(trans('offline.update.cancelled'));
-        } elseif($event instanceof Error) {
-            Log::info(trans('offline.update.error') . ':'  . $event->message);
+        } elseif ($event instanceof Error) {
+            Log::info(trans('offline.update.error').':'.$event->message);
         }
     }
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -16,7 +17,4 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
-{
-
-}
+abstract class Controller {}

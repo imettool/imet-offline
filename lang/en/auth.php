@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -31,12 +32,12 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
     'user' => [
-        'email'         => 'email address',
-        'first_name'    => 'first name',
-        'last_name'     => 'last name',
-        'organisation'  => 'organisation',
-        'function'      => 'function',
-        'country'       => 'country'
-    ]
+        'email' => 'email address',
+        'first_name' => 'first name',
+        'last_name' => 'last name',
+        'organisation' => 'organisation',
+        'function' => 'function',
+        'country' => 'country',
+    ],
 
 ];

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -19,7 +20,6 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
-
 class ParsePhpExtension extends Command
 {
     protected $signature = 'imet:parse_php_extension';
@@ -33,10 +33,10 @@ class ParsePhpExtension extends Command
         $required_extensions = [];
 
         foreach ($composer_json['packages'] as $package) {
-            if(isset($package['require'])) {
+            if (isset($package['require'])) {
                 foreach ($package['require'] as $requirement => $version) {
                     if (Str::startsWith($requirement, 'ext-')) {
-                        $required_extensions[] = Str::replace('ext-', '', $requirement);
+                        $required_extensions[] = Str::replace('ext-', '', (string) $requirement);
                     }
                 }
             }
@@ -45,9 +45,8 @@ class ParsePhpExtension extends Command
         $required_extensions = array_unique($required_extensions);
         sort($required_extensions);
 
-        $this->info(implode(', ', $required_extensions));
+        $this->components->info(implode(', ', $required_extensions));
 
         return 0;
     }
-
 }

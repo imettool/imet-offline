@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -23,16 +24,16 @@ use Native\Desktop\Drivers\Electron\Commands\InstallCommand;
 use Native\Desktop\Drivers\Electron\Commands\ResetCommand;
 use Symfony\Component\Filesystem\Filesystem;
 
-use function Laravel\Prompts\intro;
 use function Laravel\Prompts\info;
-use function Laravel\Prompts\outro;
+use function Laravel\Prompts\intro;
 
 class ResetDevEnv extends Command
 {
     protected $signature = 'imet:reset_dev_environment';
 
     protected $description = 'Resetting the development environment to a clean state';
-    private Filesystem $filesystem;
+
+    private readonly Filesystem $filesystem;
 
     public function __construct()
     {
@@ -63,27 +64,27 @@ class ResetDevEnv extends Command
         $this->remove(base_path('node_modules/'));
         $this->remove(base_path('public/build'));
         $this->remove(base_path('public/basket'));
-        $this->line('Running npm install');
+        $this->line( 'Running npm install');
         Process::run('npm install');
-        $this->line('Running npm run build');
+        $this->line( 'Running npm run build');
         Process::run('npm run build');
 
         // Clear the vendor directory
         intro('Resetting vendor/');
         $this->remove(base_path('vendor/'));
-        $this->line('Running composer install');
+        $this->line( 'Running composer install');
         Process::run('composer install --no-interaction --optimize-autoloader');
 
         // Delete the database and create a new one
         intro('Resetting the database');
-        static::remove(database_path('nativephp.sqlite'));
-        static::remove(database_path('nativephp.sqlite-shm'));
-        static::remove(database_path('nativephp.sqlite-wal'));
+        self::remove(database_path('nativephp.sqlite'));
+        self::remove(database_path('nativephp.sqlite-shm'));
+        self::remove(database_path('nativephp.sqlite-wal'));
         $databasePath = config('database.connections.offline.database');
-        static::remove($databasePath);
-        $this->line('Creating new database file: ' . $databasePath);
+        self::remove($databasePath);
+        $this->line( 'Creating new database file: '.$databasePath);
         $this->filesystem->touch($databasePath);
-        $this->line('Migrating the database');
+        $this->line( 'Migrating the database');
         $this->call(RefreshCommand::class);
 
         // Run native:install
@@ -101,22 +102,22 @@ class ResetDevEnv extends Command
     private function remove(string $path): void
     {
         if ($this->filesystem->exists($path)) {
-            $this->line('Deleting: ' . $path);
+            $this->line('Deleting: '.$path);
             $this->filesystem->remove($path);
         }
     }
 
     /**
      * Clear all files and folders in a directory except those specified in the $except array
+     *
+     * @param  array<int, string>  $except
      */
     private function clearFolder(string $path, array $except = []): void
     {
-        foreach (array_diff(scandir($path), array('.', '..')) as $item) {
-            if(!in_array($item, $except)) {
-                static::remove($path . '/' . $item);
+        foreach (array_diff(scandir($path), ['.', '..']) as $item) {
+            if (! in_array($item, $except)) {
+                self::remove($path.'/'.$item);
             }
         }
     }
-
 }
-

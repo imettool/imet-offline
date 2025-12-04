@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -27,15 +28,15 @@ return [
     |
     */
 
-    'failed'   => 'As credenciais indicadas não coincidem com as registadas no sistema.',
+    'failed' => 'As credenciais indicadas não coincidem com as registadas no sistema.',
     'throttle' => 'O número limite de tentativas de login foi atingido. Por favor tente novamente dentro de :seconds segundos.',
 
     'user' => [
-        'email'         => 'email',
-        'first_name'    => 'primeiro nome',
-        'last_name'     => 'sobrenome',
-        'organisation'  => 'instituição',
-        'function'      => 'função',
-        'country'       => 'país'
-    ]
+        'email' => 'email',
+        'first_name' => 'primeiro nome',
+        'last_name' => 'sobrenome',
+        'organisation' => 'instituição',
+        'function' => 'função',
+        'country' => 'país',
+    ],
 ];

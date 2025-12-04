@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -26,7 +27,7 @@ return [
             'proxy_port' => 'Port',
             'proxy_user' => 'User',
             'proxy_password' => 'Password',
-        ]
+        ],
     ],
 
     'user' => [
@@ -38,7 +39,7 @@ return [
                     and <b>The World Database on Other Effective Area-based Conservation Measures (WD-OECM)</b> integrated
                     into the application.
                     The datasets are required in order to create new assessments and to associate them with the correct
-                    Protected Area or OECM.'
+                    Protected Area or OECM.',
     ],
 
 ];

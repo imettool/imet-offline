@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -23,7 +24,6 @@ use App\Models\User;
 use Auth;
 use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -39,22 +39,22 @@ class SetupController extends Controller
         'user',
         'species',
         'wdpas',
-        'done'
+        'done',
     ];
 
     /**
      * Display the setup page if the application is in its first boot.
      * Redirect to home page if the application is not in its first boot.
      */
-    public function index()
+    public function index(): \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
     {
         // If first boot, redirect to the setup page
-        if(ImetEnv::isFirstBoot()){
-            return redirect()->route('setup.info');
+        if (ImetEnv::isFirstBoot()) {
+            return to_route('setup.info');
         }
 
         // If not first boot, redirect to the home page
-        return redirect()->route('home');
+        return to_route('home');
     }
 
     /**
@@ -64,7 +64,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.info', [
             'current_step' => 'info',
-            'timeline' => self::TIMELINE
+            'timeline' => self::TIMELINE,
         ]);
     }
 
@@ -80,24 +80,26 @@ class SetupController extends Controller
                 'records' => Auth::user()
                     ->toArray(),
                 'module_key' => 'offline_user',
-                'save_url' => route('setup.user.save')
+                'save_url' => route('setup.user.save'),
             ],
         ]);
     }
 
     /**
      * Save the user profile information.
+     *
+     * @return array<string, int|string|array<string, array<string>>>
      */
-    public function user_save(Request $request): RedirectResponse|array
+    public function user_save(Request $request): array
     {
         $records = Payload::decode($request->input('records_json'));
 
         // Validate the records
         $messages = (new User)->validate($records);
-        if(!empty($messages)){
+        if ($messages !== null) {
             return [
                 'status' => 'validation_error',
-                'errors' => $messages
+                'errors' => $messages,
             ];
         }
 
@@ -122,8 +124,8 @@ class SetupController extends Controller
             'timeline' => self::TIMELINE,
             'vueData' => [
                 'save_url' => route('setup.species.save'),
-                'job_id' => Str::uuid()->toString()
-            ]
+                'job_id' => Str::uuid()->toString(),
+            ],
         ]);
     }
 
@@ -132,8 +134,8 @@ class SetupController extends Controller
         $jobId = $request->input('job_id');
         SpeciesUpdater::insertSpeciesAndVernacularNames($jobId);
 
-        return response()->json([
-            'status' => 'success'
+        return new JsonResponse([
+            'status' => 'success',
         ]);
     }
 
@@ -147,16 +149,17 @@ class SetupController extends Controller
             'timeline' => self::TIMELINE,
             'vueData' => [
                 'records' => [
-                    'dataset_upload' => Module::$upload_object
+                    'dataset_upload' => Module::$upload_object,
                 ],
                 'save_url' => route('setup.wdpas.save'),
-                'job_id' => Str::uuid()->toString()
-            ]
+                'job_id' => Str::uuid()->toString(),
+            ],
         ]);
     }
 
     /**
      * Save the protected areas' dataset.
+     *
      * @throws Exception
      */
     public function wdpas_save(Request $request): JsonResponse
@@ -168,8 +171,8 @@ class SetupController extends Controller
 
         ProtectedAreaUpdaterCSV::updateProtectedAreasAndOECMs($zipFilePath, basename($originalFilename), $jobId);
 
-        return response()->json([
-            'status' => 'success'
+        return new JsonResponse([
+            'status' => 'success',
         ]);
     }
 
@@ -180,9 +183,7 @@ class SetupController extends Controller
     {
         return view('offline.setup.done', [
             'current_step' => 'done',
-            'timeline' => self::TIMELINE
+            'timeline' => self::TIMELINE,
         ]);
     }
-
-
 }
