@@ -73,12 +73,6 @@ return [
         'NATIVEPHP_AZURE_ENDPOINT',
         'NATIVEPHP_AZURE_CERTIFICATE_PROFILE_NAME',
         'NATIVEPHP_AZURE_CODE_SIGNING_ACCOUNT_NAME',
-        'APP_DEBUG',
-        'APP_URL',
-        'VITE_*',
-        'COMPOSER_*',
-        'HTTP_PORT',
-        'UID',
     ],
 
     /**
@@ -93,8 +87,6 @@ return [
         'node_modules',
         '*/tests',
         'tests',
-        '.run',
-        'docker',
     ],
 
     /**

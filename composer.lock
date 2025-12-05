@@ -46,13 +46,9 @@
             },
             "archive": {
                 "exclude": [
-                    ".run",
                     "dev",
-                    "docker",
-                    ".dockerignore",
                     ".gitattributes",
                     ".gitignore",
-                    "docker-compose.yml",
                     "notice-generator.php"
                 ]
             },
