@@ -6,7 +6,7 @@ return [
      * It is used to determine if the app needs to be updated.
      * Increment this value every time you release a new version of your app.
      */
-    'version' => json_decode(file_get_contents(base_path('composer.json')), true)['version'],
+    'version' => env('NATIVEPHP_APP_VERSION', json_decode(file_get_contents(base_path('composer.json')), true)['version']),
 
     /**
      * The ID of your application. This should be a unique identifier
@@ -29,22 +29,22 @@ return [
     /**
      * The author of your application.
      */
-    'author' => 'Marelli Andrea, Politopoulos Panagiotis',
+    'author' => env('NATIVEPHP_APP_AUTHOR', 'Marelli Andrea, Politopoulos Panagiotis'),
 
     /**
      * The copyright notice for your application.
      */
-    'copyright' => 'Copyright (C) 2025 European Union',
+    'copyright' => env('NATIVEPHP_APP_COPYRIGHT', 'Copyright (C) 2025 European Union'),
 
     /**
      * The description of your application.
      */
-    'description' => 'Integrated Management Effectiveness Tool',
+    'description' =>  env('NATIVEPHP_APP_DESCRIPTION', 'Integrated Management Effectiveness Tool'),
 
     /**
      * The Website of your application.
      */
-    'website' => 'https://rris.biopama.org/node/18795',
+    'website' => env('NATIVEPHP_APP_WEBSITE', 'https://rris.biopama.org/node/18795'),
 
     /**
      * The default service provider for your application. This provider
@@ -113,9 +113,28 @@ return [
                 'owner' => env('GITHUB_OWNER'),
                 'token' => env('GITHUB_TOKEN'),
                 'vPrefixedTagName' => env('GITHUB_V_PREFIXED_TAG_NAME', true),
-                'private' => env('GITHUB_PRIVATE', true),
+                'private' => env('GITHUB_PRIVATE', false),
                 'channel' => env('GITHUB_CHANNEL', 'latest'),
                 'releaseType' => env('GITHUB_RELEASE_TYPE', 'draft'),
+            ],
+
+            's3' => [
+                'driver' => 's3',
+                'key' => env('AWS_ACCESS_KEY_ID'),
+                'secret' => env('AWS_SECRET_ACCESS_KEY'),
+                'region' => env('AWS_DEFAULT_REGION'),
+                'bucket' => env('AWS_BUCKET'),
+                'endpoint' => env('AWS_ENDPOINT'),
+                'path' => env('NATIVEPHP_UPDATER_PATH', null),
+            ],
+
+            'spaces' => [
+                'driver' => 'spaces',
+                'key' => env('DO_SPACES_KEY_ID'),
+                'secret' => env('DO_SPACES_SECRET_ACCESS_KEY'),
+                'name' => env('DO_SPACES_NAME'),
+                'region' => env('DO_SPACES_REGION'),
+                'path' => env('NATIVEPHP_UPDATER_PATH', null),
             ],
         ],
     ],
@@ -137,7 +156,6 @@ return [
      */
     'prebuild' => [
         'npm run build',
-        'php artisan optimize',
     ],
 
     'postbuild' => [
@@ -147,5 +165,5 @@ return [
     /**
      * Custom PHP binary path.
      */
-    'binary_path' => env('NATIVEPHP_PHP_BINARY_PATH'),
+    'binary_path' => env('NATIVEPHP_PHP_BINARY_PATH', null),
 ];
