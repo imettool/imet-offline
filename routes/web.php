@@ -15,7 +15,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-use App\Http\Controllers\AppController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SetupController;
 use Illuminate\Support\Facades\Route;
@@ -46,9 +45,6 @@ Route::middleware(['web'])->group(function (): void {
     // ###### File upload/download ######
     Route::post('file/upload', [UploadFileController::class, 'upload'])->name('upload.file');
     Route::get('file/{hash}', [UploadFileController::class, 'download'])->name('file');
-
-    // Updater
-    Route::get('apply_update', [AppController::class, 'apply_update'])->name('apply_update');
 
     // Debug/dev
     Route::get('info', fn (): true => phpinfo());

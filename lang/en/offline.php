@@ -29,7 +29,7 @@ return [
         'available' => 'New version available',
         'not_available' => 'You are using the latest version.',
         'downloading' => 'Downloading new version...',
-        'downloaded' => 'New version downloaded successfully.',
+        'downloaded' => 'New version downloaded successfully. Close the application to apply the update.',
         'cancelled' => 'Update cancelled.',
         'error' => 'Error occurred while retrieving update',
 

@@ -19,7 +19,6 @@ use ModularForms\Helpers\Template;
         </span>
         <span v-else-if="status === STATUSES['DOWNLOADED']" class="highlight flex items-center gap-2">
             @lang('offline.update.downloaded')
-            <a class="btn-nav small" href="{{ route('apply_update') }}">@lang('offline.actions.quit_and_install')</a>
         </span>
         <span v-else-if="status === STATUSES['ERROR']" class="error">@lang('offline.update.error')</span>
 

@@ -30,7 +30,7 @@ return [
         'available' => 'Nueva versión disponible',
         'not_available' => 'Estás usando la última versión.',
         'downloading' => 'Descargando nueva versión...',
-        'downloaded' => 'Nueva versión descargada con éxito.',
+        'downloaded' => 'Nueva versión descargada con éxito. Cierra la aplicación para aplicar la actualización.',
         'cancelled' => 'Actualización cancelada.',
         'error' => 'Ocurrió un error al recuperar la actualización',
 
