@@ -18,7 +18,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Native\Electron\Commands\PublishCommand;
+use Native\Desktop\Drivers\Electron\Commands\PublishCommand;
 
 class Publish extends Command
 {

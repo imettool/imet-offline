@@ -17,11 +17,17 @@
 
 namespace App\Console\Commands;
 
+use Illuminate\Cache\Console\ClearCommand;
 use Illuminate\Console\Command;
 use Illuminate\Database\Console\Migrations\RefreshCommand;
+use Illuminate\Foundation\Console\ClearCompiledCommand;
+use Illuminate\Foundation\Console\ConfigClearCommand;
+use Illuminate\Foundation\Console\EventClearCommand;
+use Illuminate\Foundation\Console\RouteClearCommand;
+use Illuminate\Foundation\Console\ViewClearCommand;
 use Illuminate\Support\Facades\Process;
-use Native\Electron\Commands\InstallCommand;
-use Native\Electron\Commands\ResetCommand;
+use Native\Desktop\Drivers\Electron\Commands\InstallCommand;
+use Native\Desktop\Drivers\Electron\Commands\ResetCommand;
 use Symfony\Component\Filesystem\Filesystem;
 
 use function Laravel\Prompts\info;
@@ -29,7 +35,7 @@ use function Laravel\Prompts\intro;
 
 class ResetDevEnv extends Command
 {
-    protected $signature = 'imet:reset_dev_environment';
+    protected $signature = 'imet:reset_dev_environment {--clean-only}';
 
     protected $description = 'Resetting the development environment to a clean state';
 
@@ -43,6 +49,22 @@ class ResetDevEnv extends Command
 
     public function handle(): int
     {
+        $clean_only = $this->option('clean-only', false);
+        $do_refresh = !$clean_only;
+
+        $databasePath = config('database.connections.offline.database');
+
+        // Laravel application cache clear
+        intro('Clearing Laravel caches');
+        $this->call(ConfigClearCommand::class);
+        $this->call(ClearCompiledCommand::class);
+        $this->call(EventClearCommand::class);
+        $this->call(RouteClearCommand::class);
+        $this->call(ViewClearCommand::class);
+        if ($this->filesystem->exists($databasePath)) {
+            $this->call(ClearCommand::class);
+        }
+
         // Reset the NativePHP development environment
         $this->call(ResetCommand::class, ['--with-app-data' => true]);
 
@@ -57,38 +79,47 @@ class ResetDevEnv extends Command
         $this->clearFolder(storage_path('framework'), ['cache', 'sessions', 'testing', 'views', '.gitignore']);
         $this->clearFolder(storage_path('logs'), ['.gitignore']);
         $this->clearFolder(storage_path('releases'), ['.gitkeep']);
+        $this->clearFolder(base_path('nativephp/electron/dist'), ['.gitkeep']);
 
         // Clear the assets and node_modules/ directories
         intro('Resetting node_modules/');
         $this->remove(base_path('node_modules/'));
         $this->remove(base_path('public/build'));
         $this->remove(base_path('public/basket'));
-        $this->line( 'Running npm install');
-        Process::run('npm install');
-        $this->line( 'Running npm run build');
-        Process::run('npm run build');
+        if($do_refresh){
+            $this->line( 'Running npm install');
+            Process::run('npm install');
+            $this->line( 'Running npm run build');
+            Process::run('npm run build');
+        }
 
         // Clear the vendor directory
         intro('Resetting vendor/');
         $this->remove(base_path('vendor/'));
-        $this->line( 'Running composer install');
-        Process::run('composer install --no-interaction --optimize-autoloader');
+        if($do_refresh) {
+            $this->line('Running composer install');
+            Process::run('composer install --no-interaction --optimize-autoloader');
+        }
 
         // Delete the database and create a new one
         intro('Resetting the database');
         self::remove(database_path('nativephp.sqlite'));
         self::remove(database_path('nativephp.sqlite-shm'));
         self::remove(database_path('nativephp.sqlite-wal'));
-        $databasePath = config('database.connections.offline.database');
         self::remove($databasePath);
-        $this->line( 'Creating new database file: '.$databasePath);
-        $this->filesystem->touch($databasePath);
-        $this->line( 'Migrating the database');
-        $this->call(RefreshCommand::class);
+        if($do_refresh) {
+            $this->line('Creating new database file: ' . $databasePath);
+            $this->filesystem->touch($databasePath);
+            $this->line('Migrating the database');
+            $this->call(RefreshCommand::class);
+        }
+
 
         // Run native:install
-        intro('Running native:install');
-        $this->call(InstallCommand::class, ['--force' => true, '--installer' => 'npm']);
+        if($do_refresh) {
+            intro('Running native:install');
+            $this->call(InstallCommand::class, ['--force' => true, '--installer' => 'npm']);
+        }
 
         info('Development environment reset successfully!');
 
@@ -113,9 +144,11 @@ class ResetDevEnv extends Command
      */
     private function clearFolder(string $path, array $except = []): void
     {
-        foreach (array_diff(scandir($path), ['.', '..']) as $item) {
-            if (! in_array($item, $except)) {
-                self::remove($path.'/'.$item);
+        if ($this->filesystem->exists($path)) {
+            foreach (array_diff(scandir($path), ['.', '..']) as $item) {
+                if (!in_array($item, $except)) {
+                    self::remove($path . '/' . $item);
+                }
             }
         }
     }

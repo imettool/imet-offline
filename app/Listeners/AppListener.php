@@ -21,8 +21,8 @@ use App\Helpers\ImetEnv;
 use App\Jobs\InitializeOfflineTool;
 use Illuminate\Support\Facades\App;
 use Log;
-use Native\Laravel\Events\App\ApplicationBooted;
-use Native\Laravel\Facades\AutoUpdater;
+use Native\Desktop\Events\App\ApplicationBooted;
+use Native\Desktop\Facades\AutoUpdater;
 
 class AppListener
 {
