@@ -17,7 +17,11 @@
 
 namespace App\Providers;
 
+use App\Events\ZoomInHotKeyPressed;
+use App\Events\ZoomOutHotKeyPressed;
+use App\Events\ZoomResetHotKeyPressed;
 use Native\Desktop\Contracts\ProvidesPhpIni;
+use Native\Desktop\Facades\GlobalShortcut;
 use Native\Desktop\Facades\Window;
 
 class NativeAppServiceProvider implements ProvidesPhpIni
@@ -34,6 +38,52 @@ class NativeAppServiceProvider implements ProvidesPhpIni
             ->resizable()
             ->hideMenu()
             ->title(trans('offline.title'));
+
+        // Register global shortcuts
+        // Note: electron has actually inconsistent behavior with non US keyboard layouts
+
+        // Zoom in
+        $zoomInKeys = [
+            'CmdOrCtrl+=',
+            'CmdOrCtrl+Plus',
+            'CmdOrCtrl+Shift+Plus',
+            'CmdOrCtrl+]',  // ITA layout: the + in ITA layout is in the same position of the ] in US layout
+        ];
+        foreach($zoomInKeys as $key) {
+            GlobalShortcut::key($key)
+                ->unregister();
+            GlobalShortcut::key($key)
+                ->event(ZoomInHotKeyPressed::class)
+                ->register();
+        }
+
+        // Zoom out
+        $zoomOutKeys = [
+            'CmdOrCtrl+-',
+            'CmdOrCtrl+_',
+            'CmdOrCtrl+[',
+            'CmdOrCtrl+/', // ITA layout: the - in ITA layout is in the same position of the / in US layout
+        ];
+        foreach ($zoomOutKeys as $key) {
+            GlobalShortcut::key($key)
+                ->unregister();
+            GlobalShortcut::key($key)
+                ->event(ZoomOutHotKeyPressed::class)
+                ->register();
+        }
+
+        // Reset zoom
+        $zoomResetKeys = [
+            'CmdOrCtrl+0'
+        ];
+        foreach ($zoomResetKeys as $key) {
+            GlobalShortcut::key($key)
+                ->unregister();
+            GlobalShortcut::key($key)
+                ->event(ZoomResetHotKeyPressed::class)
+                ->register();
+        }
+
     }
 
     /**
