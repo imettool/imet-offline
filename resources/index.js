@@ -37,3 +37,6 @@ window.OfflineImet.ProtectedPlanetUploadApp = ProtectedPlanetUploadApp;
 
 import CheckUpdatesApp from "./js/CheckUpdatesApp.js";
 window.OfflineImet.CheckUpdatesApp = CheckUpdatesApp;
+
+import HotKeysApp from "./js/HotKeysApp.js";
+window.OfflineImet.HotKeysApp = HotKeysApp;
