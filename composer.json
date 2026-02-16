@@ -6,7 +6,7 @@
     "require": {
         "php": "8.4.*",
         "ext-zip": "*",
-        "andreamarelli/imet-core": "3.1.6",
+        "andreamarelli/imet-core": "3.2.0",
         "guzzlehttp/guzzle": "^7.10.0",
         "laravel/framework": "^12.49.0",
         "laravel/ui": "^4.6.1",
