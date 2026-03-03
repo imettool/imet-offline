@@ -1,6 +1,6 @@
 imet
 
-version: 3.0.0-rc.36
+version: 3.0.0-rc.37
 
 Copyright (C) 2025 European Union
 
@@ -8,19 +8,13 @@ See the LICENCE file for licensing information
 
 This product uses software developed by third parties which is provided under their respective licences:
 
-__andreamarelli/imet-core 3.2.0__
+__andreamarelli/imet-core 3.3.0__
   * git@github.com:andreamarelli/imet-core
   * License: EUPL-1.2
   * Copyright: 
     * Copyright (C) 2025 European Union 
 
-__guzzlehttp/guzzle 7.10.0__
-  * https://github.com/guzzle/guzzle
-  * License: MIT
-  * Copyright: 
-    * Copyright (c) 2016 George Mponos <gmponos@gmail.com> 
-
-__laravel/framework v12.51.0__
+__laravel/framework v12.53.0__
   * https://laravel.com
   * License: MIT
   * Copyright: 
@@ -32,35 +26,29 @@ __laravel/ui v4.6.1__
   * Copyright: 
     * Copyright (c) Taylor Otwell 
 
-__nativephp/desktop 2.1.0__
+__nativephp/desktop 2.1.1__
   * https://github.com/nativephp/laravel
   * License: MIT
   * Copyright: 
     * Copyright (c) NativePHP <simon@nativephp.com> 
 
-__opcodesio/log-viewer v3.21.1__
+__opcodesio/log-viewer v3.23.0__
   * https://github.com/opcodesio/log-viewer
   * License: MIT
   * Copyright: 
     * Copyright (c) arukompas <arukomp@gmail.com> 
 
-__spatie/laravel-csp 3.22.0__
+__spatie/laravel-csp 3.23.0__
   * https://github.com/spatie/laravel-csp
   * License: MIT
   * Copyright: 
     * Copyright (c) Spatie bvba <info@spatie.be> 
 
-__spatie/laravel-ignition 2.10.0__
+__spatie/laravel-ignition 2.11.0__
   * https://flareapp.io/ignition
   * License: MIT
   * Copyright: 
     * Copyright (c) Spatie <info@spatie.be> 
-
-__symfony/console v7.4.4__
-  * https://symfony.com
-  * License: MIT
-  * Copyright: 
-    * Copyright (c) 2004-present Fabien Potencier 
 
 __Catalogue of Life, 2025-08-26__
   * https://www.catalogueoflife.org/
