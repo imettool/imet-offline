@@ -40,7 +40,7 @@ class InitializeOfflineTool implements ShouldQueue
     {
         $relaunch_to_apply = false;
 
-        // Force debug mode in the .env file
+        // ############  Force debug mode in the .env file  ############
         $env_path = app_path().'/../.env';
         if (file_exists($env_path)) {
             $env_content = file_get_contents($env_path);
@@ -54,22 +54,33 @@ class InitializeOfflineTool implements ShouldQueue
             Log::error('Trying to force debug mode in .env file, but the file does not exist: '.$env_path);
         }
 
-        // Hard coded: set temporary Github token for auto-updater
+        // ############  Hard coded: set temporary Github token for auto-updater ############
         // TODO: remove as soon as the imet-offline repository is public
         $github_token = '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';
-        $config_file_path = app_path().'/../../../../app-update.yml';
-        if (file_exists($config_file_path)) {
+        $config_file_path = app_path();
+        // Search for the app-update.yml file iteratively in the parent directories, starting from the app path
+        while (!file_exists(trim($config_file_path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'app-update.yml')) {
+            $parent_dir = dirname($config_file_path);
+            if ($parent_dir === $config_file_path) {
+                Log::error('Trying to set GitHub token in updater config file, but the file does not exist: '.$config_file_path);
+                return;
+            }
+            $config_file_path = $parent_dir;
+        }
+        // Update the app-update.yml file with the GitHub token if it does not already exist
+        if(file_exists(trim($config_file_path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'app-update.yml')) {
+            $config_file_path = trim($config_file_path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'app-update.yml';
             $config_content = file_get_contents($config_file_path);
             if (! Str::contains($config_content, 'token:')) {
                 file_put_contents($config_file_path, PHP_EOL.'token: '.$github_token, FILE_APPEND);
                 Log::warning('GitHub token set in updater config yml file.');
                 $relaunch_to_apply = true;
+            } else {
+                Log::warning('GitHub token already exists in updater config yml file.');
             }
-        } else {
-            Log::error('Trying to set GitHub token in updater config file, but the file does not exist: '.$config_file_path);
         }
 
-        // Relaunch the application to apply changes
+        //  ############  Relaunch the application to apply changes  ############
         if ($relaunch_to_apply) {
             Log::warning('Relaunching the application to apply changes.');
             App::relaunch();
