@@ -73,8 +73,8 @@ return [
             'browse' => 'Abra el sitio web de <span class="highlight">Protected Planet</span> (<span class="highlight">www.protectedplanet.net</span>)',
             'navigate' => 'Haga clic en el botón <span class="highlight">Explore protected areas and OECMs</span>',
             'download' => 'Localice el botón <span class="highlight mr-0.5">Download</span> y proceda a descargar el
-                archivo <span class="highlight mr-0.5">CSV</span>.<br />Se descargará un archivo <span class="highlight mr-0.5">ZIP</span>:
-                <b>no es necesario</b> extraerlo.',
+                archivo <span class="highlight mr-0.5">CSV</span>. Seleccione “Non Commercial Use” si el sistema lo solicita.<br />
+                Se descargará un archivo <span class="highlight mr-0.5">ZIP</span>: <b>no es necesario</b> extraerlo.',
             'upload' => 'Haga clic en el siguiente botón <span class="highlight mr-0.5">Upload file</span> y seleccione el
                 archivo <span class="highlight mr-0.5">ZIP</span> descargado',
             'apply' => 'Inicie la integración del conjunto de datos en la aplicación haciendo clic en el siguiente botón.',

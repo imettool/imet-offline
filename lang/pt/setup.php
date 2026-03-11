@@ -75,8 +75,9 @@ return [
                         (<span class="highlight">www.protectedplanet.net</span>)',
             'navigate' => 'Clique no botão <span class="highlight">Explore protected areas and OECMs</span>',
             'download' => 'Localize o botão <span class="highlight mr-0.5">Download</span> e proceda ao download do
-                        ficheiro <span class="highlight mr-0.5">CSV</span>.<br />Será transferido um arquivo compactado
-                        <span class="highlight mr-0.5">ZIP</span>: <b>não é necessário</b> descompactá-lo.',
+                        ficheiro <span class="highlight mr-0.5">CSV</span>. Selecione "Non Commercial Use" se o sistema o solicitar.
+                        <br />Será transferido um arquivo compactado <span class="highlight mr-0.5">ZIP</span>:
+                        <b>não é necessário</b> descompactá-lo.',
             'upload' => 'Clique no seguinte botão <span class="highlight mr-0.5">Upload file</span> e selecione o
                             ficheiro <span class="highlight mr-0.5">ZIP</span> transferido',
             'apply' => 'Inicie a integração do conjunto de dados na aplicação clicando no botão seguinte.',

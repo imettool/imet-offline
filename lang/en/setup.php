@@ -75,7 +75,7 @@ return [
                         (<span class="highlight">www.protectedplanet.net</span>)',
             'navigate' => 'Click on the <span class="highlight">Explore protected areas and OECMs</span> button',
             'download' => 'Locate the <span class="highlight mr-0.5">Download</span> button and proceed with the download of the
-                        <span class="highlight mr-0.5">CSV</span> file. <br />A <span class="highlight mr-0.5">ZIP</span>
+                        <span class="highlight mr-0.5">CSV</span> file. Select "Non Commercial Use" if asked.<br />A <span class="highlight mr-0.5">ZIP</span>
                         archive will be downloaded: it is <b>not necessary</b> to extract it.',
             'upload' => 'Click on the following <span class="highlight mr-0.5">Upload file</span> button and select the
                         downloaded <span class="highlight mr-0.5">ZIP</span> file',

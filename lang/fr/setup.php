@@ -61,7 +61,8 @@ return [
             'browse' => 'Accédez au site web <span class="highlight">Protected Planet</span>
                         (<span class="highlight">www.protectedplanet.net</span>)',
             'navigate' => 'Cliquez sur le bouton <span class="highlight">Explore protected areas and OECMs</span>',
-            'download' => 'Localisez le bouton <span class="highlight mr-0.5">Download</span> et procédez au téléchargement du fichier <span class="highlight mr-0.5">CSV</span>.<br />Une archive <span class="highlight mr-0.5">ZIP</span> sera téléchargée : il n\'est <b>pas nécessaire</b> de l\'extraire.',
+            'download' => 'Localisez le bouton <span class="highlight mr-0.5">Download</span> et procédez au téléchargement
+                            du fichier <span class="highlight mr-0.5">CSV</span>. Sélectionnez "Non Commercial Use" si le système vous le demande.<br />Une archive <span class="highlight mr-0.5">ZIP</span> sera téléchargée: il n\'est <b>pas nécessaire</b> de l\'extraire.',
             'upload' => 'Cliquez sur le bouton <span class="highlight mr-0.5">Upload file</span> suivant et sélectionnez le fichier <span class="highlight mr-0.5">ZIP</span> téléchargé',
             'apply' => 'Démarrez l\'intégration du jeu de données dans l\'application en cliquant sur le bouton suivant.',
             'completed' => 'Le jeu de données est stocké dans l\'application.',
