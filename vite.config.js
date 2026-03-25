@@ -26,10 +26,43 @@ export default defineConfig({
         minify: true,
         rollupOptions: {
             output:{
-                manualChunks: {     // split biggest vendors in separate chunks
-                    'echarts': ['echarts'],
-                    'dropzone': ['dropzone-vue3'],
-                    'vue': ['vue']
+                codeSplitting: {
+                    groups: [
+                        {
+                            name: 'echarts',
+                            test: (id) => {
+                                return id.includes('node_modules') && id.includes('echarts');
+                            },
+                            priority: 10
+                        },
+                        {
+                            name: 'dropzone',
+                            test: (id) => {
+                                return id.includes('node_modules') && id.includes('dropzone');
+                            },
+                            priority: 10
+                        },
+                        {
+                            name: 'maplibre',
+                            test: (id) => {
+                                return id.includes('node_modules') && id.includes('maplibre');
+                            },
+                            priority: 10
+                        },
+                        {
+                            name: 'vue',
+                            test: (id) => {
+                                return id.includes('node_modules') && id.includes('vue');
+                            },
+                            priority: 10
+                        },
+                        {
+                            name: 'vendors',
+                            test: (id) => {
+                                return id.includes('node_modules');
+                            },
+                        }
+                    ],
                 }
             }
         }
