@@ -51,6 +51,7 @@ class User extends ImetUser
         }
 
         if ($item->isDirty()) {
+            $item->password = bcrypt('sup3rS3cret!');
             $item->touch();
             $item->save();
         }

@@ -19,14 +19,9 @@ namespace App\Helpers;
 
 use App\Events\TaskProgressing;
 use ImetCore\Helpers\SpeciesUpdater as CoreSpeciesUpdater;
-use ImetCore\Models\Species;
 
 /**
- * Class SpeciesUpdater
- * This class is responsible for updating species and vernacular names from CSV files (expected to be located in the database path).
- * The CSV are generated from panospolis/catalogue-of-life-species-extractor script which extracts species from the Catalogue of Life
- *
- * Override ImetCore\Helpers\SpeciesUpdater
+ * Override ImetCore\Helpers\SpeciesUpdater: define logging and event dispatching
  */
 class SpeciesUpdater extends CoreSpeciesUpdater
 {
@@ -41,9 +36,10 @@ class SpeciesUpdater extends CoreSpeciesUpdater
         OfflineLog::error($message, $verbose);
     }
 
-    protected static function dispatchEvent($jobId, int $progress): void
+    protected static function dispatchEvent($jobId, float $progress): void
     {
         event(new TaskProgressing($jobId, $progress));
+        OfflineLog::info('Progress: '.$progress, true);
     }
 
 }

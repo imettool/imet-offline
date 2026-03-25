@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee87ed3c5e06fae8b0c617625e46bca4",
+    "content-hash": "736478d6223e8d9557f5ba9ea6ec7c40",
     "packages": [
         {
             "name": "andreamarelli/imet-core",
-            "version": "3.5.2",
+            "version": "3.5.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:andreamarelli/imet-core.git",
-                "reference": "ad14d2be287788cebfdc1e23079c7526fc780493"
+                "reference": "3d18ad476a51d9e0d6df3f33996fb8f4c0c8d4de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/ad14d2be287788cebfdc1e23079c7526fc780493",
-                "reference": "ad14d2be287788cebfdc1e23079c7526fc780493",
+                "url": "https://api.github.com/repos/andreamarelli/imet-core/zipball/3d18ad476a51d9e0d6df3f33996fb8f4c0c8d4de",
+                "reference": "3d18ad476a51d9e0d6df3f33996fb8f4c0c8d4de",
                 "shasum": ""
             },
             "require": {
@@ -77,10 +77,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/andreamarelli/imet-core/tree/v3.5.2",
+                "source": "https://github.com/andreamarelli/imet-core/tree/v3.5.6",
                 "issues": "https://github.com/andreamarelli/imet-core/issues"
             },
-            "time": "2026-03-25T09:39:55+00:00"
+            "time": "2026-03-25T16:58:27+00:00"
         },
         {
             "name": "andreamarelli/modular-forms",

@@ -19,20 +19,19 @@ namespace App\Helpers;
 
 use App\Models\Country;
 
-class SelectionList
+use ImetCore\Helpers\SelectionList as ImetCoreSelectionList;
+
+class SelectionList extends ImetCoreSelectionList
 {
-    /**
-     * Get custom selection list
-     *
-     * @return array<string, string>
-     */
-    public static function getCustomList(string $type): array
+    public static function getList(string $type): array
     {
-        // Non filtered Country list
+        $type = parent::getListType($type);
+
+        // Non-filtered Country list
         if ($type === 'Country') {
             return Country::selectionList();
         }
 
-        return \ImetCore\Helpers\SelectionList::getCustomList($type);
+        return parent::getList($type);
     }
 }

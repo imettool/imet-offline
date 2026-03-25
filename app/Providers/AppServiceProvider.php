@@ -17,15 +17,22 @@
 
 namespace App\Providers;
 
+use App\Helpers\SelectionList;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
+use ModularForms\Helpers\Input\SelectionListResolver as ModularFormsSelectionList;
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
-    public function register(): void {}
+    public function register(): void
+    {
+        $this->app
+            ->make(ModularFormsSelectionList::class)
+            ->setClass(SelectionList::class);
+    }
 
     /**
      * Bootstrap any application services.
