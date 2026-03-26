@@ -1,6 +1,6 @@
 imet
 
-version: 3.0.0
+version: 3.0.0-rc.40
 
 Copyright (C) 2025 European Union
 
@@ -8,19 +8,19 @@ See the LICENCE file for licensing information
 
 This product uses software developed by third parties which is provided under their respective licences:
 
-__andreamarelli/imet-core 3.3.0__
+__andreamarelli/imet-core 3.5.6__
   * git@github.com:andreamarelli/imet-core
   * License: EUPL-1.2
   * Copyright: 
     * Copyright (C) 2025 European Union 
 
-__laravel/framework v12.53.0__
+__laravel/framework v12.55.1__
   * https://laravel.com
   * License: MIT
   * Copyright: 
     * Copyright (c) Taylor Otwell 
 
-__laravel/ui v4.6.1__
+__laravel/ui v4.6.3__
   * https://github.com/laravel/ui
   * License: MIT
   * Copyright: 
@@ -32,7 +32,7 @@ __nativephp/desktop 2.1.1__
   * Copyright: 
     * Copyright (c) NativePHP <simon@nativephp.com> 
 
-__opcodesio/log-viewer v3.23.0__
+__opcodesio/log-viewer v3.24.0__
   * https://github.com/opcodesio/log-viewer
   * License: MIT
   * Copyright: 
@@ -44,7 +44,7 @@ __spatie/laravel-csp 3.23.0__
   * Copyright: 
     * Copyright (c) Spatie bvba <info@spatie.be> 
 
-__spatie/laravel-ignition 2.11.0__
+__spatie/laravel-ignition 2.12.0__
   * https://flareapp.io/ignition
   * License: MIT
   * Copyright: 
