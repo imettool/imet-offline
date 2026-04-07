@@ -1,6 +1,6 @@
 imet
 
-version: 3.0.0-rc.41
+version: 3.0.0-rc.42
 
 Copyright (C) 2025 European Union
 
@@ -8,13 +8,13 @@ See the LICENCE file for licensing information
 
 This product uses software developed by third parties which is provided under their respective licences:
 
-__andreamarelli/imet-core 3.5.6__
+__andreamarelli/imet-core 3.5.8__
   * git@github.com:andreamarelli/imet-core
   * License: EUPL-1.2
   * Copyright: 
     * Copyright (C) 2025 European Union 
 
-__laravel/framework v12.55.1__
+__laravel/framework v12.56.0__
   * https://laravel.com
   * License: MIT
   * Copyright: 
