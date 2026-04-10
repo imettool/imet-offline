@@ -1,36 +1,23 @@
-# IMET Offline
+# IMET Offline Tool
 
-The IMET Offline is a desktop application that allows users to conduct assessments of protected areas and conserved
-areas without the need for an internet connection. It is built on NativePHP, a framework that allows to create
-cross-platform desktop applications using PHP, HTML, CSS, and JavaScript. The tool is designed to be user-friendly and
-provides a simple interface for users to input data, generate reports, and manage assessments.
+<p align="center"><img alt="logo" src="/public/icon.png" style="width: 200px;"></p>
 
-## Technical Requirements
-The IMET Offline is available for Windows 10. Windows 11 support of is currently under testing and will be available soon.
+The **IMET Offline Tool** is a desktop application that allows users to conduct [IMET](https://github.com/imettool/) assessments 
+on protected areas and conserved areas. 
+It is built with [NativePHP](https://nativephp.com), a framework for building cross-platform desktop applications using 
+PHP and JavaScript which run completely on the local machine without any internet connection or server infrastructure.
+The IMET Offline is currently available only for Windows 11, but support for other platforms might come in the future.
 
-## Overview
+> [!IMPORTANT]
+> This repository contains exclusively the code that enables the IMET to be executed in a standalone desktop application.
+> The code responsible for creating and managing IMET assessments is located in the [imet-core](https://github.com/imettool/imet-core) 
+> repository.
 
-*Integrated Management Effectiveness Tool (IMET)* is a _Protected Area Management Effectiveness (PAME)_ tool that allows 
-an in-depth assessment of marine and terrestrial protected areas, regardless of their management categories and governance 
-type. As a decision-support tool, it helps protected area managers take analysis-based management decisions for improved 
-conservation outcomes.
-
-The objective of the IMET conserved areas tool is to enhancing conservation efforts and sustaining governance in 
-community areas such as Other Effective area-based Conservation Measures (OECMs), Locally-Managed Marine Areas (LMMAs), 
-Indigenous and Community Conserved Areas (ICCAs), Community Forests, etc., Community Forests, etc., 
-and in buffer areas of Protected Areas. The IMET conserved areas tool:  
-
-- Integrates context, management and governance dimensions for improved knowledge, planning, governance and monitoring
-- Sustains data collection and establishes baselines
-- Supports identification of stakeholders
-- Identifies key conservation elements and ecosystem services, prioritising stakeholders implication, management and governance activities
-- Allows understanding community awareness in the management and governance of the conserved area and promotes dialogue, governance and shared planning
-- Empowers local communities for effective conservation
-- Encourages participation from local communities, government agencies, and NGOs, fostering collaboration and shared responsibility
-- Supports priority planning and allows monitoring progress and adapting management and governance strategies as necessary 
+## Getting started
+Complete and comprehensive documentation of the codebase is available [here](docs/documentation.md).
 
 ## Copyright
-Copyright (C) 2025 European Union
+Copyright (C) 2026 European Union
 
 ## License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
