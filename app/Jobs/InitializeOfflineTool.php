@@ -55,7 +55,7 @@ class InitializeOfflineTool implements ShouldQueue
         }
 
         // ############  Temporary hard coded: set read-only GitHub token for electron-updater ############
-        // TODO: not more necessary as soon as the repository become public
+        // TODO: to be removed as the repository become public or https://github.com/NativePHP/desktop/pull/110 is being accepted and merged into new release
         $github_token = env('AUTOUPDATE');
         $config_file_path = app_path();
         // Search for the app-update.yml file iteratively in the parent directories, starting from the app path

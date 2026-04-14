@@ -62,6 +62,8 @@ return [
         'AWS_*',
         'AZURE_*',
         'GITHUB_*',
+        'COMPOSER_*',
+        'VITE_APP_*',
         'DO_SPACES_*',
         '*_SECRET',
         'BIFROST_*',
