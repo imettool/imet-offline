@@ -6,8 +6,8 @@
     "require": {
         "php": "8.4.*",
         "ext-zip": "*",
-        "andreamarelli/imet-core": "3.6.0",
-        "laravel/framework": "^12.55.1",
+        "andreamarelli/imet-core": "3.6.1",
+        "laravel/framework": "^12.56.0",
         "laravel/ui": "^4.6.3",
         "nativephp/desktop": "2.1.1",
         "opcodesio/log-viewer": "^3.23.0",
