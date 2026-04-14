@@ -18,24 +18,18 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Native\Desktop\Drivers\Electron\Commands\PublishCommand;
+use Native\Desktop\Drivers\Electron\Commands\BuildCommand;
 
-class Publish extends Command
+class Build extends Command
 {
-    protected $signature = 'imet:publish
-        {--clean : clean the development environment before publishing}';
+    protected $signature = 'imet:build';
 
-    protected $description = 'Publish a new release of the IMET offline application to GitHub';
+    protected $description = 'Build the IMET Offline application';
 
     public function handle(): int
     {
-        // Clean the development environment before publishing
-        if ($this->option('clean')) {
-            $this->call(ResetDevEnv::class);
-        }
-
         // Publish a new release to GitHub using NativePHP
-        $this->call(PublishCommand::class, [
+        $this->call(BuildCommand::class, [
             'os' => 'win',
             'arch' => 'x64',
         ]);

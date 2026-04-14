@@ -66,10 +66,10 @@
             "php artisan key:generate --ansi"
         ],
         "native:build": [
-            "php artisan native:build win x64"
+            "php artisan imet:build"
         ],
         "native:publish": [
-            "php artisan native:publish win x64"
+            "php artisan imet:publish"
         ],
         "native:run": [
             "php artisan native:run"
