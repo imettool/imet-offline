@@ -34,7 +34,7 @@ use ModularForms\Helpers\Template;
         <a href="/logs" target="_blank" class="!text-gray-600">
             {!! Template::icon('rectangle-list') !!}
         </a>
-        <a href="https://github.com/andreamarelli/imet/releases/latest" target="_blank" class="!text-gray-600">
+        <a href="https://github.com/imettool/imet/releases/latest" target="_blank" class="!text-gray-600">
             <span class="fa-brands fa-fw fa-github"></span>
         </a>
     </div>

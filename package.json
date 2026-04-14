@@ -5,7 +5,7 @@
         "build": "vite build"
     },
     "dependencies": {
-        "imet-core": "file:./vendor/andreamarelli/imet-core/",
+        "imet-core": "file:./vendor/imettool/imet-core/",
         "modular-forms": "file:./vendor/andreamarelli/modular-forms/"
     },
     "devDependencies": {

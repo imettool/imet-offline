@@ -1,12 +1,12 @@
 {
-    "name": "andreamarelli/imet",
+    "name": "imettool/imet",
     "description": "Imet Offline Tool",
     "license": "GPL-3.0-only",
     "version": "3.0.0-rc.43",
     "require": {
         "php": "8.4.*",
         "ext-zip": "*",
-        "andreamarelli/imet-core": "3.6.1",
+        "imettool/imet-core": "3.7.0",
         "laravel/framework": "^12.56.0",
         "laravel/ui": "^4.6.3",
         "nativephp/desktop": "2.1.1",
@@ -28,9 +28,9 @@
             "type": "vcs",
             "url": "https://github.com/andreamarelli/modular-forms"
         },
-        "andreamarelli/imet-core": {
+        "imettool/imet-core": {
             "type": "vcs",
-            "url": "https://github.com/andreamarelli/imet-core"
+            "url": "https://github.com/imettool/imet-core"
         }
     },
     "autoload": {

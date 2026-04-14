@@ -8,8 +8,8 @@ See the LICENCE file for licensing information
 
 This product uses software developed by third parties which is provided under their respective licences:
 
-__andreamarelli/imet-core 3.6.0__
-  * git@github.com:andreamarelli/imet-core
+__imettool/imet-core 3.7.0__
+  * git@github.com:imettool/imet-core
   * License: EUPL-1.2
   * Copyright: 
     * Copyright (C) 2025 European Union 

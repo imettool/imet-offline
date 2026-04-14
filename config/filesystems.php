@@ -56,7 +56,7 @@ return [
 
         'imet_db_sql' => [
             'driver' => 'local',
-            'root' => base_path('vendor/andreamarelli/imet-core/database'),
+            'root' => base_path('vendor/imettool/imet-core/database'),
             'visibility' => 'private',
             'throw' => false,
             'report' => false,
