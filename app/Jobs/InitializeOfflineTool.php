@@ -17,6 +17,7 @@
 
 namespace App\Jobs;
 
+use Dotenv\Dotenv;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -56,7 +57,11 @@ class InitializeOfflineTool implements ShouldQueue
 
         // ############  Temporary hard coded: set read-only GitHub token for electron-updater ############
         // TODO: to be removed as the repository become public or https://github.com/NativePHP/desktop/pull/110 is being accepted and merged into new release
-        $github_token = env('AUTOUPDATE');
+        $env_path = app_path().'/../.env';
+        $content = file_get_contents($env_path);
+        if (preg_match('/^AUTOUPDATE=(.*)/m', $content, $matches)) {
+            $github_token = $matches[1];
+        }
         $config_file_path = app_path();
         // Search for the app-update.yml file iteratively in the parent directories, starting from the app path
         while (!file_exists(trim($config_file_path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'app-update.yml')) {
