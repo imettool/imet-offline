@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2352b2fab6743026a1c406f1893cf529",
+    "content-hash": "a20916fea73426ce2042c53edb038063",
     "packages": [
         {
             "name": "andreamarelli/modular-forms",
