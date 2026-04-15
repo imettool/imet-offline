@@ -2,7 +2,7 @@
     "name": "imettool/imet",
     "description": "Imet Offline Tool",
     "license": "GPL-3.0-only",
-    "version": "3.0.0-rc.43",
+    "version": "3.0.0-rc.44",
     "require": {
         "php": "8.4.*",
         "ext-zip": "*",
