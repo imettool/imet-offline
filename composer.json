@@ -7,9 +7,9 @@
         "php": "8.4.*",
         "ext-zip": "*",
         "imettool/imet-core": "3.7.0",
-        "laravel/framework": "^12.56.0",
+        "laravel/framework": "13.8.0",
         "laravel/ui": "^4.6.3",
-        "nativephp/desktop": "2.1.1",
+        "nativephp/desktop": "2.2.0",
         "opcodesio/log-viewer": "^3.23.0",
         "spatie/laravel-csp": "^3.23.0",
         "spatie/laravel-ignition": "^2.12"
