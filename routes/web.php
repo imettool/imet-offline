@@ -15,6 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+use App\Http\Controllers\LogsController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SetupController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,8 @@ Route::middleware(['web'])->group(function (): void {
     Route::get('file/{hash}', [UploadFileController::class, 'download'])->name('file');
 
     // Debug/dev
+    Route::get('log-list', [LogsController::class, 'index'])->name('log-list');
+    Route::get('log-download/{log}', [LogsController::class, 'download'])->name('log-download');
     Route::get('info', fn (): true => phpinfo());
 
 });

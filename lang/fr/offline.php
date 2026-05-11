@@ -48,4 +48,10 @@ return [
         'generic' => 'La requête a échoué',
     ],
 
+    'logs' => [
+        'logs-title' => 'Journaux',
+        'logs-info' => 'Voici la liste des fichiers journaux générés par l\'application. Vous pouvez les télécharger et les envoyer à l\'équipe de support pour le dépannage.',
+        'no_logs' => 'Aucun fichier journal généré pour le moment.',
+    ],
+
 ];

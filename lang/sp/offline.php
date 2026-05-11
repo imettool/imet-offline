@@ -48,4 +48,10 @@ return [
         'generic' => 'La solicitud falló',
     ],
 
+    'logs' => [
+        'logs-title' => 'Registros',
+        'logs-info' => 'Esta es la lista de archivos de registro generados por la aplicación. Puedes descargarlos y enviarlos al equipo de soporte para su resolución.',
+        'no_logs' => 'Aún no se han generado archivos de registro.',
+    ],
+
 ];

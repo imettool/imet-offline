@@ -31,10 +31,15 @@ use ModularForms\Helpers\Template;
 
     <!-- Logs -->
     <div>
-        <a href="/logs" target="_blank" class="!text-gray-600">
-            {!! Template::icon('rectangle-list') !!}
+        <a href="{{ route('log-list') }}" class="!text-gray-600">
+            {!! Template::icon('bug') !!}
         </a>
-        <a href="https://github.com/imettool/imet/releases/latest" target="_blank" class="!text-gray-600">
+        @if(ImetEnv::isDevEnv())
+            <a href="/logs" target="_blank" class="!text-gray-600">
+                {!! Template::icon('rectangle-list') !!}
+            </a>
+        @endif
+        <a href="https://github.com/imettool/imet/" target="_blank" class="!text-gray-600">
             <span class="fa-brands fa-fw fa-github"></span>
         </a>
     </div>
@@ -43,9 +48,6 @@ use ModularForms\Helpers\Template;
     <div>
         @lang('offline.version'): <span class="font-bold text-primary-600">{{ ImetEnv::getVersion() }}</span>
     </div>
-
-    <!-- Copyright -->
-    <div class="font-bold">{{ config('nativephp.copyright') }}</div>
 
 </section>
 

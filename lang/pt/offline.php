@@ -48,4 +48,10 @@ return [
         'generic' => 'A requisição falhou',
     ],
 
+    'logs' => [
+        'logs-title' => 'Registos',
+        'logs-info' => 'Esta é a lista dos ficheiros de registo gerados pela aplicação. Pode descarregá-los e enviá-los à equipa de suporte para resolução de problemas.',
+        'no_logs' => 'Ainda não foram gerados ficheiros de registo.',
+    ],
+
 ];
