@@ -30,6 +30,7 @@ use Illuminate\View\View;
 use ModularForms\Helpers\File\File;
 use ModularForms\Models\Module;
 use ModularForms\Models\Traits\Payload;
+use Native\Desktop\Facades\Window;
 use Str;
 
 class SetupController extends Controller
@@ -48,6 +49,9 @@ class SetupController extends Controller
      */
     public function index(): \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
     {
+        // Close splashscreen
+        Window::close('splash');
+
         // If first boot, redirect to the setup page
         if (ImetEnv::isFirstBoot()) {
             return to_route('setup.info');

@@ -32,7 +32,15 @@ class NativeAppServiceProvider implements ProvidesPhpIni
      */
     public function boot(): void
     {
-        Window::open()
+        Window::open('splash')
+            ->url('file://' . public_path('splash.html'))
+            ->width(1200)
+            ->height(800)
+            ->frameless()
+            ->alwaysOnTop()
+            ->resizable(false);
+
+        Window::open('root')
             ->width(1200)
             ->height(800)
             ->resizable()

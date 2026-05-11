@@ -22,7 +22,7 @@ use ModularForms\Controllers\UploadFileController;
 
 Route::middleware(['web'])->group(function (): void {
 
-    Route::get('/', [SetupController::class, 'index']);
+    Route::get('/', [SetupController::class, 'index'])->name('root');
     Route::view('home', 'offline.home')->name('home');
 
     // Setup routes

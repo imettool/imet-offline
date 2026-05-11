@@ -1,0 +1,175 @@
+<!--
+  ~ Copyright (C) 2026 European Union
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program. If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading…</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            background: #222222;
+            color: #e6e8eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 28px;
+            -webkit-app-region: drag;
+        }
+
+        .icon {
+            width: 128px;
+            height: 128px;
+        }
+
+        .app-name {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* Progress bar: starts indeterminate, switches to determinate via .determinate */
+        .progress {
+            width: 440px;
+            height: 5px;
+            background: #4E4F51;
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Indeterminate sweep — visible only while .determinate is NOT set */
+        .progress::before {
+            content: "";
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 40%;
+            background: linear-gradient(90deg, transparent, #3AABFE, transparent);
+            animation: slide 1.4s ease-in-out infinite;
+        }
+
+
+        /* Determinate fill — width driven by JS */
+        .fill {
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 0%;
+            background: linear-gradient(90deg, #7AC3F8, #3AABFE);
+            border-radius: 999px;
+            transition: width 280ms cubic-bezier(.2,.7,.2,1);
+            opacity: 0;
+        }
+
+        .progress.determinate .fill { opacity: 1; }
+
+        @keyframes slide {
+            0%   { transform: translateX(-100%); }
+            100% { transform: translateX(350%); }
+        }
+
+        .status {
+            font-size: 13px;
+            color: #8b8f96;
+            min-height: 16px;
+            transition: opacity 0.2s ease;
+        }
+
+    </style>
+</head>
+<body>
+
+<img src="icon.png" alt="icon" class="icon" />
+
+<div class="app-name">IMET Offline Tool</div>
+
+<div class="progress"
+     id="progress"
+     role="progressbar"
+     aria-valuemin="0"
+     aria-valuemax="100"
+     aria-label="Application loading progress">
+    <div class="fill" id="fill"></div>
+</div>
+
+<div class="status" id="status" aria-live="polite">Starting up…</div>
+
+
+<script>
+    const statusEl   = document.getElementById("status");
+    const progressEl = document.getElementById("progress");
+    const fillEl     = document.getElementById("fill");
+
+    // ---- Fake cycler: only runs until the first real event arrives ----
+    const fakeMessages = [
+        "Starting up...",
+    ];
+    let fakeIndex = 0;
+    let receivedReal = false;
+
+    const fakeTimer = setInterval(() => {
+        if (receivedReal) return;
+        fakeIndex = (fakeIndex + 1) % fakeMessages.length;
+        setStatus(fakeMessages[fakeIndex]);
+    }, 1800);
+
+    function setStatus(text) {
+        statusEl.style.opacity = 0;
+        setTimeout(() => {
+            statusEl.textContent = text;
+            statusEl.style.opacity = 1;
+        }, 180);
+    }
+
+    function setProgress(percent) {
+        progressEl.classList.add("determinate");
+        const clamped = Math.max(0, Math.min(100, percent));
+        fillEl.style.width = clamped + "%";
+        progressEl.setAttribute("aria-valuenow", String(Math.round(clamped)));
+    }
+    //
+    // // ---- Real progress listener ----
+    // // Works whether ipcRenderer is exposed via nodeIntegration OR contextBridge.
+    // const ipc =
+    //     (window.electronAPI && window.electronAPI.onBootProgress) // contextBridge
+    //         ? { on: (_, cb) => window.electronAPI.onBootProgress(cb) }
+    //         : (typeof require === "function" ? require("electron").ipcRenderer : null);
+    //
+    // if (ipc) {
+    //     ipc.on("boot-progress", (_evt, data) => {
+    //         if (!receivedReal) {
+    //             receivedReal = true;
+    //             clearInterval(fakeTimer);
+    //         }
+    //         if (typeof data.percent === "number") setProgress(data.percent);
+    //         if (typeof data.message === "string") setStatus(data.message);
+    //     });
+    // }
+</script>
+
+</body>
+</html>
