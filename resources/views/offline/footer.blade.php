@@ -29,24 +29,32 @@ use ModularForms\Helpers\Template;
 
 <section id="imet_footer">
 
-    <!-- Logs -->
-    <div>
+    <div class="flex gap-1">
+
+        <!-- Logs -->
         <a href="{{ route('log-list') }}" class="!text-gray-600">
             {!! Template::icon('bug') !!}
         </a>
+
+        <!-- Logs Viewer (only DEV) -->
         @if(ImetEnv::isDevEnv())
             <a href="/logs" target="_blank" class="!text-gray-600">
                 {!! Template::icon('rectangle-list') !!}
             </a>
         @endif
+
+        <!-- GitHub -->
         <a href="https://github.com/imettool/imet/" target="_blank" class="!text-gray-600">
             <span class="fa-brands fa-fw fa-github"></span>
         </a>
+
     </div>
 
     <!-- Version -->
-    <div>
-        @lang('offline.version'): <span class="font-bold text-primary-600">{{ ImetEnv::getVersion() }}</span>
+    <div class="flex gap-3">
+        <div class="font-bold">@lang('offline.version')</div>
+        <div><span class="italic">IMET Offline Tool </span>: <span class="font-bold text-primary-600">{{ ImetEnv::getVersion() }}</span></div>
+        <div><span class="italic">imet-core </span>: <span class="font-bold text-primary-600">{{ ImetEnv::getCoreVersion() }}</span></div>
     </div>
 
 </section>

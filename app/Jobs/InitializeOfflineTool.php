@@ -81,7 +81,7 @@ class InitializeOfflineTool implements ShouldQueue
                 Log::warning('GitHub read-only token set in updater config yml file.');
                 $relaunch_to_apply = true;
             } else {
-                Log::warning('GitHub read-only token already exists in updater config yml file.');
+                Log::info('GitHub read-only token already exists in updater config yml file.');
             }
         }
 

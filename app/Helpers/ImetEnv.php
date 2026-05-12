@@ -38,4 +38,19 @@ class ImetEnv extends \ImetCore\Helpers\ImetEnv
             ? 'DEV ('.config('nativephp.version').')'
             : config('nativephp.version');
     }
+
+    public static function getCoreVersion(): ?string
+    {
+        $path = base_path('composer.lock');
+        $json = file_get_contents($path);
+        $data = json_decode($json, true);
+
+        foreach ($data['packages'] as $package) {
+            if ($package['name'] == 'imettool/imet-core') {
+                return $package['version'];
+            }
+        }
+
+        return null;
+    }
 }
