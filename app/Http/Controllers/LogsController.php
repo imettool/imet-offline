@@ -50,6 +50,8 @@ class LogsController extends Controller
             $log_files[] = $file->getFilename();
         }
 
+        rsort($log_files);
+
         return $log_files;
     }
 

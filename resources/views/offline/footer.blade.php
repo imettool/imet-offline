@@ -44,7 +44,7 @@ use ModularForms\Helpers\Template;
         @endif
 
         <!-- GitHub -->
-        <a href="https://github.com/imettool/imet/" target="_blank" class="!text-gray-600">
+        <a href="https://github.com/imettool/imet-offline" target="_blank" class="!text-gray-600">
             <span class="fa-brands fa-fw fa-github"></span>
         </a>
 

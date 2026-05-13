@@ -44,7 +44,7 @@ return [
     /**
      * The Website of your application.
      */
-    'website' => env('NATIVEPHP_APP_WEBSITE', 'https://rris.biopama.org/node/18795'),
+    'website' => env('NATIVEPHP_APP_WEBSITE', 'https://github.com/imettool'),
 
     /**
      * The default service provider for your application. This provider
@@ -162,6 +162,15 @@ return [
 
     'postbuild' => [
         // 'rm -rf public/build',
+    ],
+
+    /**
+     * The NSIS installer configuration for Windows builds.
+     *
+     * @see https://www.electron.build/generated/nsisoptions
+     */
+    'nsis' => [
+        'delete_app_data_on_uninstall' => env('NATIVEPHP_NSIS_DELETE_APP_DATA', true),
     ],
 
     /**
