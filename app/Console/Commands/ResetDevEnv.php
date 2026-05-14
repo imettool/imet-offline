@@ -17,15 +17,15 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Cache\Console\ClearCommand;
 use Illuminate\Console\Command;
-use Illuminate\Database\Console\Migrations\RefreshCommand;
+use Illuminate\Database\Console\Migrations\MigrateCommand;
 use Illuminate\Foundation\Console\ClearCompiledCommand;
 use Illuminate\Foundation\Console\ConfigClearCommand;
 use Illuminate\Foundation\Console\EventClearCommand;
 use Illuminate\Foundation\Console\RouteClearCommand;
 use Illuminate\Foundation\Console\ViewClearCommand;
 use Illuminate\Support\Facades\Process;
+use Illuminate\Support\Str;
 use Native\Desktop\Drivers\Electron\Commands\InstallCommand;
 use Native\Desktop\Drivers\Electron\Commands\ResetCommand;
 use Symfony\Component\Filesystem\Filesystem;
@@ -61,31 +61,32 @@ class ResetDevEnv extends Command
         $this->call(EventClearCommand::class);
         $this->call(RouteClearCommand::class);
         $this->call(ViewClearCommand::class);
-        if ($this->filesystem->exists($databasePath)) {
-            $this->call(ClearCommand::class);
-        }
 
         // Reset the NativePHP development environment
         $this->call(ResetCommand::class, ['--with-app-data' => true]);
+        $this->clearFolder(base_path('nativephp'));
 
         // Clear storage
         intro('Clearing the storage');
-        $this->clearFolder(storage_path('app'), ['public', 'private', '.gitignore']);
-        $this->clearFolder(storage_path('framework/cache/data'), ['.gitignore']);
-        $this->clearFolder(storage_path('framework/cache'), ['data', '.gitignore']);
-        $this->clearFolder(storage_path('framework/sessions'), ['.gitignore']);
-        $this->clearFolder(storage_path('framework/testing'), ['.gitignore']);
-        $this->clearFolder(storage_path('framework/views'), ['.gitignore']);
-        $this->clearFolder(storage_path('framework'), ['cache', 'sessions', 'testing', 'views', '.gitignore']);
-        $this->clearFolder(storage_path('logs'), ['.gitignore']);
-        $this->clearFolder(storage_path('releases'), ['.gitkeep']);
-        $this->clearFolder(base_path('nativephp/electron/dist'), ['.gitkeep']);
+        $this->clearFolder(storage_path(), [
+            'storage/app/.gitignore',
+            'storage/app/private/.gitignore',
+            'storage/app/public/.gitignore',
+            'storage/framework/.gitignore',
+            'storage/framework/cache/.gitignore',
+            'storage/framework/cache/data/.gitignore',
+            'storage/framework/sessions/.gitignore',
+            'storage/framework/testing/.gitignore',
+            'storage/framework/views/.gitignore',
+            'storage/logs/.gitignore',
+            'storage/releases/.gitkeep'
+        ]);
 
         // Clear the assets and node_modules/ directories
         intro('Resetting node_modules/');
-        $this->remove(base_path('node_modules/'));
-        $this->remove(base_path('public/build'));
-        $this->remove(base_path('public/basket'));
+        $this->clearFolder(base_path('node_modules'));
+        $this->clearFolder(base_path('public/build'));
+        $this->clearFolder(base_path('public/basket'));
         if($do_refresh){
             $this->line( 'Running npm install');
             Process::run('npm install');
@@ -95,7 +96,7 @@ class ResetDevEnv extends Command
 
         // Clear the vendor directory
         intro('Resetting vendor/');
-        $this->remove(base_path('vendor/'));
+        $this->clearFolder(base_path('vendor/'));
         if($do_refresh) {
             $this->line('Running composer install');
             Process::run('composer install --no-interaction --optimize-autoloader');
@@ -111,9 +112,8 @@ class ResetDevEnv extends Command
             $this->line('Creating new database file: ' . $databasePath);
             $this->filesystem->touch($databasePath);
             $this->line('Migrating the database');
-            $this->call(RefreshCommand::class);
+            $this->call(MigrateCommand::class);
         }
-
 
         // Run native:install
         if($do_refresh) {
@@ -142,14 +142,37 @@ class ResetDevEnv extends Command
      *
      * @param  array<int, string>  $except
      */
-    private function clearFolder(string $path, array $except = []): void
+    private function clearFolder(string $path, array $except = [], bool $verbose = true): void
     {
+        $path = rtrim($path, '/');
+
         if ($this->filesystem->exists($path)) {
-            foreach (array_diff(scandir($path), ['.', '..']) as $item) {
-                if (!in_array($item, $except)) {
-                    self::remove($path . '/' . $item);
+
+            if($verbose) {
+                $this->line('Deleting: '.$path);
+            }
+
+            $files = array_diff(scandir($path), ['.', '..']);
+
+            foreach ($files as $item) {
+
+                $fullPath = $path . '/' . $item;
+                $relativePath = Str::replace(base_path() . '/', '', $fullPath);
+
+                if(is_dir($fullPath)){
+                    $this->clearFolder($fullPath, $except, false);
+                } else {
+                    if(!in_array($relativePath, $except, true)) {
+                        $this->filesystem->remove($fullPath);
+                    }
+                }
+
+                // Remove folder emptied after file removal
+                if(count(array_diff(scandir($path), ['.', '..']))===0){
+                    $this->filesystem->remove($path);
                 }
             }
+
         }
     }
 }
