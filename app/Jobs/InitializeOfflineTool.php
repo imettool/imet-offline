@@ -55,36 +55,6 @@ class InitializeOfflineTool implements ShouldQueue
             Log::error('Trying to force debug mode in .env file, but the file does not exist: '.$env_path);
         }
 
-        // ############  Temporary hard coded: set read-only GitHub token for electron-updater ############
-        // TODO: to be removed as the repository become public or https://github.com/NativePHP/desktop/pull/110 is being accepted and merged into new release
-        $env_path = app_path().'/../.env';
-        $content = file_get_contents($env_path);
-        if (preg_match('/^AUTOUPDATE=(.*)/m', $content, $matches)) {
-            $github_token = $matches[1];
-        }
-        $config_file_path = app_path();
-        // Search for the app-update.yml file iteratively in the parent directories, starting from the app path
-        while (!file_exists(trim($config_file_path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'app-update.yml')) {
-            $parent_dir = dirname($config_file_path);
-            if ($parent_dir === $config_file_path) {
-                Log::error('Trying to set GitHub read-only token in updater config file, but the file does not exist: '.$config_file_path);
-                return;
-            }
-            $config_file_path = $parent_dir;
-        }
-        // Update the app-update.yml file with the GitHub read-only token if it does not already exist
-        if(file_exists(trim($config_file_path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'app-update.yml')) {
-            $config_file_path = trim($config_file_path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'app-update.yml';
-            $config_content = file_get_contents($config_file_path);
-            if (! Str::contains($config_content, 'token:')) {
-                file_put_contents($config_file_path, PHP_EOL.'token: '.$github_token, FILE_APPEND);
-                Log::warning('GitHub read-only token set in updater config yml file.');
-                $relaunch_to_apply = true;
-            } else {
-                Log::info('GitHub read-only token already exists in updater config yml file.');
-            }
-        }
-
         //  ############  Relaunch the application to apply changes  ############
         if ($relaunch_to_apply) {
             Log::warning('Relaunching the application to apply changes.');
