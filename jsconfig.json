@@ -5,7 +5,7 @@
         "@/*": ["./resources/*"],
             "@vendor/*": ["./vendor/*"],
             "~/*": ["./node_modules/*"],
-            "@modular-forms/*": ["vendor/andreamarelli/modular-forms/src/resources/assets/*"],
+            "@modular-forms/*": ["vendor/akp/modular-forms/src/resources/assets/*"],
             "@imet-core/*": ["vendor/imettool/imet-core/src/resources/assets/*"]
     }
 }

@@ -73,7 +73,7 @@ export default defineConfig({
             '@': path.resolve(__dirname, 'resources/'),
             '@vendor': path.resolve(__dirname, 'vendor/'),
             '~': path.resolve(__dirname, 'node_modules/'),
-            '@modular-forms': path.resolve(__dirname, 'vendor/andreamarelli/modular-forms/src/resources/assets'),
+            '@modular-forms': path.resolve(__dirname, 'vendor/akp/modular-forms/src/resources/assets'),
             '@imet-core': path.resolve(__dirname, 'vendor/imettool/imet-core/src/resources/assets'),
         },
     },

@@ -6,10 +6,10 @@
     "require": {
         "php": "8.4.*",
         "ext-zip": "*",
-        "imettool/imet-core": "3.7.0",
-        "laravel/framework": "13.8.0",
+        "imettool/imet-core": "3.7.1",
+        "laravel/framework": "13.15.0",
         "laravel/ui": "^4.6.3",
-        "nativephp/desktop": "2.2.0",
+        "nativephp/desktop": "2.2.1",
         "opcodesio/log-viewer": "^3.23.0",
         "spatie/laravel-csp": "^3.23.0",
         "spatie/laravel-ignition": "^2.12"
@@ -24,9 +24,9 @@
         "rector/rector": "^2.3.9"
     },
     "repositories": {
-        "andreamarelli/modular-forms": {
+        "akp/modular-forms": {
             "type": "vcs",
-            "url": "https://github.com/andreamarelli/modular-forms"
+            "url": "https://code.europa.eu/akp/modular-forms"
         },
         "imettool/imet-core": {
             "type": "vcs",
