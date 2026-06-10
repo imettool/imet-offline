@@ -239,8 +239,8 @@ This guide assumes you are publishing to the **GitHub Releases** of `imettool/im
 2. **Bump the version** in `composer.json`:
    
    ```diff
-   -    "version": "3.0.0-rc.44",
-   +    "version": "3.0.0-rc.45",
+   -    "version": "1.2.1",
+   +    "version": "1.2.0",
    ```
    
    This single field drives `nativephp.version`, the Electron `package.json`, the GitHub tag, and
@@ -287,7 +287,7 @@ The tag name comes from `composer.json`'s `version` (prefixed with `v` because `
 `GITHUB_RELEASE_TYPE=draft` means the release is created hidden. To promote it:
 
 1. Open the [Releases page](https://github.com/imettool/imet-offline/releases) on GitHub.
-2. Locate the new **Draft** release (matching your version tag, e.g. `v3.0.0-rc.45`).
+2. Locate the new **Draft** release (matching your version tag, e.g. `v1.2.0`).
 3. Edit it by adding the release notes.
 4. Make sure the **`latest.yml`** asset is attached — this is what the auto-updater reads.
 5. Click **Publish release**.
