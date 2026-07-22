@@ -8,13 +8,13 @@ See the LICENCE file for licensing information
 
 This product uses software developed by third parties which is provided under their respective licences:
 
-__imettool/imet-core 3.7.0__
-  * git@github.com:imettool/imet-core
+__imettool/imet-core 3.7.3__
+  * https://github.com/imettool/imet-core
   * License: EUPL-1.2
   * Copyright: 
     * Copyright (C) 2025 European Union 
 
-__laravel/framework v12.56.0__
+__laravel/framework v13.21.1__
   * https://laravel.com
   * License: MIT
   * Copyright: 
@@ -26,19 +26,19 @@ __laravel/ui v4.6.3__
   * Copyright: 
     * Copyright (c) Taylor Otwell 
 
-__nativephp/desktop 2.1.1__
+__nativephp/desktop 2.2.1__
   * https://github.com/nativephp/laravel
   * License: MIT
   * Copyright: 
     * Copyright (c) NativePHP <simon@nativephp.com> 
 
-__opcodesio/log-viewer v3.24.0__
+__opcodesio/log-viewer v3.24.2__
   * https://github.com/opcodesio/log-viewer
   * License: MIT
   * Copyright: 
     * Copyright (c) arukompas <arukomp@gmail.com> 
 
-__spatie/laravel-csp 3.23.0__
+__spatie/laravel-csp 3.26.0__
   * https://github.com/spatie/laravel-csp
   * License: MIT
   * Copyright: 
