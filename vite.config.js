@@ -17,7 +17,7 @@ import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
-import path from "path";
+import path from "node:path";
 
 process.env.NODE_ENV = 'development'; // Required for VueDevTools
 
@@ -70,11 +70,11 @@ export default defineConfig({
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',
-            '@': path.resolve(__dirname, 'resources/'),
-            '@vendor': path.resolve(__dirname, 'vendor/'),
-            '~': path.resolve(__dirname, 'node_modules/'),
-            '@modular-forms': path.resolve(__dirname, 'vendor/akp/modular-forms/src/resources/assets'),
-            '@imet-core': path.resolve(__dirname, 'vendor/imettool/imet-core/src/resources/assets'),
+            '@': path.resolve(import.meta.dirname, 'resources/'),
+            '@vendor': path.resolve(import.meta.dirname, 'vendor/'),
+            '~': path.resolve(import.meta.dirname, 'node_modules/'),
+            '@modular-forms': path.resolve(import.meta.dirname, 'vendor/akp/modular-forms/src/resources/assets'),
+            '@imet-core': path.resolve(import.meta.dirname, 'vendor/imettool/imet-core/src/resources/assets'),
         },
     },
     plugins: [
