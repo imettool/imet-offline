@@ -6,7 +6,7 @@
     "require": {
         "php": "8.4.*",
         "ext-zip": "*",
-        "imettool/imet-core": "3.8.0",
+        "imettool/imet-core": "3.8.1",
         "laravel/framework": "13.25.0",
         "laravel/ui": "^4.6.3",
         "nativephp/desktop": "2.2.1",

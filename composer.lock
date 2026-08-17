@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3895357cbcf05d0a4a1c82d0c405542",
+    "content-hash": "4aeaa37f97dad0a41546db4d19ee452f",
     "packages": [
         {
             "name": "akp/modular-forms",
@@ -1199,16 +1199,16 @@
         },
         {
             "name": "imettool/imet-core",
-            "version": "3.8.0",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imettool/imet-core.git",
-                "reference": "56bdaba6a64a5e9c3c93375ec7f4820458e3e961"
+                "reference": "f232b927adffa09b26de64a18b4366a4bf31ce5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imettool/imet-core/zipball/56bdaba6a64a5e9c3c93375ec7f4820458e3e961",
-                "reference": "56bdaba6a64a5e9c3c93375ec7f4820458e3e961",
+                "url": "https://api.github.com/repos/imettool/imet-core/zipball/f232b927adffa09b26de64a18b4366a4bf31ce5d",
+                "reference": "f232b927adffa09b26de64a18b4366a4bf31ce5d",
                 "shasum": ""
             },
             "require": {
@@ -1268,10 +1268,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/imettool/imet-core/tree/v3.8.0",
+                "source": "https://github.com/imettool/imet-core/tree/v3.8.1",
                 "issues": "https://github.com/imettool/imet-core/issues"
             },
-            "time": "2026-08-14T14:25:57+00:00"
+            "time": "2026-08-17T07:21:52+00:00"
         },
         {
             "name": "laravel/framework",
