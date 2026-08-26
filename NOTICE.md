@@ -1,6 +1,6 @@
 imet
 
-version: 3.0.2
+version: 3.0.3
 
 Copyright (C) 2025 European Union
 
@@ -8,7 +8,7 @@ See the LICENCE file for licensing information
 
 This product uses software developed by third parties which is provided under their respective licences:
 
-__imettool/imet-core 3.8.1__
+__imettool/imet-core 3.9.1__
   * https://github.com/imettool/imet-core
   * License: EUPL-1.2
   * Copyright: 
@@ -38,7 +38,7 @@ __opcodesio/log-viewer v3.24.2__
   * Copyright: 
     * Copyright (c) arukompas <arukomp@gmail.com> 
 
-__spatie/laravel-csp 3.26.0__
+__spatie/laravel-csp 3.27.0__
   * https://github.com/spatie/laravel-csp
   * License: MIT
   * Copyright: 
