@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffc844da5261674e228107a485de4a76",
+    "content-hash": "e423a794a2f3bfc7f75c385b9bfec1a7",
     "packages": [
         {
             "name": "akp/modular-forms",
-            "version": "4.4.8",
+            "version": "4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://code.europa.eu/akp/modular-forms",
-                "reference": "77e8fe2774f6434d84ac9fc4b01dfd5e3ef5d9a5"
+                "reference": "15f0676ec6950b69a757cdacac6236ff03b6e48c"
             },
             "require": {
                 "conedevelopment/i18n": "^1.5",
@@ -85,7 +85,7 @@
                 }
             ],
             "description": "A package to build modular data collection forms",
-            "time": "2026-08-25T06:44:46+00:00"
+            "time": "2026-09-01T09:40:14+00:00"
         },
         {
             "name": "brick/math",
@@ -1199,20 +1199,20 @@
         },
         {
             "name": "imettool/imet-core",
-            "version": "3.9.1",
+            "version": "3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imettool/imet-core.git",
-                "reference": "b6c5ba2a41ac9ea8d8e92d5155f2dc5c8b7f1ca4"
+                "reference": "02dff2ad8edf552e403106e3d48660048170eef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imettool/imet-core/zipball/b6c5ba2a41ac9ea8d8e92d5155f2dc5c8b7f1ca4",
-                "reference": "b6c5ba2a41ac9ea8d8e92d5155f2dc5c8b7f1ca4",
+                "url": "https://api.github.com/repos/imettool/imet-core/zipball/02dff2ad8edf552e403106e3d48660048170eef4",
+                "reference": "02dff2ad8edf552e403106e3d48660048170eef4",
                 "shasum": ""
             },
             "require": {
-                "akp/modular-forms": "^4.4.3",
+                "akp/modular-forms": "^4.4.10",
                 "ext-json": "*",
                 "ext-zip": "*",
                 "php": ">=8.4"
@@ -1268,10 +1268,10 @@
             ],
             "description": "Imet core package",
             "support": {
-                "source": "https://github.com/imettool/imet-core/tree/v3.9.1",
+                "source": "https://github.com/imettool/imet-core/tree/v3.10.0",
                 "issues": "https://github.com/imettool/imet-core/issues"
             },
-            "time": "2026-08-26T10:45:22+00:00"
+            "time": "2026-09-01T12:03:34+00:00"
         },
         {
             "name": "laravel/framework",
