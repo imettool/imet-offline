@@ -19,6 +19,9 @@ It is built with [NativePHP](https://nativephp.com), packaging Laravel + Electro
 ## Getting started
 A complete and comprehensive documentation of the codebase is available [here](docs/documentation.md).
 
+## Issues
+Please raise any issues on the [imettool/imet-core](https://github.com/imettool/imet-core/issues) repository.
+
 ## Copyright
 Copyright (C) 2026 European Union
 
