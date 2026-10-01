@@ -24,7 +24,9 @@ use App\Models\User;
 use Auth;
 use Exception;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 use ModularForms\Helpers\File\File;
@@ -47,7 +49,7 @@ class SetupController extends Controller
      * Display the setup page if the application is in its first boot.
      * Redirect to home page if the application is not in its first boot.
      */
-    public function index(): \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+    public function index(): Redirector|RedirectResponse
     {
         // Close splashscreen
         Window::close('splash');

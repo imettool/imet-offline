@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\User;
+
 return [
 
-    'user' => \App\Models\User::class,
+    'user' => User::class,
 
 ];

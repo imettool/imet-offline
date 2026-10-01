@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2025 European Union
  *
@@ -23,10 +24,9 @@ use Illuminate\Queue\SerializesModels;
 
 class ZoomResetHotKeyPressed
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
-
-
-    public function __construct() {}
+    use Dispatchable;
+    use InteractsWithSockets;
+    use SerializesModels;
 
     public function broadcastOn(): array
     {

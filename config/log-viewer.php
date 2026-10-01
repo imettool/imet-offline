@@ -3,6 +3,7 @@
 use Opcodes\LogViewer\Enums\FolderSortingMethod;
 use Opcodes\LogViewer\Enums\SortingOrder;
 use Opcodes\LogViewer\Enums\Theme;
+use Opcodes\LogViewer\Http\Middleware\EnsureFrontendRequestsAreStateful;
 
 return [
 
@@ -99,7 +100,7 @@ return [
     */
 
     'api_middleware' => [
-        \Opcodes\LogViewer\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+        EnsureFrontendRequestsAreStateful::class,
     ],
 
     'api_stateful_domains' => env('LOG_VIEWER_API_STATEFUL_DOMAINS') ? explode(',', (string) env('LOG_VIEWER_API_STATEFUL_DOMAINS')) : null,

@@ -49,8 +49,8 @@ class ResetDevEnv extends Command
 
     public function handle(): int
     {
-        $clean_only = $this->option('clean-only', false);
-        $do_refresh = !$clean_only;
+        $clean_only = $this->option('clean-only');
+        $do_refresh = ! $clean_only;
 
         $databasePath = config('database.connections.offline.database');
 
@@ -79,7 +79,7 @@ class ResetDevEnv extends Command
             'storage/framework/testing/.gitignore',
             'storage/framework/views/.gitignore',
             'storage/logs/.gitignore',
-            'storage/releases/.gitkeep'
+            'storage/releases/.gitkeep',
         ]);
 
         // Clear the assets and node_modules/ directories
@@ -87,17 +87,17 @@ class ResetDevEnv extends Command
         $this->clearFolder(base_path('node_modules'));
         $this->clearFolder(base_path('public/build'));
         $this->clearFolder(base_path('public/basket'));
-        if($do_refresh){
-            $this->line( 'Running npm install');
+        if ($do_refresh) {
+            $this->line('Running npm install');
             Process::run('npm install');
-            $this->line( 'Running npm run build');
+            $this->line('Running npm run build');
             Process::run('npm run build');
         }
 
         // Clear the vendor directory
         intro('Resetting vendor/');
         $this->clearFolder(base_path('vendor/'));
-        if($do_refresh) {
+        if ($do_refresh) {
             $this->line('Running composer install');
             Process::run('composer install --no-interaction --optimize-autoloader');
         }
@@ -108,15 +108,12 @@ class ResetDevEnv extends Command
         self::remove(database_path('nativephp.sqlite-shm'));
         self::remove(database_path('nativephp.sqlite-wal'));
         self::remove($databasePath);
-        if($do_refresh) {
-            $this->line('Creating new database file: ' . $databasePath);
+        // Run native:install
+        if ($do_refresh) {
+            $this->line('Creating new database file: '.$databasePath);
             $this->filesystem->touch($databasePath);
             $this->line('Migrating the database');
             $this->call(MigrateCommand::class);
-        }
-
-        // Run native:install
-        if($do_refresh) {
             intro('Running native:install');
             $this->call(InstallCommand::class, ['--force' => true, '--installer' => 'npm']);
         }
@@ -148,7 +145,7 @@ class ResetDevEnv extends Command
 
         if ($this->filesystem->exists($path)) {
 
-            if($verbose) {
+            if ($verbose) {
                 $this->line('Deleting: '.$path);
             }
 
@@ -156,19 +153,19 @@ class ResetDevEnv extends Command
 
             foreach ($files as $item) {
 
-                $fullPath = $path . '/' . $item;
-                $relativePath = Str::replace(base_path() . '/', '', $fullPath);
+                $fullPath = $path.'/'.$item;
+                $relativePath = Str::replace(base_path().'/', '', $fullPath);
 
-                if(is_dir($fullPath)){
+                if (is_dir($fullPath)) {
                     $this->clearFolder($fullPath, $except, false);
                 } else {
-                    if(!in_array($relativePath, $except, true)) {
+                    if (! in_array($relativePath, $except, true)) {
                         $this->filesystem->remove($fullPath);
                     }
                 }
 
                 // Remove folder emptied after file removal
-                if(count(array_diff(scandir($path), ['.', '..']))===0){
+                if (count(array_diff(scandir($path), ['.', '..'])) === 0) {
                     $this->filesystem->remove($path);
                 }
             }

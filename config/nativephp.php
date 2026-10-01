@@ -1,5 +1,7 @@
 <?php
 
+use App\Providers\NativeAppServiceProvider;
+
 return [
     /**
      * The version of your app.
@@ -39,7 +41,7 @@ return [
     /**
      * The description of your application.
      */
-    'description' =>  env('NATIVEPHP_APP_DESCRIPTION', 'Integrated Management Effectiveness Tool'),
+    'description' => env('NATIVEPHP_APP_DESCRIPTION', 'Integrated Management Effectiveness Tool'),
 
     /**
      * The Website of your application.
@@ -51,7 +53,7 @@ return [
      * takes care of bootstrapping your application and configuring
      * any global hotkeys, menus, windows, etc.
      */
-    'provider' => \App\Providers\NativeAppServiceProvider::class,
+    'provider' => NativeAppServiceProvider::class,
 
     /**
      * A list of environment keys that should be removed from the
@@ -127,7 +129,7 @@ return [
                 'region' => env('AWS_DEFAULT_REGION'),
                 'bucket' => env('AWS_BUCKET'),
                 'endpoint' => env('AWS_ENDPOINT'),
-                'path' => env('NATIVEPHP_UPDATER_PATH', null),
+                'path' => env('NATIVEPHP_UPDATER_PATH'),
             ],
 
             'spaces' => [
@@ -136,7 +138,7 @@ return [
                 'secret' => env('DO_SPACES_SECRET_ACCESS_KEY'),
                 'name' => env('DO_SPACES_NAME'),
                 'region' => env('DO_SPACES_REGION'),
-                'path' => env('NATIVEPHP_UPDATER_PATH', null),
+                'path' => env('NATIVEPHP_UPDATER_PATH'),
             ],
         ],
     ],
@@ -176,5 +178,5 @@ return [
     /**
      * Custom PHP binary path.
      */
-    'binary_path' => env('NATIVEPHP_PHP_BINARY_PATH', null),
+    'binary_path' => env('NATIVEPHP_PHP_BINARY_PATH'),
 ];

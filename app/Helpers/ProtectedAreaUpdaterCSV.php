@@ -18,11 +18,8 @@
 namespace App\Helpers;
 
 use App\Events\TaskProgressing;
-use Exception;
 use ImetCore\Helpers\ProtectedPlanetCSV;
-use ImetCore\Models\ProtectedArea;
 use Throwable;
-use ZipArchive;
 
 /**
  * Class ProtectedAreaUpdaterCSV
@@ -57,11 +54,10 @@ class ProtectedAreaUpdaterCSV
         event(new TaskProgressing($jobId, 10));     // Update progress after extraction (takes 10% of the job progress)
 
         // Parse the CSV file and update the database
-        ProtectedPlanetCSV::parseCSVFile($csvFilePath, function($progress_status) use ($jobId){
+        ProtectedPlanetCSV::parseCSVFile($csvFilePath, function ($progress_status) use ($jobId): void {
             event(new TaskProgressing($jobId, $progress_status));
         });
 
         event(new TaskProgressing($jobId, 100));    // Force progress to 100% at the end of the job
     }
-
 }

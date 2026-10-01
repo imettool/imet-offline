@@ -19,20 +19,13 @@ namespace App\Jobs;
 
 use App\Events\TaskProgressing;
 use Exception;
-use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Sleep;
 use Log;
 
 class DummyJob implements ShouldQueue
 {
-    use Dispatchable;
-    use InteractsWithQueue;
-    use Queueable;
-    use SerializesModels;
+    use \Illuminate\Foundation\Queue\Queueable;
 
     public function __construct(public string $jobId) {}
 

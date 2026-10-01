@@ -76,7 +76,7 @@ class DependencyParser extends BaseDependencyParser
         return array_unique($license);
     }
 
-    #[\Override]
+    #[Override]
     protected static function generateDependenciesOutput(array $dependencies): string
     {
         $parentOutput = parent::generateDependenciesOutput($dependencies);

@@ -25,7 +25,6 @@ use ImetCore\Helpers\SpeciesUpdater as CoreSpeciesUpdater;
  */
 class SpeciesUpdater extends CoreSpeciesUpdater
 {
-
     protected static function logInfo(string $message, bool $verbose = false): void
     {
         OfflineLog::info($message, $verbose);
@@ -41,5 +40,4 @@ class SpeciesUpdater extends CoreSpeciesUpdater
         event(new TaskProgressing($jobId, $progress));
         OfflineLog::info('Progress: '.$progress, true);
     }
-
 }

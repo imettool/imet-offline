@@ -17,19 +17,28 @@
 
 declare(strict_types=1);
 
-use Rector\CodingStyle\Rector\FunctionLike\FunctionLikeToFirstClassCallableRector;
-use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
+use Rector\CodingStyle\Rector\FuncCall\FunctionFirstClassCallableRector;
+use Rector\CodingStyle\Rector\String_\SimplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
-use Rector\Php81\Rector\Array_\FirstClassCallableRector;
+use Rector\Php81\Rector\Array_\ArrayToFirstClassCallableRector;
+use Rector\TypeDeclaration\Rector\StmtsAwareInterface\SafeDeclareStrictTypesRector;
 use RectorLaravel\Rector\Class_\AddHasFactoryToModelsRector;
+use RectorLaravel\Rector\Class_\AppendsPropertyToAppendsAttributeRector;
+use RectorLaravel\Rector\Class_\DescriptionPropertyToDescriptionAttributeRector;
+use RectorLaravel\Rector\Class_\FillablePropertyToFillableAttributeRector;
+use RectorLaravel\Rector\Class_\GuardedPropertyToGuardedAttributeRector;
+use RectorLaravel\Rector\Class_\HiddenPropertyToHiddenAttributeRector;
 use RectorLaravel\Rector\Class_\RemoveModelPropertyFromFactoriesRector;
+use RectorLaravel\Rector\Class_\SignaturePropertyToSignatureAttributeRector;
+use RectorLaravel\Rector\Class_\TablePropertyToTableAttributeRector;
 use RectorLaravel\Rector\Class_\UseForwardsCallsTraitRector;
+use RectorLaravel\Rector\Class_\WithoutIncrementingPropertyToWithoutIncrementingAttributeRector;
+use RectorLaravel\Rector\Class_\WithoutTimestampsPropertyToWithoutTimestampsAttributeRector;
 use RectorLaravel\Rector\ClassMethod\MakeModelAttributesAndScopesProtectedRector;
 use RectorLaravel\Rector\Empty_\EmptyToBlankAndFilledFuncRector;
 use RectorLaravel\Rector\MethodCall\ResponseHelperCallToJsonResponseRector;
 use RectorLaravel\Rector\MethodCall\UseComponentPropertyWithinCommandsRector;
 use RectorLaravel\Set\LaravelSetList;
-use RectorLaravel\Set\LaravelSetProvider;
 
 return RectorConfig::configure()
     ->withPaths([
@@ -44,22 +53,45 @@ return RectorConfig::configure()
         __DIR__.'/tests',
     ])
     ->withSkip([
+
+        // Do not force strict type
+        SafeDeclareStrictTypesRector::class,
+
         AddHasFactoryToModelsRector::class,
-        FunctionLikeToFirstClassCallableRector::class => [
-            __DIR__.'/routes',                      // do not convert to first class callable in routes
+
+        // Don't like first-class callables
+        FunctionFirstClassCallableRector::class => [
+            __DIR__.'/routes',
         ],
-        FirstClassCallableRector::class => [
-            __DIR__.'/routes',                      // do not convert to first class callable in routes
+
+        // Do not convert to first class callable in routes
+        ArrayToFirstClassCallableRector::class => [
+            __DIR__.'/routes',
         ],
+
         MakeModelAttributesAndScopesProtectedRector::class,
-        SymplifyQuoteEscapeRector::class => [
-            __DIR__.'/lang',                    // Keep always same quote style in lang files
+
+        // Keep always same quote style in lang files
+        SimplifyQuoteEscapeRector::class => [
+            __DIR__.'/lang',
         ],
+
         UseComponentPropertyWithinCommandsRector::class => [
             __DIR__.'/app/Console/Commands/ResetDevEnv.php',
-        ]
+        ],
+
+        // Ignore attribute rules on Laravel models
+        FillablePropertyToFillableAttributeRector::class,
+        GuardedPropertyToGuardedAttributeRector::class,
+        AppendsPropertyToAppendsAttributeRector::class,
+        HiddenPropertyToHiddenAttributeRector::class,
+        TablePropertyToTableAttributeRector::class,
+        WithoutIncrementingPropertyToWithoutIncrementingAttributeRector::class,
+        WithoutTimestampsPropertyToWithoutTimestampsAttributeRector::class,
+        DescriptionPropertyToDescriptionAttributeRector::class,
+        SignaturePropertyToSignatureAttributeRector::class,
+
     ])
-    ->withSetProviders(LaravelSetProvider::class)
     ->withComposerBased(laravel: true)
     ->withSets([
         LaravelSetList::LARAVEL_ARRAYACCESS_TO_METHOD_CALL,

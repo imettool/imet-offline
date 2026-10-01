@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (C) 2026 European Union
  *
@@ -16,16 +17,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\File;
 
 class LogsController extends Controller
 {
-    public function index(){
+    public function index(): Factory|View
+    {
 
         $log_files = $this->getLogFiles();
 
         return view('offline.logs', [
-            'log_files' => $log_files
+            'log_files' => $log_files,
         ]);
     }
 
@@ -34,11 +38,10 @@ class LogsController extends Controller
         $path = storage_path('logs/'.$log);
         $file = File::get($path);
 
-        return response()->streamDownload(function () use ($file) {
+        return response()->streamDownload(function () use ($file): void {
             echo $file;
         }, $log);
     }
-
 
     private function getLogFiles(): array
     {
@@ -54,7 +57,4 @@ class LogsController extends Controller
 
         return $log_files;
     }
-
 }
-
-

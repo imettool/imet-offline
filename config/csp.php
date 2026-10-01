@@ -2,6 +2,8 @@
 
 use Spatie\Csp\Directive;
 use Spatie\Csp\Keyword;
+use Spatie\Csp\Nonce\RandomString;
+use Spatie\Csp\Presets\Basic;
 
 return [
 
@@ -10,7 +12,7 @@ return [
      * any class that extends `Spatie\Csp\Preset`
      */
     'presets' => [
-        Spatie\Csp\Presets\Basic::class,
+        Basic::class,
     ],
 
     /**
@@ -57,7 +59,7 @@ return [
     /*
      * The class responsible for generating the nonces used in inline tags and headers.
      */
-    'nonce_generator' => Spatie\Csp\Nonce\RandomString::class,
+    'nonce_generator' => RandomString::class,
 
     /*
      * Set false to disable automatic nonce generation and handling.

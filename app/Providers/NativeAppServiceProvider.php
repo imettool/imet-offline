@@ -33,7 +33,7 @@ class NativeAppServiceProvider implements ProvidesPhpIni
     public function boot(): void
     {
         Window::open('splash')
-            ->url('file://' . public_path('splash.html'))
+            ->url('file://'.public_path('splash.html'))
             ->width(1200)
             ->height(800)
             ->frameless()
@@ -57,7 +57,7 @@ class NativeAppServiceProvider implements ProvidesPhpIni
             'CmdOrCtrl+Shift+Plus',
             'CmdOrCtrl+]',  // ITA layout: the + in ITA layout is in the same position of the ] in US layout
         ];
-        foreach($zoomInKeys as $key) {
+        foreach ($zoomInKeys as $key) {
             GlobalShortcut::key($key)
                 ->unregister();
             GlobalShortcut::key($key)
@@ -82,7 +82,7 @@ class NativeAppServiceProvider implements ProvidesPhpIni
 
         // Reset zoom
         $zoomResetKeys = [
-            'CmdOrCtrl+0'
+            'CmdOrCtrl+0',
         ];
         foreach ($zoomResetKeys as $key) {
             GlobalShortcut::key($key)
