@@ -5,15 +5,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
 $current_route = Route::current()->getName();
+$isSetup = Str::contains($current_route, 'setup.');
 
 ?>
-
-
-@if(Str::contains($current_route, 'setup.'))
-    <div id="imet_header" class="!justify-center !py-3">
-        <div class="font-bold !text-primary-600 !text-xl">@lang('offline.title')</div>
-    </div>
-@else
 
     <div id="imet_header">
 
@@ -21,7 +15,7 @@ $current_route = Route::current()->getName();
         <ul class="menu-header">
 
             <!-- Home -->
-            @if($current_route !== 'home')
+            @if($current_route !== 'home' && !$isSetup)
                 <li>
                     <a href="{{ route('home') }}" class="!text-primary-600">
                         {!! Template::icon('home') !!}
@@ -53,14 +47,18 @@ $current_route = Route::current()->getName();
         <ul class="menu-header">
 
             <!-- User profile -->
-            <li>
-                <span class="italic">{{ Auth::user()->getName() }}</span>
-            </li>
+            @if(!$isSetup)
+                <li>
+                    <span class="italic">{{ Auth::user()->getName() }}</span>
+                </li>
+            @endif
 
             <!-- Settings -->
-            <li>
-                <a href="{{ route('settings') }}" >{!! Template::icon('gear') !!}</a>
-            </li>
+            @if(!$isSetup)
+                <li>
+                    <a href="{{ route('settings') }}" >{!! Template::icon('gear') !!}</a>
+                </li>
+            @endif
 
             <!-- Language selector -->
             <li>
@@ -69,5 +67,3 @@ $current_route = Route::current()->getName();
 
         </ul>
     </div>
-
-@endif

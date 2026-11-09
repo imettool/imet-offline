@@ -23,7 +23,7 @@
 
     <!-- Start buttons -->
     <a class="btn-nav big !px-4 !text-xl !tracking-normal" href="{{ route('setup.user') }}">
-        Start&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+        @lang('setup.info.timeline')&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
     </a>
 
 @endsection

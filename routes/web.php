@@ -19,9 +19,10 @@ use App\Http\Controllers\LogsController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SetupController;
 use Illuminate\Support\Facades\Route;
+use ImetCore\Middleware\SetLocale;
 use ModularForms\Controllers\UploadFileController;
 
-Route::middleware(['web'])->group(function (): void {
+Route::middleware([SetLocale::class, 'web'])->group(function (): void {
 
     Route::get('/', [SetupController::class, 'index'])->name('root');
     Route::view('home', 'offline.home')->name('home');
