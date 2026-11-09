@@ -64,18 +64,7 @@ $current_route = Route::current()->getName();
 
             <!-- Language selector -->
             <li>
-                <a>{!! Template::flag(strtolower(App::getLocale()), '') !!}</a>
-                <ul class="language_selector">
-                    <li>@lang('imet-core::common.switch_language'):</li>
-                    @foreach(trans('imet-core::common.languages') as $lang=>$label)
-                        <li>
-                            <a href="{{ url()->current() }}?lang={{ $lang }}">
-                                {!! Template::flag($lang, '') !!}
-                                {{ ucfirst($label) }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
+                @include('layouts.components.language-selector')
             </li>
 
         </ul>
