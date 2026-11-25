@@ -1,6 +1,6 @@
 imet
 
-version: 3.0.6
+version: 3.0.7
 
 Copyright (C) 2025 European Union
 
