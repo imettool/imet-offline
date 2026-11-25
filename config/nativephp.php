@@ -49,6 +49,15 @@ return [
     'website' => env('NATIVEPHP_APP_WEBSITE', 'https://github.com/imettool'),
 
     /**
+     * The repository information used by electron-builder when publishing.
+     * Only needed when electron-builder cannot detect it from .git/config.
+     */
+    'repository' => [
+        'type' => env('NATIVEPHP_REPOSITORY_TYPE', 'git'),
+        'url' => env('NATIVEPHP_REPOSITORY_URL'),
+    ],
+
+    /**
      * The default service provider for your application. This provider
      * takes care of bootstrapping your application and configuring
      * any global hotkeys, menus, windows, etc.
@@ -105,8 +114,22 @@ return [
         'enabled' => env('NATIVEPHP_UPDATER_ENABLED', true),
 
         /**
+         * Whether an available update is downloaded automatically. Set this
+         * to false to only check for updates on startup, then call
+         * AutoUpdater::downloadUpdate() once the user agrees.
+         */
+        'auto_download' => env('NATIVEPHP_UPDATER_AUTO_DOWNLOAD', true),
+
+        /**
+         * Whether a downloaded update should be installed automatically
+         * when the application quits.
+         */
+        'auto_install_on_app_quit' => env('NATIVEPHP_AUTO_INSTALL_ON_APP_QUIT', true),
+
+        /**
          * The updater provider to use.
          * Supported: "github", "s3", "spaces"
+         * Note: The "s3" provider is compatible with S3-compatible services like Cloudflare R2.
          */
         'default' => env('NATIVEPHP_UPDATER_PROVIDER', 'github'),
 
@@ -118,6 +141,7 @@ return [
                 'token' => env('GITHUB_TOKEN'),
                 'vPrefixedTagName' => env('GITHUB_V_PREFIXED_TAG_NAME', true),
                 'private' => env('GITHUB_PRIVATE', false),
+                'autoupdate_token' => env('GITHUB_AUTOUPDATE_TOKEN'), // Read-only token used by the updater for private repos
                 'channel' => env('GITHUB_CHANNEL', 'latest'),
                 'releaseType' => env('GITHUB_RELEASE_TYPE', 'draft'),
             ],
@@ -130,6 +154,13 @@ return [
                 'bucket' => env('AWS_BUCKET'),
                 'endpoint' => env('AWS_ENDPOINT'),
                 'path' => env('NATIVEPHP_UPDATER_PATH'),
+                /**
+                 * Optional public URL for serving updates (e.g., CDN or custom domain).
+                 * When set, updates will be downloaded from this URL instead of the S3 endpoint.
+                 * Useful for S3 with CloudFront or Cloudflare R2 with public access
+                 * Example: 'https://updates.yourdomain.com'
+                 */
+                'public_url' => env('AWS_PUBLIC_URL'),
             ],
 
             'spaces' => [
