@@ -7,7 +7,7 @@
         "php": "8.4.*",
         "ext-zip": "*",
         "akp/modular-forms": "4.5.1",
-        "imettool/imet-core": "3.11.1",
+        "imettool/imet-core": "3.11.3",
         "laravel/framework": "13.40.0",
         "laravel/ui": "^4.6.3",
         "nativephp/desktop": "2.4.0",
